@@ -1,0 +1,251 @@
+{
+	"spell": [
+		{
+			"name": "Conjure Barlgura (UA)",
+			"source": "UAThatOldBlackMagic",
+			"page": 2,
+			"level": 4,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10,
+						"upTo": true
+					}
+				}
+			],
+			"entries": [
+				"Du åkallar en {@creature barlgura} som dyker upp i ett ledigt utrymme som du kan se inom räckhåll. {@creature barlgura} försvinner när den sjunker till 0 träffpunkter eller när besvärjelsen avslutas.",
+				"{@creature barlgura} är fientlig mot alla icke-demoner. Kasta initiativ för {@creature barlgura}, som har sin egen tur. I början av sin tur rör den sig mot och attackerar den närmaste icke-demon den kan uppfatta. Om två eller fler varelser är lika nära, väljer den en slumpmässigt. Om den inte kan se några potentiella fiender rör sig {@creature barlgura} i en slumpmässig riktning för att leta efter fiender.",
+				"Som en del av besvärjelsen kan du rita en cirkel på marken med blodet från en intelligent humanoid som dödats under de senaste 24 timmarna. Cirkeln är tillräckligt stor för att omsluta ditt utrymme. Den åkallade {@creature barlgura} kan inte korsa cirkeln eller rikta sig mot någon i den så länge besvärjelsen varar."
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Conjure Hezrou (UA)",
+			"source": "UAThatOldBlackMagic",
+			"page": 2,
+			"level": 7,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "mat värd minst 100 gp, som besvärjelsen förbrukar",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du åkallar en {@creature hezrou} som dyker upp i ett ledigt utrymme som du kan se inom räckhåll. {@creature hezrou} försvinner när den sjunker till 0 träffpunkter eller när besvärjelsen avslutas.",
+				"{@creature hezrou}:s attityd beror på värdet av den mat som används som materiell komponent för denna besvärjelse. Kasta initiativ för {@creature hezrou}, som har sin egen tur. I början av {@creature hezrou}:s tur gör DM en hemlig karismaundersökning åt dig, med en bonus som är lika med matens värde dividerat med 20. Kontrollens DC börjar på 10 och ökar med 2 varje rond. Du kan ge order till {@creature hezrou} och få den att lyda dig så länge du lyckas med karismakontrollen.",
+				"Om kontrollen misslyckas kräver besvärjelsen inte längre {@status concentration} och demonen är inte längre under din kontroll. {@creature hezrou} fokuserar sedan på att sluka alla lik den kan se. Om det inte finns några sådana måltider till hands, attackerar den de närmaste varelserna och äter allt den dödar. Om dess träffpunkter reduceras till under hälften av dess maximala träffpunkter, återvänder den till avgrunden.",
+				"Som en del av besvärjelsen kan du rita en cirkel på marken med blodet från en intelligent humanoid som dödats under de senaste 24 timmarna. Cirkeln är tillräckligt stor för att omsluta ditt utrymme. Den åkallade {@creature hezrou} kan inte korsa cirkeln eller rikta sig mot någon i den så länge besvärjelsen varar."
+			],
+			"abilityCheck": [
+				"charisma"
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Conjure Lesser Demon (UA)",
+			"source": "UAThatOldBlackMagic",
+			"page": 2,
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "en behållare med blod från en intelligent humanoid som dödats under de senaste 24 timmarna"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du åkallar upp till totalt åtta {@creature manes} eller {@creature dretch||dretches} som dyker upp i lediga utrymmen som du kan se inom räckhåll. En {@creature manes} eller {@creature dretch} försvinner när den sjunker till 0 träffpunkter eller när besvärjelsen avslutas.",
+				"Demonerna är fientliga mot alla varelser. Ta initiativ för de kallade demonerna som en grupp, som har sina egna turer. Demonerna attackerar de närmaste icke-demonerna efter bästa förmåga.",
+				"Som en del av besvärjelsen kan du rita en cirkel på marken med blodet som materialkomponent. Cirkeln är tillräckligt stor för att omfatta ditt utrymme. De framkallade demonerna kan inte korsa cirkeln eller sikta in sig på någon i den så länge trollformeln varar. Att använda den materiella komponenten på detta sätt förbrukar den."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med en spell slot på 6:e eller 7:e nivån kallar du på sexton demoner. Om du kastar den med en trollformel på 8:e eller 9:e nivån, kallar du på trettiotvå demoner."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Conjure Shadow Demon (UA)",
+			"source": "UAThatOldBlackMagic",
+			"page": 3,
+			"level": 4,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "en behållare med blod från en intelligent humanoid som dödats under de senaste 24 timmarna"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du åkallar en {@creature shadow demon} som dyker upp i ett ledigt utrymme som du kan se inom räckhåll. {@creature shadow demon} försvinner när den sjunker till 0 träffpunkter eller när besvärjelsen avslutas.",
+				"Kasta initiativ för {@creature shadow demon}, som har sina egna varv. Du kan ge order till {@creature shadow demon}, och den lyder dig så länge den kan attackera en varelse i var och en av sina vändor och inte börjar sin tur i ett område med starkt ljus. Om något av dessa villkor inte uppfylls gör {@creature shadow demon} omedelbart en karismaundersökning som ifrågasätts av din karismaundersökning. Om du misslyckas med kontrollen kräver besvärjelsen inte längre {@status concentration} och demonen är inte längre under din kontroll. Demonen lyckas automatiskt med kontrollen om den är mer än 3 meter från dig.",
+				"Som en del av besvärjelsen kan du rita en cirkel på marken med blodet från en intelligent humanoid som dödats under de senaste 24 timmarna. Cirkeln är tillräckligt stor för att omsluta ditt utrymme. Den åkallade {@creature shadow demon} kan inte korsa cirkeln eller rikta sig mot någon i den så länge besvärjelsen varar."
+			],
+			"abilityCheck": [
+				"charisma"
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Conjure Vrock (UA)",
+			"source": "UAThatOldBlackMagic",
+			"page": 3,
+			"level": 5,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "en ädelsten värd minst 100 gp, som besvärjelsen förbrukar",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du åkallar en {@creature vrock} som dyker upp i ett ledigt utrymme som du kan se inom räckhåll. {@creature vrock} försvinner när den sjunker till 0 träffpunkter eller när besvärjelsen avslutas.",
+				"{@creature vrock}:s attityd beror på värdet av den ädelsten som användes som materiell komponent för denna besvärjelse. Kasta initiativ för {@creature vrock}, som har sin egen tur. I början av {@creature vrock}:s tur gör DM en hemlig karismakontroll åt dig, med en bonus som är lika med ädelstenens värde dividerat med 20. Kontrollens DC börjar på 10 och ökar med 2 varje rond. Du kan ge order till {@creature vrock} och få den att lyda dig så länge du lyckas med karismakontrollen.",
+				"Om kontrollen misslyckas kräver besvärjelsen inte längre {@status concentration} och {@creature vrock} är inte längre under din kontroll. {@creature vrock} utför inga handlingar på sin nästa tur och använder sin telepati för att berätta för alla varelser den kan se att den är beredd att slåss i utbyte mot skatter. Den varelse som ger {@creature vrock} den dyraste ädelstenen kan styra den under de kommande {@dice 1d6} ronderna. I slutet av den tiden erbjuder den fyndet igen. Om ingen erbjuder {@creature vrock} skatten innan dess nästa tur börjar, attackerar den de närmaste varelserna i {@dice 1d6} rundor innan den återvänder till avgrunden.",
+				"Som en del av besvärjelsen kan du rita en cirkel på marken med blodet från en intelligent humanoid som dödats under de senaste 24 timmarna. Cirkeln är tillräckligt stor för att omsluta ditt utrymme. Den åkallade {@creature vrock} kan inte korsa cirkeln eller rikta sig mot någon i den så länge besvärjelsen varar."
+			],
+			"abilityCheck": [
+				"charisma"
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		}
+	]
+}

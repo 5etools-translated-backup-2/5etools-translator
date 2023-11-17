@@ -1,0 +1,5835 @@
+{
+	"_meta": {
+		"otherSources": {
+			"monster": {
+				"DMG": "BMT",
+				"MM": "BMT",
+				"DoSI": "BMT",
+				"MPMM": "BMT",
+				"WBtW": "BMT",
+				"BAM": "BMT",
+				"MOT": "BMT"
+			}
+		},
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		}
+	},
+	"monster": [
+		{
+			"name": "Advanced Detention Drone",
+			"source": "BMT",
+			"page": 135,
+			"_copy": {
+				"name": "Shield Guardian",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "shield guardian",
+						"with": "drone"
+					},
+					"action": [
+						{
+							"mode": "appendArr",
+							"items": {
+								"name": "Detention Orb",
+								"entries": [
+									"Drönaren skjuter iväg ett litet klot av magisk kraft mot en varelse den kan se inom 9 meter från sig själv. Varelsen måste lyckas med ett {@dc 15} räddningsslag i konstitution eller bli inkapslad i klotet, som expanderar till en storlek precis stor nog för att innehålla varelsen. När varelsen är inkapslad behöver den inte andas, äta eller dricka, och den åldras inte. Ingenting kan passera genom klotet, och ingen varelse kan teleportera sig eller använda planar travel för att ta sig in eller ut ur klotet. Som en bonusåtgärd kan drönaren flytta klotet och dess innehåll upp till 9 meter i valfri riktning. Ett lyckat kast av besvärjelsen {@spell Dispel Magic} på klotet ({@dc 15}) förstör det. Klotet förblir annars intakt tills drönaren spenderar en handling för att avsluta effekten eller drönaren förstörs. En drönare kan bara ha ett kvarhållande klot aktivt åt gången; om drönaren skapar ett kvarhållande klot när den redan har ett aktivt, försvinner det första klotet och frigör varelsen inuti."
+								]
+							}
+						}
+					]
+				}
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"hasFluff": true
+		},
+		{
+			"name": "Ambitious Assassin",
+			"source": "BMT",
+			"page": 45,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item studded leather armor|PHB|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 91,
+				"formula": "14d8 + 28"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40
+			},
+			"str": 10,
+			"dex": 18,
+			"con": 15,
+			"int": 18,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"dex": "+7",
+				"int": "+7"
+			},
+			"skill": {
+				"deception": "+9",
+				"perception": "+5",
+				"stealth": "+10"
+			},
+			"senses": [
+				"blindsight 10 ft."
+			],
+			"passive": 15,
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"thieves' cant",
+				"plus any one language"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"Om lönnmördaren misslyckas med ett räddningskast, kan den välja att lyckas istället."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Lönnmördaren utför två Poison Blade-attacker."
+					]
+				},
+				{
+					"name": "Poison Blade",
+					"entries": [
+						"{@atk mw,rw} {@hit 7} att träffa, räckvidd 1,5 m. eller räckvidd 18 m., ett mål. {@h}6 ({@damage 1d4 + 4}) genomträngande skada plus 5 ({@damage 1d10}) giftskada."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"När en angripare som lönnmördaren kan se träffar lönnmördaren med en attack, halverar lönnmördaren attackens skada mot den."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Cunning",
+					"entries": [
+						"Lönnmördaren frigör sig från icke-magiska begränsningar och avslutar {@condition grappled}-tillståndet på sig själv, och rör sig sedan upp till sin hastighet utan att utsättas för möjlighetsattacker."
+					]
+				},
+				{
+					"name": "Stab (Costs 2 Actions)",
+					"entries": [
+						"Lönnmördaren utför en Poison Blade-attack."
+					]
+				},
+				{
+					"name": "Vanishing Escape (Costs 3 Actions)",
+					"entries": [
+						"Lönnmördaren skapar en plötslig distraktion, t.ex. ett moln av desorienterande rök eller en blixt av bländande ljus, som fyller en kub på 3 meter inom 1,5 meter från lönnmördaren. Varje varelse som lönnmördaren väljer i det området tar 9 ({@damage 2d8}) psykisk skada, och lönnmördaren har tillståndet {@condition invisible}. Denna osynlighet varar till slutet av lönnmördarens nästa tur."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Villain",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"TC",
+				"X"
+			],
+			"damageTags": [
+				"I",
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"invisible"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Animated Armor Detention Drone",
+			"source": "BMT",
+			"page": 135,
+			"_copy": {
+				"name": "Animated Armor",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "armor",
+						"with": "drone"
+					},
+					"action": [
+						{
+							"mode": "appendArr",
+							"items": {
+								"name": "Detention Orb",
+								"entries": [
+									"Drönaren skjuter iväg ett litet klot av magisk kraft mot en varelse den kan se inom 9 meter från sig själv. Varelsen måste lyckas med ett {@dc 15} räddningsslag i konstitution eller bli inkapslad i klotet, som expanderar till en storlek precis stor nog för att innehålla varelsen. När varelsen är inkapslad behöver den inte andas, äta eller dricka, och den åldras inte. Ingenting kan passera genom klotet, och ingen varelse kan teleportera sig eller använda planar travel för att ta sig in eller ut ur klotet. Som en bonusåtgärd kan drönaren flytta klotet och dess innehåll upp till 9 meter i valfri riktning. Ett lyckat kast av besvärjelsen {@spell Dispel Magic} på klotet ({@dc 15}) förstör det. Klotet förblir annars intakt tills drönaren spenderar en handling för att avsluta effekten eller drönaren förstörs. En drönare kan bara ha ett kvarhållande klot aktivt åt gången; om drönaren skapar ett kvarhållande klot när den redan har ett aktivt, försvinner det första klotet och frigör varelsen inuti."
+								]
+							}
+						}
+					]
+				}
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"hasFluff": true
+		},
+		{
+			"name": "Aspirant of the Comet",
+			"source": "BMT",
+			"page": 91,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 27,
+				"formula": "5d8 + 5"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 12,
+			"con": 12,
+			"int": 11,
+			"wis": 10,
+			"cha": 13,
+			"passive": 10,
+			"languages": [
+				"Common plus any one language"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Hunger of the Void",
+					"entries": [
+						"När aspiranten reduceras till 0 träffpunkter sugs hans kropp och allt han bär på sig, med undantag för magiska föremål, in i ett tomrum och förintas. Varelser i en sfär med 4,5 meters radie centrerad på aspiranten måste göra ett {@dc 11} räddningsslag i styrka. Om räddningsslaget misslyckas får varelsen 10 ({@damage 3d6}) nekrotiska skador och dras 3 meter rakt mot aspirantens utrymme. Vid ett lyckat räddningsslag tar varelsen bara hälften så mycket skada."
+					]
+				},
+				{
+					"name": "Sinister Devotion",
+					"entries": [
+						"Aspiranten har fördel i räddningsslag mot {@condition charmed} och {@condition frightened} tillstånd."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 3} att träffa, räckvidd 1,5 m. eller räckvidd 20/18 m., ett mål. {@h}4 ({@damage 1d6 + 1}) genomborrande skada, eller 5 ({@damage 1d8 + 1}) genomborrande skada om den används med två händer för att göra en närstridsattack."
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"N",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Asteria",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 188,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human",
+					"paladin"
+				]
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item breastplate|PHB}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 195,
+				"formula": "26d8 + 78"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(winged boots)"
+				}
+			},
+			"str": 12,
+			"dex": 21,
+			"con": 17,
+			"int": 15,
+			"wis": 11,
+			"cha": 20,
+			"save": {
+				"dex": "+11",
+				"con": "+9",
+				"wis": "+6",
+				"cha": "+11"
+			},
+			"skill": {
+				"acrobatics": "+11",
+				"arcana": "+14",
+				"investigation": "+8",
+				"perception": "+12",
+				"persuasion": "+11",
+				"survival": "+6"
+			},
+			"passive": 22,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Druidic"
+			],
+			"cr": "18",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Asteria kastar en av följande besvärjelser, som inte kräver några materiella komponenter och som använder Karisma som besvärjelseförmåga (besvärjelseräddning {@dc 19}):"
+					],
+					"will": [
+						"{@spell Guidance}",
+						"{@spell Light}",
+						"{@spell Thaumaturgy}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell Bless}",
+							"{@spell Freedom of Movement}",
+							"{@spell Greater Restoration}",
+							"{@spell Plane Shift} (self only)",
+							"{@spell Protection from Evil and Good}",
+							"{@spell Revivify}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Guardian Aura",
+					"entries": [
+						"Närhelst en varelse som Asteria väljer inom 9 meter från henne gör ett räddningsslag, kan Asteria ge varelsen fördel på räddningsslaget (ingen åtgärd krävs). Denna egenskap fungerar inte om Asteria har villkoret {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Om Asteria misslyckas med ett räddningskast kan hon välja att lyckas istället."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Asteria bär bevingade stövlar, som ger henne flyghastighet (ingår i hennes statistik). Hon bär också ena halvan av ett par Sändningsstenar; den andra halvan av paret hålls av Euryale."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Asteria gör två Radiant Blade-attacker och använder Bursting Benediction."
+					]
+				},
+				{
+					"name": "Radiant Blade",
+					"entries": [
+						"{@atk mw} {@hit 11} att träffa, räckvidd 1,5 m., ett mål. {@h}9 ({@damage 1d8 + 5}) slashingskador plus 13 ({@damage 3d8}) strålningsskador."
+					]
+				},
+				{
+					"name": "Bursting Benediction",
+					"entries": [
+						"Asteria låter ett utbrott av magisk energi omsluta en varelse som hon kan se inom 18 meter från sig själv. Målet måste göra ett {@dc 19} räddningsslag i dexteritet och tar 40 ({@damage 9d8}) kraftskador om räddningsslaget misslyckas, eller hälften så mycket skador om det lyckas. Asteria eller en annan varelse som hon kan se inom 18 meter från sig själv återfår då 10 träffpunkter."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Empowering Aegis {@recharge 4}",
+					"entries": [
+						"Asteria åkallar en spektral version av sin sköld, som kretsar runt och stärker en varelse som Asteria väljer och som hon kan se inom 18 meter från sig själv. Den spektrala skölden varar till början av Asterias nästa tur. Medan skölden kretsar kring varelsen har varelsen halvt skydd, är immun mot tillståndet {@condition frightened} och gör vapenattacksslag med fördel."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Brazen Strike",
+					"entries": [
+						"Asteria gör en Radiant Blade-attack."
+					]
+				},
+				{
+					"name": "Nimble Sprint",
+					"entries": [
+						"Asteria rör sig upp till sin hastighet. Denna rörelse framkallar inte möjlighetsattacker."
+					]
+				},
+				{
+					"name": "Cast a Spell (Costs 2 Actions)",
+					"entries": [
+						"Asteria använder Spellcasting."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DU"
+			],
+			"damageTags": [
+				"O",
+				"R",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Aurnozci",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 167,
+			"size": [
+				"G"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"demon"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 370,
+				"formula": "20d20 + 160"
+			},
+			"speed": {
+				"walk": 50,
+				"burrow": 30
+			},
+			"str": 27,
+			"dex": 20,
+			"con": 26,
+			"int": 6,
+			"wis": 21,
+			"cha": 19,
+			"save": {
+				"str": "+15",
+				"con": "+15"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 15,
+			"resist": [
+				"cold",
+				"lightning"
+			],
+			"immune": [
+				"acid",
+				"fire",
+				"poison",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"telepathy 120 ft."
+			],
+			"cr": "22",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Aurnozci kastar en av följande besvärjelser, som inte kräver några materiella komponenter och använder Visdom som besvärjelseförmåga (besvärjelseräddning {@dc 20}):"
+					],
+					"will": [
+						"{@spell Detect Magic}",
+						"{@spell Heat Metal} (7th-level version)"
+					],
+					"daily": {
+						"2e": [
+							"{@spell Darkness}",
+							"{@spell Dispel Magic}",
+							"{@spell Hold Person}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Heat Regeneration",
+					"entries": [
+						"Om temperaturen omkring den är 100 grader Fahrenheit eller högre, återfår Aurnozci 15 träffpunkter i början av sin tur. Om den tar skada av kyla eller strålning fungerar inte denna egenskap i början av dess nästa tur. Aurnozci dör endast om den börjar sin tur med 0 träffpunkter och inte regenererar."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Om Aurnozci misslyckas med ett räddningskast, kan den välja att lyckas istället."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Aurnozci har fördel vid räddningsslag mot besvärjelser och andra magiska effekter."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Aurnozci gör en bitattack och två svansattacker."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 15} att träffa, räckvidd 3 m., ett mål. {@h}21 ({@damage 2d12 + 8}) slående skada plus 9 ({@damage 2d8}) eldskada."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 15} att träffa, räckvidd 3 m., ett mål. {@h}17 ({@damage 2d8 + 8}) knytnävsslag."
+					]
+				},
+				{
+					"name": "Mucus Spray {@recharge 5}",
+					"entries": [
+						"Aurnozci sprutar slem i en 18 meter lång kon. Varje varelse i konen måste göra ett {@dc 20} räddningsslag i dexteritet, och tar 42 ({@damage 12d6}) syraskador om räddningsslaget misslyckas, eller hälften så mycket skada om det lyckas."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Move",
+					"entries": [
+						"Aurnozci förflyttar sig upp till sin hastighet."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"Aurnozci gör en svansattack."
+					]
+				},
+				{
+					"name": "Cast a Spell (Costs 2 Actions)",
+					"entries": [
+						"Aurnozci använder Spellcasting."
+					]
+				},
+				{
+					"name": "Conflagration (Costs 2 Actions)",
+					"entries": [
+						"Lågor omger för ett ögonblick Aurnozci. Varje varelse inom 4,5 meter från Aurnozci måste göra ett {@dc 20} räddningsslag mot Dexterity, och tar 18 ({@damage 4d8}) eldskador om räddningsslaget misslyckas, eller hälften så mycket skada om det lyckas."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Aurnozci",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"TP"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"F",
+				"S"
+			],
+			"damageTagsSpell": [
+				"F"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflictSpell": [
+				"paralyzed"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Boss Augustus",
+			"source": "BMT",
+			"page": 82,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 150,
+				"formula": "20d8 + 60"
+			},
+			"speed": {
+				"walk": {
+					"number": 40,
+					"condition": "in wolf or hybrid form"
+				}
+			},
+			"str": 18,
+			"dex": 16,
+			"con": 17,
+			"int": 14,
+			"wis": 15,
+			"cha": 12,
+			"save": {
+				"str": "+8",
+				"dex": "+7"
+			},
+			"skill": {
+				"perception": "+10",
+				"sleight of hand": "+7",
+				"stealth": "+7"
+			},
+			"passive": 20,
+			"languages": [
+				"Common",
+				"Thieves' cant (can't speak in wolf form)"
+			],
+			"cr": "9",
+			"trait": [
+				{
+					"name": "Regeneration",
+					"entries": [
+						"Augustus återfår 10 träffpunkter i början av sin tur. Om han tar skada från ett silvervapen fungerar inte denna egenskap i början av hans nästa tur. Augustus dör endast om han börjar sin tur med 0 träffpunkter och inte regenererar."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Augustus använder ett långsvärd +2."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Augustus gör en valfri kombination av två attacker med bett, klor eller magiskt långsvärd."
+					]
+				},
+				{
+					"name": "Bite (Wolf or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 8} att träffa, räckvidd 1,5 m., ett mål. {@h}26 ({@damage 5d8 + 4}) genomträngande skada. Om målet är en humanoid måste den lyckas med ett {@dc 15} konstitutionellt räddningsslag eller bli förbannad med lykantropi. När målet är förbannat på detta sätt behåller det sin inriktning, sina språk och sin utrustning, men använder i övrigt varulvsstatusblocket, med undantag för handlingar som kräver utrustning som målet inte har. Under en natt när det är fullmåne på himlen blir målet en NPC under DM:s kontroll och förblir så tills natten tar slut. En {@spell Remove Curse} besvärjelse eller liknande magi bryter denna förbannelse."
+					]
+				},
+				{
+					"name": "Claw (Wolf or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 8} att träffa, räckvidd 1,5 m., ett mål. {@h}21 ({@damage 5d6 + 4}) genomträngande skada. Om målet är en varelse måste den lyckas med ett {@dc 16} räddningsslag för styrka eller drabbas av {@condition prone} villkoret."
+					]
+				},
+				{
+					"name": "Magic Longsword (Humanoid or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 10} att träffa, räckvidd 1,5 m., ett mål. {@h}28 ({@damage 4d10 + 6}) skärande skada."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Augustus kan förvandlas till en hybrid mellan varg och humanoid, en varg eller sin humanoida form. Hans statistik, förutom hans hastighet, är densamma i varje form. All utrustning han bär eller har med sig förvandlas inte. Han återgår till sin humanoida form om han dör."
+					]
+				},
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"Augustus utför åtgärden Dash, Disengage eller Hide."
+					]
+				}
+			],
+			"traitTags": [
+				"Regeneration"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"CS",
+				"TC"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Boss Delour",
+			"source": "BMT",
+			"page": 83,
+			"size": [
+				"S"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 110,
+				"formula": "20d6 + 40"
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "in rat or hybrid form"
+				}
+			},
+			"str": 12,
+			"dex": 18,
+			"con": 15,
+			"int": 17,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"dex": "+8",
+				"int": "+7"
+			},
+			"skill": {
+				"deception": "+11",
+				"perception": "+10",
+				"sleight of hand": "+8",
+				"stealth": "+8"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 20,
+			"languages": [
+				"Common",
+				"Thieves' cant (can't speak in rat form)"
+			],
+			"cr": "9",
+			"trait": [
+				{
+					"name": "Evasion",
+					"entries": [
+						"Om Delour utsätts för en effekt som tillåter honom att göra ett räddningskast i Dexterity för att bara ta halv skada, tar han istället ingen skada om han lyckas med räddningskastet och bara halv skada om han misslyckas, förutsatt att han inte har {@condition incapacitated} villkoret."
+					]
+				},
+				{
+					"name": "Nimbleness",
+					"entries": [
+						"Delour kan röra sig genom utrymmet hos en medelstor eller större varelse."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"Delour återfår 10 träffpunkter i början av sin tur. Om han tar skada från ett silvervapen fungerar inte denna egenskap i början av hans nästa tur. Delour dör endast om han börjar sin tur med 0 träffpunkter och inte regenererar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Delour gör en valfri kombination av tre attacker med bett, kortsvärd eller handarmborst."
+					]
+				},
+				{
+					"name": "Bite (Rat or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 8} att träffa, räckvidd 1,5 m., ett mål. {@h}26 ({@damage 5d8 + 4}) genomträngande skada. Om målet är en humanoid måste den lyckas med ett {@dc 14} konstitutionellt räddningsslag eller bli förbannad med lykantropi. När målet är förbannat på detta sätt behåller det sin inriktning, sina språk och sin utrustning, men använder i övrigt wereratstatusblocket, med undantag för handlingar som kräver utrustning som målet inte har. Under en natt när det är fullmåne på himlen blir målet en NPC under DM:s kontroll och förblir så tills natten tar slut. En {@spell Remove Curse} besvärjelse eller liknande magi bryter denna förbannelse."
+					]
+				},
+				{
+					"name": "Shortsword (Humanoid or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 8} att träffa, räckvidd 1,5 m., ett mål. {@h}11 ({@damage 2d6 + 4}) genomträngande skada plus 10 ({@damage 3d6}) giftskada."
+					]
+				},
+				{
+					"name": "Hand Crossbow (Humanoid or Hybrid Form Only)",
+					"entries": [
+						"{@atk rw} {@hit 8} att träffa, räckvidd 30/36 m., ett mål. {@h}11 ({@damage 2d6 + 4}) genomträngande skada plus 10 ({@damage 3d6}) giftskada."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Delour polymorfiserar till en råtta-humanoid hybrid, en medelstor jätteråtta, eller sin humanoida form. Hans statistik, förutom hans storlek och hastighet, är densamma i varje form. Utrustning som han bär eller har med sig förvandlas inte. Han återgår till sin humanoida form om han dör."
+					]
+				},
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"Delour utför åtgärden Dash, Disengage eller Hide."
+					]
+				}
+			],
+			"attachedItems": [
+				"hand crossbow|phb",
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Regeneration"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"CS",
+				"TC"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Breath Drinker",
+			"source": "BMT",
+			"page": 154,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 157,
+				"formula": "21d8 + 63"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 60,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 5,
+			"dex": 18,
+			"con": 16,
+			"int": 11,
+			"wis": 15,
+			"cha": 20,
+			"save": {
+				"int": "+5",
+				"wis": "+7"
+			},
+			"skill": {
+				"perception": "+7",
+				"stealth": "+9",
+				"survival": "+7"
+			},
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 17,
+			"resist": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"thunder",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison",
+				"radiant"
+			],
+			"vulnerable": [
+				"necrotic"
+			],
+			"conditionImmune": [
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"Deep Speech",
+				"telepathy 120 ft."
+			],
+			"cr": "14",
+			"trait": [
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"Andedrickaren kan röra sig genom andra varelser och föremål som om de vore svår terräng. Den tar 5 ({@damage 1d10}) kraftskador om den avslutar sin tur inuti ett föremål."
+					]
+				},
+				{
+					"name": "Radiant Absorption",
+					"entries": [
+						"När andedrickaren utsätts för strålningsskada tar den ingen skada och återfår istället ett antal träffpunkter som är lika med den strålningsskada som den utsatts för."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Andedrickaren gör två attacker med Enervating Claw. Den kan också använda Drick andedräkt."
+					]
+				},
+				{
+					"name": "Enervating Claw",
+					"entries": [
+						"{@atk mw} {@hit 10} att träffa, räckvidd 1,5 m., en varelse. {@h}12 ({@damage 2d6 + 5}) nekrotisk skada, och om målet är stort eller mindre har det {@condition grappled} villkoret (flykt {@dc 18}). Målet måste lyckas med ett {@dc 18} konstitutionellt räddningsslag eller så minskas dess maximala antal träffpunkter med ett belopp som är lika med den tagna skadan. Denna minskning varar tills målet avslutar en lång vila. Målet dör om denna effekt minskar dess maximala antal träffpoäng till 0."
+					]
+				},
+				{
+					"name": "Drink Breath",
+					"entries": [
+						"Andedrickaren riktar in sig på en varelse som har {@condition incapacitated} tillståndet eller som andedrickaren griper tag i och som inte är en konstruktion eller en odöd. Målet måste göra ett {@dc 18} karisma räddningsslag. Vid ett misslyckat räddningsslag tar målet 36 ({@damage 8d8}) nekrotisk skada, och dess karismavärde minskas med {@dice 1d6}. Denna minskning varar tills målet avslutar en kort eller lång vila. Om detta reducerar målets karisma till 0, dör målet. Tills andedrickaren dör kan den döda måltavlan inte återupplivas på något sätt utan gudomligt ingripande. Vid en lyckad räddning tar målet bara hälften så mycket nekrotisk skada. Vid en lyckad eller misslyckad räddning återfår andedrickaren ett antal träffpunkter som är lika med den nekrotiska skadan."
+					]
+				},
+				{
+					"name": "Invisibility",
+					"entries": [
+						"Den som dricker andedräkt har tillståndet {@condition invisible}. Denna osynlighet upphör omedelbart efter att andedrickaren träffat eller missat med ett anfallsslag eller använt Drick andedräkt."
+					]
+				}
+			],
+			"traitTags": [
+				"Damage Absorption",
+				"Incorporeal Movement"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"DS",
+				"TP"
+			],
+			"damageTags": [
+				"N",
+				"O"
+			],
+			"miscTags": [
+				"HPR",
+				"MW"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Brusipha",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 127,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"minotaur",
+					"warlock"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 90,
+				"formula": "12d8 + 36"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 18,
+			"dex": 11,
+			"con": 16,
+			"int": 12,
+			"wis": 16,
+			"cha": 16,
+			"save": {
+				"wis": "+5",
+				"cha": "+5"
+			},
+			"skill": {
+				"deception": "+5",
+				"perception": "+7",
+				"religion": "+3"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 17,
+			"languages": [
+				"Abyssal",
+				"Common"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Brusipha kastar en av följande besvärjelser och använder Karisma som besvärjelseförmåga (besvärjelseräddning {@dc 13}):"
+					],
+					"will": [
+						"{@spell Prestidigitation}",
+						"{@spell Speak with Animals}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Bestow Curse}",
+							"{@spell Command}",
+							"{@spell Crown of Madness}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Demonic Ritual",
+					"entries": [
+						"Brusipha kan tillbringa 3 timmar med att utföra en ritual som åkallar {@dice 1d3 + 1} barlguras eller 1 hezrou. Hon måste offra en medelstor eller större levande varelse till Baphomet under denna ritual, och ritualen kan endast utföras på natten. Demonerna försvinner i gryningen."
+					]
+				},
+				{
+					"name": "Labyrinthine Recall",
+					"entries": [
+						"Brusipha kan perfekt minnas alla vägar hon har färdats på."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Brusipha gör två Eldritch Blast-attacker."
+					]
+				},
+				{
+					"name": "Eldritch Blast",
+					"entries": [
+						"{@atk rs} {@hit 5} att träffa, räckvidd 36 m., ett mål. {@h}8 ({@damage 1d10 + 3}) kraftskada."
+					]
+				},
+				{
+					"name": "Gore",
+					"entries": [
+						"{@atk mw} {@hit 6} att träffa, räckvidd 1,5 m., ett mål. {@h}8 ({@damage 1d8 + 4}) genomträngande skada plus 4 ({@damage 1d8}) nekrotisk skada. Om Brusipha rörde sig minst 3 meter rakt mot målet omedelbart innan hon träffade, tar målet ytterligare 4 ({@damage 1d8}) genomborrande skada, och om målet är en varelse måste den lyckas med ett {@dc 15} styrkebesparande kast eller skjutas upp till 3 meter från Brusipha och få {@condition prone} villkoret."
+					]
+				},
+				{
+					"name": "Incite the Hunters (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Brusipha tillåter varje allierad inom 9 meter från sig själv som har egenskapen Oförklarlig spårare att göra en vapenattack som en reaktion mot målet för den allierades Oförklarliga spårare."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Unerring Tracker",
+					"entries": [
+						"Brusipha skapar magiskt en psykisk länk med en varelse som hon kan se. Under den närmaste timmen vet Brusipha det aktuella avståndet och riktningen till målet om det befinner sig på samma existensplan. Länken upphör om Brusipha har tillståndet {@condition incapacitated} eller använder denna förmåga på ett annat mål."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Baphomet's Blessing",
+					"entries": [
+						"När Brusipha reducerar en fientlig varelse till 0 träffpunkter, får hon 8 tillfälliga träffpunkter."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"O",
+				"P"
+			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			]
+		},
+		{
+			"name": "Deck Defender",
+			"source": "BMT",
+			"page": 72,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"special": "5 + five times your level (the deck defender has a number of Hit Dice [d8s] equal to your level)"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 14,
+			"int": 3,
+			"wis": 10,
+			"cha": 1,
+			"senses": [
+				"blindsight 60 ft. (can't see beyond this radius)"
+			],
+			"passive": 10,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands one of your languages but can't speak"
+			],
+			"pbNote": "equals your",
+			"trait": [
+				{
+					"name": "Allied Knight",
+					"entries": [
+						"En del av däckförsvararens statistik baseras på den karaktär som drog riddarkortet. Där däckförsvararens statistikblock hänvisar till \"du\", hänvisar det till den karaktären."
+					]
+				},
+				{
+					"name": "Folded Versatility",
+					"entries": [
+						"Efter en lång vila kan du vika om däckförsvararens form och ändra den till akrobatform, berserkerform eller väktarform."
+					]
+				},
+				{
+					"name": "Fragile",
+					"entries": [
+						"Om kortlekens försvarare reduceras till 0 träffpunkter, kollapsar den till en oordnad hög av icke-magiska spelkort och kan inte återupplivas eller rekonstrueras."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Däckförsvararen gör ett antal attacker som är lika med hälften av dess färdighetsbonus (avrundat nedåt)."
+					]
+				},
+				{
+					"name": "Paper Cut",
+					"entries": [
+						"{@atk mw} PB + {@hit 3} för att träffa, räckvidd 1,5 m., ett mål. {@h}7 ({@damage 1d8 + 3}) skärande skada."
+					]
+				},
+				{
+					"name": "Reckless Strike (Berserker Form Only)",
+					"entries": [
+						"{@atk mw} PB + {@hit 3} för att träffa (med fördel), räckvidd 1,5 m., ett mål. {@h}10 ({@damage 2d6 + 3}) slashingskada, och attacker som görs mot däckförsvararen fram till början av dess nästa tur har fördel."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Swift Step (Acrobat Form Only)",
+					"entries": [
+						"Däckets försvarare utför åtgärden Dash eller Disengage."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Protection (Guardian Form Only)",
+					"entries": [
+						"När en varelse som däckförsvararen kan se angriper ett annat mål än däckförsvararen och befinner sig inom 1,5 meter från däckförsvararen, ger däckförsvararen nackdel på anfallsslaget."
+					]
+				}
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Enchanting Infiltrator",
+			"source": "BMT",
+			"page": 46,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "fey",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"veiled presence"
+					]
+				}
+			],
+			"hp": {
+				"average": 156,
+				"formula": "24d8 + 48"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 10,
+			"dex": 20,
+			"con": 15,
+			"int": 20,
+			"wis": 16,
+			"cha": 18,
+			"save": {
+				"dex": "+9",
+				"int": "+9"
+			},
+			"skill": {
+				"deception": "+12",
+				"perception": "+7",
+				"stealth": "+13"
+			},
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 17,
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"thieves' cant",
+				"plus any one language"
+			],
+			"cr": "11",
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Om infiltratören misslyckas med ett räddningskast, kan den välja att lyckas istället."
+					]
+				},
+				{
+					"name": "Veiled Presence",
+					"entries": [
+						"Infiltratörens AC inkluderar dess visdomsmodifierare, och infiltratören kan inte bli måltavla för spådomsmagi eller funktioner som skulle läsa dess tankar eller bestämma dess varelsetype."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Infiltratören gör två Poison Blade-attacker och kan använda Beguiling Whisper."
+					]
+				},
+				{
+					"name": "Poison Blade",
+					"entries": [
+						"{@atk mw,rw} {@hit 9} att träffa, räckvidd 1,5 m. eller räckvidd 18 m., ett mål. {@h}7 ({@damage 1d4 + 5}) genomträngande skada plus 11 ({@damage 2d10}) giftskada."
+					]
+				},
+				{
+					"name": "Beguiling Whisper",
+					"entries": [
+						"Infiltratören viskar magiskt till en varelse som den kan se inom 9 meter från sig själv. Målet måste lyckas med ett {@dc 17} Visdomsparningsslag eller få {@condition stunned} tillståndet på grund av rädsla eller förtjusning (infiltratörens val) till slutet av målets nästa tur, varefter målet är immunt mot denna Beguiling Whisper i 24 timmar."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"När en angripare som infiltratören kan se träffar infiltratören med en attack, halverar infiltratören attackens skada mot den."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Cunning",
+					"entries": [
+						"Infiltratören undkommer icke-magiska begränsningar och avslutar {@condition grappled}-villkoret på sig själv, och rör sig sedan upp till sin hastighet utan att utsättas för möjlighetsattacker."
+					]
+				},
+				{
+					"name": "Stab (Costs 2 Actions)",
+					"entries": [
+						"Infiltratören gör en Poison Blade-attack."
+					]
+				},
+				{
+					"name": "Misdirecting Escape (Costs 3 Actions)",
+					"entries": [
+						"Infiltratören har magiskt tillstånd {@condition invisible} och skapar en illusorisk kopia av sig själv i sitt utrymme och teleporterar sig sedan, tillsammans med all utrustning den bär eller har med sig, till ett ledigt utrymme inom 4,5 meter från sig själv. Bilden kastar illusoriska knivar mot två varelser som infiltratören väljer inom 6 meter från bilden. Varje mål måste göra ett {@dc 17} visdomsräddningsslag, och tar 13 ({@damage 3d8}) psykisk skada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat. Osynligheten varar till slutet av infiltratörens nästa tur."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Villain",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"TC",
+				"X"
+			],
+			"damageTags": [
+				"I",
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Euryale",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 189,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "monstrosity",
+				"tags": [
+					"druid",
+					"medusa"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 297,
+				"formula": "35d8 + 140"
+			},
+			"speed": {
+				"walk": 30,
+				"alternate": {
+					"walk": [
+						{
+							"number": 50,
+							"condition": "in serpent form"
+						}
+					],
+					"climb": [
+						{
+							"number": 50,
+							"condition": "in serpent form"
+						}
+					]
+				}
+			},
+			"str": 21,
+			"dex": 16,
+			"con": 18,
+			"int": 12,
+			"wis": 20,
+			"cha": 15,
+			"save": {
+				"dex": "+9",
+				"con": "+10",
+				"int": "+7",
+				"wis": "+11"
+			},
+			"skill": {
+				"animal handling": "+11",
+				"insight": "+17",
+				"medicine": "+11",
+				"nature": "+13",
+				"perception": "+11"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 21,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Druidic"
+			],
+			"cr": "18",
+			"spellcasting": [
+				{
+					"name": "Spellcasting (Medusa Form Only)",
+					"headerEntries": [
+						"Euryale kastar en av följande besvärjelser, som inte kräver några materiella komponenter och använder Visdom som besvärjelseförmåga (besvärjelseräddning {@dc 19}):"
+					],
+					"will": [
+						"{@spell Druidcraft}",
+						"{@spell Pass without Trace}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell Goodberry}",
+							"{@spell Lesser Restoration}",
+							"{@spell Locate Creature}",
+							"{@spell Move Earth}",
+							"{@spell Transport via Plants}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Om Euryale misslyckas med ett räddningskast kan hon välja att lyckas istället."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Euryale bär ena halvan av ett par Sändningsstenar; den andra halvan av paret hålls av Asteria."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Euryale gör tre attacker. Om hon är i ormform kan bara en av dessa attacker vara Konstriktion."
+					]
+				},
+				{
+					"name": "Constrict (Serpent Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 11} att träffa, räckvidd 4,5 m., en stor eller mindre varelse. {@h}16 ({@damage 2d10 + 5}) knytnävsslag, och målet har {@condition grappled} tillståndet (fly {@dc 19}). Tills detta grepp är över tar målet 11 ({@damage 2d10}) slagskada i början av varje tur, och Euryale kan inte snärja ett annat mål."
+					]
+				},
+				{
+					"name": "Snake Bite",
+					"entries": [
+						"{@atk mw} {@hit 11} att träffa, räckvidd 3 m., ett mål. {@h}12 ({@damage 2d6 + 5}) genomträngande skada, och målet måste lyckas med ett {@dc 18} konstitutionellt räddningsslag eller drabbas av {@condition poisoned} tills Euryales nästa tur börjar."
+					]
+				},
+				{
+					"name": "Verdant Bolt (Medusa Form Only)",
+					"entries": [
+						"{@atk rs} {@hit 11} att träffa, räckvidd 36 m., ett mål. {@h}18 ({@damage 4d8}) skada av syra."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Euryale ändrar form till sin enorma ormform eller tillbaka till sin medelstora medusa-form. Euryales spelstatistik är densamma i varje form förutom där det anges i detta statistikblock. All utrustning hon bär eller har med sig förvandlas inte. Euryale återgår till sin medusa-form om hon dör."
+					]
+				},
+				{
+					"name": "Petrifying Gaze {@recharge 4}",
+					"entries": [
+						"Euryale släpper lös förstenande magi från sina ögon i en kon på 9 meter. Varje varelse i det området måste göra ett {@dc 18} Konstitutionssparande om den inte har {@condition blinded} tillståndet. Om räddningskastet misslyckas med 5 eller mer, har varelsen {@condition petrified}-tillståndet. I annat fall, vid ett misslyckat räddningsslag, tar varelsen 14 ({@damage 4d6}) kraftskador, börjar förvandlas till sten och har {@condition restrained} tillståndet. Varelsen {@condition restrained} måste upprepa räddningsslaget i slutet av sin nästa tur. Vid misslyckad räddning får den {@condition petrified}-tillståndet, och vid lyckad räddning upphör effekten på den, Försteningen varar tills varelsen befrias av {@spell Greater Restoration}-besvärjelsen eller annan magi En varelse kan använda sin reaktion, om den finns, för att blunda för att undvika räddningskastet. Om varelsen gör det, har den {@condition blinded} tillståndet till slutet av sin nästa tur."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Move",
+					"entries": [
+						"Euryale flyttar upp till sin hastighet."
+					]
+				},
+				{
+					"name": "Venomous Strike (Costs 2 Actions)",
+					"entries": [
+						"Euryale utför en ormbettattack. Om målet har tillståndet {@condition poisoned} orsakar attacken ytterligare 16 ({@damage 3d10}) giftskador."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"DU"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"I",
+				"O",
+				"P"
+			],
+			"spellcastingTags": [
+				"F"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"petrified",
+				"poisoned",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Fate Hag",
+			"source": "BMT",
+			"page": 176,
+			"size": [
+				"M"
+			],
+			"type": "fey",
+			"alignment": [
+				"N"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 71,
+				"formula": "13d8 + 13"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 14,
+			"con": 13,
+			"int": 12,
+			"wis": 18,
+			"cha": 15,
+			"save": {
+				"con": "+3",
+				"wis": "+6"
+			},
+			"skill": {
+				"arcana": "+5",
+				"deception": "+6",
+				"history": "+5",
+				"perception": "+6"
+			},
+			"senses": [
+				"truesight 60 ft."
+			],
+			"passive": 16,
+			"conditionImmune": [
+				"charmed"
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"När haggan håller i sin sax kan den kasta en av följande besvärjelser, som inte kräver några materiella komponenter och som använder Visdom som besvärjelseförmåga (besvärjelsesparande {@dc 14}):"
+					],
+					"will": [
+						"{@spell Bless}",
+						"{@spell Guidance}",
+						"{@spell Silent Image}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Bane}",
+							"{@spell Bestow Curse}",
+							"{@spell Divination}",
+							"{@spell Scrying} (as an action)"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"Om haggan misslyckas med ett räddningskast kan den välja att lyckas istället."
+					]
+				},
+				{
+					"name": "Trace the Threads (1/Day)",
+					"entries": [
+						"Häxan kan kasta besvärjelsen {@spell Legend Lore}, som inte kräver några materiella komponenter och använder Visdom som besvärjelseförmåga."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Häggen gör två Shears-attacker. Den kan ersätta en attack med en användning av besvärjelse."
+					]
+				},
+				{
+					"name": "Shears",
+					"entries": [
+						"{@atk mw} {@hit 6} att träffa, räckvidd 1,5 m., ett mål. {@h}8 ({@damage 1d8 + 4}) kraftskada. Om målet är en varelse har den nackdel vid attackkast fram till slutet av haggens nästa tur."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Destined Jaunt",
+					"entries": [
+						"Haggen teleporterar sig magiskt, tillsammans med all utrustning den har på sig eller bär, till ett ledigt utrymme den kan se inom 9 meter från sig själv."
+					]
+				},
+				{
+					"name": "Tangle Threads",
+					"entries": [
+						"Häggen trasslar magiskt in en varelse som den kan se inom 18 meter från sig i spektrala silvertrådar. Varelsen måste lyckas med ett {@dc 14} räddningsslag i styrka, annars reduceras dess hastighet till 0 till slutet av dess nästa tur."
+					]
+				},
+				{
+					"name": "Destiny Curse (Costs 2 Actions)",
+					"entries": [
+						"Häggen förbannar magiskt en varelse som den kan se inom 18 meter från sig själv. Varelsen måste göra ett {@dc 14} visdomsräddningsslag, och varelsen har nackdel på detta räddningsslag om den har skadat haggan under den senaste minuten. Vid ett misslyckat räddningsslag har varelsen nackdel på färdighetskontroller, attackkast och räddningsslag tills förbannelsen upphör. En gång per tur, när den förbannade varelsen misslyckas med ett av dessa {@dice d20} kast, tar den 7 ({@damage 2d6}) kraftskador. Förbannelsen upphör efter 1 minut, när varelsen lyckas med totalt tre förmågekontroller, attackkast eller räddningskast i valfri kombination, eller när haggan använder denna handling igen."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"O"
+			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"strength",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gremorly's Ghost",
+			"source": "BMT",
+			"page": 122,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 82,
+				"formula": "15d8 + 15"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 40,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 7,
+			"dex": 14,
+			"con": 12,
+			"int": 18,
+			"wis": 12,
+			"cha": 17,
+			"save": {
+				"int": "+8",
+				"wis": "+5"
+			},
+			"skill": {
+				"arcana": "+8",
+				"history": "+8"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"acid",
+				"fire",
+				"lightning",
+				"thunder",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"cold",
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"Dwarvish",
+				"Giant"
+			],
+			"cr": "9",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Gremorly kastar en av följande besvärjelser och använder Intelligens som besvärjelseförmåga (besvärjelseräddning {@dc 16}):"
+					],
+					"will": [
+						"{@spell Dancing Lights}",
+						"{@spell Mage Hand}",
+						"{@spell Prestidigitation}"
+					],
+					"daily": {
+						"1": [
+							"{@spell Slow}"
+						],
+						"2e": [
+							"{@spell Bestow Curse}",
+							"{@spell Dispel Magic}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Ethereal Sight",
+					"entries": [
+						"Gremorly kan se 18 meter in i det eteriska planet när han befinner sig på det materiella planet, och vice versa."
+					]
+				},
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"Gremorly kan röra sig genom andra varelser och föremål som om de vore svår terräng. Han tar 5 ({@damage 1d10}) kraftskador om han avslutar sin tur inuti ett föremål."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Om Gremorly misslyckas med ett räddningskast, kan han välja att lyckas istället."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Gremorly gör tre attacker med fördärvade slag."
+					]
+				},
+				{
+					"name": "Withering Strike",
+					"entries": [
+						"{@atk ms} {@hit 8} att träffa, räckvidd 1,5 m., ett mål. {@h}19 ({@damage 3d12}) nekrotisk skada."
+					]
+				},
+				{
+					"name": "Fell Necromancy",
+					"entries": [
+						"Gremorly riktar sig mot en varelse som han kan se inom 18 meter från sig själv. Målet måste göra ett {@dc 16} konstitutionellt räddningsslag och tar 61 ({@damage 7d8 + 30}) nekrotisk skada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat. Dessutom återfår Gremorly 9 ({@dice 2d8}) träffpunkter."
+					]
+				},
+				{
+					"name": "Possession {@recharge}",
+					"entries": [
+						"En humanoid som Gremorly kan se inom 1,5 meter från sig måste lyckas med ett {@dc 15} karisma räddningsslag eller bli besatt av honom; Gremorly försvinner, och målet drabbas av {@condition incapacitated} tillståndet och förlorar kontrollen över sin kropp. Gremorly kan inte bli måltavla för någon attack, besvärjelse eller annan effekt, förutom de som gör honom odödlig, och han behåller sin anpassning, intelligens, visdom, karisma och immunitet mot {@condition charmed} och {@condition frightened} tillstånden. I övrigt använder han målets spelstatistik, men Gremorly får inte tillgång till målets kunskap, klassfunktioner eller färdigheter.",
+						"Besittningen varar tills målet faller till 0 träffpunkter, Gremorly avslutar den som en bonusåtgärd, eller Gremorly vänds eller tvingas ut av en effekt som {@spell Dispel Evil and Good} besvärjelsen. När besattheten upphör dyker Gremorly upp igen i ett ledigt utrymme inom 1,5 meter från målet. Målet är immunt mot denna besatthet i 24 timmar efter att ha lyckats med räddningsslaget eller efter att besattheten upphör."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Ethereal Step {@recharge 4}",
+					"entries": [
+						"Gremorly teleporterar sig upp till 9 meter till ett ledigt utrymme som han kan se."
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement",
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"DR",
+				"GI"
+			],
+			"damageTags": [
+				"N",
+				"O"
+			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Grim Champion of Bloodshed",
+			"source": "BMT",
+			"page": 161,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item plate armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 280,
+				"formula": "33d8 + 132"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 23,
+			"dex": 12,
+			"con": 18,
+			"int": 10,
+			"wis": 17,
+			"cha": 21,
+			"save": {
+				"str": "+12",
+				"dex": "+7",
+				"con": "+10"
+			},
+			"skill": {
+				"athletics": "+12",
+				"intimidation": "+11",
+				"perception": "+9"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 19,
+			"resist": [
+				"cold",
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"poisoned",
+				"stunned",
+				"unconscious"
+			],
+			"languages": [
+				"Common"
+			],
+			"cr": "20",
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Om mästaren misslyckas med ett räddningskast kan den välja att lyckas istället."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Mästaren utför fyra Blazing Morningstar-attacker. Den kan ersätta en av dessa attacker med Blade Storm, om den är tillgänglig."
+					]
+				},
+				{
+					"name": "Blazing Morningstar",
+					"entries": [
+						"{@atk mw} {@hit 12} att träffa, räckvidd 1,5 m., ett mål. {@h}10 ({@damage 1d8 + 6}) genomborrande skada plus 14 ({@damage 4d6}) brandskada."
+					]
+				},
+				{
+					"name": "Blade Storm {@recharge 5}",
+					"entries": [
+						"Mästaren frammanar en storm av spektralblad som fyller en kub på 6 meter med centrum i en punkt som mästaren kan se inom 36 meter från sig själv. Stormen varar till början av mästarens nästa tur. Medan stormen är aktiv är stormens område svår terräng. När en varelse går in i stormen för första gången under en tur eller börjar sin tur där, måste den göra ett {@dc 19} räddningsslag för Dexterity och ta 27 ({@damage 6d8}) slashing skada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Furious Pursuit",
+					"entries": [
+						"Mästaren rör sig upp till sin hastighet eller beordrar sitt fäste att röra sig upp till sin hastighet. Denna förflyttning framkallar inte möjlighetsattacker."
+					]
+				},
+				{
+					"name": "Induce Violence",
+					"entries": [
+						"Mästaren riktar in sig på en varelse som den kan se inom 18 meter från sig själv. Målet måste lyckas med ett {@dc 19} visdomsräddningsslag eller omedelbart utföra en närstridsattack mot en annan varelse som mästaren väljer och som befinner sig inom målets räckvidd. Om ingen varelse finns inom målets räckvidd eller om målet har tillståndet {@condition incapacitated}, tar målet istället 11 ({@damage 2d10}) psykiska skador."
+					]
+				},
+				{
+					"name": "Menace (Costs 2 Actions)",
+					"entries": [
+						"Mästaren väljer ett valfritt antal varelser som den kan se inom 9 meter från sig själv. Varje mål måste lyckas med ett {@dc 19} Visdomsparningsslag eller få {@condition frightened} tillståndet till slutet av sin nästa tur."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"F",
+				"P",
+				"S",
+				"Y"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Grim Champion of Desolation",
+			"source": "BMT",
+			"page": 162,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item studded leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 416,
+				"formula": "49d8 + 196"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 22,
+			"dex": 23,
+			"con": 18,
+			"int": 12,
+			"wis": 20,
+			"cha": 19,
+			"save": {
+				"dex": "+14",
+				"con": "+12",
+				"wis": "+13"
+			},
+			"skill": {
+				"deception": "+12",
+				"insight": "+13",
+				"perception": "+13",
+				"stealth": "+14"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 23,
+			"resist": [
+				"cold",
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"poisoned",
+				"stunned",
+				"unconscious"
+			],
+			"languages": [
+				"Common",
+				"Elvish"
+			],
+			"cr": "25",
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Om mästaren misslyckas med ett räddningskast kan den välja att lyckas istället."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Mästaren utför två Leeching Blade-attacker och använder Hollow Void."
+					]
+				},
+				{
+					"name": "Leeching Blade",
+					"entries": [
+						"{@atk mw} {@hit 14} att träffa, räckvidd 1,5 m., ett mål. {@h}13 ({@damage 2d6 + 6}) slashingskador plus 33 ({@damage 6d10}) kallskador, och mästaren återfår 10 hitpoäng."
+					]
+				},
+				{
+					"name": "Hollow Void",
+					"entries": [
+						"Mästaren frammanar en hungrig spricka runt en varelse som den kan se inom 36 meter från sig själv. Varelsen måste göra ett {@dc 22} räddningsslag i konstitution. Vid ett misslyckat räddningsslag tar varelsen 49 ({@damage 11d8}) kraftskador och har {@condition stunned}-tillståndet fram till början av mästarens nästa tur. Vid ett lyckat räddningsslag tar varelsen bara hälften så mycket skada. Om en varelse reduceras till 0 träffpunkter av denna effekt, dör varelsen och dess kropp smulas sönder till damm."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Step into Nothing {@recharge 4}",
+					"entries": [
+						"Mästaren, tillsammans med all utrustning den bär eller har med sig, får tillståndet {@condition invisible} och teleporteras till ett ledigt utrymme som den kan se inom 9 meter från sig själv. Mästaren förblir {@condition invisible} tills början av sin nästa tur eller omedelbart efter att den åsamkat skada."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Crush",
+					"entries": [
+						"Mästaren släpper lös en explosion av förkrossande kraft på en varelse som den kan se inom 9 meter från sig själv. Varelsen måste lyckas med ett {@dc 22} styrkebesparande kast eller ta 14 ({@damage 4d6}) kraftskador och få {@condition prone} tillståndet."
+					]
+				},
+				{
+					"name": "Fearsome Pursuit",
+					"entries": [
+						"Mästaren rör sig upp till sin hastighet eller beordrar sitt fäste att röra sig upp till sin hastighet. Denna förflyttning framkallar inte möjlighetsattacker."
+					]
+				},
+				{
+					"name": "Nullify (Costs 2 Actions)",
+					"entries": [
+						"Mästaren avger en magisk våg i en kon på 18 meter. Alla besvärjelser på 5:e nivån eller lägre slutar verka på varelser och föremål som mästaren väljer i det området."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"E"
+			],
+			"damageTags": [
+				"C",
+				"O",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"prone",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Grim Champion of Pestilence",
+			"source": "BMT",
+			"page": 163,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				14,
+				{
+					"ac": 17,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 120,
+				"formula": "16d8 + 48"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 10,
+			"dex": 18,
+			"con": 16,
+			"int": 17,
+			"wis": 15,
+			"cha": 21,
+			"save": {
+				"dex": "+9",
+				"cha": "+10"
+			},
+			"skill": {
+				"arcana": "+8",
+				"perception": "+7",
+				"stealth": "+9"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 17,
+			"resist": [
+				"cold",
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"poisoned",
+				"stunned",
+				"unconscious"
+			],
+			"languages": [
+				"Common",
+				"Infernal"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Mästaren kastar en av följande besvärjelser, som inte kräver några materiella komponenter och använder karisma som besvärjelseförmåga (besvärjelseräddning {@dc 18}):"
+					],
+					"will": [
+						"{@spell Detect Magic}",
+						"{@spell Mage Armor} (self only)"
+					],
+					"daily": {
+						"2e": [
+							"{@spell Blight}",
+							"{@spell Blindness/Deafness}"
+						],
+						"1e": [
+							"{@spell Cloudkill}",
+							"{@spell Contagion}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Halo of Pestilence",
+					"entries": [
+						"Mästaren omges av en aura av dödlig magi som tar formen av en mängd glödande vita insekter. Varje varelse som börjar sin tur inom 3 meter från mästaren måste lyckas med ett {@dc 18} konstitutionellt räddningskast eller drabbas av {@condition incapacitated} tills början av nästa tur, medan insekterna ödelägger dess kropp."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Om mästaren misslyckas med ett räddningskast kan den välja att lyckas istället."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Mästaren gör två Blight Staff-attacker, två Plague Bolt-attacker, eller en av varje."
+					]
+				},
+				{
+					"name": "Blight Staff",
+					"entries": [
+						"{@atk mw} {@hit 9} att träffa, räckvidd 1,5 m., ett mål. {@h}8 ({@damage 1d8 + 4}) knytnävsslag plus 21 ({@damage 6d6}) nekrotiska skador."
+					]
+				},
+				{
+					"name": "Plague Bolt",
+					"entries": [
+						"{@atk rs} {@hit 10} att träffa, räckvidd 36 m., ett mål. {@h}23 ({@damage 4d8 + 5}) giftskador, och målet har {@condition poisoned}-tillståndet fram till början av mästarens nästa tur."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attack",
+					"entries": [
+						"Mästaren utför en Blight Staff- eller Plague Bolt-attack."
+					]
+				},
+				{
+					"name": "Furious Pursuit",
+					"entries": [
+						"Mästaren rör sig upp till sin hastighet eller beordrar sitt fäste att röra sig upp till sin hastighet. Denna förflyttning framkallar inte möjlighetsattacker."
+					]
+				},
+				{
+					"name": "Cast a Spell (Costs 2 Actions)",
+					"entries": [
+						"Mästaren använder Spellcasting."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"I"
+			],
+			"damageTags": [
+				"B",
+				"I",
+				"N"
+			],
+			"damageTagsSpell": [
+				"I",
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened",
+				"poisoned",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Harrow Hawk",
+			"source": "BMT",
+			"page": 177,
+			"size": [
+				"T"
+			],
+			"type": "undead",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 25,
+				"formula": "10d4"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": 60
+			},
+			"str": 5,
+			"dex": 16,
+			"con": 10,
+			"int": 2,
+			"wis": 14,
+			"cha": 7,
+			"skill": {
+				"perception": "+6",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"cr": "1",
+			"action": [
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 5} att träffa, räckvidd 1,5 m., ett mål. {@h}8 ({@damage 2d4 + 3}) slashingskador plus 3 ({@damage 1d6}) nekrotiska skador."
+					]
+				},
+				{
+					"name": "Plane Shift (2/Day)",
+					"entries": [
+						"Höken kastar {@spell Plane Shift} på sig själv, kräver inga besvärjelsekomponenter och använder Visdom som besvärjelseförmåga."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Shadow Dash",
+					"entries": [
+						"När höken befinner sig i svagt ljus eller mörker teleporterar den sig upp till 9 meter till ett ledigt utrymme som den kan se och som också befinner sig i svagt ljus eller mörker. Höken har sedan fördel vid den första närstridsattacken den gör före slutet av turen."
+					]
+				}
+			],
+			"senseTags": [
+				"SD"
+			],
+			"damageTags": [
+				"N",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Harrow Hound",
+			"source": "BMT",
+			"page": 164,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 45,
+				"formula": "6d8 + 18"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 16,
+			"dex": 19,
+			"con": 16,
+			"int": 8,
+			"wis": 15,
+			"cha": 13,
+			"skill": {
+				"perception": "+6",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 16,
+			"resist": [
+				"necrotic",
+				"psychic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"Blink Dog",
+				"understands Sylvan but can't speak it"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"Hunden har fördel i anfallsslag mot en varelse om minst en av hundens allierade befinner sig inom 1,5 meter från målet och den allierade inte har villkoret {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Supernatural Tracker",
+					"entries": [
+						"Hunden vet avståndet till och riktningen för alla varelser som har kommit inom 9 meter från den, även om varelsen befinner sig på ett annat existensplan. Om varelsen som spåras av hunden dör, vet hunden om det."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} att träffa, räckvidd 1,5 m., ett mål. {@h}10 ({@damage 2d6 + 3}) genomträngande skada plus 3 ({@damage 1d6}) nekrotisk skada. Om målet är en varelse måste den lyckas med ett {@dc 13} räddningsslag för styrka eller få {@condition prone} villkoret."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Shadow Step {@recharge 4}",
+					"entries": [
+						"Hunden teleporterar sig magiskt, tillsammans med all utrustning den bär på sig, upp till 12 meter till ett ledigt utrymme som den kan se."
+					]
+				}
+			],
+			"traitTags": [
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"CS",
+				"OTH",
+				"S"
+			],
+			"damageTags": [
+				"N",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Helmed Horror Detention Drone",
+			"source": "BMT",
+			"page": 135,
+			"_copy": {
+				"name": "Helmed Horror",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "helmed horror",
+						"with": "drone"
+					},
+					"action": [
+						{
+							"mode": "appendArr",
+							"items": {
+								"name": "Detention Orb",
+								"entries": [
+									"Drönaren skjuter iväg ett litet klot av magisk kraft mot en varelse den kan se inom 9 meter från sig själv. Varelsen måste lyckas med ett {@dc 15} räddningsslag i konstitution eller bli inkapslad i klotet, som expanderar till en storlek precis stor nog för att innehålla varelsen. När varelsen är inkapslad behöver den inte andas, äta eller dricka, och den åldras inte. Ingenting kan passera genom klotet, och ingen varelse kan teleportera sig eller använda planar travel för att ta sig in eller ut ur klotet. Som en bonusåtgärd kan drönaren flytta klotet och dess innehåll upp till 9 meter i valfri riktning. Ett lyckat kast av besvärjelsen {@spell Dispel Magic} på klotet ({@dc 15}) förstör det. Klotet förblir annars intakt tills drönaren spenderar en handling för att avsluta effekten eller drönaren förstörs. En drönare kan bara ha ett kvarhållande klot aktivt åt gången; om drönaren skapar ett kvarhållande klot när den redan har ett aktivt, försvinner det första klotet och frigör varelsen inuti."
+								]
+							}
+						}
+					]
+				}
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"hasFluff": true
+		},
+		{
+			"name": "Hierophant Medusa",
+			"source": "BMT",
+			"page": 179,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 237,
+				"formula": "25d10 + 100"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40,
+				"swim": 40
+			},
+			"str": 22,
+			"dex": 20,
+			"con": 18,
+			"int": 15,
+			"wis": 23,
+			"cha": 22,
+			"save": {
+				"con": "+10",
+				"wis": "+12"
+			},
+			"skill": {
+				"insight": "+12",
+				"perception": "+12",
+				"persuasion": "+12",
+				"religion": "+8",
+				"stealth": "+11"
+			},
+			"passive": 22,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"Common plus any three languages (Abyssal, Celestial, Druidic, or Infernal recommended)"
+			],
+			"cr": "17",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Medusan kastar en av följande besvärjelser, som inte kräver några materiella komponenter och som använder Visdom som besvärjelseförmåga (besvärjelseräddning {@dc 20}):"
+					],
+					"will": [
+						"{@spell Light}",
+						"{@spell Spare the Dying}",
+						"{@spell Thaumaturgy}"
+					],
+					"daily": {
+						"2": [
+							"{@spell Mass Cure Wounds} (cast at 8th level)"
+						],
+						"1e": [
+							"{@spell Blade Barrier}",
+							"{@spell Divination}",
+							"{@spell Greater Restoration}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Devotion's Call (1/Day)",
+					"entries": [
+						"Medusan kan kasta besvärjelsen {@spell Resurrection}, som inte kräver några materiella komponenter och använder Visdom som besvärjelseförmåga."
+					]
+				},
+				{
+					"name": "Legendary Resistance (4/Day)",
+					"entries": [
+						"Om medusan misslyckas med ett räddningsslag kan den välja att lyckas istället."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Medusan gör en Konstriktion-attack, en Final Blade-attack och en Ormhårsattack. Alternativt kan den göra två Wrathful Strike-attacker."
+					]
+				},
+				{
+					"name": "Constrict",
+					"entries": [
+						"{@atk mw} {@hit 12} att träffa, räckvidd 3 m., ett mål. {@h}16 ({@damage 3d6 + 6}) knytnävsslag, och om målet är en medelstor eller mindre varelse har det {@condition grappled} tillståndet (flykt {@dc 20}). Tills detta grepp avslutas har målet tillståndet {@condition restrained}, och medusan kan inte snärja en annan varelse."
+					]
+				},
+				{
+					"name": "Final Blade",
+					"entries": [
+						"{@atk mw} {@hit 12} att träffa, räckvidd 1,5 m., ett mål. {@h}13 ({@damage 2d6 + 6}) huggskador plus 21 ({@damage 6d6}) kraftskador. Om målet har minst ett huvud och medusan fick 20 på attackkastet halshuggs målet och dör om det misslyckas med ett {@dc 20} Konstitutionsräddningsslag och inte kan överleva utan det huvudet. Ett mål är immunt mot denna effekt om det inte tar någon av skadorna, har legendariska handlingar eller är Huge eller större. En sådan varelse tar ytterligare 28 ({@damage 8d6}) kraftskador från träffen."
+					]
+				},
+				{
+					"name": "Snake Hair",
+					"entries": [
+						"{@atk mw} {@hit 12} att träffa, räckvidd 1,5 m., ett mål. {@h}11 ({@damage 1d10 + 6}) genomträngande skada plus 5 ({@damage 1d10}) giftskada."
+					]
+				},
+				{
+					"name": "Wrathful Strike",
+					"entries": [
+						"{@atk rs} {@hit 12} att träffa, räckvidd 36 m., en varelse. {@h}22 ({@damage 3d10 + 6}) strålningsskada, och målet har {@condition blinded}-tillståndet till slutet av sin nästa tur."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Petrifying Gaze {@recharge 4}",
+					"entries": [
+						"Medusan släpper lös förstenande magi från sina ögon i en kon på 9 meter. Varje varelse i området måste göra ett {@dc 18} Konstitutionsräddningskast om den inte har {@condition blinded} tillståndet. Om räddningsslaget misslyckas med 5 eller mer, har varelsen tillståndet {@condition petrified}. I annat fall, vid ett misslyckat räddningsslag, tar varelsen 10 ({@damage 3d6}) kraftskador, börjar förvandlas till sten och har {@condition restrained} tillståndet. {@condition restrained}-varelsen måste upprepa räddningsslaget i slutet av sin nästa tur. Vid ett misslyckat räddningsslag får den {@condition petrified}-tillståndet, och vid ett lyckat räddningsslag upphör effekten på den. Försteningen varar tills varelsen befrias av {@spell Greater Restoration}-besvärjelsen eller annan magi.",
+						"En varelse kan använda sin reaktion, om den är tillgänglig, för att blunda och undvika räddningsslaget. Om varelsen gör det har den tillståndet {@condition blinded} till slutet av sin nästa tur."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Move",
+					"entries": [
+						"Medusan rör sig upp till sin hastighet utan att utsättas för möjlighetsattacker."
+					]
+				},
+				{
+					"name": "Wrathful Blast (Costs 2 Actions)",
+					"entries": [
+						"Medusan gör en Wrathful Strike-attack."
+					]
+				},
+				{
+					"name": "Final Slash (Costs 3 Actions)",
+					"entries": [
+						"Medusan utför en Final Blade-attack med fördel."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Hierophant Medusa",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"CE",
+				"DU",
+				"I",
+				"X"
+			],
+			"damageTags": [
+				"B",
+				"I",
+				"O",
+				"P",
+				"R",
+				"S"
+			],
+			"damageTagsSpell": [
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"petrified",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hierophant of the Comet",
+			"source": "BMT",
+			"page": 92,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"warlock"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item breastplate|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 153,
+				"formula": "18d8 + 72"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 13,
+			"con": 18,
+			"int": 15,
+			"wis": 17,
+			"cha": 20,
+			"save": {
+				"wis": "+7",
+				"cha": "+9"
+			},
+			"skill": {
+				"arcana": "+10",
+				"deception": "+9",
+				"persuasion": "+9",
+				"religion": "+6"
+			},
+			"senses": [
+				"truesight 30 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"psychic"
+			],
+			"languages": [
+				"Common plus any two languages",
+				"telepathy 60 ft."
+			],
+			"cr": "11",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Hierofanten kastar en av följande besvärjelser och använder karisma som besvärjelseförmåga (besvärjelseräddning {@dc 17}):"
+					],
+					"will": [
+						"{@spell Detect Thoughts}",
+						"{@spell Mage Hand}",
+						"{@spell Thaumaturgy}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Dimension Door}",
+							"{@spell Mass Suggestion}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Comet's Voice (1/Day)",
+					"entries": [
+						"Hierofanten kan kasta {@spell Contact Other Plane} med karisma som besvärjelseförmåga."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Hierofanten har fördel i räddningsslag mot besvärjelser och andra magiska effekter."
+					]
+				},
+				{
+					"name": "Thought Shield",
+					"entries": [
+						"Hierofantens tankar kan inte läsas på något sätt om inte hierofanten tillåter det."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Hierofanten gör två Heraldsyxattacker eller tre Kometblastattacker."
+					]
+				},
+				{
+					"name": "Herald's Axe",
+					"entries": [
+						"{@atk mw} {@hit 9} att träffa, räckvidd 1,5 m., ett mål. {@h}11 ({@damage 1d12 + 5}) slående skada plus 10 ({@damage 3d6}) nekrotisk skada."
+					]
+				},
+				{
+					"name": "Comet Blast",
+					"entries": [
+						"{@atk rs} {@hit 9} att träffa, räckvidd 36 m., ett mål. {@h}16 ({@damage 2d10 + 5}) kraftskada."
+					]
+				},
+				{
+					"name": "All-Consuming Star {@recharge}",
+					"entries": [
+						"Hierofanten frammanar en manifestation av den Allförtärande stjärnan: strålande ljus och hemsökande skrik som fyller en sfär med 6 meters radie centrerad på en punkt som hierofanten kan se inom 18 meter från sig själv. Varje varelse inom sfären har tillstånden {@condition blinded} och {@condition deafened}. Varje varelse som kommer in i sfären för första gången under en tur eller börjar sin tur där måste göra ett {@dc 17} Visdomsparningsslag. Vid ett misslyckat räddningsslag tar varelsen 27 ({@damage 6d8}) psykiska skador och har {@condition incapacitated}-tillståndet till början av sin nästa tur. Vid ett lyckat räddningsslag tar varelsen bara hälften så mycket skada. Manifestationen kvarstår tills hierofanten dör, får {@condition incapacitated}-tillståndet, använder en bonushandling för att avsluta effekten eller använder denna handling igen."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Star's Hunger",
+					"entries": [
+						"Hierofanten riktar in sig på en varelse inom 9 meter från centrum av sin Allkonsumerande stjärna. Målet måste lyckas med ett {@dc 17} styrkebesparande kast eller dras upp till 9 meter mot den allförbrukande stjärnans centrum."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"TP",
+				"X"
+			],
+			"damageTags": [
+				"N",
+				"O",
+				"S",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"strength",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hulgaz",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 169,
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"devil"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 190,
+				"formula": "20d10 + 80"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 17,
+			"dex": 10,
+			"con": 18,
+			"int": 14,
+			"wis": 15,
+			"cha": 20,
+			"save": {
+				"wis": "+7",
+				"cha": "+10"
+			},
+			"skill": {
+				"deception": "+10",
+				"insight": "+7",
+				"perception": "+7",
+				"persuasion": "+10"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 17,
+			"resist": [
+				"acid",
+				"cold",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
+				}
+			],
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"telepathy 120 ft."
+			],
+			"cr": "14",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Hulgaz kastar en av följande besvärjelser, som inte kräver några materiella komponenter och använder Karisma som besvärjelseförmåga (besvärjelseräddning {@dc 18}):"
+					],
+					"will": [
+						"{@spell Charm Person}"
+					],
+					"daily": {
+						"1": [
+							"{@spell Teleport}"
+						],
+						"2e": [
+							"{@spell Dispel Magic}",
+							"{@spell Fog Cloud}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Om Hulgaz misslyckas med ett räddningskast, kan hon välja att lyckas istället."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Hulgaz har fördel vid räddningsslag mot besvärjelser och andra magiska effekter."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Hulgaz gör två kloattacker och en Intoxicating Sting-attack."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 8} att träffa, räckvidd 1,5 m., ett mål. {@h}12 ({@damage 2d8 + 3}) skärande skada."
+					]
+				},
+				{
+					"name": "Intoxicating Sting",
+					"entries": [
+						"{@atk mw} {@hit 8} att träffa, räckvidd 3 m., en varelse. {@h}8 ({@damage 1d10 + 3}) genomborrande skada plus 10 ({@damage 3d6}) giftskada, och målet måste lyckas med ett {@dc 17} visdomsräddningsslag eller få {@condition charmed}-tillståndet till början av Hulgaz nästa tur."
+					]
+				},
+				{
+					"name": "Brimstone Vapor {@recharge 5}",
+					"entries": [
+						"Hulgaz andas ut en 9 meter lång kon av skadlig, brännande het ånga. Varje varelse i området måste lyckas med ett {@dc 17} räddningskast i konstitution eller drabbas av {@condition poisoned} tillståndet i 1 minut. Medan {@condition poisoned} på detta sätt, tar en varelse 31 ({@damage 7d8}) eldskador i början av var och en av sina varv och har nackdel på Visdomsbesparingsslag. Målet kan upprepa räddningsslaget för Konstitution i slutet av var och en av sina vändningar, och effekten upphör om målet lyckas."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attack",
+					"entries": [
+						"Hulgaz utför en kloattack."
+					]
+				},
+				{
+					"name": "Charm",
+					"entries": [
+						"Hulgaz använder Spellcasting för att kasta {@spell Charm Person}."
+					]
+				},
+				{
+					"name": "Curdle Heart (Costs 2 Actions)",
+					"entries": [
+						"Hulgaz fördärvar de goda känslorna hos sina {@condition charmed} offer. Hon väljer ett valfritt antal varelser som hon kan se och som är {@condition charmed} av henne. Varje mål tar 17 ({@damage 5d6}) psykisk skada när det {@condition charmed} villkor som Hulgaz tillämpade slutar på det."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"TP"
+			],
+			"damageTags": [
+				"F",
+				"I",
+				"P",
+				"S",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"conditionInflictSpell": [
+				"charmed"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Initiate of the Comet",
+			"source": "BMT",
+			"page": 93,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"warlock"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 75,
+				"formula": "10d8 + 30"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 14,
+			"con": 16,
+			"int": 11,
+			"wis": 13,
+			"cha": 17,
+			"save": {
+				"wis": "+3",
+				"cha": "+5"
+			},
+			"skill": {
+				"arcana": "+2"
+			},
+			"passive": 11,
+			"languages": [
+				"Common plus any one language"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Den invigde kastar en av följande besvärjelser, med Karisma som besvärjelseförmåga (besvärjelseräddning {@dc 13}):"
+					],
+					"will": [
+						"{@spell Mage Hand}",
+						"{@spell Thaumaturgy}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Dimension Door}",
+							"{@spell Divination}",
+							"{@spell Enthrall}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Den initierade har fördel i räddningsslag mot besvärjelser och andra magiska effekter."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Den initierade utför två Comet Strike-attacker."
+					]
+				},
+				{
+					"name": "Comet Strike",
+					"entries": [
+						"{@atk ms,rs} {@hit 5} för att träffa, räckvidd 1,5 m. eller räckvidd 36 m., ett mål. {@h}14 ({@damage 2d10 + 3}) kraftskada."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Moment of Foresight (1/Day)",
+					"entries": [
+						"När den initierade träffas av ett attackkast kan denne tvinga angriparen att kasta om kastet och använda det nya kastet, vilket kan leda till att attacken missar."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"O"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Living Portent",
+			"source": "BMT",
+			"page": 180,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "celestial",
+			"alignment": [
+				"L",
+				"N"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 65,
+				"formula": "10d8 + 20"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 14,
+			"dex": 16,
+			"con": 14,
+			"int": 14,
+			"wis": 16,
+			"cha": 15,
+			"save": {
+				"dex": "+5",
+				"wis": "+5"
+			},
+			"skill": {
+				"arcana": "+6",
+				"history": "+6",
+				"insight": "+5",
+				"perception": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 15,
+			"immune": [
+				"radiant"
+			],
+			"conditionImmune": [
+				"exhaustion"
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Den levande bäraren kastar en av följande besvärjelser, som inte kräver några materiella komponenter och som använder Visdom som besvärjelseförmåga:"
+					],
+					"daily": {
+						"2": [
+							"{@spell Cure Wounds}"
+						],
+						"1e": [
+							"{@spell Divination}",
+							"{@spell Greater Restoration}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Brilliance (True Form Only)",
+					"entries": [
+						"Den levande portern kastar starkt ljus i 9 meter och svagt ljus i ytterligare 9 meter."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Det levande tecknet utför två attacker med strålningsslag."
+					]
+				},
+				{
+					"name": "Radiant Strike",
+					"entries": [
+						"{@atk ms,rs} {@hit 5} att träffa, räckvidd 1,5 m. eller räckvidd 36 m., ett mål. {@h}9 ({@damage 1d12 + 3}) strålningsskada."
+					]
+				},
+				{
+					"name": "Prophetic Blessing",
+					"entries": [
+						"Den levande bäraren ingjuter magiskt kraften i sin profetia i en annan villig varelse som den levande bäraren kan se inom 9 meter från sig själv. Målets maximala och nuvarande träffpoäng ökar med 7 ({@dice 1d8 + 3}), och det får en profetitärning, en {@dice d8}. En gång under varelsens tur, när den misslyckas med ett färdighetsprov eller räddningsslag eller missar ett attackkast, kan den slå profetitärningen och lägga till det slagna talet till totalsumman, vilket potentiellt kan förändra resultatet. Välsignelsen upphör efter 1 timme eller när det levande tecknet avslutar välsignelsen (ingen åtgärd krävs) eller använder den här handlingen igen."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Den levande bäraren förvandlas magiskt till en humanoid och behåller sin spelstatistik (förutom sin storlek och egenskapen Briljans). Förvandlingen avslutas om den levande bäraren reduceras till 0 träffpunkter eller använder en bonushandling för att avsluta den."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Price of Defiance",
+					"entries": [
+						"När den levande bäraren skadas av en varelse som den kan se inom 36 meter från sig själv, sårar strålningskraften varelsen. Varelsen måste göra ett {@dc 13} konstitutionellt räddningsslag och tar 10 ({@damage 3d6}) strålningsskador om räddningsslaget misslyckas, eller hälften så mycket skada om det lyckas."
+					]
+				}
+			],
+			"variant": [
+				{
+					"name": "Servants of Living Stars",
+					"type": "variant",
+					"entries": [
+						"Vissa stjärnor på himlen är Elder Evils, utomjordiska varelser med gudalik makt från det verklighetsfrånvända Far Realm.",
+						"Ett levande tecken kan vara ett fragment av dessa varelsers vilja. Dessa levande portaler är Aberrationer istället för Celestials och är typiskt kaotiskt onda. De ersätter all strålningsskada i sitt statusblock med nekrotisk eller psykisk skada (DM:s val). Deras besvärjelser kan också vara annorlunda. Några kända Elder Evils inkluderar följande:",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "Acamar",
+									"entry": "En död stjärna som äter upp andra stjärnor eller sidokroppar som den stöter på."
+								},
+								{
+									"type": "item",
+									"name": "Caiphon, the Dream Whisperer",
+									"entry": "En lila stjärna vars vägledning och undersåtar verkar hjälpa under en tid men vars inflytande oundvikligen leder till katastrof."
+								},
+								{
+									"type": "item",
+									"name": "Hadar, the Dark Hunger",
+									"entry": "En aska-röd döende stjärna som suger upp liv från sina undersåtar för att förhindra sin egen undergång."
+								},
+								{
+									"type": "item",
+									"name": "Khirad, the Star of Secrets",
+									"entry": "En blåvit stjärna vars gåvor ger insikt men också avslöjar fruktansvärda sanningar."
+								},
+								{
+									"type": "item",
+									"name": "Zhudun, the Corpse Star",
+									"entry": "En död stjärna som viskar om kraften att trotsa döden."
+								}
+							]
+						}
+					]
+				}
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"R"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Living Star (Necrotic)",
+					"source": "BMT",
+					"_mod": {
+						"*": {
+							"mode": "replaceTxt",
+							"replace": "\\bradiant\\b",
+							"with": "necrotic"
+						}
+					},
+					"type": "aberration",
+					"alignment": [
+						"C",
+						"E"
+					],
+					"variant": null
+				},
+				{
+					"name": "Living Star (Psychic)",
+					"source": "BMT",
+					"_mod": {
+						"*": {
+							"mode": "replaceTxt",
+							"replace": "\\bradiant\\b",
+							"with": "psychic"
+						}
+					},
+					"type": "aberration",
+					"alignment": [
+						"C",
+						"E"
+					],
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Malaxxix",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 173,
+			"size": [
+				"H"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"yugoloth"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 312,
+				"formula": "25d12 + 150"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 60
+			},
+			"str": 23,
+			"dex": 16,
+			"con": 22,
+			"int": 22,
+			"wis": 20,
+			"cha": 18,
+			"save": {
+				"str": "+12",
+				"con": "+12"
+			},
+			"skill": {
+				"arcana": "+12",
+				"athletics": "+12",
+				"perception": "+11"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 21,
+			"resist": [
+				"cold",
+				"fire",
+				"lightning",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"acid",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"Infernal",
+				"telepathy 120 ft."
+			],
+			"cr": "18",
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Om Malaxxix misslyckas med ett räddningskast kan den välja att lyckas istället."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Malaxxix har fördel i räddningsprov mot besvärjelser och andra magiska effekter."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Malaxxix gör två Forge Hammer- eller Whip-attacker i valfri kombination."
+					]
+				},
+				{
+					"name": "Forge Hammer",
+					"entries": [
+						"{@atk mw,rw} {@hit 12} att träffa, räckvidd 3 m. eller räckvidd 60/54 m., ett mål. {@h}28 ({@damage 4d10 + 6}) knytnävsslag, och målet kan inte ta reaktioner förrän i slutet av Malaxxix nästa tur. Träff eller Miss: Hammaren återgår sedan magiskt till Malaxxix hand."
+					]
+				},
+				{
+					"name": "Whip",
+					"entries": [
+						"{@atk mw} {@hit 12} att träffa, räckvidd 9 m., en varelse. {@h}15 ({@damage 2d8 + 6}) slashingskador, och målet har {@condition restrained}-tillståndet i 1 minut. Målet {@condition restrained} kan göra ett {@dc 20} räddningsslag för styrka i slutet av var och en av sina varv, och effekten upphör på målet om det lyckas. Endast en varelse kan bli {@condition restrained} av piskan åt gången."
+					]
+				},
+				{
+					"name": "Mezzoloth Vortex {@recharge 5}",
+					"entries": [
+						"Malaxxix kallar fram en virvel av virvlande mezzoloths vid en punkt som den kan se inom 27 meter från sig själv. Virveln är en 9 meter radie, 3 meter hög cylinder centrerad på den punkten. Alla varelser utom Malaxxix i det området måste göra ett {@dc 20} räddningsslag i dexteritet. Vid ett misslyckat räddningsslag tar varelsen 35 ({@damage 10d6}) kraftskador och har {@condition restrained} tillståndet medan den är inom cylindern. Vid ett lyckat räddningsslag tar varelsen hälften så mycket skada och knuffas till närmaste lediga utrymme utanför cylindern. Virveln varar fram till början av Malaxxix nästa tur."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Fiendish Stride",
+					"entries": [
+						"Malaxxix rör sig upp till sin hastighet. Denna rörelse framkallar inte möjlighetsattacker. När Malaxxix rör sig inom 1,5 meter från en varelse under denna rörelse, tar den varelsen 5 ({@damage 1d10}) blixtskador. En varelse kan bara ta denna skada en gång per tur."
+					]
+				},
+				{
+					"name": "Attack (Costs 2 Actions)",
+					"entries": [
+						"Malaxxix gör en Forge Hammer- eller Whip-attack."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Malaxxix",
+				"source": "BMT"
+			},
+			"attachedItems": [
+				"whip|phb"
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"I",
+				"TP"
+			],
+			"damageTags": [
+				"B",
+				"L",
+				"O",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Minotaur Archaeologist",
+			"source": "BMT",
+			"page": 126,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 18,
+				"formula": "4d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 10,
+			"con": 11,
+			"int": 13,
+			"wis": 12,
+			"cha": 10,
+			"skill": {
+				"arcana": "+3",
+				"history": "+5",
+				"perception": "+5",
+				"religion": "+3"
+			},
+			"passive": 15,
+			"languages": [
+				"Common"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Labyrinthine Recall",
+					"entries": [
+						"Minotauren kan perfekt minnas alla vägar den har färdats på."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Gore",
+					"entries": [
+						"{@atk mw} {@hit 3} att träffa, räckvidd 1,5 m., ett mål. {@h}4 ({@damage 1d6 + 1}) genomträngande skada. Om minotauren rörde sig minst 3 meter rakt mot målet omedelbart innan den träffade, tar målet ytterligare 3 ({@damage 1d6}) genomborrande skada, och om målet är en stor eller mindre varelse, måste den lyckas med ett {@dc 11} styrkebesparande kast eller skjutas upp till 3 meter från minotauren och få {@condition prone} villkoret."
+					]
+				}
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Minotaur Infiltrator",
+			"source": "BMT",
+			"page": 127,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "8d8 + 16"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 18,
+			"dex": 11,
+			"con": 14,
+			"int": 8,
+			"wis": 16,
+			"cha": 10,
+			"skill": {
+				"deception": "+2",
+				"perception": "+7",
+				"religion": "+1"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 17,
+			"languages": [
+				"Abyssal",
+				"Common"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Labyrinthine Recall",
+					"entries": [
+						"Minotauren kan perfekt minnas alla vägar den har färdats på."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Gore",
+					"entries": [
+						"{@atk mw} {@hit 6} att träffa, räckvidd 1,5 m., ett mål. {@h}8 ({@damage 1d8 + 4}) genomträngande skada, eller 13 ({@damage 2d8 + 4}) genomträngande skada när den är förstorad. Om minotauren rörde sig minst 3 meter rakt mot målet omedelbart innan den träffade, tar målet ytterligare 4 ({@damage 1d8}) genomborrande skada, eller 9 ({@damage 2d8}) genomborrande skada om minotauren är förstorad. Om målet är en varelse måste den lyckas med ett {@dc 14} styrkebesparande kast eller knuffas upp till 3 meter från minotauren och drabbas av {@condition prone} villkoret."
+					]
+				},
+				{
+					"name": "Mattock",
+					"entries": [
+						"{@atk mw} {@hit 6} att träffa, räckvidd 3 m., ett mål. {@h}10 ({@damage 1d12 + 4}) knytnävsslag, eller 17 ({@damage 2d12 + 4}) knytnävsslag när minotauren är förstorad. Om målet är en varelse och minotauren är förstorad, måste målet lyckas med ett {@dc 14} styrkebesparande kast eller drabbas av {@condition prone} villkoret."
+					]
+				},
+				{
+					"name": "Enlarge (Recharges after a Short or Long Rest)",
+					"entries": [
+						"I 1 minut ökar minotauren magiskt i storlek, tillsammans med allt den bär på sig eller bär med sig. När minotauren är förstorad är den stor, fördubblar sina skadetärningar vid styrkebaserade vapenattacker (ingår i attackerna) och gör styrkekontroller och styrkebesparande kast med fördel. Om minotauren saknar utrymme för att bli Large, ändrar minotauren inte storlek."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Unerring Tracker",
+					"entries": [
+						"Minotauren skapar magiskt en psykisk länk med en varelse som den kan se. Under den närmaste timmen vet minotauren det aktuella avståndet och riktningen till målet om det befinner sig på samma existensplan. Länken upphör om minotauren har tillståndet {@condition incapacitated} eller använder denna förmåga på ett annat mål."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AB",
+				"C"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			]
+		},
+		{
+			"name": "Oddlewin",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 111,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "fey",
+				"tags": [
+					"goblinoid"
+				]
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 21,
+				"formula": "6d6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 14,
+			"con": 10,
+			"int": 10,
+			"wis": 16,
+			"cha": 15,
+			"skill": {
+				"performance": "+4",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"conditionImmune": [
+				"charmed"
+			],
+			"languages": [
+				"Common",
+				"Goblin",
+				"Sylvan"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Oddlewin kastar en av följande besvärjelser och använder karisma som besvärjelseförmåga (besvärjelseräddning {@dc 12}):"
+					],
+					"will": [
+						"{@spell Mage Hand}",
+						"{@spell Tasha's Hideous Laughter}"
+					],
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Fortune Teller",
+					"entries": [
+						"Oddlewin kan kasta besvärjelsen {@spell Augury} som en ritual, med kort som materiell komponent."
+					]
+				},
+				{
+					"name": "Nilbogism",
+					"entries": [
+						"Varje varelse som försöker skada Oddlewin måste först lyckas med ett {@dc 12} karisma räddningsslag eller drabbas av {@condition charmed} tillståndet till slutet av varelsens nästa tur. Varelsen måste använda sin handling till att lovprisa Oddlewin.",
+						"Oddlewin kan inte återfå träffpunkter, inte ens genom magisk läkning, förutom genom sin reaktion Vändning av lycka."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Fool's Scepter",
+					"entries": [
+						"{@atk mw} {@hit 4} att träffa, räckvidd 1,5 m., ett mål. {@h}5 ({@damage 1d6 + 2}) knytnävsslag."
+					]
+				},
+				{
+					"name": "Cloud of Cards",
+					"entries": [
+						"Oddlewin besvärjer magiska kort som slår mot luften i en 1,5 meter stor kub inom 18 meter från Oddlewin fram till början av Oddlewins nästa tur. En varelse som börjar sin tur i kuben eller som kommer in i det området för första gången under en tur tar 10 ({@damage 4d4}) slashingskador."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Nimble Escape",
+					"entries": [
+						"Oddlewin utför Disengage or Hide-åtgärden."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Reversal of Fortune",
+					"entries": [
+						"Som svar på att en annan varelse tillfogar Oddlewin skada, reducerar Oddlewin skadan till 0 och återfår 9 ({@dice 2d8}) träffpunkter."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"GO",
+				"S"
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"incapacitated",
+				"prone"
+			],
+			"savingThrowForced": [
+				"charisma"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Otherworldly Corrupter",
+			"source": "BMT",
+			"page": 47,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 217,
+				"formula": "29d8 + 87"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40
+			},
+			"str": 12,
+			"dex": 22,
+			"con": 16,
+			"int": 22,
+			"wis": 18,
+			"cha": 20,
+			"save": {
+				"dex": "+12",
+				"int": "+12"
+			},
+			"skill": {
+				"perception": "+10",
+				"stealth": "+18"
+			},
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 20,
+			"resist": [
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"telepathy 120 ft.",
+				"Thieves' cant"
+			],
+			"cr": "17",
+			"trait": [
+				{
+					"name": "Alien Mind",
+					"entries": [
+						"Magi och andra egenskaper kan inte avgöra fördärvarens varelsetyp. Om en varelse försöker läsa fördärvarens tankar, måste varelsen lyckas med ett {@dc 20} intelligenssparande eller drabbas av {@condition stunned} tillståndet i 1 minut. Varelsen {@condition stunned} kan upprepa räddningskastet i slutet av var och en av sina vändor och avsluta effekten på sig själv vid en framgång."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Om korrumperaren misslyckas med ett räddningsslag kan den välja att lyckas istället."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"Korrumperaren kan klättra på svåra ytor, inklusive upp och ner i tak, utan att behöva göra en färdighetskontroll."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Korrumperaren gör tre Whispering Blade-attacker och kan använda Debilitating Touch."
+					]
+				},
+				{
+					"name": "Whispering Blade",
+					"entries": [
+						"{@atk mw,rw} {@hit 12} att träffa, räckvidd 1,5 m. eller räckvidd 18 m., ett mål. {@h}10 ({@damage 1d8 + 6}) genomträngande skada plus 14 ({@damage 4d6}) psykisk skada. Om målet är en varelse måste den lyckas med ett {@dc 20} visdomsräddningsslag eller bli oförmögen att tala fram till början av fördärvarens nästa tur."
+					]
+				},
+				{
+					"name": "Debilitating Touch",
+					"entries": [
+						"Fördärvarens slingrande tentakel slår ut mot en varelse som fördärvaren kan se inom 9 meter från sig själv. Målet måste lyckas med ett {@dc 20} konstitutionellt räddningsslag eller drabbas av {@condition paralyzed} tillståndet till slutet av sin nästa tur, varefter målet är immunt mot denna försvagande beröring i 24 timmar."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Fördärvaren förvandlas magiskt till en varelse som är liten eller medelstor, men behåller sin spelstatistik (förutom sin storlek). Denna förvandling upphör om fördärvaren reduceras till 0 träffpunkter eller använder en bonushandling för att avsluta den."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"När en angripare som fördärvaren kan se träffar fördärvaren med en attack, halverar fördärvaren attackens skada mot den."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Cunning",
+					"entries": [
+						"Korrumperaren slipper icke-magiska begränsningar och avslutar villkoren {@condition grappled} och {@condition restrained} på sig själv, och rör sig sedan upp till sin hastighet utan att utsätta sig för möjlighetsattacker."
+					]
+				},
+				{
+					"name": "Stab (Costs 2 Actions)",
+					"entries": [
+						"Korrumperaren gör en Whispering Blade-attack."
+					]
+				},
+				{
+					"name": "Amorphous Escape (Costs 3 Actions)",
+					"entries": [
+						"Fördärvaren upplöses i en föränderlig massa av kött, tentakler, ögon, klor och munnar. Upp till två varelser som den fördärvade kan se inom 6 meter från sig måste göra ett {@dc 20} intelligenssparande, och tar 18 ({@damage 4d8}) psykisk skada vid ett misslyckat sparande, eller hälften så mycket skada vid ett lyckat. Förvandlingen varar till slutet av fördärvarens nästa tur. Under förvandlingen har fördärvaren fördel vid attackkast, attackkast som görs mot den har nackdel, och den kan röra sig genom utrymmen som är minst 1 tum breda utan att klämma sig."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Villain",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances",
+				"Spider Climb"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"TC",
+				"TP"
+			],
+			"damageTags": [
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"paralyzed",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"intelligence",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Pazrodine",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 113,
+			"size": [
+				"G"
+			],
+			"type": {
+				"type": "dragon",
+				"tags": [
+					"moonstone"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 330,
+				"formula": "20d20 + 120"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 80
+			},
+			"str": 22,
+			"dex": 18,
+			"con": 23,
+			"int": 20,
+			"wis": 22,
+			"cha": 26,
+			"save": {
+				"int": "+12",
+				"wis": "+13",
+				"cha": "+15"
+			},
+			"skill": {
+				"perception": "+13",
+				"persuasion": "+15",
+				"stealth": "+11"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 23,
+			"conditionImmune": [
+				"charmed"
+			],
+			"languages": [
+				"all",
+				"telepathy 120 ft."
+			],
+			"cr": "21",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Pazrodine kastar en av följande besvärjelser, som inte kräver några materiella komponenter och använder karisma som besvärjelseförmåga (besvärjelseräddning {@dc 23}):"
+					],
+					"will": [
+						"{@spell Faerie Fire}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell Calm Emotions}",
+							"{@spell Dispel Magic}",
+							"{@spell Invisibility}"
+						],
+						"1e": [
+							"{@spell Mass Cure Wounds}",
+							"{@spell Revivify}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Guardian of the Market",
+					"entries": [
+						"Pazrodine kan känna när ett föremål stjäls från Seelies marknad. Hon känner till avståndet och riktningen till stulna föremål, som om det vore genom besvärjelsen {@spell Locate Object}."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Om Pazrodine misslyckas med ett räddningskast, kan hon välja att lyckas istället."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Pazrodine gör en bitattack och två kloattacker."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 13} att träffa, räckvidd 4,5 m., ett mål. {@h}17 ({@damage 2d10 + 6}) genomträngande skada plus 11 ({@damage 2d10}) strålningsskada."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 13} att träffa, räckvidd 3 m., ett mål. {@h}13 ({@damage 2d6 + 6}) skärande skada."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 13} att träffa, räckvidd 6 m., ett mål. {@h}10 ({@damage 1d8 + 6}) knytnävsslag. Om målet är en varelse måste den lyckas med ett {@dc 21} räddningsslag för styrka eller drabbas av {@condition prone} villkoret."
+					]
+				},
+				{
+					"name": "Breath Weapon {@recharge 5}",
+					"entries": [
+						"Pazrodine använder ett av följande andningsvapen:",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "Dream Breath",
+									"entries": [
+										"Pazrodine andas ut dimma i en kon på 27 meter. Varje varelse i det området måste lyckas med ett {@dc 21} Konstitutionsräddningsslag eller få {@condition unconscious} tillståndet i 10 minuter. Denna effekt slutar för en varelse om varelsen tar skada eller om någon använder en handling för att väcka den."
+									]
+								},
+								{
+									"type": "item",
+									"name": "Moonlight Breath",
+									"entries": [
+										"Pazrodine andas ut en stråle av månsken i en 36 meter lång linje som är 3 meter bred. Varje varelse i det området måste göra ett {@dc 21} räddningsslag mot Dexterity, och tar 60 ({@damage 11d10}) strålningsskada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat."
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Tail",
+					"entries": [
+						"Pazrodine gör en svansattack."
+					]
+				},
+				{
+					"name": "Cast a Spell (Costs 2 Actions)",
+					"entries": [
+						"Pazrodine använder Spellcasting."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Pazrodine",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"TP",
+				"XX"
+			],
+			"damageTags": [
+				"B",
+				"P",
+				"R",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflictSpell": [
+				"invisible"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity",
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Quadrone Detention Drone",
+			"group": null,
+			"source": "BMT",
+			"page": 135,
+			"_copy": {
+				"name": "Quadrone",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "quadrone",
+						"with": "drone"
+					},
+					"action": [
+						{
+							"mode": "appendArr",
+							"items": {
+								"name": "Detention Orb",
+								"entries": [
+									"Drönaren skjuter iväg ett litet klot av magisk kraft mot en varelse den kan se inom 9 meter från sig själv. Varelsen måste lyckas med ett {@dc 15} räddningsslag i konstitution eller bli inkapslad i klotet, som expanderar till en storlek precis stor nog för att innehålla varelsen. När varelsen är inkapslad behöver den inte andas, äta eller dricka, och den åldras inte. Ingenting kan passera genom klotet, och ingen varelse kan teleportera sig eller använda planar travel för att ta sig in eller ut ur klotet. Som en bonusåtgärd kan drönaren flytta klotet och dess innehåll upp till 9 meter i valfri riktning. Ett lyckat kast av besvärjelsen {@spell Dispel Magic} på klotet ({@dc 15}) förstör det. Klotet förblir annars intakt tills drönaren spenderar en handling för att avsluta effekten eller drönaren förstörs. En drönare kan bara ha ett kvarhållande klot aktivt åt gången; om drönaren skapar ett kvarhållande klot när den redan har ett aktivt, försvinner det första klotet och frigör varelsen inuti."
+								]
+							}
+						}
+					]
+				}
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Reaper Spirit",
+			"source": "BMT",
+			"page": 50,
+			"summonedBySpell": "Spirit of Death|BMT",
+			"summonedBySpellLevel": 4,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"special": "11 + the level of the spell (natural armor)"
+				}
+			],
+			"hp": {
+				"special": "40 + 10 for each spell level above 4th"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 16,
+			"int": 16,
+			"wis": 16,
+			"cha": 16,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages you speak"
+			],
+			"pbNote": "equals your bonus",
+			"trait": [
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"Anden kan röra sig genom andra varelser och föremål som om de vore svår terräng. Om den avslutar sin tur inuti ett föremål, förflyttas den till närmaste lediga utrymme och tar {@damage 1d10} kraftskada för varje 1,5 meter den förflyttas."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Anden utför ett antal attacker med den skördande lie som är lika med hälften av besvärjelsens nivå (avrundat nedåt)."
+					]
+				},
+				{
+					"name": "Reaping Scythe",
+					"entries": [
+						"{@atk mw} din besvärjelsemodifierare för att träffa (med fördel), räckvidd 1,5 m., varelsen hemsökt av Haunt Creature. {@h}{@damage 1d8 + 3 + summonSpellLevel} nekrotisk skada."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Haunt Creature",
+					"entries": [
+						"Anden riktar in sig på en varelse den kan se inom 3 meter från sig själv och börjar hemsöka den. Medan målet är hemsökt känner du och anden av riktningen och avståndet till målet om det befinner sig på samma existensplan som ni. Dessutom, om målet börjar sin tur inom 3 meter från anden, måste målet lyckas med ett visdomsräddningskast mot din besvärjelsebesparings DC eller ha {@condition frightened} tillståndet tills början av målets nästa tur. Målet förblir hemsökt tills det dör, anden försvinner eller anden använder den här handlingen igen."
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"N",
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened"
+			]
+		},
+		{
+			"name": "Riffler",
+			"source": "BMT",
+			"page": 181,
+			"size": [
+				"S"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 90,
+				"formula": "20d6 + 20"
+			},
+			"speed": {
+				"walk": 30,
+				"burrow": 20
+			},
+			"str": 8,
+			"dex": 16,
+			"con": 12,
+			"int": 11,
+			"wis": 15,
+			"cha": 17,
+			"save": {
+				"dex": "+6",
+				"cha": "+6"
+			},
+			"skill": {
+				"arcana": "+6",
+				"insight": "+5",
+				"sleight of hand": "+9",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"necrotic",
+				"radiant"
+			],
+			"languages": [
+				"Common",
+				"Sylvan"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Card Sense",
+					"entries": [
+						"Rifflaren kan känna närvaron av magiska kort, inklusive Decks of Many Things och andra magiska kortlekar, inom 1,5 kilometer från sig själv. Den vet riktningen till alla sådana kort inom det området. Effekter som skyddar ett mål från spådomsmagi blockerar detta sinne."
+					]
+				},
+				{
+					"name": "Riffling Step",
+					"entries": [
+						"Rifflaren kan gräva sig igenom allt icke-magiskt material som inte är järn, och blanda det material som rifflaren rör sig igenom som kort för att bilda en tunnel som stängs bakom rifflaren."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Rifflaren gör två spektralkortsattacker."
+					]
+				},
+				{
+					"name": "Spectral Card",
+					"entries": [
+						"{@atk ms,rs} {@hit 6} för att träffa, räckvidd 1,5 m. eller räckvidd 18 m., ett mål. {@h}8 ({@damage 1d10 + 3}) kraftskador plus 5 ({@damage 1d10}) skador som är strålande om {@dice d10} kastet är ett jämnt tal och nekrotiska om det är udda."
+					]
+				},
+				{
+					"name": "Card Spray {@recharge 5}",
+					"entries": [
+						"Riffeln släpper magiskt lös en spray av spektrala kort i en 9-meters kon. Varje varelse i området måste göra ett {@dc 14} räddningsslag i dexteritet. Om räddningsslaget misslyckas tar varelsen 27 ({@damage 5d10}) kraftskador och har {@condition restrained} tillståndet i 1 minut när korten binder den. Vid ett lyckat räddningsslag tar varelsen bara hälften så mycket skada. En {@condition restrained} varelse kan upprepa räddningskastet i slutet av var och en av sina vändor och avsluta effekten på sig själv vid en lyckad räddning."
+					]
+				},
+				{
+					"name": "Plane Shift",
+					"entries": [
+						"Riffeln kastar besvärjelsen {@spell Plane Shift} som bara riktar sig mot den själv, kräver inga materiella komponenter och använder karisma som besvärjelseförmåga."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Shuffle Destiny",
+					"entries": [
+						"När en varelse som rifflaren kan se inom 9 meter från sig gör en färdighetskontroll, ett attackkast eller ett räddningskast, kan rifflaren magiskt tvinga den varelsen att kasta ett {@dice d6} och antingen lägga till det kastade antalet till totalen eller dra bort det från totalen (rifflarens val), vilket potentiellt kan ändra resultatet."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ruin Spider",
+			"source": "BMT",
+			"page": 182,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 105,
+				"formula": "14d10 + 28"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40
+			},
+			"str": 16,
+			"dex": 18,
+			"con": 14,
+			"int": 2,
+			"wis": 13,
+			"cha": 4,
+			"skill": {
+				"stealth": "+10"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"immune": [
+				"acid"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Ruinous Acid",
+					"entries": [
+						"Alla icke-magiska vapen som träffar spindeln korroderar. Efter att ha orsakat skada får vapnet ett permanent och kumulativt -1-straff vid skaderullningar. Om straffvärdet sjunker till -5 förstörs vapnet. Icke-magisk ammunition av metall som träffar spindeln förstörs efter att ha orsakat skada."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"Spindeln kan klättra på svåra ytor, inklusive upp och ner i tak, utan att behöva göra en färdighetskontroll."
+					]
+				},
+				{
+					"name": "Web Sense",
+					"entries": [
+						"När spindeln är i kontakt med ett nät vet den exakt var alla andra varelser som är i kontakt med samma nät befinner sig."
+					]
+				},
+				{
+					"name": "Web Walker",
+					"entries": [
+						"Spindeln ignorerar rörelsebegränsningar som orsakas av nät."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Spindeln utför två förstörande bettattacker. Den kan ersätta en attack med en användning av Web."
+					]
+				},
+				{
+					"name": "Ruinous Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} att träffa, räckvidd 1,5 m., ett mål. {@h}8 ({@damage 1d8 + 4}) genomborrande skada och 9 ({@damage 2d8}) syraskada. Om målet är en varelse som bär icke-magisk rustning får rustningen dessutom ett permanent och kumulativt -1-straff på den AC den erbjuder. Rustning som reducerats till en rustningsklass på 10 förstörs."
+					]
+				},
+				{
+					"name": "Web {@recharge 5}",
+					"entries": [
+						"{@atk rw} {@hit 7} att träffa, räckvidd 30/18 m., en varelse. {@h}Målet har tillståndet {@condition restrained}. Som en handling kan ett {@condition restrained} mål göra en {@dc 13} styrkekontroll och spränga bandet vid en lyckad kontroll. Bandet kan också förstöras (AC 10; 5 träffpunkter; sårbarhet för eldskada; immunitet mot syra, hugg, gift och psykisk skada)."
+					]
+				}
+			],
+			"traitTags": [
+				"Spider Climb",
+				"Web Sense",
+				"Web Walker"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"A",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sir Jared",
+			"source": "BMT",
+			"page": 80,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"{@item plate armor|PHB}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 90,
+				"formula": "12d8 + 36"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 12,
+			"con": 17,
+			"int": 13,
+			"wis": 14,
+			"cha": 17,
+			"save": {
+				"str": "+7",
+				"con": "+6"
+			},
+			"skill": {
+				"arcana": "+4",
+				"athletics": "+7",
+				"persuasion": "+6",
+				"survival": "+5"
+			},
+			"passive": 12,
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"Halfling"
+			],
+			"cr": "5",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Jared gör tre långsvärdsattacker."
+					]
+				},
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 7} att träffa, räckvidd 1,5 m., ett mål. {@h}8 ({@damage 1d8 + 4}) slashing-skada plus 4 ({@damage 1d8}) strålningsskada. Med ett kast på 19 eller 20 får Jared en kritisk träff."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Protect Ally",
+					"entries": [
+						"När en varelse som Jared kan se attackerar ett annat mål än Jared som befinner sig inom 1,5 meter från honom, lägger Jared på nackdel på attackkastet."
+					]
+				}
+			],
+			"attachedItems": [
+				"longsword|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"H"
+			],
+			"damageTags": [
+				"R",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Solar Bastion Knight",
+			"source": "BMT",
+			"page": 75,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"paladin"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"{@item plate armor|PHB}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 150,
+				"formula": "20d8 + 60"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 10,
+			"con": 17,
+			"int": 15,
+			"wis": 16,
+			"cha": 17,
+			"save": {
+				"wis": "+7",
+				"cha": "+7"
+			},
+			"skill": {
+				"arcana": "+6",
+				"history": "+6"
+			},
+			"passive": 13,
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common plus any one language"
+			],
+			"cr": "9",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Riddaren kastar en av följande besvärjelser och använder Karisma som besvärjelseförmåga (besvärjelseräddning {@dc 15}):"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Greater Restoration}",
+							"{@spell Sending}",
+							"{@spell Word of Recall} (the prepared sanctuary is the Solar Bastion)"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Aura of Protection",
+					"entries": [
+						"Riddaren och varje allierad inom 3 meter från denne har fördel vid räddningsslag. Denna egenskap undertrycks när riddaren har {@condition incapacitated}-tillståndet."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Riddaren gör tre Sunspear-attacker."
+					]
+				},
+				{
+					"name": "Sunspear",
+					"entries": [
+						"{@atk ms,rs} {@hit 8} för att träffa, räckvidd 1,5 m. eller räckvidd 36 m., ett mål. {@h}14 ({@damage 3d6 + 4}) strålningsskador, eller 21 ({@damage 5d6 + 4}) strålningsskador om målet är en Fiend eller en Undead."
+					]
+				},
+				{
+					"name": "Solar Flare {@recharge 5}",
+					"entries": [
+						"Riddaren släpper lös en flamma av lysande energi som fyller en sfär med 9 meters radie centrerad på riddaren. Varje varelse som riddaren väljer i det området måste göra ett {@dc 15} räddningsslag i dexteritet. Vid ett misslyckat räddningsslag tar varelsen 22 ({@damage 4d10}) strålningsskador och har {@condition blinded}-tillståndet till slutet av sin nästa tur. Vid ett lyckat räddningsslag tar varelsen bara hälften så mycket skada. Under nästa minut är det drabbade området fyllt av starkt ljus som är solljus."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"R"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Talon Beast",
+			"source": "BMT",
+			"page": 183,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 114,
+				"formula": "12d10 + 48"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 22,
+			"dex": 14,
+			"con": 19,
+			"int": 5,
+			"wis": 12,
+			"cha": 5,
+			"skill": {
+				"perception": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"conditionImmune": [
+				"frightened"
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Talondjuret har fördel i räddningsprov mot trollformler och andra magiska effekter."
+					]
+				},
+				{
+					"name": "Sense Magic",
+					"entries": [
+						"Talondjuret kan upptäcka och lokalisera magi inom 36 meter från sig själv."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Talondjuret gör två Talon-attacker eller en Talon-attack och en Näbb-attack."
+					]
+				},
+				{
+					"name": "Beak",
+					"entries": [
+						"{@atk mw} {@hit 9} att träffa, räckvidd 1,5 m., ett mål. {@h}17 ({@damage 2d10 + 6}) genomträngande skada, och om målet har några besvärjelseeffekter på sig eller några magiska föremål i sin ägo, måste målet göra ett {@dc 15} karisma räddningsslag. Vid ett misslyckat räddningsslag upphör en slumpmässig besvärjelseeffekt på målet. Om målet inte har några besvärjelseeffekter på sig, får ett slumpmässigt magiskt föremål i dess ägo sina magiska egenskaper undertryckta i 1 minut. Om föremålet är en trolldryck eller skriftrulle blir den istället icke-magisk."
+					]
+				},
+				{
+					"name": "Talon",
+					"entries": [
+						"{@atk mw} {@hit 9} att träffa, räckvidd 3 m., ett mål. {@h}15 ({@damage 2d8 + 6}) slashingskador, och målet har {@condition grappled} tillståndet (flykt {@dc 17}). Tills gripandet avslutas har målet tillståndet {@condition restrained}, och talondjuret kan inte använda Talon på ett annat mål."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"charisma"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Veiled Presence",
+			"source": "BMT",
+			"page": 48,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "celestial",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 300,
+				"formula": "40d8 + 120"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": {
+					"number": 80,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 14,
+			"dex": 24,
+			"con": 16,
+			"int": 24,
+			"wis": 20,
+			"cha": 22,
+			"save": {
+				"dex": "+14",
+				"int": "+14"
+			},
+			"skill": {
+				"perception": "+12",
+				"stealth": "+21"
+			},
+			"senses": [
+				"truesight 30 ft."
+			],
+			"passive": 22,
+			"resist": [
+				"necrotic",
+				"radiant"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "21",
+			"trait": [
+				{
+					"name": "Inviolate Presence",
+					"entries": [
+						"Den beslöjade närvaron kan inte bli måltavla för spådomsmagi eller för egenskaper som kan läsa dess tankar eller avgöra dess varelsetyp."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Om den beslöjade närvaron misslyckas med ett räddningskast, kan den välja att lyckas istället."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Den beslöjade närvaron gör två Blade of Judgment-attacker och kan använda Revelation."
+					]
+				},
+				{
+					"name": "Blade of Judgment",
+					"entries": [
+						"{@atk mw,rw} {@hit 14} att träffa, räckvidd 1,5 m. eller räckvidd 18 m., ett mål. {@h}10 ({@damage 1d6 + 7}) genomträngande skada plus 27 ({@damage 6d8}) strålningsskada. Om målet är en varelse måste den lyckas med ett {@dc 22} karisma-sparkkast, eller så kan den på sin nästa tur antingen röra sig eller utföra en handling, men inte båda."
+					]
+				},
+				{
+					"name": "Revelation",
+					"entries": [
+						"Den beslöjade närvaron avslöjar en glimt av sin utomjordiska natur för en varelse som den kan se inom 9 meter från sig själv. Målet måste lyckas med ett {@dc 22} räddningsslag i visdom eller drabbas av {@condition paralyzed} tillståndet till slutet av sin nästa tur, varefter målet är immunt mot denna uppenbarelse i 24 timmar."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"När en angripare som den beslöjade närvaron kan se träffar den beslöjade närvaron med ett anfall, halverar den beslöjade närvaron anfallets skada mot den."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Flash Step",
+					"entries": [
+						"Den beslöjade närvaron teleporterar sig magiskt, tillsammans med all utrustning den bär på sig, upp till 12 meter till ett ledigt utrymme som den kan se."
+					]
+				},
+				{
+					"name": "Stab (Costs 2 Actions)",
+					"entries": [
+						"Den beslöjade närvaron utför en Blade of Judgment-attack."
+					]
+				},
+				{
+					"name": "Searing Radiance (Costs 3 Actions)",
+					"entries": [
+						"Den beslöjade närvaron utstrålar magiskt bländande ljus i en sfär med 3 meters radie centrerad på sig själv till slutet av sin nästa tur, under vilken tid anfallsslag mot den har nackdel och den har fördel vid anfallsslag. Sfären rör sig med den beslöjade närvaron. När en annan varelse börjar sin tur i ljuset eller går in i ljuset för första gången på sin tur, måste den varelsen göra ett {@dc 22} konstitutionellt räddningsslag och ta 18 ({@damage 4d8}) strålningsskador vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Villain",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"P",
+				"R"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"paralyzed"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Werevulture",
+			"source": "BMT",
+			"page": 184,
+			"size": [
+				"M"
+			],
+			"type": "fiend",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 75,
+				"formula": "10d8 + 30"
+			},
+			"speed": {
+				"walk": 30,
+				"alternate": {
+					"walk": [
+						{
+							"number": 10,
+							"condition": "in vulture form"
+						},
+						{
+							"number": 30,
+							"condition": "in hybrid form"
+						}
+					],
+					"fly": [
+						{
+							"number": 60,
+							"condition": "in vulture or hybrid form"
+						}
+					]
+				}
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 17,
+			"int": 11,
+			"wis": 13,
+			"cha": 8,
+			"skill": {
+				"perception": "+5"
+			},
+			"passive": 15,
+			"languages": [
+				"Common (can't speak in vulture form)"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Regeneration",
+					"entries": [
+						"Varggamen återfår 10 träffpunkter i början av sin tur. Om varulven tar radiantskada fungerar inte denna egenskap i början av varulvens nästa tur. Varggamen dör endast om den börjar sin tur med 0 träffpunkter och inte regenererar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Varggamen gör två Talon-attacker, eller så gör den en Näbb-attack och en Talon-attack."
+					]
+				},
+				{
+					"name": "Beak (Vulture or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 5} att träffa, räckvidd 1,5 m., ett mål. {@h}10 ({@damage 2d6 + 3}) genomträngande skada. Om målet är en humanoid måste den lyckas med ett {@dc 13} konstitutionellt räddningsslag eller bli förbannad tills den utsätts för {@spell Remove Curse} besvärjelsen eller en liknande effekt. Om det förbannade målet sjunker till 0 träffpunkter, blir det en varulv under DM:s kontroll och återfår 10 träffpunkter."
+					]
+				},
+				{
+					"name": "Talon",
+					"entries": [
+						"{@atk mw} {@hit 5} att träffa, räckvidd 1,5 m., ett mål. {@h}13 ({@damage 4d4 + 3}) skärande skada."
+					]
+				},
+				{
+					"name": "Longbow (Humanoid or Hybrid Form Only)",
+					"entries": [
+						"{@atk rw} {@hit 4} att träffa, räckvidd 150/18 m., ett mål. {@h}11 ({@damage 2d8 + 2}) genomträngande skada."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Vargamen polymorfiserar till en gam-humanoid hybrid, till en gam, eller tillbaka till sin humanoida form. Dess spelstatistik, förutom dess hastighet, är densamma i varje form. All utrustning som den bär eller har med sig förvandlas inte. Den återgår till sin humanoida form om den dör."
+					]
+				}
+			],
+			"attachedItems": [
+				"longbow|phb"
+			],
+			"traitTags": [
+				"Regeneration"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

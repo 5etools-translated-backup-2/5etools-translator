@@ -1,0 +1,554 @@
+{
+	"_meta": {
+		"otherSources": {
+			"monster": {
+				"MPP": "ToFW",
+				"MM": "ToFW",
+				"DMG": "ToFW"
+			}
+		},
+		"dependencies": {
+			"monster": [
+				"MM",
+				"MPP"
+			]
+		}
+	},
+	"monster": [
+		{
+			"name": "Aza Dowling",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToFW",
+			"_copy": {
+				"name": "Society of Sensation Muse",
+				"source": "MPP",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "The muse",
+						"with": "Aza",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Ebonclaw",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToFW",
+			"_copy": {
+				"name": "Saber-Toothed Tiger",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "The tiger",
+						"with": "Ebonclaw",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Eyestalk of Gzemnid",
+			"source": "ToFW",
+			"page": 88,
+			"_copy": {
+				"name": "Purple Worm",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "\\bworm\\b",
+						"with": "eyestalk"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"L'occhio attacca con il suo morso e usa lo sguardo di sradicamento."
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Tail Stinger",
+							"items": {
+								"name": "Eradication Gaze {@recharge 5}",
+								"entries": [
+									"Il bastone oculare crea un'area di devastazione magica in un cono di 45 metri. Ogni creatura che si trova in quell'area deve superare un tiro salvezza di Destrezza {@dc 16} o subire 55 ({@damage 10d10}) danni necrotici. Se questi danni riducono una creatura a 0 punti ferita, il suo corpo si trasforma in un mucchio di fine polvere viola."
+								]
+							}
+						}
+					]
+				}
+			},
+			"tokenCredit": "@hamosart",
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Farrow",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToFW",
+			"_copy": {
+				"name": "Spy",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "The spy",
+						"with": "Farrow",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"elf"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Gertrube",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToFW",
+			"_copy": {
+				"name": "Thug",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "The thug",
+						"with": "Gertrube",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Giant Whirlwyrm",
+			"source": "ToFW",
+			"_copy": {
+				"name": "Behir",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "behir",
+						"with": "whirlwyrm"
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Lightning Breath {@recharge 5}",
+						"items": {
+							"name": "Thunder Breath {@recharge 5}",
+							"entries": [
+								"Il whirlwyrm esala una linea di tuono lunga 6 metri e larga 1,5 metri. Ogni creatura in quella linea deve effettuare un tiro salvezza di Destrezza {@dc 16}, subendo 66 ({@damage 12d10}) danni da tuono se il tiro salvezza fallisce, o la metà dei danni se riesce."
+							]
+						}
+					}
+				}
+			},
+			"speed": {
+				"walk": 50,
+				"swim": 60
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Josbert Plum",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToFW",
+			"_copy": {
+				"name": "Harmonium Peacekeeper",
+				"source": "MPP",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the peacekeeper",
+						"with": "Josbert",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Kal the Crisp",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToFW",
+			"_copy": {
+				"name": "Hands of Havoc Fire Starter",
+				"source": "MPP",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "The fire starter",
+						"with": "Kal",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Kopoha",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToFW",
+			"_copy": {
+				"name": "Empyrean",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "The empyrean",
+						"with": "Kopoha",
+						"flags": "i"
+					},
+					"action": {
+						"mode": "removeArr",
+						"names": "Maul"
+					}
+				}
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Modron Planar Incarnate",
+			"source": "ToFW",
+			"_copy": {
+				"name": "Planar Incarnate",
+				"source": "MPP",
+				"_mod": {
+					"trait": {
+						"mode": "removeArr",
+						"names": "Planar Form"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Energy Bolt",
+							"items": {
+								"name": "Energy Bolt",
+								"entries": [
+									"{@atk rs} {@hit 12} per colpire, gittata 36 m., un bersaglio. {@h}32 ({@damage 5d12}) danni necrotici."
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Planar Exhalation {@recharge 5}",
+							"items": {
+								"name": "Planar Exhalation {@recharge 5}",
+								"entries": [
+									"L'incarnato esala energia concentrata originaria del suo piano in un cono di 18 metri. Ogni creatura in quell'area deve effettuare un tiro salvezza di Costituzione {@dc 23}. Se il tiro salvezza fallisce, la creatura subisce 52 ({@damage 8d12}) danni necrotici e subisce la condizione {@condition blinded} fino alla fine del prossimo turno dell'incarnato. Se il tiro salvezza riesce, la creatura subisce solo la metà dei danni."
+								]
+							}
+						}
+					]
+				}
+			},
+			"type": "fiend",
+			"hasToken": true
+		},
+		{
+			"name": "Morte",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToFW",
+			"page": 10,
+			"otherSources": [
+				{
+					"source": "MPP"
+				}
+			],
+			"size": [
+				"T"
+			],
+			"type": "undead",
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 22,
+				"formula": "4d4 + 12"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 10,
+			"dex": 16,
+			"con": 16,
+			"int": 13,
+			"wis": 10,
+			"cha": 12,
+			"skill": {
+				"arcana": "+3",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"poison"
+			],
+			"vulnerable": [
+				"bludgeoning"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"Common"
+			],
+			"cr": "1/4",
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} per colpire, portata 1,5 m., un bersaglio. {@h}5 ({@damage 1d4 + 3}) danni perforanti."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ophelia",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToFW",
+			"_copy": {
+				"name": "Elephant",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "The elephant",
+						"with": "Ophelia",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"int": 10,
+			"wis": 14,
+			"cha": 14,
+			"languages": [
+				"Common"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Parvaz",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToFW",
+			"_copy": {
+				"name": "Giant Eagle",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "The eagle",
+						"with": "Parvaz",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"N"
+			],
+			"int": 16,
+			"cha": 14,
+			"languages": [
+				"Common"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "R04M",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToFW",
+			"_copy": {
+				"name": "Monodrone",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "The monodrone",
+						"with": "R04M",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"int": 8,
+			"languages": [
+				"Common",
+				"Modron"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Shariel",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToFW",
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "The deva",
+						"with": "Shariel",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Vecna Impersonator",
+			"source": "ToFW",
+			"_copy": {
+				"name": "Doppelganger",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "doppelganger",
+						"with": "impersonator"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Whirlwyrm",
+			"source": "ToFW",
+			"_copy": {
+				"name": "Giant Crocodile",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "crocodile",
+						"with": "whirlwyrm"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "X01",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToFW",
+			"_copy": {
+				"name": "Hexton Modron",
+				"source": "MPP",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "The hexton",
+						"with": "X01",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Zaythir",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToFW",
+			"_copy": {
+				"name": "Githzerai Uniter",
+				"source": "MPP",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "The githzerai",
+						"with": "Zaythir",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"N"
+			],
+			"hasToken": true
+		}
+	]
+}

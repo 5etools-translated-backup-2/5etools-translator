@@ -1,0 +1,983 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM",
+				"VGM"
+			]
+		}
+	},
+	"monster": [
+		{
+			"name": "Brain in a Jar",
+			"source": "LLK",
+			"page": 38,
+			"otherSources": [
+				{
+					"source": "IMR"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 58,
+				"formula": "9d8 + 18"
+			},
+			"speed": {
+				"walk": 0
+			},
+			"str": 1,
+			"dex": 1,
+			"con": 15,
+			"int": 19,
+			"wis": 10,
+			"cha": 15,
+			"save": {
+				"int": "+7",
+				"cha": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"necrotic",
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting (Psionics)",
+					"headerEntries": [
+						"Hjärnan i en burks medfödda besvärjelseförmåga är Intelligens (besvärjelseräddning {@dc 15}). Den kan medfödd kasta följande besvärjelser, som inte kräver några komponenter:"
+					],
+					"will": [
+						"{@spell detect thoughts}",
+						"{@spell mage hand}",
+						"{@spell zone of truth}"
+					],
+					"daily": {
+						"3e": [
+							"{@spell charm person}",
+							"{@spell command}",
+							"{@spell hold person}"
+						],
+						"1e": [
+							"{@spell compulsion}",
+							"{@spell hold monster}",
+							"{@spell sleep} (cast at 3rd level)",
+							"{@spell Tasha's hideous laughter}"
+						]
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Detect Sentience",
+					"entries": [
+						"Hjärnan i en burk kan känna av närvaron och platsen för alla varelser inom 9 meter från den som har en intelligens på 3 eller högre, oavsett mellanliggande hinder, om inte varelsen skyddas av en {@spell mind blank} besvärjelse."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Hjärnan i en burk har fördel på räddningskast mot trollformler och andra magiska effekter."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Mind Blast {@recharge 5}",
+					"entries": [
+						"Hjärnan i en burk avger magiskt psykisk energi i en 18-meters kon. Varje varelse i området måste lyckas med ett {@dc 15} intelligenssparande eller ta 13 ({@damage 2d8 + 4}) psykisk skada och vara {@condition stunned} i 1 minut. En varelse kan upprepa räddningskastet i slutet av var och en av sina vändor och avsluta effekten på sig själv om den lyckas."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"Y"
+			],
+			"spellcastingTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"incapacitated",
+				"paralyzed",
+				"prone",
+				"unconscious"
+			],
+			"savingThrowForced": [
+				"intelligence"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Clockwork Kraken",
+			"source": "LLK",
+			"page": 38,
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 142,
+				"formula": "15d10 + 60"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 20,
+			"dex": 12,
+			"con": 18,
+			"int": 3,
+			"wis": 11,
+			"cha": 1,
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"fire",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "10",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Clockwork kraken har fördel på räddningskast mot trollformler och andra magiska effekter."
+					]
+				},
+				{
+					"name": "Independent Tentacles",
+					"entries": [
+						"Urverkskraken har åtta tentakler, som var och en behandlas som en medelstor varelse, rör sig självständigt på konstruktionens tur, och har en flyghastighet på 12 meter. Urverkskrakens sinnen fungerar genom dess tentakler såväl som dess huvudkropp. Varje tentakel kan attackeras självständigt, och skada som orsakas av tentakler läggs till urverkskrakens totala antal träffpunkter. En tentakel förstörs om den skadas mer än 20 gånger.",
+						"Om du reducerar konstruktionen till tre eller färre tentakler minskar dess attacker på motsvarande sätt. En clockwork kraken kan återväxta alla förstörda tentakler i slutet av en lång vila."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Clockwork Kraken gör fyra tentakelslamattacker."
+					]
+				},
+				{
+					"name": "Tentacle Slam",
+					"entries": [
+						"{@atk mw} {@hit 9} att träffa, räckvidd 1,5 m., ett mål. {@h}12 ({@damage 2d6 + 5}) knytnävsslag."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Ctenmiir the Vampire",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LLK",
+			"page": 4,
+			"_copy": {
+				"name": "Vampire",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the vampire",
+						"with": "Ctenmiir",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "Coffin Imprisonment",
+							"entries": [
+								"Ctenmiir är fängslad i en magisk järnkista monterad ovanpå animerade golemben. Ctenmiirs kista har en hastighet på 9 meter och en klättringshastighet på 3 meter, och skyddar vampyren från solljus samtidigt som den hindrar honom från att fly från sitt slaveri."
+							]
+						}
+					}
+				}
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"speed": {
+				"walk": 30,
+				"climb": 10
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "East Wind",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LLK",
+			"page": 14,
+			"_copy": {
+				"name": "Martial Arts Adept",
+				"source": "VGM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the adept",
+						"with": "East Wind",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "Special Equipment",
+							"entries": [
+								"East Wind är beväpnad med ett långsvärd som är en {@item polymorph blade|LLK}."
+							]
+						}
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Polymorph Blade",
+							"entries": [
+								"{@atk mw,rw} {@hit 5} att träffa, räckvidd 1,5 m., en varelse. {@h}7 ({@damage 1d8 + 3}) genomträngande skada. Om Östanvind får 20 på attackkastet måste målet lyckas med ett {@dc 15} visdomsräddningsslag eller drabbas av effekterna av en {@spell polymorph} besvärjelse."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Elder Monastery of the Distressed Body Monk",
+			"source": "LLK",
+			"page": 12,
+			"_copy": {
+				"name": "Cult Fanatic",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "fanatic",
+						"with": "monk"
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Dagger",
+						"items": {
+							"name": "Force Pike",
+							"entries": [
+								"{@atk mw,rw} {@hit 4} för att träffa, räckvidd 1,5 m. eller räckvidd 40/3 m., en varelse. {@h}7 ({@damage 1d10 + 2}) kraftskada. Attacken har nackdel mot alla mål med polerad metallrustning eller sköld, och får sin räckvidd halverad när den avfyras genom rök eller dimma."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Garret Levistusson",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LLK",
+			"page": 41,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid"
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 44,
+				"formula": "8d8 + 8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 14,
+			"con": 12,
+			"int": 11,
+			"wis": 12,
+			"cha": 17,
+			"skill": {
+				"deception": "+7",
+				"investigation": "+4",
+				"performance": "+5",
+				"persuasion": "+5"
+			},
+			"passive": 11,
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Infernal",
+				"Thieves' cant"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Garret är trollkarl på 2:a nivån. Hans besvärjelseförmåga är Karisma (besvärjelseräddning {@dc 13}, {@hit 5} att träffa med besvärjelseattacker). Han har följande bardformler förberedda:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell blade ward}",
+								"{@spell vicious mockery}"
+							]
+						},
+						"1": {
+							"slots": 3,
+							"spells": [
+								"{@spell charm person}",
+								"{@spell detect magic}",
+								"{@spell disguise self}",
+								"{@spell identify}",
+								"{@spell Tasha's hideous laughter}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Garret bär en {@item Ring of Warmth} (ingår i hans statistik) och använder en {@item Gambler's Blade longsword|LLK}."
+					]
+				},
+				{
+					"name": "Bardic Inspiration (3/Day)",
+					"entries": [
+						"Som en bonushandling kan Garret ge en vald varelse (annan än honom själv) en {@dice d6} inspirationstärning. Den valda varelsen måste befinna sig inom 18 meter från Garret och kunna höra honom. En gång inom de närmaste 10 minuterna kan varelsen slå tärningen och lägga till det slagna talet till en förmågekontroll, ett attackkast eller ett räddningskast den gör. Varelsen kan använda inspirationstärningen efter att kastet är gjort men innan DM säger om den lyckas eller misslyckas. När inspirationstärningen har slagits förloras den. En varelse kan bara ha en inspirationstärning åt gången."
+					]
+				},
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"Vid varje vändning kan Garret använda en bonusåtgärd för att utföra åtgärden Dash, Disengage eller Hide."
+					]
+				},
+				{
+					"name": "Sneak Attack (1/Turn)",
+					"entries": [
+						"Garret gör 7 ({@dice 2d6}) extra skada när han träffar ett mål med en vapenattack och har fördel på attackkastet, eller när målet befinner sig inom 1,5 meter från en allierad till Garret som inte är {@condition incapacitated} och Garret inte har nackdel på attackkastet."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 4} att träffa, räckvidd 1,5 m., ett mål. {@h}5 ({@damage 1d6 + 2}) genomträngande skada."
+					]
+				}
+			],
+			"attachedItems": [
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Sneak Attack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"I",
+				"TC"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"Y"
+			],
+			"spellcastingTags": [
+				"CB"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"incapacitated",
+				"prone"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gearbox",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LLK",
+			"page": 5,
+			"_copy": {
+				"name": "Monodrone",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the monodrone",
+						"with": "Gearbox",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "Unique Programming",
+							"entries": [
+								"Gearbox unika programmering gör det möjligt för modronen att fungera som en {@item Orb of Direction|XGE} och en {@item Orb of Time|XGE}, att kasta {@spell light} cantrip efter behag, och att ge andra karaktärer fördel på Dexterity-kontroller som görs med tjuvverktyg och på förmåga kontroller som görs för att identifiera eller använda mekanisk eller laboratorieutrustning."
+							]
+						}
+					}
+				}
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Gearbox kan kasta {@spell light} kantripp efter behag."
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell light}"
+							]
+						}
+					},
+					"hidden": [
+						"spells"
+					]
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gloine Nathair-Nathair",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LLK",
+			"page": 23,
+			"_copy": {
+				"name": "Medusa",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the medusa",
+						"with": "Gloine",
+						"flags": "i"
+					}
+				}
+			},
+			"type": "undead",
+			"immune": [
+				"poison",
+				"necrotic"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"trait": [
+				{
+					"name": "Petrifying Gaze",
+					"entries": [
+						"När en varelse som kan se medusans ögon börjar sin tur inom 9 meter från medusan, kan medusan tvinga den att göra ett {@dc 14} Konstitutionsräddningskast om medusan inte är {@condition incapacitated} och kan se varelsen. Om räddningskastet misslyckas med 5 eller mer, dör varelsen omedelbart {@condition petrified}. Annars börjar en varelse som misslyckas med räddningskastet att förvandlas till glas och blir {@condition restrained}. Varelsen {@condition restrained} måste upprepa räddningskastet i slutet av sin nästa tur, blir {@condition petrified} vid ett misslyckande eller avslutar effekten vid en framgång. Försteningen varar tills varelsen befrias av {@spell greater restoration}-besvärjelsen eller annan magi.",
+						"Om inte {@quickref Surprise|PHB|3|0|överraskad} kan en varelse vända bort blicken för att undvika räddningsslaget i början av sin tur. Om varelsen gör det kan den inte se medusan förrän i början av sin nästa tur, då den kan vända bort blicken igen. Om varelsen tittar på medusan under tiden, måste den omedelbart göra räddningsslaget.",
+						"Om medusan ser sig själv reflekteras på en polerad yta inom 9 meter från den och i ett område med starkt ljus, påverkas medusan, på grund av sin förbannelse, av sin egen blick."
+					]
+				}
+			],
+			"conditionInflict": [
+				"petrified",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Mary Greymalkin",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LLK",
+			"page": 41,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid"
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"{@item Bracers of Defense}",
+						"{@item Ring of Protection}"
+					]
+				}
+			],
+			"hp": {
+				"average": 45,
+				"formula": "7d8 + 14"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 12,
+			"con": 10,
+			"int": 14,
+			"wis": 14,
+			"cha": 15,
+			"save": {
+				"wis": "+4",
+				"cha": "+4"
+			},
+			"skill": {
+				"arcana": "+4",
+				"medicine": "+4",
+				"nature": "+4",
+				"religion": "+4"
+			},
+			"passive": 12,
+			"languages": [
+				"Abyssal",
+				"Celestial",
+				"Common",
+				"Elvish",
+				"Infernal",
+				"Sylvan"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Mary är en besvärjare på 5:e nivån. Hennes besvärjelseförmåga är Karisma (besvärjelseräddning {@dc 12}, {@hit 4} att träffa med besvärjelseattacker). Hon återfår sina förbrukade besvärjelseplatser när hon avslutar en kort eller lång vila. Hon kan följande trollkarlsbesvärjelser:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch}",
+								"{@spell eldritch blast}",
+								"{@spell mage hand}"
+							]
+						},
+						"3": {
+							"lower": 1,
+							"slots": 3,
+							"spells": [
+								"{@spell darkness}",
+								"{@spell hex}",
+								"{@spell hypnotic pattern}",
+								"{@spell misty step}",
+								"{@spell phantasmal force}",
+								"{@spell unseen servant}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Mary bär {@item Bracers of Defense} och en {@item Ring of Protection}, och bär en {@item Deck of Several Things|LLK}"
+					]
+				},
+				{
+					"name": "Fey Presence (Recharges after a Short Rest)",
+					"entries": [
+						"Mary kan få varje varelse inom 3 meter från henne att lyckas med ett {@dc 12} Visdomssparkast eller bli {@condition charmed} eller {@condition frightened} av henne (Marys val) till slutet av hennes nästa tur."
+					]
+				},
+				{
+					"name": "Fey Ancestry",
+					"entries": [
+						"Mary har fördel i räddningsslag mot varelse {@condition charmed}, och magi kan inte få henne att somna."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Quarterstaff",
+					"entries": [
+						"{@atk mw} {@hit 2} att träffa, räckvidd 1,5 m., ett mål. {@h}3 ({@damage 1d6}) knytnävsslag."
+					]
+				}
+			],
+			"attachedItems": [
+				"quarterstaff|phb"
+			],
+			"traitTags": [
+				"Fey Ancestry"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"CE",
+				"E",
+				"I",
+				"S"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CL"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"charmed",
+				"frightened"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"intelligence",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Monastery of the Distressed Body Grand Master",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LLK",
+			"page": 14,
+			"_copy": {
+				"name": "Bone Devil",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "devil",
+						"with": "Grand Master"
+					},
+					"trait": {
+						"mode": "prependArr",
+						"items": [
+							{
+								"name": "Vorpal Claws",
+								"entries": [
+									"Shards of a {@item vorpal sword} once broken against the devil replace its claws. A successful {@dc 12} Intelligence ({@skill Arcana}) or Wisdom ({@skill Perception}) check identifies them as such. When the devil rolls a 20 on an attack roll with a claw, the target is decapitated. (At your option, the attack can instead deal an extra {@damage 6d8} slashing damage.) A target is immune to this effect if it is immune to slashing damage, has legendary actions, doesn't have or need a head, or if you decide that the target is too large for its head to be cut off by the devil's claws. If removed, the shards lose their magical powers."
+								]
+							},
+							{
+								"name": "Teleportation Bracelets",
+								"entries": [
+									"Local teleportation-field bracelets encircle the devil's arms and tail. These devices allow the Grand Master to make its claw and sting attacks remotely, though still on the devil's turn and using its actions."
+								]
+							}
+						]
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Monastery of the Distressed Body Monk",
+			"source": "LLK",
+			"page": 12,
+			"_copy": {
+				"name": "Cultist",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "cultist",
+						"with": "monk"
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Scimitar",
+						"items": {
+							"name": "Hooked Polearm",
+							"entries": [
+								"{@atk mw} {@hit 3} att träffa, räckvidd 1,5 m., ett mål. {@h}4 ({@damage 1d6 + 1}) genomträngande skada. Om målet är en medelstor eller mindre varelse, är det {@condition grappled} (flykt {@dc 10}). Tills detta grepp är över kan munken inte använda sitt polearm mot ett annat mål."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Ooze-Folk",
+			"source": "LLK",
+			"page": 46,
+			"size": [
+				"M"
+			],
+			"type": "ooze",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 10,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 19,
+				"formula": "2d8 + 10"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 3,
+			"con": 20,
+			"int": 1,
+			"wis": 6,
+			"cha": 1,
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 8,
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"prone"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Transparent",
+					"entries": [
+						"Även om ett ooze-folk är fullt synligt krävs det en {@dc 12} visdomsprov ({@skill Perception}) för att upptäcka ett ooze-folk som varken har rört sig eller attackerat. En varelse som försöker ta sig in i ooze-folkets utrymme utan att vara medveten om ooze-folket drabbas av {@quickref Surprise|PHB|3|0|överraskad} av ooze-folket."
+					]
+				},
+				{
+					"name": "Fragile Bones",
+					"entries": [
+						"För varje 5 skadade minskar ooze-folkets gånghastighet med 1,5 meter."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Oozefolket gör en glaslångsvärd-attack och en pseudopod-attack."
+					]
+				},
+				{
+					"name": "Glass Longsword",
+					"entries": [
+						"{@atk mw} {@hit 4} att träffa, räckvidd 1,5 m., en varelse. {@h}6 ({@damage 1d8 + 2}) huggen skada. Om en 1:a slås på ett attackkast med ett långsvärd av glas, splittras det och kan inte längre användas."
+					]
+				},
+				{
+					"name": "Pseudopod",
+					"entries": [
+						"{@atk mw} {@hit 4} att träffa, räckvidd 1,5 m., en varelse. {@h}5 ({@damage 1d6 + 2}) skada av syra. "
+					]
+				}
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"A",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "West Wind",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LLK",
+			"page": 14,
+			"_copy": {
+				"name": "Martial Arts Adept",
+				"source": "VGM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the adept",
+						"with": "West Wind",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "Special Equipment",
+							"entries": [
+								"West Wind är beväpnad med ett långsvärd som är en {@item blade of the medusa|LLK}."
+							]
+						}
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Blade of the Medusa",
+							"entries": [
+								"{@atk mw,rw} {@hit 5} att träffa, räckvidd 1,5 m., en varelse. {@h}7 ({@damage 1d8 + 3}) genomträngande skada. Om Västvind får 20 på attackkastet måste målet lyckas med ett {@dc 15} Konstitutionsräddningsslag eller drabbas av effekterna av en {@spell flesh to stone} besvärjelse."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true
+		}
+	]
+}

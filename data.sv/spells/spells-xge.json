@@ -1,0 +1,5732 @@
+{
+	"spell": [
+		{
+			"name": "Abi-Dalzim's Horrid Wilting",
+			"source": "XGE",
+			"page": 150,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 15
+				}
+			],
+			"level": 8,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 150
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "lite svamp"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du drar till dig fukt från alla varelser i en 9-meters kub centrerad på en punkt du väljer inom räckhåll. Varje varelse i det området måste göra ett räddningsslag i konstitution. Konstruktioner och odöda påverkas inte, och växter och vattenelementaler gör detta räddningsslag med nackdel. En varelse tar {@damage 12d8} nekrotisk skada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat.",
+				"Icke-magiska växter i området som inte är varelser, t.ex. träd och buskar, vissnar och dör omedelbart."
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"areaTags": [
+				"C"
+			]
+		},
+		{
+			"name": "Absorb Elements",
+			"source": "XGE",
+			"page": 150,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 15
+				}
+			],
+			"level": 1,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "which you take when you take acid, cold, fire, lightning, or thunder damage"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Besvärjelsen fångar upp en del av den inkommande energin, minskar dess effekt på dig och lagrar den för din nästa närstridsattack. Du har motståndskraft mot den utlösande skadetypen fram till början av din nästa tur. Dessutom, första gången du träffar med en närstridsattack på din nästa tur, tar målet en extra {@damage 1d6} skada av den utlösande typen, och besvärjelsen avslutas."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 2:a nivån eller högre, ökar den extra skadan med {@scaledamage 1d6|1-9|1d6} för varje besvärjelseplatsnivå över 1:a."
+					]
+				}
+			],
+			"damageResist": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"thunder"
+			]
+		},
+		{
+			"name": "Aganazzar's Scorcher",
+			"source": "XGE",
+			"page": 150,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 15
+				}
+			],
+			"level": 2,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "en röd drakes fjäll"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"En linje av rytande eld 9 meter lång och 1,5 meter bred utgår från dig i den riktning du väljer. Varje varelse i linjen måste göra ett räddningsslag med Dexterity. En varelse tar {@damage 3d8} eldskada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 3:e nivån eller högre, ökar skadan med {@scaledamage 3d8|2-9|1d8} för varje besvärjelseplatsnivå över 2:a."
+					]
+				}
+			],
+			"damageInflict": [
+				"fire"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"areaTags": [
+				"L"
+			]
+		},
+		{
+			"name": "Beast Bond",
+			"source": "XGE",
+			"page": 150,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 15
+				}
+			],
+			"level": 1,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "en bit päls insvept i en duk"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du upprättar en telepatisk länk med ett djur du rör vid som är vänligt inställt till dig eller {@condition charmed} av dig. Besvärjelsen misslyckas om odjurets intelligenskvot är 4 eller högre. Tills besvärjelsen upphör är länken aktiv så länge du och odjuret är inom synhåll för varandra. Genom länken kan odjuret förstå dina telepatiska meddelanden till det, och det kan telepatiskt kommunicera enkla känslor och begrepp tillbaka till dig. Medan länken är aktiv får odjuret fördel vid attackkast mot alla varelser inom 1,5 meter från dig som du kan se."
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"affectsCreatureType": [
+				"beast"
+			],
+			"miscTags": [
+				"ADV",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Bones of the Earth",
+			"source": "XGE",
+			"page": 150,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 15
+				}
+			],
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du får upp till sex stenpelare att sprängas från platser på marken som du kan se inom räckhåll. Varje pelare är en cylinder som har en diameter på 1,5 meter och en höjd på upp till 9 meter. Marken där en pelare dyker upp måste vara tillräckligt bred för dess diameter, och du kan rikta in dig på marken under en varelse om den varelsen är Medium eller mindre. Varje pelare har AC 5 och 30 träffpunkter. När en pelare reduceras till 0 träffpunkter faller den sönder i spillror, vilket skapar ett område på {@quickref difficult terrain||3} med en radie på 3 meter som varar tills spillrorna har avlägsnats. Varje del av området med en diameter på 1,5 meter kräver minst 1 minut att rensa för hand.",
+				"Om en pelare skapas under en varelse måste den varelsen lyckas med ett räddningskast i Dexterity eller lyftas upp av pelaren. En varelse kan välja att misslyckas med räddningsförsöket.",
+				"Om en pelare hindras från att nå sin fulla höjd på grund av ett tak eller annat hinder, drabbas en varelse på pelaren av {@damage 6d6} slagskada och blir {@condition restrained} klämd mellan pelaren och hindret. Varelsen {@condition restrained} kan använda en handling för att göra en styrke- eller dexteritetskontroll (varelsens val) mot besvärjelsens räddning DC. Om den lyckas är varelsen inte längre {@condition restrained} och måste antingen flytta sig från pelaren eller falla ner från den."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med en spell slot på 7:e nivån eller högre kan du skapa ytterligare två pelare för varje slotnivå över 6:e nivån."
+					]
+				}
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"abilityCheck": [
+				"strength",
+				"dexterity"
+			],
+			"miscTags": [
+				"DFT",
+				"SGT"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Catapult",
+			"source": "XGE",
+			"page": 150,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 15
+				}
+			],
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Välj ett föremål som väger 1 till 2,5 kilogram inom räckhåll och som inte bärs eller bärs på sig. Föremålet flyger i en rak linje upp till 27 meter i den riktning du väljer innan det faller till marken, och stannar tidigt om det slår i en fast yta. Om föremålet skulle träffa en varelse måste den varelsen göra ett räddningsslag i Dexterity. Om räddningsslaget misslyckas träffar föremålet målet och slutar röra sig. När föremålet träffar något, tar föremålet och det som träffas {@damage 3d8} skada av knytnävsslag."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med en besvärjelseplats på 2:a nivån eller högre, ökar den maximala vikten på föremål som du kan rikta besvärjelsen mot med 2,5 kilogram, och skadan ökar med {@scaledamage 3d8|1-9|1d8} för varje besvärjelseplatsnivå över 1:a nivån."
+					]
+				}
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"OBJ"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Catnap",
+			"source": "XGE",
+			"page": 151,
+			"level": 3,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "en nypa sand"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					}
+				}
+			],
+			"entries": [
+				"Du gör en lugnande gest och upp till tre villiga varelser som du väljer och som du kan se inom räckhåll faller {@condition unconscious} under besvärjelsens varaktighet. Besvärjelsen avslutas tidigt om målet tar skada eller om någon använder en handling för att skaka eller slå det vaket. Om ett mål förblir {@condition unconscious} under hela varaktigheten, får det fördelen av en kort vila, och det kan inte påverkas av denna besvärjelse igen förrän det avslutar en lång vila."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med hjälp av en spell slot på 4:e nivå eller högre kan du rikta in dig på ytterligare en villig varelse för varje slot-nivå över 3:e."
+					]
+				}
+			],
+			"conditionInflict": [
+				"unconscious"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Cause Fear",
+			"source": "XGE",
+			"page": 151,
+			"level": 1,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du väcker känslan av dödlighet hos en varelse som du kan se inom räckhåll. En konstruktion eller en odöd är immun mot denna effekt. Målet måste lyckas med ett räddningsslag i visdom eller bli {@condition frightened} av dig tills besvärjelsen upphör. Målet {@condition frightened} kan upprepa räddningskastet i slutet av var och en av sina varv och avsluta effekten på sig själv vid ett lyckat kast."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 2:a nivån eller högre, kan du rikta den mot ytterligare en varelse för varje besvärjelseplatsnivå över 1:a nivån. Varelserna måste befinna sig inom 9 meter från varandra när du riktar besvärjelsen mot dem."
+					]
+				}
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"affectsCreatureType": [
+				"aberration",
+				"beast",
+				"celestial",
+				"dragon",
+				"elemental",
+				"fey",
+				"fiend",
+				"giant",
+				"humanoid",
+				"monstrosity",
+				"ooze",
+				"plant"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Ceremony",
+			"source": "XGE",
+			"page": 151,
+			"level": 1,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "silverpulver till ett värde av 25 gp, som förtrollningen förbrukar",
+					"cost": 2500,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"Du utför en speciell religiös ceremoni som är fylld med magi. När du kastar besvärjelsen väljer du en av följande riter, vars mål måste vara inom 3 meter från dig under hela besvärjelsen.",
+				{
+					"type": "entries",
+					"name": "Atonement",
+					"entries": [
+						"Du rör vid en villig varelse vars anpassning har förändrats, och du gör en DC 20 Visdom ({@skill Insight}) kontroll. Vid en lyckad kontroll återställer du målet till dess ursprungliga anpassning."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Bless Water",
+					"entries": [
+						"Du rör vid ett {@item vial|phb} vatten och får det att bli {@item Holy Water (flask)|phb|holy water}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Coming of Age",
+					"entries": [
+						"Du rör vid en humanoid som är en ung vuxen. Under de kommande 24 timmarna, närhelst målet gör en förmågekontroll, kan det slå ett {@dice d4} och lägga till det slagna talet till förmågekontrollen. En varelse kan endast dra nytta av denna rit en gång."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Dedication",
+					"entries": [
+						"Du rör vid en humanoid som önskar bli dedikerad till din guds tjänst. Under de kommande 24 timmarna, närhelst målet gör ett räddningsslag, kan det slå ett {@dice d4} och lägga till det slagna numret till räddningsslaget. En varelse kan endast dra nytta av denna rit en gång."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Funeral Rite",
+					"entries": [
+						"Du rör vid ett lik, och under de kommande 7 dagarna kan målet inte bli odöd på något annat sätt än genom en {@spell wish} besvärjelse."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Wedding",
+					"entries": [
+						"Du rör vid vuxna humanoider som är villiga att bindas samman i äktenskap. Under de kommande 7 dagarna får varje mål en +2 bonus till AC när de är inom 9 meter från varandra. En varelse kan dra nytta av denna ritual igen endast om den är änka."
+					]
+				}
+			],
+			"affectsCreatureType": [
+				"humanoid"
+			],
+			"miscTags": [
+				"MAC"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Chaos Bolt",
+			"source": "XGE",
+			"page": 151,
+			"otherSources": [
+				{
+					"source": "GGR"
+				}
+			],
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du kastar en böljande, varslande massa av kaotisk energi mot en varelse inom räckhåll. Utför en besvärjelseattack på avstånd mot målet. Vid en träff tar målet {@damage 2d8 + 1d6} skada. Välj en av {@dice d8}-tärningarna. Siffran som slås på den tärningen bestämmer attackens skadetyp, som visas nedan.",
+				{
+					"type": "table",
+					"caption": "Chaos Bolt",
+					"colLabels": [
+						"{@dice d8}",
+						"Damage Type"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 1
+								}
+							},
+							"Syra"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 2
+								}
+							},
+							"Kall"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 3
+								}
+							},
+							"Brand"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 4
+								}
+							},
+							"Kraft"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 5
+								}
+							},
+							"Blixtnedslag"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 6
+								}
+							},
+							"Gift"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 7
+								}
+							},
+							"Psykisk"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 8
+								}
+							},
+							"Thunder"
+						]
+					]
+				},
+				"Om du får samma siffra på båda {@dice d8}s, hoppar den kaotiska energin från målet till en annan valfri varelse inom 9 meter från den. Gör ett nytt attackkast mot det nya målet och gör ett nytt skadekast, vilket kan få den kaotiska energin att hoppa igen.",
+				"En varelse kan bara bli måltavla en gång för varje gång den här besvärjelsen kastas."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 2:a nivån eller högre, tar varje mål {@scaledamage 2d8 + 1d6|1-9|1d6} extra skada av den typ som kastats för varje besvärjelseplatsnivå över 1:a."
+					]
+				}
+			],
+			"damageInflict": [
+				"acid",
+				"cold",
+				"fire",
+				"force",
+				"lightning",
+				"poison",
+				"psychic",
+				"thunder"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"miscTags": [
+				"RO"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Charm Monster",
+			"source": "XGE",
+			"page": 151,
+			"level": 4,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Du försöker charma en varelse som du kan se inom räckhåll. Den måste göra ett räddningsslag i visdom, och det är en fördel om du eller dina följeslagare kämpar mot den. Om den misslyckas med räddningskastet är den {@condition charmed} av dig tills besvärjelsen upphör eller tills du eller dina följeslagare gör något skadligt mot den. Den {@condition charmed} varelsen är vänligt inställd till dig. När besvärjelsen är slut vet varelsen att den var {@condition charmed} av dig."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 5:e nivån eller högre, kan du rikta den mot ytterligare en varelse för varje platsnivå över 4:e nivån. Varelserna måste befinna sig inom 9 meter från varandra när du riktar besvärjelsen mot dem."
+					]
+				}
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Control Flames",
+			"source": "XGE",
+			"page": 152,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 16
+				}
+			],
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				},
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Du väljer en icke-magisk låga som du kan se inom räckhåll och som ryms inom en kub på 1,5 meter. Du kan påverka den på något av följande sätt:",
+				{
+					"type": "list",
+					"items": [
+						"Du kan omedelbart expandera lågan 1,5 meter i en riktning, förutsatt att det finns ved eller annat bränsle på den nya platsen.",
+						"Du släcker omedelbart lågorna i kuben.",
+						"Du fördubblar eller halverar området med starkt ljus och svagt ljus som flamman kastar ut, ändrar dess färg eller både och. Förändringen varar i 1 timme.",
+						"Du kan få enkla former - t.ex. den vaga formen av en varelse, ett livlöst föremål eller en plats - att dyka upp i lågorna och animera dem som du vill. Formerna varar i 1 timme."
+					]
+				},
+				"Om du kastar den här besvärjelsen flera gånger kan du ha upp till tre icke-ögonblickliga effekter som skapats av besvärjelsen aktiva samtidigt, och du kan avbryta en sådan effekt som en handling."
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"C"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Control Winds",
+			"source": "XGE",
+			"page": 152,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 16
+				}
+			],
+			"level": 5,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 300
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du tar kontroll över luften i en kub på 3 meter som du kan se inom räckhåll. Välj en av följande effekter när du kastar besvärjelsen. Effekten varar under besvärjelsens varaktighet, såvida du inte använder din handling i en senare tur för att byta till en annan effekt. Du kan också använda din handling för att tillfälligt stoppa effekten eller för att starta om en effekt som du har stoppat.",
+				{
+					"type": "entries",
+					"name": "Gusts",
+					"entries": [
+						"En vind uppstår i kuben och blåser kontinuerligt i en horisontell riktning som du bestämmer. Du väljer själv hur stark vinden ska vara: lugn, måttlig eller stark. Om vinden är måttlig eller stark har distansvapenattacker som passerar genom den eller som görs mot mål inom kuben nackdel på sina attackkast. Om vinden är stark måste alla varelser som rör sig mot vinden spendera 1 extra fot rörelsetid för varje fot som de rör sig."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Downdraft",
+					"entries": [
+						"Du får en ihållande kraftig vind att blåsa nedåt från toppen av kuben. Attacker med fjärrvapen som passerar genom kuben eller som görs mot mål inuti den har nackdel på sina attackrullar. En varelse måste göra ett räddningsslag för styrka om den flyger in i kuben för första gången under en tur eller börjar sin tur där flygande. Vid ett misslyckat räddningsslag slås varelsen {@condition prone}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Updraft",
+					"entries": [
+						"Du orsakar en ihållande uppvind i kuben, som stiger uppåt från kubens undersida. Varelser som faller inom kuben tar bara halv skada av fallet. När en varelse i kuben gör ett vertikalt hopp kan varelsen hoppa upp till 3 meter högre än normalt."
+					]
+				}
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrow": [
+				"strength"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"C"
+			]
+		},
+		{
+			"name": "Create Bonfire",
+			"source": "XGE",
+			"page": 152,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 16
+				}
+			],
+			"level": 0,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du skapar en brasa på marken som du kan se inom räckhåll. Tills besvärjelsen upphör fyller den magiska brasan en kub på 1,5 meter. Alla varelser som befinner sig i brasans utrymme när du kastar besvärjelsen måste lyckas med ett räddningsslag i Dexterity eller ta {@damage 1d8} eldskada. En varelse måste också klara räddningsslaget när den rör sig in i brasans utrymme för första gången under en tur eller avslutar sin tur där.",
+				"Bålet antänder brännbara föremål i dess närhet som inte bärs eller bärs.",
+				"Besvärjelsens skada ökar med {@dice 1d8} när du når 5:e nivån ({@damage 2d8}), 11:e nivån ({@damage 3d8}) och 17:e nivån ({@damage 4d8})."
+			],
+			"scalingLevelDice": {
+				"label": "fire damage",
+				"scaling": {
+					"1": "1d8",
+					"5": "2d8",
+					"11": "3d8",
+					"17": "4d8"
+				}
+			},
+			"damageInflict": [
+				"fire"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"OBJ",
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"C"
+			]
+		},
+		{
+			"name": "Create Homunculus",
+			"source": "XGE",
+			"page": 152,
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "lera, aska och alrunerot, som alla förbrukas av besvärjelsen, och en juvelprydd dolk värd minst 1 000 gp",
+					"cost": 100000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Medan du uttalar en invecklad besvärjelse skär du dig själv med en juvelprydd dolk och tar {@damage 2d4} genomträngande skada som inte kan reduceras på något sätt. Du droppar sedan ditt blod på besvärjelsens övriga komponenter och rör vid dem, vilket förvandlar dem till en speciell konstruktion som kallas en {@creature homunculus}.",
+				"Statistiken för {@creature homunculus} finns i Monsterhandboken. Den är din trogne följeslagare, och den dör om du dör. När du avslutar en lång vila kan du spendera upp till hälften av dina träfftärningar om homunculus befinner sig på samma existensplan som du. När du gör det, slå varje tärning och lägg till din Konstitutionsmodifierare till den. Ditt träffpunktsmaximum minskas med summan, och homunculus träffpunktsmaximum och nuvarande träffpunkter ökas båda med den. Denna process kan inte reducera dig till lägre än 1 träffpunkt, och förändringen av dina och homunculus träffpunkter slutar när du avslutar din nästa långa vila. Minskningen av din maximala träffpoäng kan inte tas bort på något sätt innan dess, förutom genom homunculus död.",
+				"Du kan bara ha en homunculus åt gången. Om du kastar den här besvärjelsen medan din homunculus lever, misslyckas besvärjelsen."
+			],
+			"miscTags": [
+				"PRM"
+			]
+		},
+		{
+			"name": "Crown of Stars",
+			"source": "XGE",
+			"page": 152,
+			"level": 7,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Sju stjärnliknande ljusfläckar dyker upp och kretsar kring ditt huvud tills besvärjelsen upphör. Du kan använda en bonusåtgärd för att skicka en av malarna mot en varelse eller ett föremål inom 36 meter från dig. När du gör det, gör en besvärjelseattack på avstånd. Vid en träff tar målet {@damage 4d12} strålningsskada. Oavsett om du träffar eller missar, förbrukas spottet. Besvärjelsen avslutas tidigt om du förbrukar det sista spöet.",
+				"Om du har fyra eller fler motes kvar sprider de starkt ljus i en radie på 9 meter och svagt ljus i ytterligare 9 meter. Om du har en till tre motes kvar sprider de svagt ljus i en 9-metersradie."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med en spell slot på 8:e nivån eller högre, ökar antalet skapade malar med två för varje slot-nivå över 7:e."
+					]
+				}
+			],
+			"damageInflict": [
+				"radiant"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"miscTags": [
+				"LGT",
+				"OBJ",
+				"UBA"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Danse Macabre",
+			"source": "XGE",
+			"page": 153,
+			"level": 5,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Trådar av mörk kraft hoppar från dina fingrar och genomborrar upp till fem små eller medelstora lik som du kan se inom räckhåll. Varje lik reser sig omedelbart upp och blir odöd. Du bestämmer om det är en {@creature zombie} eller en {@creature skeleton} (statistiken för {@creature zombie||zombies} och {@creature skeleton||skeletons} finns i Monsterhandboken), och den får en bonus på sina attack- och skaderullningar som är lika med din modifierare för besvärjelseförmåga.",
+				"Du kan använda en bonusåtgärd för att mentalt kommendera de varelser du skapar med denna besvärjelse, och ge samma kommando till dem alla. För att ta emot kommandot måste en varelse befinna sig inom 18 meter från dig. Du bestämmer vad varelserna skall göra och vart de skall förflytta sig under sin nästa tur, eller så kan du ge en allmän order, t.ex. att vakta en kammare eller passage mot dina fiender. Om du inte ger några kommandon gör varelserna ingenting förutom att försvara sig mot fientliga varelser. När varelserna har fått en order fortsätter de att följa den tills deras uppgift är slutförd.",
+				"Varelserna är under din kontroll tills förtrollningen upphör, varefter de blir livlösa igen."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med hjälp av en spell slot på 6:e nivån eller högre kan du animera upp till två ytterligare lik för varje slotnivå över 5:e nivån."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN",
+				"UBA"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dawn",
+			"source": "XGE",
+			"page": 153,
+			"level": 5,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ett solstrålehänge värt minst 100 gp",
+					"cost": 10000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Gryningsljuset skiner ner på en plats du anger inom räckhåll. Tills besvärjelsen upphör glimmar en 9 meter lång och 12 meter hög cylinder av starkt ljus där. Detta ljus är solljus.",
+				"När cylindern visas måste varje varelse i den göra ett räddningsslag mot konstitutionen och ta {@damage 4d10} strålningsskada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat. En varelse måste också göra detta räddningsslag varje gång den avslutar sin tur i cylindern.",
+				"Om du befinner dig inom 18 meter från cylindern, kan du flytta den upp till 18 meter som en bonusåtgärd på din tur."
+			],
+			"damageInflict": [
+				"radiant"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"LGTS",
+				"UBA"
+			],
+			"areaTags": [
+				"Y"
+			]
+		},
+		{
+			"name": "Dragon's Breath",
+			"source": "XGE",
+			"page": 154,
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "en stark peppar"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du rör vid en villig varelse och ger den förmågan att spy ut magisk energi från sin mun, förutsatt att den har en. Välj syra, kyla, eld, blixt eller gift. Tills besvärjelsen slutar kan varelsen använda en handling för att andas ut energi av den valda typen i en kon på 4,5 meter. Varje varelse i det området måste göra ett räddningsslag med Dexterity, och tar {@damage 3d6} skada av den valda typen vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 3:e nivån eller högre, ökar skadan med {@scaledamage 3d6|2-9|1d6} för varje besvärjelseplatsnivå över 2:a."
+					]
+				}
+			],
+			"damageInflict": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"poison"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"areaTags": [
+				"ST",
+				"N"
+			]
+		},
+		{
+			"name": "Druid Grove",
+			"source": "XGE",
+			"page": 154,
+			"level": 6,
+			"school": "A",
+			"time": [
+				{
+					"number": 10,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "mistel, som besvärjelsen förtär, som skördats med en gyllene skära i fullmånens sken",
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"entries": [
+				"Du åkallar naturens andar för att skydda ett område utomhus eller under jord. Området kan vara så litet som en kub på 9 meter eller så stort som en kub på 27 meter. Byggnader och andra strukturer är undantagna från det drabbade området. Om du kastar denna besvärjelse i samma område varje dag i ett år, varar besvärjelsen tills den upphävs.",
+				"Besvärjelsen skapar följande effekter inom området. När du uttalar den här besvärjelsen kan du ange varelser som vänner som är immuna mot effekterna. Du kan också ange ett lösenord som, när det talas högt, gör talaren immun mot dessa effekter.",
+				"Hela det skyddade området utstrålar magi. En {@spell dispel magic} besvärjelse över området, om den lyckas, tar bort endast en av följande effekter, inte hela området. Besvärjaren väljer vilken effekt som ska upphöra. Först när alla dess effekter är borta upphävs denna besvärjelse.",
+				{
+					"type": "entries",
+					"name": "Solid Fog",
+					"entries": [
+						"Du kan fylla valfritt antal 1,5-metersrutor på marken med tjock dimma och göra dem kraftigt fördunklade. Dimman når upp till 3 meters höjd. Dessutom kostar varje fot av rörelse genom dimman 2 extra fot. För en varelse som är immun mot denna effekt skymmer dimman ingenting och ser ut som mjuk dimma, med gröna ljusfläckar som svävar i luften."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Grasping Undergrowth",
+					"entries": [
+						"Du kan fylla valfritt antal 1,5-metersrutor på marken som inte är fyllda med dimma med gripande ogräs och vinrankor, som om de var påverkade av en {@spell entangle} besvärjelse. För en varelse som är immun mot denna effekt känns ogräset och rankorna mjuka och omformar sig för att fungera som tillfälliga säten eller sängar."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Grove Guardians",
+					"entries": [
+						"Du kan animera upp till fyra träd i området och få dem att rycka upp sig från marken. Dessa träd har samma statistik som en {@creature awakened tree}, som finns i Monsterhandboken, förutom att de inte kan tala, och deras bark är täckt av druidiska symboler. Om någon varelse som inte är immun mot denna effekt kommer in i det skyddade området, slåss lundväktarna tills de har drivit bort eller dödat inkräktarna. Lundens väktare lyder också dina talade kommandon (ingen åtgärd krävs av dig) som du ger medan du är i området. Om du inte ger dem kommandon och inga inkräktare är närvarande, gör lundväktarna ingenting. Lundens väktare kan inte lämna det bevakade området. När besvärjelsen upphör försvinner magin som ger dem liv, och träden slår rot igen om det är möjligt."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Additional Spell Effect",
+					"entries": [
+						"Du kan placera en av följande magiska effekter inom det bevakade området:"
+					]
+				},
+				{
+					"type": "list",
+					"items": [
+						"En konstant {@spell gust of wind} på två valfria platser",
+						"{@spell Spike growth} på en valfri plats",
+						"{@spell Wind wall} på två valfria platser"
+					]
+				},
+				"För en varelse som är immun mot denna effekt är vindarna en doftande, mild bris, och området {@spell spike growth} är ofarligt."
+			],
+			"miscTags": [
+				"OBS",
+				"PRM",
+				"SMN"
+			],
+			"areaTags": [
+				"C",
+				"Q"
+			]
+		},
+		{
+			"name": "Dust Devil",
+			"source": "XGE",
+			"page": 154,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 17
+				}
+			],
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "en nypa damm"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Välj en ledig luftkub på 1,5 meter som du kan se inom räckhåll. En elementär kraft som liknar en dammdjävul dyker upp i kuben och varar under besvärjelsens varaktighet.",
+				"Alla varelser som avslutar sin tur inom 1,5 meter från dammdjävulen måste göra ett räddningsslag mot styrka. Vid ett misslyckat räddningsslag tar varelsen {@damage 1d8} knytnävsslag och knuffas 3 meter bort från dammdjävulen. Vid ett lyckat räddningsslag tar varelsen hälften så mycket skada och knuffas inte.",
+				"Som en bonusåtgärd kan du flytta dammdjävulen upp till 9 meter i valfri riktning. Om dammdjävulen rör sig över sand, damm, lös jord eller lätt grus suger den upp materialet och bildar ett moln av skräp med 3 meters radie runt sig som varar tills början av din nästa tur. Molnet fördunklar sitt område kraftigt."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 3:e nivån eller högre, ökar skadan med {@scaledamage 1d8|2-9|1d8} för varje besvärjelseplatsnivå över 2:a."
+					]
+				}
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"savingThrow": [
+				"strength"
+			],
+			"miscTags": [
+				"FMV",
+				"SGT",
+				"UBA"
+			]
+		},
+		{
+			"name": "Earth Tremor",
+			"source": "XGE",
+			"page": 155,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 17
+				}
+			],
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du orsakar en skakning i marken inom räckhåll. Varje varelse utom du i det området måste göra ett räddningsslag i dexteritet. Vid ett misslyckat räddningsslag tar varelsen {@damage 1d6} skada och knockas {@condition prone}. Om marken i området är lös jord eller sten blir den {@quickref difficult terrain||3} tills den rensas, och varje del med en diameter på 1,5 meter kräver minst 1 minut att rensa för hand."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 2:a nivån eller högre, ökar skadan med {@scaledamage 1d6|1-9|1d6} för varje besvärjelseplatsnivå över 1:a."
+					]
+				}
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"DFT"
+			],
+			"areaTags": [
+				"R"
+			]
+		},
+		{
+			"name": "Earthbind",
+			"source": "XGE",
+			"page": 154,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 17
+				}
+			],
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 300
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Välj en varelse som du kan se inom räckhåll. Gula band av magisk energi slingrar sig runt varelsen. Målet måste lyckas med ett räddningsslag för styrka, annars reduceras dess flyghastighet (om någon) till meter under besvärjelsens varaktighet. En luftburen varelse som påverkas av denna besvärjelse sjunker säkert med 18 meter per runda tills den når marken eller besvärjelsen upphör."
+			],
+			"savingThrow": [
+				"strength"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Elemental Bane",
+			"source": "XGE",
+			"page": 155,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 17
+				}
+			],
+			"level": 4,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Välj en varelse som du kan se inom räckhåll, och välj en av följande skadetyper: syra, kyla, eld, blixt eller åska. Målet måste lyckas med ett räddningsslag för konstitution eller påverkas av besvärjelsen under dess varaktighet. Första gången varje tur som det drabbade målet tar skada av den valda typen, tar målet en extra {@damage 2d6} skada av den typen. Dessutom förlorar målet allt motstånd mot den typen av skada tills besvärjelsen upphör."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 5:e nivån eller högre, kan du rikta den mot ytterligare en varelse för varje platsnivå över 4:e nivån. Varelserna måste befinna sig inom 9 meter från varandra när du riktar besvärjelsen mot dem."
+					]
+				}
+			],
+			"damageInflict": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"thunder"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Enemies Abound",
+			"source": "XGE",
+			"page": 155,
+			"level": 3,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du når in i sinnet på en varelse du kan se och tvingar den att göra ett intelligenssparande. En varelse lyckas automatiskt om den är immun mot att vara {@condition frightened}. Vid ett misslyckat räddningsslag förlorar målet förmågan att skilja vän från fiende och betraktar alla varelser det kan se som fiender tills besvärjelsen avslutas. Varje gång målet tar skada kan det upprepa räddningskastet och avsluta effekten på sig själv om det lyckas.",
+				"När den drabbade varelsen väljer en annan varelse som mål måste den välja målet slumpmässigt bland de varelser den kan se inom räckvidden för attacken, besvärjelsen eller den andra förmågan som den använder. Om en fiende provocerar fram en tillfällig attack från den drabbade varelsen måste varelsen göra den attacken om den kan göra det."
+			],
+			"savingThrow": [
+				"intelligence"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Enervation",
+			"source": "XGE",
+			"page": 155,
+			"level": 5,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"En rännil av bläckigt mörker sträcker sig ut från dig och rör vid en varelse du kan se inom räckhåll för att tömma den på liv. Målet måste göra ett räddningsslag i dexteritet. Vid ett lyckat räddningsslag tar målet {@damage 2d8} nekrotisk skada och besvärjelsen upphör. Vid ett misslyckat räddningsslag tar målet {@damage 4d8} nekrotisk skada, och tills besvärjelsen upphör kan du använda din handling i varje tur för att automatiskt ge {@damage 4d8} nekrotisk skada till målet. Besvärjelsen upphör om du använder din handling till att göra något annat, om målet någonsin hamnar utanför besvärjelsens räckvidd eller om målet är helt skyddat från dig.",
+				"När besvärjelsen skadar en måltavla återfår du träffpoäng som motsvarar hälften av den nekrotiska skadan som måltavlan tar."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med en besvärjelseplats på 6:e nivån eller högre, ökar skadan med {@scaledamage 4d8;2d8|5-9|1d8} för varje platsnivå över 5:e."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"HL",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Erupting Earth",
+			"source": "XGE",
+			"page": 155,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 17
+				}
+			],
+			"level": 3,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "en bit obsidian"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Välj en punkt som du kan se på marken inom räckhåll. En fontän av uppriven jord och sten väller fram i en 6-meters kub centrerad på den punkten. Varje varelse i området måste göra ett räddningsslag i Dexterity. En varelse tar {@damage 3d12} förödande skada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat. Dessutom blir marken i området {@quickref difficult terrain||3} tills den rensas. Varje 1,5 meter stor del av området tar minst 1 minut att röja för hand."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med en besvärjelseplats på 4:e nivån eller högre, ökar skadan med {@scaledamage 3d12|3-9|1d12} för varje platsnivå över 3:e."
+					]
+				}
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"DFT",
+				"SGT"
+			],
+			"areaTags": [
+				"C"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Far Step",
+			"source": "XGE",
+			"page": 155,
+			"level": 5,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du teleporterar dig upp till 18 meter till ett ledigt utrymme som du kan se. På varje tur innan besvärjelsen upphör kan du använda en bonushandling för att teleportera dig på detta sätt igen."
+			],
+			"miscTags": [
+				"SGT",
+				"TP",
+				"UBA"
+			]
+		},
+		{
+			"name": "Find Greater Steed",
+			"source": "XGE",
+			"page": 156,
+			"additionalSources": [
+				{
+					"source": "FTD",
+					"page": 190
+				}
+			],
+			"level": 4,
+			"school": "C",
+			"time": [
+				{
+					"number": 10,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du åkallar en ande som antar formen av en lojal, majestätisk häst. Anden dyker upp på en ledig plats inom räckhåll och antar en form som du väljer: en {@creature griffon}, en {@creature pegasus}, en {@creature peryton}, en {@creature dire wolf}, en {@creature rhinoceros} eller en {@creature saber-toothed tiger}. Varelsen har den statistik som anges i Monsterhandboken för den valda formen, men den är en himmelsk, en fej eller en djävul (ditt val) istället för sin normala varelsetyp. Om den har en intelligenskvot på 5 eller lägre blir dess intelligens dessutom 6, och den får förmågan att förstå ett valfritt språk som du talar.",
+				"Du kontrollerar berget i strid. När berget är inom 1,5 kilometer från dig kan du kommunicera telepatiskt med det. När du sitter på den kan du få alla besvärjelser som bara riktar sig mot dig att också rikta sig mot den.",
+				"Fästet försvinner tillfälligt när det sjunker till 0 träffpoäng eller när du avlägsnar det som en handling. Genom att kasta denna besvärjelse igen återkallar du det bundna berget, med alla dess träffpoäng återställda och alla villkor borttagna.",
+				"Du kan inte ha mer än ett fäste bundet av den här besvärjelsen eller {@spell find steed} samtidigt. Som en handling kan du frigöra ett berg från dess band och få det att försvinna permanent.",
+				"När berget försvinner lämnar det efter sig alla föremål som det hade på sig eller bar.",
+				{
+					"type": "inset",
+					"source": "FTD",
+					"page": 190,
+					"name": "Dragonnel Steeds",
+					"entries": [
+						"Med DM:s tillåtelse kan en paladin åkalla en ande i form av en {@creature dragonnel|ftd} med hjälp av besvärjelsen hitta större springare, som visas i {@i Xanathars guide till allt}."
+					]
+				}
+			],
+			"miscTags": [
+				"PRM",
+				"SMN"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flame Arrows",
+			"source": "XGE",
+			"page": 156,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 18
+				}
+			],
+			"level": 3,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du rör vid ett koger som innehåller pilar eller bultar. När ett mål träffas av en attack med ett distansvapen som använder ammunition från koger, drabbas målet av en extra {@damage 1d6} eldskada. Besvärjelsens magi slutar på en ammunitionsbit när den träffar eller missar, och besvärjelsen slutar när tolv ammunitionsbitar har dragits ur koger."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med hjälp av en spelledare på 4:e nivån eller högre ökar antalet ammunitionsstycken som du kan påverka med den här besvärjelsen med två stycken för varje spelledare över 3:e nivån."
+					]
+				}
+			],
+			"damageInflict": [
+				"fire"
+			],
+			"miscTags": [
+				"AAD"
+			]
+		},
+		{
+			"name": "Frostbite",
+			"source": "XGE",
+			"page": 156,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 18
+				}
+			],
+			"level": 0,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du får bedövande frost att bildas på en varelse som du kan se inom räckhåll. Målet måste göra ett räddningsslag i konstitution. Vid ett misslyckat räddningsslag tar målet {@damage 1d6} kall skada, och det har nackdel på nästa vapenattacksslag det gör före slutet av sin nästa tur.",
+				"Besvärjelsens skada ökar med {@dice 1d6} när du når 5:e nivån ({@damage 2d6}), 11:e nivån ({@damage 3d6}) och 17:e nivån ({@damage 4d6})."
+			],
+			"scalingLevelDice": {
+				"label": "cold damage",
+				"scaling": {
+					"1": "1d6",
+					"5": "2d6",
+					"11": "3d6",
+					"17": "4d6"
+				}
+			},
+			"damageInflict": [
+				"cold"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Guardian of Nature",
+			"source": "XGE",
+			"page": 157,
+			"level": 4,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"En naturand svarar på ditt rop och förvandlar dig till en kraftfull väktare. Förvandlingen varar tills förtrollningen upphör. Du väljer en av följande former att anta: Primal Beast eller Great Tree.",
+				{
+					"type": "entries",
+					"name": "Primal Beast",
+					"entries": [
+						"Bestialisk päls täcker din kropp, dina ansiktsdrag blir vilda och du får följande fördelar:"
+					]
+				},
+				{
+					"type": "list",
+					"items": [
+						"Din gånghastighet ökar med 3 meter.",
+						"Du vinner {@sense darkvision} med en räckvidd på 36 meter.",
+						"Du gör styrkebaserade attackkast med fördel.",
+						"Dina närstridsvapenattacker ger en extra {@damage 1d6} kraftskada vid träff."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Great Tree",
+					"entries": [
+						"Din hud blir barkig, löv växer ur håret och du får följande fördelar:"
+					]
+				},
+				{
+					"type": "list",
+					"items": [
+						"Du får 10 tillfälliga träffpunkter.",
+						"Du gör räddningskast för konstitutionen med fördel.",
+						"Du gör Dexterity- och Wisdom-baserade attackkast med fördel.",
+						"När du befinner dig på marken är marken inom 4,5 meter från dig {@quickref difficult terrain||3} för dina fiender."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"miscTags": [
+				"AAD",
+				"ADV",
+				"DFT",
+				"THP"
+			]
+		},
+		{
+			"name": "Gust",
+			"source": "XGE",
+			"page": 157,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 19
+				},
+				{
+					"source": "UAWGE",
+					"page": 107
+				},
+				{
+					"source": "ERLW",
+					"page": 50
+				},
+				{
+					"source": "TCE",
+					"page": 50
+				}
+			],
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du tar luften och tvingar den att skapa en av följande effekter på en punkt som du kan se inom räckhåll:",
+				{
+					"type": "list",
+					"items": [
+						"En medelstor eller mindre varelse som du väljer måste lyckas med ett styrkebesparande kast eller knuffas upp till 1,5 meter bort från dig.",
+						"Du skapar en liten luftstöt som kan flytta ett föremål som varken hålls eller bärs och som inte väger mer än 2,5 kilogram. Föremålet knuffas upp till 3 meter bort från dig. Det knuffas inte med tillräcklig kraft för att orsaka skada.",
+						"Du skapar en ofarlig sensorisk effekt med hjälp av luft, t.ex. genom att få löv att prassla, vinden att slå igen fönsterluckor eller dina kläder att rulla i en bris."
+					]
+				}
+			],
+			"savingThrow": [
+				"strength"
+			],
+			"miscTags": [
+				"FMV",
+				"OBJ",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Healing Spirit",
+			"source": "XGE",
+			"page": 157,
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du kallar fram en naturande för att lugna de skadade. Den immateriella anden dyker upp i ett utrymme som är en 1,5 meter stor kub som du kan se inom räckhåll. Anden ser ut som ett genomskinligt djur eller en fe (ditt val).",
+				"När du eller en varelse du kan se rör sig in i andens utrymme för första gången under en tur eller börjar sin tur där, kan du få anden att återställa {@dice 1d6} träffpunkter till den varelsen (ingen åtgärd krävs) tills besvärjelsen slutar. Anden kan inte hela konstruktioner eller odöda. Anden kan hela ett antal gånger som är lika med 1 + din modifikator för besvärjelseförmåga (minst två gånger). Efter att ha helat det antalet gånger försvinner anden.",
+				"Som en bonusåtgärd på din tur kan du flytta anden upp till 9 meter till ett utrymme som du kan se."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 3:e nivån eller högre, ökar helandet med {@scaledice 1d6|2-9|1d6} för varje besvärjelseplatsnivå över 2:a."
+					]
+				}
+			],
+			"affectsCreatureType": [
+				"aberration",
+				"beast",
+				"celestial",
+				"dragon",
+				"elemental",
+				"fey",
+				"fiend",
+				"giant",
+				"humanoid",
+				"monstrosity",
+				"ooze",
+				"plant"
+			],
+			"miscTags": [
+				"HL",
+				"SGT",
+				"UBA"
+			],
+			"areaTags": [
+				"C"
+			]
+		},
+		{
+			"name": "Holy Weapon",
+			"source": "XGE",
+			"page": 157,
+			"level": 5,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du ger ett vapen du rör vid helig kraft. Tills besvärjelsen upphör avger vapnet starkt ljus i en radie av 9 meter och svagt ljus i ytterligare 9 meter. Dessutom ger vapenattacker med vapnet en extra {@damage 2d8} strålningsskada vid träff. Om vapnet inte redan är ett magiskt vapen, blir det ett sådant under hela tiden.",
+				"Som en bonushandling på din tur kan du upphäva denna besvärjelse och få vapnet att avge en skur av strålglans. Varje valfri varelse som du kan se inom 9 meter från vapnet måste göra ett Konstitutionsräddningsslag. Om räddningsslaget misslyckas tar varelsen {@damage 4d8} strålningsskada, och den är {@condition blinded} i 1 minut. Vid ett lyckat räddningsslag tar varelsen hälften så mycket skada och är inte {@condition blinded}. I slutet av varje tur kan en {@condition blinded} varelse göra ett Konstitutionsräddningsslag och effekten på den själv upphör om den lyckas."
+			],
+			"damageInflict": [
+				"radiant"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"AAD",
+				"LGT",
+				"SGT",
+				"UBA"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Ice Knife",
+			"source": "XGE",
+			"page": 157,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 19
+				}
+			],
+			"level": 1,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "en droppe vatten eller en bit is"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du skapar en isskärva och kastar den mot en varelse inom räckhåll. Utför en besvärjelseattack på avstånd mot målet. Vid träff tar målet {@damage 1d10} genomträngande skada. Träffar eller missar, skärvan exploderar sedan. Målet och varje varelse inom 1,5 meter från det måste lyckas med ett räddningsslag i Dexterity eller ta {@damage 2d6} köldskada."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 2:a nivån eller högre, ökar den kalla skadan med {@scaledamage 2d6|1-9|1d6} för varje besvärjelseplatsnivå över 1:a."
+					]
+				}
+			],
+			"damageInflict": [
+				"cold",
+				"piercing"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Illusory Dragon",
+			"source": "XGE",
+			"page": 157,
+			"level": 8,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Genom att samla ihop trådar av skuggmaterial från Shadowfell skapar du en enorm skuggdrake i ett obebott utrymme som du kan se inom räckhåll. Illusionen varar under trollformelns varaktighet och upptar sitt utrymme, som om det vore en varelse.",
+				"När illusionen dyker upp måste alla dina fiender som kan se den lyckas med ett Visdomssparande eller bli {@condition frightened} av den i 1 minut. Om en {@condition frightened} varelse avslutar sin tur på en plats där den inte har siktlinje till illusionen, kan den upprepa räddningskastet och avsluta effekten på sig själv vid en framgång.",
+				"Som en bonusåtgärd på din tur kan du flytta illusionen upp till 18 meter. När som helst under dess rörelse kan du få den att utandas en energistöt i en 18-meters kon som utgår från dess utrymme. När du skapar draken väljer du en skadetyp: syra, kyla, eld, blixt, nekrotisk eller gift. Varje varelse i konen måste göra ett räddningsslag i intelligens, och tar {@damage 7d6} skada av den valda skadetypen vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat.",
+				"Illusionen är påtaglig på grund av skuggmaterialet som användes för att skapa den, men attacker missar den automatiskt, den lyckas med alla räddningsslag och den är immun mot alla skador och tillstånd. En varelse som använder en handling för att undersöka draken kan avgöra att det är en illusion genom att lyckas med en intelligens ({@skill Investigation}) kontroll mot din trollformels räddning DC. Om en varelse upptäcker illusionen för vad den är, kan varelsen se igenom den och har fördel i räddningsprov mot dess andedräkt."
+			],
+			"damageInflict": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"necrotic",
+				"poison"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrow": [
+				"wisdom",
+				"intelligence"
+			],
+			"abilityCheck": [
+				"intelligence"
+			],
+			"miscTags": [
+				"SGT",
+				"UBA"
+			],
+			"areaTags": [
+				"N"
+			]
+		},
+		{
+			"name": "Immolation",
+			"source": "XGE",
+			"page": 158,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 19
+				}
+			],
+			"level": 5,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Flammor omsluter en varelse som du kan se inom räckhåll. Målet måste göra ett räddningsslag i Dexterity. Den tar {@damage 8d6} eldskada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat. Vid ett misslyckat räddningsslag brinner målet också under besvärjelsens varaktighet. Det brinnande målet sprider starkt ljus i en radie av 9 meter och svagt ljus i ytterligare 9 meter. I slutet av varje tur upprepar målet räddningsslaget. Den tar {@damage 4d6} eldskada vid ett misslyckat räddningskast, och besvärjelsen avslutas vid ett lyckat räddningskast. Dessa magiska lågor kan inte släckas med icke-magiska medel.",
+				"Om skadan från denna besvärjelse dödar en måltavla förvandlas den till aska."
+			],
+			"damageInflict": [
+				"fire"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"LGT",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Infernal Calling",
+			"source": "XGE",
+			"page": 158,
+			"level": 5,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "en rubin värd minst 999 gp",
+					"cost": 99900
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Genom att uttala en mörk besvärjelse åkallar du en djävul från de nio helvetena. Du väljer djävulens typ, som måste vara en av {@filter utmaningsgrad 6 eller lägre|bestiary|challenge rating=[&0;&6]|tag=devil|miscellaneous=!swarm}, t.ex. en {@creature barbed devil} eller en {@creature bearded devil}. Djävulen dyker upp i ett ledigt utrymme som du kan se inom räckhåll. Djävulen försvinner när den sjunker till 0 träffpunkter eller när besvärjelsen avslutas.",
+				"Djävulen är ovänlig mot dig och dina följeslagare. Ta initiativ för djävulen, som har sina egna turer. Den är under Dungeon Master's kontroll och agerar enligt sin natur på var och en av sina turer, vilket kan resultera i att den attackerar dig om den tror att den kan segra, eller att den försöker fresta dig att genomföra en ond handling i utbyte mot en begränsad tjänst. DM har varelsens statistik.",
+				"På varje tur kan du försöka ge ett verbalt kommando till djävulen (ingen åtgärd krävs av dig). Den lyder kommandot om det troliga resultatet är i enlighet med dess önskningar, särskilt om resultatet skulle dra dig mot ondska. Annars måste du göra en Karisma ({@skill Deception}, {@skill Intimidation}, eller {@skill Persuasion}) kontroll som ifrågasätts av dess Visdom ({@skill Insight}) kontroll. Du har fördel om du säger djävulens sanna namn. Om kontrollen misslyckas blir djävulen immun mot dina verbala kommandon under besvärjelsens varaktighet, men den kan fortfarande utföra dina kommandon om den så önskar. Om kontrollen lyckas utför djävulen din befallning - t.ex. \"anfall mina fiender\", \"utforska rummet framför dig\" eller \"bär detta meddelande till drottningen\" - tills den har slutfört aktiviteten, varpå den återvänder till dig för att rapportera att den har gjort det.",
+				"Om din {@status concentration} slutar innan besvärjelsen når sin fulla varaktighet, försvinner inte djävulen om den har blivit immun mot dina verbala kommandon. Istället agerar den på vilket sätt den vill i {@dice 3d6} minuter, och sedan försvinner den.",
+				"Om du har en enskild djävulstalisman kan du kalla på den djävulen om den har rätt utmaningsvärde plus 1, och den lyder alla dina kommandon, utan att du behöver göra någon Charisma-kontroll."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med hjälp av en spell slot på 6:e nivån eller högre, ökar utmaningsvärdet med 1 för varje slotnivå över 5:e nivån."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Infestation",
+			"source": "XGE",
+			"page": 158,
+			"level": 0,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "en levande loppa"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du får ett moln av kvalster, loppor och andra parasiter att tillfälligt dyka upp på en varelse som du kan se inom räckhåll. Målet måste lyckas med ett konstitutionellt räddningsslag, annars tar det {@damage 1d6} giftskada och rör sig 1,5 meter i en slumpmässig riktning om det kan röra sig och dess hastighet är minst 1,5 meter. Slå ett {@dice d4} för riktningen: 1, norr; 2, söder; 3, öster; eller 4, väster. Denna rörelse framkallar inte möjlighetsattacker, och om den kastade riktningen blockeras, rör sig inte målet.",
+				"Besvärjelsens skada ökar med {@dice 1d6} när du når 5:e nivån ({@damage 2d6}), 11:e nivån ({@damage 3d6}) och 17:e nivån ({@damage 4d6})."
+			],
+			"scalingLevelDice": {
+				"label": "poison damage",
+				"scaling": {
+					"1": "1d6",
+					"5": "2d6",
+					"11": "3d6",
+					"17": "4d6"
+				}
+			},
+			"damageInflict": [
+				"poison"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Investiture of Flame",
+			"source": "XGE",
+			"page": 159,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 19
+				}
+			],
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Lågor rusar över din kropp och sprider starkt ljus i en radie av 9 meter och svagt ljus i ytterligare 9 meter så länge besvärjelsen varar. Lågorna skadar dig inte. Tills besvärjelsen upphör får du följande fördelar:",
+				{
+					"type": "list",
+					"items": [
+						"Du är immun mot brandskador och har resistens mot köldskador.",
+						"Alla varelser som rör sig inom 1,5 meter från dig för första gången under en tur eller avslutar sin tur där tar {@damage 1d10} eldskada.",
+						"Du kan använda din handling för att skapa en eldlinje som är 4,5 meter lång och 1,5 meter bred och som sträcker sig från dig i den riktning du väljer. Varje varelse i linjen måste göra ett räddningsslag i Dexterity. En varelse tar {@damage 4d8} eldskada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat."
+					]
+				}
+			],
+			"damageResist": [
+				"cold"
+			],
+			"damageImmune": [
+				"fire"
+			],
+			"damageInflict": [
+				"fire"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"LGT"
+			],
+			"areaTags": [
+				"L"
+			]
+		},
+		{
+			"name": "Investiture of Ice",
+			"source": "XGE",
+			"page": 159,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 19
+				}
+			],
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Tills förtrollningen tar slut, får du is i din kropp och du får följande fördelar:",
+				{
+					"type": "list",
+					"items": [
+						"Du är immun mot köldskador och har motståndskraft mot brandskador.",
+						"Du kan röra dig över {@quickref difficult terrain||3} skapad av is eller snö utan att spendera extra rörelse.",
+						"Marken i en radie av 3 meter runt dig är isig och är {@quickref difficult terrain||3} för andra varelser än dig. Radien rör sig med dig.",
+						"Du kan använda din handling för att skapa en 4,5 meter lång kon av isande vind som sträcker sig från din utsträckta hand i en riktning du väljer. Varje varelse i konen måste göra ett Konstitutionsräddningsslag. En varelse tar {@damage 4d6} kall skada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat. En varelse som misslyckas med sitt räddningsslag mot denna effekt får sin hastighet halverad fram till början av din nästa tur."
+					]
+				}
+			],
+			"damageResist": [
+				"fire"
+			],
+			"damageImmune": [
+				"cold"
+			],
+			"damageInflict": [
+				"cold"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"DFT"
+			],
+			"areaTags": [
+				"N",
+				"S"
+			]
+		},
+		{
+			"name": "Investiture of Stone",
+			"source": "XGE",
+			"page": 159,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 19
+				}
+			],
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Tills förtrollningen upphör sprids stenbitar över din kropp och du får följande fördelar:",
+				{
+					"type": "list",
+					"items": [
+						"Du är motståndskraftig mot skador från icke-magiska attacker som är slående, genomträngande och slående.",
+						"Du kan använda din handling för att skapa en liten jordbävning på marken i en radie av 4,5 meter centrerad på dig. Andra varelser på marken måste lyckas med ett räddningsslag i Dexterity eller bli knockade {@condition prone}.",
+						"Du kan röra dig över {@quickref difficult terrain||3} av jord eller sten utan att spendera extra rörelse. Du kan röra dig genom fast jord eller sten som om det vore luft och utan att destabilisera det, men du kan inte avsluta din rörelse där. Om du gör det kastas du ut till närmaste lediga utrymme, besvärjelsen upphör och du är {@condition stunned} till slutet av din nästa tur."
+					]
+				}
+			],
+			"damageResist": [
+				"bludgeoning",
+				"piercing",
+				"slashing"
+			],
+			"conditionInflict": [
+				"prone",
+				"stunned"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Investiture of Wind",
+			"source": "XGE",
+			"page": 160,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 20
+				}
+			],
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Tills förtrollningen upphör virvlar vinden runt dig och du får följande fördelar:",
+				{
+					"type": "list",
+					"items": [
+						"Attacker med distansvapen mot dig har nackdel på attackkastet.",
+						"Du får en flyghastighet på 18 meter. Om du fortfarande flyger när besvärjelsen upphör, faller du, om du inte på något sätt kan förhindra det.",
+						"Du kan använda din handling för att skapa en 4,5 meter stor kub av virvlande vind centrerad på en punkt som du kan se inom 18 meter från dig. Varje varelse i området måste göra ett räddningsslag i konstitution. En varelse tar {@damage 2d10} förödande skada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat. Om en stor eller mindre varelse misslyckas med räddningsslaget, knuffas den varelsen också upp till 3 meter bort från kubens mitt."
+					]
+				}
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"FMV",
+				"SGT"
+			],
+			"areaTags": [
+				"C"
+			]
+		},
+		{
+			"name": "Invulnerability",
+			"source": "XGE",
+			"page": 160,
+			"level": 9,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "en liten bit adamantin värd minst 500 gp, som besvärjelsen förbrukar",
+					"cost": 50000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du är immun mot all skada tills förtrollningen upphör."
+			]
+		},
+		{
+			"name": "Life Transference",
+			"source": "XGE",
+			"page": 160,
+			"level": 3,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du offrar en del av din hälsa för att läka en annan varelses skador. Du tar {@damage 4d8} nekrotisk skada, som inte kan reduceras på något sätt, och en valfri varelse som du kan se inom räckhåll återfår ett antal träffpunkter som är lika med två gånger den nekrotiska skada du tar."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med en besvärjelseplats på 4:e nivån eller högre, ökar skadan med {@scaledamage 4d8|3-9|1d8} för varje platsnivå över 3:e."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"miscTags": [
+				"HL",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Maddening Darkness",
+			"source": "XGE",
+			"page": 160,
+			"level": 8,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 150
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "en droppe pitch blandat med en droppe kvicksilver"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Magiskt mörker sprider sig från en punkt du väljer inom räckhåll för att fylla en sfär med 18 meters radie tills besvärjelsen avslutas. Mörkret sprider sig runt hörn. En varelse med {@sense darkvision} kan inte se genom detta mörker. Icke-magiskt ljus, liksom ljus som skapas av besvärjelser på 8:e nivån eller lägre, kan inte lysa upp området.",
+				"Skrik, gurgel och galna skratt kan höras inom sfären. När en varelse börjar sin tur i sfären måste den göra ett visdomsräddningsslag och ta {@damage 8d8} psykisk skada vid ett misslyckat räddningsslag eller hälften så mycket skada vid ett lyckat."
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Maelstrom",
+			"source": "XGE",
+			"page": 160,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 20
+				}
+			],
+			"level": 5,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "papper eller blad i form av en tratt"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"En virvlande massa av 1,5 meter djupt vatten visas i en 9-metersradie med centrum på en punkt som du kan se inom räckhåll. Punkten måste vara på marken eller i ett vattendrag. Tills besvärjelsen upphör är området {@quickref difficult terrain||3}, och varje varelse som börjar sin tur där måste lyckas med ett räddningsslag för styrka eller ta {@damage 6d6} blåmärken och dras 3 meter mot mitten."
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"savingThrow": [
+				"strength"
+			],
+			"miscTags": [
+				"DFT",
+				"FMV",
+				"SGT"
+			],
+			"areaTags": [
+				"R"
+			]
+		},
+		{
+			"name": "Magic Stone",
+			"source": "XGE",
+			"page": 160,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 20
+				}
+			],
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Du rör vid en till tre småstenar och ger dem magi. Du eller någon annan kan göra en magisk distansattack med en av stenarna genom att kasta den eller slunga den med en {@item sling|phb}. En kastad sten har en räckvidd på 18 meter. Om någon annan attackerar med en sten, lägger den som attackerar till din besvärjelseförmågemodifierare, inte den som attackerar, till attackkastet. Vid en träff tar målet skada motsvarande {@damage 1d6} + din besvärjelseförmågemodifierare. Oavsett om attacken träffar eller missar, avslutas besvärjelsen på stenen.",
+				"Om du kastar den här besvärjelsen igen upphör besvärjelsen på alla stenar som fortfarande påverkas av din tidigare besvärjelse."
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Mass Polymorph",
+			"source": "XGE",
+			"page": 160,
+			"level": 9,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "en larvkokong"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du förvandlar upp till tio valfria varelser som du kan se inom räckhåll. Ett ovilligt mål måste lyckas med ett räddningskast i visdom för att motstå förvandlingen. En ovillig shapechanger lyckas automatiskt på räddningsförsöket.",
+				"Varje mål antar en djurform som du väljer, och du kan välja samma form eller olika former för varje mål. Den nya formen kan vara {@filter alla djur|bestiary|type=beast|miscellaneous=!swarm} som du har sett vars utmaningspoäng är lika med eller lägre än målets (eller hälften av målets nivå, om målet inte har ett utmaningspoäng). Målets spelstatistik, inklusive poäng för mental förmåga, ersätts av den valda bestens statistik, men målet behåller sina träffpoäng, anpassning och personlighet.",
+				"Varje mål får ett antal tillfälliga träffpoäng som är lika med träffpoängen för dess nya form. Dessa tillfälliga träffpunkter kan inte ersättas med tillfälliga träffpunkter från en annan källa. Ett mål återgår till sin normala form när det inte har några fler tillfälliga träffpunkter eller när det dör. Om förtrollningen upphör innan dess förlorar varelsen alla sina tillfälliga träffpunkter och återgår till sin normala form.",
+				"Varelsen är begränsad i de handlingar den kan utföra på grund av sin nya form. Den kan inte tala, kasta trollformler eller göra något annat som kräver händer eller tal.",
+				"Målets utrustning smälter in i den nya formen. Målet kan inte aktivera, använda, använda eller på annat sätt dra nytta av sin utrustning."
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SGT",
+				"THP"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Maximilian's Earthen Grasp",
+			"source": "XGE",
+			"page": 161,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 20
+				}
+			],
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "en handskulpterad miniatyr av lera"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du väljer en 1,5 meter kvadratisk obebodd plats på marken som du kan se inom räckhåll. En medelstor hand gjord av kompakt jord reser sig där och sträcker sig efter en varelse som du kan se inom 1,5 meter från den. Målet måste göra ett räddningsslag för styrka. Vid ett misslyckat räddningsslag tar måltavlan {@damage 2d6} skada och är {@condition restrained} under besvärjelsens varaktighet.",
+				"Som en handling kan du få handen att krossa {@condition restrained} målet, som måste göra ett räddningsslag mot styrka. Måltavlan tar {@damage 2d6} förödande skada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat.",
+				"För att bryta sig loss kan {@condition restrained} målet använda sin handling för att göra en styrkekontroll mot din trollformels räddning DC. Om du lyckas flyr målet och är inte längre {@condition restrained} fast i handen.",
+				"Som en handling kan du få handen att sträcka sig efter en annan varelse eller att flytta till ett annat ledigt utrymme inom räckhåll. Handen släpper ett {@condition restrained} mål om du gör något av detta."
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrow": [
+				"strength"
+			],
+			"abilityCheck": [
+				"strength"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Melf's Minute Meteors",
+			"source": "XGE",
+			"page": 161,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 20
+				}
+			],
+			"level": 3,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "niter, svavel och trätjära som bildar en pärla"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du skapar sex små meteorer i din rymd. De svävar i luften och kretsar kring dig under besvärjelsens varaktighet. När du kastar besvärjelsen - och som en bonusåtgärd i varje tur därefter - kan du använda en eller två av meteorerna och skicka dem mot en eller flera punkter du väljer inom 36 meter från dig. När en meteor når sin destination eller slår ner mot en fast yta exploderar meteoren. Varje varelse inom 1,5 meter från den punkt där meteoren exploderar måste göra ett räddningsslag i Dexterity. En varelse tar {@damage 2d6} eldskada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med hjälp av en spelledningsplats på 4:e nivå eller högre, ökar antalet meteorer som skapas med två för varje spelledningsplatsnivå över 3:e."
+					]
+				}
+			],
+			"damageInflict": [
+				"fire"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"UBA"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Mental Prison",
+			"source": "XGE",
+			"page": 161,
+			"level": 6,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du försöker binda en varelse i en illusorisk cell som bara den kan uppfatta. En varelse som du kan se inom räckhåll måste göra ett intelligenssparande. Målet lyckas automatiskt om det är immunt mot att bli {@condition charmed}. Vid ett lyckat räddningsslag tar målet {@damage 5d10} psykisk skada och besvärjelsen upphör. Vid misslyckad räddning tar målet {@damage 5d10} psykisk skada, och du får området omedelbart runt målets utrymme att verka farligt för det på något sätt. Du kan få målet att uppfatta sig som omgivet av eld, flytande rakknivar eller ohyggliga gap fyllda med droppande tänder. Oavsett vilken form illusionen tar kan målet inte se eller höra något bortom den och är {@condition restrained} under besvärjelsens varaktighet. Om målet flyttas ut ur illusionen, gör en närstridsattack genom den, eller når någon del av sin kropp genom den, tar målet {@damage 10d10} psykisk skada, och besvärjelsen avslutas."
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"savingThrow": [
+				"intelligence"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Mighty Fortress",
+			"source": "XGE",
+			"page": 161,
+			"otherSources": [
+				{
+					"source": "AitFR-AVT",
+					"page": 10
+				},
+				{
+					"source": "AitFR-FCD",
+					"page": 12
+				}
+			],
+			"level": 8,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "miles",
+					"amount": 1
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "en diamant värd minst 500 gp, som besvärjelsen förbrukar",
+					"cost": 50000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"En fästning av sten erupterar från ett kvadratiskt område av valfri mark som du kan se inom räckhåll. Området är 36 meter på varje sida, och det får inte finnas några byggnader eller andra strukturer på det. Alla varelser i området lyfts ofarligt upp när fästningen reser sig.",
+				"Fästningen har fyra torn med fyrkantiga baser, vart och ett 6 meter på en sida och 9 meter högt, med ett torn i varje hörn. Tornen är förbundna med varandra genom stenmurar som är 24 meter långa och bildar ett slutet område. Varje mur är 0,3 meter tjock och består av paneler som är 3 meter breda och 6 meter höga. Varje panel är sammanhängande med två andra paneler eller en annan panel och ett torn. Du kan placera upp till fyra stendörrar i fästningens yttervägg.",
+				"Ett litet torn står inne i det inhägnade området. Tornet har en kvadratisk grund som är 15 meter på varje sida, och det har tre våningar med 3 meter högt i tak. Varje våning kan delas in i hur många rum som helst, förutsatt att varje rum är minst 1,5 meter på varje sida. Borgens våningar är förbundna med stentrappor, väggarna är 6 tum tjocka och de inre rummen kan ha stendörrar eller öppna valvbågar som du väljer. Tornet möbleras och inreds som du vill och innehåller tillräckligt med mat för att servera en niorätters bankett för upp till 100 personer varje dag. Möbler, mat och andra föremål som skapats med denna besvärjelse faller sönder till damm om de avlägsnas från fästningen.",
+				"En stab med hundra osynliga tjänare lyder alla kommandon som ges till dem av varelser som du anger när du uttalar besvärjelsen. Varje tjänare fungerar som om de hade skapats av förtrollningen osynlig tjänare.",
+				"Murarna, tornen och tornet är alla gjorda av sten som kan skadas. Varje stensektion på 3 x 3 meter har AC 15 och 30 träffpunkter per tum tjocklek. Den är immun mot gift och psykisk skada. Att reducera en stensektion till 0 träffpunkter förstör den och kan få anslutna sektioner att bukta och kollapsa enligt DM:s bedömning.",
+				"Efter 7 dagar eller när du kastar den här besvärjelsen någon annanstans, smulas fästningen harmlöst sönder och sjunker ner i marken och lämnar alla varelser som befann sig i den säkert på marken.",
+				"Om du använder denna besvärjelse på samma plats en gång var sjunde dag under ett år blir fästningen permanent."
+			],
+			"damageImmune": [
+				"poison",
+				"psychic"
+			],
+			"miscTags": [
+				"PRM",
+				"SGT"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Mind Spike",
+			"source": "XGE",
+			"page": 162,
+			"level": 2,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du når in i sinnet på en varelse som du kan se inom räckhåll. Målet måste göra ett visdomsräddningsslag och tar {@damage 3d8} psykisk skada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat. Vid ett misslyckat räddningsslag vet du också alltid var målet befinner sig tills besvärjelsen upphör, men bara så länge ni två befinner er på samma existensplan. Medan du har denna kunskap kan målet inte bli dolt för dig, och om det är {@condition invisible} får det ingen fördel av det villkoret mot dig."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 3:e nivån eller högre, ökar skadan med {@scaledamage 3d8|2-9|1d8} för varje besvärjelseplatsnivå över 2:a."
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Mold Earth",
+			"source": "XGE",
+			"page": 162,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 21
+				}
+			],
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				},
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Du väljer en bit jord eller sten som du kan se inom räckhåll och som ryms inom en kub på 1,5 meter. Du manipulerar den på ett av följande sätt:",
+				{
+					"type": "list",
+					"items": [
+						"Om du riktar in dig på ett område med lös jord kan du omedelbart gräva upp den, flytta den längs marken och deponera den upp till 1,5 meter bort. Denna rörelse är inte tillräckligt kraftfull för att orsaka skada.",
+						"Du får former, färger eller både och att dyka upp på jorden eller stenen, vilket gör att du kan stava ord, skapa bilder eller forma mönster. Förändringarna varar i 1 timme.",
+						"Om den jord eller sten du siktar på är på marken, får du den att bli {@quickref difficult terrain||3}. Alternativt kan du få marken att bli normal terräng om den redan är {@quickref difficult terrain||3}. Denna förändring varar i 1 timme."
+					]
+				},
+				"Om du kastar den här besvärjelsen flera gånger kan du inte ha mer än två av dess icke-ögonblickliga effekter aktiva samtidigt, och du kan avbryta en sådan effekt som en handling."
+			],
+			"miscTags": [
+				"DFT",
+				"SGT"
+			],
+			"areaTags": [
+				"C"
+			]
+		},
+		{
+			"name": "Negative Energy Flood",
+			"source": "XGE",
+			"page": 163,
+			"level": 5,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "ett brutet ben och en kvadrat svart siden"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du skickar band av negativ energi mot en varelse du kan se inom räckhåll. Om målet inte är odöd måste det göra ett räddningsslag i konstitution, och tar {@damage 5d12} nekrotisk skada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat. Ett mål som dödats av denna skada återuppstår som en {@creature zombie} i början av din nästa tur. Zombien förföljer den varelse den kan se som är närmast den. Statistik för {@creature zombie} finns i Monsterhandboken.",
+				"Om du riktar den här besvärjelsen mot en odöd, behöver den inte göra något räddningsslag. Kasta istället {@dice 5d12}. Målet får hälften av det totala antalet som tillfälliga träffpunkter."
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT",
+				"SMN",
+				"THP"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Power Word Pain",
+			"source": "XGE",
+			"page": 163,
+			"level": 7,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du uttalar ett kraftord som får vågor av intensiv smärta att drabba en varelse som du kan se inom räckhåll. Om målet har 100 träffpunkter eller färre, drabbas det av förlamande smärta. I annat fall har besvärjelsen ingen effekt på den. Ett mål påverkas inte heller om det är immunt mot att bli {@condition charmed}.",
+				"Medan målet påverkas av förlamande smärta kan all hastighet det har inte vara högre än 3 meter. Målet har också nackdel på attackkast, förmågekontroller och räddningskast, förutom räddningskast för konstitution. Slutligen, om målet försöker kasta en besvärjelse måste det först lyckas med ett konstitutionellt räddningsslag, annars misslyckas kastandet och besvärjelsen är bortkastad.",
+				"Ett mål som lider av denna smärta kan göra ett räddningskast i slutet av varje vändning. Vid ett lyckat räddningsförsök upphör smärtan."
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Primal Savagery",
+			"source": "XGE",
+			"page": 163,
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du kanaliserar primal magi för att få dina tänder eller naglar att vässas, redo att leverera en frätande attack. Utför en närstridsattack mot en varelse inom 1,5 meter från dig. Vid en träff tar målet {@damage 1d10} syraskada. Efter att du utfört attacken återgår dina tänder eller naglar till det normala.",
+				"Besvärjelsens skada ökar med {@dice 1d10} när du når 5:e nivån ({@damage 2d10}), 11:e nivån ({@damage 3d10}) och 17:e nivån ({@damage 4d10})."
+			],
+			"scalingLevelDice": {
+				"label": "acid damage",
+				"scaling": {
+					"1": "1d10",
+					"5": "2d10",
+					"11": "3d10",
+					"17": "4d10"
+				}
+			},
+			"damageInflict": [
+				"acid"
+			],
+			"spellAttack": [
+				"M"
+			],
+			"miscTags": [
+				"SCL"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Primordial Ward",
+			"source": "XGE",
+			"page": 163,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 21
+				}
+			],
+			"level": 6,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du är motståndskraftig mot syra, kyla, eld, blixtar och åska under trollformelns varaktighet.",
+				"När du tar skada av en av dessa typer kan du använda din reaktion för att bli immun mot den typen av skada, även mot den utlösande skadan. Om du gör det upphör resistensen och du har immuniteten fram till slutet av din nästa tur, vid vilken tidpunkt trollformeln upphör."
+			],
+			"damageResist": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"thunder"
+			],
+			"damageImmune": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"thunder"
+			]
+		},
+		{
+			"name": "Psychic Scream",
+			"source": "XGE",
+			"page": 163,
+			"level": 9,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du släpper loss din sinneskraft för att spränga intellektet hos upp till tio valfria varelser som du kan se inom räckhåll. Varelser som har en intelligenspoäng på 2 eller lägre påverkas inte.",
+				"Varje mål måste göra ett räddningsslag för intelligens. Om räddningsslaget misslyckas tar målet {@damage 14d6} psykisk skada och är {@condition stunned}. Vid ett lyckat räddningsslag tar målet hälften så mycket skada och är inte {@condition stunned}. Om ett mål dödas av denna skada exploderar dess huvud, förutsatt att det har ett.",
+				"Ett {@condition stunned} mål kan göra ett räddningsslag för intelligens i slutet av var och en av sina varv. Vid ett lyckat räddningsslag upphör den bedövande effekten."
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"savingThrow": [
+				"intelligence"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Pyrotechnics",
+			"source": "XGE",
+			"page": 163,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 21
+				}
+			],
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Välj ett område med icke-magisk eld som du kan se och som ryms inom en 1,5 meter stor kub inom räckhåll. Du kan släcka elden i det området, och du skapar antingen fyrverkerier eller rök när du gör det.",
+				{
+					"type": "entries",
+					"name": "Fireworks",
+					"entries": [
+						"Målet exploderar med en bländande färgskala. Varje varelse inom 3 meter från målet måste lyckas med ett Konstitutionsräddningsslag eller bli {@condition blinded} till slutet av din nästa tur."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Smoke",
+					"entries": [
+						"Tjock svart rök sprider sig från målet i en radie på 6 meter och rör sig runt hörn. Området där röken sprids är kraftigt skymt. Röken finns kvar i 1 minut eller tills en stark vind skingrar den."
+					]
+				}
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"OBS",
+				"SGT"
+			],
+			"areaTags": [
+				"C",
+				"S"
+			]
+		},
+		{
+			"name": "Scatter",
+			"source": "XGE",
+			"page": 164,
+			"level": 6,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Luften skälver runt upp till fem valfria varelser som du kan se inom räckhåll. En ovillig varelse måste lyckas med ett visdomssparande för att motstå besvärjelsen. Du teleporterar varje påverkat mål till ett ledigt utrymme som du kan se inom 36 meter från dig. Utrymmet måste vara på marken eller på ett golv."
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SGT",
+				"TP"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Shadow Blade",
+			"source": "XGE",
+			"page": 164,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du väver samman trådar av skugga för att skapa ett svärd av stelnad dysterhet i din hand. Detta magiska svärd varar tills besvärjelsen upphör. Det räknas som ett enkelt närstridsvapen som du är skicklig med. Det ger {@damage 2d8} psykisk skada vid träff och har egenskaperna finess, ljus och kastat (räckvidd 20/60). När du använder svärdet för att attackera ett mål som befinner sig i svagt ljus eller mörker, gör du dessutom attackkastet med fördel.",
+				"Om du tappar vapnet eller kastar det försvinner det i slutet av vändningen. Därefter, medan förtrollningen består, kan du använda en bonusåtgärd för att få svärdet att dyka upp igen i din hand."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 3:e eller 4:e nivån ökar skadan till {@dice 3d8}. När du använder en besvärjelseplats på 5:e eller 6:e nivån ökar skadan till {@dice 4d8}. När du använder en besvärjelseplats på 7:e nivån eller högre, ökar skadan till {@dice 5d8}."
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"miscTags": [
+				"UBA"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Shadow of Moil",
+			"source": "XGE",
+			"page": 164,
+			"level": 4,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "en odöd ögonglob innesluten i en ädelsten värd minst 150 gp",
+					"cost": 15000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Flamliknande skuggor omger din kropp tills besvärjelsen upphör, vilket gör att du blir kraftigt dold för andra. Skuggorna förvandlar svagt ljus inom 3 meter från dig till mörker, och starkt ljus i samma område till svagt ljus.",
+				"Tills besvärjelsen upphör har du motståndskraft mot strålningsskador. Dessutom, närhelst en varelse inom 3 meter från dig träffar dig med en attack, slår skuggorna ut mot den varelsen och ger den {@damage 2d8} nekrotisk skada."
+			],
+			"damageResist": [
+				"radiant"
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"miscTags": [
+				"OBS"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Shape Water",
+			"source": "XGE",
+			"page": 164,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 21
+				},
+				{
+					"source": "EGW"
+				}
+			],
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				},
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Du väljer ett vattenområde som du kan se inom räckhåll och som ryms inom en 1,5 meter stor kub. Du manipulerar det på ett av följande sätt:",
+				{
+					"type": "list",
+					"items": [
+						"Du kan omedelbart flytta eller på annat sätt ändra vattenflödet som du vill, upp till 1,5 meter i någon riktning. Denna rörelse har inte tillräcklig kraft för att orsaka skada.",
+						"Du får vattnet att forma sig till enkla former och animeras enligt dina anvisningar. Denna förändring varar i 1 timme.",
+						"Du ändrar vattnets färg eller opacitet. Vattnet måste ändras på samma sätt hela tiden. Denna förändring varar i 1 timme.",
+						"Du fryser vattnet, förutsatt att det inte finns några varelser i det. Vattnet fryser upp på 1 timme."
+					]
+				},
+				"Om du kastar den här besvärjelsen flera gånger kan du inte ha mer än två av dess icke-ögonblickliga effekter aktiva samtidigt, och du kan avbryta en sådan effekt som en handling."
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"C"
+			]
+		},
+		{
+			"name": "Sickening Radiance",
+			"source": "XGE",
+			"page": 164,
+			"level": 4,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Svagt, grönaktigt ljus sprids inom en sfär med 9 meters radie centrerad på en punkt du väljer inom räckhåll. Ljuset sprids runt hörn och varar tills besvärjelsen avslutas.",
+				"När en varelse förflyttar sig in i besvärjelsens område för första gången under en tur eller börjar sin tur där, måste varelsen lyckas med ett Konstitutionssparkast eller ta {@damage 4d10} strålningsskada, och den drabbas av en nivå av {@condition exhaustion} och avger ett svagt, grönaktigt ljus i en radie av 1,5 meter. Detta ljus gör det omöjligt för varelsen att dra nytta av att vara {@condition invisible}. Ljuset och alla nivåer av {@condition exhaustion} som orsakas av denna besvärjelse försvinner när besvärjelsen avslutas."
+			],
+			"damageInflict": [
+				"radiant"
+			],
+			"conditionInflict": [
+				"exhaustion"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Skill Empowerment",
+			"source": "XGE",
+			"page": 165,
+			"level": 5,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Din magi fördjupar en varelses förståelse för sin egen talang. Du rör vid en villig varelse och ger den expertis i en färdighet som du väljer; tills förtrollningen upphör fördubblar varelsen sin kompetensbonus för förmågaskontroller som använder den valda färdigheten.",
+				"Du måste välja en färdighet som målet behärskar och som inte redan gynnas av en effekt, t.ex. expertis, som fördubblar dess färdighetsbonus."
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Skywrite",
+			"source": "XGE",
+			"page": 165,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 22
+				}
+			],
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "sight"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"Du får upp till tio ord att bildas i en del av himlen som du kan se. Orden ser ut att vara gjorda av moln och stannar på plats under hela trollformelns varaktighet. Orden försvinner när förtrollningen upphör. En stark vind kan skingra molnen och avsluta förtrollningen i förtid."
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Snare",
+			"source": "XGE",
+			"page": 165,
+			"level": 1,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"s": true,
+				"m": {
+					"text": "7,5 meter rep, som besvärjelsen förbrukar",
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"När du kastar besvärjelsen använder du repet för att skapa en cirkel med en radie på 1,5 meter på marken eller golvet. När du är klar försvinner repet och cirkeln blir en magisk fälla.",
+				"Den här fällan är nästan osynlig och kräver en lyckad intelligenstest ({@skill Investigation}) mot din trollformels räddning DC för att upptäckas.",
+				"Fällan utlöses när en liten, medelstor eller stor varelse rör sig på marken eller golvet inom besvärjelsens radie. Varelsen måste lyckas med ett räddningsslag i Dexterity eller bli magiskt hissad upp i luften och hänga upp och ner 0,9 meter ovanför marken eller golvet. Varelsen är {@condition restrained} där tills besvärjelsen slutar.",
+				"En {@condition restrained} varelse kan göra ett räddningsslag i Dexterity i slutet av var och en av sina varv, och effekten upphör på den själv om den lyckas. Alternativt kan varelsen eller någon annan som kan nå den använda en handling för att göra en intelligens ({@skill Arcana}) kontroll mot din trollformels räddning DC. Om den lyckas upphör {@condition restrained}-effekten.",
+				"Efter att fällan har utlösts upphör besvärjelsen när ingen varelse är {@condition restrained} av den."
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"abilityCheck": [
+				"intelligence"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Snilloc's Snowball Swarm",
+			"source": "XGE",
+			"page": 165,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 22
+				}
+			],
+			"level": 2,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "en bit is eller ett litet vitt stenflis"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"En skur av magiska snöbollar sprutar ut från en punkt du väljer inom räckhåll. Varje varelse i en sfär med 1,5 meters radie centrerad på den punkten måste göra ett räddningsslag i Dexterity. En varelse tar {@damage 3d6} kall skada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 3:e nivån eller högre, ökar skadan med {@scaledamage 3d6|2-9|1d6} för varje besvärjelseplatsnivå över 2:a."
+					]
+				}
+			],
+			"damageInflict": [
+				"cold"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Soul Cage",
+			"source": "XGE",
+			"page": 165,
+			"level": 6,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "which you take when a humanoid you can see within 60 feet of you dies"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "en liten silverbur värd 100 gp",
+					"cost": 10000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"Den här besvärjelsen tar själen från en humanoid när den dör och fångar den i den lilla buren som du använder för den materiella komponenten. En stulen själ förblir i buren tills förtrollningen upphör eller tills du förstör buren, vilket avslutar förtrollningen. Medan du har en själ i buren kan du utnyttja den på något av de sätt som beskrivs nedan. Du kan använda en instängd själ upp till sex gånger. När du utnyttjar en själ för sjätte gången frigörs den och förtrollningen upphör. Medan en själ är instängd kan den döda humanoid som den kom från inte återupplivas.",
+				{
+					"type": "entries",
+					"name": "Steal Life",
+					"entries": [
+						"Du kan använda en bonushandling för att tömma själen på livskraft och återfå {@dice 2d8} träffpunkter."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Query Soul",
+					"entries": [
+						"Du ställer en fråga till själen (ingen åtgärd krävs) och får ett kort telepatiskt svar som du kan förstå oavsett vilket språk som används. Själen vet endast vad den visste i livet, men den måste svara dig sanningsenligt och efter bästa förmåga. Svaret är inte mer än en mening eller två och kan vara kryptiskt."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Borrow Experience",
+					"entries": [
+						"Du kan använda en bonusåtgärd för att förstärka dig själv med själens livserfarenhet, vilket gör att du kan göra nästa attackkast, förmågekontroll eller räddningskast med fördel. Om du inte använder den här fördelen före början av din nästa tur går den förlorad."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Eyes of the Dead",
+					"entries": [
+						"Du kan använda en handling för att namnge en plats som humanoiden såg i livet, vilket skapar en osynlig sensor någonstans på den platsen om den är på det existensplan du för närvarande befinner dig på. Sensorn finns kvar så länge du koncentrerar dig, upp till 10 minuter (som om du var {@status concentration||concentrating} på en besvärjelse). Du får visuell och auditiv information från sensorn som om du befann dig i dess utrymme med hjälp av dina sinnen."
+					]
+				},
+				"En varelse som kan se sensorn (t.ex. en som använder {@spell see invisibility} eller {@sense truesight}) ser en genomskinlig bild av den plågade humanoid vars själ du burit in."
+			],
+			"affectsCreatureType": [
+				"humanoid"
+			],
+			"miscTags": [
+				"HL",
+				"UBA",
+				"ADV"
+			]
+		},
+		{
+			"name": "Steel Wind Strike",
+			"source": "XGE",
+			"page": 166,
+			"level": 5,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true,
+				"m": {
+					"text": "ett närstridsvapen värt minst 1 sp",
+					"cost": 10
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du låter vapnet som användes i besvärjelsen blomstra och försvinner sedan för att slå som vinden. Välj upp till fem varelser som du kan se inom räckhåll. Gör en närstridsförtrollningsattack mot varje mål. Vid en träff tar målet {@damage 6d10} kraftskada.",
+				"Du kan sedan teleportera dig till ett ledigt utrymme som du kan se inom 1,5 meter från ett av de mål du träffade eller missade."
+			],
+			"damageInflict": [
+				"force"
+			],
+			"spellAttack": [
+				"M"
+			],
+			"miscTags": [
+				"SGT",
+				"TP"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Storm Sphere",
+			"source": "XGE",
+			"page": 166,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 22
+				}
+			],
+			"level": 4,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 150
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"En sfär av virvlande luft med en radie på 6 meter uppstår, centrerad på en punkt du väljer inom räckhåll. Sfären stannar kvar under besvärjelsens varaktighet. Varje varelse som befinner sig i sfären när den dyker upp eller som avslutar sin tur där måste lyckas med ett räddningsslag i styrka eller ta {@damage 2d6} knytnävskador. Sfärens utrymme är {@quickref difficult terrain||3}.",
+				"Tills besvärjelsen slutar kan du använda en bonushandling på var och en av dina vändor för att få en blixt att hoppa från sfärens centrum mot en varelse du väljer inom 18 meter från centrum. Gör en besvärjelseattack på avstånd. Du har fördel på attackkastet om målet befinner sig i sfären. Vid en träff tar målet {@damage 4d6} blixtskada.",
+				"Varelser inom 9 meter från sfären har nackdel på visdomsprov ({@skill Perception}) som görs för att lyssna."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 5:e nivån eller högre, ökar skadan för var och en av dess effekter med {@scaledamage 2d6;4d6|4-9|1d6} för varje besvärjelseplatsnivå över 4:e nivån."
+					]
+				}
+			],
+			"damageInflict": [
+				"bludgeoning",
+				"lightning"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"strength"
+			],
+			"miscTags": [
+				"DFT",
+				"UBA"
+			],
+			"areaTags": [
+				"ST",
+				"S"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Summon Greater Demon",
+			"source": "XGE",
+			"page": 166,
+			"level": 4,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "en behållare med blod från en humanoid som dödats under de senaste 24 timmarna",
+					"consume": "optional"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du yttrar fula ord och åkallar en demon från avgrundens kaos. Du väljer demonens typ, som måste vara {@filter en av utmaningsgrad 5 eller lägre|bestiary|challenge rating=[&0;&5]|tag=demon|miscellaneous=!swarm}, t.ex. en {@creature shadow demon} eller en {@creature barlgura}. Demonen dyker upp i ett ledigt utrymme som du kan se inom räckhåll, och demonen försvinner när den sjunker till 0 träffpunkter eller när besvärjelsen avslutas.",
+				"Ta initiativ för demonen, som har sina egna turer. När du kallar på den och vid varje tur därefter kan du ge den ett verbalt kommando (som inte kräver någon handling från din sida) som talar om för den vad den måste göra vid nästa tur. Om du inte ger något kommando spenderar den sin tur med att attackera varje varelse inom räckhåll som har attackerat den.",
+				"I slutet av varje demons tur gör den ett karisma räddningsslag. Demonen har nackdel på detta räddningsslag om du säger dess sanna namn. Vid ett misslyckat räddningsslag fortsätter demonen att lyda dig. Vid ett lyckat räddningsslag upphör din kontroll över demonen för resten av varaktigheten, och demonen tillbringar sina varv med att förfölja och attackera de närmaste icke-demonerna efter bästa förmåga. Om du stoppar {@status concentration||concentrating} på besvärjelsen innan den når sin fulla varaktighet, försvinner inte en okontrollerad demon på {@dice 1d6} rundor om den fortfarande har träffpunkter.",
+				"Som en del av besvärjelsen kan du bilda en cirkel på marken med blodet som materialkomponent. Cirkeln är tillräckligt stor för att omfatta ditt utrymme. Så länge besvärjelsen varar kan den framkallade demonen inte korsa cirkeln eller skada den, och den kan inte rikta sig mot någon inom cirkeln. Att använda materialkomponenten på detta sätt förbrukar den när förtrollningen upphör."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med hjälp av en spell slot på 5:e nivå eller högre, ökar utmaningsvärdet med 1 för varje slotnivå över 4:e."
+					]
+				}
+			],
+			"savingThrow": [
+				"charisma"
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Summon Lesser Demons",
+			"source": "XGE",
+			"page": 167,
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "en behållare med blod från en humanoid som dödats under de senaste 24 timmarna",
+					"consume": "optional"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du säger fula ord och kallar på demoner från kaoset i avgrunden. Rulla på följande tabell för att avgöra vad som dyker upp.",
+				{
+					"type": "table",
+					"colLabels": [
+						"{@dice d6}",
+						"Demons Summoned"
+					],
+					"colStyles": [
+						"col-1 text-center",
+						"col-11"
+					],
+					"rows": [
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"min": 1,
+									"max": 2
+								}
+							},
+							"Två {@filter Demoner av utmaningsgrad 1 eller lägre|bestiary|challenge rating=[&0;&1]|tag=demon|miscellaneous=!swarm}"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"min": 3,
+									"max": 4
+								}
+							},
+							"Fyra {@filter demoner med utmaningsgrad 1/2 eller lägre|bestiary|challenge rating=[&0;&1/2]|tag=demon|miscellaneous=!swarm}"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"min": 5,
+									"max": 6
+								}
+							},
+							"Åtta {@filter demoner med utmaningsgrad 1/4 eller lägre|bestiary|challenge rating=[&0;&1/4]|tag=demon|miscellaneous=!swarm}"
+						]
+					]
+				},
+				"DM väljer demonerna, t.ex. {@creature manes} eller {@creature dretch||dretches}, och du väljer de lediga utrymmen du kan se inom räckhåll där de dyker upp. En åkallad demon försvinner när den sjunker till 0 träffpunkter eller när besvärjelsen avslutas.",
+				"Demonerna är fientliga mot alla varelser, inklusive dig. Rulla initiativ för de framkallade demonerna som en grupp, som har sina egna turer. Demonerna förföljer och attackerar de närmaste icke-demonerna efter bästa förmåga.",
+				"Som en del av besvärjelsen kan du bilda en cirkel på marken med blodet som materialkomponent. Cirkeln är tillräckligt stor för att omfatta ditt utrymme. Så länge besvärjelsen varar kan de kallade demonerna inte korsa cirkeln eller skada den, och de kan inte rikta sig mot någon inom cirkeln. Genom att använda materialkomponenten på detta sätt förbrukas den när förtrollningen upphör."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du använder den här besvärjelsen med en spell slot på 6:e eller 7:e nivån kallar du på dubbelt så många demoner. Om du kastar den med en trollformel på 8:e eller 9:e nivån kallar du på tre gånger så många demoner."
+					]
+				}
+			],
+			"miscTags": [
+				"RO",
+				"SGT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Synaptic Static",
+			"source": "XGE",
+			"page": 167,
+			"level": 5,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du väljer en punkt inom räckhåll och får psykisk energi att explodera där. Varje varelse i en sfär med 6 meters radie centrerad på den punkten måste göra ett intelligenssparande. En varelse med intelligenskvot 2 eller lägre kan inte påverkas av denna besvärjelse. Målet tar {@damage 8d6} psykisk skada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat.",
+				"Efter ett misslyckat räddningsslag har målet förvirrade tankar i 1 minut. Under den tiden slår den ett {@dice d6} och subtraherar det slagna talet från alla sina attackkast och färdighetskontroller, samt sina Konstitutionsräddningsslag för att bibehålla {@status concentration}. Målet kan göra ett räddningsslag för Intelligens i slutet av var och en av sina varv, och effekten på sig själv upphör om det lyckas."
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"savingThrow": [
+				"intelligence",
+				"constitution"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Temple of the Gods",
+			"source": "XGE",
+			"page": 167,
+			"level": 7,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "en helig symbol värd minst 5 gp",
+					"cost": 500
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"entries": [
+				"Du får ett tempel att skimra till existens på mark du kan se inom räckhåll. Templet måste rymmas inom en ledig kub av utrymme, upp till 36 meter på varje sida. Templet finns kvar tills besvärjelsen upphör. Det är tillägnat den gud, panteon eller filosofi som representeras av den heliga symbol som används i besvärjelsen.",
+				"Du fattar alla beslut om templets utseende. Interiören är omsluten av ett golv, väggar och ett tak, med en dörr som ger tillgång till interiören och så många fönster som du vill. Endast du och de varelser du utser när du uttalar besvärjelsen kan öppna eller stänga dörren.",
+				"Templets inre är ett öppet rum med en idol eller ett altare i ena änden. Du bestämmer om templet är upplyst och om belysningen är starkt ljus eller svagt ljus. Lukten av brinnande rökelse fyller luften där inne och temperaturen är mild.",
+				"Templet motsätter sig typer av varelser som du väljer när du kastar den här besvärjelsen. Välj en eller flera av följande: himmelska, elementala, feer, djävlar eller odöda. Om en varelse av den valda typen försöker ta sig in i templet, måste den varelsen göra ett karisma räddningsslag. Vid ett misslyckat räddningsslag kan den inte komma in i templet på 24 timmar. Även om varelsen kan gå in i templet hindras den av magin där; varje gång den gör ett attackkast, en förmågekontroll eller ett räddningsslag inne i templet måste den slå ett {@dice d4} och subtrahera det slagna talet från {@dice d20}.",
+				"Dessutom kan de sensorer som skapas av spådomar inte visas i templet, och varelser i templet kan inte bli måltavlor för spådomar.",
+				"Slutligen, när någon varelse i templet återfår träffpunkter från en besvärjelse på 1:a nivån eller högre, återfår varelsen ytterligare träffpunkter lika med din visdomsmodifierare (minst 1 träffpunkt).",
+				"Templet är gjort av ogenomskinlig magisk kraft som sträcker sig in i det eteriska planet, vilket blockerar eteriska resor in i templets inre. Ingenting kan fysiskt passera genom templets utsida. Den kan inte upplösas av {@spell dispel magic}, och {@spell antimagic field} har ingen effekt på den. En {@spell disintegrate} besvärjelse förstör templet omedelbart.",
+				"Om du använder denna besvärjelse på samma plats varje dag under ett år blir effekten permanent."
+			],
+			"savingThrow": [
+				"charisma"
+			],
+			"affectsCreatureType": [
+				"celestial",
+				"elemental",
+				"fey",
+				"fiend",
+				"undead"
+			],
+			"miscTags": [
+				"HL",
+				"PRM",
+				"SGT"
+			]
+		},
+		{
+			"name": "Tenser's Transformation",
+			"source": "XGE",
+			"page": 168,
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "några hårstrån från en tjur"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du har uthållighet och kampförmåga med hjälp av magi. Tills förtrollningen upphör kan du inte kasta trollformler och du får följande fördelar:",
+				{
+					"type": "list",
+					"items": [
+						"Du får 50 tillfälliga träffpunkter. Om några av dessa finns kvar när förtrollningen upphör, förloras de.",
+						"Du har fördel på attackkast som du gör med enkla och martialiska vapen.",
+						"När du träffar ett mål med en vapenattack, tar det målet en extra {@damage 2d12} kraftskada.",
+						"Du är duktig på alla rustningar, sköldar, enkla vapen och kampvapen.",
+						"Du har färdighet i räddningskast för styrka och konstitution.",
+						"Du kan attackera två gånger, istället för en gång, när du utför åtgärden {@action Attack} på din tur. Du ignorerar denna fördel om du redan har en egenskap, som Extra attack, som ger dig extra attacker."
+					]
+				},
+				"Omedelbart efter att besvärjelsen har upphört måste du lyckas med ett konstitutionellt räddningsslag på DC 15 eller drabbas av en nivå av {@condition exhaustion}."
+			],
+			"damageInflict": [
+				"force"
+			],
+			"conditionInflict": [
+				"exhaustion"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"AAD",
+				"ADV",
+				"THP"
+			]
+		},
+		{
+			"name": "Thunder Step",
+			"source": "XGE",
+			"page": 168,
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du teleporterar dig själv till ett ledigt utrymme som du kan se inom räckhåll. Omedelbart efter att du försvunnit hörs en åskknall, och varje varelse inom 3 meter från den plats du lämnade måste göra ett Konstitutionsräddningsslag, och tar {@damage 3d10} åskskada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat. Åskan kan höras från upp till 9 meters avstånd.",
+				"Du kan ta med dig föremål så länge deras vikt inte överstiger vad du kan bära. Du kan också teleportera en villig varelse av din storlek eller mindre som bär utrustning upp till dess bärkapacitet. Varelsen måste vara inom 1,5 meter från dig när du uttalar besvärjelsen, och det måste finnas ett ledigt utrymme inom 1,5 meter från ditt destinationsutrymme som varelsen kan dyka upp i; annars lämnas varelsen kvar."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med en besvärjelseplats på 4:e nivån eller högre, ökar skadan med {@scaledamage 3d10|3-9|1d10} för varje platsnivå över 3:e."
+					]
+				}
+			],
+			"damageInflict": [
+				"thunder"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT",
+				"TP"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Thunderclap",
+			"source": "XGE",
+			"page": 168,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 22
+				}
+			],
+			"level": 0,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 5
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du skapar en explosion av åskljud som kan höras upp till 3 meter bort. Varje varelse inom räckhåll, förutom du, måste göra ett Konstitutionsräddningsslag eller ta {@damage 1d6} åskskada.",
+				"Besvärjelsens skada ökar med {@dice 1d6} när du når 5:e nivån ({@damage 2d6}), 11:e nivån ({@damage 3d6}) och 17:e nivån ({@damage 4d6})."
+			],
+			"scalingLevelDice": {
+				"label": "thunder damage",
+				"scaling": {
+					"1": "1d6",
+					"5": "2d6",
+					"11": "3d6",
+					"17": "4d6"
+				}
+			},
+			"damageInflict": [
+				"thunder"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SCL"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Tidal Wave",
+			"source": "XGE",
+			"page": 168,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 22
+				}
+			],
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "en droppe vatten"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du trollar fram en våg av vatten som slår ner på ett område inom räckhåll. Området kan vara upp till 9 meter långt, upp till 3 meter brett och upp till 3 meter högt. Varje varelse i området måste göra ett räddningsslag i Dexterity. Om räddningskastet misslyckas tar varelsen {@damage 4d8} skada och blir knockad {@condition prone}. Vid ett lyckat räddningsslag tar varelsen hälften så mycket skada och blir inte knockad {@condition prone}. Vattnet sprider sig sedan över marken i alla riktningar och släcker oskyddade lågor i dess område och inom 9 meter från det, och sedan försvinner det."
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"areaTags": [
+				"W"
+			]
+		},
+		{
+			"name": "Tiny Servant",
+			"source": "XGE",
+			"page": 168,
+			"level": 3,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"Du rör vid ett litet, icke-magiskt föremål som inte är fäst vid ett annat föremål eller en yta och som inte bärs av en annan varelse. Föremålet animeras och får små armar och ben och blir en varelse under din kontroll tills besvärjelsen slutar eller varelsen sjunker till 0 träffpunkter. Se {@creature tiny servant|xge|stat block} för dess statistik.",
+				"Som en bonusåtgärd kan du mentalt kommendera varelsen om den befinner sig inom 36 meter från dig. (Om du kontrollerar flera varelser med denna besvärjelse, kan du kommendera någon eller alla av dem samtidigt, och ge samma kommando till var och en). Du bestämmer vad varelsen skall göra och vart den skall röra sig under sin nästa tur, eller så kan du ge ett enkelt, allmänt kommando, t.ex. att hämta en nyckel, stå vakt eller stapla några böcker. Om du inte ger några kommandon gör tjänaren inget annat än att försvara sig mot fientliga varelser. När tjänaren har fått en order fortsätter den att följa den tills dess att uppgiften är slutförd.",
+				"När varelsen har 0 träffpunkter återgår den till sin ursprungliga form, och all återstående skada överförs till den formen."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med hjälp av en spelledare på 4:e nivån eller högre kan du animera ytterligare två föremål för varje spelledare över 3:e nivån."
+					]
+				}
+			],
+			"miscTags": [
+				"OBJ",
+				"SMN",
+				"UBA"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Toll the Dead",
+			"source": "XGE",
+			"page": 169,
+			"level": 0,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du pekar på en varelse du kan se inom räckhåll, och ljudet av en dolorous klocka fyller luften runt den för ett ögonblick. Målet måste lyckas med ett Visdomsräddningsslag eller ta {@damage 1d8} nekrotisk skada. Om målet saknar någon av sina träffpunkter tar det istället {@damage 1d12} nekrotisk skada.",
+				"Besvärjelsens skada ökar med en tärning när du når 5:e nivån ({@damage 2d8} eller {@damage 2d12}), 11:e nivån ({@damage 3d8} eller {@damage 3d12}), och 17:e nivån ({@damage 4d8} eller {@damage 4d12})."
+			],
+			"scalingLevelDice": [
+				{
+					"label": "necrotic damage",
+					"scaling": {
+						"1": "1d8",
+						"5": "2d8",
+						"11": "3d8",
+						"17": "4d8"
+					}
+				},
+				{
+					"label": "necrotic damage to wounded creature",
+					"scaling": {
+						"1": "1d12",
+						"5": "2d12",
+						"11": "3d12",
+						"17": "4d12"
+					}
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Transmute Rock",
+			"source": "XGE",
+			"page": 169,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 22
+				}
+			],
+			"level": 5,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "lera och vatten"
+			},
+			"duration": [
+				{
+					"type": "permanent",
+					"ends": [
+						"dispel"
+					]
+				}
+			],
+			"entries": [
+				"Du väljer ett område av sten eller lera som du kan se, som ryms inom en 12-meters kub och som är inom räckhåll, och väljer en av följande effekter.",
+				{
+					"type": "entries",
+					"name": "Transmute Rock to Mud",
+					"entries": [
+						"Icke-magisk sten av något slag i området blir en lika stor volym tjock, flytande lera som stannar kvar under trollformelns varaktighet."
+					]
+				},
+				"Marken i besvärjelsens område blir så lerig att varelser kan sjunka ner i den. Varje fot som en varelse rör sig genom leran kostar 1,2 meter rörelse, och varje varelse på marken när du kastar besvärjelsen måste göra ett räddningsslag för styrka. En varelse måste också göra räddningsslaget när den rör sig in i området för första gången under en tur eller avslutar sin tur där. Vid ett misslyckat räddningsslag sjunker varelsen ner i leran och är {@condition restrained}, men den kan använda en handling för att avsluta {@condition restrained}-tillståndet på sig själv genom att dra sig loss från leran.",
+				"Om du kastar besvärjelsen på ett tak, faller leran ner. Varelser som befinner sig under leran när den faller måste göra ett räddningsslag i dexteritet. En varelse tar {@damage 4d8} förödande skada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat.",
+				{
+					"type": "entries",
+					"name": "Transmute Mud to Rock",
+					"entries": [
+						"Icke-magisk lera eller kvicksand i området som inte är mer än 3 meter djupt förvandlas till mjuk sten under besvärjelsens varaktighet. Varelser som befinner sig i gyttjan när den förvandlas måste göra ett räddningsslag i dexteritet. Vid ett lyckat räddningsslag förflyttas varelsen säkert upp till ytan i ett ledigt utrymme. Om räddningsslaget misslyckas blir varelsen {@condition restrained} av stenen. En {@condition restrained} varelse, eller en annan varelse inom räckhåll, kan använda en handling för att försöka krossa stenen genom att lyckas med en DC 20 Styrkekontroll eller genom att skada den. Stenen har AC 15 och 25 träffpunkter, och den är immun mot gift och psykisk skada."
+					]
+				}
+			],
+			"damageImmune": [
+				"poison",
+				"psychic"
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrow": [
+				"strength",
+				"dexterity"
+			],
+			"abilityCheck": [
+				"strength"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"C"
+			]
+		},
+		{
+			"name": "Vitriolic Sphere",
+			"source": "XGE",
+			"page": 170,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 23
+				}
+			],
+			"level": 4,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 150
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "en droppe galla från en jättesnigel"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du pekar på en plats inom räckhåll, och en glödande 0,3 meter i diameter boll av smaragdsyra flyger dit och exploderar i en sfär med 6 meters radie. Varje varelse i området måste göra ett räddningsslag i Dexterity. Om räddningsslaget misslyckas drabbas varelsen av {@damage 10d4} syraskador och ytterligare {@damage 5d4} syraskador i slutet av sin nästa tur. Vid ett lyckat räddningsslag tar varelsen hälften av den initiala skadan och ingen skada i slutet av sin nästa tur."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 5:e nivån eller högre, ökar den initiala skadan med {@scaledamage 10d4|4-9|2d4} för varje besvärjelseplatsnivå över 4:e nivån."
+					]
+				}
+			],
+			"damageInflict": [
+				"acid"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Wall of Light",
+			"source": "XGE",
+			"page": 170,
+			"level": 5,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "en handspegel"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"En skimrande vägg av starkt ljus visas på en punkt som du väljer inom räckhåll. Väggen visas i valfri riktning: horisontellt, vertikalt eller diagonalt. Den kan vara fritt svävande eller vila på en fast yta. Väggen kan vara upp till 18 meter lång, 3 meter hög och 1,5 meter tjock. Väggen blockerar siktlinjen, men varelser och föremål kan passera genom den. Den avger starkt ljus ut till 36 meter och svagt ljus i ytterligare 36 meter.",
+				"När väggen dyker upp måste varje varelse i dess närhet göra ett räddningsslag i konstitution. Om räddningsslaget misslyckas tar varelsen {@damage 4d8} strålningsskada, och den är {@condition blinded} i 1 minut. Vid ett lyckat räddningsslag tar den hälften så mycket skada och är inte {@condition blinded}. En {@condition blinded} varelse kan göra ett Konstitutionsräddningsslag i slutet av var och en av sina varv, och effekten upphör på den själv vid ett lyckat räddningsslag.",
+				"En varelse som avslutar sin tur i väggens område tar {@damage 4d8} strålningsskada.",
+				"Tills besvärjelsen upphör kan du använda en handling för att skicka ut en stråle från väggen mot en varelse som du kan se inom 18 meter från den. Gör en besvärjelseattack på avstånd. Vid en träff tar målet {@damage 4d8} strålningsskada. Oavsett om du träffar eller missar, minskar väggens längd med 3 meter. Om murens längd sjunker till meter avslutas besvärjelsen."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med en besvärjelseplats på 6:e nivån eller högre, ökar skadan med {@scaledamage 4d8|5-9|1d8} för varje platsnivå över 5:e."
+					]
+				}
+			],
+			"damageInflict": [
+				"radiant"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST",
+				"W"
+			]
+		},
+		{
+			"name": "Wall of Sand",
+			"source": "XGE",
+			"page": 170,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 23
+				}
+			],
+			"level": 3,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "en handfull sand"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du skapar en mur av virvlande sand på marken vid en punkt som du kan se inom räckhåll. Du kan göra väggen upp till 9 meter lång, 3 meter hög och 3 meter tjock, och den försvinner när besvärjelsen avslutas. Den blockerar siktlinjen men inte rörelse. En varelse är {@condition blinded} när den befinner sig i murens utrymme och måste spendera 0,9 meter rörelse för varje 0,3 meter den rör sig där."
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"W"
+			]
+		},
+		{
+			"name": "Wall of Water",
+			"source": "XGE",
+			"page": 170,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 23
+				},
+				{
+					"source": "VGM",
+					"page": 116
+				},
+				{
+					"source": "MOT",
+					"page": 0
+				}
+			],
+			"level": 3,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "en droppe vatten"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du skapar en vägg av vatten på marken vid en punkt som du kan se inom räckhåll. Du kan göra väggen upp till 9 meter lång, 3 meter hög och 0,3 meter tjock, eller så kan du göra en ringformad vägg upp till 6 meter i diameter, 6 meter hög och 0,3 meter tjock. Muren försvinner när besvärjelsen avslutas. Murens utrymme är {@quickref difficult terrain||3}.",
+				"Varje attack med fjärrvapen som går in i väggens utrymme har nackdel på attackkastet, och eldskadan halveras om eldkraften passerar genom väggen för att nå sitt mål. Besvärjelser som ger köldskador och som passerar genom väggen får det område av väggen som de passerar genom att frysa fast (minst en 1,5 meter kvadratisk sektion är frusen). Varje frusen sektion på 1,5 meter i kvadrat har AC 5 och 15 träffpunkter. Om en frusen sektion reduceras till 0 träffpunkter förstörs den. När en sektion förstörs fylls den inte med vatten från väggen."
+			],
+			"miscTags": [
+				"DFT",
+				"SGT"
+			],
+			"areaTags": [
+				"W"
+			]
+		},
+		{
+			"name": "Warding Wind",
+			"source": "XGE",
+			"page": 170,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 23
+				}
+			],
+			"level": 2,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"En stark vind (3 kilometer i timmen) blåser runt dig i en radie av 3 meter och rör sig med dig och förblir centrerad på dig. Vinden håller i sig under besvärjelsens varaktighet.",
+				"Vinden har följande effekter:",
+				{
+					"type": "list",
+					"items": [
+						"Det {@condition deafened||deafens} dig och andra varelser i dess område.",
+						"Den släcker oskyddade lågor i sitt område som är av facklestorlek eller mindre.",
+						"Den skyddar mot ånga, gas och dimma som kan spridas av starka vindar.",
+						"Området är {@quickref difficult terrain||3} för andra varelser än du.",
+						"Attackrullarna för distansvapenattacker har nackdel om attackerna passerar i eller utanför vinden."
+					]
+				}
+			],
+			"conditionInflict": [
+				"deafened"
+			],
+			"miscTags": [
+				"DFT"
+			]
+		},
+		{
+			"name": "Watery Sphere",
+			"source": "XGE",
+			"page": 170,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 23
+				}
+			],
+			"level": 4,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "en droppe vatten"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du trollar fram en sfär av vatten med en radie på 1,5 meter vid en punkt som du kan se inom räckhåll. Sfären kan sväva men inte mer än 3 meter över marken. Sfären stannar kvar under besvärjelsens varaktighet.",
+				"Alla varelser i sfärens utrymme måste göra ett räddningsslag för styrka. Vid ett lyckat räddningsslag kastas varelsen ut från utrymmet till närmaste lediga utrymme som varelsen väljer utanför sfären. En enorm eller större varelse lyckas med räddningsslaget automatiskt, och en stor eller mindre varelse kan välja att misslyckas med det. Vid ett misslyckat räddningsslag är varelsen {@condition restrained} av sfären och uppslukas av vattnet. I slutet av varje tur kan ett {@condition restrained} mål upprepa räddningskastet och avsluta effekten på sig själv vid ett lyckat kast.",
+				"Sfären kan hålla fast så många som fyra medelstora eller mindre varelser eller en stor varelse. Om sfären håller fast en varelse som får den att överskrida denna kapacitet, faller en slumpmässig varelse som redan var {@condition restrained} av sfären ut ur den och landar {@condition prone} i ett utrymme inom 1,5 meter från den.",
+				"Som en handling kan du flytta sfären upp till 9 meter i en rak linje. Om den rör sig över en grop, en klippa eller annat stup, faller den säkert ner tills den svävar 3 meter över marken. Alla varelser {@condition restrained} vid sfären rör sig med den. Du kan ramma sfären i varelser och tvinga dem att göra räddningskastet.",
+				"När besvärjelsen upphör faller sfären till marken och släcker alla normala lågor inom 9 meter från den. Alla varelser {@condition restrained} som träffas av sfären knockas {@condition prone} i utrymmet där den faller. Vattnet försvinner sedan."
+			],
+			"conditionInflict": [
+				"prone",
+				"restrained"
+			],
+			"savingThrow": [
+				"strength"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Whirlwind",
+			"source": "XGE",
+			"page": 171,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 24
+				}
+			],
+			"level": 7,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 300
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "en bit sugrör"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"En virvelvind tjuter ner mot en punkt som du kan se på marken inom räckhåll. Virvelvinden är en 3 meter radie, 9 meter hög cylinder centrerad på den punkten. Tills besvärjelsen upphör kan du använda din handling för att flytta virvelvinden upp till 9 meter i valfri riktning längs marken. Virvelvinden suger upp alla medelstora eller mindre föremål som inte är fästa vid något och som inte bärs eller bärs av någon.",
+				"En varelse måste göra ett räddningsslag i Dexterity första gången på en tur som den kommer in i virvelvinden eller som virvelvinden kommer in i dess utrymme, inklusive när virvelvinden först dyker upp. En varelse tar {@damage 10d6} förödande skada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat. Dessutom måste en stor eller mindre varelse som misslyckas med räddning lyckas med ett räddningsslag för styrka eller bli {@condition restrained} i virvelvinden tills besvärjelsen upphör. När en varelse börjar sin tur {@condition restrained} av virvelvinden, dras varelsen 1,5 meter högre upp inuti den, om inte varelsen är högst upp. En {@condition restrained} varelse rör sig med virvelvinden och faller när besvärjelsen upphör, om inte varelsen har något sätt att hålla sig uppe.",
+				"En {@condition restrained} varelse kan använda en handling för att göra en styrke- eller dexteritetskontroll mot din trollformels räddning DC. Om den lyckas är varelsen inte längre {@condition restrained} påverkad av virvelvinden och kastas {@dice 3d6 × 10} fot bort från den i en slumpmässig riktning."
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrow": [
+				"dexterity",
+				"strength"
+			],
+			"abilityCheck": [
+				"strength",
+				"dexterity"
+			],
+			"miscTags": [
+				"FMV",
+				"SGT"
+			],
+			"areaTags": [
+				"Y"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Word of Radiance",
+			"source": "XGE",
+			"page": 171,
+			"level": 0,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 5
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "en helig symbol"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du uttalar ett gudomligt ord och brinnande strålglans väller ut från dig. Varje valfri varelse som du kan se inom räckhåll måste lyckas med ett konstitutionellt räddningsslag eller ta {@damage 1d6} strålningsskada.",
+				"Besvärjelsens skada ökar med {@dice 1d6} när du når 5:e nivån ({@damage 2d6}), 11:e nivån ({@damage 3d6}) och 17:e nivån ({@damage 4d6})."
+			],
+			"scalingLevelDice": {
+				"label": "radiant damage",
+				"scaling": {
+					"1": "1d6",
+					"5": "2d6",
+					"11": "3d6",
+					"17": "4d6"
+				}
+			},
+			"damageInflict": [
+				"radiant"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Wrath of Nature",
+			"source": "XGE",
+			"page": 171,
+			"level": 5,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du kallar på naturens andar för att väcka dem mot dina fiender. Välj en punkt som du kan se inom räckhåll. Andarna får träd, stenar och gräs i en 18-meters kub centrerad på den punkten att bli animerade tills besvärjelsen slutar.",
+				{
+					"type": "entries",
+					"name": "Grasses and Undergrowth",
+					"entries": [
+						"Alla markområden i kuben som är täckta av gräs eller undervegetation är {@quickref difficult terrain||3} för dina fiender."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Trees",
+					"entries": [
+						"I början av varje tur måste alla dina fiender inom 3 meter från ett träd i kuben lyckas med ett räddningsslag i Dexterity eller ta {@damage 4d6} slungskador från piskande grenar."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Roots and Vines",
+					"entries": [
+						"I slutet av varje tur måste en valfri varelse som befinner sig på marken i kuben lyckas med ett styrkebesparingsslag eller bli {@condition restrained} tills besvärjelsen upphör. En {@condition restrained} varelse kan använda en handling för att göra en Styrke ({@skill Athletics}) kontroll mot din besvärjelses räddning DC, och avsluta effekten på sig själv vid en framgång."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Rocks",
+					"entries": [
+						"Som en bonusåtgärd på din tur kan du få en lös sten i kuben att kastas mot en varelse som du kan se i kuben. Gör en besvärjelseattack på avstånd mot målet. Vid en träff tar målet {@damage 3d8} icke-magisk knytnävskada, och det måste lyckas med ett styrkebesparande kast eller falla {@condition prone}."
+					]
+				}
+			],
+			"damageInflict": [
+				"bludgeoning",
+				"slashing"
+			],
+			"conditionInflict": [
+				"prone",
+				"restrained"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"dexterity",
+				"strength"
+			],
+			"abilityCheck": [
+				"strength"
+			],
+			"miscTags": [
+				"DFT",
+				"SGT",
+				"UBA"
+			],
+			"areaTags": [
+				"ST",
+				"C"
+			]
+		},
+		{
+			"name": "Zephyr Strike",
+			"source": "XGE",
+			"page": 171,
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du rör dig som vinden. Tills förtrollningen upphör, kan du inte göra några tillfälliga attacker när du rör dig.",
+				"En gång innan besvärjelsen slutar kan du ge dig själv fördel på ett vapenattacksslag på din tur. Den attacken ger en extra {@damage 1d8} kraftskada vid träff. Oavsett om du träffar eller missar ökar din gånghastighet med 9 meter fram till slutet av den turen."
+			],
+			"damageInflict": [
+				"force"
+			],
+			"miscTags": [
+				"AAD",
+				"ADV"
+			]
+		}
+	]
+}

@@ -1,0 +1,2785 @@
+{
+	"psionic": [
+		{
+			"name": "Adaptive Body",
+			"source": "UATheMysticClass",
+			"page": 10,
+			"type": "D",
+			"order": "Immortal",
+			"entries": [
+				"Je kunt je lichaam aanpassen aan je omgeving, zodat je bestand bent tegen ruwe omgevingen. Met grotere psi-energie, kun je deze bescherming uitbreiden naar anderen."
+			],
+			"focus": "While focused on this discipline, you don't need to eat, breathe, or sleep. To gain the benefits of a long rest, you can spend 8 hours engaged in light activity, rather than sleeping during any of it.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Environmental Adaptation",
+					"entries": [
+						"Als een actie negeert u of een wezen dat u aanraakt de effecten van extreme hitte of koude (maar niet koude of brandschade) voor het volgende uur."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Adaptive Shield",
+					"entries": [
+						"Wanneer je zuur-, koude-, vuur-, bliksem- of donderschade oploopt, kun je je reactie gebruiken om weerstand te krijgen tegen schade van dat type - inclusief de veroorzakende schade - tot het einde van je volgende beurt."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Energy Adaptation",
+					"entries": [
+						"Als actie kun je een wezen aanraken en het weerstand geven tegen zuur-, koude-, vuur-, bliksem- of donderschade (naar keuze), die duurt tot je {@status concentration} eindigt."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Energy Immunity",
+					"entries": [
+						"Als een actie kun je een wezen aanraken en het immuniteit geven tegen zuur-, koude-, vuur-, bliksem- of donderschade (jouw keuze), die duurt tot je {@status concentration} eindigt."
+					]
+				}
+			]
+		},
+		{
+			"name": "Aura Sight",
+			"source": "UATheMysticClass",
+			"page": 10,
+			"type": "D",
+			"order": "Awakened",
+			"entries": [
+				"Je richt je zicht opnieuw om de energie te zien die alle wezens omringt. Je neemt aura's waar, energiesignaturen die belangrijke elementen van de aard van een wezen kunnen onthullen."
+			],
+			"focus": "While focused on this discipline, you have advantage on Wisdom ({@skill Insight}) checks.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Assess Foe",
+					"entries": [
+						"Als een bonus actie, analyseer je de aura van een wezen dat je ziet. Je leert zijn huidige totale aantal hit points en al zijn immuniteiten, weerstanden en kwetsbaarheden."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Read Moods",
+					"entries": [
+						"Als bonusactie leer je een samenvatting in één woord van de emotionele toestand van maximaal zes wezens die je kunt zien, zoals blij, verward, bang, of gewelddadig."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "View Aura",
+					"entries": [
+						"Als een actie, bestudeer je de aura van een wezen. Tot je {@status concentration} eindigt, terwijl je het doelwit kunt zien, leer je of het onder invloed staat van magische of psionische effecten, zijn huidige hitpointtotaal en zijn emotionele basistoestand. Zolang dit effect duurt, heb je voordeel bij Wisdom ({@skill Insight}) en Charisma controles die je tegen hem uitvoert."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Perceive the Unseen",
+					"entries": [
+						"Als bonusactie krijg je het vermogen om aura's te zien, zelfs van {@condition invisible} of verborgen wezens. Tot je {@status concentration} eindigt, kun je alle wezens zien, inclusief verborgen en {@condition invisible} wezens, ongeacht de lichtomstandigheden."
+					]
+				}
+			]
+		},
+		{
+			"name": "Beacon",
+			"source": "UATheMysticClass",
+			"page": 27,
+			"type": "T",
+			"entries": [
+				"Als bonusactie straal je helder licht uit je lichaam in een straal van 6 meter en dim je licht voor nog eens 6 meter. Het licht kan gekleurd zijn zoals je wilt. Het licht blijft 1 uur branden en je kunt het eerder doven als bonusactie."
+			]
+		},
+		{
+			"name": "Bestial Form",
+			"source": "UATheMysticClass",
+			"page": 11,
+			"type": "D",
+			"order": "Immortal",
+			"entries": [
+				"Je transformeert je lichaam en krijgt eigenschappen van verschillende beesten."
+			],
+			"focus": "While focused on this discipline, you have advantage on Wisdom ({@skill Animal Handling}) checks.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Bestial Claws",
+					"entries": [
+						"Je manifesteert lange klauwen voor een ogenblik en doet een melee wapenaanval tegen één wezen binnen 1,5 meter van je. Bij een treffer geeft deze aanval {@scaledamage 1d10|1-7|1d10|psi} snijdende schade per uitgegeven psi-punt."
+					]
+				},
+				{
+					"name": "Bestial Transformation",
+					"entries": [
+						"Als een bonus actie verander je je fysieke vorm om verschillende karakteristieken te krijgen. Wanneer je deze vaardigheid gebruikt, kun je een of meer van de volgende effecten kiezen. Elk effect heeft zijn eigen psi-punten kosten. Tel ze bij elkaar op om de totale kosten te bepalen. Deze transformatie duurt 1 uur, tot je sterft, of tot je hem als bonusactie beëindigt."
+					],
+					"submodes": [
+						{
+							"cost": {
+								"min": 2,
+								"max": 2
+							},
+							"name": "Amphibious",
+							"entries": [
+								"Je krijgt kieuwen, je kan lucht en water inademen."
+							]
+						},
+						{
+							"cost": {
+								"min": 2,
+								"max": 2
+							},
+							"name": "Climbing",
+							"entries": [
+								"Je groeit kleine gehaakte klauwen die je een klimsnelheid geven die gelijk is aan je loopsnelheid."
+							]
+						},
+						{
+							"cost": {
+								"min": 5,
+								"max": 5
+							},
+							"name": "Flight",
+							"entries": [
+								"Vleugels ontspruiten van je rug. Je krijgt een vliegsnelheid gelijk aan je loopsnelheid."
+							]
+						},
+						{
+							"cost": {
+								"min": 2,
+								"max": 2
+							},
+							"name": "Keen Senses",
+							"entries": [
+								"Je ogen en oren worden gevoeliger. Je krijgt voordeel op Wijsheid ({@skill Perception}) controles."
+							]
+						},
+						{
+							"cost": {
+								"min": 3,
+								"max": 3
+							},
+							"name": "Perfect Senses",
+							"entries": [
+								"Je krijgt een scherp reukvermogen en een instinct om prooien op te sporen. Je kunt {@condition invisible} wezens en voorwerpen binnen 3 meter van je zien, zelfs als je {@condition blinded} bent."
+							]
+						},
+						{
+							"cost": {
+								"min": 2,
+								"max": 2
+							},
+							"name": "Swimming",
+							"entries": [
+								"Je krijgt vinnen en webbing tussen je vingers en tenen; je krijgt een zwemsnelheid gelijk aan je loopsnelheid."
+							]
+						},
+						{
+							"cost": {
+								"min": 2,
+								"max": 2
+							},
+							"name": "Tough Hide",
+							"entries": [
+								"Je huid wordt zo taai als leer; je krijgt een +2 bonus op AC."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Blade Meld",
+			"source": "UATheMysticClass",
+			"page": 27,
+			"type": "T",
+			"entries": [
+				"Als bonusactie wordt een eenhandig wapen dat je vasthoudt één met je hand. De volgende minuut kun je het wapen niet loslaten, noch kan het uit je greep worden geforceerd."
+			]
+		},
+		{
+			"name": "Blind Spot",
+			"source": "UATheMysticClass",
+			"page": 27,
+			"type": "T",
+			"entries": [
+				"Als een actie, wis je je beeld uit de geest van een wezen dat je kunt zien binnen 36 meter van je; het doelwit moet slagen in een Wisdom saving throw, of je bent {@condition invisible} voor het tot het einde van je volgende beurt."
+			]
+		},
+		{
+			"name": "Brute Force",
+			"source": "UATheMysticClass",
+			"page": 11,
+			"type": "D",
+			"order": "Immortal",
+			"entries": [
+				"Je vergroot je natuurlijke kracht met psionische energie, waardoor je ongelooflijke krachtmetingen kunt doen."
+			],
+			"focus": "While focused on this discipline, you have advantage on Strength ({@skill Athletics}) checks",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Brute Strike",
+					"entries": [
+						"Als bonusactie krijg je een bonus op je volgende schadeworp tegen een doelwit dat je tijdens de huidige beurt hebt geraakt met een mêlee-aanval. De bonus is gelijk aan +{@scaledamage 1d6|1-7|1d6|psi} per gespendeerd psi-punt, en de bonusschade is van hetzelfde type als de aanval. Als de aanval meer dan één type schade heeft, kies je welk type je wilt gebruiken voor de bonusschade."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Knock Back",
+					"entries": [
+						"Wanneer je een doelwit raakt met een melee aanval, kun je deze vaardigheid activeren als reactie. Het doelwit moet slagen in een Sterkte reddingsworp of 3 meter van je vandaan worden geslagen per uitgegeven psi-punt. Het doelwit beweegt in een rechte lijn. Als het een object raakt, eindigt deze beweging onmiddellijk en krijgt het doelwit {@scaledamage 1d6|1-7|1d6|psi} schade door doodslag per uitgegeven psi-punt."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Mighty Leap",
+					"entries": [
+						"Als onderdeel van je beweging spring je in elke richting tot 6 meter per uitgegeven psi-punt."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Feat of Strength",
+					"entries": [
+						"Als een bonus actie, krijg je een +5 bonus op Strength checks tot het einde van je volgende beurt."
+					]
+				}
+			]
+		},
+		{
+			"name": "Celerity",
+			"source": "UATheMysticClass",
+			"page": 12,
+			"type": "D",
+			"order": "Immortal",
+			"entries": [
+				"Je kanaliseert psionische kracht in je lichaam, waardoor je reflexen en behendigheid tot een ongelooflijke graad worden aangescherpt. De wereld lijkt te vertragen terwijl je gewoon doorgaat met bewegen."
+			],
+			"focus": "While focused on this discipline, your walking speed increases by 10 feet.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Rapid Step",
+					"entries": [
+						"Als bonusactie verhoog je je loopsnelheid met 3 meter per uitgegeven psi-punt tot het einde van de huidige beurt. Als je een klim- of zwemsnelheid hebt, geldt deze verhoging ook voor die snelheid."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Agile Defense",
+					"entries": [
+						"Als bonusactie doe je de actie Ontwijken."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Blur of Motion",
+					"entries": [
+						"Als actie laat je jezelf {@condition invisible} zijn tijdens een van je bewegingen tijdens de huidige beurt."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Surge of Speed",
+					"entries": [
+						"Als bonusactie krijg je tot het einde van de huidige beurt twee voordelen: je lokt geen gelegenheidsaanvallen uit, en je hebt een klimsnelheid gelijk aan je loopsnelheid."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Surge of Action",
+					"entries": [
+						"Als een bonus actie, kun je Dash of een wapen aanval doen."
+					]
+				}
+			]
+		},
+		{
+			"name": "Corrosive Metabolism",
+			"source": "UATheMysticClass",
+			"page": 12,
+			"type": "D",
+			"order": "Immortal",
+			"entries": [
+				"Je controle over je lichaam staat je toe om zuur of gif aanvallen uit te voeren."
+			],
+			"focus": "While focused on this discipline, you have resistance to acid and poison damage",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Corrosive Touch",
+					"entries": [
+						"Als actie breng je een zuuraanval over op een wezen binnen je bereik. Het doelwit moet een Dexterity saving throw doen, waarbij hij {@scaledamage 1d10|1-7|1d10|psi} zuurschade oploopt per gespendeerd psi point als hij niet slaagt, of half zoveel als hij wel slaagt."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Venom Strike",
+					"entries": [
+						"Als een actie creëer je een gifspray die gericht is op één wezen dat je kunt zien binnen 9 meter van je. Het doelwit moet een grondwetsreddende worp doen. Als hij niet slaagt, krijgt hij {@scaledamage 1d6|1-7|1d6|psi} gifschade per uitgegeven psi-punt en {@condition poisoned} tot het einde van je volgende beurt. Als de save slaagt, krijgt het doelwit half zoveel schade en is het niet {@condition poisoned}."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Acid Spray",
+					"entries": [
+						"Als reactie wanneer je piercing of slashing schade oploopt, laat je zuur uit je wond spuiten; elk wezen binnen 1,5 meter van je krijgt {@damage 2d6} zure schade."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Breath of the Black Dragon",
+					"entries": [
+						"Je ademt een golf zuur uit in een lijn van 18 meter die 1,5 meter breed is. Elk wezen in de lijn moet een grondwetsreddende worp doen en krijgt {@damage 6d6} zure schade als de redding mislukt, of de helft als de redding slaagt. Je kunt de schade verhogen met {@scaledamage 6d6|5-7|1d6|psi} per extra psi-punt dat je eraan besteedt."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"name": "Breath of the Green Dragon",
+					"entries": [
+						"Je ademt een gifwolk uit in een kegel van 27 meter. Elk wezen in de lijn moet een reddingsworp op grond van grondwet doen, waarbij {@damage 10d6} gifschade wordt opgelopen als de reddingsworp mislukt, of half zoveel schade als de reddingsworp slaagt."
+					]
+				}
+			]
+		},
+		{
+			"name": "Crown of Despair",
+			"source": "UATheMysticClass",
+			"page": 12,
+			"type": "D",
+			"order": "Avatar",
+			"entries": [
+				"Je hebt geleerd om de zaden van wanhoop in de psyche van een schepsel te oogsten, het teisteren met zelftwijfel en passiviteit."
+			],
+			"focus": "While focused on this discipline, you have advantage on Charisma ({@skill Intimidation}) checks.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Crowned in Sorrow",
+					"entries": [
+						"Als een actie moet een wezen dat je kunt zien binnen 18 meter van je een Charisma saving throw doen. Als hij niet slaagt, krijgt hij {@damage 1d8} psychische schade per uitgegeven psi-punt en kan hij niet reageren tot het begin van zijn volgende beurt. Als hij slaagt, krijgt hij half zoveel schade."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Call to Inaction",
+					"entries": [
+						"Als je 1 minuut praat met een wezen, kun je proberen het te bezaaien met overweldigende ennui. Aan het eind van de minuut kun je een actie gebruiken om het wezen te dwingen een Wisdom saving throw te doen. De reddingsworp slaagt automatisch als het doelwit immuun is voor het zijn {@condition charmed}. Bij een mislukte save zit het en is het {@condition incapacitated} totdat je {@status concentration} eindigt. Dit effect eindigt onmiddellijk als het doelwit of een bondgenoot die het kan zien, wordt aangevallen of schade oploopt. Bij een geslaagde save is het wezen onaangetast en heeft het geen weet van je poging om zijn wil te buigen."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Visions of Despair",
+					"entries": [
+						"Als een actie dwing je een wezen dat je kunt zien binnen 18 meter van je om een Charisma saving throw te doen. Als de poging mislukt, loopt het {@damage 3d6} psychische schade op en wordt zijn snelheid tot het einde van zijn volgende beurt tot 0 gereduceerd. Als hij slaagt, krijgt hij half zoveel schade. Je kunt de schade verhogen met {@scaledamage 3d6|3-7|1d6|psi} per extra psi-punt dat je eraan besteedt."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Dolorous Mind",
+					"entries": [
+						"Als een actie kies je een wezen dat je kunt zien binnen 18 meter van je. Het moet slagen in een Charisma reddingsworp, of het is {@condition incapacitated} en heeft een snelheid van 0 totdat je {@status concentration} eindigt. Het kan deze reddingsworp herhalen aan het einde van elk van zijn beurten, waarbij het effect op zichzelf eindigt als het slaagt."
+					]
+				}
+			]
+		},
+		{
+			"name": "Crown of Disgust",
+			"source": "UATheMysticClass",
+			"page": 13,
+			"type": "D",
+			"order": "Avatar",
+			"entries": [
+				"Je zorgt ervoor dat een wezen overspoeld wordt met emoties van walging."
+			],
+			"focus": "While you are focused on this discipline, the area in a 5 foot radius around you is {@quickref difficult terrain||3} for any enemy that isn't immune to being {@condition frightened}.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Eye of Horror",
+					"entries": [
+						"Kies als actie één wezen dat je kunt zien binnen 18 meter van je. Het doelwit moet een Charisma saving throw doen. Als hij niet slaagt, krijgt hij {@scaledamage 1d6|1-7|1d6|psi} psychische schade per uitgegeven psi-punt en kan hij niet dichter bij je komen tot het einde van zijn volgende beurt. Als de poging slaagt, krijgt het half zoveel schade."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Wall of Repulsion",
+					"entries": [
+						"Als een actie creëer je een onzichtbare, niet-substantiële muur van energie binnen 18 meter van je die maximaal 9 meter lang, 3 meter hoog en 0,3 meter dik is. De muur blijft bestaan tot je {@status concentration} eindigt. Elk wezen dat zich er doorheen probeert te bewegen moet een reddingsslag van Wisdom doen. Als de redding mislukt, kan het wezen niet door de muur bewegen tot het begin van zijn volgende beurt. Als de redding slaagt, kan het wezen er doorheen. Een wezen moet deze save uitvoeren wanneer het probeert door de muur te gaan, vrijwillig of onvrijwillig."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Visions of Disgust",
+					"entries": [
+						"Je zorgt ervoor dat een wezen alle andere wezens als afschuwelijke, buitenaardse entiteiten beschouwt. Kies als actie een wezen dat je kunt zien binnen 18 meter van je. Het doelwit moet een reddingsoefening op basis van wijsheid uitvoeren. Als de redding mislukt, krijgt het {@damage 5d6} psychische schade en totdat je {@status concentration} eindigt, krijgt het {@damage 1d6} psychische schade per wezen binnen 1,5 meter van het aan het einde van elke beurt. Als de save slaagt, krijgt het doelwit slechts de helft van de initiële schade en ondervindt het geen van de andere effecten."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "World of Horror",
+					"entries": [
+						"Kies als actie maximaal zes wezens binnen 18 meter van je. Elk doelwit moet een Charisma saving throw doen. Als je niet slaagt, krijgt een doelwit {@damage 8d6} psychische schade en is het {@condition frightened} totdat je {@status concentration} eindigt. Als de save slaagt, krijgt het doelwit half zoveel schade. Terwijl {@condition frightened} door dit effect, wordt de snelheid van een doelwit verminderd tot 0, en het doelwit kan zijn actie, en elke bonusactie die het zou kunnen hebben, alleen gebruiken om mêleeaanvallen uit te voeren. Het {@condition frightened} doelwit kan de reddingsworp herhalen aan het einde van elk van zijn beurten en het effect op zichzelf beëindigen als hij slaagt."
+					]
+				}
+			]
+		},
+		{
+			"name": "Crown of Rage",
+			"source": "UATheMysticClass",
+			"page": 13,
+			"type": "D",
+			"order": "Avatar",
+			"entries": [
+				"Je plaatst een fontein van pure woede in de geest van een wezen, waardoor zijn bloeddorst zijn zintuigen overmeestert en hij doet wat jij wilt."
+			],
+			"focus": "While you are focused on this discipline, any enemy within 5 feet of you that makes a melee attack roll against creatures other than you does so with disadvantage",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Primal Fury",
+					"entries": [
+						"Kies als actie een wezen dat je kunt zien binnen 18 meter van je. Het doelwit moet slagen in een Charisma saving throw of {@scaledamage 1d6|1-7|1d6|psi} psychische schade oplopen per psi-punt besteed aan deze vaardigheid en onmiddellijk zijn reactie gebruiken om zijn snelheid in een rechte lijn naar de dichtstbijzijnde vijand te verplaatsen. De redding slaagt automatisch als het doelwit immuun is voor {@condition charmed}."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Fighting Words",
+					"entries": [
+						"Als je 1 minuut met een wezen praat, kun je proberen een sudderend geweld in zijn geest achter te laten. Aan het eind van de minuut kun je een actie gebruiken om het wezen te dwingen een Wisdom saving throw te doen om gewelddadige neigingen te weerstaan tegen één wezen dat je beschrijft of noemt. De reddingsworp slaagt automatisch als het doelwit immuun is voor {@condition charmed}. Bij een mislukte reddingsslag valt het doelwit het gekozen wezen aan als het dat wezen ziet voordat je {@status concentration} eindigt, met wapens of spreuken tegen een wezen waar het al vijandig tegenover stond of ongewapende slagen tegen een bondgenoot of een wezen waar het neutraal tegenover stond. Zodra het gevecht begint, blijft het 5 rondes lang aanvallen voordat dit effect eindigt. Dit effect eindigt onmiddellijk als het doelwit of een bondgenoot die het kan zien, wordt aangevallen of schade oploopt van een ander wezen dan het wezen waartegen het is opgehitst. Bij een succesvolle save is het wezen niet beïnvloed en heeft het geen weet van jouw poging om zijn wil te beïnvloeden."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Mindless Courage",
+					"entries": [
+						"Je zorgt ervoor dat de bloeddorst van een wezen zijn gevoel van behoud overwint. Als bonusactie kies je een wezen dat je kunt zien binnen 18 meter van je. Het doelwit moet slagen in een Wisdom saving throw of, tot het einde van je volgende beurt, kan het niet vrijwillig bewegen tenzij zijn beweging het dichter bij de dichtstbijzijnde vijand brengt die het kan zien. De redding slaagt automatisch als het doelwit immuun is voor {@condition charmed}."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Punishing Fury",
+					"entries": [
+						"Je zorgt ervoor dat de woede van een wezen zo hoog oploopt dat het aanvalt zonder acht te slaan op zijn eigen veiligheid. Als bonusactie kies je een wezen dat je kunt zien binnen 18 meter van je. Het doelwit moet slagen in een Wisdom saving throw of, totdat je {@status concentration} eindigt, kan elk wezen binnen 1,5 meter een reactie gebruiken om een melee aanval tegen het wezen uit te voeren wanneer het doelwit een melee aanval uitvoert. De reddingsworp slaagt automatisch als het doelwit immuun is voor {@condition charmed}."
+					]
+				}
+			]
+		},
+		{
+			"name": "Delusion",
+			"source": "UATheMysticClass",
+			"page": 27,
+			"type": "T",
+			"entries": [
+				"Als actie plant je een vals geloof in de geest van één wezen dat je binnen 18 meter van je kunt zien. Je kunt een geluid of een beeld creëren. Alleen het doelwit van dit talent neemt het geluid of beeld dat je creëert waar.",
+				"Als je een geluid maakt, kan het variëren van een fluistering tot een schreeuw. Het kan jouw stem zijn, de stem van iemand anders, het gebrul van een wezen, een muziekinstrument, of een ander geluid dat je kiest. Het duurt 1 minuut.",
+				"Als je een object maakt, moet het binnen een kubus van 1,5 meter passen en mag het niet bewegen of reflecteren. De afbeelding kan geen effect creëren dat een ander zintuig dan zicht beïnvloedt. De afbeelding duurt 1 minuut en verdwijnt als het wezen het aanraakt."
+			]
+		},
+		{
+			"name": "Diminution",
+			"source": "UATheMysticClass",
+			"page": 14,
+			"type": "D",
+			"order": "Immortal",
+			"entries": [
+				"Je manipuleert de materie waaruit je lichaam bestaat, waardoor je drastisch kleiner wordt, zonder ook maar iets van je kracht op te geven."
+			],
+			"focus": "While focused on this discipline, you have advantage on Dexterity ({@skill Stealth}) checks.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Miniature Form",
+					"entries": [
+						"Als bonusactie word je Tiny totdat je {@status concentration} eindigt. Als je zo groot bent, krijg je een bonus van +5 bij vaardigheidscontroles en kun je je door kieren van maximaal 5 cm breed bewegen zonder te knellen. Als je de reddingsactie uitvoert, wordt het wezen niet beïnvloed en heeft het geen idee van je poging om zijn wil te beïnvloeden."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Toppling Shift",
+					"entries": [
+						"Als bonusactie verschuif je naar een ongelooflijk klein formaat en dan keer je plotseling terug naar normaal, waardoor je een tegenstander achteruit laat vliegen. Kies een wezen dat je kunt zien binnen 1,5 meter van je. Het moet slagen in een Sterkte reddingsworp of worden geslagen {@condition prone}."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Sudden Shift",
+					"entries": [
+						"Als reactie wanneer je geraakt wordt door een aanval, verplaats je je naar minuscule afmetingen om de aanval te ontwijken. De aanval mist en je beweegt je tot 1,5 meter zonder gelegenheidsaanvallen uit te lokken voordat je terugkeert naar je normale grootte."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Microscopic Form",
+					"entries": [
+						"Als bonusactie word je kleiner dan Tiny tot je {@status concentration} eindigt. In deze grootte krijg je een bonus van +10 bij vaardigheidscontroles en een bonus van +5 bij AC, je kunt je door kieren tot 1 inch verplaatsen zonder te knellen, en je kunt geen wapenaanvallen uitvoeren."
+					]
+				}
+			]
+		},
+		{
+			"name": "Energy Beam",
+			"source": "UATheMysticClass",
+			"page": 27,
+			"type": "T",
+			"entries": [
+				"Als een actie richt je je op één wezen dat je kunt zien binnen 27 meter van je. Het doelwit moet slagen in een reddingsworp of {@damage 1d8} zuur-, koude-, vuur-, bliksem- of donderschade oplopen (jouw keuze).",
+				"De schade van dit talent neemt toe met {@dice 1d8} als je 5e level bent ({@damage 2d8}), 11e level ({@damage 3d8}), en 17e level ({@damage 4d8})."
+			]
+		},
+		{
+			"name": "Giant Growth",
+			"source": "UATheMysticClass",
+			"page": 14,
+			"type": "D",
+			"order": "Immortal",
+			"entries": [
+				"Je doordrenkt jezelf met psionische energie om te groeien tot enorme grootte, waardoor je kracht en duurzaamheid versterkt worden."
+			],
+			"focus": "While focused on this discipline, your reach increases by 5 feet.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Ogre Form",
+					"entries": [
+						"Als bonusactie krijg je 10 tijdelijke hitpoints. Bovendien geven je aanvallen met melee wapens, tot je {@status concentration} eindigt, een extra {@damage 1d4} vernietigende slag bij een treffer en je reikwijdte neemt toe met 1,5 meter. Als je kleiner bent dan Large, word je ook Large voor de duur van je {@status concentration}."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Giant Form",
+					"entries": [
+						"Als bonusactie krijg je 30 tijdelijke hitpoints. Bovendien geven je aanvallen met melee wapens, tot je {@status concentration} eindigt, een extra {@damage 2d6} vernietigende slag bij een treffer en je reikwijdte neemt toe met 3 meter. Als je kleiner bent dan Huge, word je ook Huge voor de duur van de aanval."
+					]
+				}
+			]
+		},
+		{
+			"name": "Intellect Fortress",
+			"source": "UATheMysticClass",
+			"page": 14,
+			"type": "D",
+			"order": "Awakened",
+			"entries": [
+				"Je vormt een ontembare muur van psionische energie rond je geest, die je in staat stelt tegenaanvallen tegen je tegenstanders in te zetten."
+			],
+			"focus": "While focused on this discipline, you gain resistance to psychic damage.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Psychic Backlash",
+					"entries": [
+						"Als reactie kun je een aanvalsrol tegen je nadelig beïnvloeden als je de aanvaller kunt zien. Als de aanval je toch raakt, loopt de aanvaller {@damage 2d10} psychische schade op."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Psychic Parry",
+					"entries": [
+						"Als reactie wanneer je een Intelligentie, een Wijsheid, of een Charisma saving throw doet, krijg je een +1 bonus op die saving throw voor elk psi punt dat je aan deze vaardigheid besteedt. Je kunt deze vaardigheid gebruiken nadat je de dobbelsteen hebt gegooid, maar voordat je de resultaten hebt gezien."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Psychic Redoubt",
+					"entries": [
+						"Als actie creëer je een veld van beschermende psychische energie. Kies een willekeurig aantal wezens binnen een straal van 9 meter. Tot je {@status concentration} eindigt, heeft elk doelwit weerstand tegen psychische schade en voordeel op intelligentie, wijsheid en Charisma reddingsworpen."
+					]
+				}
+			]
+		},
+		{
+			"name": "Iron Durability",
+			"source": "UATheMysticClass",
+			"page": 15,
+			"type": "D",
+			"order": "Immortal",
+			"entries": [
+				"Je transformeert je lichaam tot een levend metaal, waardoor je aanvallen kunt afslaan die zwakkere wezens zouden verlammen."
+			],
+			"focus": "While focused on this discipline, you gain a +1 bonus to AC.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Iron Hide",
+					"entries": [
+						"Als reactie wanneer je wordt geraakt door een aanval, krijg je een +1 bonus op AC voor elk psi punt dat je aan deze vaardigheid besteedt. De bonus duurt tot het einde van je volgende beurt. Deze bonus geldt tegen de aanval die de aanval activeert."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Steel Hide",
+					"entries": [
+						"Als een bonus actie, krijg je weerstand tegen knuppelen, doorboren, en snijden schade tot het einde van je volgende beurt."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Iron Resistance",
+					"entries": [
+						"Als een actie, krijg je weerstand tegen stomp-, steek- of steekschade (naar keuze), die duurt tot je {@status concentration} eindigt."
+					]
+				}
+			]
+		},
+		{
+			"name": "Light Step",
+			"source": "UATheMysticClass",
+			"page": 27,
+			"type": "T",
+			"entries": [
+				"Als bonusactie verander je je dichtheid en gewicht om je mobiliteit te verbeteren. Voor de rest van je beurt neemt je loopsnelheid toe met 3 meter en de eerste keer dat je deze beurt opstaat, doe je dat zonder ook maar iets van je beweging uit te geven als je snelheid groter dan 0 is."
+			]
+		},
+		{
+			"name": "Mantle of Awe",
+			"source": "UATheMysticClass",
+			"page": 15,
+			"type": "D",
+			"order": "Awakened",
+			"entries": [
+				"Je leert psionische energie te gebruiken om anderen te manipuleren met een subtiele combinatie van psi en je eigen, natuurlijke charme."
+			],
+			"focus": "While focused on this discipline, you gain a bonus to Charisma checks. The bonus equals half your Intelligence modifier (minimum of +1).",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Charming Presence",
+					"entries": [
+						"Als een actie oefen je een aura van sympathieke kracht uit. Rol {@dice 2d8} per psi-punt dat je aan deze vaardigheid besteedt; het totaal is hoeveel hitpoints aan wezens deze optie kan beïnvloeden. Wezens binnen 9 meter van je worden beïnvloed in oplopende volgorde van hun maximale hitpoint, waarbij {@condition incapacitated} wezens, wezens die immuun zijn voor {@condition charmed} en wezens die in gevecht zijn worden genegeerd.",
+						"Beginnend met het wezen dat het laagste maximale aantal hitpoints heeft, is elk wezen dat door deze optie wordt beïnvloed {@condition charmed} door jou gedurende 10 minuten, en beschouwt jou als een vriendelijke kennis. Trek het maximale aantal hitpoints van elk wezen af van het totaal voordat je naar het volgende wezen gaat. Het maximale aantal hitpoints van een wezen moet gelijk of lager zijn dan het resterende totaal om dat wezen te beïnvloeden."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Center of Attention",
+					"entries": [
+						"Als een actie oefen je een aura van kracht uit die de aandacht van een wezen trekt. Kies een wezen dat je kunt zien binnen 18 meter van je. Het moet een Charisma saving throw doen. Bij een mislukte reddingsslag wordt het wezen zo grondig door jou afgeleid dat alle andere wezens {@condition invisible} voor hem zijn totdat je {@status concentration} eindigt. Dit effect eindigt als het wezen je niet langer kan zien of horen of als het schade oploopt."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Invoke Awe",
+					"entries": [
+						"Als een actie oefen je een aura uit die anderen ontzag inboezemt. Kies maximaal 5 wezens die je kunt zien binnen 18 meter van je. Elk doelwit moet slagen in een reddingsworp van intelligentie of {@condition charmed} door jou geraakt worden tot je {@status concentration} eindigt. Terwijl {@condition charmed}, gehoorzaamt het doelwit al je verbale bevelen naar beste vermogen en zonder iets duidelijk zelfdestructiefs te doen. Het {@condition charmed} doelwit zal alleen wezens aanvallen die het jou heeft zien aanvallen sinds het {@condition charmed} of waar het al vijandig tegenover stond. Aan het einde van elke beurt kan het de reddingsworp herhalen, waarbij het effect op zichzelf eindigt als het slaagt."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mantle of Command",
+			"source": "UATheMysticClass",
+			"page": 15,
+			"type": "D",
+			"order": "Avatar",
+			"entries": [
+				"U straalt een aura van vertrouwen en autoriteit uit, waardoor de coördinatie tussen uw bondgenoten wordt verbeterd."
+			],
+			"focus": "While focused on this discipline, when you end your turn and didn't move during it, you can use your reaction to allow one ally you can see within 30 feet of you to move up to half their speed, following a path of your choice. To move in this way, the ally mustn't be {@condition incapacitated}.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Coordinated Movement",
+					"entries": [
+						"Kies als bonusactie maximaal vijf bondgenoten die je kunt zien binnen 18 meter van je. Elk van die bondgenoten kan zijn reactie gebruiken om tot de helft van zijn snelheid te bewegen en een pad naar keuze te volgen."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "rnd"
+					},
+					"name": "Commander's Sight",
+					"entries": [
+						"Kies als actie één wezen dat je kunt zien binnen 18 meter van je. Tot het begin van je volgende beurt hebben je bondgenoten voordeel bij aanvalsrollen tegen dat doelwit."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Command to Strike",
+					"entries": [
+						"Kies als actie een bondgenoot die je kunt zien binnen 18 meter van je. Die bondgenoot kan zijn reactie gebruiken om onmiddellijk de actie Aanval uit te voeren. Jij kiest de doelwitten."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Strategic Mind",
+					"entries": [
+						"Als een actie oefen je een aura van vertrouwen en bevel uit die je bondgenoten verenigt in een samenhangende eenheid. Tot je {@status concentration} eindigt, kan elke bondgenoot die zich tijdens zijn beurt binnen 18 meter van je bevindt, als bonusactie de actie Dash of Disengage uitvoeren of een {@dice d4} gooien en het gerolde getal toevoegen aan elke aanvalsworp die hij die beurt doet."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"name": "Overwhelming Attack",
+					"entries": [
+						"Kies als actie maximaal vijf bondgenoten die je kunt zien binnen 18 meter van je. Elk van die bondgenoten kan zijn reactie gebruiken om de actie Aanval uit te voeren. Jij kiest het doelwit van de aanvallen."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mantle of Courage",
+			"source": "UATheMysticClass",
+			"page": 16,
+			"type": "D",
+			"order": "Avatar",
+			"entries": [
+				"Je richt je geest op moed en straalt vertrouwen en bravoure uit naar je bondgenoten."
+			],
+			"focus": "While focused on this discipline, you and allies within 10 feet of you who can see you have advantage on saving throws against being {@condition frightened}.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Incite Courage",
+					"entries": [
+						"Kies als bonusactie maximaal zes wezens die je kunt zien binnen 18 meter van je. Als een van die wezens {@condition frightened} is, eindigt die voorwaarde op dat wezen."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Aura of Victory",
+					"entries": [
+						"Als bonusactie projecteer je psionische energie totdat je {@status concentration} eindigt. De energie versterkt jou en je bondgenoten als je vijanden worden geveld; telkens als een vijand die je kunt zien tot 0 hitpoints wordt gereduceerd, krijgen jij en elk van je bondgenoten binnen 9 meter van je tijdelijke hitpoints gelijk aan het dubbele van de psi-punten die zijn besteed om dit effect te activeren."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "rnd"
+					},
+					"name": "Pillar of Confidence",
+					"entries": [
+						"Als actie krijgen jij en maximaal vijf wezens die je kunt zien binnen 18 meter van je elk een extra actie die je kunt gebruiken tijdens je individuele beurten. De actie verdwijnt als je hem niet gebruikt voor het einde van je volgende beurt. De actie kan alleen worden gebruikt om een wapenaanval uit te voeren of om de actie Dash of Disengage uit te voeren."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mantle of Fear",
+			"source": "UATheMysticClass",
+			"page": 16,
+			"type": "D",
+			"order": "Avatar",
+			"entries": [
+				"Je boort een bron van oerangst aan en verandert jezelf in een baken van terreur voor je vijanden."
+			],
+			"focus": "While focused on this discipline, you have advantage on Charisma ({@skill Intimidation}) checks.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Incite Fear",
+					"entries": [
+						"Kies als actie één wezen dat je kunt zien binnen 18 meter van je. Het doelwit moet slagen in een reddingsworp van wijsheid of {@condition frightened} van je worden totdat je {@status concentration} eindigt. Telkens wanneer het {@condition frightened} doelwit zijn beurt eindigt op een plek waar het jou niet kan zien, kan het de reddingsworp herhalen en het effect op zichzelf beëindigen als het slaagt."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Unsettling Aura",
+					"entries": [
+						"Als bonusactie omhul je jezelf met verontrustende psychische energie. Tot je {@status concentration} eindigt, moet elke vijand binnen 18 meter van je die je kan zien 1 extra voet beweging besteden voor elke voet die hij naar je toe beweegt. Een wezen negeert dit effect als het immuun is voor {@condition frightened}."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Incite Panic",
+					"entries": [
+						"Kies als actie maximaal acht wezens die je kunt zien binnen 27 meter van je vandaan die jou kunnen zien. Aan het begin van elke beurt van een doelwit voordat je {@status concentration} eindigt, moet het doelwit een reddingsworp van Wisdom doen. Bij een mislukte reddingsworp is het doelwit {@condition frightened} tot het begin van zijn volgende beurt en gooi jij met een dobbelsteen. Als je een oneven getal gooit, beweegt het {@condition frightened} doelwit de helft van zijn snelheid in een willekeurige richting en onderneemt het die beurt geen actie, behalve dat het van schrik schreeuwt. Als je een even getal gooit, doet het {@condition frightened} doelwit één melee aanval tegen een willekeurig doelwit binnen zijn bereik. Als er geen willekeurig doelwit is, beweegt het de helft van zijn snelheid in een willekeurige richting en onderneemt het die beurt geen actie. Dit effect eindigt op een doelwit als het slaagt op drie saving throws tegen het effect."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mantle of Fury",
+			"source": "UATheMysticClass",
+			"page": 16,
+			"type": "D",
+			"order": "Avatar",
+			"entries": [
+				"Je staat toe dat de oerwoede die diep in je geest schuilt, losbarst en jou en je bondgenoten overvalt in een onverbiddelijke bloeddorst."
+			],
+			"focus": "While focused on this discipline in combat, you and any ally who starts their turn within 10 feet of you gains a 5 foot increase to their walking speed during that turn.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Incite Fury",
+					"entries": [
+						"Kies als bonusactie maximaal drie bondgenoten die je kunt zien binnen 18 meter van je (je kunt jezelf kiezen in plaats van een van de bondgenoten). Tot je {@status concentration} eindigt, kan elk doelwit een {@dice d4} rollen bij het rollen van schade voor een aanval met een melee wapen en het gerolde getal toevoegen aan de schadeworp."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Mindless Charge",
+					"entries": [
+						"Kies als bonusactie maximaal drie wezens die je kunt zien binnen 18 meter van je. Elk doelwit kan onmiddellijk zijn reactie gebruiken om tot zijn snelheid in een rechte lijn naar de dichtstbijzijnde vijand te bewegen."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Aura of Bloodletting",
+					"entries": [
+						"Als bonusactie ontketen je een aura van woede. Tot je {@status concentration} eindigt, hebben jij en elk wezen binnen 18 meter van je voordeel op melee aanvalsrollen."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Overwhelming Fury",
+					"entries": [
+						"Als een actie laat je woede overvloeien in één wezen dat je kunt zien binnen 18 meter van je. Het doelwit moet slagen op een Charisma saving throw, of het kan zijn acties alleen gebruiken om melee aanvallen uit te voeren totdat je {@status concentration} eindigt. Het kan de reddingsworp herhalen aan het einde van elk van zijn beurten, waarbij het effect op zichzelf eindigt als het slaagt."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mantle of Joy",
+			"source": "UATheMysticClass",
+			"page": 17,
+			"type": "D",
+			"order": "Avatar",
+			"entries": [
+				"Je boort de vreugde in jezelf aan en straalt die naar buiten uit in kalmerende, psychische energie die hoop en troost brengt voor de wezens om je heen."
+			],
+			"focus": "While focused on this discipline, you have advantage on Charisma ({@skill Persuasion}) checks",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Soothing Presence",
+					"entries": [
+						"Kies als bonusactie maximaal drie wezens die je kunt zien binnen 18 meter van je. Elk doelwit krijgt 3 tijdelijke hitpoints per psi-punt dat aan dit effect is besteed."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Comforting Aura",
+					"entries": [
+						"Kies als bonusactie maximaal drie bondgenoten die je kunt zien (je kunt jezelf kiezen in plaats van een van de bondgenoten). Tot je {@status concentration} eindigt, kan elk doelwit een {@dice d4} gooien bij het doen van een reddingsworp en het gegooide aantal toevoegen aan het totaal."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Aura of Jubilation",
+					"entries": [
+						"Als bonusactie straal je een afleidende vrolijkheid uit totdat je {@status concentration} eindigt. Elk wezen binnen 18 meter van je dat je kan zien, ondervindt nadeel bij alle controles met de vaardigheden {@skill Perception} en {@skill Investigation}."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Beacon of Recovery",
+					"entries": [
+						"Als bonusactie kunnen jij en maximaal vijf bondgenoten die je kunt zien binnen 18 meter van je onmiddellijk reddingsslagen maken tegen elk effect dat ze ondervinden en dat een redding toestaat aan het begin of einde van hun beurten."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mastery of Air",
+			"source": "UATheMysticClass",
+			"page": 17,
+			"type": "D",
+			"order": "Wu Jen",
+			"entries": [
+				"Je wordt één met de kracht van elementaire lucht."
+			],
+			"focus": "While focused on this discipline, you take no falling damage, and you ignore {@quickref difficult terrain||3} when walking.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Wind Step",
+					"entries": [
+						"Als onderdeel van je zet tijdens je beurt kun je voor elk uitgegeven psi-punt tot 6 meter vliegen. Als je deze vlucht in de lucht beëindigt, val je tenzij iets anders je in de lucht houdt."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Wind Stream",
+					"entries": [
+						"Als een actie creëer je een lijn van gefocuste lucht die 9 meter lang en 1,5 meter breed is. Elk wezen in dat gebied moet een Sterkte-reddende worp doen en krijgt {@scaledamage 1d8|1-7|1d8|psi} vernietigende schade per uitgegeven psi-punt en wordt {@condition prone} geraakt als de redding mislukt, of half zoveel schade als de redding slaagt."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Cloak of Air",
+					"entries": [
+						"Als bonusactie neem je de controle over de lucht om je heen om een beschermende sluier te creëren. Tot je {@status concentration} eindigt, hebben aanvalsrollen tegen je nadeel, en als een wezen dat je kunt zien je mist met een melee aanval, kun je je reactie gebruiken om het wezen te dwingen de aanvalsrol tegen zichzelf te herhalen."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Wind Form",
+					"entries": [
+						"Als bonusactie krijg je een vliegsnelheid van 18 meter, die duurt tot je {@status concentration} eindigt."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Misty Form",
+					"entries": [
+						"Als een actie, wordt je lichaam als een mistige wolk tot je {@status concentration} eindigt. In deze vorm krijg je weerstand tegen slag-, stoot- en steekschade en kun je geen andere acties ondernemen dan de actie Dash. Je kunt door openingen van niet meer dan 1 inch breed zonder te knijpen."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Animate Air",
+					"entries": [
+						"Als een actie laat je een luchtelement verschijnen in een onbezette ruimte die je kunt zien binnen 36 meter van je. De elemental blijft bestaan tot je {@status concentration} eindigt, en het gehoorzaamt je verbale commando's. In een gevecht rol je voor zijn initiatief en kies je zijn gedrag tijdens zijn beurten. Wanneer dit effect eindigt, verdwijnt de elementaal. Zie het Monsterhandboek voor zijn statussen."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mastery of Fire",
+			"source": "UATheMysticClass",
+			"page": 17,
+			"type": "D",
+			"order": "Wu Jen",
+			"entries": [
+				"Je stemt je geest af op de energie van het elementaire vuur."
+			],
+			"focus": "While focused on this discipline, you gain resistance to fire damage, and you gain a +2 bonus to rolls for fire damage.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Combustion",
+					"entries": [
+						"Kies als actie een wezen of object dat je kunt zien binnen 36 meter van je vandaan. Het doelwit moet een grondwetsredding maken. Als de redding mislukt, krijgt het doelwit {@scaledamage 1d10|1-7|1d10|psi} brandschade per uitgegeven psi-punt en vliegt het in brand, waarbij het {@damage 1d6} brandschade oploopt aan het einde van elke beurt totdat je {@status concentration} eindigt of totdat het of een naastgelegen wezen de vlammen dooft met een actie. Als de save slaagt, krijgt het doelwit half zoveel schade en vliegt het niet in brand."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Rolling Flame",
+					"entries": [
+						"Als een actie creëer je vuur in een kubus van 6 bij 6 meter binnen 1,5 meter van je. Het vuur duurt tot je {@status concentration} eindigt. Elk wezen in dat gebied wanneer je deze vaardigheid gebruikt en elk wezen dat daar zijn beurt eindigt, krijgt 5 brandschade."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Detonation",
+					"entries": [
+						"Als een actie, creëer je een vurige explosie op een punt dat je kunt zien binnen 36 meter van je. Elk wezen in een straal van 6 meter rond dat punt moet een reddingsworp op grond van grondwet doen, waarbij ze {@damage 7d6} brandschade oplopen en {@condition prone} neergeslagen worden als ze niet gered worden, of half zoveel schade als ze wel gered worden."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Fire Form",
+					"entries": [
+						"Als bonusactie word je in vlammen gehuld totdat je {@status concentration} eindigt. Elk wezen dat zijn beurt eindigt binnen 1,5 meter van je krijgt {@damage 3d6} vuurschade."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Animate Fire",
+					"entries": [
+						"Als een actie laat je een vuurelement verschijnen in een onbezette ruimte die je kunt zien binnen 36 meter van je. De elemental blijft bestaan tot je {@status concentration} eindigt, en het gehoorzaamt je verbale bevelen. In een gevecht rol je voor zijn initiatief en kies je zijn gedrag tijdens zijn beurten. Wanneer dit effect eindigt, verdwijnt de elementaal. Zie het Monsterhandboek voor zijn statussen."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mastery of Force",
+			"source": "UATheMysticClass",
+			"page": 18,
+			"type": "D",
+			"order": "Wu Jen",
+			"entries": [
+				"Als een student van psionische kracht, neem je de potentiële energie waar die door alle dingen stroomt. Je reikt uit met je geest en transformeert het potentieel in het werkelijke. Objecten en wezens bewegen op jouw bevel."
+			],
+			"focus": "While focused on this discipline, you have advantage on Strength checks.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Push",
+					"entries": [
+						"Kies als actie één wezen dat je kunt zien binnen 18 meter van je. Het doelwit moet een Sterkte reddingsworp doen. Als hij niet slaagt, krijgt hij {@scaledamage 1d8|1-7|1d8|psi} krachtschade per uitgegeven psi-punt en wordt hij tot 1,5 meter per uitgegeven punt in een rechte lijn van je weg geduwd. Als de redding slaagt, krijgt het de helft minder schade."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 7
+					},
+					"name": "Move",
+					"entries": [
+						"Kies een voorwerp dat je binnen 18 meter van je kunt zien, dat niet gedragen wordt door een ander wezen en dat niet vastzit. Het mag niet groter zijn dan 6 meter aan één kant en het maximale gewicht hangt af van de psi-punten die je aan deze vaardigheid hebt besteed, zoals hieronder wordt weergegeven.",
+						"Als een actie beweeg je het voorwerp tot 18 meter, en je moet het voorwerp tijdens deze beweging in het zicht houden. Als het voorwerp deze beweging eindigt in de lucht, valt het. Als het voorwerp op een wezen zou vallen, moet het wezen slagen voor een reddingsworp van DC 10 Dexterity of schade oplopen zoals vermeld in de onderstaande tabel.",
+						{
+							"type": "table",
+							"colLabels": [
+								"Psi Spent",
+								"Maximum Weight",
+								"Bludgeoning Damage"
+							],
+							"colStyles": [
+								"col-3 text-center",
+								"col-6 text-center",
+								"col-3 text-center"
+							],
+							"rows": [
+								[
+									"2",
+									"25 pond.",
+									"{@damage 2d6}"
+								],
+								[
+									"3",
+									"50 pond.",
+									"{@damage 4d6}"
+								],
+								[
+									"5",
+									"250 pond.",
+									"{@damage 6d6}"
+								],
+								[
+									"6",
+									"500 lbs.",
+									"{@damage 7d6}"
+								],
+								[
+									"7",
+									"1.000 lbs.",
+									"{@damage 8d6}"
+								]
+							]
+						}
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Inertial Armor",
+					"entries": [
+						"Als actie hul je jezelf in een onstoffelijk veld van magische kracht. Gedurende 8 uur is je basis AC 14 + je Dexterity modifier, en je krijgt weerstand tegen krachtschade. Dit effect eindigt als je een harnas draagt of aantrekt."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Telekinetic Barrier",
+					"entries": [
+						"Als actie creëer je een transparante muur van telekinetische energie, waarvan minstens één deel zich binnen 18 meter van je moet bevinden. De muur is 12 meter lang, 3 meter hoog en 1 inch dik. De muur duurt tot je {@status concentration} eindigt. Elk deel van 3 meter van de muur heeft een AC van 10 en 10 hitpoints."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Grasp",
+					"entries": [
+						"Je probeert een wezen in telekinetische energie te vangen en gevangen te houden. Kies als actie een wezen dat je kunt zien binnen 18 meter van je. Het doelwit moet slagen in een Sterkte reddingsworp of {@condition grappled} door je vastgehouden worden totdat je {@status concentration} eindigt of totdat het doelwit je bereik verlaat, wat 18 meter is voor deze houdgreep.",
+						"Het {@condition grappled} doelwit kan ontsnappen door te slagen voor een Strength (Athletics) of Dexterity (Acrobatics) check die wordt betwist door je psionische vaardigheid plus je vaardigheidsbonus. Wanneer een doelwit op deze manier probeert te ontsnappen, kun je psi-punten uitgeven om je check te verbeteren, waarbij je je aan je psi-limiet houdt. Je krijgt een bonus van +1 per uitgegeven psi punt.",
+						"Terwijl een doelwit {@condition grappled} op deze manier is, creëer je een van de volgende effecten als een actie:"
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Crush",
+					"entries": [
+						"Het doelwit neemt {@scaledamage 1d6|1-7|1d6|psi} knuppelschade per uitgegeven psi punt."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Move",
+					"entries": [
+						"Je verplaatst het doelwit tot 1,5 meter per uitgegeven psi-punt. Je kunt het in de lucht verplaatsen en daar vasthouden. Het valt als de grijper eindigt."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mastery of Ice",
+			"source": "UATheMysticClass",
+			"page": 19,
+			"type": "D",
+			"order": "Wu Jen",
+			"entries": [
+				"Je beheerst de kracht van ijs, door het naar je hand te zetten."
+			],
+			"focus": "While focused on this discipline, you have resistance to cold damage.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Ice Spike",
+					"entries": [
+						"Als een actie gooi je een ijsklont naar een wezen dat je kunt zien binnen 36 meter van je. Het doelwit moet een vaardigheidsreddende worp maken. Als je niet slaagt, krijgt het doelwit {@scaledamage 1d8|1-7|1d8|psi} koude schade per uitgegeven psi-punt en wordt zijn snelheid gehalveerd tot het begin van je volgende beurt. Als de save slaagt, krijgt het doelwit half zoveel schade."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Ice Sheet",
+					"entries": [
+						"Kies als actie een punt op de grond dat je kunt zien binnen 18 meter van je. De grond in een straal van 6 meter rond dat punt wordt 10 minuten lang bedekt met ijs. Het is {@quickref difficult terrain||3}, en elk wezen dat zich meer dan 3 meter op het ijs beweegt moet slagen in een vaardigheids reddingsworp of vallen {@condition prone}. Als het oppervlak schuin is, glijdt een wezen dat {@condition prone} in het gebied valt onmiddellijk naar de onderkant van de helling."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Frozen Sanctuary",
+					"entries": [
+						"Als een bonus actie, omhul je jezelf met ijzige veerkracht. Je krijgt 20 tijdelijke hit points."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Frozen Rain",
+					"entries": [
+						"Kies als actie een punt dat je kunt zien binnen 36 meter van je. De lucht in een straal van 6 meter rond dat punt wordt dodelijk koud en verzadigd met vocht. Elk wezen in dat gebied moet een reddingsslag uitvoeren. Als de redding mislukt, loopt het doelwit {@damage 6d6} koude schade op en wordt zijn snelheid tot 0 gereduceerd totdat je {@status concentration} eindigt. Als de save slaagt, krijgt het doelwit half zoveel schade.",
+						"Als actie kan een doelwit waarvan de snelheid is verminderd, het effect voortijdig beëindigen als het slaagt voor een Strength (Athletics) check met een DC gelijk aan de save DC van dit effect.",
+						"Je kunt de schade van dit effect met {@scaledamage 6d6|5-7|1d6|psi} verhogen voor elk extra psi-punt dat je eraan besteedt."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Ice Barrier",
+					"entries": [
+						"Als actie creëer je een muur van ijs, waarvan minstens één deel zich binnen 18 meter van je moet bevinden. De muur is 18 meter lang, 4,5 meter hoog en 0,3 meter dik. De muur duurt tot je {@status concentration} eindigt. Elke sectie van 3 meter van de muur heeft AC 12 en 30 hitpoints. Een wezen dat de muur beschadigt met een melee aanval krijgt koude schade die gelijk is aan de schade die het wezen aan de muur heeft toegebracht."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mastery of Light and Darkness",
+			"source": "UATheMysticClass",
+			"page": 19,
+			"type": "D",
+			"order": "Wu Jen",
+			"entries": [
+				"Je claimt heerschappij over licht en duisternis met je geest."
+			],
+			"focus": "While focused on this discipline, natural and magical darkness within 30 feet of you has no effect on your vision.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Darkness",
+					"entries": [
+						"Als een actie creëer je een gebied van magische duisternis, die het duistere zicht verijdelt. Kies een plek die je kunt zien binnen 18 meter van je. Magische duisternis straalt vanaf dat punt in een bol met een straal van 3 meter per psi-punt dat aan deze vaardigheid is besteed. Het licht dat wordt geproduceerd door spreuken van 2e niveau of minder wordt in dit gebied onderdrukt."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Light",
+					"entries": [
+						"Als een actie straalt een voorwerp dat je aanraakt licht uit in een straal van 6 meter en dimt het licht voor nog eens 6 meter. Het licht blijft totdat je {@status concentration} eindigt. Als alternatief kan een wezen dat je aanraakt op dezelfde manier licht uitstralen als het niet slaagt voor een reddingsslag op basis van handigheid. Als het op deze manier verlicht is, kan het zich niet verstoppen en worden aanvalsworpen tegen het voordeel."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Shadow Beasts",
+					"entries": [
+						"Als een actie laat je twee {@creature shadow||shadows} verschijnen in onbezette ruimtes die je kunt zien binnen 18 meter van jou. De {@creature shadow||shadows} blijven totdat je {@status concentration} eindigt en ze gehoorzamen je verbale bevelen. In gevechten rol je voor hun initiatief en kies je hun gedrag tijdens hun beurten. Wanneer dit effect eindigt, verdwijnt de {@creature shadow||shadows}. Raadpleeg het Monsterhandboek voor hun statistiekenblok."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Radiant Beam",
+					"entries": [
+						"Als een actie projecteer je een lichtstraal op een wezen dat je kunt zien binnen 18 meter van je. Het doelwit moet een vaardigheidsreddende worp maken. Als hij niet slaagt, krijgt hij {@damage 6d6} stralingsschade en is {@condition blinded} tot je {@status concentration} eindigt. Als de save slaagt, krijgt het de helft minder schade. Een {@condition blinded} doelwit kan de reddingsworp aan het einde van elke beurt herhalen, waarbij het effect op hemzelf eindigt als hij slaagt.",
+						"Je kunt de schade van dit effect met {@scaledamage 6d6|5-7|1d6|psi} verhogen voor elk extra psi-punt dat je eraan besteedt."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mastery of Water",
+			"source": "UATheMysticClass",
+			"page": 19,
+			"type": "D",
+			"order": "Wu Jen",
+			"entries": [
+				"Je geest wordt één met het element water en stemt je gedachten af op de eb en vloed ervan."
+			],
+			"focus": "While focused on this discipline, you have a swimming speed equal to your walking speed, and you can breathe underwater.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Desiccate",
+					"entries": [
+						"Kies als actie een wezen dat je kunt zien binnen 18 meter van je. Het doelwit moet een reddingsworp op grond van grondwet doen, waarbij hij {@scaledamage 1d10|1-7|1d10|psi} necrotische schade oploopt per psi-punt dat hij aan deze vaardigheid heeft besteed, of half zoveel schade als hij slaagt."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Watery Grasp",
+					"entries": [
+						"Als actie ontketen je een golf die op je afkomt en zich dan weer terugtrekt als een opkomende vloed. Je creëert een golf in een vierkant van 6 bij 6 meter. Ten minste een deel van de rand van het vierkant moet zich binnen 1,5 meter van jou bevinden. Elk wezen in dat vierkant moet een Sterkte reddingsslag doen. Als de worp niet slaagt, krijgt het doelwit {@damage 2d6} slagschade, wordt het geraakt {@condition prone} en wordt het tot 3 meter dichter naar je toe getrokken. Als de save slaagt, krijgt het doelwit half zoveel schade. Je kunt de schade van deze vaardigheid verhogen met {@scaledamage 2d6|2-7|1d6|psi} per extra psi-punt dat je eraan besteedt."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Water Whip",
+					"entries": [
+						"Als een actie laat je een waterstraal los in een lijn die 18 meter lang en 1,5 meter breed is. Elk wezen in de lijn moet een Sterkte reddingsworp doen en krijgt {@damage 3d6} vernietigingsschade als de reddingsworp mislukt, of half zoveel schade als de reddingsworp slaagt. Daarnaast kun je elk doelwit dat niet slaagt voor de reddingsslag verplaatsen naar elke onbezette ruimte die de lijn raakt. Je kunt de schade van deze vaardigheid verhogen met {@scaledamage 3d6|3-7|1d6|psi} per extra psi-punt dat je eraan besteedt."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Water Breathing",
+					"entries": [
+						"Als een actie geef je jezelf en maximaal tien gewillige wezens die je kunt zien binnen 18 meter van je de mogelijkheid om onder water te ademen voor de komende 24 uur."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Water Sphere",
+					"entries": [
+						"Als actie laat je een bol water rond een wezen vormen. Kies een wezen dat je kunt zien binnen 18 meter van je. Het doelwit moet een vaardigheidsreddende worp maken. Als hij niet slaagt, wordt hij gevangen in de bol water totdat je {@status concentration} eindigt. Terwijl het doelwit gevangen zit, wordt zijn snelheid gehalveerd, ondervindt het nadeel bij aanvalsrollen en kan het niets meer zien dan 3 meter van hem vandaan. Echter, aanvalsrollen tegen het doelwit lijden ook onder nadeel. Het doelwit kan de reddingsworp herhalen aan het einde van elk van zijn beurten, waarbij het effect op zichzelf eindigt bij een succesvolle reddingsworp."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Animate Water",
+					"entries": [
+						"Als een actie laat je een waterelement verschijnen in een onbezette ruimte die je kunt zien binnen 36 meter van je. De elemental blijft bestaan tot je {@status concentration} eindigt, en het gehoorzaamt je verbale commando's. In een gevecht rol je voor zijn initiatief en kies je zijn gedrag tijdens zijn beurten. Wanneer dit effect eindigt, verdwijnt de elementaal. Zie het Monsterhandboek voor zijn statussen."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mastery of Weather",
+			"source": "UATheMysticClass",
+			"page": 20,
+			"type": "D",
+			"order": "Wu Jen",
+			"entries": [
+				"Je geest reikt tot in de hemel, vervormt het spul van de stormen om je behoeften te dienen."
+			],
+			"focus": "While focused on this discipline, you have resistance to lightning and thunder damage.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Cloud Steps",
+					"entries": [
+						"Als een actie tover je wolken tevoorschijn om een solide, doorschijnende trap te maken die duurt tot je {@status concentration} eindigt. De trap vormt een spiraal die een gebied van 3 meter bij 3 meter vult en 6 meter omhoog reikt per uitgegeven psi-punt."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Hungry Lightning",
+					"entries": [
+						"Als een actie, sla je een wezen dat je kunt zien binnen 18 meter van je af met ranken van bliksem. Het doelwit moet een vaardigheidsredding maken, met nadeel als het een zwaar harnas draagt. Het doelwit krijgt {@scaledamage 1d8|1-7|1d8|psi} bliksemschade per uitgegeven psi-punt bij een mislukte reddingsworp, of half zoveel schade bij een geslaagde reddingsworp."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Wall of Clouds",
+					"entries": [
+						"Als actie creëer je een muur van wolken, waarvan minstens één deel zich binnen 18 meter van jou moet bevinden. De muur is 18 meter lang, 4,5 meter hoog en 0,3 meter dik. De muur blijft bestaan tot je {@status concentration} eindigt. Wezens kunnen er ongehinderd doorheen, maar de muur blokkeert het zicht."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Whirlwind",
+					"entries": [
+						"Kies als actie een punt dat je kunt zien binnen 18 meter van jou. De wind huilt in een bol met een straal van 6 meter gecentreerd op dat punt. Elk wezen in de bol moet slagen in een Sterkte-reddende worp of {@damage 1d6} slagschade oplopen en worden verplaatst naar een onbezette ruimte naar keuze in de bol. Elk los voorwerp in de bol wordt verplaatst naar een onbezette ruimte naar keuze binnen de bol als het voorwerp niet meer weegt dan 5 kilogram."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Lightning Leap",
+					"entries": [
+						"Als actie laat je een bliksemflits van 18 meter lang en 1,5 meter breed los. Elk wezen in de lijn moet een vaardigheidsreddende worp doen en krijgt {@damage 6d6} bliksemschade als de redding mislukt, of half zoveel schade als de redding slaagt. Je kunt dan teleporteren naar een onbezette ruimte die door de lijn wordt geraakt.",
+						"Je kunt de schade van deze vaardigheid verhogen met {@scaledamage 6d6|5-7|1d6|psi} per extra psi-punt die je eraan besteedt."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Wall of Thunder",
+					"entries": [
+						"Als actie creëer je een muur van onweer, waarvan minstens één deel zich binnen 18 meter van je moet bevinden. De muur is 18 meter lang, 4,5 meter hoog en 0,3 meter dik. De muur duurt tot je {@status concentration} eindigt. Elke voet die door de muur wordt bewogen kost 1 extra voet beweging. Wanneer een wezen zich voor het eerst in een beurt in de ruimte van de muur begeeft of zijn beurt daar begint, moet dat wezen slagen in een Sterkte reddingsworp, of het krijgt {@damage 6d6} donderschade, wordt in een rechte lijn tot 9 meter van de muur geduwd en wordt {@condition prone} geslagen."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"name": "Thunder Clap",
+					"entries": [
+						"Kies als actie een punt dat je kunt zien binnen 18 meter van je. Donderenergie barst los in een straal van 6 meter rond dat punt. Elk wezen in dat gebied moet een grondwetsreddende worp doen. Als de redding mislukt, krijgt het doelwit {@damage 8d6} donderschade en is het {@condition stunned} tot het einde van je volgende beurt. Als de redding slaagt, krijgt het doelwit half zoveel schade."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mastery of Wood and Earth",
+			"source": "UATheMysticClass",
+			"page": 21,
+			"type": "D",
+			"order": "Wu Jen",
+			"entries": [
+				"Je stemt je geest af om controle te krijgen over hout en aarde."
+			],
+			"focus": "While focused on this discipline, you have a +1 bonus to AC.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Animate Weapon",
+					"entries": [
+						"Als een actie neemt je geest de controle over van een éénhandig wapen dat je vasthoudt. Het wapen vliegt naar een wezen dat je kunt zien binnen een straal van 9 meter van je en doet een éénhandige aanval met een wapen tegen het wezen, waarbij je je aanvalsdiscipline gebruikt voor de aanval en de schade. Bij een treffer deelt het wapen zijn normale schade uit, plus een extra {@scaledamage 1d10|1-7|1d10|psi} krachtschade per psi-punt besteed aan deze vaardigheid. Het wapen keert terug in je greep nadat het heeft aangevallen."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Warp Weapon",
+					"entries": [
+						"Kies als actie een niet-magisch wapen dat wordt vastgehouden door een wezen dat je kunt zien binnen 18 meter van je. Dat wezen moet slagen in een Sterkte reddingsworp, of het gekozen wapen kan niet gebruikt worden om aan te vallen tot het einde van je volgende beurt."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Warp Armor",
+					"entries": [
+						"Kies als actie een niet-magisch harnas dat gedragen wordt door een wezen dat je kunt zien binnen 18 meter van je. Dat wezen moet slagen in een reddingsworp van Constitution of zijn AC wordt 10 + zijn Dexterity modifier tot het einde van je volgende beurt."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Wall of Wood",
+					"entries": [
+						"Als actie creëer je een muur van hout waarvan minstens één deel zich binnen 18 meter van jou moet bevinden. De muur is 18 meter lang, 4,5 meter hoog en 0,3 meter dik. De muur duurt tot je {@status concentration} eindigt. Elke 1,5 meter brede sectie van de muur heeft AC 12 en 100 hitpoints. Als je een sectie breekt, ontstaat er een gat van 1,5 bij 1,5 meter, maar verder blijft de muur intact."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Armored Form",
+					"entries": [
+						"Als bonusactie krijg je weerstand tegen stomp-, steek- en steekschade, die duurt tot je {@status concentration} eindigt."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Animate Earth",
+					"entries": [
+						"Als een actie laat je een aarde-elementaal verschijnen in een onbezette ruimte die je kunt zien binnen 36 meter van je. De elemental blijft bestaan tot je {@status concentration} eindigt, en het gehoorzaamt je verbale bevelen. In een gevecht rol je voor zijn initiatief en kies je zijn gedrag tijdens zijn beurten. Wanneer dit effect eindigt, verdwijnt de elementaal. Zie het Monsterhandboek voor zijn statussen."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mind Meld",
+			"source": "UATheMysticClass",
+			"page": 27,
+			"type": "T",
+			"entries": [
+				"Als bonusactie kun je telepathisch communiceren met één gewillig wezen dat je kunt zien binnen 36 meter van je. Het doelwit moet een intelligentie van minstens 2 hebben, anders faalt dit talent en is de actie verloren.",
+				"Deze communicatie kan plaatsvinden tot het einde van de huidige beurt. Je hoeft geen taal te delen met het doelwit om je telepathische uitingen te begrijpen, en het verstaat je zelfs als het geen taal heeft. Je krijgt ook toegang tot een herinnering naar keuze van het doelwit, waardoor het zich één ding dat het zag of deed perfect herinnert."
+			]
+		},
+		{
+			"name": "Mind Slam",
+			"source": "UATheMysticClass",
+			"page": 28,
+			"type": "T",
+			"entries": [
+				"Als een actie richt je je op één wezen dat je kunt zien binnen 18 meter van je. Het doelwit moet slagen in een reddingsworp of {@damage 1d6} krachtschade oplopen. Als het deze schade oploopt en groot of kleiner is, wordt het geslagen {@condition prone}.",
+				"De schade van dit talent neemt toe met {@dice 1d6} als je 5e level bent ({@damage 2d6}), 11e level ({@damage 3d6}), en 17e level ({@damage 4d6})."
+			]
+		},
+		{
+			"name": "Mind Thrust",
+			"source": "UATheMysticClass",
+			"page": 28,
+			"type": "T",
+			"entries": [
+				"Als een actie richt je je op één wezen dat je kunt zien binnen 36 meter van je. Het doelwit moet slagen in een reddingsworp van intelligentie of {@damage 1d10} psychische schade oplopen.",
+				"De schade van dit talent neemt toe met {@dice 1d10} als je 5e level bent ({@damage 2d10}), 11e level ({@damage 3d10}), en 17e level ({@damage 4d10})."
+			]
+		},
+		{
+			"name": "Mystic Charm",
+			"source": "UATheMysticClass",
+			"page": 28,
+			"type": "T",
+			"entries": [
+				"Als een actie bedrieg je een mensachtige die je kunt zien binnen 36 meter van je. Het doelwit moet slagen in een Charisma saving throw of {@condition charmed} door jou worden tot het einde van je volgende beurt."
+			]
+		},
+		{
+			"name": "Mystic Hand",
+			"source": "UATheMysticClass",
+			"page": 28,
+			"type": "T",
+			"entries": [
+				"Je kunt je actie gebruiken om een voorwerp binnen 9 meter van je te manipuleren of te verplaatsen. Het voorwerp mag niet meer wegen dan 5 kilogram en je kunt geen invloed uitoefenen op een voorwerp dat gedragen of gedragen wordt door een ander wezen. Als het voorwerp los is, kun je het tot 9 meter in elke richting verplaatsen.",
+				"Met dit talent kun je een niet afgesloten deur openen, een bierpul inschenken, enzovoort.",
+				"Het voorwerp valt aan het eind van je beurt op de grond als je het in de lucht laat hangen."
+			]
+		},
+		{
+			"name": "Nomadic Arrow",
+			"source": "UATheMysticClass",
+			"page": 21,
+			"type": "D",
+			"order": "Nomad",
+			"entries": [
+				"Je doordrenkt een afstandswapen met een vreemde schijn van gevoel, waardoor het feilloos zijn doel vindt."
+			],
+			"focus": "While you are focused on this discipline, any attack roll you make for a ranged weapon attack ignores disadvantage. If disadvantage would normally apply to the roll, that roll also can't benefit from advantage.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Speed Dart",
+					"entries": [
+						"Als bonusactie doordrenk je één van je wapens met psionische kracht. De volgende aanval die je ermee uitvoert en die raak is voor het einde van de huidige beurt, brengt een extra {@scaledamage 1d10|1-7|1d10|psi} psychische schade toe per uitgegeven psi punt."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Seeking Missile",
+					"entries": [
+						"Als reactie op het missen van een aanval met een gericht wapen, kun je de aanvalsrol tegen hetzelfde doelwit herhalen."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Faithful Archer",
+					"entries": [
+						"Als een bonusactie, doordrenk je een wapen met een beperkte gevoeligheid. Tot je {@status concentration} eindigt, kun je aan het begin van elke beurt een extra aanval doen met het wapen (geen actie vereist). Als het een geworpen wapen is, keert het elke keer dat je er een aanval mee doet terug in je greep."
+					]
+				}
+			]
+		},
+		{
+			"name": "Nomadic Chameleon",
+			"source": "UATheMysticClass",
+			"page": 22,
+			"type": "D",
+			"order": "Nomad",
+			"entries": [
+				"Je creëert een scherm van psychische kracht dat je uiterlijk vervormt, waardoor je opgaat in de achtergrond of zelfs onzichtbaar wordt."
+			],
+			"focus": "While focused on this discipline, you have advantage on Dexterity ({@skill Stealth}) checks.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Chameleon",
+					"entries": [
+						"Als actie kun je proberen je te verstoppen, ook al voldoe je niet aan de daarvoor geldende eisen. Aan het einde van de huidige beurt blijf je alleen verborgen als je dan aan de normale vereisten voor verbergen voldoet."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Step from Sight",
+					"entries": [
+						"Als bonusactie kun je jezelf aan het zicht onttrekken. Je kunt één extra wezen als doelwit nemen voor elk extra psi-punt dat je aan deze vaardigheid besteedt. De toegevoegde doelwitten moeten zichtbaar voor je zijn en zich binnen 18 meter van je bevinden. Elk doelwit wordt {@condition invisible} en blijft dat tot je {@status concentration} eindigt of tot onmiddellijk nadat het een wezen aanvalt, beschadigt of op een andere manier beïnvloedt met een aanval, een spreuk of een andere vaardigheid."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Enduring Invisibility",
+					"entries": [
+						"Als bonusactie draai je {@condition invisible} en blijf je zo tot je {@status concentration} eindigt."
+					]
+				}
+			]
+		},
+		{
+			"name": "Nomadic Mind",
+			"source": "UATheMysticClass",
+			"page": 22,
+			"type": "D",
+			"order": "Nomad",
+			"entries": [
+				"Je stuurt een deel van je psyche in de noosphere, de collectieve vergezicht van geesten en kennis bezeten door levende dingen."
+			],
+			"focus": "Whenever you focus on this discipline, you choose one skill or tool and have proficiency with it until your focus ends. Alternatively, you gain the ability to read and write one language of your choice until your focus ends.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Wandering Mind",
+					"entries": [
+						"Je komt in een diepe contemplatie. Als je je voor de volledige duur van deze optie concentreert, krijg je vaardigheid in maximaal drie van de volgende vaardigheden (één vaardigheid voor elke 2 psi-punten die je uitgeeft): {@skill Animal Handling}, {@skill Arcana}, {@skill History}, {@skill Medicine}, {@skill Nature}, {@skill Performance}, {@skill Religion} en {@skill Survival}. Het voordeel duurt 1 uur, geen {@status concentration} vereist."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Find Creature",
+					"entries": [
+						"Je zoekt met je geest naar informatie over een specifiek wezen. Als je je voor de volledige duur van deze optie concentreert, krijg je een algemeen begrip van de huidige locatie van het wezen. Je leert de regio, stad, dorp of wijk waar het zich bevindt, waarbij je een gebied aanwijst tussen 1 en 4,5 kilometer aan een kant (DM's keuze). Als het wezen zich op een ander bestaansniveau bevindt, leer je in plaats daarvan welk niveau."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Item Lore",
+					"entries": [
+						"Je bestudeert een voorwerp zorgvuldig. Als je je voor de volledige duur van deze optie concentreert terwijl je binnen 1,5 meter van het voorwerp blijft, krijg je de voordelen van een identificatiespreuk die over dat voorwerp is uitgesproken."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Psychic Speech",
+					"entries": [
+						"Als een actie stem je je geest af op de psychische afdruk van alle taal. Gedurende 1 uur krijg je het vermogen om elke taal die je hoort of probeert te lezen te begrijpen. Bovendien, als je spreekt, begrijpen alle wezens die een taal kunnen begrijpen wat je zegt, ongeacht welke taal je gebruikt."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Wandering Eye",
+					"entries": [
+						"Als een actie creëer je een psychische sensor binnen 18 meter van je. De sensor duurt tot je {@status concentration} eindigt. De sensor is onzichtbaar en zweeft in de lucht. Je ontvangt er mentaal visuele informatie van, die normaal zicht en darkvision heeft met een bereik van 18 meter. De sensor kan in alle richtingen kijken. Als actie kun je de sensor tot 9 meter in elke richting verplaatsen. Er is geen limiet aan hoe ver het oog van je af kan bewegen, maar het kan geen ander bestaansvlak betreden. Een stevige barrière blokkeert de beweging van het oog, maar het oog kan wel door een opening met een diameter van 1 inch."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Phasing Eye",
+					"entries": [
+						"Als dwalend oog hierboven, behalve dat het oog door vaste voorwerpen kan bewegen, maar zijn beweging niet in een vast voorwerp kan beëindigen. Als het dat wel doet, eindigt het effect onmiddellijk."
+					]
+				}
+			]
+		},
+		{
+			"name": "Nomadic Step",
+			"source": "UATheMysticClass",
+			"page": 22,
+			"type": "D",
+			"order": "Nomad",
+			"entries": [
+				"Je oefent je geest uit op het gebied om je heen, verdraait de intra-planaire paden die je waarneemt om ogenblikkelijk te kunnen reizen."
+			],
+			"focus": "After you teleport on your turn while focused on this discipline, your walking speed increases by 10 feet until the end of the turn, as you are propelled by the magic of your teleportation. You can receive this increase only once per turn.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Step of a Dozen Paces",
+					"entries": [
+						"Als je tijdens je beurt nog niet bewogen hebt, neem je een bonusactie om tot 6 meter per uitgegeven psi-punt te teleporteren naar een onbezette ruimte die je kunt zien, en je snelheid wordt tot het einde van de beurt tot 0 gereduceerd."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 1
+					},
+					"name": "Nomadic Anchor",
+					"entries": [
+						"Als een actie creëer je een onzichtbaar, ongrijpbaar teleportatieanker in een kubus van 1,5 meter die je kunt zien binnen 36 meter van je. De komende 8 uur kun je, telkens wanneer je deze psionische discipline gebruikt om te teleporteren, in plaats daarvan naar het anker teleporteren, zelfs als je het niet kunt zien, maar het moet binnen het bereik van de teleportatievaardigheid zijn."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Defensive Step",
+					"entries": [
+						"Wanneer je geraakt wordt door een aanval, kun je je reactie gebruiken om een +4 bonus op AC te krijgen tegen die aanval, waardoor het mogelijk een misser wordt. Je teleporteert dan tot 3 meter naar een onbezette ruimte die je kunt zien."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "There and Back Again",
+					"entries": [
+						"Als bonusactie teleporteer je tot 6 meter naar een onbezette ruimte die je kunt zien en beweeg je dan tot de helft van je snelheid. Aan het einde van je beurt kun je terug teleporteren naar de plek waar je was voordat je teleporteerde, tenzij die plek nu bezet is of op een ander bestaansvlak ligt."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Transposition",
+					"entries": [
+						"Als je nog niet bewogen hebt tijdens je beurt, kies dan een bondgenoot die je kunt zien binnen 18 meter van je. Als bonusactie teleporteren jij en dat wezen van plaats en wordt je snelheid tot het einde van de beurt tot 0 gereduceerd. Deze vaardigheid mislukt en is verloren als een van jullie niet in de bestemmingsruimte past."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Baleful Transposition",
+					"entries": [
+						"Kies als actie één wezen dat je kunt zien binnen 36 meter van je. Dat wezen moet een reddingsworp op wijsheid uitvoeren. Als je niet slaagt, teleporteren jij en dat wezen van plaats. Deze vaardigheid faalt en is verloren als een van jullie niet in de bestemmingsruimte past."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"name": "Phantom Caravan",
+					"entries": [
+						"Als een actie teleporteren jij en maximaal zes gewillige wezens naar keuze die je kunt zien binnen 18 meter van je vandaan tot 1,5 kilometer naar een plek die je kunt zien. Als er geen open ruimte is voor alle doelwitten op de plaats van aankomst, mislukt deze vaardigheid en gaat ze verloren."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Nomad's Gate",
+					"entries": [
+						"Als een actie creëer je een kubus van 1,5 meter van schemerig, grijs licht binnen 1,5 meter van je. Je creëert een identieke kubus op elk punt naar keuze binnen 1,5 kilometer dat je de afgelopen 24 uur hebt bekeken. Totdat je {@status concentration} eindigt, teleporteert iedereen die een van de kubussen betreedt onmiddellijk naar de andere kubus en verschijnt in een onbezette ruimte ernaast. De teleportatie mislukt als er geen ruimte is waarin het wezen kan verschijnen."
+					]
+				}
+			]
+		},
+		{
+			"name": "Precognition",
+			"source": "UATheMysticClass",
+			"page": 23,
+			"type": "D",
+			"order": "Awakened",
+			"entries": [
+				"Door informatie om je heen te analyseren, van subtiele hints tot schijnbaar losstaande feiten, leer je in een oogwenk een reeks waarschijnlijkheden te weven die je buitengewone inzichten verschaft."
+			],
+			"focus": "While focused on this discipline, you have advantage on initiative rolls.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Precognitive Hunch",
+					"entries": [
+						"Als bonusactie stel je jezelf open voor kortstondige inzichten die je kansen op succes vergroten; totdat je {@status concentration} eindigt, rol je bij elke aanvalsworp, reddingsworp of vaardigheidscontrole een {@dice d4} en voeg je die toe aan het totaal."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "All-Around Sight",
+					"entries": [
+						"Als reactie op een aanval die je raakt, gebruik je je reactie om een nadeel op te leggen op die aanvalsrol, waardoor die mogelijk mist."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 8,
+						"unit": "hr"
+					},
+					"name": "Danger Sense",
+					"entries": [
+						"Als actie creëer je een psychisch model van de werkelijkheid in je geest en stelt het in om je een paar seconden in de toekomst te laten zien. Tot uw {@status concentration} eindigt, kunt u niet {@quickref Surprise|PHB|3|0|verrast}, aanvalsrollen tegen u kunnen geen voordeel opleveren, en u krijgt een bonus van +10 op initiatief."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"name": "Victory Before Battle",
+					"entries": [
+						"Wanneer je initiatief gooit, kun je deze vaardigheid gebruiken om jezelf en maximaal vijf wezens naar keuze binnen 18 meter van je een bonus van +10 op initiatief te geven."
+					]
+				}
+			]
+		},
+		{
+			"name": "Psionic Restoration",
+			"source": "UATheMysticClass",
+			"page": 23,
+			"type": "D",
+			"order": "Immortal",
+			"entries": [
+				"Je gebruikt psionische energie om wonden te genezen en jezelf en anderen weer gezond te maken."
+			],
+			"focus": "While focused on this discipline, you can use a bonus action to touch a creature that has 0 hit points and stabilize it.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Mend Wounds",
+					"entries": [
+						"Als actie kun je psi-punten uitgeven om de hit points te herstellen van een creatuur dat je aanraakt. Het wezen krijgt {@scaledice 1d8|1-7|1d8|psi} hit points terug per uitgegeven psi point."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Restore Health",
+					"entries": [
+						"Als actie raak je één wezen aan en verwijder je één van de volgende aandoeningen bij dat wezen: {@condition blinded}, {@condition deafened}, {@condition paralyzed}, of {@condition poisoned}. Of je verwijdert één ziekte van het wezen."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Restore Life",
+					"entries": [
+						"Als actie raak je een wezen aan dat in de laatste minuut is gestorven. Het wezen komt weer tot leven met 1 hit point. Een schepsel dat van ouderdom is gestorven, kan niet meer tot leven worden gewekt, evenmin als een schepsel dat geen vitale lichaamsdelen meer heeft."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"name": "Restore Vigor",
+					"entries": [
+						"Als actie kun je een wezen aanraken en een van de volgende dingen kiezen: verminderingen op een van zijn ability scores verwijderen, een effect verwijderen dat zijn maximale aantal hit points vermindert, of zijn {@condition exhaustion} level met één verminderen."
+					]
+				}
+			]
+		},
+		{
+			"name": "Psionic Weapon",
+			"source": "UATheMysticClass",
+			"page": 24,
+			"type": "D",
+			"order": "Immortal",
+			"entries": [
+				"Je hebt geleerd hoe je psionische energie in je aanvallen kunt kanaliseren, waardoor ze verwoestende kracht krijgen."
+			],
+			"focus": "Whenever you focus on this discipline, choose one weapon you're holding or your unarmed strike. When you attack with it while focused on this discipline, its damage is psychic and magical, rather than its normal damage type. Until you reach 6th level as a mystic, you don't add your Strength or Dexterity modifier to the psychic attack's damage rolls.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 1
+					},
+					"name": "Ethereal Weapon",
+					"entries": [
+						"Als bonusactie verander je een wapen dat je vasthoudt of een ongewapende slag tijdelijk in pure psionische energie. De volgende aanval die je daarmee doet voor het einde van je beurt negeert de wapenrusting van het doelwit en vereist geen aanvalsrol. In plaats daarvan moet het doelwit een Dexterity saving throw doen tegen deze discipline. Als je niet slaagt, loopt het doelwit de normale schade van de aanval op en ondervindt het de bijkomende effecten. Bij een succesvolle redding neemt het doelwit de helft van de schade van de aanval op zich, maar ondervindt geen extra gevolgen die normaal bij een treffer zouden optreden."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Lethal Strike",
+					"entries": [
+						"Als bonusactie doordrenk je een wapen dat je vasthoudt of je eenarmige slag met psychische energie. De volgende keer dat je ermee slaat voor het einde van je beurt, brengt het een extra {@scaledamage 1d10|1-7|1d10|psi} psychische schade toe per uitgegeven psi punt."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Augmented Weapon",
+					"entries": [
+						"Als een bonus actie, raak een {@filter eenvoudig of martial wapen|items|source=phb|category=basic|type=martial weapon;simple weapon}. Tot je {@status concentration} eindigt, wordt dat wapen een magisch wapen met een bonus van +3 op zijn aanvals- en schaderollen."
+					]
+				}
+			]
+		},
+		{
+			"name": "Psychic Assault",
+			"source": "UATheMysticClass",
+			"page": 24,
+			"type": "D",
+			"order": "Awakened",
+			"entries": [
+				"Je gebruikt je geest als een wapen, en ontketent salvo's van psionische energie."
+			],
+			"focus": "While focused on this discipline, you gain a +2 bonus to damage rolls with psionic talents that deal psychic damage.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Psionic Blast",
+					"entries": [
+						"Kies als actie een wezen dat je kunt zien binnen 18 meter van je. Het doelwit krijgt {@scaledamage 1d8|1-7|1d8|psi} psychische schade per psi-punt dat aan deze vaardigheid is besteed."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Ego Whip",
+					"entries": [
+						"Kies als actie één wezen dat je kunt zien binnen 18 meter van je. Het doelwit moet een intelligentie reddingsslag doen. Als de reddingsworp niet slaagt, loopt het wezen {@damage 3d8} psychische schade op en raakt het vervuld van zelftwijfel, waardoor het zijn actie in zijn volgende beurt alleen nog maar kan gebruiken om de actie Ontwijken, Uitwijken of Verbergen uit te voeren. Als de reddingsworp slaagt, loopt het half zoveel schade op."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Id Insinuation",
+					"entries": [
+						"Kies als actie één wezen dat je kunt zien binnen 18 meter van je. Het doelwit moet een intelligentie reddingsslag doen. Als je niet slaagt, krijgt het wezen {@damage 5d8} psychische schade en wordt het woedend, omdat zijn id op hol slaat. Tijdens zijn volgende beurt kan het zijn actie alleen gebruiken om de actie Ontwijken of Aanvallen uit te voeren. Als de redding slaagt, krijgt het half zoveel schade."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"name": "Psychic Blast",
+					"entries": [
+						"Als een actie ontketen je verwoestende psychische energie in een kegel van 18 meter. Elk wezen in dat gebied moet een reddingsslag op intelligentie uitvoeren en krijgt {@damage 8d8} psychische schade als de reddingsslag mislukt, of half zoveel schade als de reddingsslag slaagt. Je kunt de schade met {@scaledamage 8d8|6-7|2d8|psi} verhogen als je 1 psi-punt meer aan deze vaardigheid besteedt."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"name": "Psychic Crush",
+					"entries": [
+						"Als een actie creëer je een kubus van 6 meter psychische energie binnen 36 meter van je. Elk wezen in dat gebied moet een reddingsoefening op intelligentie uitvoeren. Als je niet slaagt, krijgt een doelwit {@damage 8d8} psychische schade en is {@condition stunned} tot het einde van je volgende beurt. Als de save slaagt, krijgt het doelwit half zoveel schade."
+					]
+				}
+			]
+		},
+		{
+			"name": "Psychic Disruption",
+			"source": "UATheMysticClass",
+			"page": 24,
+			"type": "D",
+			"order": "Awakened",
+			"entries": [
+				"Je creëert psychische ruis die het vermogen van andere wezens om helder te denken verstoort."
+			],
+			"focus": "While focused on this discipline, you have advantage on Charisma ({@skill Deception}) checks.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Distracting Haze",
+					"entries": [
+						"Kies als actie één wezen dat je kunt zien binnen 18 meter van je. Dat wezen moet een intelligentie reddingsslag doen. Als je niet slaagt, krijgt het {@scaledamage 1d10|1-7|1d10|psi} psychische schade per uitgegeven psi-punt en kan het niets meer zien dan 3 meter van je vandaan totdat je {@status concentration} eindigt. Als de save slaagt, krijgt hij half zoveel schade."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Daze",
+					"entries": [
+						"Kies als actie één wezen dat je kunt zien binnen 18 meter van je. Dat wezen moet een intelligentie reddingsworp doen. Als je niet slaagt, is het doelwit {@condition incapacitated} tot het einde van je volgende beurt of tot het schade oploopt."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Mind Storm",
+					"entries": [
+						"Kies als actie een punt dat je kunt zien binnen 18 meter van je. Elk wezen in een straal van 6 meter gecentreerd op dat punt moet een reddingsworp op wijsheid doen. Als je niet slaagt, loopt het doelwit {@damage 6d8} psychische schade op en heeft het nadeel bij alle reddingsslagen tot het einde van je volgende beurt. Als de save slaagt, krijgt het wezen half zoveel schade. Je kunt de schade verhogen met {@scaledamage 6d8|5-7|1d6|psi} per extra psi-punt dat je aan deze vaardigheid besteedt."
+					]
+				}
+			]
+		},
+		{
+			"name": "Psychic Hammer",
+			"source": "UATheMysticClass",
+			"page": 28,
+			"type": "T",
+			"entries": [
+				"Als een actie probeer je een wezen dat je kunt zien binnen 36 meter van je vast te pakken met een hand gemaakt van telekinetische energie. Het doelwit moet slagen in een Sterkte reddingsworp of {@damage 1d6} krachtschade oplopen. Als het deze schade oploopt en Groot of kleiner is, kun je het tot 3 meter in een rechte lijn in een richting naar keuze verplaatsen. Je kunt het doelwit niet van de grond tillen tenzij het al in de lucht of onder water is.",
+				"De schade van dit talent neemt toe met {@dice 1d6} als je 5e level bent ({@damage 2d6}), 11e level ({@damage 3d6}), en 17e level ({@damage 4d6})."
+			]
+		},
+		{
+			"name": "Psychic Inquisition",
+			"source": "UATheMysticClass",
+			"page": 25,
+			"type": "D",
+			"order": "Awakened",
+			"entries": [
+				"Je reikt in de geest van een wezen om informatie te ontdekken of ideeën in hem te planten."
+			],
+			"focus": "While focused on this discipline, you know when a creature communicating with you via telepathy is lying.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Hammer of Inquisition",
+					"entries": [
+						"Kies als actie één wezen dat je kunt zien binnen 18 meter van je. Het doelwit moet een reddingsworp op intelligentie doen. Als hij niet slaagt, krijgt hij {@scaledamage 1d10|1-7|1d10|psi} psychische schade per uitgegeven psi-punt en heeft hij een nadeel bij zijn volgende reddingsworp op Wisdom voor het einde van je volgende beurt. Bij een succesvolle reddingsworp krijgt het half zoveel schade."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Forceful Query",
+					"entries": [
+						"Als een actie stel je een vraag aan één wezen dat je kan zien en horen binnen een straal van 9 meter van je. De vraag moet zo geformuleerd worden dat hij met ja of nee beantwoord kan worden, anders faalt deze vaardigheid. Het doelwit moet slagen in een Wisdom saving throw, of het antwoordt met een waarheidsgetrouw antwoord. Een wezen is immuun voor deze vaardigheid als het immuun is voor zijn {@condition charmed}."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Ransack Mind",
+					"entries": [
+						"Terwijl je je op deze vaardigheid concentreert, onderzoek je de geest van één wezen. Het wezen moet zich binnen een straal van 9 meter van je bevinden en je moet het kunnen zien. Als je de volledige duur van de vaardigheid bereikt, moet het doelwit drie keer een reddingsslag op intelligentie uitvoeren en je leert informatie van het wezen op basis van het aantal reddingsslagen dat het faalt. Als het doelwit één reddingsslag faalt, leer je zijn belangrijkste herinneringen van de afgelopen 12 uur. Als twee reddingen mislukken, leer je de belangrijkste herinneringen van de afgelopen 24 uur. Met drie mislukte reddingsworpen, leer je zijn belangrijkste herinneringen van de afgelopen 48 uur."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Phantom Idea",
+					"entries": [
+						"Terwijl je je op deze vaardigheid concentreert, onderzoek je de geest van één wezen. Het wezen moet binnen 9 meter van je blijven en je moet het kunnen zien. Als je de volledige duur van de vaardigheid bereikt, moet het doelwit drie keer een reddingsslag op intelligentie uitvoeren en plant je er een herinnering of een idee in dat een aantal uren blijft bestaan, gebaseerd op het aantal reddingsslagen dat het niet haalt. Je kiest zelf of het idee of de herinnering triviaal is (zoals \"Ik heb pap als ontbijt gehad\" of \"Ale is het ergste\") of persoonlijkheidsbepalend (\"Ik heb gefaald om mijn dorp te redden van orc-marauders en ben daarom een lafaard\" of \"Magie is een plaag, dus ik zweer het af\"). Als de reddingsslag mislukt, blijft het idee of de herinnering de komende 4 uur hangen. Met twee mislukte reddingsslagen duurt het 24 uur. Bij drie keer niet redden duurt het 48 uur."
+					]
+				}
+			]
+		},
+		{
+			"name": "Psychic Phantoms",
+			"source": "UATheMysticClass",
+			"page": 25,
+			"type": "D",
+			"order": "Awakened",
+			"entries": [
+				"Je kracht reikt tot in de geest van een wezen en veroorzaakt valse waarnemingen."
+			],
+			"focus": "While focused on this discipline, you have advantage on Charisma ({@skill Deception}) checks.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Distracting Figment",
+					"entries": [
+						"Kies als actie één wezen dat je kunt zien binnen 18 meter van je. Het doelwit moet een intelligentie reddingsworp doen. Bij een mislukte reddingsworp krijgt het {@scaledamage 1d10|1-7|1d10|psi} psychische schade per uitgegeven psi-punt en denkt het een bedreigend wezen net buiten zijn gezichtsveld waar te nemen; tot het einde van je volgende beurt kan het geen reacties gebruiken, en melee aanvalsrollen tegen het hebben voordeel. Als de save slaagt, krijgt hij half zoveel schade."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Phantom Foe",
+					"entries": [
+						"Kies als actie één wezen dat je kunt zien binnen 18 meter van je. Het doelwit moet een intelligentie reddingsworp doen. Als de redding mislukt, neemt het een afschuwelijk wezen naast zich waar totdat je {@status concentration} eindigt. Gedurende deze tijd kan het doelwit geen reacties nemen en neemt het {@damage 1d8} psychische schade aan het begin van elke beurt. Het doelwit kan de reddingsworp herhalen aan het einde van elk van zijn beurten, waarbij het effect op zichzelf eindigt als hij slaagt. Je kunt de schade met {@scaledamage 1d8|3-7|1d8|psi} verhogen voor elk extra psi-punt dat je aan de vaardigheid besteedt."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Phantom Betrayal",
+					"entries": [
+						"Als een actie plant je paranoia waanideeën in de geest van een wezen. Kies een wezen dat je kunt zien binnen 18 meter van je. Het doelwit moet slagen in een reddingsworp van intelligentie, of totdat je {@status concentration} eindigt, moet het zijn bondgenoten aanvallen en andere schadelijke effecten toedienen. Het doelwit kan de reddingsworp herhalen aan het einde van elk van zijn beurten en het effect op zichzelf beëindigen als hij slaagt. Een wezen is immuun voor deze vaardigheid als het immuun is voor {@condition charmed}."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Phantom Riches",
+					"entries": [
+						"Als een actie plant je het fantoom van een zeer gewenst voorwerp in de geest van een wezen. Kies een wezen dat je kunt zien binnen 18 meter van je vandaan. Het doelwit moet een reddingsslag op intelligentie uitvoeren. Als je niet slaagt, krijg je gedeeltelijke controle over het gedrag van het doelwit totdat je {@status concentration} eindigt; het doelwit beweegt zoals jij wilt op elk van zijn beurten, terwijl het denkt dat het het fantoomobject dat het begeert achtervolgt. Als het geen schade heeft opgelopen sinds zijn laatste beurt, kan het zijn actie alleen gebruiken om het object te bewonderen dat jij in zijn perceptie hebt gecreëerd. Het doelwit kan de reddingsworp herhalen aan het einde van elk van zijn beurten en het effect op zichzelf beëindigen als hij slaagt."
+					]
+				}
+			]
+		},
+		{
+			"name": "Telepathic Contact",
+			"source": "UATheMysticClass",
+			"page": 26,
+			"type": "D",
+			"order": "Awakened",
+			"entries": [
+				"Door psionische kracht te kanaliseren, krijg je de mogelijkheid om andere wezens te beheersen door jouw wil te vervangen door die van hen."
+			],
+			"focus": "While focused on this discipline, you gain the ability to use your Telepathy class feature with up to six creatures at once. If you don't have that feature from the mystic class, you instead gain it while focused on this discipline.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Exacting Query",
+					"entries": [
+						"Als actie richt je je op een wezen waarmee je via telepathie kunt communiceren. Het doelwit moet een intelligentie-redding doen. Als je niet slaagt, beantwoordt het doelwit naar waarheid een vraag die je hem via telepathie stelt. Bij een succesvolle redding is het doelwit niet beïnvloed en kun je deze vaardigheid pas weer gebruiken als je een lange rustpauze hebt gehad. Een wezen is immuun voor deze vaardigheid als het immuun is voor zijn {@condition charmed}."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Occluded Mind",
+					"entries": [
+						"Als actie richt je je op een wezen waarmee je via telepathie kunt communiceren. Het doelwit moet een intelligentie-redding doen. Als je niet slaagt, gelooft het doelwit de komende 5 minuten een uitspraak van jouw keuze die je via telepathie met hem communiceert. De uitspraak mag maximaal tien woorden lang zijn en moet jou, een wezen of een voorwerp dat het doelwit kan zien, beschrijven. Bij een succesvolle save, is het doelwit niet beïnvloed, en je kunt deze vaardigheid niet opnieuw gebruiken totdat je een lange rustperiode hebt beëindigd. Een wezen is immuun voor deze vaardigheid als het immuun is voor zijn {@condition charmed}."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Broken Will",
+					"entries": [
+						"Als actie richt je je op een wezen waarmee je via telepathie kunt communiceren. Het doelwit moet een intelligentie-redding doen. Als je niet slaagt, kies je de beweging en actie van het doelwit tijdens zijn volgende beurt. Bij een succesvolle save is het doelwit onaangetast en kun je deze vaardigheid niet meer op hem gebruiken totdat je een lange rustpauze hebt voltooid. Een wezen is immuun voor deze vaardigheid als het immuun is voor zijn {@condition charmed}."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Psychic Grip",
+					"entries": [
+						"Als een actie richt je je op één wezen dat je kunt zien binnen 18 meter van je. Het doelwit moet slagen in een reddingsworp van intelligentie, of het is {@condition paralyzed} tot je {@status concentration} eindigt. Aan het einde van elke beurt kan het de reddingsworp herhalen. Als het slaagt, eindigt dit effect. Als de reddingsworp mislukt, kun je je reactie gebruiken om het doelwit tot de helft van zijn snelheid te dwingen, ook al is het {@condition paralyzed}."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Psychic Domination",
+					"entries": [
+						"Als een actie richt je je op één wezen dat je kunt zien binnen 18 meter van je. Het doelwit moet slagen voor een reddingsworp van intelligentie, of je kiest de acties en bewegingen van het wezen tijdens zijn beurten totdat je {@status concentration} eindigt. Aan het einde van elke beurt kan het de reddingsworp herhalen, waarbij het effect op zichzelf eindigt als het slaagt. Een wezen is immuun voor deze vaardigheid als het immuun is voor {@condition charmed}."
+					]
+				}
+			]
+		},
+		{
+			"name": "Third Eye",
+			"source": "UATheMysticClass",
+			"page": 26,
+			"type": "D",
+			"order": "Nomad",
+			"entries": [
+				"Je creëert een derde, psychisch oog in je geest, dat je in de wereld werpt. Het kanaliseert gedachten en kennis terug naar jou, en versterkt je zintuigen enorm."
+			],
+			"focus": "While focused on this discipline, you have darkvision with a range of 60 feet. If you already have darkvision with that range or greater, increase its range by 10 feet.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Tremorsense",
+					"entries": [
+						"Als bonusactie krijg je tremorsense met een straal van 9 meter, die duurt tot je {@status concentration} eindigt."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Unwavering Eye",
+					"entries": [
+						"Als een bonus actie, krijg je voordeel op wijsheid controles voor 1 minuut."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Piercing Sight",
+					"entries": [
+						"Als bonusactie krijg je het vermogen om door voorwerpen tot 0,3 meter dik binnen 9 meter van je te kijken. Dit zicht duurt tot je {@status concentration} eindigt."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Truesight",
+					"entries": [
+						"Als bonusactie krijg je truesight met een straal van 9 meter, dat duurt tot je {@status concentration} eindigt."
+					]
+				}
+			]
+		}
+	]
+}

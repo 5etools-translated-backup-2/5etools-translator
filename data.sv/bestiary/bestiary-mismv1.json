@@ -1,0 +1,921 @@
+{
+	"monster": [
+		{
+			"name": "Coral",
+			"isNamedCreature": true,
+			"source": "MisMV1",
+			"page": 4,
+			"size": [
+				"L"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 135,
+				"formula": "18d10 + 36"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": 60,
+				"swim": 60
+			},
+			"str": 20,
+			"dex": 13,
+			"con": 15,
+			"int": 14,
+			"wis": 18,
+			"cha": 19,
+			"save": {
+				"dex": "+5",
+				"con": "+6",
+				"wis": "+8",
+				"cha": "+8"
+			},
+			"skill": {
+				"arcana": "+6",
+				"insight": "+8",
+				"perception": "+8"
+			},
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 18,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Primordial",
+				"Sylvan"
+			],
+			"cr": "9",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Coral har fördel vid räddningsprov mot besvärjelser och andra magiska effekter."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Coral gör två hovattacker och använder Svansdunk."
+					]
+				},
+				{
+					"name": "Hoof",
+					"entries": [
+						"{@atk mw} {@hit 9} att träffa, räckvidd 1,5 m., ett mål. {@h}12 ({@damage 2d6 + 5}) knytnävsslag."
+					]
+				},
+				{
+					"name": "Tail Thump",
+					"entries": [
+						"Coral slår ner sin svans och släpper lös en explosion av magisk kraft mot en varelse som hon kan se inom 18 meter från henne. Målet måste göra ett {@dc 16} räddningsslag i dexteritet. Om räddningsslaget misslyckas tar målet 22 ({@damage 4d10}) kraftskador och får {@condition prone}-tillståndet. Vid ett lyckat räddningsslag tar målet bara hälften så mycket skada. Om denna skada reducerar målet till 0 träffpunkter, dör målet och dess kropp reduceras till fint damm."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Bubbles of Whimsy (2/Day)",
+					"entries": [
+						"Coral producerar en ström av magiska bubblor från sitt horn. Dessa bubblor flyter mot en varelse som Coral kan se inom 18 meter från sig själv. Slå ett {@dice d6} för att avgöra bubblornas effekt:",
+						{
+							"type": "list",
+							"items": [
+								{
+									"name": "1-2: Bolstering Treat",
+									"type": "item",
+									"entries": [
+										"Bubblorna förvandlas till {@dice 1d4} kakor som dyker upp i målets utrymme. Målet får 11 ({@dice 2d8 + 2}) tillfälliga träffpunkter om det omedelbart använder sin reaktion för att äta en av kakorna. Eventuella överblivna kakor är utsökta men ger inga fördelar."
+									]
+								},
+								{
+									"name": "3-4: Sparkle Burst",
+									"type": "item",
+									"entries": [
+										"Bubblorna förvandlas till glitter som virvlar runt målet innan det spricker utåt. Varje varelse inom 1,5 meter från målet måste lyckas med ett {@dc 16} konstitutionellt räddningsslag eller drabbas av {@condition blinded} tillståndet tills början av Korals nästa tur."
+									]
+								},
+								{
+									"name": "5-6: Stink Bomb Shield",
+									"type": "item",
+									"entries": [
+										"Bubblorna förvandlas till ett illaluktande gasmoln som omger och skyddar målet. Målet har halv täckning tills gasen försvinner i början av Coral's nästa tur."
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Gift of Speech (1/Day)",
+					"entries": [
+						"Coral riktar in sig på ett odjur som hon kan se inom 3 meter från sig själv. Målet får förmågan att förstå och tala Common eller Sylvan (Corals val) i 10 minuter."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"P",
+				"S"
+			],
+			"damageTags": [
+				"B",
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded",
+				"prone"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dandylion",
+			"source": "MisMV1",
+			"page": 6,
+			"size": [
+				"L"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 90,
+				"formula": "12d10 + 24"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 22,
+			"dex": 19,
+			"con": 14,
+			"int": 16,
+			"wis": 17,
+			"cha": 18,
+			"save": {
+				"str": "+9",
+				"cha": "+7"
+			},
+			"skill": {
+				"nature": "+9",
+				"perception": "+6",
+				"survival": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 16,
+			"languages": [
+				"Common",
+				"Sylvan"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Dandylion kastar en av följande besvärjelser, som inte kräver några materiella komponenter och använder karisma som besvärjelseförmåga (besvärjelseräddning {@dc 15}):"
+					],
+					"will": [
+						"{@spell druidcraft}",
+						"{@spell guidance}",
+						"{@spell purify food and drink}"
+					],
+					"daily": {
+						"1": [
+							"{@spell speak with plants}"
+						],
+						"2e": [
+							"{@spell entangle}",
+							"{@spell goodberry}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Dandylion har fördel i räddningsprov mot besvärjelser och andra magiska effekter."
+					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"Dandylionen har fördel i ett attackkast mot en varelse om minst en av dandylionens allierade befinner sig inom 1,5 meter från varelsen och den allierade inte har {@condition incapacitated} villkoret."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Dandylion gör en bitattack och en kloattack."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 9} att träffa, räckvidd 1,5 m., ett mål. {@h}13 ({@damage 2d6 + 6}) genomträngande skada."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 9} att träffa, räckvidd 1,5 m., ett mål. {@h}20 ({@damage 4d6 + 6}) skärande skada. Om dandylionen rörde sig minst 6 meter rakt mot målet omedelbart före träffen, måste målet lyckas med ett {@dc 17} styrkebesparande kast eller ha {@condition prone} villkoret. Om målet har {@condition prone} villkoret kan dandylionen göra en bitattack mot det som en bonushandling."
+					]
+				},
+				{
+					"name": "Rejuvenating Seedpods (2/Day)",
+					"entries": [
+						"Dandylionen släpper en skur av fröställningar från sin svans och fyller en sfär med 3 meters radie centrerad på sig själv. Varje varelse som dandylionen väljer i sfären kan omedelbart avsluta ett av följande villkor för sig själv (varelsens val): {@condition blinded}, {@condition deafened}, {@condition paralyzed}, eller {@condition poisoned}. Dessutom berikas all jord i sfärens område, vilket återställer vissnad vegetation i området till full hälsa och får alla grödor i området att producera dubbelt så stor skörd som normalt under nästa år."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Roar of Pride",
+					"entries": [
+						"När en varelse inom 18 meter från dandylionen träffar den med ett attackkast kan dandylionen släppa lös ett ursinnigt vrål. Varelsen som utlöste denna reaktion måste lyckas med ett {@dc 15} Visdomsparningsslag eller drabbas av {@condition frightened} tillståndet till slutet av dandylionens nästa tur."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance",
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"conditionInflictSpell": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"strength",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Rain",
+			"isNamedCreature": true,
+			"source": "MisMV1",
+			"page": 8,
+			"size": [
+				"S"
+			],
+			"type": "celestial",
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 60,
+				"formula": "11d6 + 22"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 120
+			},
+			"str": 10,
+			"dex": 11,
+			"con": 14,
+			"int": 14,
+			"wis": 18,
+			"cha": 15,
+			"save": {
+				"dex": "+3",
+				"con": "+5",
+				"wis": "+7"
+			},
+			"skill": {
+				"acrobatics": "+3",
+				"insight": "+7",
+				"stealth": "+3"
+			},
+			"passive": 14,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"fire",
+				"poison",
+				"radiant"
+			],
+			"conditionImmune": [
+				"charmed",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"Celestial",
+				"Common"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Fiery Wings",
+					"entries": [
+						"Rains vingar är gjorda av eld, och de sprider starkt ljus ut till 4,5 meter och svagt ljus i ytterligare 4,5 meter. I början av varje Rains tur drabbas varje varelse som Rain väljer inom 1,5 meter från henne av 3 ({@damage 1d6}) eldskador. En varelse som träffar Rain med en närstridsattack drabbas av 3 ({@damage 1d6}) eldskador."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Regn har fördel vid räddningsprov mot trollformler och andra magiska effekter."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Regn orsakar två Hoof-attacker."
+					]
+				},
+				{
+					"name": "Hoof",
+					"entries": [
+						"{@atk mw} {@hit 3} att träffa, räckvidd 1,5 m., ett mål. {@h}5 ({@damage 2d4}) knytnävsslag."
+					]
+				},
+				{
+					"name": "Haloed Horn Burst {@recharge 5}",
+					"entries": [
+						"Rain använder sitt halohorn för att framkalla en av följande magiska effekter:"
+					]
+				},
+				{
+					"name": "Glitterstorm",
+					"entries": [
+						"Regn sänder ut en regnbågsstråle i en 9 meter lång linje som är 1,5 meter bred. Varje varelse i området måste göra ett {@dc 15} räddningsslag i dexteritet, och tar 21 ({@damage 6d6}) strålningsskador vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat; varelser av ond inriktning har nackdel vid detta räddningsslag. Om skadan från denna effekt reducerar en varelse till 0 träffpunkter, dör varelsen och dess kropp förvandlas till glittrande blommor."
+					]
+				},
+				{
+					"name": "Healing Rainbows",
+					"entries": [
+						"Rain släpper ut en våg av föryngrande mångfärgat ljus i en kon på 9 meter. Varje varelse som Rain väljer i det området återfår 18 ({@dice 4d8}) träffpunkter."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Nimble Escape",
+					"entries": [
+						"Rain utför antingen åtgärden Disengage eller Hide."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CE"
+			],
+			"damageTags": [
+				"B",
+				"F",
+				"R"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Scrapper",
+			"source": "MisMV1",
+			"page": 10,
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 126,
+				"formula": "12d10 + 60"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 20,
+			"dex": 10,
+			"con": 20,
+			"int": 3,
+			"wis": 10,
+			"cha": 1,
+			"skill": {
+				"perception": "+6"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"resist": [
+				"lightning"
+			],
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Electrified Chassis",
+					"entries": [
+						"En varelse som träffar skrapan med en närstridsattack inom 1,5 meter från den drabbas av 19 ({@damage 3d12}) blixtskador."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Skrotaren gör två Spike Punch-attacker. Den kan ersätta en av dessa med en Wires-attack."
+					]
+				},
+				{
+					"name": "Spike Punch",
+					"entries": [
+						"{@atk mw} {@hit 8} att träffa, räckvidd 1,5 m., ett mål. {@h}14 ({@damage 2d8 + 5}) knytnävsslag plus 5 ({@damage 1d10}) genomborrande skador."
+					]
+				},
+				{
+					"name": "Wires",
+					"entries": [
+						"{@atk mw} {@hit 8} för att träffa, räckvidd 6 m., en stor eller mindre varelse. {@h}Målet har {@condition grappled} villkoret (fly {@dc 16}) och måste lyckas med ett {@dc 16} styrkebesparande kast eller dras in i ett ledigt utrymme inom 1,5 meter från skrotaren och ta 19 ({@damage 3d12}) blixtskador. Skraparen kan bara ha en varelse {@condition grappled} på detta sätt åt gången."
+					]
+				},
+				{
+					"name": "Eye Beam {@recharge 5}",
+					"entries": [
+						"Skrotaren skjuter en magisk stråle från sitt förlängda öga mot en varelse den kan se inom 36 meter från sig själv. Målet måste göra ett {@dc 16} räddningsslag i Dexterity, och tar 44 ({@damage 8d10}) kraftskador om räddningsslaget misslyckas, eller hälften så mycket skada om det lyckas."
+					]
+				}
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"L",
+				"O",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Seth the Shapeshifting Dragon",
+			"isNamedCreature": true,
+			"source": "MisMV1",
+			"page": 12,
+			"size": [
+				"M"
+			],
+			"type": "dragon",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				17
+			],
+			"hp": {
+				"average": 153,
+				"formula": "18d8 + 72"
+			},
+			"speed": {
+				"walk": 50,
+				"swim": 50
+			},
+			"str": 16,
+			"dex": 25,
+			"con": 19,
+			"int": 13,
+			"wis": 15,
+			"cha": 14,
+			"save": {
+				"str": "+7",
+				"dex": "+11",
+				"con": "+8"
+			},
+			"skill": {
+				"perception": "+6",
+				"stealth": "+11"
+			},
+			"senses": [
+				"blindsight 30 ft.",
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"resist": [
+				"cold",
+				"fire"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"grappled",
+				"poisoned",
+				"restrained"
+			],
+			"languages": [
+				"Aquan",
+				"Common",
+				"Draconic"
+			],
+			"cr": "10",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"Seth kan andas luft och vatten."
+					]
+				},
+				{
+					"name": "Invisible in Water",
+					"entries": [
+						"Seth har tillståndet {@condition invisible} när han är helt nedsänkt i vatten."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Seth gör en bitattack och två kloattacker."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 11} att träffa, räckvidd 3 m., ett mål. {@h}10 ({@damage 1d6 + 7}) genomträngande skada plus 9 ({@damage 2d8}) köldskada."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 11} att träffa, räckvidd 1,5 m., ett mål. {@h}14 ({@damage 2d6 + 7}) skärande skada."
+					]
+				},
+				{
+					"name": "Riptide Breath {@recharge 5}",
+					"entries": [
+						"Seth andas ut en ström av kallt vatten i en kon på 9 meter. Varje varelse i området måste göra ett {@dc 16} Konstitutionsräddningsslag. Om räddningsslaget misslyckas tar varelsen 36 ({@damage 8d8}) i köldskada och har {@condition incapacitated}-tillståndet till slutet av sin nästa tur. Vid ett lyckat räddningsslag tar varelsen bara hälften så mycket skada."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Seth förvandlas magiskt till en liten humanoid eller ett odjur som är pyttelitet eller litet, men behåller sin spelstatistik (förutom sin storlek). Denna förvandling upphör om Seth reduceras till 0 träffpunkter eller använder en annan bonusåtgärd för att avsluta den."
+					]
+				},
+				{
+					"name": "Superspeed (2/Day)",
+					"entries": [
+						"Seths hastighet fördubblas så länge han bibehåller {@status concentration} (som om {@status concentration||concentrating} på en besvärjelse). Medan hans hastighet ökas på detta sätt görs alla attackkast mot honom med nackdel, och han blir delvis okroppslig, vilket gör att han kan röra sig genom varelser och föremål som om de vore svår terräng. Seth tar 5 ({@damage 1d10}) kraftskador om han avslutar sin tur inuti ett föremål."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"AQ",
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"C",
+				"O",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sheldon the Blueberry Dragon",
+			"isNamedCreature": true,
+			"source": "MisMV1",
+			"page": 14,
+			"size": [
+				"L"
+			],
+			"type": "dragon",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 142,
+				"formula": "15d10 + 60"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 60
+			},
+			"str": 19,
+			"dex": 13,
+			"con": 18,
+			"int": 17,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"dex": "+4",
+				"con": "+7",
+				"int": "+6"
+			},
+			"skill": {
+				"acrobatics": "+7",
+				"athletics": "+7",
+				"performance": "+6"
+			},
+			"senses": [
+				"blindsight 30 ft.",
+				"darkvision 120 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"force",
+				"psychic"
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"telepathy 120 ft."
+			],
+			"cr": "7",
+			"spellcasting": [
+				{
+					"name": "Spellcasting (Psionics)",
+					"headerEntries": [
+						"Sheldon kastar en av följande besvärjelser, som inte kräver några besvärjelsekomponenter och använder Intelligens som besvärjelseförmåga (besvärjelseräddning {@dc 14}):"
+					],
+					"will": [
+						"{@spell light}",
+						"{@spell mage hand} (the hand is invisible)"
+					],
+					"daily": {
+						"1e": [
+							"{@spell dimension door}",
+							"{@spell telekinesis}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Space Dweller",
+					"entries": [
+						"Sheldon kan andas normalt i vakuum."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Sheldon gör antingen två bitattacker, två blåbärsflingattacker eller en av varje."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} att träffa, räckvidd 1,5 m., ett mål. {@h}7 ({@damage 1d6 + 4}) genomträngande skada plus 4 ({@damage 1d8}) psykisk skada."
+					]
+				},
+				{
+					"name": "Blueberry Fling",
+					"entries": [
+						"{@atk rw} {@hit 7} att träffa, räckvidd 9 m., en varelse. {@h}11 ({@damage 2d6 + 4}) blåbärsskada."
+					]
+				},
+				{
+					"name": "Jetstream Breath {@recharge 5}",
+					"entries": [
+						"Sheldon andas ut en linje av magisk vind som är 18 meter lång och 1,5 meter bred. Varje varelse i området måste göra ett {@dc 15} räddningsslag i styrka. Om räddningskastet misslyckas tar varelsen 21 ({@damage 6d6}) kraftskador, knuffas 4,5 meter bort från Sheldon, och får {@condition prone} tillståndet. Vid ett lyckat räddningsslag tar varelsen bara hälften så mycket skada."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Wind Dash (2/Day)",
+					"entries": [
+						"Sheldon åkallar en kraftig vindpust och flyger upp till sin hastighet. Denna rörelse framkallar inte möjlighetsattacker. I slutet av denna rörelse måste varje varelse inom 1,5 meter från Sheldon lyckas med ett {@dc 15} styrkebesparingsslag eller få {@condition prone} villkoret, när vinden blåser runt Sheldon."
+					]
+				}
+			],
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"TP"
+			],
+			"damageTags": [
+				"O",
+				"P",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"conditionInflictSpell": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

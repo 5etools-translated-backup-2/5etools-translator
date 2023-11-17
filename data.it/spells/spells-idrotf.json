@@ -1,0 +1,96 @@
+{
+	"spell": [
+		{
+			"name": "Create Magen",
+			"source": "IDRotF",
+			"page": 318,
+			"level": 7,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "una fiala di argento vivo del valore di 500 gp e una bambola umana a grandezza naturale, che l'incantesimo consuma, e un'intricata asta di cristallo del valore di almeno 1.500 gp che non viene consumata",
+					"cost": 50000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Mentre si lancia l'incantesimo, si pone una fiala di argento vivo nel petto di una bambola umana a grandezza naturale imbottita di cenere o polvere. Poi si ricuce la bambola e si fa gocciolare il proprio sangue su di essa. Alla fine del lancio, si tocca la bambola con una bacchetta di cristallo, trasformandola in un {@filter magen|bestiary|search=magen|source=IDRotF} vestito con ciò che la bambola indossava. Il tipo di magen viene scelto da voi durante il lancio dell'incantesimo. Vedere {@adventure appendix C|IDRotF|21} per i diversi tipi di magen e le loro statistiche.",
+				"Quando il magen appare, i punti ferita massimi diminuiscono di un ammontare pari al punteggio di sfida del magen (riduzione minima di 1). Solo un incantesimo {@spell wish} può annullare questa riduzione dei punti ferita.",
+				"Ogni magen che crei con questo incantesimo obbedisce ai tuoi comandi senza fare domande."
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Frost Fingers",
+			"source": "IDRotF",
+			"page": 318,
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 15
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Un'esplosione di freddo gelido dalla punta delle dita in un cono di 4,5 metri. Ogni creatura in quell'area deve effettuare un tiro salvezza di Costituzione, subendo {@damage 2d8} danni da freddo se il tiro fallisce o la metà dei danni se riesce.",
+				"Il freddo congela i liquidi non magici nella zona che non vengono indossati o trasportati."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando si lancia questo incantesimo utilizzando uno slot di 2° livello o superiore, i danni aumentano del {@dice 1d8} per ogni livello di slot superiore al 1°."
+					]
+				}
+			],
+			"damageInflict": [
+				"cold"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"areaTags": [
+				"N"
+			]
+		}
+	]
+}

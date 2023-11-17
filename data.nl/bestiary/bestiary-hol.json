@@ -1,0 +1,374 @@
+{
+	"monster": [
+		{
+			"name": "Apprentice",
+			"source": "HoL",
+			"page": 201,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 7,
+				"formula": "2d8 - 2"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 10,
+			"con": 9,
+			"int": 13,
+			"wis": 11,
+			"cha": 12,
+			"save": {
+				"int": "+3"
+			},
+			"skill": {
+				"arcana": "+3",
+				"history": "+3"
+			},
+			"passive": 10,
+			"languages": [
+				"any one language (usually Common)"
+			],
+			"pbNote": "+2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Je spreekt een van de volgende tovenaarsspreuken uit (spell save {@dc 11}), waarbij je intelligentie gebruikt als tovervaardigheid:"
+					],
+					"will": [
+						"{@spell minor illusion}",
+						{
+							"entry": "{@spell Fire Bolt}",
+							"hidden": true
+						}
+					],
+					"daily": {
+						"2": [
+							"{@spell grease}"
+						],
+						"2e": [
+							{
+								"entry": "{@spell Burning Hands}",
+								"hidden": true
+							}
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"action": [
+				{
+					"name": "Quarterstaff",
+					"entries": [
+						"{@atk mw} {@hit 1} te raken, reikwijdte 1,5 m., één doelwit. {@h}2 ({@damage 1d6 - 1}) kneuzing schade, of 3 ({@damage 1d8 - 1}) kneuzing schade indien gebruikt met twee handen."
+					]
+				},
+				{
+					"name": "Burning Hands (1st-Level Spell; 2/Day)",
+					"entries": [
+						"Je schiet een vuurkegel van 4,5 meter ver. Elk wezen in dat gebied moet een {@dc 11} vaardigheidsreddende worp doen. Een wezen krijgt 10 ({@damage 3d6}) brandschade als hij niet slaagt, of de helft als hij slaagt. Het vuur ontsteekt alle brandbare voorwerpen in het gebied die niet gedragen worden."
+					]
+				},
+				{
+					"name": "Fire Bolt (Cantrip)",
+					"entries": [
+						"{@atk rs} Spreukaanval van afstand: {@hit 3} om te raken, bereik 36 m., één doelwit. {@h}5 ({@damage 1d10}) brandschade. Een brandbaar voorwerp geraakt door deze spreuk ontbrandt als het niet gedragen wordt."
+					]
+				}
+			],
+			"attachedItems": [
+				"quarterstaff|phb"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"B",
+				"F"
+			],
+			"damageTagsSpell": [
+				"F"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Disciple",
+			"source": "HoL",
+			"page": 201,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"ac": [
+				{
+					"ac": 11,
+					"from": [
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 9,
+				"formula": "2d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 9,
+			"con": 10,
+			"int": 11,
+			"wis": 13,
+			"cha": 9,
+			"save": {
+				"wis": "+3"
+			},
+			"skill": {
+				"perception": "+3",
+				"religion": "+2"
+			},
+			"passive": 13,
+			"languages": [
+				"any one language (usually Common)"
+			],
+			"pbNote": "+2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Je cast een van de volgende cleric spreuken (spell save {@dc 11}), waarbij je Wisdom gebruikt als je spellcasting ability:"
+					],
+					"will": [
+						"{@spell guidance}",
+						{
+							"entry": "{@spell Sacred Flame}",
+							"hidden": true
+						}
+					],
+					"daily": {
+						"2": [
+							"{@spell cure wounds}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"action": [
+				{
+					"name": "Mace",
+					"entries": [
+						"{@atk mw} {@hit 3} te raken, reikwijdte 1,5 m., één doelwit. {@h}4 ({@damage 1d6 + 1}) kneuzing schade."
+					]
+				},
+				{
+					"name": "Sacred Flame (Cantrip)",
+					"entries": [
+						"Je richt je op één wezen dat je kunt zien binnen 18 meter van je. Het doelwit moet slagen in een {@dc 11} reddingsworp of 4 ({@damage 1d8}) stralingsschade oplopen. Het doelwit krijgt geen voordeel van dekking voor deze reddingsworp."
+					]
+				}
+			],
+			"attachedItems": [
+				"mace|phb"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"B",
+				"R"
+			],
+			"damageTagsSpell": [
+				"R"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Sneak",
+			"source": "HoL",
+			"page": 201,
+			"size": [
+				"S"
+			],
+			"type": "humanoid",
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 9,
+				"formula": "2d6 + 2"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 13,
+			"con": 12,
+			"int": 11,
+			"wis": 12,
+			"cha": 9,
+			"save": {
+				"dex": "+3"
+			},
+			"skill": {
+				"sleight of hand": "+3",
+				"stealth": "+3"
+			},
+			"passive": 11,
+			"languages": [
+				"any one language (usually Common)"
+			],
+			"pbNote": "+2",
+			"action": [
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 3} om te raken, reikwijdte 1,5 m. of bereik 20/18 m., één doelwit. {@h}3 ({@damage 1d4 + 1}) doordringende schade."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Disengage",
+					"entries": [
+						"Je neemt de actie Uitschakelen."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Squire",
+			"source": "HoL",
+			"page": 201,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 11,
+				"formula": "2d8 + 2"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 10,
+			"con": 12,
+			"int": 8,
+			"wis": 11,
+			"cha": 9,
+			"save": {
+				"str": "+3"
+			},
+			"skill": {
+				"athletics": "+3"
+			},
+			"passive": 10,
+			"languages": [
+				"any one language (usually Common)"
+			],
+			"pbNote": "+2",
+			"action": [
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 3} te raken, reikwijdte 1,5 m., één doelwit. {@h}5 ({@damage 1d8 + 1}) schade door snijden, of 6 ({@damage 1d10 + 1}) schade door snijden indien gebruikt met twee handen."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Shove",
+					"entries": [
+						"Terwijl je een schild hanteert, probeer je één wezen binnen 1,5 meter van je af te duwen."
+					]
+				}
+			],
+			"attachedItems": [
+				"longsword|phb"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true
+		}
+	]
+}

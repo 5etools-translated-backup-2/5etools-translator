@@ -1,0 +1,1671 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM",
+				"CoS"
+			]
+		}
+	},
+	"monster": [
+		{
+			"name": "Avacyn",
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Solar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Solar",
+						"with": "Avacyn",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Moonsilver Spear",
+							"entries": [
+								"Ein Engel des Fluges des Mondensilbers schwingt einen Speer, der aus einem Splitter des Helvaults gefertigt ist. Trefferpunkte, die durch den Schaden dieser Waffe verloren gehen, können nur durch eine kurze oder lange Pause wiedergewonnen werden, nicht aber durch Regeneration, Magie oder andere Mittel. Wenn der Engel einmal pro Runde eine Kreatur mit einem Angriff mit dieser Waffe trifft, kann er das Ziel verwunden. Zu Beginn jeder Runde der verwundeten Kreatur erleidet sie {@damage 1d4} nekrotischen Schaden für jedes Mal, wenn der Engel sie verwundet hat, und kann dann einen {@dc 15} Rettungswurf auf die Konstitution machen, der bei einem Erfolg die Wirkung all dieser Verwundungen auf sie selbst beendet. Alternativ kann die verwundete Kreatur oder eine Kreatur in einem Umkreis von 1,5 Metern eine Aktion nutzen, um eine {@dc 15} Weisheitsprüfung ({@skill Medicine}) zu machen, die bei einem Erfolg die Wirkung solcher Wunden auf sie beendet."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Bruna",
+			"alias": [
+				"Light of Alabaster"
+			],
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Planetar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "planetar",
+						"with": "Bruna",
+						"flags": "i"
+					},
+					"_": {
+						"mode": "addSpells",
+						"will": [
+							"{@spell protection from evil and good}"
+						],
+						"daily": {
+							"1e": [
+								"{@spell dispel evil and good}"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Creepy Doll",
+			"source": "PSI",
+			"page": 25,
+			"size": [
+				"T"
+			],
+			"type": "construct",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 21,
+				"formula": "6d4 + 6"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 6,
+			"dex": 14,
+			"con": 13,
+			"int": 12,
+			"wis": 11,
+			"cha": 10,
+			"skill": {
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed"
+			],
+			"languages": [
+				"speaks and understands the languages known by its creator"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Die gruselige Puppe bleibt zwar unbeweglich, ist aber von einer gewöhnlichen, leblosen Puppe nicht zu unterscheiden."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Die gruselige Puppe führt einen Angriff mit ihrer Schere aus und benutzt einen psychischen Angriff."
+					]
+				},
+				{
+					"name": "Scissors",
+					"entries": [
+						"{@atk mw} {@hit 4} bis zum Treffer, Reichweite 1,5 m, ein Ziel. {@h}7 ({@damage 2d4 + 2}) Hiebschaden."
+					]
+				},
+				{
+					"name": "Psychic Assault",
+					"entries": [
+						"Die Gruselpuppe zielt auf eine Kreatur, die sie im Umkreis von 3 Metern sehen kann und die ein Gehirn hat. Das Ziel muss einen {@dc 12} Intelligenz-Rettungswurf bestehen oder 11 ({@damage 2d10}) psychischen Schaden erleiden. Auch bei einem Fehlschlag würfelst du {@dice 3d6}. Wenn die Summe den Intelligenzwert des Ziels erreicht oder übersteigt, wird dieser auf 0 reduziert. Das Ziel ist {@condition stunned}, bis es mindestens einen Punkt Intelligenz wiedererlangt, z.B. durch den {@spell greater restoration}-Zauber oder ähnliche Magie."
+					]
+				},
+				{
+					"name": "Body Exchange",
+					"entries": [
+						"Die Gruselpuppe beginnt einen Intelligenzwettbewerb mit einem {@condition incapacitated} Humanoiden im Umkreis von 1,5 Metern. Wenn sie den Wettbewerb gewinnt, übernimmt der Geist der Gruselpuppe den Körper des Ziels, während der Geist des Ziels in den Körper der Gruselpuppe versetzt wird. Die Gruselpuppe kontrolliert den Körper des Ziels vollständig. Sie behält ihre Ausrichtung, Intelligenz, Weisheit, Charisma und ihre Immunität gegen {@condition charmed} und {@condition frightened}. Ansonsten verwendet sie die Statistiken des besessenen Ziels, hat aber keinen Zugang zu dessen Wissen, Klassenmerkmalen oder Fertigkeiten. Das Ziel behält seine Ausrichtung, Intelligenz, Weisheit und Charisma, während es den Körper der Gruselpuppe bewohnt.",
+						"Der Körpertausch dauert so lange an, bis der Geist der Puppe durch Magie ausgetrieben wird. (Der {@spell dispel evil and good}-Zauber bewirkt dies, obwohl die Puppe nicht zu den Kreaturentypen gehört, deren Besitz dieser Zauber normalerweise beendet.) Der Körper und die Puppe müssen sich im Umkreis von 1,5 Metern befinden, damit der Effekt wirkt. Das Ziel ist für 24 Stunden nach dem Gewinn des Intelligenzwettbewerbs oder nach dem Ende des Austauschs immun gegen den Körpertausch dieser Puppe."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"S",
+				"Y"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"savingThrowForced": [
+				"intelligence"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Demonlord of Ashmouth",
+			"source": "PSI",
+			"page": 37,
+			"_copy": {
+				"name": "Horned Devil",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "devil",
+						"with": "demon"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"Der Dämon führt drei Nahkampfangriffe aus: zwei mit seiner Streitaxt und einen mit seinem Schwanz. Er kann \"Flamme schleudern\" anstelle eines Nahkampfangriffs einsetzen."
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Fork",
+							"items": {
+								"name": "Battleaxe",
+								"entries": [
+									"{@atk mw} {@hit 10} bis zum Treffer, Reichweite 3 m, ein Ziel. {@h}15 ({@damage 2d8 + 6}) Hiebschaden, oder 17 ({@damage 2d10 + 6}) Hiebschaden, wenn mit zwei Händen eingesetzt."
+								]
+							}
+						}
+					]
+				}
+			},
+			"damageTags": [
+				"F",
+				"P",
+				"S"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Flight Alabaster Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"_": {
+						"mode": "addSpells",
+						"will": [
+							"{@spell protection from evil and good}"
+						],
+						"daily": {
+							"1e": [
+								"{@spell dispel evil and good}"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flight Goldnight Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Goldnight Menace",
+							"entries": [
+								"Als Aktion kann ein Engel des Fluges Goldnacht die Herzen seiner Feinde mit Angst erfüllen. Jede Kreatur der Wahl des Engels, die sich innerhalb von 36 Metern um ihn herum befindet und ihn wahrnimmt, muss einen Rettungswurf in Weisheit bestehen oder wird 1 Minute lang {@condition frightened}. Der DC für diesen Rettungswurf ist derselbe wie für die Eigenschaft Innate Spellcasting des Engels. Eine Kreatur kann den Rettungswurf am Ende jeder ihrer Runden wiederholen, wobei der Effekt bei einem Erfolg für sie selbst endet. Wenn der Rettungswurf einer Kreatur erfolgreich ist oder der Effekt für sie endet, ist die Kreatur für die nächsten 24 Stunden immun gegen die Goldnacht-Bedrohung des Engels."
+							]
+						}
+					}
+				}
+			},
+			"cr": "11",
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flight of Moonsilver Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Moonsilver Spear",
+							"entries": [
+								"Ein Engel des Fluges des Mondensilbers schwingt einen Speer, der aus einem Splitter des Helvaults gefertigt ist. Trefferpunkte, die durch den Schaden dieser Waffe verloren gehen, können nur durch eine kurze oder lange Pause wiedergewonnen werden, nicht aber durch Regeneration, Magie oder andere Mittel. Wenn der Engel einmal pro Runde eine Kreatur mit einem Angriff mit dieser Waffe trifft, kann er das Ziel verwunden. Zu Beginn jeder Runde der verwundeten Kreatur erleidet sie {@damage 1d4} nekrotischen Schaden für jedes Mal, wenn der Engel sie verwundet hat, und kann dann einen {@dc 15} Rettungswurf auf die Konstitution machen, der bei einem Erfolg die Wirkung all dieser Verwundungen auf sie selbst beendet. Alternativ kann die verwundete Kreatur oder eine Kreatur in einem Umkreis von 1,5 Metern eine Aktion nutzen, um eine {@dc 15} Weisheitsprüfung ({@skill Medicine}) zu machen, die bei einem Erfolg die Wirkung solcher Wunden auf sie beendet."
+							]
+						}
+					}
+				}
+			},
+			"damageTags": [
+				"B",
+				"N",
+				"R"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Geist",
+			"source": "PSI",
+			"page": 19,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 45,
+				"formula": "10d8"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": 40
+			},
+			"str": 7,
+			"dex": 13,
+			"con": 10,
+			"int": 10,
+			"wis": 12,
+			"cha": 17,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"acid",
+				"fire",
+				"lightning",
+				"thunder",
+				"bludgeoning"
+			],
+			"immune": [
+				"cold",
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"grappled"
+			],
+			"languages": [
+				"any languages it knew in life"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Ethereal Sight",
+					"entries": [
+						"Der Geist kann 18 Meter weit in die ätherische Dimension sehen, wenn er sich in der materiellen Dimension befindet, und umgekehrt."
+					]
+				},
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"Der Geist kann sich durch andere Kreaturen und Objekte bewegen, als ob sie {@quickref difficult terrain||3} wären. Er erleidet 5 ({@dice 1d10}) Kraftschaden, wenn er seinen Zug innerhalb eines Objekts beendet."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Withering Touch",
+					"entries": [
+						"{@atk mw} {@hit 5} bis Treffer, Reichweite 1,5 m, ein Ziel {@h}17 ({@damage 4d6 + 3}) nekrotischer Schaden."
+					]
+				},
+				{
+					"name": "Etherealness",
+					"entries": [
+						"Der Geist betritt die Ätherische Dimension von der Materiellen Dimension aus oder umgekehrt. Er ist in der Materiellen Dimension sichtbar, während er sich in der Ätherischen Dimension befindet, und umgekehrt, aber er kann nichts in der anderen Dimension beeinflussen oder von ihr beeinflusst werden."
+					]
+				},
+				{
+					"name": "Possession {@recharge}",
+					"entries": [
+						"Eine Kreatur, die der Geist im Umkreis von 1,5 Metern sehen kann, muss einen {@dc 13} Charisma-Rettungswurf bestehen oder vom Geist besessen werden; der Geist verschwindet dann, und das Ziel ist {@condition incapacitated} und verliert die Kontrolle über seinen Körper. Der Geist kontrolliert nun den Körper, beraubt das Ziel aber nicht seines Bewusstseins. Der Geist kann von keinem Angriff, Zauber oder anderen Effekt getroffen werden, außer von solchen, die Untote verwandeln, und er behält seine Ausrichtung, Intelligenz, Weisheit, Charisma und Immunität gegen {@condition charmed} und {@condition frightened}. Ansonsten verwendet er die Statistiken des besessenen Ziels, erhält aber keinen Zugang zu dessen Wissen, Klassenmerkmalen oder Fertigkeiten. Die Besessenheit dauert an, bis der Körper auf 0 Trefferpunkte fällt, der Geist sie als Bonusaktion beendet oder der Geist durch einen Effekt wie den {@spell dispel evil and good}-Zauber verwandelt oder vertrieben wird. Wenn die Besessenheit endet, taucht der Geist in einem unbesetzten Raum innerhalb von 1,5 Metern um den Körper wieder auf. Das Ziel ist 24 Stunden lang immun gegen die Besessenheit dieses Geistes, nachdem es den Rettungswurf bestanden hat oder die Besessenheit endet. Der Geist kann stattdessen den Leichnam einer Kreatur anvisieren und seine eigene Lebenskraft nutzen, um den Leichnam als Zombie zu beleben. Der belebte Leichnam verwendet Zombie-Statistiken und kehrt zum Tod zurück, wenn der Geist die Besessenheit beendet."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Geist Powers",
+					"entries": [
+						"Geister sind so unterschiedlich wie die Menschen, die sie im Leben waren. Zusätzlich zu den Eigenschaften und Handlungen, die alle Geister besitzen, kann ein einzelner Geist eine der folgenden besonderen Eigenschaften haben.",
+						{
+							"name": "Intangible Virtue",
+							"type": "entries",
+							"entries": [
+								"Ein Lebewesen, das von einem Geist mit weißer Ausrichtung besessen ist, erhält Immunität gegen die Zustände {@condition charmed} und {@condition frightened} sowie Widerstand gegen Wucht-, Stich- und Hiebschaden durch nichtmagische Angriffe. Während die Kreatur besessen ist, kann der Geist ihr erlauben, die Kontrolle über ihren Körper zu übernehmen, aber der Geist kann die Kontrolle jederzeit wiedererlangen (keine Aktion erforderlich)."
+							]
+						},
+						{
+							"name": "Horrifying Visage",
+							"type": "entries",
+							"entries": [
+								"Schwarz ausgerichtete Geister können sich selbst schrecklich aussehen lassen, selbst wenn sie von den Lebenden Besitz ergreifen. Jede nicht untote Kreatur im Umkreis von 18 Metern um den Geist, die ihn sehen kann, muss einen {@dc 13} Rettungswurf in Weisheit bestehen oder 1 Minute lang {@condition frightened} altern. Wenn der Schutzwurf um 5 oder mehr scheitert, altert das Ziel ebenfalls um {@dice 1d4 × 10} Jahre. Ein {@condition frightened}-Ziel kann den Rettungswurf am Ende jeder seiner Runden wiederholen, wobei der {@condition frightened}-Zustand bei einem Erfolg für es selbst endet. Wenn der Rettungswurf des Ziels erfolgreich ist oder der Effekt für das Ziel endet, ist das Ziel für die nächsten 24 Stunden immun gegen die Schreckensvision dieses Geistes. Der Alterungseffekt kann mit einem {@spell greater restoration}-Zauber rückgängig gemacht werden, jedoch nur innerhalb von 24 Stunden nach seinem Auftreten."
+							]
+						}
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"N"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Geist: Horrifying Visage",
+					"source": "PSI",
+					"_mod": {
+						"action": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Horrifying Visage",
+								"entries": [
+									"Schwarz ausgerichtete Geister können sich selbst schrecklich aussehen lassen, selbst wenn sie von den Lebenden Besitz ergreifen. Jede nicht untote Kreatur im Umkreis von 18 Metern um den Geist, die ihn sehen kann, muss einen {@dc 13} Rettungswurf in Weisheit bestehen oder 1 Minute lang {@condition frightened} altern. Wenn der Schutzwurf um 5 oder mehr scheitert, altert das Ziel ebenfalls um {@dice 1d4 × 10} Jahre. Ein {@condition frightened}-Ziel kann den Rettungswurf am Ende jeder seiner Runden wiederholen, wobei der {@condition frightened}-Zustand bei einem Erfolg für es selbst endet. Wenn der Rettungswurf des Ziels erfolgreich ist oder der Effekt für das Ziel endet, ist das Ziel für die nächsten 24 Stunden immun gegen die Schreckensvision dieses Geistes. Der Alterungseffekt kann mit einem {@spell greater restoration}-Zauber rückgängig gemacht werden, jedoch nur innerhalb von 24 Stunden nach seinem Auftreten."
+								]
+							}
+						}
+					},
+					"variant": null,
+					"conditionInflict": [
+						"frightened",
+						"incapacitated"
+					]
+				},
+				{
+					"name": "Geist: Intangible Virtue",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Intangible Virtue",
+								"entries": [
+									"Ein Lebewesen, das von einem Geist mit weißer Ausrichtung besessen ist, erhält Immunität gegen die Zustände {@condition charmed} und {@condition frightened} sowie Widerstand gegen Wucht-, Stich- und Hiebschaden durch nichtmagische Angriffe. Während die Kreatur besessen ist, kann der Geist ihr erlauben, die Kontrolle über ihren Körper zu übernehmen, aber der Geist kann die Kontrolle jederzeit wiedererlangen (keine Aktion erforderlich)."
+								]
+							}
+						}
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Gisela",
+			"alias": [
+				"Blade of Goldnight",
+				"Blade of the Church"
+			],
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Planetar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Planetar",
+						"with": "Gisela",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Goldnight Menace",
+							"entries": [
+								"Als Aktion kann ein Engel des Fluges Goldnacht die Herzen seiner Feinde mit Angst erfüllen. Jede Kreatur der Wahl des Engels, die sich innerhalb von 36 Metern um ihn herum befindet und ihn wahrnimmt, muss einen Rettungswurf in Weisheit bestehen oder wird 1 Minute lang {@condition frightened}. Der DC für diesen Rettungswurf ist derselbe wie für die Eigenschaft Innate Spellcasting des Engels. Eine Kreatur kann den Rettungswurf am Ende jeder ihrer Runden wiederholen, wobei der Effekt bei einem Erfolg für sie selbst endet. Wenn der Rettungswurf einer Kreatur erfolgreich ist oder der Effekt für sie endet, ist die Kreatur für die nächsten 24 Stunden immun gegen die Goldnacht-Bedrohung des Engels."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Host of Herons Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Heron Protection",
+							"entries": [
+								"Immer wenn ein Engel der Reiherschar oder eine befreundete Kreatur im Umkreis von 3 Metern einen Rettungswurf macht, erhält die Kreatur einen Bonus auf den Rettungswurf in Höhe des Charisma-Modifikators des Engels. Der Engel muss bei Bewusstsein sein, um diesen Bonus zu erhalten oder zu gewähren."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Keeper of the Feather",
+			"group": null,
+			"source": "PSI",
+			"page": 40,
+			"_copy": {
+				"name": "Wereraven",
+				"source": "VRGR",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "wereraven",
+						"with": "keeper"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Beak (Raven or Hybrid Form Only)",
+							"items": {
+								"name": "Beak (Raven or Hybrid Form Only)",
+								"entries": [
+									"{@atk mw} {@hit 4} bis zum Treffer, Reichweite 1,5 m, ein Ziel. {@h}1 Stich-Schaden in Rabengestalt, oder 4 ({@damage 1d4 + 2}) Stich-Schaden in Hybridgestalt."
+								]
+							}
+						}
+					]
+				}
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Der Hüter ist ein Zauberwirker der Stufe 4. Stufe. Seine Zauberfertigkeit ist Weisheit (Zauberschutz {@dc 12}, {@hit 4} um mit Zauberangriffen zu treffen). Er hat die folgenden Druidenzauber vorbereitet:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft}",
+								"{@spell produce flame}",
+								"{@spell shillelagh}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell entangle}",
+								"{@spell longstrider}",
+								"{@spell speak with animals}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell animal messenger}",
+								"{@spell barkskin}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"damageTagsSpell": [
+				"F",
+				"T"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Necro-Alchemist",
+			"alias": [
+				"Geistmage"
+			],
+			"source": "PSI",
+			"page": 20,
+			"_copy": {
+				"name": "Mage",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "mage",
+						"with": "Necro-Alchemist",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sigarda",
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Planetar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Planetar",
+						"with": "Sigarda",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Heron Protection",
+							"entries": [
+								"Immer wenn ein Engel der Reiherschar oder eine befreundete Kreatur im Umkreis von 3 Metern einen Rettungswurf macht, erhält die Kreatur einen Bonus auf den Rettungswurf in Höhe des Charisma-Modifikators des Engels. Der Engel muss bei Bewusstsein sein, um diesen Bonus zu erhalten oder zu gewähren."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Skaab",
+			"source": "PSI",
+			"page": 20,
+			"_copy": {
+				"name": "Flesh Golem",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "golem",
+						"with": "skaab",
+						"flags": "i"
+					}
+				}
+			},
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Skaabs",
+					"entries": [
+						"Die einfachsten Skaberen sind einfach {@creature flesh golem|MM|flesh golems}, wie im Monsterhandbuch beschrieben. Das Ziel eines jeden Skaberen ist es jedoch, ein wahrhaft einzigartiges Meisterwerk zu erschaffen, und so kann es vorkommen, dass ein Stitcher Golems mit einer der folgenden besonderen Eigenschaften herstellt.",
+						{
+							"type": "entries",
+							"name": "Armor Plating",
+							"page": 20,
+							"entries": [
+								"Erhöhe die Rüstungsklasse des Skaabs auf 14 und seinen Herausforderungswert auf 6 (2.300 XP)."
+							]
+						},
+						{
+							"name": "Six Arms",
+							"type": "entries",
+							"entries": [
+								"Die Mehrfachangriffs-Aktion des Skaabs erlaubt ihm, drei Schläge auszuführen. Erhöhe seinen Herausforderungswert auf 6 (2.300 XP)."
+							]
+						},
+						{
+							"name": "Three Heads",
+							"type": "entries",
+							"entries": [
+								"Der Skaab ist im Vorteil bei Weisheitsüberprüfungen ({@skill Perception}) und bei Rettungswürfen gegen {@condition blinded}, {@condition deafened}, {@condition stunned} und Stoßen {@condition unconscious}. (Sein Herausforderungswert ändert sich nicht.)"
+							]
+						},
+						{
+							"name": "Skaab Goliath",
+							"type": "entries",
+							"entries": [
+								"Dieser Skaab hat drei Köpfe, sechs Arme und ist gepanzert. Erhöhe seinen Schwierigkeitsgrad auf 7 (2.900 EP)."
+							]
+						},
+						{
+							"name": "Winged Skaab",
+							"type": "entries",
+							"entries": [
+								"Der Skaab hat eine Fluggeschwindigkeit von 9 Metern."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"_versions": [
+				{
+					"name": "Skaab: Armor Plating",
+					"source": "PSI",
+					"ac": [
+						{
+							"ac": 14,
+							"from": [
+								"armor plating"
+							]
+						}
+					],
+					"cr": "6",
+					"variant": null
+				},
+				{
+					"name": "Skaab: Goliath",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Three Heads",
+								"entries": [
+									"Der Skaab ist im Vorteil bei Weisheitsüberprüfungen ({@skill Perception}) und bei Rettungswürfen gegen {@condition blinded}, {@condition deafened}, {@condition stunned} und Stoßen {@condition unconscious}."
+								]
+							}
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"Der Skaab führt drei Hiebangriffe aus."
+								]
+							}
+						}
+					},
+					"ac": [
+						{
+							"ac": 14,
+							"from": [
+								"armor plating"
+							]
+						}
+					],
+					"cr": "7",
+					"variant": null
+				},
+				{
+					"name": "Skaab: Six Arms",
+					"source": "PSI",
+					"_mod": {
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"Der Skaab führt drei Hiebangriffe aus."
+								]
+							}
+						}
+					},
+					"cr": "6",
+					"variant": null
+				},
+				{
+					"name": "Skaab: Three Heads",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Three Heads",
+								"entries": [
+									"Der Skaab ist im Vorteil bei Weisheitsüberprüfungen ({@skill Perception}) und bei Rettungswürfen gegen {@condition blinded}, {@condition deafened}, {@condition stunned} und Stoßen {@condition unconscious}."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Skaab: Winged",
+					"source": "PSI",
+					"speed": {
+						"walk": 30,
+						"fly": 30
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Strefan Maurer",
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 33,
+			"_copy": {
+				"name": "Strahd von Zarovich",
+				"source": "CoS",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Strahd",
+						"with": "Strefan",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "replaceArr",
+						"replace": "Vampire Weaknesses",
+						"items": {
+							"type": "entries",
+							"name": "Vampire Vulnerabilities",
+							"source": "PSI",
+							"page": 16,
+							"entries": [
+								"Aus lebendem Holz geschnittene Waffen sind besonders effektiv gegen Vampire, obwohl jede Waffe sie verletzen oder töten kann. Ein Vampir kann fließendes Wasser, in dem sich der Mond spiegelt, nicht überqueren, und von Avacyn gesegnetes Wasser ({@item Holy Water (flask)|PHB|holy water}) verbrennt Vampirfleisch wie Säure. Das Spiegelbild eines Vampirs in Silber (einschließlich eines silberbeschichteten Glasspiegels) erscheint so, wie der Vampir ohne den vampirischen Zustand ausgesehen hätte - weder sein wahres Aussehen noch sein Glimmer, sondern ein normaler Mensch mit allen Fehlern. Aus diesem Grund bemühen sich Vampire sehr, Spiegel zu vermeiden, und die Anwesenheit von Silber in jeglicher Form ist für sie beunruhigend."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Vampire Neonate",
+			"source": "PSI",
+			"page": 17,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 82,
+				"formula": "11d8 + 33"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 16,
+			"int": 11,
+			"wis": 10,
+			"cha": 12,
+			"save": {
+				"dex": "+6",
+				"wis": "+3"
+			},
+			"skill": {
+				"perception": "+3",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks not made with living wood weapons",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Common"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Regeneration",
+					"entries": [
+						"Der Vampir erhält zu Beginn seines Zuges 10 Trefferpunkte zurück, wenn er mindestens 1 Trefferpunkt hat. Wenn der Vampir Strahlungsschaden oder Schaden durch Weihwasser erleidet, funktioniert diese Eigenschaft zu Beginn des nächsten Zuges des Vampirs nicht mehr."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Der Vampir führt zwei Angriffe aus, von denen nur einer ein Bissangriff sein kann."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 6} bis zum Treffer, Reichweite 1,5 m, eine Kreatur. {@h}8 ({@damage 2d4 + 3}) Hiebschaden. Anstatt Schaden zu verursachen, kann der Vampir das Ziel packen (Flucht {@dc 13})."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 6} auf Treffer, Reichweite 1,5 m, eine willige Kreatur oder eine Kreatur, die {@condition grappled} vom Vampir, {@condition incapacitated} oder {@condition restrained} ist. {@h}6 ({@damage 1d6 + 3}) Stichschaden plus 7 ({@damage 2d6}) nekrotischer Schaden. Die maximale Trefferpunktzahl des Ziels wird um einen Betrag reduziert, der dem erlittenen nekrotischen Schaden entspricht, und der Vampir erhält Trefferpunkte in Höhe dieses Betrags zurück. Die Verringerung hält an, bis das Ziel eine lange Ruhepause beendet hat. Das Ziel stirbt, wenn dieser Effekt sein Trefferpunktemaximum auf 0 reduziert."
+					]
+				},
+				{
+					"name": "Vampiric Glamer",
+					"entries": [
+						"Der Vampir verschleiert seine Gestalt mit einer Magie, die den Geist beeinflusst, so dass andere ihn für einen schönen Menschen gleicher Größe und Gestalt halten. Die Illusion endet, wenn der Vampir eine Bonusaktion macht, um sie zu beenden, oder wenn der Vampir stirbt. Eine Kreatur, die den Vampir sehen kann, kann eine Aktion durchführen, um ihn visuell zu inspizieren, den mentalen Effekt auf sich selbst zu beenden und die wahre Gestalt des Vampirs mit einer erfolgreichen {@dc 20} Weisheitsprüfung (Wahrnehmung) zu sehen."
+					]
+				},
+				{
+					"name": "Aura of Silence",
+					"entries": [
+						"Der Vampir hüllt sich in einen Mantel des Schweigens in einem Radius von 0,6 Metern. Innerhalb dieses Radius ist der Effekt derselbe wie beim {@spell silence}-Zauber."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Elder Vampires",
+					"entries": [
+						"Die grundlegenden Vampirstatistiken stellen ein \"Neonat\" dar - einen neu gezeugten Vampir. Ältere Vampire können mächtige Magie vieler verschiedener Arten erlernen und können eine der folgenden Eigenschaften und Fähigkeiten haben.",
+						{
+							"type": "entries",
+							"name": "Shapechanger",
+							"entries": [
+								"Der Vampir hat die Eigenschaft Gestaltwandler des {@creature vampire} aus dem Monsterhandbuch, sowie den Gestaltwandler-Tag. Einige Vampire können sich in die Fledermausform verwandeln, andere in die Nebelform, und einige wenige können beide Formen wählen."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Charm",
+							"entries": [
+								"Der Vampir hat die Zauberaktion des {@creature vampire} aus dem Monsterhandbuch."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Flight",
+							"entries": [
+								"Der Vampir hat eine Fluggeschwindigkeit von 9 Metern."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Gorger",
+							"entries": [
+								"Der Vampir hat Vorteil bei Nahkampf-Angriffswürfen, aber Angriffswürfe gegen ihn haben Vorteil."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Spellcasting",
+							"entries": [
+								"Der Vampir hat die Zauberfähigkeiten eines Zauberers oder Klerikers."
+							]
+						}
+					]
+				}
+			],
+			"traitTags": [
+				"Regeneration"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"HPR",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Elder Vampire: All Abilities",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Shapechanger",
+									"entries": [
+										"If the vampire isn't in sunlight or running water, it can use its action to polymorph into a Tiny bat or a Medium cloud of mist, or back into its true form.",
+										"While in bat form, the vampire can't speak, its walking speed is 5 feet, and it has a flying speed of 30 feet. Its statistics, other than its size and speed, are unchanged. Anything it is wearing transforms with it, but nothing it is carrying does. It reverts to its true form if it dies.",
+										"While in mist form, the vampire can't take any actions, speak, or manipulate objects. It is weightless, has a flying speed of 20 feet, can hover, and can enter a hostile creature's space and stop there. In addition, if air can pass through a space, the mist can do so without squeezing, and it can't pass through water. It has advantage on Strength, Dexterity, and Constitution saving throws, and it is immune to all nonmagical damage, except the damage it takes from sunlight."
+									]
+								},
+								{
+									"name": "Gorger",
+									"entries": [
+										"The vampire has advantage on melee attack rolls, but attack rolls against it have advantage."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Charm",
+								"entries": [
+									"Der Vampir zielt auf einen Humanoiden, den er im Umkreis von 9 Metern sehen kann. Wenn das Ziel den Vampir sehen kann, muss es einen {@dc 17} Weisheits-Rettungswurf gegen diese Magie bestehen oder {@condition charmed} von dem Vampir angegriffen werden. Die {@condition charmed} Zielperson betrachtet den Vampir als einen vertrauten Freund, der beachtet und beschützt werden muss. Obwohl das Ziel nicht unter der Kontrolle des Vampirs steht, nimmt es die Bitten oder Handlungen des Vampirs so gut wie möglich an, und es ist ein williges Ziel für den Bissangriff des Vampirs.",
+									"Jedes Mal, wenn der Vampir oder seine Gefährten dem Ziel einen Schaden zufügen, kann er den Rettungswurf wiederholen, wobei der Effekt bei einem Erfolg für ihn selbst endet. Andernfalls dauert der Effekt 24 Stunden oder bis der Vampir zerstört wird, sich in einer anderen Dimension als das Ziel befindet oder eine Bonusaktion macht, um den Effekt zu beenden."
+								]
+							}
+						}
+					},
+					"type": {
+						"type": "undead",
+						"tags": [
+							"shapechanger"
+						]
+					},
+					"speed": {
+						"walk": 30,
+						"fly": 30
+					},
+					"spellcasting": [
+						{
+							"name": "Cleric Spellcasting",
+							"headerEntries": [
+								"{@note Der {@creature Priest|MM} wurde als Beispiel für einen Kleriker verwendet.}",
+								"Der Vampir ist ein Zauberwirker der Stufe 5. Seine Zauberfertigkeit ist Weisheit (Zauberschutz {@dc 13}, {@hit 5} um mit Zauberangriffen zu treffen). Der Vampir hat die folgenden Klerikerzauber vorbereitet:"
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell light}",
+										"{@spell sacred flame}",
+										"{@spell thaumaturgy}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell cure wounds}",
+										"{@spell guiding bolt}",
+										"{@spell sanctuary}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell lesser restoration}",
+										"{@spell spiritual weapon}"
+									]
+								},
+								"3": {
+									"slots": 2,
+									"spells": [
+										"{@spell dispel magic}",
+										"{@spell spirit guardians}"
+									]
+								}
+							},
+							"ability": "wis"
+						},
+						{
+							"name": "Wizard Spellcasting",
+							"headerEntries": [
+								"{@note Der {@creature Mage|MM} wurde als Beispiel für einen Assistenten verwendet.}",
+								"Der Vampir ist ein Zauberwirker der Stufe 9. Seine Zauberfähigkeit ist Intelligenz (Zauberschutz {@dc 14}, {@hit 6} um mit Zauberangriffen zu treffen). Der Vampir hat die folgenden Zaubersprüche vorbereitet:"
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell fire bolt}",
+										"{@spell light}",
+										"{@spell mage hand}",
+										"{@spell prestidigitation}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell detect magic}",
+										"{@spell mage armor}",
+										"{@spell magic missile}",
+										"{@spell shield}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell misty step}",
+										"{@spell suggestion}"
+									]
+								},
+								"3": {
+									"slots": 3,
+									"spells": [
+										"{@spell counterspell}",
+										"{@spell fireball}",
+										"{@spell fly}"
+									]
+								},
+								"4": {
+									"slots": 3,
+									"spells": [
+										"{@spell greater invisibility}",
+										"{@spell ice storm}"
+									]
+								},
+								"5": {
+									"slots": 1,
+									"spells": [
+										"{@spell cone of cold}"
+									]
+								}
+							},
+							"ability": "int"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Charm",
+					"source": "PSI",
+					"_mod": {
+						"action": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Charm",
+								"entries": [
+									"Der Vampir zielt auf einen Humanoiden, den er im Umkreis von 9 Metern sehen kann. Wenn das Ziel den Vampir sehen kann, muss es einen {@dc 17} Weisheits-Rettungswurf gegen diese Magie bestehen oder {@condition charmed} von dem Vampir angegriffen werden. Die {@condition charmed} Zielperson betrachtet den Vampir als einen vertrauten Freund, der beachtet und beschützt werden muss. Obwohl das Ziel nicht unter der Kontrolle des Vampirs steht, nimmt es die Bitten oder Handlungen des Vampirs so gut wie möglich an, und es ist ein williges Ziel für den Bissangriff des Vampirs.",
+									"Jedes Mal, wenn der Vampir oder seine Gefährten dem Ziel einen Schaden zufügen, kann er den Rettungswurf wiederholen, wobei der Effekt bei einem Erfolg für ihn selbst endet. Andernfalls dauert der Effekt 24 Stunden oder bis der Vampir zerstört wird, sich in einer anderen Dimension als das Ziel befindet oder eine Bonusaktion macht, um den Effekt zu beenden."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Flight",
+					"source": "PSI",
+					"speed": {
+						"walk": 30,
+						"fly": 30
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Gorger",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Gorger",
+								"entries": [
+									"Der Vampir hat Vorteil bei Nahkampf-Angriffswürfen, aber Angriffswürfe gegen ihn haben Vorteil."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Shapechanger",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Shapechanger",
+								"entries": [
+									"Wenn sich der Vampir nicht im Sonnenlicht oder in fließendem Wasser befindet, kann er seine Aktion nutzen, um sich in eine Winzige Fledermaus oder eine Mittlere Nebelwolke zu verwandeln oder in seine wahre Gestalt zurückzukehren.",
+									"In der Fledermausform kann der Vampir nicht sprechen, seine Gehgeschwindigkeit beträgt 1,5 Meter und seine Fluggeschwindigkeit 9 Meter. Abgesehen von seiner Größe und Geschwindigkeit sind seine Statistiken unverändert. Alles, was er trägt, verwandelt sich mit ihm, aber nichts, was er bei sich trägt. Wenn er stirbt, nimmt er wieder seine wahre Gestalt an.",
+									"Während er sich in der Nebelform befindet, kann der Vampir keine Aktionen ausführen, sprechen oder Objekte manipulieren. Er ist schwerelos, hat eine Fluggeschwindigkeit von 6 Metern, kann schweben und kann in den Raum eines feindlichen Wesens eindringen und dort stehen bleiben. Wenn Luft einen Raum durchdringen kann, kann der Nebel dies auch tun, ohne zu drücken, und er kann nicht durch Wasser hindurchgehen. Er hat einen Vorteil bei Rettungswürfen auf Stärke, Geschicklichkeit und Konstitution und ist immun gegen allen nichtmagischen Schaden, mit Ausnahme des Schadens, den er durch Sonnenlicht erleidet."
+								]
+							}
+						}
+					},
+					"type": {
+						"type": "undead",
+						"tags": [
+							"shapechanger"
+						]
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Spellcasting—Cleric",
+					"source": "PSI",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"{@note Der {@creature Priest|MM} wurde als Beispiel für einen Kleriker verwendet.}",
+								"Der Vampir ist ein Zauberwirker der Stufe 5. Seine Zauberfertigkeit ist Weisheit (Zauberschutz {@dc 13}, {@hit 5} um mit Zauberangriffen zu treffen). Der Vampir hat die folgenden Klerikerzauber vorbereitet:"
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell light}",
+										"{@spell sacred flame}",
+										"{@spell thaumaturgy}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell cure wounds}",
+										"{@spell guiding bolt}",
+										"{@spell sanctuary}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell lesser restoration}",
+										"{@spell spiritual weapon}"
+									]
+								},
+								"3": {
+									"slots": 2,
+									"spells": [
+										"{@spell dispel magic}",
+										"{@spell spirit guardians}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Spellcasting—Wizard",
+					"source": "PSI",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"{@note Der {@creature Mage|MM} wurde als Beispiel für einen Assistenten verwendet.}",
+								"Der Vampir ist ein Zauberwirker der Stufe 9. Seine Zauberfähigkeit ist Intelligenz (Zauberschutz {@dc 14}, {@hit 6} um mit Zauberangriffen zu treffen). Der Vampir hat die folgenden Zaubersprüche vorbereitet:"
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell fire bolt}",
+										"{@spell light}",
+										"{@spell mage hand}",
+										"{@spell prestidigitation}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell detect magic}",
+										"{@spell mage armor}",
+										"{@spell magic missile}",
+										"{@spell shield}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell misty step}",
+										"{@spell suggestion}"
+									]
+								},
+								"3": {
+									"slots": 3,
+									"spells": [
+										"{@spell counterspell}",
+										"{@spell fireball}",
+										"{@spell fly}"
+									]
+								},
+								"4": {
+									"slots": 3,
+									"spells": [
+										"{@spell greater invisibility}",
+										"{@spell ice storm}"
+									]
+								},
+								"5": {
+									"slots": 1,
+									"spells": [
+										"{@spell cone of cold}"
+									]
+								}
+							},
+							"ability": "int"
+						}
+					],
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Werewolf (Krallenhorde)",
+			"source": "PSI",
+			"page": 15,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human",
+					"shapechanger"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"condition": "in humanoid form"
+				},
+				{
+					"ac": 12,
+					"from": [
+						"natural armor"
+					],
+					"condition": "in canid form"
+				}
+			],
+			"hp": {
+				"average": 58,
+				"formula": "9d8 + 18"
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "(40 ft. in canid form)"
+				}
+			},
+			"str": 15,
+			"dex": 13,
+			"con": 14,
+			"int": 10,
+			"wis": 11,
+			"cha": 10,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+3"
+			},
+			"passive": 14,
+			"immune": [
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks not made with silvered weapons",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Common (can't speak in canid form)"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Shapechanger",
+					"entries": [
+						"Der Werwolf verwandelt sich in eine wölfisch-humanoide Canidenform oder zurück in seine wahre menschliche Gestalt. Diese Verwandlung wird durch den Mond diktiert, kann aber auch durch ein Trauma oder starke Emotionen ausgelöst werden. Seine Statistiken, mit Ausnahme seiner AC, sind in jeder Form die gleichen. Jegliche Ausrüstung, die er trägt oder mit sich führt, wird nicht transformiert. Wenn er stirbt, kehrt er in seine wahre Form zurück."
+					]
+				},
+				{
+					"name": "Keen Hearing and Smell",
+					"entries": [
+						"Der Werwolf hat einen Vorteil bei Weisheitsprüfungen ({@skill Perception}), die auf Gehör oder Geruch beruhen."
+					]
+				},
+				{
+					"name": "Howlpack: Vildin",
+					"entries": [
+						"Vildin-Amoklauf (nur Canidenform). Wenn der Werwolf in seinem Zug eine Kreatur mit einem Nahkampfangriff auf 0 Trefferpunkte reduziert, kann er sich mit einer Bonusaktion bis zur Hälfte seiner Geschwindigkeit bewegen und eine Bissattacke ausführen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack (Canid Form Only)",
+					"entries": [
+						"Der Werwolf führt zwei Angriffe aus: einen mit seinem Biss und einen mit seinen Klauen oder seinem Speer."
+					]
+				},
+				{
+					"name": "Bite (Canid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 4} bis zum Treffer, Reichweite 1,5 m, ein Ziel. {@h}6 ({@damage 1d8 + 2}) Stich-Schaden."
+					]
+				},
+				{
+					"name": "Claws (Canid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 4} bis zum Treffer, Reichweite 1,5 m, ein Ziel. {@h}7 ({@damage 2d4 + 2}) Hiebschaden."
+					]
+				},
+				{
+					"name": "Spear (Human Form Only)",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} auf Treffer, Reichweite 1,5 m oder 20/18 m, ein Ziel. {@h}5 ({@damage 1d6 + 2}) Stich-Schaden, oder 6 ({@damage 1d8 + 2}) Stich-Schaden, wenn mit zwei Händen als Nahkampfangriff eingesetzt."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Howlpack Traits",
+					"entries": [
+						"Die grundlegenden Werwolf-Statistiken repräsentieren ein Mitglied der Krallenhorde, dem größten Heulerrudel Innistrads. Werwölfe anderer Rudel können zusätzliche Fähigkeiten haben, wie zum Beispiel die folgenden.",
+						{
+							"name": "Vildin Rampage (Canid Form Only)",
+							"type": "entries",
+							"entries": [
+								"Wenn der Werwolf in seinem Zug eine Kreatur mit einem Nahkampfangriff auf 0 Trefferpunkte reduziert, kann er sich mit einer Bonusaktion bis zur Hälfte seiner Geschwindigkeit bewegen und einen Bissangriff ausführen."
+							]
+						},
+						{
+							"name": "Mondronen Wounded Fury",
+							"type": "entries",
+							"entries": [
+								"Solange er 10 Trefferpunkte oder weniger hat, hat der Werwolf einen Vorteil bei Angriffswürfen. Darüber hinaus fügt er jedem Ziel, das er mit einem Nahkampfangriff trifft, 7 ({@damage 2d6}) zusätzlichen Schaden zu."
+							]
+						},
+						{
+							"name": "Leeraug Blood Frenzy",
+							"type": "entries",
+							"entries": [
+								"Der Werwolf hat einen Vorteil bei Nahkampfangriffswürfen gegen Kreaturen, die nicht alle ihre Trefferpunkte haben."
+							]
+						}
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Shapechanger"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Werewolf (Leeraug)",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Leeraug Blood Frenzy",
+								"entries": [
+									"Der Werwolf hat einen Vorteil bei Nahkampfangriffswürfen gegen Kreaturen, die nicht alle ihre Trefferpunkte haben."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Werewolf (Mondronen)",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Mondronen Wounded Fury",
+								"entries": [
+									"Solange er 10 Trefferpunkte oder weniger hat, hat der Werwolf einen Vorteil bei Angriffswürfen. Darüber hinaus fügt er jedem Ziel, das er mit einem Nahkampfangriff trifft, 7 ({@damage 2d6}) zusätzlichen Schaden zu."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Werewolf (Vildin)",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Vildin Rampage (Canid Form Only)",
+								"entries": [
+									"Wenn der Werwolf in seinem Zug eine Kreatur mit einem Nahkampfangriff auf 0 Trefferpunkte reduziert, kann er sich mit einer Bonusaktion bis zur Hälfte seiner Geschwindigkeit bewegen und einen Bissangriff ausführen."
+								]
+							}
+						}
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Zombie Cat",
+			"source": "PSI",
+			"page": 17,
+			"_copy": {
+				"name": "Cat",
+				"source": "MM"
+			},
+			"type": "undead",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Wenn Schaden die Katze auf 0 Trefferpunkte reduziert, muss sie einen Rettungswurf auf Konstitution mit einem DC von 5 + dem erlittenen Schaden machen, es sei denn, der Schaden ist strahlend oder stammt von einem kritischen Treffer. Bei einem Erfolg fällt die Katze stattdessen auf 1 Trefferpunkt."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Zombie Rat",
+			"source": "PSI",
+			"page": 17,
+			"_copy": {
+				"name": "Rat",
+				"source": "MM"
+			},
+			"type": "undead",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Wenn der Schaden die Ratte auf 0 Trefferpunkte reduziert, muss sie einen Rettungswurf auf Konstitution mit einem DC von 5 + dem erlittenen Schaden machen, es sei denn, der Schaden ist strahlend oder stammt von einem kritischen Treffer. Bei einem Erfolg fällt die Ratte stattdessen auf 1 Trefferpunkt."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Zombie Snake",
+			"source": "PSI",
+			"page": 17,
+			"_copy": {
+				"name": "Poisonous Snake",
+				"source": "MM"
+			},
+			"type": "undead",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Wenn der Schaden die Schlange auf 0 Trefferpunkte reduziert, muss sie einen Rettungswurf auf Konstitution mit einem DC von 5 + dem erlittenen Schaden machen, es sei denn, der Schaden ist strahlend oder stammt von einem kritischen Treffer. Bei einem Erfolg fällt die Schlange stattdessen auf 1 Trefferpunkt."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

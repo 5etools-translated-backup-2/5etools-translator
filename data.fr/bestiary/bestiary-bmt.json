@@ -1,0 +1,5835 @@
+{
+	"_meta": {
+		"otherSources": {
+			"monster": {
+				"DMG": "BMT",
+				"MM": "BMT",
+				"DoSI": "BMT",
+				"MPMM": "BMT",
+				"WBtW": "BMT",
+				"BAM": "BMT",
+				"MOT": "BMT"
+			}
+		},
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		}
+	},
+	"monster": [
+		{
+			"name": "Advanced Detention Drone",
+			"source": "BMT",
+			"page": 135,
+			"_copy": {
+				"name": "Shield Guardian",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "shield guardian",
+						"with": "drone"
+					},
+					"action": [
+						{
+							"mode": "appendArr",
+							"items": {
+								"name": "Detention Orb",
+								"entries": [
+									"Le drone lance un minuscule orbe de force magique sur une créature qu'il peut voir dans un rayon de 9 mètres. La créature doit réussir un jet de sauvegarde de Constitution {@dc 15} ou être enfermée dans l'orbe, qui s'étend jusqu'à atteindre une taille juste suffisante pour contenir la créature. Tant qu'elle est enfermée, la créature n'a pas besoin de respirer, de manger ou de boire, et elle ne vieillit pas. Rien ne peut traverser l'orbe, et aucune créature ne peut se téléporter ou utiliser le voyage planaire pour entrer ou sortir de l'orbe. Comme action bonus, le drone peut déplacer l'orbe et son contenu jusqu'à 9 mètres dans n'importe quelle direction. Une incantation réussie du sort {@spell Dispel Magic} sur l'orbe ({@dc 15}) le détruit. Sinon, l'orbe reste intact jusqu'à ce que le drone dépense une action pour mettre fin à l'effet ou que le drone soit détruit. Un drone ne peut avoir qu'un seul orbe de détention actif à la fois ; si le drone crée un orbe de détention alors qu'il en a déjà un actif, le premier orbe disparaît, libérant la créature qu'il contient."
+								]
+							}
+						}
+					]
+				}
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"hasFluff": true
+		},
+		{
+			"name": "Ambitious Assassin",
+			"source": "BMT",
+			"page": 45,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item studded leather armor|PHB|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 91,
+				"formula": "14d8 + 28"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40
+			},
+			"str": 10,
+			"dex": 18,
+			"con": 15,
+			"int": 18,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"dex": "+7",
+				"int": "+7"
+			},
+			"skill": {
+				"deception": "+9",
+				"perception": "+5",
+				"stealth": "+10"
+			},
+			"senses": [
+				"blindsight 10 ft."
+			],
+			"passive": 15,
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"thieves' cant",
+				"plus any one language"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"Si l'assassin rate un jet de sauvegarde, il peut choisir de le réussir à la place."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"L'assassin effectue deux attaques Lame de poison."
+					]
+				},
+				{
+					"name": "Poison Blade",
+					"entries": [
+						"{@atk mw,rw} {@hit 7} pour toucher, portée de 1,5 m. ou portée de 18 m., une cible. {@h}6 ({@damage 1d4 + 4}) dégâts perforants plus 5 ({@damage 1d10}) dégâts de poison."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"Lorsqu'un attaquant que l'assassin peut voir le frappe avec une attaque, l'assassin divise par deux les dégâts de l'attaque contre lui."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Cunning",
+					"entries": [
+						"L'assassin échappe aux contraintes non magiques et met fin à la condition {@condition grappled} sur lui-même, puis se déplace à sa vitesse sans provoquer d'attaques d'opportunité."
+					]
+				},
+				{
+					"name": "Stab (Costs 2 Actions)",
+					"entries": [
+						"L'assassin effectue une attaque de lame empoisonnée."
+					]
+				},
+				{
+					"name": "Vanishing Escape (Costs 3 Actions)",
+					"entries": [
+						"L'assassin crée une distraction soudaine, comme un nuage de fumée désorientant ou un éclair de lumière éblouissant, qui remplit un cube de 3 mètres dans un rayon de 1,5 mètre autour de lui. Chaque créature au choix de l'assassin dans cette zone subit 9 ({@damage 2d8}) dégâts psychiques, et l'assassin a la condition {@condition invisible}. Cette invisibilité dure jusqu'à la fin du prochain tour de l'assassin."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Villain",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"TC",
+				"X"
+			],
+			"damageTags": [
+				"I",
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"invisible"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Animated Armor Detention Drone",
+			"source": "BMT",
+			"page": 135,
+			"_copy": {
+				"name": "Animated Armor",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "armor",
+						"with": "drone"
+					},
+					"action": [
+						{
+							"mode": "appendArr",
+							"items": {
+								"name": "Detention Orb",
+								"entries": [
+									"Le drone lance un minuscule orbe de force magique sur une créature qu'il peut voir dans un rayon de 9 mètres. La créature doit réussir un jet de sauvegarde de Constitution {@dc 15} ou être enfermée dans l'orbe, qui s'étend jusqu'à atteindre une taille juste suffisante pour contenir la créature. Tant qu'elle est enfermée, la créature n'a pas besoin de respirer, de manger ou de boire, et elle ne vieillit pas. Rien ne peut traverser l'orbe, et aucune créature ne peut se téléporter ou utiliser le voyage planaire pour entrer ou sortir de l'orbe. Comme action bonus, le drone peut déplacer l'orbe et son contenu jusqu'à 9 mètres dans n'importe quelle direction. Une incantation réussie du sort {@spell Dispel Magic} sur l'orbe ({@dc 15}) le détruit. Sinon, l'orbe reste intact jusqu'à ce que le drone dépense une action pour mettre fin à l'effet ou que le drone soit détruit. Un drone ne peut avoir qu'un seul orbe de détention actif à la fois ; si le drone crée un orbe de détention alors qu'il en a déjà un actif, le premier orbe disparaît, libérant la créature qu'il contient."
+								]
+							}
+						}
+					]
+				}
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"hasFluff": true
+		},
+		{
+			"name": "Aspirant of the Comet",
+			"source": "BMT",
+			"page": 91,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 27,
+				"formula": "5d8 + 5"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 12,
+			"con": 12,
+			"int": 11,
+			"wis": 10,
+			"cha": 13,
+			"passive": 10,
+			"languages": [
+				"Common plus any one language"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Hunger of the Void",
+					"entries": [
+						"Lorsque l'aspirant est réduit à 0 point de vie, son corps et tout ce qu'il porte ou transporte, à l'exception des objets magiques, sont aspirés dans le vide et détruits. Les créatures situées dans une sphère de 4,5 mètres de rayon centrée sur l'aspirant doivent effectuer un jet de sauvegarde de {@dc 11} de Force. En cas d'échec, la créature subit 10 ({@damage 3d6}) points de dégâts nécrotiques et est attirée à 3 mètres en ligne droite vers l'espace de l'aspirant. En cas de sauvegarde réussie, la créature ne subit que la moitié des dégâts."
+					]
+				},
+				{
+					"name": "Sinister Devotion",
+					"entries": [
+						"L'aspirant a l'avantage aux jets de sauvegarde contre les conditions {@condition charmed} et {@condition frightened}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 3} pour toucher, portée de 1,5 m. ou portée de 20/18 m., une cible. {@h}4 ({@damage 1d6 + 1}) dégâts perforants, ou 5 ({@damage 1d8 + 1}) dégâts perforants si on l'utilise à deux mains pour faire une attaque de mêlée."
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"N",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Asteria",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 188,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human",
+					"paladin"
+				]
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item breastplate|PHB}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 195,
+				"formula": "26d8 + 78"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(winged boots)"
+				}
+			},
+			"str": 12,
+			"dex": 21,
+			"con": 17,
+			"int": 15,
+			"wis": 11,
+			"cha": 20,
+			"save": {
+				"dex": "+11",
+				"con": "+9",
+				"wis": "+6",
+				"cha": "+11"
+			},
+			"skill": {
+				"acrobatics": "+11",
+				"arcana": "+14",
+				"investigation": "+8",
+				"perception": "+12",
+				"persuasion": "+11",
+				"survival": "+6"
+			},
+			"passive": 22,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Druidic"
+			],
+			"cr": "18",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Asteria lance l'un des sorts suivants, ne nécessitant aucune composante matérielle et utilisant le Charisme comme capacité de lanceur de sorts (sauvegarde contre les sorts {@dc 19}) :"
+					],
+					"will": [
+						"{@spell Guidance}",
+						"{@spell Light}",
+						"{@spell Thaumaturgy}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell Bless}",
+							"{@spell Freedom of Movement}",
+							"{@spell Greater Restoration}",
+							"{@spell Plane Shift} (self only)",
+							"{@spell Protection from Evil and Good}",
+							"{@spell Revivify}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Guardian Aura",
+					"entries": [
+						"Chaque fois qu'une créature au choix d'Asteria située à moins de 9 mètres d'elle effectue un jet de sauvegarde, Asteria peut donner à cette créature un avantage sur ce jet de sauvegarde (aucune action requise). Ce trait ne fonctionne pas si Asteria a la condition {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si Asteria rate un jet de sauvegarde, elle peut choisir de le réussir à la place."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Astéria porte des Bottes ailées, qui lui confèrent une vitesse de vol (incluse dans ses statistiques). Elle porte également une moitié d'une paire de Pierres à distance ; l'autre moitié de la paire est tenue par Euryale."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Asteria porte deux attaques de Lame Radiante et utilise Bénédiction éclatante."
+					]
+				},
+				{
+					"name": "Radiant Blade",
+					"entries": [
+						"{@atk mw} {@hit 11} pour toucher, portée de 1,5 m, une cible. {@h}9 ({@damage 1d8 + 5}) dégâts tranchants plus 13 ({@damage 3d8}) dégâts radiants."
+					]
+				},
+				{
+					"name": "Bursting Benediction",
+					"entries": [
+						"Asteria provoque une explosion d'énergie magique qui enveloppe une créature qu'elle peut voir dans un rayon de 18 mètres autour d'elle. La cible doit effectuer un jet de sauvegarde de {@dc 19} de Dextérité, subissant 40 ({@damage 9d8}) dégâts de force en cas de sauvegarde ratée, ou moitié moins de dégâts en cas de sauvegarde réussie. Astéria ou une autre créature qu'elle peut voir dans un rayon de 18 mètres regagne alors 10 points de vie."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Empowering Aegis {@recharge 4}",
+					"entries": [
+						"Asteria invoque une version spectrale de son bouclier, qui orbite autour d'une créature de son choix qu'elle peut voir dans un rayon de 18 mètres et la renforce. Le bouclier spectral dure jusqu'au début du prochain tour d'Asteria. Tant que le bouclier est en orbite autour de la créature, celle-ci bénéficie d'une demi-couverture, est immunisée contre la condition {@condition frightened} et effectue ses jets d'attaque à l'arme avec avantage."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Brazen Strike",
+					"entries": [
+						"Asteria effectue une attaque de Lame radieuse."
+					]
+				},
+				{
+					"name": "Nimble Sprint",
+					"entries": [
+						"Asteria se déplace à sa vitesse. Ce mouvement ne provoque pas d'attaque d'opportunité."
+					]
+				},
+				{
+					"name": "Cast a Spell (Costs 2 Actions)",
+					"entries": [
+						"Asteria utilise Spellcasting."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DU"
+			],
+			"damageTags": [
+				"O",
+				"R",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Aurnozci",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 167,
+			"size": [
+				"G"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"demon"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 370,
+				"formula": "20d20 + 160"
+			},
+			"speed": {
+				"walk": 50,
+				"burrow": 30
+			},
+			"str": 27,
+			"dex": 20,
+			"con": 26,
+			"int": 6,
+			"wis": 21,
+			"cha": 19,
+			"save": {
+				"str": "+15",
+				"con": "+15"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 15,
+			"resist": [
+				"cold",
+				"lightning"
+			],
+			"immune": [
+				"acid",
+				"fire",
+				"poison",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"telepathy 120 ft."
+			],
+			"cr": "22",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Aurnozci lance l'un des sorts suivants, ne nécessitant aucune composante matérielle et utilisant la Sagesse comme capacité de lanceur de sorts (sauvegarde contre les sorts {@dc 20}) :"
+					],
+					"will": [
+						"{@spell Detect Magic}",
+						"{@spell Heat Metal} (7th-level version)"
+					],
+					"daily": {
+						"2e": [
+							"{@spell Darkness}",
+							"{@spell Dispel Magic}",
+							"{@spell Hold Person}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Heat Regeneration",
+					"entries": [
+						"Si la température autour de lui est de 100 degrés Fahrenheit ou plus, l'Aurnozci regagne 15 points de vie au début de son tour. S'il subit des dégâts de froid ou radiants, ce trait ne fonctionne pas au début de son prochain tour. L'Aurnozci ne meurt que s'il commence son tour avec 0 point de vie et ne se régénère pas."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si Aurnozci rate un jet de sauvegarde, il peut choisir de le réussir à la place."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Aurnozci a l'avantage sur les jets de sauvegarde contre les sorts et autres effets magiques."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Aurnozci effectue une attaque de Morsure et deux attaques de Queue."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 15} pour toucher, portée de 3 m., une cible. {@h}21 ({@damage 2d12 + 8}) dégâts tranchants plus 9 ({@damage 2d8}) dégâts de feu."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 15} pour toucher, portée de 3 m., une cible. {@h}17 ({@damage 2d8 + 8}) dégâts contondants."
+					]
+				},
+				{
+					"name": "Mucus Spray {@recharge 5}",
+					"entries": [
+						"Aurnozci projette du mucus dans un cône de 18 mètres. Chaque créature située dans ce cône doit effectuer un jet de sauvegarde de {@dc 20} de Dextérité, subissant 42 ({@damage 12d6}) points de dégâts d'acide en cas de sauvegarde ratée, ou moitié moins de dégâts en cas de sauvegarde réussie."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Move",
+					"entries": [
+						"Aurnozci se déplace à sa vitesse."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"Aurnozci fait une attaque de Queue."
+					]
+				},
+				{
+					"name": "Cast a Spell (Costs 2 Actions)",
+					"entries": [
+						"Aurnozci utilise Spellcasting."
+					]
+				},
+				{
+					"name": "Conflagration (Costs 2 Actions)",
+					"entries": [
+						"Les flammes entourent momentanément Aurnozci. Toute créature située à moins de 4,5 mètres d'Aurnozci doit effectuer un jet de sauvegarde de {@dc 20} Dextérité, subissant 18 ({@damage 4d8}) points de dégâts de feu en cas de sauvegarde ratée, ou moitié moins de dégâts en cas de sauvegarde réussie."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Aurnozci",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"TP"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"F",
+				"S"
+			],
+			"damageTagsSpell": [
+				"F"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflictSpell": [
+				"paralyzed"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Boss Augustus",
+			"source": "BMT",
+			"page": 82,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 150,
+				"formula": "20d8 + 60"
+			},
+			"speed": {
+				"walk": {
+					"number": 40,
+					"condition": "in wolf or hybrid form"
+				}
+			},
+			"str": 18,
+			"dex": 16,
+			"con": 17,
+			"int": 14,
+			"wis": 15,
+			"cha": 12,
+			"save": {
+				"str": "+8",
+				"dex": "+7"
+			},
+			"skill": {
+				"perception": "+10",
+				"sleight of hand": "+7",
+				"stealth": "+7"
+			},
+			"passive": 20,
+			"languages": [
+				"Common",
+				"Thieves' cant (can't speak in wolf form)"
+			],
+			"cr": "9",
+			"trait": [
+				{
+					"name": "Regeneration",
+					"entries": [
+						"Augustus regagne 10 points de vie au début de son tour. S'il subit des dégâts d'une arme en argent, ce trait ne fonctionne pas au début de son prochain tour. Augustus ne meurt que s'il commence son tour avec 0 point de vie et ne se régénère pas."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Augustus manie une Épée longue +2."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Auguste effectue n'importe quelle combinaison de deux attaques de morsure, de griffe ou d'Épée longue magique."
+					]
+				},
+				{
+					"name": "Bite (Wolf or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 8} pour toucher, portée de 1,5 m., une cible. {@h}26 ({@damage 5d8 + 4}) dégâts perforants. Si la cible est un humanoïde, elle doit réussir un jet de sauvegarde de {@dc 15} de Constitution ou être maudite par la lycanthropie. Lorsqu'elle est ainsi maudite, la cible conserve son alignement, ses langues et son équipement, mais utilise le bloc de statures du loup-garou, à l'exception des actions qui nécessitent un équipement que la cible ne possède pas. Lors d'une nuit de pleine lune, la cible devient un PNJ sous le contrôle du MD et le reste jusqu'à la fin de la nuit. Un sort {@spell Remove Curse} ou une magie similaire met fin à cette malédiction."
+					]
+				},
+				{
+					"name": "Claw (Wolf or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 8} pour toucher, portée de 1,5 m., une cible. {@h}21 ({@damage 5d6 + 4}) dégâts perforants. Si la cible est une créature, elle doit réussir un jet de sauvegarde de {@dc 16} de Force ou subir la condition {@condition prone}."
+					]
+				},
+				{
+					"name": "Magic Longsword (Humanoid or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 10} à toucher, portée de 1,5 m., une cible. {@h}28 ({@damage 4d10 + 6}) dégâts tranchants."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Augustus se transforme en hybride loup-humanoïde, en loup ou en sa forme humanoïde. Ses statistiques, à l'exception de sa vitesse, sont les mêmes sous chaque forme. L'équipement qu'il porte ou qu'il a sur lui n'est pas transformé. Il reprend sa forme humanoïde s'il meurt."
+					]
+				},
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"Augustus prend l'action Dash, Disengage ou Hide."
+					]
+				}
+			],
+			"traitTags": [
+				"Regeneration"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"CS",
+				"TC"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Boss Delour",
+			"source": "BMT",
+			"page": 83,
+			"size": [
+				"S"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 110,
+				"formula": "20d6 + 40"
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "in rat or hybrid form"
+				}
+			},
+			"str": 12,
+			"dex": 18,
+			"con": 15,
+			"int": 17,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"dex": "+8",
+				"int": "+7"
+			},
+			"skill": {
+				"deception": "+11",
+				"perception": "+10",
+				"sleight of hand": "+8",
+				"stealth": "+8"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 20,
+			"languages": [
+				"Common",
+				"Thieves' cant (can't speak in rat form)"
+			],
+			"cr": "9",
+			"trait": [
+				{
+					"name": "Evasion",
+					"entries": [
+						"Si Delour est soumis à un effet qui lui permet de faire un jet de sauvegarde de Dextérité pour ne subir que la moitié des dégâts, il ne subit à la place aucun dégât s'il réussit le jet de sauvegarde et seulement la moitié des dégâts s'il échoue, à condition qu'il n'ait pas la condition {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Nimbleness",
+					"entries": [
+						"Delour peut se déplacer dans l'espace d'une créature de taille moyenne ou supérieure."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"Delour regagne 10 points de vie au début de son tour. S'il subit des dégâts d'une arme en argent, ce trait ne fonctionne pas au début de son prochain tour. Delour ne meurt que s'il commence son tour avec 0 point de vie et ne se régénère pas."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Delour effectue n'importe quelle combinaison de trois attaques de morsure, d'Épée courte ou d'Arbalète à main."
+					]
+				},
+				{
+					"name": "Bite (Rat or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 8} pour toucher, portée de 1,5 m., une cible. {@h}26 ({@damage 5d8 + 4}) dégâts perforants. Si la cible est un humanoïde, elle doit réussir un jet de sauvegarde de {@dc 14} de Constitution ou être maudite par la lycanthropie. Lorsqu'elle est ainsi maudite, la cible conserve son alignement, ses langues et son équipement, mais utilise le bloc de statues des wererats, à l'exception des actions qui nécessitent un équipement que la cible ne possède pas. Lors d'une nuit de pleine lune, la cible devient un PNJ sous le contrôle du MD et le reste jusqu'à la fin de la nuit. Un sort {@spell Remove Curse} ou une magie similaire met fin à cette malédiction."
+					]
+				},
+				{
+					"name": "Shortsword (Humanoid or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 8} pour toucher, portée de 1,5 m, une cible. {@h}11 ({@damage 2d6 + 4}) dégâts perforants plus 10 ({@damage 3d6}) dégâts de poison."
+					]
+				},
+				{
+					"name": "Hand Crossbow (Humanoid or Hybrid Form Only)",
+					"entries": [
+						"{@atk rw} {@hit 8} pour toucher, portée 30/36 m., une cible. {@h}11 ({@damage 2d6 + 4}) dégâts perforants plus 10 ({@damage 3d6}) dégâts de poison."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Delour se transforme en hybride rat-humanoïde, en rat géant de taille moyenne ou en sa forme humanoïde. Ses statistiques, autres que sa taille et sa vitesse, sont les mêmes sous chaque forme. L'équipement qu'il porte n'est pas transformé. Il reprend sa forme humanoïde s'il meurt."
+					]
+				},
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"Delour prend l'action Dash, Disengage, ou Hide."
+					]
+				}
+			],
+			"attachedItems": [
+				"hand crossbow|phb",
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Regeneration"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"CS",
+				"TC"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Breath Drinker",
+			"source": "BMT",
+			"page": 154,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 157,
+				"formula": "21d8 + 63"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 60,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 5,
+			"dex": 18,
+			"con": 16,
+			"int": 11,
+			"wis": 15,
+			"cha": 20,
+			"save": {
+				"int": "+5",
+				"wis": "+7"
+			},
+			"skill": {
+				"perception": "+7",
+				"stealth": "+9",
+				"survival": "+7"
+			},
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 17,
+			"resist": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"thunder",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison",
+				"radiant"
+			],
+			"vulnerable": [
+				"necrotic"
+			],
+			"conditionImmune": [
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"Deep Speech",
+				"telepathy 120 ft."
+			],
+			"cr": "14",
+			"trait": [
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"Le buveur d'haleine peut se déplacer à travers d'autres créatures et objets comme s'il s'agissait d'un terrain difficile. Il subit 5 ({@damage 1d10}) dégâts de force s'il termine son tour à l'intérieur d'un objet."
+					]
+				},
+				{
+					"name": "Radiant Absorption",
+					"entries": [
+						"Lorsque le buveur de souffle subit des dégâts radiants, il ne subit aucun dégât et regagne à la place un nombre de points de vie égal aux dégâts radiants infligés."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Le buveur d'haleine effectue deux attaques de Griffe Enervante. Il peut également utiliser Drink Breath."
+					]
+				},
+				{
+					"name": "Enervating Claw",
+					"entries": [
+						"{@atk mw} {@hit 10} à toucher, portée 1,5 m., une créature. {@h}12 ({@damage 2d6 + 5}) dégâts nécrotiques, et si la cible est Grande ou plus petite, elle bénéficie de la condition {@condition grappled} (fuite {@dc 18}). La cible doit réussir un jet de sauvegarde de {@dc 18} Constitution ou son maximum de points de vie est réduit d'un montant égal aux dégâts subis. Cette réduction dure jusqu'à ce que la cible termine un long repos. La cible meurt si cet effet réduit son maximum de points de vie à 0."
+					]
+				},
+				{
+					"name": "Drink Breath",
+					"entries": [
+						"Le buveur d'haleine cible une créature qui a la condition {@condition incapacitated} ou que le buveur d'haleine agrippe et qui n'est pas une construction ou un mort-vivant. La cible doit effectuer un jet de sauvegarde de {@dc 18} Charisme. En cas d'échec, la cible subit 36 ({@damage 8d8}) points de dégâts nécrotiques et son score de Charisme est réduit de {@dice 1d6}. Cette réduction dure jusqu'à ce que la cible termine un repos court ou long. Si cela réduit le Charisme de la cible à 0, elle meurt. Jusqu'à ce que le buveur d'haleine meure, la cible morte ne peut être ramenée à la vie par aucun moyen autre qu'une intervention divine. En cas de sauvegarde réussie, la cible ne subit que la moitié des dégâts nécrotiques. En cas de sauvegarde réussie ou ratée, le buveur d'haleine regagne un nombre de points de vie égal aux dégâts nécrotiques infligés."
+					]
+				},
+				{
+					"name": "Invisibility",
+					"entries": [
+						"Le buveur d'haleine a la condition {@condition invisible}. Cette invisibilité prend fin immédiatement après que le buveur d'haleine a réussi ou raté un jet d'attaque ou qu'il a utilisé Boire du souffle."
+					]
+				}
+			],
+			"traitTags": [
+				"Damage Absorption",
+				"Incorporeal Movement"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"DS",
+				"TP"
+			],
+			"damageTags": [
+				"N",
+				"O"
+			],
+			"miscTags": [
+				"HPR",
+				"MW"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Brusipha",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 127,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"minotaur",
+					"warlock"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 90,
+				"formula": "12d8 + 36"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 18,
+			"dex": 11,
+			"con": 16,
+			"int": 12,
+			"wis": 16,
+			"cha": 16,
+			"save": {
+				"wis": "+5",
+				"cha": "+5"
+			},
+			"skill": {
+				"deception": "+5",
+				"perception": "+7",
+				"religion": "+3"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 17,
+			"languages": [
+				"Abyssal",
+				"Common"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Brusipha lance l'un des sorts suivants, en utilisant le Charisme comme capacité de lanceur de sorts (sauvegarde contre les sorts {@dc 13}) :"
+					],
+					"will": [
+						"{@spell Prestidigitation}",
+						"{@spell Speak with Animals}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Bestow Curse}",
+							"{@spell Command}",
+							"{@spell Crown of Madness}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Demonic Ritual",
+					"entries": [
+						"Brusipha peut passer 3 heures à effectuer un rituel qui invoque {@dice 1d3 + 1} barlguras ou 1 hezrou. Elle doit sacrifier une créature vivante de taille moyenne ou supérieure à Baphomet pendant ce rituel, qui ne peut être effectué que la nuit. Les démons disparaissent à l'aube."
+					]
+				},
+				{
+					"name": "Labyrinthine Recall",
+					"entries": [
+						"Brusipha se souvient parfaitement de tous les chemins qu'elle a parcourus."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Brusipha lance deux attaques de Décharge occulte."
+					]
+				},
+				{
+					"name": "Eldritch Blast",
+					"entries": [
+						"{@atk rs} {@hit 5} pour toucher, portée 36 m., une cible. {@h}8 ({@damage 1d10 + 3}) dégâts de force."
+					]
+				},
+				{
+					"name": "Gore",
+					"entries": [
+						"{@atk mw} {@hit 6} pour toucher, portée de 1,5 m, une cible. {@h}8 ({@damage 1d8 + 4}) dégâts perforants plus 4 ({@damage 1d8}) dégâts nécrotiques. Si Brusipha s'est déplacée d'au moins 3 mètres en ligne droite vers la cible immédiatement avant de frapper, celle-ci subit 4 ({@damage 1d8}) points de dégâts perforants supplémentaires, et si la cible est une créature, elle doit réussir un jet de sauvegarde de {@dc 15} Force ou être repoussée jusqu'à 3 mètres de Brusipha et subir la condition de {@condition prone}."
+					]
+				},
+				{
+					"name": "Incite the Hunters (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Brusipha permet à chaque allié situé à moins de 9 mètres d'elle et possédant le trait Traqueur infaillible d'effectuer une attaque d'arme en réaction contre la cible du Traqueur infaillible de cet allié."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Unerring Tracker",
+					"entries": [
+						"Brusipha crée magiquement un lien psychique avec une créature qu'elle peut voir. Pendant l'heure qui suit, Brusipha connaît la distance et la direction actuelles de la cible si elle se trouve sur le même plan d'existence. Le lien prend fin si Brusipha a la condition {@condition incapacitated} ou si elle utilise cette capacité sur une autre cible."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Baphomet's Blessing",
+					"entries": [
+						"Lorsque Brusipha réduit une créature hostile à 0 point de vie, elle gagne 8 points de vie temporaires."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"O",
+				"P"
+			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			]
+		},
+		{
+			"name": "Deck Defender",
+			"source": "BMT",
+			"page": 72,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"special": "5 + five times your level (the deck defender has a number of Hit Dice [d8s] equal to your level)"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 14,
+			"int": 3,
+			"wis": 10,
+			"cha": 1,
+			"senses": [
+				"blindsight 60 ft. (can't see beyond this radius)"
+			],
+			"passive": 10,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands one of your languages but can't speak"
+			],
+			"pbNote": "equals your",
+			"trait": [
+				{
+					"name": "Allied Knight",
+					"entries": [
+						"Certaines des statistiques du défenseur de la terrasse sont basées sur le personnage qui a tiré la carte Chevalier. Lorsque le bloc de statistiques du défenseur de la terrasse fait référence à \"vous\", il s'agit de ce personnage."
+					]
+				},
+				{
+					"name": "Folded Versatility",
+					"entries": [
+						"À la fin d'un long repos, vous pouvez replier la forme du défenseur de la terrasse, en la changeant en forme d'acrobate, de berserker ou de gardien."
+					]
+				},
+				{
+					"name": "Fragile",
+					"entries": [
+						"Si le défenseur du paquet est réduit à 0 point de vie, il s'effondre en un tas désordonné de cartes à jouer non magiques et ne peut être ressuscité ou reconstruit."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Le défenseur du pont effectue un nombre d'attaques égal à la moitié de son bonus de compétence (arrondi à l'inférieur)."
+					]
+				},
+				{
+					"name": "Paper Cut",
+					"entries": [
+						"{@atk mw} PB + {@hit 3} pour toucher, portée 1,5 m., une cible. {@h}7 ({@damage 1d8 + 3}) dégâts tranchants."
+					]
+				},
+				{
+					"name": "Reckless Strike (Berserker Form Only)",
+					"entries": [
+						"{@atk mw} PB + {@hit 3} pour toucher (avec avantage), portée 1,5 m., une cible. {@h}10 ({@damage 2d6 + 3}) dégâts tranchants, et les attaques effectuées contre le défenseur du pont jusqu'au début de son prochain tour bénéficient d'un avantage."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Swift Step (Acrobat Form Only)",
+					"entries": [
+						"Le défenseur du pont prend l'action Dash ou Disengage."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Protection (Guardian Form Only)",
+					"entries": [
+						"Lorsqu'une créature que le défenseur de la terrasse peut voir attaque une cible autre que le défenseur de la terrasse et qu'elle se trouve à moins de 1,5 mètre de ce dernier, le défenseur de la terrasse impose un désavantage au jet d'attaque."
+					]
+				}
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Enchanting Infiltrator",
+			"source": "BMT",
+			"page": 46,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "fey",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"veiled presence"
+					]
+				}
+			],
+			"hp": {
+				"average": 156,
+				"formula": "24d8 + 48"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 10,
+			"dex": 20,
+			"con": 15,
+			"int": 20,
+			"wis": 16,
+			"cha": 18,
+			"save": {
+				"dex": "+9",
+				"int": "+9"
+			},
+			"skill": {
+				"deception": "+12",
+				"perception": "+7",
+				"stealth": "+13"
+			},
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 17,
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"thieves' cant",
+				"plus any one language"
+			],
+			"cr": "11",
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si l'infiltré échoue à un jet de sauvegarde, il peut choisir de réussir à la place."
+					]
+				},
+				{
+					"name": "Veiled Presence",
+					"entries": [
+						"La CA de l'infiltré inclut son modificateur de Sagesse, et l'infiltré ne peut pas être ciblé par la magie de divination ou les caractéristiques qui permettraient de lire son esprit ou de déterminer son type de créature."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"L'infiltré effectue deux attaques de Lame empoisonnée et peut utiliser Beguiling Whisper."
+					]
+				},
+				{
+					"name": "Poison Blade",
+					"entries": [
+						"{@atk mw,rw} {@hit 9} pour toucher, portée de 1,5 m. ou portée de 18 m., une cible. {@h}7 ({@damage 1d4 + 5}) dégâts perforants plus 11 ({@damage 2d10}) dégâts de poison."
+					]
+				},
+				{
+					"name": "Beguiling Whisper",
+					"entries": [
+						"L'infiltré chuchote magiquement à une créature qu'il peut voir dans un rayon de 9 mètres autour de lui. La cible doit réussir un jet de sauvegarde de {@dc 17} Sagesse ou subir la condition {@condition stunned} due à la peur ou au ravissement (au choix de l'infiltrateur) jusqu'à la fin de son prochain tour, après quoi elle est immunisée contre ce murmure séduisant pendant 24 heures."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"Lorsqu'un attaquant que l'infiltrateur peut voir le frappe avec une attaque, l'infiltrateur divise par deux les dégâts de l'attaque contre lui."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Cunning",
+					"entries": [
+						"L'infiltré échappe aux contraintes non magiques et met fin à la condition {@condition grappled} sur lui-même, puis se déplace à sa vitesse sans provoquer d'attaques d'opportunité."
+					]
+				},
+				{
+					"name": "Stab (Costs 2 Actions)",
+					"entries": [
+						"L'infiltré effectue une attaque Lame empoisonnée."
+					]
+				},
+				{
+					"name": "Misdirecting Escape (Costs 3 Actions)",
+					"entries": [
+						"L'infiltré possède magiquement la condition {@condition invisible} et crée un double illusoire de lui-même dans son espace, puis se téléporte, avec tout l'équipement qu'il porte, dans un espace inoccupé à moins de 4,5 mètres de lui. L'image lance des lames illusoires sur deux créatures au choix de l'infiltré dans un rayon de 6 mètres autour de l'image. Chaque cible doit effectuer un jet de sauvegarde de {@dc 17} Sagesse, subissant 13 ({@damage 3d8}) points de dégâts psychiques en cas de sauvegarde ratée, ou moitié moins en cas de sauvegarde réussie. L'invisibilité dure jusqu'à la fin du prochain tour de l'infiltré."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Villain",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"TC",
+				"X"
+			],
+			"damageTags": [
+				"I",
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Euryale",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 189,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "monstrosity",
+				"tags": [
+					"druid",
+					"medusa"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 297,
+				"formula": "35d8 + 140"
+			},
+			"speed": {
+				"walk": 30,
+				"alternate": {
+					"walk": [
+						{
+							"number": 50,
+							"condition": "in serpent form"
+						}
+					],
+					"climb": [
+						{
+							"number": 50,
+							"condition": "in serpent form"
+						}
+					]
+				}
+			},
+			"str": 21,
+			"dex": 16,
+			"con": 18,
+			"int": 12,
+			"wis": 20,
+			"cha": 15,
+			"save": {
+				"dex": "+9",
+				"con": "+10",
+				"int": "+7",
+				"wis": "+11"
+			},
+			"skill": {
+				"animal handling": "+11",
+				"insight": "+17",
+				"medicine": "+11",
+				"nature": "+13",
+				"perception": "+11"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 21,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Druidic"
+			],
+			"cr": "18",
+			"spellcasting": [
+				{
+					"name": "Spellcasting (Medusa Form Only)",
+					"headerEntries": [
+						"Euryale lance l'un des sorts suivants, ne nécessitant aucune composante matérielle et utilisant la Sagesse comme capacité de lanceur de sorts (sauvegarde contre les sorts {@dc 19}) :"
+					],
+					"will": [
+						"{@spell Druidcraft}",
+						"{@spell Pass without Trace}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell Goodberry}",
+							"{@spell Lesser Restoration}",
+							"{@spell Locate Creature}",
+							"{@spell Move Earth}",
+							"{@spell Transport via Plants}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si Euryale rate un jet de sauvegarde, elle peut choisir de le réussir à la place."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Euryale porte une moitié d'une paire de Pierres à distance ; l'autre moitié de la paire est tenue par Asteria."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Euryale effectue trois attaques. Si elle est sous forme de serpent, une seule de ces attaques peut être Constrict."
+					]
+				},
+				{
+					"name": "Constrict (Serpent Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 11} à toucher, portée de 4,5 m, une créature Grande ou plus petite. {@h}16 ({@damage 2d10 + 5}) dégâts de contondant, et la cible bénéficie de la condition {@condition grappled} (fuite {@dc 19}). Jusqu'à la fin de ce grappin, la cible subit 11 ({@damage 2d10}) dégâts de contondant au début de chacun de ses tours, et Euryale ne peut pas constricter une autre cible."
+					]
+				},
+				{
+					"name": "Snake Bite",
+					"entries": [
+						"{@atk mw} {@hit 11} pour toucher, portée de 3 m, une cible. {@h}12 ({@damage 2d6 + 5}) dégâts perforants, et la cible doit réussir un jet de sauvegarde de {@dc 18} Constitution ou subir la condition {@condition poisoned} jusqu'au début du prochain tour d'Euryale."
+					]
+				},
+				{
+					"name": "Verdant Bolt (Medusa Form Only)",
+					"entries": [
+						"{@atk rs} {@hit 11} pour toucher, portée 36 m., une cible. {@h}18 ({@damage 4d8}) dégâts d'acide."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Euryale change de forme pour prendre sa forme d'énorme serpent ou reprendre sa forme de méduse moyenne. Les statistiques de jeu d'Euryale sont les mêmes sous chaque forme, sauf lorsque cela est indiqué dans ce bloc de statistiques. L'équipement qu'elle porte n'est pas transformé. Euryale reprend sa forme de méduse si elle meurt."
+					]
+				},
+				{
+					"name": "Petrifying Gaze {@recharge 4}",
+					"entries": [
+						"Euryale libère de la magie pétrifiante de ses yeux dans un cône de 9 mètres. Chaque créature dans cette zone doit faire un jet de sauvegarde de Constitution de {@dc 18} si elle n'a pas la condition {@condition blinded}. Si le jet de sauvegarde échoue de 5 ou plus, la créature est atteinte de la condition {@condition petrified}. Sinon, en cas d'échec, la créature subit 14 ({@damage 4d6}) points de dégâts de force, commence à se transformer en pierre et souffre de la condition {@condition restrained}. La créature de {@condition restrained} doit répéter son jet de sauvegarde à la fin de son prochain tour. La pétrification dure jusqu'à ce que la créature soit libérée par le sort {@spell Greater Restoration} ou une autre magie Une créature peut utiliser sa réaction, si elle est disponible, pour fermer les yeux afin d'éviter le jet de sauvegarde. Si la créature le fait, elle a la condition {@condition blinded} jusqu'à la fin de son prochain tour."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Move",
+					"entries": [
+						"Euryale prend de la vitesse."
+					]
+				},
+				{
+					"name": "Venomous Strike (Costs 2 Actions)",
+					"entries": [
+						"Euryale effectue une attaque Morsure de serpent. Si la cible a la condition {@condition poisoned}, l'attaque inflige 16 ({@damage 3d10}) points de dégâts de poison supplémentaires."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"DU"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"I",
+				"O",
+				"P"
+			],
+			"spellcastingTags": [
+				"F"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"petrified",
+				"poisoned",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Fate Hag",
+			"source": "BMT",
+			"page": 176,
+			"size": [
+				"M"
+			],
+			"type": "fey",
+			"alignment": [
+				"N"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 71,
+				"formula": "13d8 + 13"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 14,
+			"con": 13,
+			"int": 12,
+			"wis": 18,
+			"cha": 15,
+			"save": {
+				"con": "+3",
+				"wis": "+6"
+			},
+			"skill": {
+				"arcana": "+5",
+				"deception": "+6",
+				"history": "+5",
+				"perception": "+6"
+			},
+			"senses": [
+				"truesight 60 ft."
+			],
+			"passive": 16,
+			"conditionImmune": [
+				"charmed"
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Tout en tenant ses cisailles, la sorcière lance l'un des sorts suivants, ne nécessitant aucune composante matérielle et utilisant la Sagesse comme capacité de lanceur de sorts (sauvegarde contre les sorts {@dc 14}) :"
+					],
+					"will": [
+						"{@spell Bless}",
+						"{@spell Guidance}",
+						"{@spell Silent Image}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Bane}",
+							"{@spell Bestow Curse}",
+							"{@spell Divination}",
+							"{@spell Scrying} (as an action)"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"Si le hag échoue à un jet de sauvegarde, il peut choisir de réussir à la place."
+					]
+				},
+				{
+					"name": "Trace the Threads (1/Day)",
+					"entries": [
+						"La sorcière peut lancer le sort {@spell Legend Lore}, ne nécessitant aucune composante matérielle et utilisant la Sagesse comme capacité de lanceur de sorts."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"La sorcière effectue deux attaques de Cisaillement. Elle peut remplacer une attaque par une utilisation de Spellcasting."
+					]
+				},
+				{
+					"name": "Shears",
+					"entries": [
+						"{@atk mw} {@hit 6} pour toucher, portée de 1,5 m., une cible. {@h}8 ({@damage 1d8 + 4}) dégâts de force. Si la cible est une créature, elle a un désavantage aux jets d'attaque jusqu'à la fin du prochain tour de la sorcière."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Destined Jaunt",
+					"entries": [
+						"Le hag se téléporte magiquement, avec tout l'équipement qu'il porte, dans un espace inoccupé qu'il peut voir dans un rayon de 9 mètres autour de lui."
+					]
+				},
+				{
+					"name": "Tangle Threads",
+					"entries": [
+						"La sorcière enchevêtre magiquement une créature qu'elle peut voir à moins de 18 mètres d'elle dans des fils d'argent spectraux. La créature doit réussir un jet de sauvegarde de {@dc 14} de Force, ou sa vitesse est réduite à 0 jusqu'à la fin de son prochain tour."
+					]
+				},
+				{
+					"name": "Destiny Curse (Costs 2 Actions)",
+					"entries": [
+						"La sorcière maudit magiquement une créature qu'elle voit dans un rayon de 18 mètres autour d'elle. La créature doit effectuer un jet de sauvegarde de {@dc 14} Sagesse, et la créature a un désavantage sur cette sauvegarde si elle a endommagé la hag au cours de la dernière minute. En cas de sauvegarde ratée, la créature a un désavantage sur les tests de capacité, les jets d'attaque et les jets de sauvegarde jusqu'à ce que la malédiction prenne fin. Une fois par tour, lorsque la créature maudite rate l'un de ces jets {@dice d20}, elle subit 7 ({@damage 2d6}) points de dégâts de force. La malédiction prend fin au bout de 1 minute, lorsque la créature réussit un total de trois tests de capacité, jets d'attaque ou jets de sauvegarde, quelle qu'en soit la combinaison, ou lorsque la sorcière utilise à nouveau cette action."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"O"
+			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"strength",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gremorly's Ghost",
+			"source": "BMT",
+			"page": 122,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 82,
+				"formula": "15d8 + 15"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 40,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 7,
+			"dex": 14,
+			"con": 12,
+			"int": 18,
+			"wis": 12,
+			"cha": 17,
+			"save": {
+				"int": "+8",
+				"wis": "+5"
+			},
+			"skill": {
+				"arcana": "+8",
+				"history": "+8"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"acid",
+				"fire",
+				"lightning",
+				"thunder",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"cold",
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"Dwarvish",
+				"Giant"
+			],
+			"cr": "9",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Gremorly lance l'un des sorts suivants, en utilisant l'Intelligence comme capacité de lanceur de sorts (sauvegarde contre les sorts {@dc 16}) :"
+					],
+					"will": [
+						"{@spell Dancing Lights}",
+						"{@spell Mage Hand}",
+						"{@spell Prestidigitation}"
+					],
+					"daily": {
+						"1": [
+							"{@spell Slow}"
+						],
+						"2e": [
+							"{@spell Bestow Curse}",
+							"{@spell Dispel Magic}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Ethereal Sight",
+					"entries": [
+						"Gremorly peut voir à 18 mètres dans le plan éthéré lorsqu'il se trouve dans le plan matériel, et vice versa."
+					]
+				},
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"Gremorly peut se déplacer à travers d'autres créatures et objets comme s'il s'agissait d'un terrain difficile. Il subit 5 ({@damage 1d10}) dégâts de force s'il termine son tour à l'intérieur d'un objet."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si Gremorly rate un jet de sauvegarde, il peut choisir de le réussir à la place."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Gremorly effectue trois attaques Withering Strike."
+					]
+				},
+				{
+					"name": "Withering Strike",
+					"entries": [
+						"{@atk ms} {@hit 8} pour toucher, portée de 1,5 m., une cible. {@h}19 ({@damage 3d12}) dégâts nécrotiques."
+					]
+				},
+				{
+					"name": "Fell Necromancy",
+					"entries": [
+						"Gremorly cible une créature qu'il peut voir dans un rayon de 18 mètres autour de lui. La cible doit effectuer un jet de sauvegarde de {@dc 16} de Constitution, subissant 61 ({@damage 7d8 + 30}) points de dégâts nécrotiques en cas de sauvegarde ratée, ou moitié moins en cas de sauvegarde réussie. De plus, Gremorly regagne 9 ({@dice 2d8}) points de vie."
+					]
+				},
+				{
+					"name": "Possession {@recharge}",
+					"entries": [
+						"Un humanoïde que Gremorly peut voir dans un rayon de 1,5 mètre autour de lui doit réussir un jet de sauvegarde de {@dc 15} Charisme ou être possédé par lui ; Gremorly disparaît, et la cible est atteinte de la condition {@condition incapacitated} et perd le contrôle de son corps. Gremorly ne peut pas être ciblé par une attaque, un sort ou un autre effet, sauf ceux qui transforment en mort-vivant, et il conserve son alignement, son Intelligence, sa Sagesse, son Charisme et son immunité aux conditions {@condition charmed} et {@condition frightened}. Il utilise par ailleurs les statistiques de jeu de la cible, mais Gremorly n'a pas accès aux connaissances, caractéristiques de classe ou compétences de la cible.",
+						"La possession dure jusqu'à ce que la cible tombe à 0 point de vie, que Gremorly y mette fin par une action bonus, ou que Gremorly soit retourné ou expulsé par un effet comme le sort {@spell Dispel Evil and Good}. Lorsque la possession prend fin, Gremorly réapparaît dans un espace inoccupé à moins de 1,5 mètre de la cible. La cible est immunisée contre cette possession pendant 24 heures après avoir réussi le jet de sauvegarde ou après la fin de la possession."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Ethereal Step {@recharge 4}",
+					"entries": [
+						"Gremorly se téléporte jusqu'à 9 mètres dans un espace inoccupé qu'il peut voir."
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement",
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"DR",
+				"GI"
+			],
+			"damageTags": [
+				"N",
+				"O"
+			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Grim Champion of Bloodshed",
+			"source": "BMT",
+			"page": 161,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item plate armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 280,
+				"formula": "33d8 + 132"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 23,
+			"dex": 12,
+			"con": 18,
+			"int": 10,
+			"wis": 17,
+			"cha": 21,
+			"save": {
+				"str": "+12",
+				"dex": "+7",
+				"con": "+10"
+			},
+			"skill": {
+				"athletics": "+12",
+				"intimidation": "+11",
+				"perception": "+9"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 19,
+			"resist": [
+				"cold",
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"poisoned",
+				"stunned",
+				"unconscious"
+			],
+			"languages": [
+				"Common"
+			],
+			"cr": "20",
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si le champion échoue à un jet de sauvegarde, il peut choisir de le réussir à la place."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Le champion effectue quatre attaques Morgenstern flamboyante. Il peut remplacer l'une de ces attaques par Tempête de lames, si elle est disponible."
+					]
+				},
+				{
+					"name": "Blazing Morningstar",
+					"entries": [
+						"{@atk mw} {@hit 12} pour toucher, portée de 1,5 m, une cible. {@h}10 ({@damage 1d8 + 6}) dégâts perforants plus 14 ({@damage 4d6}) dégâts de feu."
+					]
+				},
+				{
+					"name": "Blade Storm {@recharge 5}",
+					"entries": [
+						"Le champion fait apparaître une tempête de lames spectrales qui remplit un cube de 6 mètres de côté centré sur un point qu'il peut voir dans un rayon de 36 mètres autour de lui. La tempête dure jusqu'au début du prochain tour du champion. Tant que la tempête est active, la zone de la tempête est un terrain difficile. Chaque fois qu'une créature entre dans la tempête pour la première fois lors d'un tour ou y commence son tour, elle doit effectuer un jet de sauvegarde de {@dc 19} de Dextérité, subissant 27 ({@damage 6d8}) points de dégâts tranchants en cas de jet de sauvegarde raté, ou moitié moins de dégâts en cas de jet réussi."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Furious Pursuit",
+					"entries": [
+						"Le champion se déplace à sa vitesse ou ordonne à sa monture de se déplacer à sa vitesse. Ce déplacement ne provoque pas d'attaque d'opportunité."
+					]
+				},
+				{
+					"name": "Induce Violence",
+					"entries": [
+						"Le champion cible une créature qu'il peut voir dans un rayon de 18 mètres autour de lui. La cible doit réussir un jet de sauvegarde de {@dc 19} Sagesse ou porter immédiatement une attaque d'arme de mêlée contre une autre créature au choix du champion qui se trouve à portée de la cible. Si aucune créature ne se trouve à portée de la cible ou si la cible a la condition {@condition incapacitated}, la cible subit 11 ({@damage 2d10}) dégâts psychiques."
+					]
+				},
+				{
+					"name": "Menace (Costs 2 Actions)",
+					"entries": [
+						"Le champion choisit un nombre quelconque de créatures qu'il peut voir dans un rayon de 9 mètres autour de lui. Chaque cible doit réussir un jet de sauvegarde de {@dc 19} Sagesse ou subir la condition {@condition frightened} jusqu'à la fin de son prochain tour."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"F",
+				"P",
+				"S",
+				"Y"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Grim Champion of Desolation",
+			"source": "BMT",
+			"page": 162,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item studded leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 416,
+				"formula": "49d8 + 196"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 22,
+			"dex": 23,
+			"con": 18,
+			"int": 12,
+			"wis": 20,
+			"cha": 19,
+			"save": {
+				"dex": "+14",
+				"con": "+12",
+				"wis": "+13"
+			},
+			"skill": {
+				"deception": "+12",
+				"insight": "+13",
+				"perception": "+13",
+				"stealth": "+14"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 23,
+			"resist": [
+				"cold",
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"poisoned",
+				"stunned",
+				"unconscious"
+			],
+			"languages": [
+				"Common",
+				"Elvish"
+			],
+			"cr": "25",
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si le champion échoue à un jet de sauvegarde, il peut choisir de le réussir à la place."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Le champion effectue deux attaques Lame sanglante et utilise Vide creux."
+					]
+				},
+				{
+					"name": "Leeching Blade",
+					"entries": [
+						"{@atk mw} {@hit 14} à toucher, portée de 1,5 m, une cible. {@h}13 ({@damage 2d6 + 6}) de dégâts tranchants plus 33 ({@damage 6d10}) de dégâts de froid, et le champion regagne 10 points de vie."
+					]
+				},
+				{
+					"name": "Hollow Void",
+					"entries": [
+						"Le champion invoque une faille affamée autour d'une créature qu'il peut voir dans un rayon de 36 mètres autour de lui. La créature doit effectuer un jet de sauvegarde de {@dc 22} de Constitution. En cas d'échec, la créature subit 49 ({@damage 11d8}) points de dégâts de force et souffre de la condition {@condition stunned} jusqu'au début du prochain tour du champion. En cas de sauvegarde réussie, la créature ne subit que la moitié des dégâts. Si une créature est réduite à 0 point de vie par cet effet, elle meurt et son corps se réduit en poussière."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Step into Nothing {@recharge 4}",
+					"entries": [
+						"Le champion, ainsi que tout l'équipement qu'il porte, a la condition {@condition invisible} et se téléporte dans un espace inoccupé qu'il peut voir dans un rayon de 9 mètres autour de lui. Le champion reste {@condition invisible} jusqu'au début de son prochain tour ou immédiatement après avoir infligé des dégâts."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Crush",
+					"entries": [
+						"Le champion libère une rafale de force écrasante sur une créature qu'il peut voir dans un rayon de 9 mètres. La créature doit réussir un jet de sauvegarde de {@dc 22} de Force ou subir 14 ({@damage 4d6}) points de dégâts de force et la condition {@condition prone}."
+					]
+				},
+				{
+					"name": "Fearsome Pursuit",
+					"entries": [
+						"Le champion se déplace à sa vitesse ou ordonne à sa monture de se déplacer à sa vitesse. Ce déplacement ne provoque pas d'attaque d'opportunité."
+					]
+				},
+				{
+					"name": "Nullify (Costs 2 Actions)",
+					"entries": [
+						"Le champion émet une onde magique dans un cône de 18 mètres. Tout sort de 5e niveau ou moins prend fin sur les créatures et les objets du choix du champion dans cette zone."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"E"
+			],
+			"damageTags": [
+				"C",
+				"O",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"prone",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Grim Champion of Pestilence",
+			"source": "BMT",
+			"page": 163,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				14,
+				{
+					"ac": 17,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 120,
+				"formula": "16d8 + 48"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 10,
+			"dex": 18,
+			"con": 16,
+			"int": 17,
+			"wis": 15,
+			"cha": 21,
+			"save": {
+				"dex": "+9",
+				"cha": "+10"
+			},
+			"skill": {
+				"arcana": "+8",
+				"perception": "+7",
+				"stealth": "+9"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 17,
+			"resist": [
+				"cold",
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"poisoned",
+				"stunned",
+				"unconscious"
+			],
+			"languages": [
+				"Common",
+				"Infernal"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Le champion lance l'un des sorts suivants, ne nécessitant aucune composante matérielle et utilisant le Charisme comme capacité de lanceur de sorts (sauvegarde contre les sorts {@dc 18}) :"
+					],
+					"will": [
+						"{@spell Detect Magic}",
+						"{@spell Mage Armor} (self only)"
+					],
+					"daily": {
+						"2e": [
+							"{@spell Blight}",
+							"{@spell Blindness/Deafness}"
+						],
+						"1e": [
+							"{@spell Cloudkill}",
+							"{@spell Contagion}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Halo of Pestilence",
+					"entries": [
+						"Le champion est entouré d'une aura de magie mortelle qui prend la forme d'une foule d'insectes blancs incandescents. Chaque créature qui commence son tour à moins de 3 mètres du champion doit réussir un jet de sauvegarde de {@dc 18} Constitution ou subir la condition {@condition incapacitated} jusqu'au début de son prochain tour, tandis que les insectes ravagent son corps."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si le champion échoue à un jet de sauvegarde, il peut choisir de le réussir à la place."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Le champion effectue deux attaques de bâton de Flétrissement, deux attaques de boulon de peste, ou une de chaque."
+					]
+				},
+				{
+					"name": "Blight Staff",
+					"entries": [
+						"{@atk mw} {@hit 9} pour toucher, portée de 1,5 m, une cible. {@h}8 ({@damage 1d8 + 4}) dégâts de contondant plus 21 ({@damage 6d6}) dégâts nécrotiques."
+					]
+				},
+				{
+					"name": "Plague Bolt",
+					"entries": [
+						"{@atk rs} {@hit 10} à toucher, portée 36 m., une cible. {@h}23 ({@damage 4d8 + 5}) dégâts de poison, et la cible a la condition {@condition poisoned} jusqu'au début du prochain tour du champion."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attack",
+					"entries": [
+						"Le champion effectue une attaque de bâton de Flétrissement ou de boulon de peste."
+					]
+				},
+				{
+					"name": "Furious Pursuit",
+					"entries": [
+						"Le champion se déplace à sa vitesse ou ordonne à sa monture de se déplacer à sa vitesse. Ce déplacement ne provoque pas d'attaque d'opportunité."
+					]
+				},
+				{
+					"name": "Cast a Spell (Costs 2 Actions)",
+					"entries": [
+						"Le champion utilise l'incantation."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"I"
+			],
+			"damageTags": [
+				"B",
+				"I",
+				"N"
+			],
+			"damageTagsSpell": [
+				"I",
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened",
+				"poisoned",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Harrow Hawk",
+			"source": "BMT",
+			"page": 177,
+			"size": [
+				"T"
+			],
+			"type": "undead",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 25,
+				"formula": "10d4"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": 60
+			},
+			"str": 5,
+			"dex": 16,
+			"con": 10,
+			"int": 2,
+			"wis": 14,
+			"cha": 7,
+			"skill": {
+				"perception": "+6",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"cr": "1",
+			"action": [
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 5} à toucher, portée de 1,5 m., une cible. {@h}8 ({@damage 2d4 + 3}) dégâts tranchants plus 3 ({@damage 1d6}) dégâts nécrotiques."
+					]
+				},
+				{
+					"name": "Plane Shift (2/Day)",
+					"entries": [
+						"Le faucon lance {@spell Plane Shift} sur lui-même, ne nécessitant aucune composante de sort et utilisant la Sagesse comme capacité de lanceur de sorts."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Shadow Dash",
+					"entries": [
+						"Lorsque le faucon se trouve dans une lumière ou une obscurité faible, il se téléporte jusqu'à 9 mètres dans un espace inoccupé qu'il peut voir et qui se trouve également dans une lumière ou une obscurité faible. Le faucon a alors l'avantage sur la première attaque de mêlée qu'il effectue avant la fin du tour."
+					]
+				}
+			],
+			"senseTags": [
+				"SD"
+			],
+			"damageTags": [
+				"N",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Harrow Hound",
+			"source": "BMT",
+			"page": 164,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 45,
+				"formula": "6d8 + 18"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 16,
+			"dex": 19,
+			"con": 16,
+			"int": 8,
+			"wis": 15,
+			"cha": 13,
+			"skill": {
+				"perception": "+6",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 16,
+			"resist": [
+				"necrotic",
+				"psychic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"Blink Dog",
+				"understands Sylvan but can't speak it"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"Le molosse a l'avantage aux jets d'attaque contre une créature si au moins un de ses alliés se trouve à moins de 1,5 mètre de la cible et que cet allié n'a pas la condition {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Supernatural Tracker",
+					"entries": [
+						"Le chien connaît la distance et la direction de toute créature qui s'est approchée à moins de 9 mètres de lui, même si cette créature se trouve sur un autre plan d'existence. Si la créature suivie par le chien meurt, le chien le sait."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} pour toucher, portée de 1,5 m., une cible. {@h}10 ({@damage 2d6 + 3}) dégâts perforants plus 3 ({@damage 1d6}) dégâts nécrotiques. Si la cible est une créature, elle doit réussir un jet de sauvegarde de {@dc 13} de Force ou subir la condition {@condition prone}."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Shadow Step {@recharge 4}",
+					"entries": [
+						"Le chien se téléporte magiquement, avec tout l'équipement qu'il porte, jusqu'à 12 mètres dans un espace inoccupé qu'il peut voir."
+					]
+				}
+			],
+			"traitTags": [
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"CS",
+				"OTH",
+				"S"
+			],
+			"damageTags": [
+				"N",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Helmed Horror Detention Drone",
+			"source": "BMT",
+			"page": 135,
+			"_copy": {
+				"name": "Helmed Horror",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "helmed horror",
+						"with": "drone"
+					},
+					"action": [
+						{
+							"mode": "appendArr",
+							"items": {
+								"name": "Detention Orb",
+								"entries": [
+									"Le drone lance un minuscule orbe de force magique sur une créature qu'il peut voir dans un rayon de 9 mètres. La créature doit réussir un jet de sauvegarde de Constitution {@dc 15} ou être enfermée dans l'orbe, qui s'étend jusqu'à atteindre une taille juste suffisante pour contenir la créature. Tant qu'elle est enfermée, la créature n'a pas besoin de respirer, de manger ou de boire, et elle ne vieillit pas. Rien ne peut traverser l'orbe, et aucune créature ne peut se téléporter ou utiliser le voyage planaire pour entrer ou sortir de l'orbe. Comme action bonus, le drone peut déplacer l'orbe et son contenu jusqu'à 9 mètres dans n'importe quelle direction. Une incantation réussie du sort {@spell Dispel Magic} sur l'orbe ({@dc 15}) le détruit. Sinon, l'orbe reste intact jusqu'à ce que le drone dépense une action pour mettre fin à l'effet ou que le drone soit détruit. Un drone ne peut avoir qu'un seul orbe de détention actif à la fois ; si le drone crée un orbe de détention alors qu'il en a déjà un actif, le premier orbe disparaît, libérant la créature qu'il contient."
+								]
+							}
+						}
+					]
+				}
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"hasFluff": true
+		},
+		{
+			"name": "Hierophant Medusa",
+			"source": "BMT",
+			"page": 179,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 237,
+				"formula": "25d10 + 100"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40,
+				"swim": 40
+			},
+			"str": 22,
+			"dex": 20,
+			"con": 18,
+			"int": 15,
+			"wis": 23,
+			"cha": 22,
+			"save": {
+				"con": "+10",
+				"wis": "+12"
+			},
+			"skill": {
+				"insight": "+12",
+				"perception": "+12",
+				"persuasion": "+12",
+				"religion": "+8",
+				"stealth": "+11"
+			},
+			"passive": 22,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"Common plus any three languages (Abyssal, Celestial, Druidic, or Infernal recommended)"
+			],
+			"cr": "17",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"La méduse lance l'un des sorts suivants, ne nécessitant aucune composante matérielle et utilisant la Sagesse comme capacité de lanceur de sorts (sauvegarde contre les sorts {@dc 20}) :"
+					],
+					"will": [
+						"{@spell Light}",
+						"{@spell Spare the Dying}",
+						"{@spell Thaumaturgy}"
+					],
+					"daily": {
+						"2": [
+							"{@spell Mass Cure Wounds} (cast at 8th level)"
+						],
+						"1e": [
+							"{@spell Blade Barrier}",
+							"{@spell Divination}",
+							"{@spell Greater Restoration}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Devotion's Call (1/Day)",
+					"entries": [
+						"La méduse peut lancer le sort {@spell Resurrection}, ne nécessitant aucune composante matérielle et utilisant la Sagesse comme capacité de lanceur de sorts."
+					]
+				},
+				{
+					"name": "Legendary Resistance (4/Day)",
+					"entries": [
+						"Si la méduse rate un jet de sauvegarde, elle peut choisir de le réussir à la place."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"La méduse porte une attaque Constrict, une attaque Lame finale et une attaque Poil de serpent. Elle peut également effectuer deux attaques Frappe courroucée."
+					]
+				},
+				{
+					"name": "Constrict",
+					"entries": [
+						"{@atk mw} {@hit 12} pour toucher, portée de 3 m, une cible. {@h}16 ({@damage 3d6 + 6}) dégâts contondants, et si la cible est une créature moyenne ou plus petite, elle a la condition {@condition grappled} (fuite {@dc 20}). Jusqu'à la fin de ce grappin, la cible a la condition {@condition restrained}, et la méduse ne peut pas étrangler une autre créature."
+					]
+				},
+				{
+					"name": "Final Blade",
+					"entries": [
+						"{@atk mw} {@hit 12} pour toucher, portée de 1,5 m, une cible. {@h}13 ({@damage 2d6 + 6}) de dégâts tranchants plus 21 ({@damage 6d6}) de dégâts de force. Si la cible a au moins une tête et que la méduse a obtenu un 20 au jet d'attaque, elle est décapitée et meurt si elle rate un jet de sauvegarde de {@dc 20} de Constitution et ne peut survivre sans cette tête. Une cible est immunisée contre cet effet si elle ne subit aucun dégât, si elle a des actions légendaires ou si elle est Énorme ou plus grande. Une telle créature subit 28 ({@damage 8d6}) points de dégâts de force supplémentaires."
+					]
+				},
+				{
+					"name": "Snake Hair",
+					"entries": [
+						"{@atk mw} {@hit 12} pour toucher, portée de 1,5 m, une cible. {@h}11 ({@damage 1d10 + 6}) dégâts perforants plus 5 ({@damage 1d10}) dégâts de poison."
+					]
+				},
+				{
+					"name": "Wrathful Strike",
+					"entries": [
+						"{@atk rs} {@hit 12} pour toucher, portée 36 m., une créature. {@h}22 ({@damage 3d10 + 6}) dégâts radiants, et la cible a la condition {@condition blinded} jusqu'à la fin de son prochain tour."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Petrifying Gaze {@recharge 4}",
+					"entries": [
+						"La méduse libère de la magie pétrifiante de ses yeux dans un cône de 9 mètres. Chaque créature située dans cette zone doit effectuer un jet de sauvegarde de Constitution de {@dc 18} si elle ne souffre pas de la condition {@condition blinded}. Si le jet de sauvegarde échoue de 5 ou plus, la créature est atteinte de la condition {@condition petrified}. Sinon, en cas d'échec, la créature subit 10 ({@damage 3d6}) points de dégâts de force, commence à se transformer en pierre et souffre de la condition {@condition restrained}. La créature de {@condition restrained} doit répéter son jet de sauvegarde à la fin de son prochain tour. En cas d'échec, elle subit la condition {@condition petrified}, et en cas de réussite, l'effet prend fin. La pétrification dure jusqu'à ce que la créature soit libérée par le sort {@spell Greater Restoration} ou une autre magie.",
+						"Une créature peut utiliser sa réaction, si elle est disponible, pour fermer les yeux afin d'éviter le jet de sauvegarde. Si la créature le fait, elle a la condition {@condition blinded} jusqu'à la fin de son prochain tour."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Move",
+					"entries": [
+						"La méduse se déplace à sa vitesse sans provoquer d'attaque d'opportunité."
+					]
+				},
+				{
+					"name": "Wrathful Blast (Costs 2 Actions)",
+					"entries": [
+						"La méduse effectue une attaque Frappe courroucée."
+					]
+				},
+				{
+					"name": "Final Slash (Costs 3 Actions)",
+					"entries": [
+						"La méduse effectue une attaque Lame Finale avec avantage."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Hierophant Medusa",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"CE",
+				"DU",
+				"I",
+				"X"
+			],
+			"damageTags": [
+				"B",
+				"I",
+				"O",
+				"P",
+				"R",
+				"S"
+			],
+			"damageTagsSpell": [
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"petrified",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hierophant of the Comet",
+			"source": "BMT",
+			"page": 92,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"warlock"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item breastplate|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 153,
+				"formula": "18d8 + 72"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 13,
+			"con": 18,
+			"int": 15,
+			"wis": 17,
+			"cha": 20,
+			"save": {
+				"wis": "+7",
+				"cha": "+9"
+			},
+			"skill": {
+				"arcana": "+10",
+				"deception": "+9",
+				"persuasion": "+9",
+				"religion": "+6"
+			},
+			"senses": [
+				"truesight 30 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"psychic"
+			],
+			"languages": [
+				"Common plus any two languages",
+				"telepathy 60 ft."
+			],
+			"cr": "11",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Le hiérophante lance l'un des sorts suivants, en utilisant le Charisme comme capacité de lanceur de sorts (sauvegarde contre les sorts {@dc 17}) :"
+					],
+					"will": [
+						"{@spell Detect Thoughts}",
+						"{@spell Mage Hand}",
+						"{@spell Thaumaturgy}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Dimension Door}",
+							"{@spell Mass Suggestion}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Comet's Voice (1/Day)",
+					"entries": [
+						"Le hiérophante peut lancer {@spell Contact Other Plane}, en utilisant le Charisme comme capacité de lancement de sorts."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Le hiérophante a l'avantage sur les jets de sauvegarde contre les sorts et autres effets magiques."
+					]
+				},
+				{
+					"name": "Thought Shield",
+					"entries": [
+						"Les pensées du hiérophante ne peuvent être lues par aucun moyen, sauf si le hiérophante le permet."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Le hiérophante effectue deux attaques de Hache du héraut ou trois attaques de souffle de la comète."
+					]
+				},
+				{
+					"name": "Herald's Axe",
+					"entries": [
+						"{@atk mw} {@hit 9} pour toucher, portée de 1,5 m, une cible. {@h}11 ({@damage 1d12 + 5}) dégâts tranchants plus 10 ({@damage 3d6}) dégâts nécrotiques."
+					]
+				},
+				{
+					"name": "Comet Blast",
+					"entries": [
+						"{@atk rs} {@hit 9} pour toucher, portée 36 m., une cible. {@h}16 ({@damage 2d10 + 5}) dégâts de force."
+					]
+				},
+				{
+					"name": "All-Consuming Star {@recharge}",
+					"entries": [
+						"Le hiérophante conjure une manifestation de l'étoile dévorante : une lumière brillante et des cris obsédants qui remplissent une sphère de 6 mètres de rayon centrée sur un point que le hiérophante peut voir dans un rayon de 18 mètres autour de lui. Chaque créature se trouvant dans la sphère bénéficie des conditions {@condition blinded} et {@condition deafened}. Chaque créature qui entre dans la sphère pour la première fois lors d'un tour ou qui y commence son tour doit effectuer un jet de sauvegarde de {@dc 17} Sagesse. En cas de sauvegarde ratée, la créature subit 27 ({@damage 6d8}) points de dégâts psychiques et souffre de la condition {@condition incapacitated} jusqu'au début de son prochain tour. En cas de sauvegarde réussie, la créature ne subit que la moitié des dégâts. La manifestation persiste jusqu'à ce que le hiérophante meure, ait la condition {@condition incapacitated}, utilise une action bonus pour mettre fin à l'effet, ou utilise à nouveau cette action."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Star's Hunger",
+					"entries": [
+						"Le hiérophante prend pour cible une créature située à moins de 9 mètres du centre de son étoile dévorante. La cible doit réussir un jet de sauvegarde de Force {@dc 17} ou être attirée jusqu'à 9 mètres vers le centre de l'étoile dévorante."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"TP",
+				"X"
+			],
+			"damageTags": [
+				"N",
+				"O",
+				"S",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"strength",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hulgaz",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 169,
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"devil"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 190,
+				"formula": "20d10 + 80"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 17,
+			"dex": 10,
+			"con": 18,
+			"int": 14,
+			"wis": 15,
+			"cha": 20,
+			"save": {
+				"wis": "+7",
+				"cha": "+10"
+			},
+			"skill": {
+				"deception": "+10",
+				"insight": "+7",
+				"perception": "+7",
+				"persuasion": "+10"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 17,
+			"resist": [
+				"acid",
+				"cold",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
+				}
+			],
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"telepathy 120 ft."
+			],
+			"cr": "14",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Hulgaz lance l'un des sorts suivants, ne nécessitant aucune composante matérielle et utilisant le Charisme comme capacité de lanceur de sorts (sauvegarde contre les sorts {@dc 18}) :"
+					],
+					"will": [
+						"{@spell Charm Person}"
+					],
+					"daily": {
+						"1": [
+							"{@spell Teleport}"
+						],
+						"2e": [
+							"{@spell Dispel Magic}",
+							"{@spell Fog Cloud}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si Hulgaz rate un jet de sauvegarde, elle peut choisir de le réussir à la place."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Hulgaz a l'avantage sur les jets de sauvegarde contre les sorts et autres effets magiques."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Hulgaz porte deux attaques de Griffe et une attaque de Piqûre enivrante."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 8} à toucher, portée de 1,5 m., une cible. {@h}12 ({@damage 2d8 + 3}) dégâts tranchants."
+					]
+				},
+				{
+					"name": "Intoxicating Sting",
+					"entries": [
+						"{@atk mw} {@hit 8} pour toucher, portée de 3 m, une créature. {@h}8 ({@damage 1d10 + 3}) dégâts perforants plus 10 ({@damage 3d6}) dégâts de poison, et la cible doit réussir un jet de sauvegarde de {@dc 17} Sagesse ou subir la condition {@condition charmed} jusqu'au début du prochain tour de Hulgaz."
+					]
+				},
+				{
+					"name": "Brimstone Vapor {@recharge 5}",
+					"entries": [
+						"Hulgaz exhale un cône de 9 mètres de vapeur nocive et brûlante. Chaque créature dans cette zone doit réussir un jet de sauvegarde de {@dc 17} Constitution ou subir l'état de {@condition poisoned} pendant 1 minute. Tant qu'elle est {@condition poisoned} ainsi, une créature subit 31 ({@damage 7d8}) dégâts de feu au début de chacun de ses tours et a un désavantage aux jets de sauvegarde de Sagesse. Une cible peut répéter le jet de sauvegarde de Constitution à la fin de chacun de ses tours, mettant fin à l'effet sur elle-même en cas de réussite."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attack",
+					"entries": [
+						"Hulgaz effectue une attaque de Griffe."
+					]
+				},
+				{
+					"name": "Charm",
+					"entries": [
+						"Hulgaz utilise Lancer de sorts pour lancer {@spell Charm Person}."
+					]
+				},
+				{
+					"name": "Curdle Heart (Costs 2 Actions)",
+					"entries": [
+						"Hulgaz altère les bons sentiments de ses {@condition charmed} victimes. Elle choisit un nombre quelconque de créatures qu'elle peut voir et qui sont {@condition charmed} par elle. Chaque cible subit 17 ({@damage 5d6}) dégâts psychiques lorsque la condition {@condition charmed} appliquée par Hulgaz se termine sur elle."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"TP"
+			],
+			"damageTags": [
+				"F",
+				"I",
+				"P",
+				"S",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"conditionInflictSpell": [
+				"charmed"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Initiate of the Comet",
+			"source": "BMT",
+			"page": 93,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"warlock"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 75,
+				"formula": "10d8 + 30"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 14,
+			"con": 16,
+			"int": 11,
+			"wis": 13,
+			"cha": 17,
+			"save": {
+				"wis": "+3",
+				"cha": "+5"
+			},
+			"skill": {
+				"arcana": "+2"
+			},
+			"passive": 11,
+			"languages": [
+				"Common plus any one language"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"L'initié lance l'un des sorts suivants, en utilisant le Charisme comme capacité de lancement de sorts (sauvegarde contre les sorts {@dc 13}) :"
+					],
+					"will": [
+						"{@spell Mage Hand}",
+						"{@spell Thaumaturgy}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Dimension Door}",
+							"{@spell Divination}",
+							"{@spell Enthrall}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"L'initié a l'avantage sur les jets de sauvegarde contre les sorts et autres effets magiques."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"L'initié effectue deux attaques de type Comet Strike."
+					]
+				},
+				{
+					"name": "Comet Strike",
+					"entries": [
+						"{@atk ms,rs} {@hit 5} pour toucher, portée de 1,5 m. ou portée de 36 m., une cible. {@h}14 ({@damage 2d10 + 3}) dégâts de force."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Moment of Foresight (1/Day)",
+					"entries": [
+						"Lorsqu'il est touché par un jet d'attaque, l'initié peut forcer l'attaquant à le relancer et à utiliser le nouveau jet, ce qui peut faire rater l'attaque."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"O"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Living Portent",
+			"source": "BMT",
+			"page": 180,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "celestial",
+			"alignment": [
+				"L",
+				"N"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 65,
+				"formula": "10d8 + 20"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 14,
+			"dex": 16,
+			"con": 14,
+			"int": 14,
+			"wis": 16,
+			"cha": 15,
+			"save": {
+				"dex": "+5",
+				"wis": "+5"
+			},
+			"skill": {
+				"arcana": "+6",
+				"history": "+6",
+				"insight": "+5",
+				"perception": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 15,
+			"immune": [
+				"radiant"
+			],
+			"conditionImmune": [
+				"exhaustion"
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Le porteur vivant lance l'un des sorts suivants, ne nécessitant aucune composante matérielle et utilisant la Sagesse comme capacité de lancement de sorts :"
+					],
+					"daily": {
+						"2": [
+							"{@spell Cure Wounds}"
+						],
+						"1e": [
+							"{@spell Divination}",
+							"{@spell Greater Restoration}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Brilliance (True Form Only)",
+					"entries": [
+						"Le portail vivant projette une lumière vive sur 9 mètres et une lumière faible sur 9 mètres supplémentaires."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Le porteur vivant effectue deux attaques de frappe Radiant."
+					]
+				},
+				{
+					"name": "Radiant Strike",
+					"entries": [
+						"{@atk ms,rs} {@hit 5} pour toucher, portée de 1,5 m. ou portée de 36 m., une cible. {@h}9 ({@damage 1d12 + 3}) dégâts radiants."
+					]
+				},
+				{
+					"name": "Prophetic Blessing",
+					"entries": [
+						"Le porteur vivant infuse magiquement le pouvoir de sa prophétie dans une autre créature consentante qu'il peut voir dans un rayon de 9 mètres. Les points de vie maximums et actuels de la cible augmentent de 7 ({@dice 1d8 + 3}), et elle gagne un dé de prophétie, un {@dice d8}. Une fois pendant chacun des tours de la créature, lorsqu'elle rate un test de caractéristique ou un jet de sauvegarde ou qu'elle rate un jet d'attaque, elle peut lancer le dé de prophétie et ajouter le nombre obtenu au total, ce qui peut potentiellement changer l'issue. La bénédiction prend fin au bout d'une heure ou lorsque le porteur vivant y met fin (sans action requise) ou utilise à nouveau cette action."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Le porteur vivant se transforme magiquement en Humanoïde tout en conservant ses statistiques de jeu (autres que sa taille et son trait Brillance). La transformation prend fin si le porteur vivant est réduit à 0 point de vie ou utilise une action bonus pour y mettre fin."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Price of Defiance",
+					"entries": [
+						"Lorsque le porteur vivant subit des dégâts de la part d'une créature qu'il peut voir à moins de 36 mètres de lui, le pouvoir radiant déchire la créature. La créature doit effectuer un jet de sauvegarde de {@dc 13} de Constitution, subissant 10 ({@damage 3d6}) points de dégâts radiant en cas de sauvegarde ratée, ou moitié moins en cas de sauvegarde réussie."
+					]
+				}
+			],
+			"variant": [
+				{
+					"name": "Servants of Living Stars",
+					"type": "variant",
+					"entries": [
+						"Certaines étoiles dans le ciel sont des Elder Evils, des êtres extraterrestres dotés d'une puissance divine et issus du Far Realm, un royaume qui défie la réalité.",
+						"Un présage vivant peut être un fragment de la volonté de ces êtres. Ces portants vivants sont des aberrations au lieu de célestes et sont typiquement chaotiques mauvais. Ils remplacent tout dégât radiant dans leur bloc de stat par des dégâts nécrotiques ou psychiques (au choix du DM). Leurs sorts peuvent également être différents. Parmi les Anciens Maléfiques connus, on peut citer les suivants :",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "Acamar",
+									"entry": "Étoile morte qui consomme les autres étoiles ou corps sidéraux qu'elle rencontre."
+								},
+								{
+									"type": "item",
+									"name": "Caiphon, the Dream Whisperer",
+									"entry": "Une étoile violette dont les conseils et les serviteurs semblent aider pendant un certain temps, mais dont l'influence conduit inévitablement au désastre."
+								},
+								{
+									"type": "item",
+									"name": "Hadar, the Dark Hunger",
+									"entry": "Une étoile mourante rouge cendrée qui siphonne la vie de ses serviteurs pour éviter sa propre disparition."
+								},
+								{
+									"type": "item",
+									"name": "Khirad, the Star of Secrets",
+									"entry": "Une étoile bleu-blanc dont les dons permettent de comprendre mais aussi de révéler de terribles vérités."
+								},
+								{
+									"type": "item",
+									"name": "Zhudun, the Corpse Star",
+									"entry": "Une étoile morte qui murmure le pouvoir de défier la mort."
+								}
+							]
+						}
+					]
+				}
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"R"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Living Star (Necrotic)",
+					"source": "BMT",
+					"_mod": {
+						"*": {
+							"mode": "replaceTxt",
+							"replace": "\\bradiant\\b",
+							"with": "necrotic"
+						}
+					},
+					"type": "aberration",
+					"alignment": [
+						"C",
+						"E"
+					],
+					"variant": null
+				},
+				{
+					"name": "Living Star (Psychic)",
+					"source": "BMT",
+					"_mod": {
+						"*": {
+							"mode": "replaceTxt",
+							"replace": "\\bradiant\\b",
+							"with": "psychic"
+						}
+					},
+					"type": "aberration",
+					"alignment": [
+						"C",
+						"E"
+					],
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Malaxxix",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 173,
+			"size": [
+				"H"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"yugoloth"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 312,
+				"formula": "25d12 + 150"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 60
+			},
+			"str": 23,
+			"dex": 16,
+			"con": 22,
+			"int": 22,
+			"wis": 20,
+			"cha": 18,
+			"save": {
+				"str": "+12",
+				"con": "+12"
+			},
+			"skill": {
+				"arcana": "+12",
+				"athletics": "+12",
+				"perception": "+11"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 21,
+			"resist": [
+				"cold",
+				"fire",
+				"lightning",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"acid",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"Infernal",
+				"telepathy 120 ft."
+			],
+			"cr": "18",
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si Malaxxix rate un jet de sauvegarde, il peut choisir de le réussir à la place."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Malaxxix a l'avantage sur les jets de sauvegarde contre les sorts et autres effets magiques."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Malaxxix effectue deux attaques de Marteau de forge ou de Fouet, quelle que soit leur combinaison."
+					]
+				},
+				{
+					"name": "Forge Hammer",
+					"entries": [
+						"{@atk mw,rw} {@hit 12} pour toucher, portée 3 m. ou portée 60/54 m., une cible. {@h}28 ({@damage 4d10 + 6}) dégâts de contondant, et la cible ne peut pas prendre de réactions jusqu'à la fin du prochain tour de Malaxxix. Réussite ou échec : Le marteau revient alors magiquement dans la main de Malaxxix."
+					]
+				},
+				{
+					"name": "Whip",
+					"entries": [
+						"{@atk mw} {@hit 12} à toucher, portée 9 m., une créature. {@h}15 ({@damage 2d8 + 6}) dégâts tranchants, et la cible est atteinte de la condition {@condition restrained} pendant 1 minute. La {@condition restrained} cible peut effectuer un jet de sauvegarde de {@dc 20} Force à la fin de chacun de ses tours, mettant fin à l'effet sur elle-même en cas de réussite. Une seule créature peut être {@condition restrained} par le fouet à la fois."
+					]
+				},
+				{
+					"name": "Mezzoloth Vortex {@recharge 5}",
+					"entries": [
+						"Malaxxix invoque un tourbillon de mezzoloths tourbillonnants à un point qu'il peut voir à moins de 27 mètres de lui. Le tourbillon est un cylindre de 9 mètres de rayon et de 3 mètres de haut centré sur ce point. Chaque créature autre que Malaxxix se trouvant dans cette zone doit effectuer un jet de sauvegarde de Dextérité {@dc 20}. En cas d'échec, la créature subit 35 ({@damage 10d6}) points de dégâts de force et souffre de la condition {@condition restrained} tant qu'elle se trouve dans le cylindre. En cas de sauvegarde réussie, la créature subit la moitié des dégâts et est repoussée dans l'espace inoccupé le plus proche à l'extérieur du cylindre. Le tourbillon dure jusqu'au début du prochain tour de Malaxxix."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Fiendish Stride",
+					"entries": [
+						"Malaxxix se déplace à sa vitesse. Ce mouvement ne provoque pas d'attaque d'opportunité. Lorsque Malaxxix se déplace à moins de 1,5 mètre d'une créature pendant ce mouvement, cette créature subit 5 ({@damage 1d10}) dégâts de foudre. Une créature ne peut subir ces dégâts qu'une seule fois par tour."
+					]
+				},
+				{
+					"name": "Attack (Costs 2 Actions)",
+					"entries": [
+						"Malaxxix porte une attaque de Marteau de forge ou de Fouet."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Malaxxix",
+				"source": "BMT"
+			},
+			"attachedItems": [
+				"whip|phb"
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"I",
+				"TP"
+			],
+			"damageTags": [
+				"B",
+				"L",
+				"O",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Minotaur Archaeologist",
+			"source": "BMT",
+			"page": 126,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 18,
+				"formula": "4d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 10,
+			"con": 11,
+			"int": 13,
+			"wis": 12,
+			"cha": 10,
+			"skill": {
+				"arcana": "+3",
+				"history": "+5",
+				"perception": "+5",
+				"religion": "+3"
+			},
+			"passive": 15,
+			"languages": [
+				"Common"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Labyrinthine Recall",
+					"entries": [
+						"Le minotaure se souvient parfaitement de tous les chemins qu'il a parcourus."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Gore",
+					"entries": [
+						"{@atk mw} {@hit 3} pour toucher, portée de 1,5 m., une cible. {@h}4 ({@damage 1d6 + 1}) dégâts perforants. Si le minotaure s'est déplacé d'au moins 3 mètres en ligne droite vers la cible immédiatement avant de frapper, celle-ci subit 3 ({@damage 1d6}) points de dégâts perforants supplémentaires, et si la cible est une créature Grande ou plus petite, elle doit réussir un jet de sauvegarde de {@dc 11} Force ou être repoussée jusqu'à 3 mètres du minotaure et subir la condition de {@condition prone}."
+					]
+				}
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Minotaur Infiltrator",
+			"source": "BMT",
+			"page": 127,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "8d8 + 16"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 18,
+			"dex": 11,
+			"con": 14,
+			"int": 8,
+			"wis": 16,
+			"cha": 10,
+			"skill": {
+				"deception": "+2",
+				"perception": "+7",
+				"religion": "+1"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 17,
+			"languages": [
+				"Abyssal",
+				"Common"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Labyrinthine Recall",
+					"entries": [
+						"Le minotaure se souvient parfaitement de tous les chemins qu'il a parcourus."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Gore",
+					"entries": [
+						"{@atk mw} {@hit 6} pour toucher, portée de 1,5 m, une cible. {@h}8 ({@damage 1d8 + 4}) dégâts perforants, ou 13 ({@damage 2d8 + 4}) dégâts perforants pendant l'agrandissement. Si le minotaure s'est déplacé d'au moins 3 mètres en ligne droite vers la cible immédiatement avant de frapper, celle-ci subit 4 ({@damage 1d8}) points de dégâts perforants supplémentaires, ou 9 ({@damage 2d8}) points de dégâts perforants si le minotaure est agrandi. Si la cible est une créature, elle doit réussir un jet de sauvegarde de {@dc 14} Force ou être repoussée jusqu'à 3 mètres du minotaure et subir la condition de {@condition prone}."
+					]
+				},
+				{
+					"name": "Mattock",
+					"entries": [
+						"{@atk mw} {@hit 6} pour toucher, portée de 3 m, une cible. {@h}10 ({@damage 1d12 + 4}) dégâts de contondant, ou 17 ({@damage 2d12 + 4}) dégâts de contondant si elle est agrandie. Si la cible est une créature et que le minotaure est agrandi, elle doit réussir un jet de sauvegarde de {@dc 14} de Force ou subir la condition {@condition prone}."
+					]
+				},
+				{
+					"name": "Enlarge (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Pendant 1 minute, le minotaure augmente magiquement de taille, ainsi que tout ce qu'il porte ou transporte. Tant qu'il est agrandi, le minotaure est Grand, double ses dés de dégâts sur les attaques d'armes basées sur la Force (incluses dans les attaques), et effectue les tests de Force et les jets de sauvegarde de Force avec avantage. Si le minotaure n'a pas la place de devenir Grand, il ne change pas de taille."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Unerring Tracker",
+					"entries": [
+						"Le minotaure crée magiquement un lien psychique avec une créature qu'il peut voir. Pendant l'heure qui suit, le minotaure connaît la distance et la direction actuelles de la cible si elle se trouve sur le même plan d'existence. Le lien prend fin si le minotaure a la condition {@condition incapacitated} ou s'il utilise cette capacité sur une autre cible."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AB",
+				"C"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			]
+		},
+		{
+			"name": "Oddlewin",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 111,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "fey",
+				"tags": [
+					"goblinoid"
+				]
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 21,
+				"formula": "6d6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 14,
+			"con": 10,
+			"int": 10,
+			"wis": 16,
+			"cha": 15,
+			"skill": {
+				"performance": "+4",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"conditionImmune": [
+				"charmed"
+			],
+			"languages": [
+				"Common",
+				"Goblin",
+				"Sylvan"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Oddlewin lance l'un des sorts suivants, en utilisant le Charisme comme capacité de lanceur de sorts (sauvegarde contre les sorts {@dc 12}) :"
+					],
+					"will": [
+						"{@spell Mage Hand}",
+						"{@spell Tasha's Hideous Laughter}"
+					],
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Fortune Teller",
+					"entries": [
+						"Oddlewin peut lancer le sort {@spell Augury} comme un rituel, en utilisant des cartes comme composante matérielle."
+					]
+				},
+				{
+					"name": "Nilbogism",
+					"entries": [
+						"Toute créature qui tente d'infliger des dégâts à Oddlewin doit d'abord réussir un jet de sauvegarde de {@dc 12} Charisme ou subir la condition {@condition charmed} jusqu'à la fin du prochain tour de la créature. La créature doit utiliser son action pour louer Oddlewin.",
+						"Oddlewin ne peut pas regagner de points de vie, y compris par le biais de soins magiques, sauf grâce à sa réaction d'inversion de la fortune."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Fool's Scepter",
+					"entries": [
+						"{@atk mw} {@hit 4} à toucher, portée de 1,5 m., une cible. {@h}5 ({@damage 1d6 + 2}) dégâts contondants."
+					]
+				},
+				{
+					"name": "Cloud of Cards",
+					"entries": [
+						"Oddlewin conjure des cartes magiques qui tranchent l'air dans un cube de 1,5 mètre situé à moins de 18 mètres d'Oddlewin jusqu'au début du prochain tour d'Oddlewin. Une créature qui commence son tour dans le cube ou qui entre dans cette zone pour la première fois lors d'un tour subit 10 ({@damage 4d4}) dégâts tranchants."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Nimble Escape",
+					"entries": [
+						"Oddlewin prend l'action Se désengager ou se cacher."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Reversal of Fortune",
+					"entries": [
+						"En réponse à une autre créature infligeant des dégâts à Oddlewin, Oddlewin réduit les dégâts à 0 et regagne 9 ({@dice 2d8}) points de vie."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"GO",
+				"S"
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"incapacitated",
+				"prone"
+			],
+			"savingThrowForced": [
+				"charisma"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Otherworldly Corrupter",
+			"source": "BMT",
+			"page": 47,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 217,
+				"formula": "29d8 + 87"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40
+			},
+			"str": 12,
+			"dex": 22,
+			"con": 16,
+			"int": 22,
+			"wis": 18,
+			"cha": 20,
+			"save": {
+				"dex": "+12",
+				"int": "+12"
+			},
+			"skill": {
+				"perception": "+10",
+				"stealth": "+18"
+			},
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 20,
+			"resist": [
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"telepathy 120 ft.",
+				"Thieves' cant"
+			],
+			"cr": "17",
+			"trait": [
+				{
+					"name": "Alien Mind",
+					"entries": [
+						"La magie et les autres caractéristiques ne peuvent pas déterminer le type de créature du corrupteur. Si une créature tente de lire les pensées du corrupteur, elle doit réussir un jet de sauvegarde de {@dc 20} d'Intelligence ou subir l'état de {@condition stunned} pendant 1 minute. La créature de {@condition stunned} peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant fin à l'effet sur elle-même en cas de réussite."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si le corrupteur échoue à un jet de sauvegarde, il peut choisir de réussir à la place."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"Le corrupteur peut grimper sur des surfaces difficiles, y compris la tête en bas sur les plafonds, sans avoir besoin de faire un test de caractéristique."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Le corrupteur effectue trois attaques de Lame Chuchotante et peut utiliser Toucher Débilitant."
+					]
+				},
+				{
+					"name": "Whispering Blade",
+					"entries": [
+						"{@atk mw,rw} {@hit 12} pour toucher, portée de 1,5 m. ou portée de 18 m., une cible. {@h}10 ({@damage 1d8 + 6}) dégâts perforants plus 14 ({@damage 4d6}) dégâts psychiques. Si la cible est une créature, elle doit réussir un jet de sauvegarde de {@dc 20} Sagesse ou être incapable de parler jusqu'au début du prochain tour du corrupteur."
+					]
+				},
+				{
+					"name": "Debilitating Touch",
+					"entries": [
+						"Le tentacule tortillant du corrupteur s'abat sur une créature que le corrupteur peut voir dans un rayon de 9 mètres. La cible doit réussir un jet de sauvegarde de Constitution {@dc 20} ou subir la condition {@condition paralyzed} jusqu'à la fin de son prochain tour, après quoi elle est immunisée contre ce toucher débilitant pendant 24 heures."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Le corrupteur se transforme magiquement en n'importe quelle créature de petite ou moyenne taille, tout en conservant ses statistiques de jeu (autres que sa taille). Cette transformation prend fin si le corrupteur est réduit à 0 point de vie ou utilise une action bonus pour y mettre fin."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"Lorsqu'un attaquant que le corrupteur peut voir le frappe avec une attaque, le corrupteur divise par deux les dégâts de l'attaque contre lui."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Cunning",
+					"entries": [
+						"Le corrupteur échappe aux contraintes non magiques et met fin aux conditions {@condition grappled} et {@condition restrained} sur lui-même, puis se déplace à sa vitesse sans provoquer d'attaques d'opportunité."
+					]
+				},
+				{
+					"name": "Stab (Costs 2 Actions)",
+					"entries": [
+						"Le corrupteur effectue une attaque de Lame Chuchotante."
+					]
+				},
+				{
+					"name": "Amorphous Escape (Costs 3 Actions)",
+					"entries": [
+						"Le corrupteur se dissout en une masse mouvante de chair, de tentacules, d'yeux, de griffes et de bouches. Jusqu'à deux créatures que le corrupteur peut voir dans un rayon de 6 mètres doivent effectuer un jet de sauvegarde d'Intelligence {@dc 20}, subissant 18 ({@damage 4d8}) dégâts psychiques en cas de sauvegarde ratée, ou moitié moins en cas de sauvegarde réussie. Cette transformation dure jusqu'à la fin du prochain tour du corrupteur. Lorsqu'il est transformé, le corrupteur a l'avantage aux jets d'attaque, les jets d'attaque effectués contre lui ont un désavantage, et il peut se déplacer dans des espaces d'au moins 1 pouce de large sans se presser."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Villain",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances",
+				"Spider Climb"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"TC",
+				"TP"
+			],
+			"damageTags": [
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"paralyzed",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"intelligence",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Pazrodine",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 113,
+			"size": [
+				"G"
+			],
+			"type": {
+				"type": "dragon",
+				"tags": [
+					"moonstone"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 330,
+				"formula": "20d20 + 120"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 80
+			},
+			"str": 22,
+			"dex": 18,
+			"con": 23,
+			"int": 20,
+			"wis": 22,
+			"cha": 26,
+			"save": {
+				"int": "+12",
+				"wis": "+13",
+				"cha": "+15"
+			},
+			"skill": {
+				"perception": "+13",
+				"persuasion": "+15",
+				"stealth": "+11"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 23,
+			"conditionImmune": [
+				"charmed"
+			],
+			"languages": [
+				"all",
+				"telepathy 120 ft."
+			],
+			"cr": "21",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Pazrodine lance l'un des sorts suivants, ne nécessitant aucune composante matérielle et utilisant le Charisme comme capacité de lanceur de sorts (sauvegarde contre les sorts {@dc 23}) :"
+					],
+					"will": [
+						"{@spell Faerie Fire}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell Calm Emotions}",
+							"{@spell Dispel Magic}",
+							"{@spell Invisibility}"
+						],
+						"1e": [
+							"{@spell Mass Cure Wounds}",
+							"{@spell Revivify}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Guardian of the Market",
+					"entries": [
+						"Pazrodine peut sentir quand un objet est volé sur le marché Seelie. Elle connaît la distance et la direction des objets volés, comme par le sort {@spell Locate Object}."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si Pazrodine rate un jet de sauvegarde, elle peut choisir de le réussir à la place."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Pazrodine effectue une attaque de morsure et deux attaques de griffes."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 13} pour toucher, portée de 4,5 m, une cible. {@h}17 ({@damage 2d10 + 6}) dégâts perforants plus 11 ({@damage 2d10}) dégâts radiants."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 13} pour toucher, portée de 3 m., une cible. {@h}13 ({@damage 2d6 + 6}) dégâts tranchants."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 13} pour toucher, portée de 6 m., une cible. {@h}10 ({@damage 1d8 + 6}) dégâts contondants. Si la cible est une créature, elle doit réussir un jet de sauvegarde de {@dc 21} de Force ou subir la condition {@condition prone}."
+					]
+				},
+				{
+					"name": "Breath Weapon {@recharge 5}",
+					"entries": [
+						"Pazrodine utilise l'une des armes respiratoires suivantes :",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "Dream Breath",
+									"entries": [
+										"Pazrodine exhale de la brume dans un cône de 27 mètres. Chaque créature située dans cette zone doit réussir un jet de sauvegarde de {@dc 21} de Constitution ou être atteinte de la condition {@condition unconscious} pendant 10 minutes. Cet effet prend fin pour une créature si elle subit des dégâts ou si quelqu'un utilise une action pour la réveiller."
+									]
+								},
+								{
+									"type": "item",
+									"name": "Moonlight Breath",
+									"entries": [
+										"Pazrodine exhale un rayon de lumière lunaire sur une ligne de 36 mètres de long et de 3 mètres de large. Chaque créature située dans cette zone doit effectuer un jet de sauvegarde de {@dc 21} de Dextérité, subissant 60 ({@damage 11d10}) points de dégâts radiant en cas de sauvegarde ratée, ou moitié moins de dégâts en cas de réussite."
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Tail",
+					"entries": [
+						"Pazrodine fait une attaque de Queue."
+					]
+				},
+				{
+					"name": "Cast a Spell (Costs 2 Actions)",
+					"entries": [
+						"Pazrodine utilise Lancer des sorts."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Pazrodine",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"TP",
+				"XX"
+			],
+			"damageTags": [
+				"B",
+				"P",
+				"R",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflictSpell": [
+				"invisible"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity",
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Quadrone Detention Drone",
+			"group": null,
+			"source": "BMT",
+			"page": 135,
+			"_copy": {
+				"name": "Quadrone",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "quadrone",
+						"with": "drone"
+					},
+					"action": [
+						{
+							"mode": "appendArr",
+							"items": {
+								"name": "Detention Orb",
+								"entries": [
+									"Le drone lance un minuscule orbe de force magique sur une créature qu'il peut voir dans un rayon de 9 mètres. La créature doit réussir un jet de sauvegarde de Constitution {@dc 15} ou être enfermée dans l'orbe, qui s'étend jusqu'à atteindre une taille juste suffisante pour contenir la créature. Tant qu'elle est enfermée, la créature n'a pas besoin de respirer, de manger ou de boire, et elle ne vieillit pas. Rien ne peut traverser l'orbe, et aucune créature ne peut se téléporter ou utiliser le voyage planaire pour entrer ou sortir de l'orbe. Comme action bonus, le drone peut déplacer l'orbe et son contenu jusqu'à 9 mètres dans n'importe quelle direction. Une incantation réussie du sort {@spell Dispel Magic} sur l'orbe ({@dc 15}) le détruit. Sinon, l'orbe reste intact jusqu'à ce que le drone dépense une action pour mettre fin à l'effet ou que le drone soit détruit. Un drone ne peut avoir qu'un seul orbe de détention actif à la fois ; si le drone crée un orbe de détention alors qu'il en a déjà un actif, le premier orbe disparaît, libérant la créature qu'il contient."
+								]
+							}
+						}
+					]
+				}
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Reaper Spirit",
+			"source": "BMT",
+			"page": 50,
+			"summonedBySpell": "Spirit of Death|BMT",
+			"summonedBySpellLevel": 4,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"special": "11 + the level of the spell (natural armor)"
+				}
+			],
+			"hp": {
+				"special": "40 + 10 for each spell level above 4th"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 16,
+			"int": 16,
+			"wis": 16,
+			"cha": 16,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages you speak"
+			],
+			"pbNote": "equals your bonus",
+			"trait": [
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"L'esprit peut se déplacer à travers d'autres créatures et objets comme s'il s'agissait d'un terrain difficile. S'il termine son tour à l'intérieur d'un objet, il est repoussé dans l'espace inoccupé le plus proche et subit {@damage 1d10} de dégâts de force par 1,5 mètre de déplacement."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"L'esprit effectue un nombre d'attaques à la faux faucheuse égal à la moitié du niveau du sort (arrondi à l'inférieur)."
+					]
+				},
+				{
+					"name": "Reaping Scythe",
+					"entries": [
+						"{@atk mw} votre modificateur d'attaque du sort pour toucher (avec avantage), portée de 1,5 m, la créature hantée par Haunt Creature. {@h}{@damage 1d8 + 3 + summonSpellLevel} de dégâts nécrotiques."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Haunt Creature",
+					"entries": [
+						"L'esprit cible une créature qu'il peut voir dans un rayon de 3 mètres et commence à la hanter. Pendant que la cible est hantée, vous et l'esprit sentez la direction et la distance de la cible si elle se trouve sur le même plan d'existence que vous. De plus, si la cible commence son tour à moins de 3 mètres de l'esprit, elle doit réussir un jet de sauvegarde de Sagesse contre votre DC de sauvegarde contre les sorts ou subir la condition {@condition frightened} jusqu'au début de son prochain tour. La cible reste hantée jusqu'à ce qu'elle meure, que l'esprit disparaisse ou que l'esprit utilise à nouveau cette action."
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"N",
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened"
+			]
+		},
+		{
+			"name": "Riffler",
+			"source": "BMT",
+			"page": 181,
+			"size": [
+				"S"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 90,
+				"formula": "20d6 + 20"
+			},
+			"speed": {
+				"walk": 30,
+				"burrow": 20
+			},
+			"str": 8,
+			"dex": 16,
+			"con": 12,
+			"int": 11,
+			"wis": 15,
+			"cha": 17,
+			"save": {
+				"dex": "+6",
+				"cha": "+6"
+			},
+			"skill": {
+				"arcana": "+6",
+				"insight": "+5",
+				"sleight of hand": "+9",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"necrotic",
+				"radiant"
+			],
+			"languages": [
+				"Common",
+				"Sylvan"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Card Sense",
+					"entries": [
+						"Le riffleur peut sentir la présence de cartes magiques, y compris les paquets de nombreuses choses et d'autres paquets magiques, dans un rayon de 1,5 kilomètre autour de lui. Il connaît la direction de ces cartes dans ce rayon. Les effets qui protègent la cible de la magie divinatoire bloquent ce sens."
+					]
+				},
+				{
+					"name": "Riffling Step",
+					"entries": [
+						"Le riffleur peut s'enfoncer dans toute matière non magique qui n'est pas du fer, en mélangeant la matière dans laquelle il se déplace comme des cartes pour former un tunnel qui se referme derrière lui."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Le riffleur effectue deux attaques de carte spectrale."
+					]
+				},
+				{
+					"name": "Spectral Card",
+					"entries": [
+						"{@atk ms,rs} {@hit 6} pour toucher, portée de 1,5 m. ou portée de 18 m., une cible. {@h}8 ({@damage 1d10 + 3}) dégâts de force plus 5 ({@damage 1d10}) dégâts qui sont radiants si le jet de {@dice d10} est un nombre pair et nécrotiques s'il est impair."
+					]
+				},
+				{
+					"name": "Card Spray {@recharge 5}",
+					"entries": [
+						"Le riffleur libère magiquement une gerbe de cartes spectrales dans un cône de 9 mètres. Chaque créature située dans cette zone doit effectuer un jet de sauvegarde de {@dc 14} de Dextérité. En cas de sauvegarde ratée, la créature subit 27 ({@damage 5d10}) points de dégâts de force et souffre de la condition {@condition restrained} pendant 1 minute alors que les cartes la lient. Si elle réussit son jet de sauvegarde, la créature subit deux fois moins de dégâts. Une créature de {@condition restrained} peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant fin à l'effet sur elle-même en cas de réussite."
+					]
+				},
+				{
+					"name": "Plane Shift",
+					"entries": [
+						"Le riffleur lance le sort {@spell Plane Shift} en se ciblant lui-même, ne nécessitant aucune composante matérielle et utilisant le Charisme comme capacité de lanceur de sorts."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Shuffle Destiny",
+					"entries": [
+						"Lorsqu'une créature que le riffleur peut voir dans un rayon de 9 mètres fait un test de capacité, un jet d'attaque ou un jet de sauvegarde, le riffleur peut magiquement forcer cette créature à effectuer un jet de {@dice d6} et soit ajouter le nombre obtenu au total, soit le soustraire du total (au choix du riffleur), ce qui peut changer l'issue du test."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ruin Spider",
+			"source": "BMT",
+			"page": 182,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 105,
+				"formula": "14d10 + 28"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40
+			},
+			"str": 16,
+			"dex": 18,
+			"con": 14,
+			"int": 2,
+			"wis": 13,
+			"cha": 4,
+			"skill": {
+				"stealth": "+10"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"immune": [
+				"acid"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Ruinous Acid",
+					"entries": [
+						"Toute arme non magique qui touche l'araignée se corrode. Après avoir infligé des dégâts, l'arme subit une pénalité permanente et cumulative de -1 aux jets de dégâts. Si cette pénalité tombe à -5, l'arme est détruite. Les munitions non magiques en métal qui touchent l'araignée sont détruites après avoir infligé des dégâts."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"L'araignée peut grimper sur des surfaces difficiles, y compris la tête en bas sur les plafonds, sans avoir besoin de faire un test de caractéristique."
+					]
+				},
+				{
+					"name": "Web Sense",
+					"entries": [
+						"Lorsqu'elle est en contact avec une toile, l'araignée connaît l'emplacement exact de toute autre créature en contact avec la même toile."
+					]
+				},
+				{
+					"name": "Web Walker",
+					"entries": [
+						"L'araignée ignore les restrictions de mouvement causées par les toiles."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"L'araignée effectue deux attaques de Morsure Ruineuse. Elle peut remplacer une attaque par une utilisation de Toile d'araignée."
+					]
+				},
+				{
+					"name": "Ruinous Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} à toucher, portée de 1,5 m., une cible. {@h}8 ({@damage 1d8 + 4}) de dégâts perforants et 9 ({@damage 2d8}) de dégâts d'acide. De plus, si la cible est une créature portant une armure non magique, celle-ci subit une pénalité permanente et cumulative de -1 à la CA qu'elle offre. Les armures réduites à une classe d'armure de 10 sont détruites."
+					]
+				},
+				{
+					"name": "Web {@recharge 5}",
+					"entries": [
+						"{@atk rw} {@hit 7} pour toucher, portée 30/18 m., une créature. {@h} La cible a la condition {@condition restrained}. Comme action, une cible {@condition restrained} peut faire un test de Force {@dc 13} et faire éclater la toile si le test est réussi. La toile peut également être détruite (CA 10 ; 5 points de vie ; vulnérabilité aux dégâts de feu ; immunité aux dégâts d'acide, de contondant, de poison et psychiques)."
+					]
+				}
+			],
+			"traitTags": [
+				"Spider Climb",
+				"Web Sense",
+				"Web Walker"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"A",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sir Jared",
+			"source": "BMT",
+			"page": 80,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"{@item plate armor|PHB}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 90,
+				"formula": "12d8 + 36"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 12,
+			"con": 17,
+			"int": 13,
+			"wis": 14,
+			"cha": 17,
+			"save": {
+				"str": "+7",
+				"con": "+6"
+			},
+			"skill": {
+				"arcana": "+4",
+				"athletics": "+7",
+				"persuasion": "+6",
+				"survival": "+5"
+			},
+			"passive": 12,
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"Halfling"
+			],
+			"cr": "5",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Jared porte trois attaques d'Épée longue."
+					]
+				},
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 7} pour toucher, portée de 1,5 m, une cible. {@h}8 ({@damage 1d8 + 4}) dégâts tranchants plus 4 ({@damage 1d8}) dégâts radiants. Sur un jet de 19 ou 20, Jared obtient un coup critique."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Protect Ally",
+					"entries": [
+						"Lorsqu'une créature que Jared peut voir attaque une cible autre que Jared qui se trouve à moins de 1,5 mètre de lui, Jared impose un désavantage au jet d'attaque."
+					]
+				}
+			],
+			"attachedItems": [
+				"longsword|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"H"
+			],
+			"damageTags": [
+				"R",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Solar Bastion Knight",
+			"source": "BMT",
+			"page": 75,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"paladin"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"{@item plate armor|PHB}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 150,
+				"formula": "20d8 + 60"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 10,
+			"con": 17,
+			"int": 15,
+			"wis": 16,
+			"cha": 17,
+			"save": {
+				"wis": "+7",
+				"cha": "+7"
+			},
+			"skill": {
+				"arcana": "+6",
+				"history": "+6"
+			},
+			"passive": 13,
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common plus any one language"
+			],
+			"cr": "9",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Le chevalier lance l'un des sorts suivants, en utilisant le Charisme comme capacité de lanceur de sorts (sauvegarde contre les sorts {@dc 15}) :"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Greater Restoration}",
+							"{@spell Sending}",
+							"{@spell Word of Recall} (the prepared sanctuary is the Solar Bastion)"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Aura of Protection",
+					"entries": [
+						"Le chevalier et chaque allié situé à moins de 3 mètres de lui ont l'avantage aux jets de sauvegarde. Ce trait est supprimé lorsque le chevalier a la condition {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Le chevalier effectue trois attaques de lance-soleil."
+					]
+				},
+				{
+					"name": "Sunspear",
+					"entries": [
+						"{@atk ms,rs} {@hit 8} pour toucher, portée de 1,5 m. ou portée de 36 m., une cible. {@h}14 ({@damage 3d6 + 4}) dégâts radiants, ou 21 ({@damage 5d6 + 4}) dégâts radiants si la cible est un farfadet ou un mort-vivant."
+					]
+				},
+				{
+					"name": "Solar Flare {@recharge 5}",
+					"entries": [
+						"Le chevalier libère un flamboiement d'énergie brillante qui remplit une sphère de 9 mètres de rayon centrée sur lui. Chaque créature au choix du chevalier dans cette zone doit effectuer un jet de sauvegarde de {@dc 15} de Dextérité. En cas de sauvegarde ratée, la créature subit 22 ({@damage 4d10}) points de dégâts radiant et a la condition {@condition blinded} jusqu'à la fin de son prochain tour. Si elle réussit son jet de sauvegarde, la créature ne subit que la moitié des dégâts. Pendant la minute qui suit, la zone affectée est remplie d'une lumière vive qui est celle du soleil."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"R"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Talon Beast",
+			"source": "BMT",
+			"page": 183,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 114,
+				"formula": "12d10 + 48"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 22,
+			"dex": 14,
+			"con": 19,
+			"int": 5,
+			"wis": 12,
+			"cha": 5,
+			"skill": {
+				"perception": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"conditionImmune": [
+				"frightened"
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"La bête à griffes a l'avantage sur les jets de sauvegarde contre les sorts et autres effets magiques."
+					]
+				},
+				{
+					"name": "Sense Magic",
+					"entries": [
+						"La bête à griffes peut détecter et localiser la magie dans un rayon de 36 mètres autour d'elle."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"La bête à griffes effectue deux attaques de griffes ou une attaque de griffes et une attaque de bec."
+					]
+				},
+				{
+					"name": "Beak",
+					"entries": [
+						"{@atk mw} {@hit 9} pour toucher, portée de 1,5 m, une cible. {@h}17 ({@damage 2d10 + 6}) dégâts perforants, et si la cible a des effets de sort sur elle-même ou des objets magiques en sa possession, elle doit effectuer un jet de sauvegarde de {@dc 15} Charisme. En cas de sauvegarde ratée, un effet de sort aléatoire sur la cible prend fin. Si la cible n'a aucun effet de sort sur elle, un objet magique aléatoire en sa possession voit ses propriétés magiques supprimées pendant 1 minute. Si l'objet est une potion ou un parchemin, il devient non magique."
+					]
+				},
+				{
+					"name": "Talon",
+					"entries": [
+						"{@atk mw} {@hit 9} à toucher, portée de 3 m., une cible. {@h}15 ({@damage 2d8 + 6}) dégâts tranchants, et la cible a la condition {@condition grappled} (fuite {@dc 17}). Jusqu'à la fin du grappin, la cible a la condition {@condition restrained}, et le talonneur ne peut pas utiliser Talon sur une autre cible."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"charisma"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Veiled Presence",
+			"source": "BMT",
+			"page": 48,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "celestial",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 300,
+				"formula": "40d8 + 120"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": {
+					"number": 80,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 14,
+			"dex": 24,
+			"con": 16,
+			"int": 24,
+			"wis": 20,
+			"cha": 22,
+			"save": {
+				"dex": "+14",
+				"int": "+14"
+			},
+			"skill": {
+				"perception": "+12",
+				"stealth": "+21"
+			},
+			"senses": [
+				"truesight 30 ft."
+			],
+			"passive": 22,
+			"resist": [
+				"necrotic",
+				"radiant"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "21",
+			"trait": [
+				{
+					"name": "Inviolate Presence",
+					"entries": [
+						"La présence voilée ne peut pas être ciblée par la magie de divination ou par des caractéristiques qui permettraient de lire ses pensées ou de déterminer son type de créature."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si la présence voilée échoue à un jet de sauvegarde, elle peut choisir de réussir à la place."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"La présence voilée effectue deux attaques de Lame de Jugement et peut utiliser Révélation."
+					]
+				},
+				{
+					"name": "Blade of Judgment",
+					"entries": [
+						"{@atk mw,rw} {@hit 14} pour toucher, portée de 1,5 m. ou portée de 18 m., une cible. {@h}10 ({@damage 1d6 + 7}) dégâts perforants plus 27 ({@damage 6d8}) dégâts radiants. Si la cible est une créature, elle doit réussir un jet de sauvegarde de {@dc 22} Charisme ou, à son prochain tour, elle peut soit se déplacer, soit entreprendre une action, mais pas les deux."
+					]
+				},
+				{
+					"name": "Revelation",
+					"entries": [
+						"La présence voilée révèle un aperçu de sa nature extraterrestre à une créature qu'elle peut voir dans un rayon de 9 mètres. La cible doit réussir un jet de sauvegarde de {@dc 22} Sagesse ou subir la condition {@condition paralyzed} jusqu'à la fin de son prochain tour, après quoi elle est immunisée contre cette révélation pendant 24 heures."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"Lorsqu'un attaquant que la présence voilée peut voir frappe la présence voilée avec une attaque, la présence voilée divise par deux les dégâts de l'attaque contre elle."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Flash Step",
+					"entries": [
+						"La présence voilée se téléporte magiquement, avec tout l'équipement qu'elle porte, jusqu'à 12 mètres dans un espace inoccupé qu'elle peut voir."
+					]
+				},
+				{
+					"name": "Stab (Costs 2 Actions)",
+					"entries": [
+						"La présence voilée effectue une attaque de lame de jugement."
+					]
+				},
+				{
+					"name": "Searing Radiance (Costs 3 Actions)",
+					"entries": [
+						"La présence voilée émet magiquement une lumière éblouissante dans une sphère de 3 mètres de rayon centrée sur elle jusqu'à la fin de son prochain tour, pendant lequel les jets d'attaque contre elle ont un désavantage et elle a l'avantage sur les jets d'attaque. La sphère se déplace avec la présence voilée. Lorsqu'une autre créature commence son tour dans la lumière ou y pénètre pour la première fois à son tour, elle doit effectuer un jet de sauvegarde de {@dc 22} Constitution, subissant 18 ({@damage 4d8}) points de dégâts radiants en cas de sauvegarde ratée, ou moitié moins de dégâts en cas de sauvegarde réussie."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Villain",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"P",
+				"R"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"paralyzed"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Werevulture",
+			"source": "BMT",
+			"page": 184,
+			"size": [
+				"M"
+			],
+			"type": "fiend",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 75,
+				"formula": "10d8 + 30"
+			},
+			"speed": {
+				"walk": 30,
+				"alternate": {
+					"walk": [
+						{
+							"number": 10,
+							"condition": "in vulture form"
+						},
+						{
+							"number": 30,
+							"condition": "in hybrid form"
+						}
+					],
+					"fly": [
+						{
+							"number": 60,
+							"condition": "in vulture or hybrid form"
+						}
+					]
+				}
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 17,
+			"int": 11,
+			"wis": 13,
+			"cha": 8,
+			"skill": {
+				"perception": "+5"
+			},
+			"passive": 15,
+			"languages": [
+				"Common (can't speak in vulture form)"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Regeneration",
+					"entries": [
+						"Le garou regagne 10 points de vie au début de son tour. Si le garou subit des dégâts radiants, ce trait ne fonctionne pas au début du tour suivant du garou. Le garou ne meurt que s'il commence son tour avec 0 point de vie et qu'il ne se régénère pas."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Le vautour-garou effectue deux attaques de Talon, ou il effectue une attaque de Bec et une attaque de Talon."
+					]
+				},
+				{
+					"name": "Beak (Vulture or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 5} à toucher, portée de 1,5 m., une cible. {@h}10 ({@damage 2d6 + 3}) dégâts perforants. Si la cible est un humanoïde, elle doit réussir un jet de sauvegarde de {@dc 13} de Constitution ou être maudite jusqu'à ce qu'elle soit ciblée par le sort {@spell Remove Curse} ou un effet similaire. Si la cible maudite tombe à 0 point de vie, elle devient un vautour-garou sous le contrôle du MD et regagne 10 points de vie."
+					]
+				},
+				{
+					"name": "Talon",
+					"entries": [
+						"{@atk mw} {@hit 5} à toucher, portée de 1,5 m., une cible. {@h}13 ({@damage 4d4 + 3}) dégâts tranchants."
+					]
+				},
+				{
+					"name": "Longbow (Humanoid or Hybrid Form Only)",
+					"entries": [
+						"{@atk rw} {@hit 4} pour toucher, portée 150/18 m., une cible. {@h}11 ({@damage 2d8 + 2}) dégâts perforants."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Le vautour-garou se transforme en hybride humanoïde, en vautour ou reprend sa forme humanoïde. Ses statistiques de jeu, à l'exception de sa vitesse, sont les mêmes sous chaque forme. L'équipement qu'il porte n'est pas transformé. Il reprend sa forme humanoïde s'il meurt."
+					]
+				}
+			],
+			"attachedItems": [
+				"longbow|phb"
+			],
+			"traitTags": [
+				"Regeneration"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

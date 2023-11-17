@@ -1,0 +1,622 @@
+{
+	"spell": [
+		{
+			"name": "Acid Stream",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 2,
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "line",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "ein bisschen verdorbenes Essen"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Ein Säurestrom geht von Ihnen in einer 9 Meter langen und 1,5 Meter breiten Linie in eine von Ihnen gewählte Richtung aus. Jede Kreatur in der Linie muss einen Rettungswurf in Geschicklichkeit bestehen oder wird für die Dauer des Zaubers oder bis eine Kreatur ihre Aktion nutzt, um die Säure von sich oder einer anderen Kreatur abzukratzen oder abzuwaschen, mit Säure bedeckt. Eine Kreatur, die von der Säure bedeckt ist, erleidet zu Beginn jeder ihrer Runden {@damage 3d4} Säureschaden."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberslot der Stufe 2 oder höher wirkst, erhöht sich der Schaden um {@scaledamage 3d4|1-9|1d4} für jeden Slot der Stufe 1."
+					]
+				}
+			],
+			"damageInflict": [
+				"acid"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"areaTags": [
+				"L"
+			]
+		},
+		{
+			"name": "Otherworldly Form",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 2,
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "einen Gegenstand, in den ein Symbol der Äußeren Ebenen eingraviert ist, im Wert von mindestens 500 gp",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Indem du eine Beschwörung sprichst, nutzt du die Magie der unteren oder oberen Dimensionen (nach deiner Wahl), um dich zu verwandeln. Bis zum Ende des Zaubers erhältst du die folgenden Vorteile:",
+				{
+					"type": "list",
+					"items": [
+						"Du bist immun gegen Feuer- und Giftschaden (untere Dimensionen) oder gegen Strahlen- und Nekrosenschaden (obere Dimensionen).",
+						"Du bist immun gegen den {@condition poisoned} Zustand (untere Ebenen) oder den {@condition charmed} Zustand (obere Ebenen).",
+						"Auf deinem Rücken erscheinen spektrale Flügel, die dir eine Fluggeschwindigkeit von 12 Metern verleihen.",
+						"Du hast einen Bonus von +2 auf AC.",
+						"Alle deine Waffenangriffe sind magisch, und wenn du einen Waffenangriff ausführst, kannst du deinen Zauberfähigkeitsmodifikator anstelle von Stärke oder Geschicklichkeit für die Angriffs- und Schadenswürfe verwenden.",
+						"Du kannst zweimal statt einmal angreifen, wenn du in deinem Zug die Aktion Angriff ausführst. Du ignorierst diesen Vorteil, wenn du bereits eine Eigenschaft wie Extra-Angriff hast, die dir zusätzliche Angriffe gewährt."
+					]
+				}
+			],
+			"damageImmune": [
+				"fire",
+				"poison",
+				"radiant",
+				"necrotic"
+			],
+			"conditionImmune": [
+				"poisoned",
+				"charmed"
+			],
+			"miscTags": [
+				"MAC"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Spirit Shroud",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 2,
+			"level": 3,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du rufst die Geister der Toten herbei, die während der Dauer des Zaubers um dich herumschwirren. Die Geister sind nicht greifbar und unverwundbar, und sie sind gut oder böse (deine Wahl).",
+				"Bis zum Ende des Zaubers verursacht jeder Angriff, den du ausführst, {@damage 1d8} zusätzlichen Schaden, wenn du eine Kreatur in einem Umkreis von 3 Metern triffst. Dieser Schaden ist strahlend, wenn die Geister gut sind, und nekrotisch, wenn sie böse sind. Jede Kreatur, die diesen Schaden erleidet, kann bis zum Beginn deines nächsten Zuges keine Trefferpunkte wiedererlangen.",
+				"Außerdem wird die Geschwindigkeit jeder Kreatur deiner Wahl, die du sehen kannst und die ihren Zug innerhalb von 3 Metern von dir beginnt, bis zum Beginn deines nächsten Zuges um 3 Meter verringert."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberslot der Stufe 4 oder höher wirkst, erhöht sich der zusätzliche Schaden um {@scaledamage 1d8|3-9|1d8} für jede Slotstufe über der Stufe 3."
+					]
+				}
+			],
+			"damageInflict": [
+				"radiant",
+				"necrotic",
+				"cold"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Summon Aberrant Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 3,
+			"level": 4,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ein eingelegter Tentakel und ein Augapfel in einer Kristallphiole im Wert von mindestens 400 Gp",
+					"cost": 40000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du rufst einen Geist aus dem Fernen Reich oder einem anderen fremden Reich des Wahnsinns herbei. Der Geist manifestiert sich physisch in einem unbewohnten Raum, den du in Reichweite sehen kannst. Diese körperliche Form verwendet den {@creature Aberrant Spirit|UA2020SpellsAndMagicTattoos} Stat-Block. Wenn du den Zauber sprichst, wähle Beholderkin, Slaadi oder Star Spawn. Die Kreatur ähnelt physisch deiner Wahl, die auch einige der Eigenschaften in ihrem Statutenblock bestimmt. Die Kreatur verschwindet, wenn sie auf 0 Trefferpunkte fällt oder wenn der Zauber endet.",
+				"Die Kreatur ist dir und deinen Begleitern für die Dauer des Zaubers freundlich gesinnt. Im Kampf teilt die Kreatur deine Initiative, ist aber sofort nach dir an der Reihe. Sie gehorcht verbalen Befehlen, die du ihr gibst (keine Aktion von dir erforderlich). Wenn du keine gibst, verteidigt sie sich, führt aber ansonsten keine Aktion aus."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberschlitz der Stufe 5 oder höher wirkst, nimmt die Kreatur die höhere Stufe für diesen Zauber an, wann immer sie die Stufe des Zaubers in ihrem Statusblock verwendet."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Summon Bestial Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 3,
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "eine Feder, ein Fellbüschel und ein Fischschwanz in einer vergoldeten Eichel im Wert von mindestens 200 gp",
+					"cost": 20000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du rufst den Geist eines Tieres herbei. Der Geist manifestiert sich physisch in einem unbesetzten Raum, den du in Reichweite sehen kannst. Diese körperliche Form verwendet den {@creature Bestial Spirit|UA2020SpellsAndMagicTattoos} Stat-Block. Wenn du den Zauber sprichst, wähle eine Umgebung: Luft, Land oder Wasser. Die Kreatur ähnelt körperlich einem Tier deiner Wahl, das in der gewählten Umgebung beheimatet ist, die auch eine der Bewegungsarten im Statussymbol der Kreatur bestimmt. Die Kreatur verschwindet, wenn sie auf 0 Trefferpunkte fällt oder wenn der Zauber endet.",
+				"Die Kreatur ist dir und deinen Begleitern für die Dauer des Zaubers freundlich gesinnt. Im Kampf teilt die Kreatur deine Initiative, ist aber sofort nach dir an der Reihe. Sie gehorcht verbalen Befehlen, die du ihr gibst (keine Aktion von dir erforderlich). Wenn du keine gibst, verteidigt sie sich, führt aber ansonsten keine Aktion aus."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberspruch der Stufe 3 oder höher wirkst, nimmt die Kreatur die höhere Stufe für diesen Zauberspruch an, wann immer sie die Stufe des Zaubers in ihrem Statusblock verwendet."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Summon Celestial Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 4,
+			"level": 5,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ein goldener Reliquienschrein im Wert von mindestens 500 gp",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du rufst einen Geist aus den oberen Ebenen herbei. Der Geist manifestiert sich körperlich in einer Engelsgestalt in einem unbesetzten Raum, den du in Reichweite sehen kannst. Diese körperliche Form verwendet den {@creature Celestial Spirit|UA2020SpellsAndMagicTattoos} Stat-Block. Wenn du den Zauber sprichst, wähle Rächer oder Verteidiger. Deine Wahl bestimmt den Angriff der Kreatur in ihrem Stat-Block. Die Kreatur verschwindet, wenn sie auf 0 Trefferpunkte fällt oder wenn der Zauber endet.",
+				"Die Kreatur ist dir und deinen Begleitern für die Dauer des Zaubers freundlich gesinnt. Im Kampf teilt die Kreatur deine Initiative, ist aber sofort nach dir an der Reihe. Sie gehorcht verbalen Befehlen, die du ihr gibst (keine Aktion von dir erforderlich). Wenn du keine gibst, verteidigt sie sich, führt aber ansonsten keine Aktion aus."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberschlitz der Stufe 6 oder höher wirkst, nimmt die Kreatur die höhere Stufe für diesen Zauber an, wann immer sie die Stufe des Zaubers in ihrem Statusblock verwendet."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Summon Elemental Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 4,
+			"level": 4,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Luft, ein Kieselstein, Asche und Wasser in einer Kristallphiole im Wert von mindestens 400 Gp",
+					"cost": 40000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du rufst einen Geist aus den Elementarebenen herbei. Der Geist manifestiert sich körperlich in einem unbesetzten Raum, den du in Reichweite sehen kannst. Diese körperliche Form verwendet den {@creature Elemental Spirit|UA2020SpellsAndMagicTattoos} Stat-Block. Wenn du den Zauber sprichst, wähle ein Element: Luft, Erde, Feuer oder Wasser. Die Kreatur ähnelt körperlich einer vage humanoiden Form, die von dem gewählten Element umhüllt ist, das auch einige der Eigenschaften in ihrem Statutenblock bestimmt. Die Kreatur verschwindet, wenn sie auf 0 Trefferpunkte fällt oder wenn der Zauber endet.",
+				"Die Kreatur ist dir und deinen Begleitern für die Dauer des Zaubers freundlich gesinnt. Im Kampf teilt die Kreatur deine Initiative, ist aber sofort nach dir an der Reihe. Sie gehorcht verbalen Befehlen, die du ihr gibst (keine Aktion von dir erforderlich). Wenn du keine gibst, verteidigt sie sich, führt aber ansonsten keine Aktion aus."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberschlitz der Stufe 5 oder höher wirkst, nimmt die Kreatur die höhere Stufe für diesen Zauber an, wann immer sie die Stufe des Zaubers in ihrem Statusblock verwendet."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Summon Fey Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 5,
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "eine vergoldete Blume im Wert von mindestens 300 Gp",
+					"cost": 30000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du rufst einen Geist aus dem Feenreich herbei. Der Geist manifestiert sich körperlich in einem unbesetzten Raum, den du in Reichweite sehen kannst. Diese körperliche Form verwendet den {@creature Fey Spirit|UA2020SpellsAndMagicTattoos} Stat-Block. Wenn du den Zauber sprichst, wähle eine Stimmung: Arglistig, Wütend oder Freudig. Die Kreatur ähnelt körperlich einem Satyr, einer Dryade oder einem Elfen (deiner Wahl), der durch die gewählte Stimmung gekennzeichnet ist, die auch eine der Eigenschaften in seinem Stat-Block bestimmt. Die Kreatur verschwindet, wenn sie auf 0 Trefferpunkte fällt oder wenn der Zauber endet.",
+				"Die Kreatur ist dir und deinen Begleitern für die Dauer des Zaubers freundlich gesinnt. Im Kampf teilt die Kreatur deine Initiative, ist aber sofort nach dir an der Reihe. Sie gehorcht verbalen Befehlen, die du ihr gibst (keine Aktion von dir erforderlich). Wenn du keine gibst, verteidigt sie sich, führt aber ansonsten keine Aktion aus."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberslot der Stufe 4 oder höher wirkst, nimmt die Kreatur die höhere Stufe für diesen Zauber an, wenn sie die Stufe des Zaubers in ihrem Statusblock verwendet."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Summon Fiendish Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 6,
+			"level": 6,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "humanoides Blut in einer Rubinphiole im Wert von mindestens 600 gp",
+					"cost": 60000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du rufst einen teuflischen Geist aus den unteren Ebenen herbei. Der Geist manifestiert sich physisch in einem unbesetzten Raum, den du in Reichweite sehen kannst. Diese körperliche Form verwendet den {@creature Fiendish Spirit|UA2020SpellsAndMagicTattoos} Stat-Block. Wenn du den Zauber sprichst, wähle Dämon, Teufel oder Yugoloth. Die Kreatur ähnelt körperlich einem Unhold des gewählten Typs, der auch einige der Eigenschaften in seinem Statutenblock bestimmt. Die Kreatur verschwindet, wenn sie auf 0 Trefferpunkte fällt oder wenn der Zauber endet.",
+				"Die Kreatur ist dir und deinen Begleitern für die Dauer des Zaubers freundlich gesinnt. Im Kampf teilt die Kreatur deine Initiative, ist aber sofort nach dir an der Reihe. Sie gehorcht verbalen Befehlen, die du ihr gibst (keine Aktion von dir erforderlich). Wenn du keine gibst, verteidigt sie sich, führt aber ansonsten keine Aktion aus."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberspruch der Stufe 7 oder höher wirkst, nimmt die Kreatur die höhere Stufe für diesen Zauberspruch an, wann immer sie die Stufe des Zaubers in ihrem Statusblock verwendet."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Summon Shadow Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 7,
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Tränen im Inneren einer Kristallphiole im Wert von mindestens 300 gp",
+					"cost": 30000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du rufst einen schattenhaften Geist aus dem Shadowfell. Der Geist manifestiert sich körperlich in einem unbewohnten Raum, den du in Reichweite sehen kannst. Diese körperliche Form verwendet den {@creature Shadow Spirit|UA2020SpellsAndMagicTattoos} Stat-Block. Wenn du den Zauber sprichst, wähle eine Emotion: Wut, Verzweiflung oder Furcht. Die Kreatur ähnelt körperlich einem missgestalteten Humanoiden, der von der gewählten Emotion gezeichnet ist, die auch einige der Eigenschaften in seinem Stat-Block bestimmt. Die Kreatur verschwindet, wenn sie auf 0 Trefferpunkte fällt oder wenn der Zauber endet.",
+				"Die Kreatur ist dir und deinen Begleitern für die Dauer des Zaubers freundlich gesinnt. Im Kampf teilt die Kreatur deine Initiative, ist aber sofort nach dir an der Reihe. Sie gehorcht verbalen Befehlen, die du ihr gibst (keine Aktion von dir erforderlich). Wenn du keine gibst, verteidigt sie sich, führt aber ansonsten keine Aktion aus."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberslot der Stufe 4 oder höher wirkst, nimmt die Kreatur die höhere Stufe für diesen Zauber an, wenn sie die Stufe des Zaubers in ihrem Statusblock verwendet."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Summon Undead Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 7,
+			"level": 3,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ein vergoldeter humanoider Schädel im Wert von mindestens 300 Gp",
+					"cost": 30000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du rufst einen ruhelosen Geist aus dem Jenseits herbei. Der Geist manifestiert sich körperlich in einem unbesetzten Raum, den du in Reichweite sehen kannst. Diese körperliche Form verwendet den {@creature Undead Spirit|UA2020SpellsAndMagicTattoos} Stat-Block. Wenn du den Zauber sprichst, wähle die Form der Kreatur: Geisterhaft, Faulig oder Skelettartig. Die Kreatur ähnelt physisch einem Humanoiden mit der gewählten Form, die auch einige der Eigenschaften in ihrem Stat-Block bestimmt. Die Kreatur verschwindet, wenn sie auf 0 Trefferpunkte fällt oder wenn der Zauber endet.",
+				"Die Kreatur ist dir und deinen Begleitern für die Dauer des Zaubers freundlich gesinnt. Im Kampf teilt die Kreatur deine Initiative, ist aber sofort nach dir an der Reihe. Sie gehorcht verbalen Befehlen, die du ihr gibst (keine Aktion von dir erforderlich). Wenn du keine gibst, verteidigt sie sich, führt aber ansonsten keine Aktion aus."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberslot der Stufe 4 oder höher wirkst, nimmt die Kreatur die höhere Stufe für diesen Zauber an, wenn sie die Stufe des Zaubers in ihrem Statusblock verwendet."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		}
+	]
+}

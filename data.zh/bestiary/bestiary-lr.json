@@ -1,0 +1,1021 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"VGM"
+			]
+		},
+		"otherSources": {
+			"monster": {
+				"GoS": "LR",
+				"MM": "LR",
+				"VGM": "LR",
+				"MTF": "LR",
+				"TftYP": "LR"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Amble",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LR",
+			"page": 15,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"tortle"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor",
+						"{@item ring of protection}"
+					]
+				}
+			],
+			"hp": {
+				"average": 90,
+				"formula": "12d8 + 36"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 10,
+			"con": 16,
+			"int": 10,
+			"wis": 18,
+			"cha": 14,
+			"save": {
+				"str": "+6",
+				"dex": "+4",
+				"con": "+7",
+				"int": "+4",
+				"wis": "+8",
+				"cha": "+6"
+			},
+			"skill": {
+				"animal handling": "+8",
+				"insight": "+8",
+				"medicine": "+8",
+				"perception": "+8",
+				"survival": "+8"
+			},
+			"passive": 18,
+			"languages": [
+				"Aquan",
+				"Common",
+				"Druidic"
+			],
+			"cr": "10",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"安博尔是一个12级的施法者。他们的法术能力是智慧（法术救赎（%0%），（%1%）用法术攻击命中）。Amble准备了以下德鲁伊法术。"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell guidance}",
+								"{@spell mending}",
+								"{@spell shape water|XGE}",
+								"{@spell shillelagh}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell absorb elements|XGE}",
+								"{@spell cure wounds}",
+								"{@spell entangle}",
+								"{@spell speak with animals}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell darkvision}",
+								"{@spell hold person}",
+								"{@spell lesser restoration}",
+								"{@spell moonbeam}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell conjure animals}",
+								"{@spell dispel magic}",
+								"{@spell water breathing}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell charm monster|XGE}",
+								"{@spell freedom of movement}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell greater restoration}",
+								"{@spell mass cure wounds}"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell conjure fey}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Hearth of Moonlight and Shadow",
+					"entries": [
+						"在短暂或长时间休息开始时，安布尔可以触摸空间中的一点，然后以该点为中心，出现一个（%0%）、半径 9 米的魔法球。全面覆盖会阻挡魔法球。",
+						"在球体内时，安布和他们的盟友在灵巧（隐身）和智慧（感知）检查中获得+5的奖励，而且球体内的任何明火的光线在球体外都不可见。",
+						"球体在休息结束时或安博离开球体时消失。"
+					]
+				},
+				{
+					"name": "Hold Breath",
+					"entries": [
+						"安博尔一次可以屏住呼吸长达1小时。"
+					]
+				},
+				{
+					"name": "Balm of the Summer Court (12d6)",
+					"entries": [
+						"(作为额外行动）安布尔可以选择一个他们能看到的 36 米范围内的生物，并花费最多（%0%）的骰子数。掷出消耗的骰子并将其相加。目标恢复的命中点数等于总数。每消耗一个骰子，目标还会获得 1 点临时命中点数。长时间休息后，安眠会恢复所有消耗的骰子。"
+					]
+				},
+				{
+					"name": "Hidden Paths (4/Day)",
+					"entries": [
+						"(作为奖励行动）安博可以传送到 18 米外他们能看到的无人空间。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Change Shape (2/Day)",
+					"entries": [
+						"Amble会神奇地多态化为一只挑战等级为1或更低的野兽，并且可以在这种形态下保持6小时。Amble的装备与他们的新形态融为一体。如果他们死亡或倒下，Amble会恢复到他们的真实形态（%0%）。Amble可以在他们的回合中使用一个额外的动作恢复到他们的真实形态。",
+						"Amble的游戏数据被野兽的数据所取代，但他们保留了他们的排列组合、个性、智力、智慧和魅力的分数。Amble也保留了他们所有的技能和蓄力的熟练程度，此外还获得了该生物的熟练程度。如果该生物具有与Amble相同的熟练度，而其状态块中的奖励更高，则使用该生物的奖励而不是Amble的。",
+						"当Amble变身时，他们会承担野兽的打击点数和命中率。当Amble恢复到他们的正常形态时，他们会恢复到他们变身前的命中率。然而，如果Amble因为命中率下降到0而恢复，任何多余的伤害都会延续到他们的正常形态。",
+						"Amble不能施展法术，他们说话或采取任何需要手的行动的能力都受限于他们的野兽形态的能力。然而，变身并不会破坏Amble对他们已经施展的法术的（%0%），也不会阻止他们采取属于法术的行动。"
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 6} 命中，距离 1.5 米，一个目标。{@h}4 ({@damage 1d4 + 2}) 砍伤。"
+					]
+				},
+				{
+					"name": "Club",
+					"entries": [
+						"{@atk mw}{@hit 6}命中（{@hit 8}使用shillelagh命中），距离1.5米，一个目标。{@h}5 ({@damage 1d6 + 2}) 暴击伤害，或 8 ({@damage 1d8 + 4}) 暴击伤害（使用shillelagh）。"
+					]
+				}
+			],
+			"attachedItems": [
+				"club|phb"
+			],
+			"traitTags": [
+				"Hold Breath"
+			],
+			"actionTags": [
+				"Shapechanger"
+			],
+			"languageTags": [
+				"AQ",
+				"C",
+				"DU"
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"damageTagsSpell": [
+				"R"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"paralyzed",
+				"restrained"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"strength",
+				"wisdom"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Fhenimore",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LR",
+			"page": 20,
+			"_copy": {
+				"name": "Kraken Priest",
+				"source": "VGM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the priest",
+						"with": "Fhenimore",
+						"flags": "i"
+					},
+					"_": {
+						"mode": "replaceSpells",
+						"daily": {
+							"1e": [
+								{
+									"replace": "{@spell call lightning}",
+									"with": "{@spell lightning bolt}"
+								}
+							]
+						}
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Blood Frenzy",
+							"entries": [
+								"Fhenimore对任何没有全部命中率的生物在近战攻击卷上有优势。"
+							]
+						}
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Voice of the Kraken (Recharges after a Short or Long Rest)",
+						"items": [
+							{
+								"name": "Multiattack",
+								"entries": [
+									"Fhenimore can attack once with her bite attack and once with Thunderous Touch."
+								]
+							},
+							{
+								"name": "Bite",
+								"entries": [
+									"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d10 + 3}) piercing damage."
+								]
+							}
+						]
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"str": 16,
+			"languages": [
+				"Common",
+				"Aquan"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AQ",
+				"C"
+			],
+			"damageTags": [
+				"P",
+				"T"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Gar Shatterkeel",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LR",
+			"page": 18,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 144,
+				"formula": "17d8 + 68"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 18,
+			"int": 12,
+			"wis": 20,
+			"cha": 14,
+			"skill": {
+				"nature": "+11",
+				"perception": "+10",
+				"survival": "+10"
+			},
+			"passive": 20,
+			"resist": [
+				"cold"
+			],
+			"languages": [
+				"Aquan",
+				"Common"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"加尔是一个13级的施法者。他的法术能力是智慧（法术救赎（%0%），用法术攻击命中率（%1%））。他准备了以下德鲁伊法术。"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell frostbite|XGE}",
+								"{@spell mending}",
+								"{@spell resistance}",
+								"{@spell shape water|XGE}",
+								"{@spell thunderclap|XGE}*"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell create or destroy water}",
+								"{@spell charm person}",
+								"{@spell cure wounds}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell darkvision}",
+								"{@spell hold person}",
+								"{@spell mirror image}*",
+								"{@spell misty step}*",
+								"{@spell pass without trace}",
+								"{@spell protection from poison}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell conjure animals}",
+								"{@spell dispel magic}",
+								"{@spell tidal wave|XGE}",
+								"{@spell water breathing}*",
+								"{@spell water walk}*"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell charm monster|XGE}",
+								"{@spell control water}*",
+								"{@spell dominate beast}",
+								"{@spell freedom of movement}*",
+								"{@spell watery sphere|XGE}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell conjure elemental}*",
+								"{@spell maelstrom|XGE}",
+								"{@spell scrying}*",
+								"{@spell tree stride}"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell heal}"
+							]
+						},
+						"7": {
+							"slots": 1,
+							"spells": [
+								"{@spell plane shift}"
+							]
+						}
+					},
+					"footerEntries": [
+						"*Circle spells don't count against spells prepared."
+					],
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"加尔可以呼吸空气和水。"
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"如果加尔的拯救动作失败，他可以选择成功。"
+					]
+				},
+				{
+					"name": "Water Walk",
+					"entries": [
+						"加尔可以在液体表面上站立和移动，就像它们是固体地面一样。"
+					]
+				},
+				{
+					"name": "Watery Fall",
+					"entries": [
+						"当加尔的命中率降到0时，他的身体会倒塌成一滩墨色的水，并迅速消散。除了{@item Wave}和他的爪子，他所穿戴或携带的任何东西都会被遗弃。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"加尔进行两次近战攻击，一次用他的爪子，一次用（%0%）。"
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 8} 命中，距离 1.5 米，一个目标。{@h}10 ({@damage 2d6 + 3}) 暴击伤害，目标受到 {@condition grappled} （逃脱 {@dc 16}）。在抓取结束之前，加尔无法用爪子攻击其他生物。"
+					]
+				},
+				{
+					"name": "Wave",
+					"entries": [
+						"{@atk mw,rw} {@hit 11} 命中，距离 1.5 米或射程 20/18 米，一个目标。{@h}9（{@damage 1d6 + 6}）次穿刺伤害，双手使用时为 10（{@damage 1d8 + 6}）次穿刺伤害。如果加尔使用该武器获得重击，目标会受到相当于其最高命中点一半的额外尸毒伤害。"
+					]
+				},
+				{
+					"name": "Umberlee's Wake {@recharge 5}",
+					"entries": [
+						"乌姆贝莉的意志会影响所有在她水之怀抱中的人，力量会从范围内（45 公尺）的一点开始，荡漾出半径 18 公尺的球体。该区域内的每个生物都必须在（%0%）体质救赎中成功。如果蓄力失败，该生物将无法使用反应，速度减半，并且在其回合内无法发动一次以上的攻击。此外，该生物在其回合内可以使用一个动作或一个额外动作，但不能同时使用。这些效果持续 1 分钟。该生物可以在每个回合结束时重复施法，如果施法成功，则结束对自身的效果。这只会影响浸没或漂浮在水中的目标。加尔-碎裂者和为他服务的亡灵对该效果免疫。"
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Move",
+					"entries": [
+						"加尔的移动速度达到了他的速度，不会引起机会攻击。"
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"加尔用他的爪子进行一次攻击。"
+					]
+				},
+				{
+					"name": "Wave (Costs 2 Actions)",
+					"entries": [
+						"加尔以{@item Wave}的优势进行一次攻击。"
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Gar Shatterkeel",
+				"source": "LR"
+			},
+			"attachedItems": [
+				"wave|dmg"
+			],
+			"traitTags": [
+				"Amphibious",
+				"Legendary Resistances"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AQ",
+				"C"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"T"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"conditionInflictLegendary": [
+				"restrained"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"paralyzed",
+				"prone",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedLegendary": [
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"strength",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Shoalar Quanderil",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LR",
+			"page": 23,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					{
+						"tag": "genasi",
+						"prefix": "Water"
+					}
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				11,
+				{
+					"ac": 14,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 75,
+				"formula": "10d8 + 30"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 12,
+			"dex": 12,
+			"con": 16,
+			"int": 14,
+			"wis": 10,
+			"cha": 18,
+			"skill": {
+				"arcana": "+6",
+				"deception": "+8",
+				"insight": "+4",
+				"persuasion": "+8"
+			},
+			"passive": 10,
+			"resist": [
+				"acid",
+				"lightning",
+				"thunder"
+			],
+			"languages": [
+				"Aquan",
+				"Common"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"肖拉的先天法术能力是宪法（法术保全（%0%），用法术攻击命中率（%1%））。他可以先天性地施展以下法术。"
+					],
+					"will": [
+						"{@spell shape water|XGE}"
+					],
+					"daily": {
+						"1": [
+							"{@spell create or destroy water}"
+						]
+					},
+					"ability": "con"
+				},
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"肖拉是一个7级的施法者。他的法术能力是魅力（法术救赎（%0%），用法术攻击命中率（%1%））。他知道以下的巫师法术。"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell acid splash}",
+								"{@spell chill touch}",
+								"{@spell light}",
+								"{@spell prestidigitation}",
+								"{@spell ray of frost}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell disguise self}",
+								"{@spell mage armor}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell hold person}",
+								"{@spell misty step}"
+							]
+						},
+						"3": {
+							"slots": 2,
+							"spells": [
+								"{@spell lightning bolt}",
+								"{@spell tidal wave|XGE}"
+							]
+						},
+						"4": {
+							"slots": 1,
+							"spells": [
+								"{@spell watery sphere|XGE}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"庄稼人可以呼吸空气和水。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} 命中，距离 1.5 米或范围 20/18 米，一个目标。{@h}3 ({@damage 1d4 + 1}) 穿透伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"languageTags": [
+				"AQ",
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"L",
+				"N"
+			],
+			"spellcastingTags": [
+				"CS",
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"strength",
+				"wisdom"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Whymsee",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LR",
+			"page": 20,
+			"_copy": {
+				"name": "Kraken Priest",
+				"source": "VGM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the priest",
+						"with": "Whymsee",
+						"flags": "i"
+					},
+					"_": {
+						"mode": "replaceSpells",
+						"daily": {
+							"1e": [
+								{
+									"replace": "{@spell call lightning}",
+									"with": "{@spell lightning bolt}"
+								}
+							]
+						}
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Voice of the Kraken (Recharges after a Short or Long Rest)",
+						"items": [
+							{
+								"name": "Ink Cloud",
+								"entries": [
+									"While underwater, Whymsee can expel an ink cloud in a 20-foot radius. The cloud spreads around corners, and that area is heavily obscured to creatures other than kraken priests or a kraken. Each creature other than a kraken priest or a kraken that ends its turn there must succeed on a {@dc 14} Constitution saving throw, taking 9 ({@damage 2d8}) poison damage on a failed save, or half as much damage on a successful one. A strong current disperses the cloud, which otherwise disappears at the end of Whymsee's next turn."
+								]
+							},
+							{
+								"name": "Shell Defense",
+								"entries": [
+									"Whymsee withdraws into her shell. Until she emerges, she gains a +4 bonus to AC and has advantage on Strength and Constitution saving throws. While in her shell, Whymsee is {@condition prone}, her speed is 0 and can't increase, she has disadvantage on Dexterity saving throws, it can't take reactions, and the only action she can take is a bonus action to emerge."
+								]
+							}
+						]
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"languages": [
+				"Common",
+				"Aquan"
+			],
+			"languageTags": [
+				"AQ",
+				"C"
+			],
+			"damageTags": [
+				"I",
+				"T"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Young Kraken",
+			"source": "LR",
+			"page": 21,
+			"size": [
+				"H"
+			],
+			"type": {
+				"type": "monstrosity",
+				"tags": [
+					"titan"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 207,
+				"formula": "18d12 + 90"
+			},
+			"speed": {
+				"walk": 20,
+				"swim": 50
+			},
+			"str": 24,
+			"dex": 11,
+			"con": 20,
+			"int": 19,
+			"wis": 15,
+			"cha": 17,
+			"save": {
+				"str": "+12",
+				"dex": "+5",
+				"con": "+10",
+				"int": "+9",
+				"wis": "+7"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 14,
+			"immune": [
+				"lightning",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"frightened",
+				"paralyzed"
+			],
+			"languages": [
+				"Abyssal",
+				"Celestial",
+				"Infernal",
+				"Primordial",
+				"telepathy 60 ft. but can't speak"
+			],
+			"cr": "14",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"海怪可以呼吸空气和水。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"海怪会进行两次触手攻击，每次都可以用一次 \"甩 \"来代替。"
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 12} 命中，距离 1.5 米，一个目标。{@h}20 ({@damage 3d8 + 7}) 穿透伤害。",
+						"如果目标是克拉肯的中型或小型生物（%0%），该生物会被吞噬，抓捕结束。当被吞噬时，该生物是{@condition grappled}和{@condition blinded}，它对克拉肯以外的攻击和其他效果有完全的掩护，并且在克拉肯的每个回合开始时受到21({@condition restrained})酸伤害。一个中型或两个小型生物可以同时被吞噬。",
+						"如果海怪在一回合内受到来自体内生物的 35 或更多伤害，海怪必须在该回合结束时成功进行 {@dc 23} 体质自救，否则会反噬所有被吞下的生物，这些生物会 {@condition prone} 掉落在海怪周围 3 米内的空间。如果海怪死亡，被吞食的生物将不再受到它的（%2%）影响，并且可以通过 3 米的移动距离逃离尸体，离开（%3%）。"
+					]
+				},
+				{
+					"name": "Tentacle",
+					"entries": [
+						"{@atk mw} {@hit 12} 命中，距离 6 米，一个目标。{@h}17 ({@damage 3d6 + 7}) 暴击伤害，目标受到 {@condition grappled} （逃脱 {@dc 20}）。直到抓取结束，目标会受到 {@condition restrained} 的伤害。海怪有十条触手，每条触手可以抓取一个目标。"
+					]
+				},
+				{
+					"name": "Fling",
+					"entries": [
+						"海怪持有的一个中等或更小的物体或生物 {@condition grappled} 会被随机抛向 12 米远的地方并被击倒 {@condition prone}。如果被抛出的目标撞击到固体表面，则每被抛出 3 米就会受到 3（{@damage 1d6}）次重击伤害。如果目标被扔向其他生物，该生物必须在（%3%）灵巧蓄力中成功，否则会受到相同的伤害并被击倒（%4%）。"
+					]
+				},
+				{
+					"name": "Lightning Strike",
+					"entries": [
+						"克拉肯会用魔法制造一道闪电，它可以击中 27 米内克拉肯能看到的目标。目标必须进行 {@dc 18} 灵巧蓄力，蓄力失败会受到 22 ({@damage 4d10}) 雷电伤害，蓄力成功则会受到一半的伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Swallow",
+				"Tentacles"
+			],
+			"languageTags": [
+				"AB",
+				"CE",
+				"CS",
+				"I",
+				"P",
+				"TP"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"L",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"blinded",
+				"grappled",
+				"prone",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		}
+	]
+}

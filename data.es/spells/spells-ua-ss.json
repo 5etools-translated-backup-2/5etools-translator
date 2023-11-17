@@ -1,0 +1,955 @@
+{
+	"spell": [
+		{
+			"name": "Cause Fear (UA)",
+			"source": "UAStarterSpells",
+			"page": 2,
+			"level": 1,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Despiertas el sentido de la mortalidad en una criatura que puedas ver dentro de tu alcance. El objetivo debe tener éxito en una tirada de salvación de Sabiduría o se convertirá en {@condition frightened} mientras dure el efecto. Un objetivo con 25 puntos de golpe o menos realiza la tirada de salvación con desventaja. El conjuro no tiene efecto sobre constructos o muertos vivientes."
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Ceremony (UA)",
+			"source": "UAStarterSpells",
+			"page": 2,
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "25 gp de plata en polvo",
+					"cost": 2500
+				}
+			},
+			"duration": [
+				{
+					"type": "instant",
+					"condition": "see text"
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"Realizas una de varias ceremonias religiosas. Cuando lances el hechizo, elige una de las siguientes ceremonias, cuyo objetivo debe estar a menos de 3 metros de ti durante todo el lanzamiento.",
+				{
+					"type": "entries",
+					"name": "Atonement",
+					"entries": [
+						"Tocas a una criatura dispuesta cuyo alineamiento ha cambiado y realizas un chequeo de Sabiduría ({@skill Insight}) DC 20. Si tienes éxito, devuelves al objetivo su alineamiento original."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Bless Water",
+					"entries": [
+						"Tocas un {@item vial|phb} de agua y haces que se convierta en {@item Holy Water (flask)|phb|holy water}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Coming of Age",
+					"entries": [
+						"Tocas a un humanoide lo suficientemente mayor como para ser un adulto joven. Durante las siguientes 24 horas, siempre que el objetivo realice un chequeo de habilidad, puede tirar un {@dice d4} y sumar el número obtenido al chequeo de habilidad. Una criatura puede beneficiarse de esta ceremonia una sola vez."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Dedication",
+					"entries": [
+						"Tocas a un humanoide que se convertiría voluntariamente a tu religión o que desea dedicarse al servicio de tu dios. Durante las siguientes 24 horas, siempre que el objetivo haga una tirada de salvación, puede sacar un {@dice d4} y sumar el número obtenido a la salvación. Una criatura sólo puede beneficiarse de esta ceremonia una vez."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Funeral Rite",
+					"entries": [
+						"Bendices a un cadáver en un radio de 1,5 metros de ti. Durante las siguientes 24 horas, el objetivo no puede convertirse en muerto viviente por ningún medio que no sea un hechizo {@spell wish}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Investiture",
+					"entries": [
+						"Tocas a un humanoide dispuesto. Elige un hechizo de primer nivel que hayas preparado y gasta una ranura de hechizo y cualquier componente material como si estuvieras lanzando ese hechizo. El hechizo no tiene efecto. En cambio, el objetivo puede lanzar este hechizo una vez sin tener que gastar una ranura de hechizo o usar componentes materiales. Si el objetivo no lanza el hechizo en 1 hora, el hechizo invertido se pierde."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Marriage",
+					"entries": [
+						"Tocas a humanoides adultos dispuestos a unirse en matrimonio. Durante las siguientes 24 horas, cada objetivo obtiene un bonificador +2 a la CA y a las tiradas de salvación mientras se encuentren a menos de 9 metros el uno del otro. Una criatura sólo puede beneficiarse de esta ceremonia una vez."
+					]
+				}
+			],
+			"affectsCreatureType": [
+				"humanoid"
+			],
+			"miscTags": [
+				"MAC"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Chaos Bolt (UA)",
+			"source": "UAStarterSpells",
+			"page": 2,
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Lanzas una masa ondulante de energía caótica a una criatura a tu alcance. Haz un ataque de hechizo a distancia contra el objetivo. Si aciertas, el objetivo recibe {@damage 2d8} de daño. Elige uno de los {@dice d8}s. El número obtenido determina el tipo de daño, como se muestra a continuación.",
+				{
+					"type": "table",
+					"caption": "Chaos Bolt",
+					"colLabels": [
+						"{@dice d8}",
+						"Damage Type"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 1
+								}
+							},
+							"Ácido"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 2
+								}
+							},
+							"Frío"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 3
+								}
+							},
+							"Fuego"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 4
+								}
+							},
+							"Fuerza"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 5
+								}
+							},
+							"Relámpago"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 6
+								}
+							},
+							"Veneno"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 7
+								}
+							},
+							"Psíquico"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 8
+								}
+							},
+							"Trueno"
+						]
+					]
+				},
+				"Si sacas el mismo número en ambas {@dice d8}s, la energía caótica salta del objetivo a otra criatura de tu elección en un radio de 9 metros. Haz una nueva tirada de ataque contra el nuevo objetivo, y haz una nueva tirada de daño, lo que podría provocar que la energía caótica salte de nuevo. Una criatura sólo puede ser objetivo una vez de esta masa de energía caótica."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 2º nivel o superior, cada objetivo recibe daño adicional del tipo que se haya tirado. El daño extra es igual a {@scaledamage 2d8|1-9|1d6} por cada nivel de ranura superior al 1º."
+					]
+				}
+			],
+			"damageInflict": [
+				"acid",
+				"cold",
+				"fire",
+				"force",
+				"lightning",
+				"poison",
+				"psychic",
+				"thunder"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"miscTags": [
+				"RO"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Guiding Hand (UA)",
+			"source": "UAStarterSpells",
+			"page": 3,
+			"level": 1,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 5
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					},
+					"concentration": true
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"Creas una diminuta mano incorpórea de luz resplandeciente en un espacio desocupado que puedas ver dentro del alcance. La mano existe mientras dure, pero desaparece si te teletransportas o viajas a otro plano de existencia.",
+				"Cuando aparezca la mano, nombra un punto de referencia importante, como una ciudad, montaña, castillo o campo de batalla en el mismo plano de existencia que tú. Alguien en la historia debe haber visitado el lugar y haberlo cartografiado. Si el punto de referencia no aparece en ningún mapa existente, el hechizo falla. De lo contrario, cada vez que te muevas hacia la mano, ésta se alejará de ti a la misma velocidad a la que te hayas movido, y se moverá en la dirección del punto de referencia, permaneciendo siempre a 1,5 metros de ti.",
+				"Si no te mueves hacia la mano, ésta permanece en su sitio hasta que lo hagas y te hace señas para que la sigas una vez cada {@dice 1d4} minutos."
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Hand of Radiance (UA)",
+			"source": "UAStarterSpells",
+			"page": 3,
+			"level": 0,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 5
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Levantas la mano y de ella brota un resplandor ardiente. Cada criatura a tu elección que puedas ver en un radio de 1,5 m debe superar una tirada de salvación de Constitución o recibe {@damage 1d6} de daño radiante.",
+				"El daño del hechizo aumenta un {@dice 1d6} cuando alcanzas el 5º nivel ({@damage 2d6}), el 11º nivel ({@damage 3d6}) y el 17º nivel ({@damage 4d6})."
+			],
+			"scalingLevelDice": {
+				"label": "radiant damage",
+				"scaling": {
+					"1": "1d6",
+					"5": "2d6",
+					"11": "3d6",
+					"17": "4d6"
+				}
+			},
+			"damageInflict": [
+				"radiant"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Healing Elixir (UA)",
+			"source": "UAStarterSpells",
+			"page": 3,
+			"level": 1,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "suministros de alquimista"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"entries": [
+				"Creas un elixir curativo en un simple vial que aparece en tu mano. El elixir conserva su potencia mientras dure o hasta que se consuma, momento en el que el vial desaparece.",
+				"Como acción, una criatura puede beber el elixir o administrárselo a otra criatura. El bebedor recupera {@dice 2d4 + 2} puntos de golpe."
+			],
+			"miscTags": [
+				"HL"
+			]
+		},
+		{
+			"name": "Infestation (UA)",
+			"source": "UAStarterSpells",
+			"page": 3,
+			"level": 0,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "una pulga viva"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Provocas la aparición momentánea de ácaros, pulgas y otros parásitos en una criatura que puedas ver dentro de tu alcance. El objetivo debe tener éxito en una tirada de salvación de Constitución o recibir {@damage 1d6} de daño perforante. Si el objetivo recibe algo de ese daño, se mueve 1,5 metros en una dirección aleatoria. Tira un {@dice d8} para la dirección: 1, norte; 2, noreste; 3, este; 4, sureste; 5, sur; 6, suroeste; 7, oeste; u 8, noroeste.",
+				"El daño del hechizo aumenta un {@dice 1d6} cuando alcanzas el 5º nivel ({@damage 2d6}), el 11º nivel ({@damage 3d6}) y el 17º nivel ({@damage 4d6})."
+			],
+			"scalingLevelDice": {
+				"label": "piercing damage",
+				"scaling": {
+					"1": "1d6",
+					"5": "2d6",
+					"11": "3d6",
+					"17": "4d6"
+				}
+			},
+			"damageInflict": [
+				"piercing"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Primal Savagery (UA)",
+			"source": "UAStarterSpells",
+			"page": 3,
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Los dientes o las uñas se alargan y se afilan. Tú eliges cuál. Realiza un ataque de hechizo cuerpo a cuerpo contra una criatura en un radio de 1,5 metros de ti. Si aciertas, el objetivo recibe {@damage 1d10} de daño perforante o cortante (a tu elección). Después de realizar el ataque, tus dientes o uñas vuelven a su estado normal.",
+				"El daño del hechizo aumenta un {@dice 1d10} cuando alcanzas el 5º nivel ({@damage 2d10}), el 11º nivel ({@damage 3d10}) y el 17º nivel ({@damage 4d10})."
+			],
+			"scalingLevelDice": {
+				"label": "piercing damage",
+				"scaling": {
+					"1": "1d10",
+					"5": "2d10",
+					"11": "3d10",
+					"17": "4d10"
+				}
+			},
+			"damageInflict": [
+				"piercing",
+				"slashing"
+			],
+			"spellAttack": [
+				"M"
+			],
+			"miscTags": [
+				"SCL"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Puppet (UA)",
+			"source": "UAStarterSpells",
+			"page": 3,
+			"level": 1,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Tu gesto obliga a un humanoide que puedas ver dentro del alcance a hacer una tirada de salvación de Constitución. Si falla, el objetivo debe moverse a su velocidad en la dirección que elijas. Además, puedes hacer que el objetivo suelte lo que esté sujetando. Este hechizo no tiene efecto sobre un humanoide inmune a ser {@condition charmed}."
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"affectsCreatureType": [
+				"humanoid"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Sense Emotion (UA)",
+			"source": "UAStarterSpells",
+			"page": 4,
+			"level": 1,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Sintonizas tus sentidos para captar las emociones de los demás mientras dure. Cuando lanzas el hechizo, y como tu acción en cada turno hasta que el hechizo termine, puedes concentrar tus sentidos en un humanoide que puedas ver a menos de 9 metros de ti. Instantáneamente aprendes la emoción predominante del objetivo, ya sea amor, ira, dolor, miedo, calma u otra cosa. Si el objetivo no es realmente humanoide o es inmune a serlo {@condition charmed}, percibes que está en calma."
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Snare (UA)",
+			"source": "UAStarterSpells",
+			"page": 4,
+			"level": 1,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "9 metros de cuerda o soga, que se consume con el hechizo",
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "permanent",
+					"ends": [
+						"dispel",
+						"trigger"
+					]
+				}
+			],
+			"entries": [
+				"Mientras lanzas este hechizo, utilizas el cordón o la cuerda para crear un círculo de 1,5 metros de radio en una superficie plana a tu alcance. Cuando terminas de lanzarlo, la cuerda o el cordel desaparecen para convertirse en una trampa mágica.",
+				"La trampa es casi invisible y requiere un chequeo exitoso de Inteligencia ({@skill Investigation}) contra tu DC de salvación de hechizo para ser encontrada. La trampa se activa cuando una criatura pequeña o mayor entra en la zona protegida por el hechizo.",
+				"La criatura desencadenante debe tener éxito en una tirada de salvación de Destreza o caer {@condition prone} y ser izada en el aire hasta que cuelgue boca abajo 0,9 metros por encima de la superficie protegida, donde se encuentra {@condition restrained}.",
+				"La criatura {@condition restrained} puede realizar una tirada de salvación de Destreza con desventaja al final de cada uno de sus turnos y termina el efecto {@condition restrained} con un éxito. Alternativamente, otra criatura que pueda alcanzar a la criatura {@condition restrained} puede usar una acción para hacer un chequeo de Inteligencia ({@skill Arcana}) contra la DC de salvación de tu hechizo. Si tiene éxito, el efecto {@condition restrained} también termina."
+			],
+			"conditionInflict": [
+				"prone",
+				"restrained"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"abilityCheck": [
+				"intelligence"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Sudden Awakening (UA)",
+			"source": "UAStarterSpells",
+			"page": 4,
+			"level": 1,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Cada criatura dormida que elijas dentro del alcance despierta, y entonces cada {@condition prone} criatura dentro del alcance puede levantarse sin gastar movimiento."
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Toll the Dead (UA)",
+			"source": "UAStarterSpells",
+			"page": 4,
+			"level": 0,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Apuntas a una criatura que puedes ver a tu alcance, y el sonido de una campana dolorosa llena el aire a su alrededor durante un momento. El objetivo debe tener éxito en una tirada de salvación de Sabiduría o recibir {@damage 1d8} de daño necrótico. Si al objetivo le falta alguno de sus puntos de golpe, recibe {@damage 1d12} de daño necrótico.",
+				"El daño del hechizo aumenta en un dado cuando alcanzas el 5º nivel ({@damage 2d8} o {@damage 2d12}), el 11º nivel ({@damage 3d8} o {@damage 3d12}) y el 17º nivel ({@damage 4d8} o {@damage 4d12})."
+			],
+			"scalingLevelDice": [
+				{
+					"label": "necrotic damage",
+					"scaling": {
+						"1": "1d8",
+						"5": "2d8",
+						"11": "3d8",
+						"17": "4d8"
+					}
+				},
+				{
+					"label": "necrotic damage to wounded creature",
+					"scaling": {
+						"1": "1d12",
+						"5": "2d12",
+						"11": "3d12",
+						"17": "4d12"
+					}
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Unearthly Chorus (UA)",
+			"source": "UAStarterSpells",
+			"page": 4,
+			"level": 1,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"La música del estilo que elijas llena el aire a tu alrededor en un radio de 9 metros. La música se propaga por las esquinas y puede oírse hasta a 3 metros de distancia. La música se mueve contigo, centrada en ti durante todo el tiempo.",
+				"Hasta que el hechizo termine, haces chequeos de Carisma ({@skill Performance}) con ventaja. Además, puedes usar una acción de bonificación en cada uno de tus turnos para seducir a una criatura que elijas en un radio de 9 metros de ti que pueda verte y oír la música. La criatura debe realizar una tirada de salvación de Carisma. Si tú o tus compañeros la estáis atacando, la criatura tiene éxito automáticamente en la tirada de salvación. Si falla, la criatura se vuelve amistosa contigo mientras pueda oír la música y durante 1 hora después. Haces chequeos de Carisma ({@skill Deception}) y chequeos de Carisma ({@skill Persuasion}) contra criaturas a las que este conjuro ha hecho amistosas con ventaja."
+			],
+			"savingThrow": [
+				"charisma"
+			],
+			"miscTags": [
+				"UBA"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Virtue (UA)",
+			"source": "UAStarterSpells",
+			"page": 5,
+			"level": 0,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Tocas a una criatura, imbuyéndola de vitalidad. Si el objetivo tiene al menos 1 punto de golpe, gana un número de puntos de golpe temporales igual a {@dice 1d4} + tu modificador de habilidad de lanzamiento de conjuros. Los puntos de golpe temporales se pierden al finalizar el hechizo."
+			],
+			"miscTags": [
+				"THP"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Wild Cunning (UA)",
+			"source": "UAStarterSpells",
+			"page": 5,
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"Llamas a los espíritus de la naturaleza para que te ayuden. Cuando lances este hechizo, elige uno de los siguientes efectos:",
+				{
+					"type": "list",
+					"items": [
+						"Si hay huellas en el suelo dentro de tu alcance, sabes dónde están y realizas chequeos de Sabiduría ({@skill Survival}) para seguir estas huellas con ventaja durante 1 hora o hasta que vuelvas a lanzar este hechizo.",
+						"Si hay forraje comestible dentro del radio de acción, lo conoce y sabe dónde encontrarlo.",
+						"Si hay agua potable al alcance de la mano, la conoces y sabes dónde encontrarla.",
+						"Si hay un refugio adecuado para ti y tus acompañantes con alcance, ya lo sabes y dónde encontrarlo.",
+						"Envía a los espíritus a traer leña para una hoguera y a montar un campamento en la zona con tus provisiones. Los espíritus encienden el fuego en un círculo de piedras, montan las tiendas, desenrollan los sacos de dormir y sacan las raciones y el agua para el consumo.",
+						"Haz que los espíritus desmantelen instantáneamente un campamento, lo que incluye apagar el fuego, desmontar las tiendas de campaña, recoger las bolsas y enterrar la basura."
+					]
+				}
+			]
+		},
+		{
+			"name": "Zephyr Strike (UA)",
+			"source": "UAStarterSpells",
+			"page": 5,
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Te mueves como el viento. Mientras dure, tu movimiento no provoca ataques de oportunidad.",
+				"Además, la primera vez que hagas un ataque con arma en tu turno antes de que termine el hechizo, haces la tirada de ataque con ventaja y tu velocidad aumenta 9 metros hasta el final de ese turno."
+			]
+		}
+	]
+}

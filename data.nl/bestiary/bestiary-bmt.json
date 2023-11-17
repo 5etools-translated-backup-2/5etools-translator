@@ -1,0 +1,5835 @@
+{
+	"_meta": {
+		"otherSources": {
+			"monster": {
+				"DMG": "BMT",
+				"MM": "BMT",
+				"DoSI": "BMT",
+				"MPMM": "BMT",
+				"WBtW": "BMT",
+				"BAM": "BMT",
+				"MOT": "BMT"
+			}
+		},
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		}
+	},
+	"monster": [
+		{
+			"name": "Advanced Detention Drone",
+			"source": "BMT",
+			"page": 135,
+			"_copy": {
+				"name": "Shield Guardian",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "shield guardian",
+						"with": "drone"
+					},
+					"action": [
+						{
+							"mode": "appendArr",
+							"items": {
+								"name": "Detention Orb",
+								"entries": [
+									"De drone lanceert een kleine bol van magische kracht naar een wezen dat hij kan zien binnen een straal van 9 meter. Het wezen moet slagen voor een {@dc 15} grondwetsreddende worp of wordt ingekapseld in de bol, die uitzet tot een grootte die net groot genoeg is om het wezen te bevatten. Als het wezen ingekapseld is, hoeft het niet te ademen, eten of drinken en veroudert het niet. Niets kan door de orb heen, noch kan een wezen teleporteren of planair reizen gebruiken om de orb in of uit te gaan. Als bonusactie kan de drone de orb en zijn inhoud tot 9 meter in elke richting verplaatsen. Een succesvolle {@spell Dispel Magic} spreuk op de orb ({@dc 15}) vernietigt deze. De orb blijft anders intact totdat de drone een actie spendeert om het effect te beëindigen of de drone wordt vernietigd. Een drone kan maar één detentie orb tegelijk actief hebben; als de drone een detentie orb creëert terwijl er al één actief is, verdwijnt de eerste orb en wordt het wezen erin bevrijd."
+								]
+							}
+						}
+					]
+				}
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"hasFluff": true
+		},
+		{
+			"name": "Ambitious Assassin",
+			"source": "BMT",
+			"page": 45,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item studded leather armor|PHB|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 91,
+				"formula": "14d8 + 28"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40
+			},
+			"str": 10,
+			"dex": 18,
+			"con": 15,
+			"int": 18,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"dex": "+7",
+				"int": "+7"
+			},
+			"skill": {
+				"deception": "+9",
+				"perception": "+5",
+				"stealth": "+10"
+			},
+			"senses": [
+				"blindsight 10 ft."
+			],
+			"passive": 15,
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"thieves' cant",
+				"plus any one language"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"Als de moordenaar faalt in een reddingsworp, kan hij ervoor kiezen om in plaats daarvan te slagen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De huurmoordenaar doet twee Poison Blade aanvallen."
+					]
+				},
+				{
+					"name": "Poison Blade",
+					"entries": [
+						"{@atk mw,rw} {@hit 7} te raken, bereik 1,5 m. of 18 m., één doelwit. {@h}6 ({@damage 1d4 + 4}) doordringende schade plus 5 ({@damage 1d10}) gifschade."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"Als een aanvaller die de huurmoordenaar kan zien de huurmoordenaar raakt met een aanval, halveert de huurmoordenaar de schade van de aanval."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Cunning",
+					"entries": [
+						"De huurmoordenaar ontsnapt aan niet-magische boeien en beëindigt de {@condition grappled} voorwaarde op zichzelf, beweegt dan tot zijn snelheid zonder gelegenheidsaanvallen uit te lokken."
+					]
+				},
+				{
+					"name": "Stab (Costs 2 Actions)",
+					"entries": [
+						"De huurmoordenaar doet één Poison Blade-aanval."
+					]
+				},
+				{
+					"name": "Vanishing Escape (Costs 3 Actions)",
+					"entries": [
+						"De moordenaar creëert een plotselinge afleiding, zoals een wolk van desoriënterende rook of flits van verblindend licht, die een kubus van 3 meter vult binnen 1,5 meter van de moordenaar. Elk wezen naar keuze van de moordenaar in dat gebied krijgt 9 ({@damage 2d8}) psychische schade en de moordenaar heeft de {@condition invisible} conditie. Deze onzichtbaarheid duurt tot het einde van de volgende beurt van de moordenaar."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Villain",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"TC",
+				"X"
+			],
+			"damageTags": [
+				"I",
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"invisible"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Animated Armor Detention Drone",
+			"source": "BMT",
+			"page": 135,
+			"_copy": {
+				"name": "Animated Armor",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "armor",
+						"with": "drone"
+					},
+					"action": [
+						{
+							"mode": "appendArr",
+							"items": {
+								"name": "Detention Orb",
+								"entries": [
+									"De drone lanceert een kleine bol van magische kracht naar een wezen dat hij kan zien binnen een straal van 9 meter. Het wezen moet slagen voor een {@dc 15} grondwetsreddende worp of wordt ingekapseld in de bol, die uitzet tot een grootte die net groot genoeg is om het wezen te bevatten. Als het wezen ingekapseld is, hoeft het niet te ademen, eten of drinken en veroudert het niet. Niets kan door de orb heen, noch kan een wezen teleporteren of planair reizen gebruiken om de orb in of uit te gaan. Als bonusactie kan de drone de orb en zijn inhoud tot 9 meter in elke richting verplaatsen. Een succesvolle {@spell Dispel Magic} spreuk op de orb ({@dc 15}) vernietigt deze. De orb blijft anders intact totdat de drone een actie spendeert om het effect te beëindigen of de drone wordt vernietigd. Een drone kan maar één detentie orb tegelijk actief hebben; als de drone een detentie orb creëert terwijl er al één actief is, verdwijnt de eerste orb en wordt het wezen erin bevrijd."
+								]
+							}
+						}
+					]
+				}
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"hasFluff": true
+		},
+		{
+			"name": "Aspirant of the Comet",
+			"source": "BMT",
+			"page": 91,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 27,
+				"formula": "5d8 + 5"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 12,
+			"con": 12,
+			"int": 11,
+			"wis": 10,
+			"cha": 13,
+			"passive": 10,
+			"languages": [
+				"Common plus any one language"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Hunger of the Void",
+					"entries": [
+						"Als de aspirant 0 hitpoints heeft, wordt zijn lichaam en alles wat hij draagt, behalve magische voorwerpen, in een leegte gezogen en vernietigd. Wezens in een straal van 4,5 meter rondom de aspirant moeten een {@dc 11} Sterkte reddingsworp doen. Als de redding mislukt, krijgt het wezen 10 ({@damage 3d6}) necrotische schade en wordt het 3 meter recht naar de ruimte van de aspirant getrokken. Als de redding slaagt, krijgt het wezen slechts half zoveel schade."
+					]
+				},
+				{
+					"name": "Sinister Devotion",
+					"entries": [
+						"De aspirant heeft voordeel bij het redden van worpen tegen de {@condition charmed} en {@condition frightened} voorwaarden."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 3} om te raken, reikwijdte 1,5 m. of bereik 20/18 m., één doelwit. {@h}4 ({@damage 1d6 + 1}) doordringende schade, of 5 ({@damage 1d8 + 1}) doordringende schade indien gebruikt met twee handen om een melee aanval uit te voeren."
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"N",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Asteria",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 188,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human",
+					"paladin"
+				]
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item breastplate|PHB}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 195,
+				"formula": "26d8 + 78"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(winged boots)"
+				}
+			},
+			"str": 12,
+			"dex": 21,
+			"con": 17,
+			"int": 15,
+			"wis": 11,
+			"cha": 20,
+			"save": {
+				"dex": "+11",
+				"con": "+9",
+				"wis": "+6",
+				"cha": "+11"
+			},
+			"skill": {
+				"acrobatics": "+11",
+				"arcana": "+14",
+				"investigation": "+8",
+				"perception": "+12",
+				"persuasion": "+11",
+				"survival": "+6"
+			},
+			"passive": 22,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Druidic"
+			],
+			"cr": "18",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Asteria spreekt een van de volgende spreuken uit, waarvoor geen materiële componenten nodig zijn en waarbij Charisma als spreukvaardigheid wordt gebruikt (spreuk redden {@dc 19}):"
+					],
+					"will": [
+						"{@spell Guidance}",
+						"{@spell Light}",
+						"{@spell Thaumaturgy}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell Bless}",
+							"{@spell Freedom of Movement}",
+							"{@spell Greater Restoration}",
+							"{@spell Plane Shift} (self only)",
+							"{@spell Protection from Evil and Good}",
+							"{@spell Revivify}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Guardian Aura",
+					"entries": [
+						"Wanneer een wezen naar keuze van Asteria binnen 9 meter van haar een reddingsworp doet, kan Asteria het wezen voordeel geven op de reddingsworp (geen actie vereist). Deze eigenschap werkt niet als Asteria de {@condition incapacitated} voorwaarde heeft."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Als Asteria faalt in een reddingsworp, kan ze ervoor kiezen om in plaats daarvan te slagen."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Asteria draagt gevleugelde laarzen die haar een vliegsnelheid geven (opgenomen in haar statistieken). Ze draagt ook de ene helft van een paar Zendstenen; de andere helft van het paar wordt vastgehouden door Euryale."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Asteria doet twee Radiant Blade-aanvallen en gebruikt Bursting Benediction."
+					]
+				},
+				{
+					"name": "Radiant Blade",
+					"entries": [
+						"{@atk mw} {@hit 11} te raken, reikwijdte 1,5 m., één doelwit. {@h}9 ({@damage 1d8 + 5}) schade door snijden plus 13 ({@damage 3d8}) schade door straling."
+					]
+				},
+				{
+					"name": "Bursting Benediction",
+					"entries": [
+						"Asteria veroorzaakt een uitbarsting van magische energie om een wezen dat ze kan zien binnen 18 meter van zichzelf te omhullen. Het doelwit moet een {@dc 19} vaardigheidsreddende worp doen en krijgt 40 ({@damage 9d8}) krachtschade als de redding mislukt, of half zoveel schade als de redding slaagt. Asteria of een ander wezen dat ze kan zien binnen een straal van 18 meter van haarzelf krijgt dan 10 hitpoints terug."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Empowering Aegis {@recharge 4}",
+					"entries": [
+						"Asteria roept een spectrale versie van haar schild op, dat in een baan rond Asteria draait en een wezen naar keuze ondersteunt dat ze binnen 18 meter van zichzelf kan zien. Het spectrale schild blijft tot het begin van Asteria's volgende beurt. Terwijl het schild rond het wezen draait, heeft het wezen halve dekking, is immuun voor de {@condition frightened} conditie en maakt wapenaanvalsrollen met voordeel."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Brazen Strike",
+					"entries": [
+						"Asteria doet één Radiant Blade-aanval."
+					]
+				},
+				{
+					"name": "Nimble Sprint",
+					"entries": [
+						"Asteria beweegt tot haar snelheid. Deze beweging lokt geen gelegenheidsaanvallen uit."
+					]
+				},
+				{
+					"name": "Cast a Spell (Costs 2 Actions)",
+					"entries": [
+						"Asteria gebruikt Spellcasting."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DU"
+			],
+			"damageTags": [
+				"O",
+				"R",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Aurnozci",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 167,
+			"size": [
+				"G"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"demon"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 370,
+				"formula": "20d20 + 160"
+			},
+			"speed": {
+				"walk": 50,
+				"burrow": 30
+			},
+			"str": 27,
+			"dex": 20,
+			"con": 26,
+			"int": 6,
+			"wis": 21,
+			"cha": 19,
+			"save": {
+				"str": "+15",
+				"con": "+15"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 15,
+			"resist": [
+				"cold",
+				"lightning"
+			],
+			"immune": [
+				"acid",
+				"fire",
+				"poison",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"telepathy 120 ft."
+			],
+			"cr": "22",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Aurnozci spreekt een van de volgende spreuken uit, waarvoor geen materiële componenten nodig zijn en waarbij Wisdom wordt gebruikt als spreukvaardigheid (spreuk redden {@dc 20}):"
+					],
+					"will": [
+						"{@spell Detect Magic}",
+						"{@spell Heat Metal} (7th-level version)"
+					],
+					"daily": {
+						"2e": [
+							"{@spell Darkness}",
+							"{@spell Dispel Magic}",
+							"{@spell Hold Person}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Heat Regeneration",
+					"entries": [
+						"Als de temperatuur om hem heen 100 graden Fahrenheit of hoger is, krijgt Aurnozci 15 hitpoints terug aan het begin van zijn beurt. Als hij koude- of stralingsschade oploopt, werkt deze eigenschap niet aan het begin van zijn volgende beurt. Aurnozci sterft alleen als hij zijn beurt begint met 0 hit points en niet regenereert."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Als Aurnozci faalt in een reddingsworp, kan het ervoor kiezen om in plaats daarvan te slagen."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Aurnozci heeft voordeel op reddingsworpen tegen spreuken en andere magische effecten."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Aurnozci doet één bijtaanval en twee staartaanvallen."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 15} te raken, reikwijdte 3 m., één doelwit. {@h}21 ({@damage 2d12 + 8}) schade door snijden plus 9 ({@damage 2d8}) schade door vuur."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 15} te raken, reikwijdte 3 m., één doelwit. {@h}17 ({@damage 2d8 + 8}) vernietigende kracht."
+					]
+				},
+				{
+					"name": "Mucus Spray {@recharge 5}",
+					"entries": [
+						"Aurnozci spuit slijm in een kegel van 18 meter. Elk wezen in die kegel moet een {@dc 20} vaardigheidsreddende worp doen en krijgt 42 ({@damage 12d6}) zure schade als de redding mislukt, of de helft als de redding slaagt."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Move",
+					"entries": [
+						"Aurnozci verhoogt zijn snelheid."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"Aurnozci doet één Tail-aanval."
+					]
+				},
+				{
+					"name": "Cast a Spell (Costs 2 Actions)",
+					"entries": [
+						"Aurnozci gebruikt Spellcasting."
+					]
+				},
+				{
+					"name": "Conflagration (Costs 2 Actions)",
+					"entries": [
+						"Vlammen omringen Aurnozci tijdelijk. Elk wezen binnen 4,5 meter van Aurnozci moet een {@dc 20} vaardigheidsreddende worp doen en krijgt 18 ({@damage 4d8}) brandschade als de redding mislukt, of half zoveel schade als de redding slaagt."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Aurnozci",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"TP"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"F",
+				"S"
+			],
+			"damageTagsSpell": [
+				"F"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflictSpell": [
+				"paralyzed"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Boss Augustus",
+			"source": "BMT",
+			"page": 82,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 150,
+				"formula": "20d8 + 60"
+			},
+			"speed": {
+				"walk": {
+					"number": 40,
+					"condition": "in wolf or hybrid form"
+				}
+			},
+			"str": 18,
+			"dex": 16,
+			"con": 17,
+			"int": 14,
+			"wis": 15,
+			"cha": 12,
+			"save": {
+				"str": "+8",
+				"dex": "+7"
+			},
+			"skill": {
+				"perception": "+10",
+				"sleight of hand": "+7",
+				"stealth": "+7"
+			},
+			"passive": 20,
+			"languages": [
+				"Common",
+				"Thieves' cant (can't speak in wolf form)"
+			],
+			"cr": "9",
+			"trait": [
+				{
+					"name": "Regeneration",
+					"entries": [
+						"Augustus krijgt 10 hit points terug aan het begin van zijn beurt. Als hij schade oploopt door een zilver wapen, werkt deze eigenschap niet aan het begin van zijn volgende beurt. Augustus sterft alleen als hij zijn beurt begint met 0 hit points en niet regenereert."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Augustus hanteert een +2 langzwaard."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Augustus maakt een combinatie van twee aanvallen met bijt, klauw of magisch langzwaard."
+					]
+				},
+				{
+					"name": "Bite (Wolf or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 8} te raken, reikwijdte 1,5 m., één doelwit. {@h}26 ({@damage 5d8 + 4}) doordringende schade. Als het doelwit een mensachtige is, moet deze slagen voor een {@dc 15} grondwetsreddende worp of vervloekt worden met lycantropie. Als het doelwit op deze manier vervloekt is, behoudt het zijn uitlijning, talen en uitrusting, maar verder gebruikt het de weerwolf stat block, met uitzondering van acties die uitrusting vereisen die het doelwit niet heeft. Tijdens een nacht met volle maan aan de hemel wordt het doelwit een NPC onder de controle van de DM en blijft dat tot de nacht eindigt. Een {@spell Remove Curse} spreuk of soortgelijke magie beëindigt deze vloek."
+					]
+				},
+				{
+					"name": "Claw (Wolf or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 8} te raken, reikwijdte 1,5 m., één doelwit. {@h}21 ({@damage 5d6 + 4}) doordringende schade. Als het doelwit een wezen is, moet het slagen voor een {@dc 16} Sterkte reddingsworp of de {@condition prone} conditie hebben."
+					]
+				},
+				{
+					"name": "Magic Longsword (Humanoid or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 10} te raken, reikwijdte 1,5 m., één doelwit. {@h}28 ({@damage 4d10 + 6}) schade door snijden."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Augustus polymorfeert in een wolf-humanoïde hybride, een wolf of zijn humanoïde vorm. Zijn statistieken, behalve zijn snelheid, zijn hetzelfde in elke vorm. Alle uitrusting die hij draagt of bij zich heeft wordt niet getransformeerd. Hij keert terug naar zijn humanoïde vorm als hij sterft."
+					]
+				},
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"Augustus doet de actie Dash, Disengage of Hide."
+					]
+				}
+			],
+			"traitTags": [
+				"Regeneration"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"CS",
+				"TC"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Boss Delour",
+			"source": "BMT",
+			"page": 83,
+			"size": [
+				"S"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 110,
+				"formula": "20d6 + 40"
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "in rat or hybrid form"
+				}
+			},
+			"str": 12,
+			"dex": 18,
+			"con": 15,
+			"int": 17,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"dex": "+8",
+				"int": "+7"
+			},
+			"skill": {
+				"deception": "+11",
+				"perception": "+10",
+				"sleight of hand": "+8",
+				"stealth": "+8"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 20,
+			"languages": [
+				"Common",
+				"Thieves' cant (can't speak in rat form)"
+			],
+			"cr": "9",
+			"trait": [
+				{
+					"name": "Evasion",
+					"entries": [
+						"Als Delour onderhevig is aan een effect dat hem toestaat een reddingsworp te doen om slechts de helft van de schade te krijgen, krijgt hij in plaats daarvan geen schade als hij slaagt in de reddingsworp en slechts de helft als hij faalt, op voorwaarde dat hij niet de {@condition incapacitated} voorwaarde heeft."
+					]
+				},
+				{
+					"name": "Nimbleness",
+					"entries": [
+						"Delour kan zich door de ruimte van een Medium of groter wezen bewegen."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"Delour krijgt 10 hit points terug aan het begin van zijn beurt. Als hij schade oploopt met een zilveren wapen, werkt deze eigenschap niet aan het begin van zijn volgende beurt. Delour sterft alleen als hij zijn beurt begint met 0 hit points en niet regenereert."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Delour maakt elke combinatie van drie aanvallen met bijt, kortzwaard of handkruisboog."
+					]
+				},
+				{
+					"name": "Bite (Rat or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 8} te raken, reikwijdte 1,5 m., één doelwit. {@h}26 ({@damage 5d8 + 4}) doordringende schade. Als het doelwit een mensachtige is, moet deze slagen voor een {@dc 14} grondwetsreddende worp of vervloekt worden met lycantropie. Als het doelwit op deze manier vervloekt is, behoudt het zijn uitlijning, talen en uitrusting, maar gebruikt het verder het wererat stat block, met uitzondering van acties die uitrusting vereisen die het doelwit niet heeft. Tijdens een nacht met volle maan aan de hemel wordt het doelwit een NPC onder de controle van de DM en blijft dat tot de nacht eindigt. Een {@spell Remove Curse} spreuk of soortgelijke magie beëindigt deze vloek."
+					]
+				},
+				{
+					"name": "Shortsword (Humanoid or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 8} te raken, reikwijdte 1,5 m., één doelwit. {@h}11 ({@damage 2d6 + 4}) doordringende schade plus 10 ({@damage 3d6}) gifschade."
+					]
+				},
+				{
+					"name": "Hand Crossbow (Humanoid or Hybrid Form Only)",
+					"entries": [
+						"{@atk rw} {@hit 8} om te raken, bereik 30/36 m., één doelwit. {@h}11 ({@damage 2d6 + 4}) doordringende schade plus 10 ({@damage 3d6}) gifschade."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Delour polymorfeert in een rat-humanoïde hybride, een medium reuzenrat of zijn humanoïde vorm. Zijn statistieken, behalve zijn grootte en snelheid, zijn hetzelfde in elke vorm. Uitrusting die hij draagt of bij zich heeft wordt niet getransformeerd. Hij keert terug naar zijn humanoïde vorm als hij sterft."
+					]
+				},
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"Delour doet de actie Dash, Disengage of Hide."
+					]
+				}
+			],
+			"attachedItems": [
+				"hand crossbow|phb",
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Regeneration"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"CS",
+				"TC"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Breath Drinker",
+			"source": "BMT",
+			"page": 154,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 157,
+				"formula": "21d8 + 63"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 60,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 5,
+			"dex": 18,
+			"con": 16,
+			"int": 11,
+			"wis": 15,
+			"cha": 20,
+			"save": {
+				"int": "+5",
+				"wis": "+7"
+			},
+			"skill": {
+				"perception": "+7",
+				"stealth": "+9",
+				"survival": "+7"
+			},
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 17,
+			"resist": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"thunder",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison",
+				"radiant"
+			],
+			"vulnerable": [
+				"necrotic"
+			],
+			"conditionImmune": [
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"Deep Speech",
+				"telepathy 120 ft."
+			],
+			"cr": "14",
+			"trait": [
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"De ademdrinker kan door andere wezens en voorwerpen bewegen alsof het moeilijk terrein is. Hij krijgt 5 ({@damage 1d10}) krachtschade als hij zijn beurt eindigt in een object."
+					]
+				},
+				{
+					"name": "Radiant Absorption",
+					"entries": [
+						"Als de ademdrinker wordt blootgesteld aan stralingsschade, loopt hij geen schade op en krijgt hij in plaats daarvan een aantal hitpoints terug dat gelijk is aan de stralingsschade die hij heeft opgelopen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De Ademdrinker doet twee aanvallen met Enervating Claw. Hij kan ook Adem drinken gebruiken."
+					]
+				},
+				{
+					"name": "Enervating Claw",
+					"entries": [
+						"{@atk mw} {@hit 10} te raken, bereik 1,5 m., één wezen. {@h}12 ({@damage 2d6 + 5}) necrotische schade en als het doelwit Groot of kleiner is, heeft het de {@condition grappled} conditie (ontsnappen {@dc 18}). Het doelwit moet slagen in een {@dc 18} grondwetsreddende worp of zijn maximale aantal hitpoints wordt verminderd met een hoeveelheid die gelijk is aan de opgelopen schade. Deze vermindering duurt tot het doelwit klaar is met een lange rustpauze. Het doelwit sterft als dit effect zijn maximale aantal geraakt punten tot 0 verlaagt."
+					]
+				},
+				{
+					"name": "Drink Breath",
+					"entries": [
+						"De ademdrinker richt zich op een wezen dat de {@condition incapacitated} conditie heeft of dat de ademdrinker vasthoudt en dat geen Construct of Undead is. Het doelwit moet een {@dc 18} Charisma saving throw doen. Als de save mislukt, krijgt het doel 36 ({@damage 8d8}) necrotische schade en zijn Charisma score wordt verminderd met {@dice 1d6}. Deze vermindering duurt tot het doelwit een korte of lange rustpauze heeft genomen. Als dit het Charisma van het doelwit tot 0 verlaagt, sterft het doelwit. Totdat de ademdrinker sterft, kan het dode doelwit op geen enkele manier tot leven worden gewekt, behalve door goddelijke interventie. Als de redding slaagt, krijgt het doelwit slechts half zoveel necrotische schade. Als de redding slaagt of mislukt, krijgt de ademdrinker een aantal hitpoints terug dat gelijk is aan de necrotische schade die hij heeft opgelopen."
+					]
+				},
+				{
+					"name": "Invisibility",
+					"entries": [
+						"De ademdrinker heeft de {@condition invisible} conditie. Deze onzichtbaarheid eindigt onmiddellijk nadat de ademdrinker een aanvalsworp raakt of mist of Drink Adem gebruikt."
+					]
+				}
+			],
+			"traitTags": [
+				"Damage Absorption",
+				"Incorporeal Movement"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"DS",
+				"TP"
+			],
+			"damageTags": [
+				"N",
+				"O"
+			],
+			"miscTags": [
+				"HPR",
+				"MW"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Brusipha",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 127,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"minotaur",
+					"warlock"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 90,
+				"formula": "12d8 + 36"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 18,
+			"dex": 11,
+			"con": 16,
+			"int": 12,
+			"wis": 16,
+			"cha": 16,
+			"save": {
+				"wis": "+5",
+				"cha": "+5"
+			},
+			"skill": {
+				"deception": "+5",
+				"perception": "+7",
+				"religion": "+3"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 17,
+			"languages": [
+				"Abyssal",
+				"Common"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Brusipha spreekt een van de volgende spreuken uit, met Charisma als spreukvaardigheid (spreuk save {@dc 13}):"
+					],
+					"will": [
+						"{@spell Prestidigitation}",
+						"{@spell Speak with Animals}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Bestow Curse}",
+							"{@spell Command}",
+							"{@spell Crown of Madness}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Demonic Ritual",
+					"entries": [
+						"Brusipha kan 3 uur besteden aan het uitvoeren van een ritueel dat {@dice 1d3 + 1} barlguras of 1 hezrou oproept. Ze moet een medium of groter levend wezen offeren aan Baphomet tijdens dit ritueel, en het ritueel kan alleen 's nachts worden uitgevoerd. De demonen verdwijnen bij zonsopgang."
+					]
+				},
+				{
+					"name": "Labyrinthine Recall",
+					"entries": [
+						"Brusipha kan zich elk pad dat ze heeft afgelegd perfect herinneren."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Brusipha doet twee Eldritch Blast aanvallen."
+					]
+				},
+				{
+					"name": "Eldritch Blast",
+					"entries": [
+						"{@atk rs} {@hit 5} om te raken, bereik 36 m., één doelwit. {@h}8 ({@damage 1d10 + 3}) krachtschade."
+					]
+				},
+				{
+					"name": "Gore",
+					"entries": [
+						"{@atk mw} {@hit 6} te raken, reikwijdte 1,5 m., één doelwit. {@h}8 ({@damage 1d8 + 4}) doordringende schade plus 4 ({@damage 1d8}) necrotische schade. Als Brusipha minstens 3 meter recht naar het doelwit bewoog vlak voordat ze toesloeg, krijgt het doelwit 4 ({@damage 1d8}) extra doordringende schade en als het doelwit een wezen is, moet het slagen voor een {@dc 15} Sterkte reddingsworp of tot 3 meter van Brusipha worden geduwd en de {@condition prone} conditie krijgen."
+					]
+				},
+				{
+					"name": "Incite the Hunters (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Brusipha staat elke bondgenoot binnen 9 meter van zichzelf die de eigenschap Unerring Tracker heeft toe om één wapenaanval uit te voeren als reactie tegen het doelwit van de Unerring Tracker van die bondgenoot."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Unerring Tracker",
+					"entries": [
+						"Brusipha creëert op magische wijze een psychische link met één wezen dat ze kan zien. Het komende uur weet Brusipha de huidige afstand tot en richting van het doelwit als het zich op hetzelfde bestaansniveau bevindt. De link eindigt als Brusipha de {@condition incapacitated} conditie heeft of deze vaardigheid op een ander doelwit gebruikt."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Baphomet's Blessing",
+					"entries": [
+						"Wanneer Brusipha een vijandig wezen tot 0 hitpoints reduceert, krijgt ze 8 tijdelijke hitpoints."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"O",
+				"P"
+			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			]
+		},
+		{
+			"name": "Deck Defender",
+			"source": "BMT",
+			"page": 72,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"special": "5 + five times your level (the deck defender has a number of Hit Dice [d8s] equal to your level)"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 14,
+			"int": 3,
+			"wis": 10,
+			"cha": 1,
+			"senses": [
+				"blindsight 60 ft. (can't see beyond this radius)"
+			],
+			"passive": 10,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands one of your languages but can't speak"
+			],
+			"pbNote": "equals your",
+			"trait": [
+				{
+					"name": "Allied Knight",
+					"entries": [
+						"Sommige statistieken van de deckverdediger zijn gebaseerd op het personage dat de ridderkaart heeft getrokken. Waar in het statistiekenblok van de deckverdediger wordt verwezen naar \"jij\", wordt dat personage bedoeld."
+					]
+				},
+				{
+					"name": "Folded Versatility",
+					"entries": [
+						"Na het beëindigen van een lange rustperiode kun je de vorm van de deckverdediger omvormen en hem veranderen in acrobaatvorm, berserkervorm of guardianvorm."
+					]
+				},
+				{
+					"name": "Fragile",
+					"entries": [
+						"Als de deckverdediger gereduceerd wordt tot 0 hitpoints, stort hij in elkaar tot een lukrake stapel niet-magische speelkaarten en kan hij niet herrijzen of opnieuw opgebouwd worden."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De deckverdediger maakt een aantal aanvallen gelijk aan de helft van zijn vaardigheidsbonus (naar beneden afgerond)."
+					]
+				},
+				{
+					"name": "Paper Cut",
+					"entries": [
+						"{@atk mw} PB + {@hit 3} om te raken, reikwijdte 1,5 m., één doelwit. {@h}7 ({@damage 1d8 + 3}) schade door snijden."
+					]
+				},
+				{
+					"name": "Reckless Strike (Berserker Form Only)",
+					"entries": [
+						"{@atk mw} PB + {@hit 3} om te raken (met voordeel), reikwijdte 1,5 m., één doelwit. {@h}10 ({@damage 2d6 + 3}) snijdende schade, en aanvallen gedaan tegen de dekverdediger tot het begin van zijn volgende beurt hebben voordeel."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Swift Step (Acrobat Form Only)",
+					"entries": [
+						"De deckverdediger doet de actie Dash of Disengage."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Protection (Guardian Form Only)",
+					"entries": [
+						"Als een wezen dat de deckverdediger kan zien een ander doelwit aanvalt dan de deckverdediger en zich binnen 1,5 meter van de deckverdediger bevindt, legt de deckverdediger nadeel op bij de aanvalsworp."
+					]
+				}
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Enchanting Infiltrator",
+			"source": "BMT",
+			"page": 46,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "fey",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"veiled presence"
+					]
+				}
+			],
+			"hp": {
+				"average": 156,
+				"formula": "24d8 + 48"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 10,
+			"dex": 20,
+			"con": 15,
+			"int": 20,
+			"wis": 16,
+			"cha": 18,
+			"save": {
+				"dex": "+9",
+				"int": "+9"
+			},
+			"skill": {
+				"deception": "+12",
+				"perception": "+7",
+				"stealth": "+13"
+			},
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 17,
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"thieves' cant",
+				"plus any one language"
+			],
+			"cr": "11",
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Als de infiltrant een reddingsworp niet haalt, kan hij ervoor kiezen om in plaats daarvan te slagen."
+					]
+				},
+				{
+					"name": "Veiled Presence",
+					"entries": [
+						"De AC van de infiltrant is inclusief zijn Wisdom modifier en de infiltrant kan niet worden aangevallen door waarzeggerij of eigenschappen die zijn gedachten lezen of zijn creature type bepalen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De infiltrant doet twee Poison Blade-aanvallen en kan Beguiling Whisper gebruiken."
+					]
+				},
+				{
+					"name": "Poison Blade",
+					"entries": [
+						"{@atk mw,rw} {@hit 9} te raken, bereik 1,5 m. of 18 m., één doelwit. {@h}7 ({@damage 1d4 + 5}) doordringende schade plus 11 ({@damage 2d10}) gifschade."
+					]
+				},
+				{
+					"name": "Beguiling Whisper",
+					"entries": [
+						"De infiltrant fluistert op magische wijze naar een wezen dat hij kan zien binnen een straal van 9 meter van zichzelf. Het doelwit moet slagen op een {@dc 17} Wisdom saving throw of heeft de {@condition stunned} conditie door angst of verrukking (de keuze van de infiltrant) tot het einde van de volgende beurt van het doelwit, waarna het doelwit immuun is voor deze Beguiling Whisper voor 24 uur."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"Als een aanvaller die de infiltrant kan zien de infiltrant raakt met een aanval, halveert de infiltrant de schade van de aanval."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Cunning",
+					"entries": [
+						"De infiltrant ontsnapt aan niet-magische beperkingen en beëindigt de {@condition grappled} voorwaarde op zichzelf, beweegt dan tot zijn snelheid zonder gelegenheidsaanvallen uit te lokken."
+					]
+				},
+				{
+					"name": "Stab (Costs 2 Actions)",
+					"entries": [
+						"De infiltrant doet één Poison Blade-aanval."
+					]
+				},
+				{
+					"name": "Misdirecting Escape (Costs 3 Actions)",
+					"entries": [
+						"De infiltrant heeft op magische wijze de {@condition invisible} conditie en creëert een illusoir duplicaat van zichzelf in zijn ruimte, waarna hij teleporteert, samen met alle uitrusting die hij draagt of bij zich heeft, naar een onbezette ruimte binnen 4,5 meter van zichzelf. Het beeld gooit illusoire messen naar twee wezens naar keuze van de infiltrant binnen 6 meter van het beeld. Elk doelwit moet een {@dc 17} Wisdom saving throw doen en krijgt 13 ({@damage 3d8}) psychische schade als hij niet slaagt, of de helft als hij slaagt. De onzichtbaarheid duurt tot het einde van de volgende beurt van de infiltrant."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Villain",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"TC",
+				"X"
+			],
+			"damageTags": [
+				"I",
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Euryale",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 189,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "monstrosity",
+				"tags": [
+					"druid",
+					"medusa"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 297,
+				"formula": "35d8 + 140"
+			},
+			"speed": {
+				"walk": 30,
+				"alternate": {
+					"walk": [
+						{
+							"number": 50,
+							"condition": "in serpent form"
+						}
+					],
+					"climb": [
+						{
+							"number": 50,
+							"condition": "in serpent form"
+						}
+					]
+				}
+			},
+			"str": 21,
+			"dex": 16,
+			"con": 18,
+			"int": 12,
+			"wis": 20,
+			"cha": 15,
+			"save": {
+				"dex": "+9",
+				"con": "+10",
+				"int": "+7",
+				"wis": "+11"
+			},
+			"skill": {
+				"animal handling": "+11",
+				"insight": "+17",
+				"medicine": "+11",
+				"nature": "+13",
+				"perception": "+11"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 21,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Druidic"
+			],
+			"cr": "18",
+			"spellcasting": [
+				{
+					"name": "Spellcasting (Medusa Form Only)",
+					"headerEntries": [
+						"Euryale spreekt een van de volgende spreuken uit, waarvoor geen materiële componenten nodig zijn en waarbij Wisdom wordt gebruikt als spreukvaardigheid (spreuk redden {@dc 19}):"
+					],
+					"will": [
+						"{@spell Druidcraft}",
+						"{@spell Pass without Trace}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell Goodberry}",
+							"{@spell Lesser Restoration}",
+							"{@spell Locate Creature}",
+							"{@spell Move Earth}",
+							"{@spell Transport via Plants}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Als Euryale faalt in een reddingsworp, kan ze ervoor kiezen om in plaats daarvan te slagen."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Euryale draagt de ene helft van een paar Zendstenen; de andere helft van het paar wordt vastgehouden door Asteria."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Euryale doet drie aanvallen. Als ze in slangvorm is, kan slechts één van deze aanvallen Constrict zijn."
+					]
+				},
+				{
+					"name": "Constrict (Serpent Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 11} om te raken, reikwijdte 4,5 m., één groot of kleiner wezen. {@h}16 ({@damage 2d10 + 5}) stompschade en het doelwit heeft de {@condition grappled} conditie (ontsnappen {@dc 19}). Tot deze houdgreep eindigt, krijgt het doelwit 11 ({@damage 2d10}) schade door kneuzing aan het begin van elk van zijn beurten en Euryale kan geen ander doelwit insluiten."
+					]
+				},
+				{
+					"name": "Snake Bite",
+					"entries": [
+						"{@atk mw} {@hit 11} om te raken, reikwijdte 3 m., één doelwit. {@h}12 ({@damage 2d6 + 5}) doordringende schade en het doelwit moet slagen voor een {@dc 18} grondwetsreddende worp of de {@condition poisoned} conditie hebben tot het begin van Euryale's volgende beurt."
+					]
+				},
+				{
+					"name": "Verdant Bolt (Medusa Form Only)",
+					"entries": [
+						"{@atk rs} {@hit 11} om te raken, bereik 36 m., één doelwit. {@h}18 ({@damage 4d8}) zure schade."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Euryale verandert van vorm in haar Enorme slangenvorm of terug in haar Medium medusavorm. Euryale's spelstatistieken zijn hetzelfde in elke vorm, behalve waar vermeld in dit statistiekenblok. Uitrusting die ze draagt of bij zich heeft wordt niet getransformeerd. Euryale keert terug naar haar medusavorm als ze sterft."
+					]
+				},
+				{
+					"name": "Petrifying Gaze {@recharge 4}",
+					"entries": [
+						"Euryale ontketent verstenende magie uit haar ogen in een kegel van 9 meter. Elk wezen in dat gebied moet een {@dc 18} grondwetsreddende worp doen als het niet de {@condition blinded} conditie heeft. Als de reddingsworp faalt met 5 of meer, heeft het wezen de {@condition petrified} conditie. Anders krijgt het wezen 14 ({@damage 4d6}) krachtschade, begint het in steen te veranderen en heeft het de {@condition restrained} conditie. Het {@condition restrained} wezen moet de reddingsslag herhalen aan het einde van zijn volgende beurt. Bij een mislukte reddingsworp heeft het de {@condition petrified} conditie, en bij een geslaagde reddingsworp eindigt het effect op het wezen, De verstening duurt totdat het wezen wordt bevrijd door de {@spell Greater Restoration} spreuk of andere magie Een wezen kan zijn reactie gebruiken, indien beschikbaar, om zijn ogen te sluiten om de reddingsworp te vermijden. Als het wezen dit doet, heeft het de {@condition blinded} conditie tot het einde van zijn volgende beurt."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Move",
+					"entries": [
+						"Euryale verhoogt haar snelheid."
+					]
+				},
+				{
+					"name": "Venomous Strike (Costs 2 Actions)",
+					"entries": [
+						"Euryale doet één Slangenbeet aanval. Als het doelwit de {@condition poisoned} conditie heeft, geeft de aanval 16 ({@damage 3d10}) extra gifschade."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"DU"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"I",
+				"O",
+				"P"
+			],
+			"spellcastingTags": [
+				"F"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"petrified",
+				"poisoned",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Fate Hag",
+			"source": "BMT",
+			"page": 176,
+			"size": [
+				"M"
+			],
+			"type": "fey",
+			"alignment": [
+				"N"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 71,
+				"formula": "13d8 + 13"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 14,
+			"con": 13,
+			"int": 12,
+			"wis": 18,
+			"cha": 15,
+			"save": {
+				"con": "+3",
+				"wis": "+6"
+			},
+			"skill": {
+				"arcana": "+5",
+				"deception": "+6",
+				"history": "+5",
+				"perception": "+6"
+			},
+			"senses": [
+				"truesight 60 ft."
+			],
+			"passive": 16,
+			"conditionImmune": [
+				"charmed"
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Terwijl hij zijn schaar vasthoudt, kan de hag een van de volgende spreuken uitspreken, waarvoor geen materiële componenten nodig zijn en waarbij Wisdom wordt gebruikt als spreukvaardigheid (spreuk redden {@dc 14}):"
+					],
+					"will": [
+						"{@spell Bless}",
+						"{@spell Guidance}",
+						"{@spell Silent Image}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Bane}",
+							"{@spell Bestow Curse}",
+							"{@spell Divination}",
+							"{@spell Scrying} (as an action)"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"Als de hag faalt in een reddingsworp, kan hij ervoor kiezen om in plaats daarvan te slagen."
+					]
+				},
+				{
+					"name": "Trace the Threads (1/Day)",
+					"entries": [
+						"De heks kan de {@spell Legend Lore} spreuk uitspreken, waarbij geen materiële componenten nodig zijn en de wijsheid als spreukvaardigheid wordt gebruikt."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De heks doet twee aanvallen met een schaar. Ze kan één aanval vervangen door een gebruik van Spellcasting."
+					]
+				},
+				{
+					"name": "Shears",
+					"entries": [
+						"{@atk mw} {@hit 6} te raken, reikwijdte 1,5 m., één doelwit. {@h}8 ({@damage 1d8 + 4}) krachtschade. Als het doelwit een wezen is, heeft het nadeel bij aanvalsrollen tot het einde van de volgende beurt van de heks."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Destined Jaunt",
+					"entries": [
+						"De heks teleporteert op magische wijze, samen met alle uitrusting die hij draagt of bij zich heeft, naar een onbezette ruimte die hij kan zien binnen een straal van 9 meter van zichzelf."
+					]
+				},
+				{
+					"name": "Tangle Threads",
+					"entries": [
+						"De heks verstrengelt op magische wijze een wezen dat hij kan zien binnen 18 meter van zichzelf in spectrale zilveren draden. Het wezen moet slagen in een {@dc 14} Sterkte reddingsworp, of zijn snelheid wordt gereduceerd tot 0 tot het einde van zijn volgende beurt."
+					]
+				},
+				{
+					"name": "Destiny Curse (Costs 2 Actions)",
+					"entries": [
+						"De heks vervloekt op magische wijze een wezen dat het kan zien binnen 18 meter van zichzelf. Het wezen moet een {@dc 14} Wisdom saving throw doen en het wezen heeft nadeel op deze save als het de heks in de laatste minuut heeft beschadigd. Als de redding mislukt, heeft het wezen nadeel bij vaardigheidscontroles, aanvalsrollen en reddingsworpen totdat de vloek eindigt. Eenmaal per beurt, als het vervloekte wezen faalt op een van deze {@dice d20} worpen, krijgt het 7 ({@damage 2d6}) krachtschade. De vloek eindigt na 1 minuut; als het wezen slaagt op een totaal van drie vaardigheidscontroles, aanvalsrollen of reddingsworpen in elke combinatie; of als de heks deze actie opnieuw gebruikt."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"O"
+			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"strength",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gremorly's Ghost",
+			"source": "BMT",
+			"page": 122,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 82,
+				"formula": "15d8 + 15"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 40,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 7,
+			"dex": 14,
+			"con": 12,
+			"int": 18,
+			"wis": 12,
+			"cha": 17,
+			"save": {
+				"int": "+8",
+				"wis": "+5"
+			},
+			"skill": {
+				"arcana": "+8",
+				"history": "+8"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"acid",
+				"fire",
+				"lightning",
+				"thunder",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"cold",
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"Dwarvish",
+				"Giant"
+			],
+			"cr": "9",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Gremorly spreekt een van de volgende spreuken uit en gebruikt Intelligentie als spreukvaardigheid (spreuk redden {@dc 16}):"
+					],
+					"will": [
+						"{@spell Dancing Lights}",
+						"{@spell Mage Hand}",
+						"{@spell Prestidigitation}"
+					],
+					"daily": {
+						"1": [
+							"{@spell Slow}"
+						],
+						"2e": [
+							"{@spell Bestow Curse}",
+							"{@spell Dispel Magic}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Ethereal Sight",
+					"entries": [
+						"Gremorly kan 18 meter in het Etherische Vlak kijken als hij op het Materiële Vlak is, en omgekeerd."
+					]
+				},
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"Gremorly kan zich door andere wezens en voorwerpen bewegen alsof het moeilijk terrein is. Hij krijgt 5 ({@damage 1d10}) krachtschade als hij zijn beurt eindigt in een object."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Als Gremorly faalt in een reddingsworp, kan hij ervoor kiezen om in plaats daarvan te slagen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Gremorly doet drie Withering Strike aanvallen."
+					]
+				},
+				{
+					"name": "Withering Strike",
+					"entries": [
+						"{@atk ms} {@hit 8} te raken, reikwijdte 1,5 m., één doelwit. {@h}19 ({@damage 3d12}) necrotische schade."
+					]
+				},
+				{
+					"name": "Fell Necromancy",
+					"entries": [
+						"Gremorly richt zich op één wezen dat hij kan zien binnen 18 meter van zichzelf. Het doelwit moet een {@dc 16} grondwetsreddende worp doen, waarbij hij 61 ({@damage 7d8 + 30}) necrotische schade oploopt als hij niet slaagt, of half zoveel schade als hij slaagt. Daarnaast krijgt Gremorly 9 ({@dice 2d8}) hit points terug."
+					]
+				},
+				{
+					"name": "Possession {@recharge}",
+					"entries": [
+						"Een mensachtige die Gremorly kan zien binnen 1,5 meter van hemzelf moet slagen op een {@dc 15} Charisma saving throw of bezeten worden door hem; Gremorly verdwijnt en het doelwit heeft de {@condition incapacitated} conditie en verliest de controle over zijn lichaam. Gremorly kan niet het doelwit worden van een aanval, spreuk of ander effect, behalve degene die ondoden maken, en hij behoudt zijn uitlijning, intelligentie, wijsheid, charisma en immuniteit voor de {@condition charmed} en {@condition frightened} condities. Voor de rest gebruikt hij de spelstatistieken van het doelwit, maar Gremorly krijgt geen toegang tot de kennis, klasse-eigenschappen of vaardigheden van het doelwit.",
+						"De bezetenheid duurt totdat het doelwit 0 hitpoints verliest, Gremorly het beëindigt als bonusactie of Gremorly wordt omgedraaid of gedwongen door een effect zoals de {@spell Dispel Evil and Good} spreuk. Als de bezetenheid eindigt, verschijnt Gremorly weer in een onbezette ruimte binnen 1,5 meter van het doelwit. Het doelwit is immuun voor deze bezetenheid gedurende 24 uur nadat de reddingsworp is geslaagd of nadat de bezetenheid is geëindigd."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Ethereal Step {@recharge 4}",
+					"entries": [
+						"Gremorly teleporteert tot 9 meter naar een onbezette ruimte die hij kan zien."
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement",
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"DR",
+				"GI"
+			],
+			"damageTags": [
+				"N",
+				"O"
+			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Grim Champion of Bloodshed",
+			"source": "BMT",
+			"page": 161,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item plate armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 280,
+				"formula": "33d8 + 132"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 23,
+			"dex": 12,
+			"con": 18,
+			"int": 10,
+			"wis": 17,
+			"cha": 21,
+			"save": {
+				"str": "+12",
+				"dex": "+7",
+				"con": "+10"
+			},
+			"skill": {
+				"athletics": "+12",
+				"intimidation": "+11",
+				"perception": "+9"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 19,
+			"resist": [
+				"cold",
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"poisoned",
+				"stunned",
+				"unconscious"
+			],
+			"languages": [
+				"Common"
+			],
+			"cr": "20",
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Als de kampioen faalt in een reddingsworp, kan hij ervoor kiezen om in plaats daarvan te slagen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De kampioen voert vier Blazing Morningstar-aanvallen uit. Hij kan een van deze aanvallen vervangen door Blade Storm, indien beschikbaar."
+					]
+				},
+				{
+					"name": "Blazing Morningstar",
+					"entries": [
+						"{@atk mw} {@hit 12} te raken, reikwijdte 1,5 m., één doelwit. {@h}10 ({@damage 1d8 + 6}) doordringende schade plus 14 ({@damage 4d6}) vuurschade."
+					]
+				},
+				{
+					"name": "Blade Storm {@recharge 5}",
+					"entries": [
+						"De kampioen tovert een kolkende storm van spectrale messen die een kubus van 6 meter vult, gecentreerd op een punt dat hij kan zien binnen 36 meter van zichzelf. De storm duurt tot het begin van de volgende beurt van de kampioen. Terwijl de storm actief is, is het gebied van de storm moeilijk terrein. Wanneer een wezen voor het eerst in een beurt de storm betreedt of zijn beurt daar begint, moet het een {@dc 19} Behendigheids reddingsworp doen, waarbij het 27 ({@damage 6d8}) snijdende schade oploopt bij een mislukte reddingsworp, of half zoveel schade bij een geslaagde reddingsworp."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Furious Pursuit",
+					"entries": [
+						"De kampioen beweegt tot zijn snelheid of beveelt zijn rijdier om tot zijn snelheid te bewegen. Deze beweging lokt geen gelegenheidsaanvallen uit."
+					]
+				},
+				{
+					"name": "Induce Violence",
+					"entries": [
+						"De kampioen richt zich op één wezen dat hij kan zien binnen 18 meter van zichzelf. Het doelwit moet slagen voor een {@dc 19} Wisdom saving throw of onmiddellijk een melee wapenaanval uitvoeren tegen een ander wezen naar keuze van de kampioen dat zich binnen het bereik van het doelwit bevindt. Als er geen wezen binnen het bereik van het doelwit is of als het doelwit de {@condition incapacitated} conditie heeft, krijgt het doelwit in plaats daarvan 11 ({@damage 2d10}) psychische schade."
+					]
+				},
+				{
+					"name": "Menace (Costs 2 Actions)",
+					"entries": [
+						"De kampioen kiest een willekeurig aantal wezens die hij kan zien binnen een straal van 9 meter van zichzelf. Elk doelwit moet slagen in een {@dc 19} Wisdom saving throw of heeft de {@condition frightened} conditie tot het einde van zijn volgende beurt."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"F",
+				"P",
+				"S",
+				"Y"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Grim Champion of Desolation",
+			"source": "BMT",
+			"page": 162,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item studded leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 416,
+				"formula": "49d8 + 196"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 22,
+			"dex": 23,
+			"con": 18,
+			"int": 12,
+			"wis": 20,
+			"cha": 19,
+			"save": {
+				"dex": "+14",
+				"con": "+12",
+				"wis": "+13"
+			},
+			"skill": {
+				"deception": "+12",
+				"insight": "+13",
+				"perception": "+13",
+				"stealth": "+14"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 23,
+			"resist": [
+				"cold",
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"poisoned",
+				"stunned",
+				"unconscious"
+			],
+			"languages": [
+				"Common",
+				"Elvish"
+			],
+			"cr": "25",
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Als de kampioen faalt in een reddingsworp, kan hij ervoor kiezen om in plaats daarvan te slagen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De kampioen doet twee Leeching Blade-aanvallen en gebruikt Hollow Void."
+					]
+				},
+				{
+					"name": "Leeching Blade",
+					"entries": [
+						"{@atk mw} {@hit 14} te raken, reikwijdte 1,5 m., één doelwit. {@h}13 ({@damage 2d6 + 6}) snijdende schade plus 33 ({@damage 6d10}) koude schade, en de kampioen krijgt 10 hit points terug."
+					]
+				},
+				{
+					"name": "Hollow Void",
+					"entries": [
+						"De kampioen roept een hongerige kloof op rond een wezen dat hij kan zien binnen 36 meter van zichzelf. Het wezen moet een {@dc 22} grondwetsreddende worp doen. Als de redding mislukt, krijgt het wezen 49 ({@damage 11d8}) krachtschade en heeft het de {@condition stunned} conditie tot het begin van de volgende beurt van de kampioen. Als de redding slaagt, krijgt het wezen slechts half zoveel schade. Als een wezen door dit effect gereduceerd wordt tot 0 hitpoints, sterft het wezen en brokkelt zijn lichaam af tot stof."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Step into Nothing {@recharge 4}",
+					"entries": [
+						"De kampioen, samen met alle uitrusting die hij draagt of bij zich heeft, heeft de {@condition invisible} conditie en teleporteert naar een onbezette ruimte die hij kan zien binnen 9 meter van zichzelf. De kampioen blijft {@condition invisible} tot het begin van zijn volgende beurt of onmiddellijk nadat hij schade heeft toegebracht."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Crush",
+					"entries": [
+						"De kampioen ontketent een uitbarsting van verpletterende kracht op een wezen dat hij kan zien binnen 9 meter van zichzelf. Het wezen moet slagen in een {@dc 22} Sterkte reddingsworp of 14 ({@damage 4d6}) krachtschade oplopen en de {@condition prone} conditie krijgen."
+					]
+				},
+				{
+					"name": "Fearsome Pursuit",
+					"entries": [
+						"De kampioen beweegt tot zijn snelheid of beveelt zijn rijdier om tot zijn snelheid te bewegen. Deze beweging lokt geen gelegenheidsaanvallen uit."
+					]
+				},
+				{
+					"name": "Nullify (Costs 2 Actions)",
+					"entries": [
+						"De kampioen zendt een magische golf uit in een kegel van 18 meter. Elke spreuk van 5e niveau of lager eindigt op wezens en voorwerpen naar keuze van de kampioen in dat gebied."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"E"
+			],
+			"damageTags": [
+				"C",
+				"O",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"prone",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Grim Champion of Pestilence",
+			"source": "BMT",
+			"page": 163,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				14,
+				{
+					"ac": 17,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 120,
+				"formula": "16d8 + 48"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 10,
+			"dex": 18,
+			"con": 16,
+			"int": 17,
+			"wis": 15,
+			"cha": 21,
+			"save": {
+				"dex": "+9",
+				"cha": "+10"
+			},
+			"skill": {
+				"arcana": "+8",
+				"perception": "+7",
+				"stealth": "+9"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 17,
+			"resist": [
+				"cold",
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"poisoned",
+				"stunned",
+				"unconscious"
+			],
+			"languages": [
+				"Common",
+				"Infernal"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"De kampioen spreekt een van de volgende spreuken uit, waarvoor geen materiële componenten nodig zijn en waarbij Charisma als spreukvaardigheid wordt gebruikt (spreuk redden {@dc 18}):"
+					],
+					"will": [
+						"{@spell Detect Magic}",
+						"{@spell Mage Armor} (self only)"
+					],
+					"daily": {
+						"2e": [
+							"{@spell Blight}",
+							"{@spell Blindness/Deafness}"
+						],
+						"1e": [
+							"{@spell Cloudkill}",
+							"{@spell Contagion}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Halo of Pestilence",
+					"entries": [
+						"De kampioen wordt omringd door een aura van dodelijke magie die de vorm aanneemt van een horde gloeiende witte insecten. Elk wezen dat zijn beurt begint binnen een straal van 3 meter van de kampioen moet slagen voor een {@dc 18} Constitution saving throw of heeft de {@condition incapacitated} conditie tot het begin van zijn volgende beurt, terwijl de insecten zijn lichaam verwoesten."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Als de kampioen faalt in een reddingsworp, kan hij ervoor kiezen om in plaats daarvan te slagen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De kampioen doet twee Blight Staff aanvallen, twee Plague Bolt aanvallen, of één van elk."
+					]
+				},
+				{
+					"name": "Blight Staff",
+					"entries": [
+						"{@atk mw} {@hit 9} te raken, reikwijdte 1,5 m., één doelwit. {@h}8 ({@damage 1d8 + 4}) kneuzing plus 21 ({@damage 6d6}) necrotische schade."
+					]
+				},
+				{
+					"name": "Plague Bolt",
+					"entries": [
+						"{@atk rs} {@hit 10} om te raken, bereik 36 m., één doelwit. {@h}23 ({@damage 4d8 + 5}) gifschade en het doelwit heeft de {@condition poisoned} conditie tot het begin van de volgende beurt van de kampioen."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attack",
+					"entries": [
+						"De kampioen doet één Blight Staff of Plague Bolt aanval."
+					]
+				},
+				{
+					"name": "Furious Pursuit",
+					"entries": [
+						"De kampioen beweegt tot zijn snelheid of beveelt zijn rijdier om tot zijn snelheid te bewegen. Deze beweging lokt geen gelegenheidsaanvallen uit."
+					]
+				},
+				{
+					"name": "Cast a Spell (Costs 2 Actions)",
+					"entries": [
+						"De kampioen gebruikt Spellcasting."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"I"
+			],
+			"damageTags": [
+				"B",
+				"I",
+				"N"
+			],
+			"damageTagsSpell": [
+				"I",
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened",
+				"poisoned",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Harrow Hawk",
+			"source": "BMT",
+			"page": 177,
+			"size": [
+				"T"
+			],
+			"type": "undead",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 25,
+				"formula": "10d4"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": 60
+			},
+			"str": 5,
+			"dex": 16,
+			"con": 10,
+			"int": 2,
+			"wis": 14,
+			"cha": 7,
+			"skill": {
+				"perception": "+6",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"cr": "1",
+			"action": [
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 5} te raken, reikwijdte 1,5 m., één doelwit. {@h}8 ({@damage 2d4 + 3}) schade door snijden plus 3 ({@damage 1d6}) necrotische schade."
+					]
+				},
+				{
+					"name": "Plane Shift (2/Day)",
+					"entries": [
+						"De havik spreekt {@spell Plane Shift} over zichzelf uit, waarbij hij geen spreukcomponenten nodig heeft en de wijsheid als spreukvaardigheid gebruikt."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Shadow Dash",
+					"entries": [
+						"Als de havik zich in zwak licht of duisternis bevindt, teleporteert hij tot 9 meter naar een onbezette ruimte die hij kan zien en die zich ook in zwak licht of duisternis bevindt. De havik heeft dan voordeel bij de eerste mêleeaanval die hij doet voor het einde van de beurt."
+					]
+				}
+			],
+			"senseTags": [
+				"SD"
+			],
+			"damageTags": [
+				"N",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Harrow Hound",
+			"source": "BMT",
+			"page": 164,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 45,
+				"formula": "6d8 + 18"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 16,
+			"dex": 19,
+			"con": 16,
+			"int": 8,
+			"wis": 15,
+			"cha": 13,
+			"skill": {
+				"perception": "+6",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 16,
+			"resist": [
+				"necrotic",
+				"psychic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"Blink Dog",
+				"understands Sylvan but can't speak it"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"De hond heeft voordeel bij aanvalsrollen tegen een wezen als ten minste één van de bondgenoten van de hond zich binnen 1,5 meter van het doelwit bevindt en de bondgenoot niet de {@condition incapacitated} conditie heeft."
+					]
+				},
+				{
+					"name": "Supernatural Tracker",
+					"entries": [
+						"De hond kent de afstand tot en de richting van elk wezen dat binnen 9 meter van hem is gekomen, zelfs als dat wezen zich op een ander bestaansniveau bevindt. Als het wezen dat wordt gevolgd door de hond sterft, weet de hond dat."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} te raken, reikwijdte 1,5 m., één doelwit. {@h}10 ({@damage 2d6 + 3}) doordringende schade plus 3 ({@damage 1d6}) necrotische schade. Als het doelwit een wezen is, moet het slagen voor een {@dc 13} Sterkte reddingsworp of de {@condition prone} conditie hebben."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Shadow Step {@recharge 4}",
+					"entries": [
+						"De hond teleporteert op magische wijze, samen met alle uitrusting die hij draagt of bij zich heeft, tot 12 meter naar een onbezette ruimte die hij kan zien."
+					]
+				}
+			],
+			"traitTags": [
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"CS",
+				"OTH",
+				"S"
+			],
+			"damageTags": [
+				"N",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Helmed Horror Detention Drone",
+			"source": "BMT",
+			"page": 135,
+			"_copy": {
+				"name": "Helmed Horror",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "helmed horror",
+						"with": "drone"
+					},
+					"action": [
+						{
+							"mode": "appendArr",
+							"items": {
+								"name": "Detention Orb",
+								"entries": [
+									"De drone lanceert een kleine bol van magische kracht naar een wezen dat hij kan zien binnen een straal van 9 meter. Het wezen moet slagen voor een {@dc 15} grondwetsreddende worp of wordt ingekapseld in de bol, die uitzet tot een grootte die net groot genoeg is om het wezen te bevatten. Als het wezen ingekapseld is, hoeft het niet te ademen, eten of drinken en veroudert het niet. Niets kan door de orb heen, noch kan een wezen teleporteren of planair reizen gebruiken om de orb in of uit te gaan. Als bonusactie kan de drone de orb en zijn inhoud tot 9 meter in elke richting verplaatsen. Een succesvolle {@spell Dispel Magic} spreuk op de orb ({@dc 15}) vernietigt deze. De orb blijft anders intact totdat de drone een actie spendeert om het effect te beëindigen of de drone wordt vernietigd. Een drone kan maar één detentie orb tegelijk actief hebben; als de drone een detentie orb creëert terwijl er al één actief is, verdwijnt de eerste orb en wordt het wezen erin bevrijd."
+								]
+							}
+						}
+					]
+				}
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"hasFluff": true
+		},
+		{
+			"name": "Hierophant Medusa",
+			"source": "BMT",
+			"page": 179,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 237,
+				"formula": "25d10 + 100"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40,
+				"swim": 40
+			},
+			"str": 22,
+			"dex": 20,
+			"con": 18,
+			"int": 15,
+			"wis": 23,
+			"cha": 22,
+			"save": {
+				"con": "+10",
+				"wis": "+12"
+			},
+			"skill": {
+				"insight": "+12",
+				"perception": "+12",
+				"persuasion": "+12",
+				"religion": "+8",
+				"stealth": "+11"
+			},
+			"passive": 22,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"Common plus any three languages (Abyssal, Celestial, Druidic, or Infernal recommended)"
+			],
+			"cr": "17",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"De medusa spreekt een van de volgende spreuken uit, waarvoor geen materiële componenten nodig zijn en waarbij Wisdom wordt gebruikt als spreukvaardigheid (spreuk redden {@dc 20}):"
+					],
+					"will": [
+						"{@spell Light}",
+						"{@spell Spare the Dying}",
+						"{@spell Thaumaturgy}"
+					],
+					"daily": {
+						"2": [
+							"{@spell Mass Cure Wounds} (cast at 8th level)"
+						],
+						"1e": [
+							"{@spell Blade Barrier}",
+							"{@spell Divination}",
+							"{@spell Greater Restoration}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Devotion's Call (1/Day)",
+					"entries": [
+						"De medusa kan de {@spell Resurrection} spreuk uitspreken, waarvoor geen materiële componenten nodig zijn en waarbij Wisdom als spreukvaardigheid wordt gebruikt."
+					]
+				},
+				{
+					"name": "Legendary Resistance (4/Day)",
+					"entries": [
+						"Als de medusa faalt in een reddingsworp, kan hij ervoor kiezen om in plaats daarvan te slagen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De medusa doet één Constrict aanval, één Final Blade aanval en één Snake Hair aanval. Je kunt ook twee Wrathful Strike-aanvallen doen."
+					]
+				},
+				{
+					"name": "Constrict",
+					"entries": [
+						"{@atk mw} {@hit 12} om te raken, reikwijdte 3 m., één doelwit. {@h}16 ({@damage 3d6 + 6}) kneuzing schade, en als het doelwit een Medium of kleiner wezen is, heeft het de {@condition grappled} conditie (ontsnappen {@dc 20}). Tot deze houdgreep eindigt, heeft het doelwit de {@condition restrained} conditie en kan de medusa geen ander wezen insluiten."
+					]
+				},
+				{
+					"name": "Final Blade",
+					"entries": [
+						"{@atk mw} {@hit 12} te raken, reikwijdte 1,5 m., één doelwit. {@h}13 ({@damage 2d6 + 6}) schade door snijden plus 21 ({@damage 6d6}) krachtschade. Als het doelwit minstens één hoofd heeft en de medusa een 20 heeft gegooid bij de aanvalsworp, wordt het doelwit onthoofd en sterft het als het niet slaagt voor een {@dc 20} grondwetsreddende worp en niet kan overleven zonder dat hoofd. Een doelwit is immuun voor dit effect als het geen schade oploopt, legendarische acties heeft of reusachtig of groter is. Zo'n wezen krijgt 28 ({@damage 8d6}) extra krachtschade van de treffer."
+					]
+				},
+				{
+					"name": "Snake Hair",
+					"entries": [
+						"{@atk mw} {@hit 12} te raken, reikwijdte 1,5 m., één doelwit. {@h}11 ({@damage 1d10 + 6}) doordringende schade plus 5 ({@damage 1d10}) gifschade."
+					]
+				},
+				{
+					"name": "Wrathful Strike",
+					"entries": [
+						"{@atk rs} {@hit 12} om te raken, bereik 36 m., één wezen. {@h}22 ({@damage 3d10 + 6}) stralingsschade en het doelwit heeft de {@condition blinded} conditie tot het einde van zijn volgende beurt."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Petrifying Gaze {@recharge 4}",
+					"entries": [
+						"De medusa ontketent verstenende magie uit zijn ogen in een kegel van 9 meter. Elk wezen in dat gebied moet een {@dc 18} grondwetsreddende worp doen als het niet de {@condition blinded} conditie heeft. Als de reddingsworp faalt met 5 of meer, heeft het wezen de {@condition petrified} conditie. Anders krijgt het wezen 10 ({@damage 3d6}) krachtschade, begint het in steen te veranderen en heeft het de {@condition restrained} conditie. Het {@condition restrained} wezen moet de reddingsslag herhalen aan het einde van zijn volgende beurt. Bij een mislukte reddingsworp heeft het de {@condition petrified} conditie en bij een geslaagde reddingsworp eindigt het effect op het wezen. De verstening duurt totdat het wezen wordt bevrijd door de {@spell Greater Restoration} spreuk of andere magie.",
+						"Een wezen kan zijn reactie gebruiken, indien beschikbaar, om zijn ogen te sluiten om de reddingsworp te vermijden. Als het wezen dit doet, heeft het de {@condition blinded} conditie tot het einde van zijn volgende beurt."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Move",
+					"entries": [
+						"De medusa beweegt tot zijn snelheid zonder gelegenheidsaanvallen uit te lokken."
+					]
+				},
+				{
+					"name": "Wrathful Blast (Costs 2 Actions)",
+					"entries": [
+						"De medusa doet één Wrathful Strike aanval."
+					]
+				},
+				{
+					"name": "Final Slash (Costs 3 Actions)",
+					"entries": [
+						"De medusa doet één Final Blade-aanval met voordeel."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Hierophant Medusa",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"CE",
+				"DU",
+				"I",
+				"X"
+			],
+			"damageTags": [
+				"B",
+				"I",
+				"O",
+				"P",
+				"R",
+				"S"
+			],
+			"damageTagsSpell": [
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"petrified",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hierophant of the Comet",
+			"source": "BMT",
+			"page": 92,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"warlock"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item breastplate|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 153,
+				"formula": "18d8 + 72"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 13,
+			"con": 18,
+			"int": 15,
+			"wis": 17,
+			"cha": 20,
+			"save": {
+				"wis": "+7",
+				"cha": "+9"
+			},
+			"skill": {
+				"arcana": "+10",
+				"deception": "+9",
+				"persuasion": "+9",
+				"religion": "+6"
+			},
+			"senses": [
+				"truesight 30 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"psychic"
+			],
+			"languages": [
+				"Common plus any two languages",
+				"telepathy 60 ft."
+			],
+			"cr": "11",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"De hiërofant spreekt een van de volgende spreuken uit met Charisma als spreukvaardigheid (spreuk save {@dc 17}):"
+					],
+					"will": [
+						"{@spell Detect Thoughts}",
+						"{@spell Mage Hand}",
+						"{@spell Thaumaturgy}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Dimension Door}",
+							"{@spell Mass Suggestion}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Comet's Voice (1/Day)",
+					"entries": [
+						"De hiërofant kan {@spell Contact Other Plane} spreuken met Charisma als spreukvaardigheid."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"De hiërofant heeft voordeel op reddingsworpen tegen spreuken en andere magische effecten."
+					]
+				},
+				{
+					"name": "Thought Shield",
+					"entries": [
+						"De gedachten van de hiërofant kunnen op geen enkele manier gelezen worden, tenzij de hiërofant het toestaat."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De hiërofant doet twee Herald's Axe aanvallen of drie Comet Blast aanvallen."
+					]
+				},
+				{
+					"name": "Herald's Axe",
+					"entries": [
+						"{@atk mw} {@hit 9} te raken, reikwijdte 1,5 m., één doelwit. {@h}11 ({@damage 1d12 + 5}) schade door snijden plus 10 ({@damage 3d6}) necrotische schade."
+					]
+				},
+				{
+					"name": "Comet Blast",
+					"entries": [
+						"{@atk rs} {@hit 9} om te raken, bereik 36 m., één doelwit. {@h}16 ({@damage 2d10 + 5}) krachtschade."
+					]
+				},
+				{
+					"name": "All-Consuming Star {@recharge}",
+					"entries": [
+						"De hiërofant tovert een manifestatie van de allesverslindende ster tevoorschijn: schitterend licht en spookachtig geschreeuw dat een bol met een straal van 6 meter vult, gecentreerd op een punt dat de hiërofant binnen 18 meter van zichzelf kan zien. Elk wezen binnen de bol heeft de {@condition blinded} en {@condition deafened} condities. Elk wezen dat tijdens een beurt voor het eerst de bol betreedt of daar zijn beurt begint, moet een {@dc 17} Wisdom saving throw doen. Als de redding mislukt, krijgt het wezen 27 ({@damage 6d8}) psychische schade en heeft het de {@condition incapacitated} conditie tot het begin van zijn volgende beurt. Als de save slaagt, krijgt het wezen slechts half zoveel schade. De manifestatie blijft bestaan totdat de hiërofant sterft, de {@condition incapacitated} conditie heeft, een bonusactie gebruikt om het effect te beëindigen of deze actie opnieuw gebruikt."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Star's Hunger",
+					"entries": [
+						"De hiërofant richt zich op één wezen binnen 9 meter van het middelpunt van zijn allesverslindende ster. Het doelwit moet slagen in een {@dc 17} Sterkte reddingsworp of tot 9 meter naar het centrum van de allesverslindende ster worden getrokken."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"TP",
+				"X"
+			],
+			"damageTags": [
+				"N",
+				"O",
+				"S",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"strength",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hulgaz",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 169,
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"devil"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 190,
+				"formula": "20d10 + 80"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 17,
+			"dex": 10,
+			"con": 18,
+			"int": 14,
+			"wis": 15,
+			"cha": 20,
+			"save": {
+				"wis": "+7",
+				"cha": "+10"
+			},
+			"skill": {
+				"deception": "+10",
+				"insight": "+7",
+				"perception": "+7",
+				"persuasion": "+10"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 17,
+			"resist": [
+				"acid",
+				"cold",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
+				}
+			],
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"telepathy 120 ft."
+			],
+			"cr": "14",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Hulgaz spreekt een van de volgende spreuken uit, waarvoor geen materiële componenten nodig zijn en waarbij Charisma als spreukvaardigheid wordt gebruikt (spreuk redden {@dc 18}):"
+					],
+					"will": [
+						"{@spell Charm Person}"
+					],
+					"daily": {
+						"1": [
+							"{@spell Teleport}"
+						],
+						"2e": [
+							"{@spell Dispel Magic}",
+							"{@spell Fog Cloud}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Als Hulgaz faalt in een reddingsworp, kan ze ervoor kiezen om in plaats daarvan te slagen."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Hulgaz heeft voordeel op reddingsworpen tegen spreuken en andere magische effecten."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Hulgaz doet twee Claw-aanvallen en één Intoxicating Sting-aanval."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 8} te raken, reikwijdte 1,5 m., één doelwit. {@h}12 ({@damage 2d8 + 3}) schade door snijden."
+					]
+				},
+				{
+					"name": "Intoxicating Sting",
+					"entries": [
+						"{@atk mw} {@hit 8} te raken, reikwijdte 3 m., één wezen. {@h}8 ({@damage 1d10 + 3}) doordringende schade plus 10 ({@damage 3d6}) gifschade en het doelwit moet slagen in een {@dc 17} Wisdom saving throw of de {@condition charmed} conditie krijgen tot het begin van Hulgaz's volgende beurt."
+					]
+				},
+				{
+					"name": "Brimstone Vapor {@recharge 5}",
+					"entries": [
+						"Hulgaz ademt een 9 meter lange kegel van schadelijke, gloeiend hete damp uit. Elk wezen in dat gebied moet slagen voor een {@dc 17} grondwetsreddende worp of de {@condition poisoned} conditie gedurende 1 minuut krijgen. Terwijl {@condition poisoned} op deze manier, neemt een wezen 31 ({@damage 7d8}) brandschade aan het begin van elk van zijn beurten en heeft nadeel op Wisdom saving throws. Een doelwit kan de reddingsworp Grondwet herhalen aan het einde van elk van zijn beurten, waarbij het effect op zichzelf wordt beëindigd als hij slaagt."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attack",
+					"entries": [
+						"Hulgaz doet één Klauwaanval."
+					]
+				},
+				{
+					"name": "Charm",
+					"entries": [
+						"Hulgaz gebruikt Spellcasting om {@spell Charm Person} te werpen."
+					]
+				},
+				{
+					"name": "Curdle Heart (Costs 2 Actions)",
+					"entries": [
+						"Hulgaz verzuurt de goede gevoelens van haar {@condition charmed} slachtoffers. Ze kiest een willekeurig aantal wezens die ze kan zien en die {@condition charmed} bij haar zijn. Elk doelwit krijgt 17 ({@damage 5d6}) psychische schade als de {@condition charmed} conditie toegepast door Hulgaz eindigt op het doelwit."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"TP"
+			],
+			"damageTags": [
+				"F",
+				"I",
+				"P",
+				"S",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"conditionInflictSpell": [
+				"charmed"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Initiate of the Comet",
+			"source": "BMT",
+			"page": 93,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"warlock"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 75,
+				"formula": "10d8 + 30"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 14,
+			"con": 16,
+			"int": 11,
+			"wis": 13,
+			"cha": 17,
+			"save": {
+				"wis": "+3",
+				"cha": "+5"
+			},
+			"skill": {
+				"arcana": "+2"
+			},
+			"passive": 11,
+			"languages": [
+				"Common plus any one language"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"De ingewijde spreekt een van de volgende spreuken uit met Charisma als spreukvaardigheid (spreuk redden {@dc 13}):"
+					],
+					"will": [
+						"{@spell Mage Hand}",
+						"{@spell Thaumaturgy}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Dimension Door}",
+							"{@spell Divination}",
+							"{@spell Enthrall}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"De ingewijde heeft voordeel op reddingsworpen tegen spreuken en andere magische effecten."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De ingewijde doet twee Comet Strike-aanvallen."
+					]
+				},
+				{
+					"name": "Comet Strike",
+					"entries": [
+						"{@atk ms,rs} {@hit 5} te raken, bereik 1,5 m. of 36 m., één doelwit. {@h}14 ({@damage 2d10 + 3}) krachtschade."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Moment of Foresight (1/Day)",
+					"entries": [
+						"Als een aanvaller wordt geraakt door een worp, kan de ingewijde de aanvaller dwingen de worp opnieuw te doen en de nieuwe worp te gebruiken, waardoor de aanval mogelijk mist."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"O"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Living Portent",
+			"source": "BMT",
+			"page": 180,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "celestial",
+			"alignment": [
+				"L",
+				"N"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 65,
+				"formula": "10d8 + 20"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 14,
+			"dex": 16,
+			"con": 14,
+			"int": 14,
+			"wis": 16,
+			"cha": 15,
+			"save": {
+				"dex": "+5",
+				"wis": "+5"
+			},
+			"skill": {
+				"arcana": "+6",
+				"history": "+6",
+				"insight": "+5",
+				"perception": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 15,
+			"immune": [
+				"radiant"
+			],
+			"conditionImmune": [
+				"exhaustion"
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"De levende bode spreekt een van de volgende spreuken uit, waarvoor geen materiële componenten nodig zijn en waarbij Wisdom als spreukvaardigheid wordt gebruikt:"
+					],
+					"daily": {
+						"2": [
+							"{@spell Cure Wounds}"
+						],
+						"1e": [
+							"{@spell Divination}",
+							"{@spell Greater Restoration}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Brilliance (True Form Only)",
+					"entries": [
+						"Het woonportaal werpt helder licht voor 9 meter en zwak licht voor nog eens 9 meter."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De levende bode doet twee Radiant Strike aanvallen."
+					]
+				},
+				{
+					"name": "Radiant Strike",
+					"entries": [
+						"{@atk ms,rs} {@hit 5} om te raken, bereik 1,5 m. of 36 m., één doelwit. {@h}9 ({@damage 1d12 + 3}) stralingsschade."
+					]
+				},
+				{
+					"name": "Prophetic Blessing",
+					"entries": [
+						"De levende verschijning brengt de kracht van zijn profetie op magische wijze over op een ander gewillig wezen dat de levende verschijning kan zien binnen een straal van 9 meter van zichzelf. De maximale en huidige hitpoints van het doelwit stijgen met 7 ({@dice 1d8 + 3}) en het krijgt een profetiedobbelsteen, a {@dice d8}. Eenmaal tijdens elke beurt van het wezen, wanneer het faalt in een vaardigheidstest of reddingsworp of een aanvalsworp mist, kan het de profetiedobbelsteen gooien en het gerolde aantal toevoegen aan het totaal, waardoor de uitkomst mogelijk verandert. De zegening eindigt na 1 uur of wanneer het levende wezen de zegening beëindigt (geen actie vereist) of deze actie opnieuw gebruikt."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"De levende verschijning transformeert op magische wijze in een mensachtige met behoud van zijn spelstatistieken (behalve zijn grootte en Brilliance-eigenschap). De transformatie eindigt als de levende verschijning gereduceerd wordt tot 0 hitpoints of een bonusactie gebruikt om de transformatie te beëindigen."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Price of Defiance",
+					"entries": [
+						"Als de levende poortschutter wordt beschadigd door een wezen dat het kan zien binnen 36 meter van zichzelf, verschroeit de stralingskracht het wezen. Het wezen moet een {@dc 13} grondwetsreddende worp doen, waarbij het 10 ({@damage 3d6}) stralingsschade oploopt als de redding mislukt, of half zoveel schade als de redding slaagt."
+					]
+				}
+			],
+			"variant": [
+				{
+					"name": "Servants of Living Stars",
+					"type": "variant",
+					"entries": [
+						"Sommige sterren aan de hemel zijn Elder Evils, buitenaardse wezens met goddelijke kracht uit het werkelijkheid tartende Far Realm.",
+						"Een levend voorteken kan een fragment zijn van de wil van deze wezens. Deze levende wezens zijn Aberraties in plaats van Hemelwezens en zijn meestal chaotisch slecht. Ze vervangen stralingsschade in hun stat block door necrotische of psychische schade (DM's keuze). Hun spreuken kunnen ook anders zijn. Enkele bekende Elder Evils zijn de volgende:",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "Acamar",
+									"entry": "Een dode ster die andere sterren of siderische lichamen die hij tegenkomt consumeert."
+								},
+								{
+									"type": "item",
+									"name": "Caiphon, the Dream Whisperer",
+									"entry": "Een paarse ster wiens leiding en volgelingen een tijdje lijken te helpen, maar wiens invloed onvermijdelijk tot een ramp leidt."
+								},
+								{
+									"type": "item",
+									"name": "Hadar, the Dark Hunger",
+									"entry": "Een sintelrode stervende ster die leven onttrekt aan zijn volgelingen om zijn eigen ondergang af te wenden."
+								},
+								{
+									"type": "item",
+									"name": "Khirad, the Star of Secrets",
+									"entry": "Een blauwwitte ster wiens gaven inzicht geven maar ook verschrikkelijke waarheden onthullen."
+								},
+								{
+									"type": "item",
+									"name": "Zhudun, the Corpse Star",
+									"entry": "Een dode ster die fluistert over de kracht om de dood te trotseren."
+								}
+							]
+						}
+					]
+				}
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"R"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Living Star (Necrotic)",
+					"source": "BMT",
+					"_mod": {
+						"*": {
+							"mode": "replaceTxt",
+							"replace": "\\bradiant\\b",
+							"with": "necrotic"
+						}
+					},
+					"type": "aberration",
+					"alignment": [
+						"C",
+						"E"
+					],
+					"variant": null
+				},
+				{
+					"name": "Living Star (Psychic)",
+					"source": "BMT",
+					"_mod": {
+						"*": {
+							"mode": "replaceTxt",
+							"replace": "\\bradiant\\b",
+							"with": "psychic"
+						}
+					},
+					"type": "aberration",
+					"alignment": [
+						"C",
+						"E"
+					],
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Malaxxix",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 173,
+			"size": [
+				"H"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"yugoloth"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 312,
+				"formula": "25d12 + 150"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 60
+			},
+			"str": 23,
+			"dex": 16,
+			"con": 22,
+			"int": 22,
+			"wis": 20,
+			"cha": 18,
+			"save": {
+				"str": "+12",
+				"con": "+12"
+			},
+			"skill": {
+				"arcana": "+12",
+				"athletics": "+12",
+				"perception": "+11"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 21,
+			"resist": [
+				"cold",
+				"fire",
+				"lightning",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"acid",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"Infernal",
+				"telepathy 120 ft."
+			],
+			"cr": "18",
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Als Malaxxix faalt in een reddingsworp, kan hij ervoor kiezen om in plaats daarvan te slagen."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Malaxxix heeft voordeel op reddingsworpen tegen spreuken en andere magische effecten."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Malaxxix doet twee aanvallen met Forge Hammer of Whip in een willekeurige combinatie."
+					]
+				},
+				{
+					"name": "Forge Hammer",
+					"entries": [
+						"{@atk mw,rw} {@hit 12} om te raken, bereik 3 m. of 60/54 m., één doelwit. {@h}28 ({@damage 4d10 + 6}) stompschade, en het doelwit kan niet reageren tot het einde van Malaxxix' volgende beurt. Hit or Miss: De hamer keert dan op magische wijze terug naar Malaxxix' hand."
+					]
+				},
+				{
+					"name": "Whip",
+					"entries": [
+						"{@atk mw} {@hit 12} om te raken, bereik 9 m., één wezen. {@h}15 ({@damage 2d8 + 6}) snijdende schade, en het doelwit heeft de {@condition restrained} conditie voor 1 minuut. Het {@condition restrained} doelwit kan een {@dc 20} Sterkte reddingsworp doen aan het einde van elk van zijn beurten, waardoor het effect op zichzelf eindigt als hij slaagt. Slechts één wezen kan tegelijkertijd {@condition restrained} door de zweep worden geraakt."
+					]
+				},
+				{
+					"name": "Mezzoloth Vortex {@recharge 5}",
+					"entries": [
+						"Malaxxix roept een draaikolk op van wervelende mezzoloten op een punt dat hij binnen 27 meter van zichzelf kan zien. De draaikolk is een cilinder met een straal van 9 meter en een hoogte van 3 meter, gecentreerd op dat punt. Elk ander wezen dan Malaxxix in dat gebied moet een {@dc 20} Behendigheidsreddende worp doen. Als de redding mislukt, krijgt het wezen 35 ({@damage 10d6}) krachtschade en heeft het de {@condition restrained} conditie zolang het zich in de cilinder bevindt. Als de redding slaagt, krijgt het wezen half zoveel schade en wordt het naar de dichtstbijzijnde onbezette ruimte buiten de cilinder geduwd. De draaikolk duurt tot het begin van Malaxxix' volgende beurt."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Fiendish Stride",
+					"entries": [
+						"Malaxxix beweegt tot zijn snelheid. Deze beweging lokt geen gelegenheidsaanvallen uit. Wanneer Malaxxix zich tijdens deze beweging binnen 1,5 meter van een wezen beweegt, krijgt dat wezen 5 ({@damage 1d10}) bliksemschade. Een wezen kan deze schade maar één keer per beurt oplopen."
+					]
+				},
+				{
+					"name": "Attack (Costs 2 Actions)",
+					"entries": [
+						"Malaxxix doet één Forge Hammer of Whip aanval."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Malaxxix",
+				"source": "BMT"
+			},
+			"attachedItems": [
+				"whip|phb"
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"I",
+				"TP"
+			],
+			"damageTags": [
+				"B",
+				"L",
+				"O",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Minotaur Archaeologist",
+			"source": "BMT",
+			"page": 126,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 18,
+				"formula": "4d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 10,
+			"con": 11,
+			"int": 13,
+			"wis": 12,
+			"cha": 10,
+			"skill": {
+				"arcana": "+3",
+				"history": "+5",
+				"perception": "+5",
+				"religion": "+3"
+			},
+			"passive": 15,
+			"languages": [
+				"Common"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Labyrinthine Recall",
+					"entries": [
+						"De minotaurus kan zich elk pad dat hij heeft afgelegd perfect herinneren."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Gore",
+					"entries": [
+						"{@atk mw} {@hit 3} te raken, reikwijdte 1,5 m., één doelwit. {@h}4 ({@damage 1d6 + 1}) doordringende schade. Als de minotaurus minstens 3 meter recht naar het doelwit bewoog vlak voordat hij raakte, krijgt het doelwit 3 ({@damage 1d6}) extra doordringende schade en als het doelwit een Groot of kleiner wezen is, moet het slagen voor een {@dc 11} Sterkte reddingsworp of tot 3 meter van de minotaurus worden geduwd en de {@condition prone} conditie krijgen."
+					]
+				}
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Minotaur Infiltrator",
+			"source": "BMT",
+			"page": 127,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "8d8 + 16"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 18,
+			"dex": 11,
+			"con": 14,
+			"int": 8,
+			"wis": 16,
+			"cha": 10,
+			"skill": {
+				"deception": "+2",
+				"perception": "+7",
+				"religion": "+1"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 17,
+			"languages": [
+				"Abyssal",
+				"Common"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Labyrinthine Recall",
+					"entries": [
+						"De minotaurus kan zich elk pad dat hij heeft afgelegd perfect herinneren."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Gore",
+					"entries": [
+						"{@atk mw} {@hit 6} te raken, reikwijdte 1,5 m., één doelwit. {@h}8 ({@damage 1d8 + 4}) doordringende schade, of 13 ({@damage 2d8 + 4}) doordringende schade terwijl vergroot. Als de minotaurus minstens 3 meter recht naar het doelwit bewoog vlak voordat hij toesloeg, krijgt het doelwit 4 ({@damage 1d8}) extra doordringende schade, of 9 ({@damage 2d8}) doordringende schade als de minotaurus vergroot is. Als het doelwit een wezen is, moet het slagen voor een {@dc 14} Sterkte reddingsworp of tot 3 meter van de minotaurus worden geduwd en de {@condition prone} conditie krijgen."
+					]
+				},
+				{
+					"name": "Mattock",
+					"entries": [
+						"{@atk mw} {@hit 6} te raken, reikwijdte 3 m., één doelwit. {@h}10 ({@damage 1d12 + 4}) kneuzing schade, of 17 ({@damage 2d12 + 4}) kneuzing schade terwijl vergroot. Als het doelwit een wezen is en de minotaurus is vergroot, moet het doelwit slagen in een {@dc 14} Sterkte reddingsworp of de {@condition prone} conditie hebben."
+					]
+				},
+				{
+					"name": "Enlarge (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Gedurende 1 minuut wordt de minotaurus op magische wijze groter, samen met alles wat hij draagt. Tijdens de vergroting is de minotaurus Large, verdubbelt hij zijn damage dice bij aanvallen met wapens op basis van Strength (inbegrepen in de aanvallen) en doet hij Strength checks en Strength saving throws met voordeel. Als de minotaurus niet de ruimte heeft om Large te worden, verandert hij niet van grootte."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Unerring Tracker",
+					"entries": [
+						"De minotaurus creëert op magische wijze een psychische link met één wezen dat hij kan zien. Het komende uur weet de minotaurus de huidige afstand tot en richting van het doelwit als het zich op hetzelfde bestaansniveau bevindt. De link eindigt als de minotaurus de {@condition incapacitated} conditie heeft of deze vaardigheid op een ander doelwit gebruikt."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AB",
+				"C"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			]
+		},
+		{
+			"name": "Oddlewin",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 111,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "fey",
+				"tags": [
+					"goblinoid"
+				]
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 21,
+				"formula": "6d6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 14,
+			"con": 10,
+			"int": 10,
+			"wis": 16,
+			"cha": 15,
+			"skill": {
+				"performance": "+4",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"conditionImmune": [
+				"charmed"
+			],
+			"languages": [
+				"Common",
+				"Goblin",
+				"Sylvan"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Oddlewin spreekt een van de volgende spreuken uit met Charisma als spreukvaardigheid (spreuk redden {@dc 12}):"
+					],
+					"will": [
+						"{@spell Mage Hand}",
+						"{@spell Tasha's Hideous Laughter}"
+					],
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Fortune Teller",
+					"entries": [
+						"Oddlewin kan de {@spell Augury} spreuk uitspreken als een ritueel, met kaarten als materiële component."
+					]
+				},
+				{
+					"name": "Nilbogism",
+					"entries": [
+						"Elk wezen dat Oddlewin probeert te beschadigen moet eerst slagen in een {@dc 12} Charisma saving throw of de {@condition charmed} conditie krijgen tot het einde van de volgende beurt van het wezen. Het wezen moet zijn actie gebruiken om Oddlewin te prijzen.",
+						"Oddlewin kan geen hit points herwinnen, ook niet door magische genezing, behalve door zijn Reversal of Fortune reactie."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Fool's Scepter",
+					"entries": [
+						"{@atk mw} {@hit 4} te raken, reikwijdte 1,5 m., één doelwit. {@h}5 ({@damage 1d6 + 2}) vernietigende schade."
+					]
+				},
+				{
+					"name": "Cloud of Cards",
+					"entries": [
+						"Oddlewin tovert magische kaarten die in een kubus van 1,5 meter binnen 18 meter van Oddlewin in de lucht slaan tot het begin van Oddlewins volgende beurt. Een wezen dat zijn beurt begint in de kubus of dat tijdens een beurt voor het eerst dat gebied betreedt, krijgt 10 ({@damage 4d4}) slashing damage."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Nimble Escape",
+					"entries": [
+						"Oddlewin doet de actie Uitschakelen of Verstoppen."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Reversal of Fortune",
+					"entries": [
+						"Als een ander wezen schade toebrengt aan Oddlewin, vermindert Oddlewin de schade tot 0 en krijgt 9 ({@dice 2d8}) hit points terug."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"GO",
+				"S"
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"incapacitated",
+				"prone"
+			],
+			"savingThrowForced": [
+				"charisma"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Otherworldly Corrupter",
+			"source": "BMT",
+			"page": 47,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 217,
+				"formula": "29d8 + 87"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40
+			},
+			"str": 12,
+			"dex": 22,
+			"con": 16,
+			"int": 22,
+			"wis": 18,
+			"cha": 20,
+			"save": {
+				"dex": "+12",
+				"int": "+12"
+			},
+			"skill": {
+				"perception": "+10",
+				"stealth": "+18"
+			},
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 20,
+			"resist": [
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"telepathy 120 ft.",
+				"Thieves' cant"
+			],
+			"cr": "17",
+			"trait": [
+				{
+					"name": "Alien Mind",
+					"entries": [
+						"Magie en andere eigenschappen kunnen het creatuurtype van de corrupter niet bepalen. Als een wezen de gedachten van de corrupter probeert te lezen, moet dat wezen slagen voor een {@dc 20} intelligentie reddingsworp of de {@condition stunned} conditie 1 minuut hebben. Het {@condition stunned} wezen kan de reddingsworp herhalen aan het einde van elk van zijn beurten en het effect op zichzelf beëindigen als hij slaagt."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Als de corrupter faalt in een reddingsworp, kan hij ervoor kiezen om in plaats daarvan te slagen."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"De corrupter kan moeilijke oppervlakken beklimmen, inclusief ondersteboven op plafonds, zonder een vaardigheidstest te hoeven doen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De Corrupter maakt drie Whispering Blade-aanvallen en kan Debilitating Touch gebruiken."
+					]
+				},
+				{
+					"name": "Whispering Blade",
+					"entries": [
+						"{@atk mw,rw} {@hit 12} te raken, bereik 1,5 m. of 18 m., één doelwit. {@h}10 ({@damage 1d8 + 6}) doordringende schade plus 14 ({@damage 4d6}) psychische schade. Als het doelwit een wezen is, moet het slagen voor een {@dc 20} Wisdom saving throw of niet kunnen spreken tot het begin van de volgende beurt van de corrupter."
+					]
+				},
+				{
+					"name": "Debilitating Touch",
+					"entries": [
+						"De kronkelende tentakel van de Corrupter haalt uit naar een wezen dat de Corrupter kan zien binnen een straal van 9 meter van zichzelf. Het doelwit moet slagen in een {@dc 20} grondwetsreddende worp of heeft de {@condition paralyzed} conditie tot het einde van zijn volgende beurt, waarna het doelwit immuun is voor deze verzwakkende aanraking voor 24 uur."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"De corrupter transformeert op magische wijze in elk wezen dat Small of Medium is, met behoud van zijn spelstatistieken (behalve zijn grootte). Deze transformatie eindigt als de corrupter gereduceerd wordt tot 0 hitpoints of een bonusactie gebruikt om het te beëindigen."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"Als een aanvaller die de corrupter kan zien de corrupter raakt met een aanval, halveert de corrupter de schade van de aanval."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Cunning",
+					"entries": [
+						"De corrupter ontsnapt aan niet-magische beperkingen en beëindigt de {@condition grappled} en {@condition restrained} voorwaarden op zichzelf, beweegt dan tot zijn snelheid zonder gelegenheidsaanvallen uit te lokken."
+					]
+				},
+				{
+					"name": "Stab (Costs 2 Actions)",
+					"entries": [
+						"De Corrupter doet één Whispering Blade-aanval."
+					]
+				},
+				{
+					"name": "Amorphous Escape (Costs 3 Actions)",
+					"entries": [
+						"De corrupter lost op in een verschuivende massa vlees, tentakels, ogen, klauwen en monden. Maximaal twee wezens die de corrupter kan zien binnen een straal van 6 meter van zichzelf moeten een {@dc 20} intelligentie reddingsworp doen, waarbij ze 18 ({@damage 4d8}) psychische schade oplopen als de reddingsworp mislukt, of half zoveel schade als de reddingsworp slaagt. Deze transformatie duurt tot het einde van de volgende beurt van de corrupter. Tijdens zijn transformatie heeft de corrupter voordeel bij aanvalsrollen, aanvalsrollen tegen hem hebben nadeel en hij kan zich door ruimtes van minstens 1 inch breed bewegen zonder te knijpen."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Villain",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances",
+				"Spider Climb"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"TC",
+				"TP"
+			],
+			"damageTags": [
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"paralyzed",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"intelligence",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Pazrodine",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 113,
+			"size": [
+				"G"
+			],
+			"type": {
+				"type": "dragon",
+				"tags": [
+					"moonstone"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 330,
+				"formula": "20d20 + 120"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 80
+			},
+			"str": 22,
+			"dex": 18,
+			"con": 23,
+			"int": 20,
+			"wis": 22,
+			"cha": 26,
+			"save": {
+				"int": "+12",
+				"wis": "+13",
+				"cha": "+15"
+			},
+			"skill": {
+				"perception": "+13",
+				"persuasion": "+15",
+				"stealth": "+11"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 23,
+			"conditionImmune": [
+				"charmed"
+			],
+			"languages": [
+				"all",
+				"telepathy 120 ft."
+			],
+			"cr": "21",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Pazrodine spreekt een van de volgende spreuken uit, waarvoor geen materiële componenten nodig zijn en waarbij Charisma als spreukvaardigheid wordt gebruikt (spreuk redden {@dc 23}):"
+					],
+					"will": [
+						"{@spell Faerie Fire}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell Calm Emotions}",
+							"{@spell Dispel Magic}",
+							"{@spell Invisibility}"
+						],
+						"1e": [
+							"{@spell Mass Cure Wounds}",
+							"{@spell Revivify}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Guardian of the Market",
+					"entries": [
+						"Pazrodine kan voelen wanneer een voorwerp wordt gestolen van de Seelie Markt. Ze kent de afstand tot en de richting van gestolen voorwerpen, als met de {@spell Locate Object} spreuk."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Als Pazrodine faalt in een reddingsworp, kan ze ervoor kiezen om in plaats daarvan te slagen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Pazrodine doet één bijtaanval en twee klauwaanvallen."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 13} te raken, reikwijdte 4,5 m., één doelwit. {@h}17 ({@damage 2d10 + 6}) doordringende schade plus 11 ({@damage 2d10}) stralingsschade."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 13} te raken, reikwijdte 3 m., één doelwit. {@h}13 ({@damage 2d6 + 6}) schade door snijden."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 13} om te raken, reikwijdte 6 m., één doelwit. {@h}10 ({@damage 1d8 + 6}) slagschade. Als het doelwit een wezen is, moet het slagen voor een {@dc 21} Sterkte reddingsworp of de {@condition prone} conditie hebben."
+					]
+				},
+				{
+					"name": "Breath Weapon {@recharge 5}",
+					"entries": [
+						"Pazrodine gebruikt een van de volgende ademwapens:",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "Dream Breath",
+									"entries": [
+										"Pazrodine ademt mist uit in een kegel van 27 meter. Elk wezen in dat gebied moet slagen op een {@dc 21} grondwetsreddende worp of heeft de {@condition unconscious} conditie gedurende 10 minuten. Dit effect eindigt voor een wezen als het wezen schade oploopt of als iemand een actie gebruikt om het wezen wakker te maken."
+									]
+								},
+								{
+									"type": "item",
+									"name": "Moonlight Breath",
+									"entries": [
+										"Pazrodine ademt een straal maanlicht uit in een lijn van 36 meter die 3 meter breed is. Elk wezen in dat gebied moet een {@dc 21} vaardigheidsreddende worp doen en krijgt 60 ({@damage 11d10}) stralingsschade als hij niet slaagt, of half zoveel schade als hij slaagt."
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Tail",
+					"entries": [
+						"Pazrodine doet één Staartaanval."
+					]
+				},
+				{
+					"name": "Cast a Spell (Costs 2 Actions)",
+					"entries": [
+						"Pazrodine gebruikt Spellcasting."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Pazrodine",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"TP",
+				"XX"
+			],
+			"damageTags": [
+				"B",
+				"P",
+				"R",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflictSpell": [
+				"invisible"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity",
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Quadrone Detention Drone",
+			"group": null,
+			"source": "BMT",
+			"page": 135,
+			"_copy": {
+				"name": "Quadrone",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "quadrone",
+						"with": "drone"
+					},
+					"action": [
+						{
+							"mode": "appendArr",
+							"items": {
+								"name": "Detention Orb",
+								"entries": [
+									"De drone lanceert een kleine bol van magische kracht naar een wezen dat hij kan zien binnen een straal van 9 meter. Het wezen moet slagen voor een {@dc 15} grondwetsreddende worp of wordt ingekapseld in de bol, die uitzet tot een grootte die net groot genoeg is om het wezen te bevatten. Als het wezen ingekapseld is, hoeft het niet te ademen, eten of drinken en veroudert het niet. Niets kan door de orb heen, noch kan een wezen teleporteren of planair reizen gebruiken om de orb in of uit te gaan. Als bonusactie kan de drone de orb en zijn inhoud tot 9 meter in elke richting verplaatsen. Een succesvolle {@spell Dispel Magic} spreuk op de orb ({@dc 15}) vernietigt deze. De orb blijft anders intact totdat de drone een actie spendeert om het effect te beëindigen of de drone wordt vernietigd. Een drone kan maar één detentie orb tegelijk actief hebben; als de drone een detentie orb creëert terwijl er al één actief is, verdwijnt de eerste orb en wordt het wezen erin bevrijd."
+								]
+							}
+						}
+					]
+				}
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Reaper Spirit",
+			"source": "BMT",
+			"page": 50,
+			"summonedBySpell": "Spirit of Death|BMT",
+			"summonedBySpellLevel": 4,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"special": "11 + the level of the spell (natural armor)"
+				}
+			],
+			"hp": {
+				"special": "40 + 10 for each spell level above 4th"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 16,
+			"int": 16,
+			"wis": 16,
+			"cha": 16,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages you speak"
+			],
+			"pbNote": "equals your bonus",
+			"trait": [
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"De geest kan door andere wezens en voorwerpen bewegen alsof het moeilijk terrein is. Als hij zijn beurt eindigt in een object, wordt hij gerangeerd naar de dichtstbijzijnde onbezette ruimte en neemt hij {@damage 1d10} krachtschade voor elke 1,5 meter die hij wordt gerangeerd."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De geest maakt een aantal Reaping Scythe aanvallen gelijk aan de helft van het niveau van de spreuk (naar beneden afgerond)."
+					]
+				},
+				{
+					"name": "Reaping Scythe",
+					"entries": [
+						"{@atk mw} je aanvalsmodifier om te raken (met voordeel), bereik 1,5 m., het wezen achtervolgd door Haunt Creature. {@h}{@damage 1d8 + 3 + summonSpellLevel} necrotische schade."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Haunt Creature",
+					"entries": [
+						"De geest richt zich op een wezen dat hij kan zien binnen een straal van 3 meter en begint het te achtervolgen. Terwijl het doelwit wordt achtervolgd, voelen jij en de geest de richting en afstand tot het doelwit als het zich op hetzelfde bestaansniveau bevindt als jij. Bovendien, als het doelwit zijn beurt begint binnen 3 meter van de geest, moet het doelwit slagen in een Wisdom saving throw tegen je spell save DC of de {@condition frightened} conditie hebben tot het begin van de volgende beurt van het doelwit. Het doelwit blijft achtervolgd totdat het sterft, de geest verdwijnt of de geest deze actie opnieuw gebruikt."
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"N",
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened"
+			]
+		},
+		{
+			"name": "Riffler",
+			"source": "BMT",
+			"page": 181,
+			"size": [
+				"S"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 90,
+				"formula": "20d6 + 20"
+			},
+			"speed": {
+				"walk": 30,
+				"burrow": 20
+			},
+			"str": 8,
+			"dex": 16,
+			"con": 12,
+			"int": 11,
+			"wis": 15,
+			"cha": 17,
+			"save": {
+				"dex": "+6",
+				"cha": "+6"
+			},
+			"skill": {
+				"arcana": "+6",
+				"insight": "+5",
+				"sleight of hand": "+9",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"necrotic",
+				"radiant"
+			],
+			"languages": [
+				"Common",
+				"Sylvan"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Card Sense",
+					"entries": [
+						"De riffler kan de aanwezigheid van magische kaarten ruiken, waaronder Decks of Many Things en andere magische decks, binnen een straal van 1,5 kilometer van zichzelf. Hij weet de richting van dergelijke kaarten in dat bereik. Effecten die een doelwit beschermen tegen waarzeggerij blokkeren dit zintuig."
+					]
+				},
+				{
+					"name": "Riffling Step",
+					"entries": [
+						"De riffler kan door elk niet-magisch materiaal graven dat geen ijzer is, waarbij de stof waar de riffler doorheen beweegt opzij wordt geschud als kaarten om een tunnel te vormen die zich achter de riffler sluit."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De riffler doet twee Spectral Card-aanvallen."
+					]
+				},
+				{
+					"name": "Spectral Card",
+					"entries": [
+						"{@atk ms,rs} {@hit 6} om te raken, bereik 1,5 m. of 18 m., één doelwit. {@h}8 ({@damage 1d10 + 3}) krachtschade plus 5 ({@damage 1d10}) schade die stralend is als de {@dice d10} worp een even getal is en necrotisch als het oneven is."
+					]
+				},
+				{
+					"name": "Card Spray {@recharge 5}",
+					"entries": [
+						"De riffler laat op magische wijze een spray van spectrale kaarten los in een kegel van 9 meter. Elk wezen in dat gebied moet een {@dc 14} vaardigheidsreddende worp doen. Als de save mislukt, krijgt het wezen 27 ({@damage 5d10}) krachtschade en heeft het de {@condition restrained} conditie voor 1 minuut als de kaarten het binden. Als de save slaagt, krijgt het wezen slechts half zoveel schade. Een {@condition restrained} wezen kan de reddingsworp herhalen aan het einde van elk van zijn beurten, waarbij het effect op zichzelf eindigt bij succes."
+					]
+				},
+				{
+					"name": "Plane Shift",
+					"entries": [
+						"De riffler spreekt de {@spell Plane Shift} spreuk uit die alleen op zichzelf is gericht, zonder materiële componenten en met Charisma als spreukvaardigheid."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Shuffle Destiny",
+					"entries": [
+						"Als een wezen dat de riffler kan zien binnen 9 meter van zichzelf een vaardigheidscontrole, een aanvalsrol of een reddingsworp uitvoert, kan de riffler dat wezen op magische wijze dwingen om een {@dice d6} te gooien en het gerolde aantal bij het totaal op te tellen of van het totaal af te trekken (keuze van de riffler), waardoor de uitkomst mogelijk verandert."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ruin Spider",
+			"source": "BMT",
+			"page": 182,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 105,
+				"formula": "14d10 + 28"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40
+			},
+			"str": 16,
+			"dex": 18,
+			"con": 14,
+			"int": 2,
+			"wis": 13,
+			"cha": 4,
+			"skill": {
+				"stealth": "+10"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"immune": [
+				"acid"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Ruinous Acid",
+					"entries": [
+						"Elk niet-magisch wapen dat de spin raakt, corrodeert. Na het toebrengen van schade krijgt het wapen een permanente en cumulatieve penalty van -1 op schadepogingen. Als de penalty daalt tot -5, wordt het wapen vernietigd. Niet-magische munitie van metaal die de spin raakt, wordt vernietigd na het toebrengen van schade."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"De spin kan moeilijke oppervlakken beklimmen, inclusief ondersteboven op plafonds, zonder een vaardigheidstest te hoeven doen."
+					]
+				},
+				{
+					"name": "Web Sense",
+					"entries": [
+						"Als de spin in contact is met een web, weet hij de exacte locatie van elk ander wezen dat in contact is met hetzelfde web."
+					]
+				},
+				{
+					"name": "Web Walker",
+					"entries": [
+						"De spin negeert bewegingsbeperkingen veroorzaakt door webben."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De spin doet twee aanvallen met Ruinous Bite. Hij kan één aanval vervangen door het gebruik van Web."
+					]
+				},
+				{
+					"name": "Ruinous Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} te raken, reikwijdte 1,5 m., één doelwit. {@h}8 ({@damage 1d8 + 4}) doordringende schade en 9 ({@damage 2d8}) zure schade. Bovendien, als het doelwit een wezen is dat een niet-magisch harnas draagt, krijgt het harnas een permanente en cumulatieve -1 penalty op de AC die het biedt. Pantsers met een pantserklasse van 10 worden vernietigd."
+					]
+				},
+				{
+					"name": "Web {@recharge 5}",
+					"entries": [
+						"{@atk rw} {@hit 7} om te raken, bereik 30/18 m., één wezen. {@h} Het doelwit heeft de {@condition restrained} conditie. Als een actie kan een {@condition restrained} doelwit een {@dc 13} Sterktecontrole doen en bij een succesvolle controle barst het web. De singel kan ook worden vernietigd (AC 10; 5 hitpoints; kwetsbaarheid voor vuurschade; immuniteit voor zuur-, stomp-, gif- en psychische schade)."
+					]
+				}
+			],
+			"traitTags": [
+				"Spider Climb",
+				"Web Sense",
+				"Web Walker"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"A",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sir Jared",
+			"source": "BMT",
+			"page": 80,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"{@item plate armor|PHB}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 90,
+				"formula": "12d8 + 36"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 12,
+			"con": 17,
+			"int": 13,
+			"wis": 14,
+			"cha": 17,
+			"save": {
+				"str": "+7",
+				"con": "+6"
+			},
+			"skill": {
+				"arcana": "+4",
+				"athletics": "+7",
+				"persuasion": "+6",
+				"survival": "+5"
+			},
+			"passive": 12,
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"Halfling"
+			],
+			"cr": "5",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Jared doet drie aanvallen met een langzwaard."
+					]
+				},
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 7} te raken, reikwijdte 1,5 m., één doelwit. {@h}8 ({@damage 1d8 + 4}) snijdende schade plus 4 ({@damage 1d8}) stralende schade. Bij een worp van 19 of 20 scoort Jared een kritische treffer."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Protect Ally",
+					"entries": [
+						"Wanneer een wezen dat Jared kan zien een ander doelwit dan Jared aanvalt dat zich binnen 1,5 meter van hem bevindt, legt Jared nadeel op bij de aanvalsworp."
+					]
+				}
+			],
+			"attachedItems": [
+				"longsword|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"H"
+			],
+			"damageTags": [
+				"R",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Solar Bastion Knight",
+			"source": "BMT",
+			"page": 75,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"paladin"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"{@item plate armor|PHB}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 150,
+				"formula": "20d8 + 60"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 10,
+			"con": 17,
+			"int": 15,
+			"wis": 16,
+			"cha": 17,
+			"save": {
+				"wis": "+7",
+				"cha": "+7"
+			},
+			"skill": {
+				"arcana": "+6",
+				"history": "+6"
+			},
+			"passive": 13,
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common plus any one language"
+			],
+			"cr": "9",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"De ridder spreekt een van de volgende spreuken uit met Charisma als spreukvaardigheid (spreuk save {@dc 15}):"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Greater Restoration}",
+							"{@spell Sending}",
+							"{@spell Word of Recall} (the prepared sanctuary is the Solar Bastion)"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Aura of Protection",
+					"entries": [
+						"De ridder en elke bondgenoot binnen een straal van 3 meter hebben voordeel bij reddingsworpen. Deze eigenschap wordt onderdrukt terwijl de ridder de {@condition incapacitated} conditie heeft."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De ridder doet drie Sunspear-aanvallen."
+					]
+				},
+				{
+					"name": "Sunspear",
+					"entries": [
+						"{@atk ms,rs} {@hit 8} om te raken, bereik 1,5 m. of 36 m., één doelwit. {@h}14 ({@damage 3d6 + 4}) stralingsschade, of 21 ({@damage 5d6 + 4}) stralingsschade als het doelwit een Fiend of een Undead is."
+					]
+				},
+				{
+					"name": "Solar Flare {@recharge 5}",
+					"entries": [
+						"De ridder ontketent een vlaag van briljante energie die een bol van 9 meter in het midden van de ridder vult. Elk wezen naar keuze van de ridder in dat gebied moet een {@dc 15} vaardigheidsreddende worp doen. Als de redding mislukt, krijgt het wezen 22 ({@damage 4d10}) stralingsschade en heeft het de {@condition blinded} conditie tot het einde van zijn volgende beurt. Als de save slaagt, krijgt het wezen slechts half zoveel schade. De volgende minuut wordt het getroffen gebied gevuld met fel licht dat zonlicht is."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"R"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Talon Beast",
+			"source": "BMT",
+			"page": 183,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 114,
+				"formula": "12d10 + 48"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 22,
+			"dex": 14,
+			"con": 19,
+			"int": 5,
+			"wis": 12,
+			"cha": 5,
+			"skill": {
+				"perception": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"conditionImmune": [
+				"frightened"
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Het talonbeest heeft voordeel op reddingsworpen tegen spreuken en andere magische effecten."
+					]
+				},
+				{
+					"name": "Sense Magic",
+					"entries": [
+						"Het talonbeest kan de locatie van magie binnen 36 meter van zichzelf detecteren en lokaliseren."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Het talonbeest doet twee Talonaanvallen of een Talonaanval en een Snavelaanval."
+					]
+				},
+				{
+					"name": "Beak",
+					"entries": [
+						"{@atk mw} {@hit 9} om te raken, reikwijdte 1,5 m., één doelwit. {@h}17 ({@damage 2d10 + 6}) doordringende schade en als het doelwit betoveringseffecten op zichzelf heeft of magische voorwerpen in zijn bezit heeft, moet het doelwit een {@dc 15} Charisma reddingsworp doen. Als de redding mislukt, wordt een willekeurig sprekeffect op het doelwit beëindigd. Als het doelwit geen betoveringseffecten heeft, worden de magische eigenschappen van een willekeurig magisch voorwerp in zijn bezit gedurende 1 minuut onderdrukt. Als het voorwerp een toverdrank of boekrol is, wordt het in plaats daarvan niet-magisch."
+					]
+				},
+				{
+					"name": "Talon",
+					"entries": [
+						"{@atk mw} {@hit 9} te raken, bereik 3 m., één doelwit. {@h}15 ({@damage 2d8 + 6}) snijdende schade en het doelwit heeft de {@condition grappled} conditie (ontsnappen {@dc 17}). Tot de houdgreep eindigt, heeft het doelwit de {@condition restrained} conditie en kan het talonbeest Talon niet op een ander doelwit gebruiken."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"charisma"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Veiled Presence",
+			"source": "BMT",
+			"page": 48,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "celestial",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 300,
+				"formula": "40d8 + 120"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": {
+					"number": 80,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 14,
+			"dex": 24,
+			"con": 16,
+			"int": 24,
+			"wis": 20,
+			"cha": 22,
+			"save": {
+				"dex": "+14",
+				"int": "+14"
+			},
+			"skill": {
+				"perception": "+12",
+				"stealth": "+21"
+			},
+			"senses": [
+				"truesight 30 ft."
+			],
+			"passive": 22,
+			"resist": [
+				"necrotic",
+				"radiant"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "21",
+			"trait": [
+				{
+					"name": "Inviolate Presence",
+					"entries": [
+						"De gesluierde aanwezigheid kan niet gericht worden door waarzeggerij of door eigenschappen die zijn gedachten zouden lezen of zijn creatuurtype zouden bepalen."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Als de versluierde aanwezigheid faalt in een reddingsslag, kan hij ervoor kiezen om in plaats daarvan te slagen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De gesluierde aanwezigheid doet twee Blade of Judgment-aanvallen en kan Openbaring gebruiken."
+					]
+				},
+				{
+					"name": "Blade of Judgment",
+					"entries": [
+						"{@atk mw,rw} {@hit 14} te raken, bereik 1,5 m. of 18 m., één doelwit. {@h}10 ({@damage 1d6 + 7}) doordringende schade plus 27 ({@damage 6d8}) stralingsschade. Als het doelwit een wezen is, moet het slagen op een {@dc 22} Charisma saving throw, of tijdens zijn volgende beurt, kan het ofwel bewegen ofwel een actie ondernemen, maar niet beide."
+					]
+				},
+				{
+					"name": "Revelation",
+					"entries": [
+						"De gesluierde aanwezigheid onthult een glimp van zijn buitenwereldse aard aan een wezen dat het kan zien binnen een straal van 9 meter van zichzelf. Het doelwit moet slagen in een {@dc 22} Wisdom saving throw of heeft de {@condition paralyzed} conditie tot het einde van zijn volgende beurt, waarna het doelwit immuun is voor deze Openbaring voor 24 uur."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"Wanneer een aanvaller die de versluierde Aanwezigheid kan zien de versluierde Aanwezigheid raakt met een aanval, halveert de versluierde Aanwezigheid de schade van de aanval."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Flash Step",
+					"entries": [
+						"De gesluierde aanwezigheid teleporteert op magische wijze, samen met alle apparatuur die hij draagt of bij zich heeft, tot 12 meter naar een onbezette ruimte die hij kan zien."
+					]
+				},
+				{
+					"name": "Stab (Costs 2 Actions)",
+					"entries": [
+						"De versluierde aanwezigheid maakt één Blade of Judgment-aanval."
+					]
+				},
+				{
+					"name": "Searing Radiance (Costs 3 Actions)",
+					"entries": [
+						"De gesluierde Aanwezigheid straalt op magische wijze verblindend licht uit in een bol van 3 meter in het midden van zichzelf tot het einde van de volgende beurt, waarbij aanvalsrollen tegen de gesluierde Aanwezigheid nadelig zijn en de gesluierde Aanwezigheid voordeel heeft bij aanvalsrollen. De bol beweegt mee met de gesluierde aanwezigheid. Als een ander wezen zijn beurt begint in het licht of voor het eerst het licht betreedt tijdens zijn beurt, moet dat wezen een {@dc 22} grondwetsreddende worp doen, waarbij het 18 ({@damage 4d8}) stralingsschade oploopt als de redding mislukt, of half zoveel schade als de redding slaagt."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Villain",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"P",
+				"R"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"paralyzed"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Werevulture",
+			"source": "BMT",
+			"page": 184,
+			"size": [
+				"M"
+			],
+			"type": "fiend",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 75,
+				"formula": "10d8 + 30"
+			},
+			"speed": {
+				"walk": 30,
+				"alternate": {
+					"walk": [
+						{
+							"number": 10,
+							"condition": "in vulture form"
+						},
+						{
+							"number": 30,
+							"condition": "in hybrid form"
+						}
+					],
+					"fly": [
+						{
+							"number": 60,
+							"condition": "in vulture or hybrid form"
+						}
+					]
+				}
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 17,
+			"int": 11,
+			"wis": 13,
+			"cha": 8,
+			"skill": {
+				"perception": "+5"
+			},
+			"passive": 15,
+			"languages": [
+				"Common (can't speak in vulture form)"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Regeneration",
+					"entries": [
+						"De weergier krijgt 10 hitpoints terug aan het begin van zijn beurt. Als de weerwolf stralingsschade oploopt, werkt deze eigenschap niet aan het begin van de volgende beurt van de weerwolf. De weerwolf sterft alleen als hij zijn beurt begint met 0 hitpoints en niet regenereert."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De weergier doet twee Talon-aanvallen, of hij doet een Bek-aanval en een Talon-aanval."
+					]
+				},
+				{
+					"name": "Beak (Vulture or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 5} te raken, reikwijdte 1,5 m., één doelwit. {@h}10 ({@damage 2d6 + 3}) doordringende schade. Als het doelwit een mensachtige is, moet het slagen voor een {@dc 13} grondwetsreddende worp of vervloekt worden tot het doelwit van de {@spell Remove Curse} spreuk of een soortgelijk effect. Als het vervloekte doelwit 0 hitpoints heeft, wordt het een weerwolf onder controle van de DM en krijgt het 10 hitpoints terug."
+					]
+				},
+				{
+					"name": "Talon",
+					"entries": [
+						"{@atk mw} {@hit 5} te raken, reikwijdte 1,5 m., één doelwit. {@h}13 ({@damage 4d4 + 3}) schade door snijden."
+					]
+				},
+				{
+					"name": "Longbow (Humanoid or Hybrid Form Only)",
+					"entries": [
+						"{@atk rw} {@hit 4} om te raken, bereik 150/18 m., één doelwit. {@h}11 ({@damage 2d8 + 2}) doordringende schade."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"De weerwolf polymorfeert in een gier-humanoïde hybride, in een gier of terug in zijn humanoïde vorm. Zijn spelstatistieken, behalve zijn snelheid, zijn hetzelfde in elke vorm. Uitrusting die hij draagt of bij zich heeft, wordt niet getransformeerd. Hij keert terug naar zijn humanoïde vorm als hij sterft."
+					]
+				}
+			],
+			"attachedItems": [
+				"longbow|phb"
+			],
+			"traitTags": [
+				"Regeneration"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

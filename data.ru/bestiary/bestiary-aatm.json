@@ -1,0 +1,502 @@
+{
+	"_meta": {
+		"otherSources": {
+			"monster": {
+				"MPP": "AATM",
+				"MM": "AATM",
+				"MPMM": "AATM",
+				"VRGR": "AATM"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Animated Coffin",
+			"source": "AATM",
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 60,
+				"formula": "8d10 + 16"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 15,
+			"int": 3,
+			"wis": 11,
+			"cha": 3,
+			"senses": [
+				"blindsight 60 ft. (can't see beyond this radius)"
+			],
+			"passive": 10,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Если в начале боя одушевленный гроб неподвижен, то он имеет преимущество при броске инициативы. Более того, если существо не наблюдало, как гроб двигается или действует, оно должно успешно пройти проверку {@dc 18} на Интеллект (Исследование), чтобы понять, что гроб одушевлен."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"Оживший гроб может взбираться на сложные поверхности, в том числе вверх ногами по потолку, без проверки способностей."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Оживший гроб наносит две атаки Slam."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 5} попадание, радиус действия 1,5 м., одна цель. {@h}12 ({@damage 2d8 + 3}) повреждений от удара."
+					]
+				},
+				{
+					"name": "Entrap",
+					"entries": [
+						"{@atk mw} {@hit 5} попасть в цель, до которой 1,5 м., одно крупное или более мелкое существо. {@h}Цель имеет состояние {@condition grappled} (побег {@dc 13}). Пока захват не закончится, если цель не является нежитью, цель находится в состоянии {@condition restrained} и получает 14 ({@damage 4d6}) колющего урона в начале каждого своего хода. Оживший гроб может хватать только одно существо одновременно."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance",
+				"Spider Climb"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Factol Skall",
+			"source": "AATM",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "undead",
+				"tags": [
+					"wizard"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 210,
+				"formula": "28d8 + 84"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 11,
+			"dex": 16,
+			"con": 16,
+			"int": 20,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"con": "+9",
+				"int": "+11",
+				"wis": "+8"
+			},
+			"skill": {
+				"arcana": "+17",
+				"history": "+11",
+				"medicine": "+8",
+				"perception": "+8"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 18,
+			"resist": [
+				"cold",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned",
+				"stunned"
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "17",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Скалл произносит одно из следующих заклинаний, не требующих материальных компонентов и использующих интеллект в качестве заклинательной способности (спасение от заклинания {@dc 19}):"
+					],
+					"will": [
+						"{@spell detect magic}",
+						"{@spell mage hand}",
+						"{@spell prestidigitation}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell animate dead} (as an action)",
+							"{@spell dispel magic}",
+							"{@spell speak with dead}"
+						],
+						"1e": [
+							"{@spell finger of death}",
+							"{@spell plane shift} (self only)",
+							"{@spell project image}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Aura of Death",
+					"entries": [
+						"Существа, находящиеся в радиусе 9 м от Скалла, имеют недостаток в бросках спасения от смерти."
+					]
+				},
+				{
+					"name": "Cosmic Annihilation",
+					"entries": [
+						"Существо, убитое Скаллом, может быть возвращено к жизни только с помощью истинного воскрешения или {@spell wish} заклинания."
+					]
+				},
+				{
+					"name": "Legendary Resistance (4/Day)",
+					"entries": [
+						"Если Скалл проваливает бросок спасения, он может выбрать вместо него успешный."
+					]
+				},
+				{
+					"name": "Rejuvenation",
+					"entries": [
+						"Если Скалл умирает, он превращается в пыль. Если его оранжерея душ не была уничтожена, Скалл вновь образуется в морге через {@dice 1d10} дней. Он появляется в радиусе 1,5 м от оратория."
+					]
+				},
+				{
+					"name": "Turn Resistance",
+					"entries": [
+						"Скалл имеет преимущество при бросках спасбросков против любого эффекта, обращающего нежить."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Скалл совершает одну атаку Withering Touch или использует заклинание. Он также дважды использует \"Смертельное заклинание\"."
+					]
+				},
+				{
+					"name": "Withering Touch",
+					"entries": [
+						"{@atk ms} {@hit 11} попадание, радиус действия 1,5 м., одна цель. {@h}32 ({@damage 6d8 + 5}) урона холодом плюс 31 ({@damage 7d8}) некротического урона, и если цель - существо, оно не может восстановить хит-пойнты до начала следующего хода Скалла."
+					]
+				},
+				{
+					"name": "Death Knell",
+					"entries": [
+						"Скалл указывает пальцем на существо, которое он видит в радиусе 36 м от себя, наполняя его сознание видениями смерти и звоном железного колокола. Цель должна успешно выполнить бросок спасброска {@dc 19} Мудрости или получить 14 ({@damage 4d6}) психического урона и состояние {@condition frightened} до начала следующего хода Скалла."
+					]
+				},
+				{
+					"name": "Fog of Death (1/Day)",
+					"entries": [
+						"Скалл источает убийственный туман в виде сферы радиусом 9 м, сосредоточенной на нем самом. Сфера распространяется по углам, и ее область сильно затемняется. Туман держится до начала следующего хода Скалла и не может быть рассеян ветром. Он не перемещается вместе с ним.",
+						"Каждое существо, которое попадает в туман впервые за ход или начинает свой ход, должно сделать бросок спасброска на {@dc 19} Конституцию, при неудачном броске оно получает 28 ({@damage 8d6}) некротических повреждений и 28 ({@damage 8d6}) повреждений ядом, при удачном - в два раза меньше. Гуманоид среднего или меньшего размера, убитый этим уроном, превращается в зомби под контролем Скалла. Зомби действует по инициативе Скалла, но сразу после его хода. Без какой-либо другой команды зомби пытается убить любое встреченное им существо, не являющееся нежитью."
+					]
+				}
+			],
+			"reactionHeader": [
+				"Skall can take up to three reactions per round but only one per turn."
+			],
+			"reaction": [
+				{
+					"name": "Baleful Counterspell",
+					"entries": [
+						"Скалл стучит зубами, чтобы прервать произнесение заклинания существом, которое он видит в радиусе 18 метров от себя. Если заклинание 4-го уровня или ниже, оно проваливается и не имеет эффекта. Если заклинание 5-го уровня или выше, Скалл делает проверку Интеллекта ({@dc 10} + уровень заклинания). При успешной проверке заклинание проваливается и не имеет эффекта. Независимо от уровня заклинания, при провале заклинания заклинатель получает 10 ({@damage 3d6}) некротических повреждений."
+					]
+				},
+				{
+					"name": "Near-Death Experience",
+					"entries": [
+						"В ответ на атаку Скалл телепортируется вместе со всем снаряжением, которое он носит или несет, на расстояние до 9 м в незанятое пространство, которое он может видеть."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Rejuvenation",
+				"Turn Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"C",
+				"I",
+				"N",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Heralds of Dust Exorcist",
+			"source": "AATM",
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				13,
+				{
+					"ac": 16,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 112,
+				"formula": "15d8 + 45"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 16,
+			"con": 16,
+			"int": 17,
+			"wis": 14,
+			"cha": 11,
+			"save": {
+				"int": "+6",
+				"wis": "+5",
+				"cha": "+3"
+			},
+			"skill": {
+				"arcana": "+6",
+				"perception": "+5",
+				"religion": "+6"
+			},
+			"senses": [
+				"truesight 60 ft."
+			],
+			"passive": 15,
+			"resist": [
+				"necrotic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common plus three more languages"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Экзорцист произносит одно из следующих заклинаний, не требующих материальных компонентов и использующих интеллект в качестве заклинательной способности (спасбросок от заклинания {@dc 14}, {@hit 6} для попадания при атаке заклинанием):",
+						"At-will: detect evil and good, mage armor (только для себя), mage hand"
+					],
+					"daily": {
+						"2e": [
+							"{@spell protection from evil and good}",
+							"{@spell remove curse}",
+							"{@spell speak with dead}"
+						],
+						"1e": [
+							"{@spell banishment}",
+							"{@spell dispel evil and good}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Incorruptible Vessel",
+					"entries": [
+						"Экзорцист не может быть одержим небесными существами, извергами или нежитью."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Экзорцист совершает две атаки Grave Burst."
+					]
+				},
+				{
+					"name": "Grave Burst",
+					"entries": [
+						"{@atk ms,rs} {@hit 6} попадание, радиус действия 1,5 м. или дальность 36 м., одна цель. {@h}19 ({@damage 3d10 + 3}) некротический или лучевой урон (по выбору экзорциста)."
+					]
+				},
+				{
+					"name": "Admit Entity {@recharge 5}",
+					"entries": [
+						"Экзорцист раздвигает завесу смерти для существа, которое он видит в радиусе 18 м от себя, открывая цель для злобных сущностей. Цель должна сделать бросок спасения {@dc 14} по Харизме. При неудачном спасброске цель получает 36 ({@damage 8d8}) психических повреждений и находится в состоянии {@condition incapacitated} в течение 1 минуты, в течение которой она рвет и бессвязно бормочет не своим голосом. При успешном спасброске цель получает только вдвое меньший урон. Цель {@condition incapacitated} может повторить бросок спасброска в конце каждого своего хода, прекратив эффект на себе при успехе."
+					]
+				}
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"R",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"conditionInflictSpell": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"charisma"
+			],
+			"savingThrowForcedSpell": [
+				"charisma"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

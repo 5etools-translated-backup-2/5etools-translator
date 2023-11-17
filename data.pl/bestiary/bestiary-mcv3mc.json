@@ -1,0 +1,575 @@
+{
+	"monster": [
+		{
+			"name": "Blaze",
+			"source": "MCV3MC",
+			"page": 3,
+			"otherSources": [
+				{
+					"source": "LK"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "elemental",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 75,
+				"formula": "10d8 + 30"
+			},
+			"speed": {
+				"walk": 20,
+				"fly": {
+					"number": 20,
+					"condition": "(vertical movement only; hover)"
+				},
+				"canHover": true
+			},
+			"str": 16,
+			"dex": 17,
+			"con": 16,
+			"int": 6,
+			"wis": 10,
+			"cha": 7,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"fire"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Blaze Rod",
+					"entries": [
+						"Gdy płomień spadnie do 0 punktów wytrzymałości, znika w chmurze dymu i ma 50% szans na pozostawienie po sobie świecącego pręta o wartości 100 gp. Pręt rzuca słabe światło w promieniu 1,5 metra. W ramach akcji istota może spróbować złamać pręt, wykonując udany {@dc 14} test Wytrzymałości. Złamany pręt uwalnia swoją ognistą energię w kuli o promieniu 1,5 metra skupionej wokół siebie. Każda istota w tym obszarze musi wykonać {@dc 14} rzut obronny na Zręczność, otrzymując 6 ({@damage 1d12}) obrażeń od ognia w przypadku nieudanego rzutu obronnego lub o połowę mniej obrażeń w przypadku udanego rzutu obronnego."
+					]
+				},
+				{
+					"name": "Heat Aura",
+					"entries": [
+						"Każda istota, która rozpocznie swoją turę w promieniu 1,5 metra od płomienia, otrzymuje 3 ({@damage 1d6}) obrażenia od ognia."
+					]
+				},
+				{
+					"name": "Illumination",
+					"entries": [
+						"Płomień rzuca jasne światło w promieniu 6 metrów i słabe światło na dodatkowe 6 metrów."
+					]
+				},
+				{
+					"name": "Water Susceptibility",
+					"entries": [
+						"Płomień otrzymuje 1 obrażenie od zimna za każde 1,5 metra ruchu w wodzie, za każdy galon rozpryskanej na niego wody lub za każdym razem, gdy rozpoczyna swoją turę w deszczu."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Blaze wykonuje trzy ataki Fiery Doom."
+					]
+				},
+				{
+					"name": "Fiery Doom",
+					"entries": [
+						"{@atk ms,rs} {@hit 6} do trafienia; zasięg 1,5 m. lub 18 m., jeden cel. {@h}8 ({@damage 1d10 + 3}) obrażeń od ognia, a cel zapala się, jeśli jest istotą lub łatwopalnym przedmiotem. Dopóki istota nie wykona akcji ugaszenia pożaru, płonący cel otrzymuje 3 ({@damage 1d6}) pkt. obrażeń od ognia na koniec każdej swojej tury."
+					]
+				}
+			],
+			"traitTags": [
+				"Illumination"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"C",
+				"F"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Creeper",
+			"source": "MCV3MC",
+			"page": 4,
+			"otherSources": [
+				{
+					"source": "LK"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 19,
+				"formula": "3d8 + 6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 11,
+			"con": 14,
+			"int": 6,
+			"wis": 8,
+			"cha": 3,
+			"skill": {
+				"perception": "+3",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"immune": [
+				"lightning"
+			],
+			"conditionImmune": [
+				"exhaustion"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Bizarre Physiology",
+					"entries": [
+						"Pełzacz nie może podejmować akcji poza {@action Dash}, {@action Disengage}, {@action Hide} i {@action Search}. Nie może podejmować akcji bonusowych ani reakcji."
+					]
+				},
+				{
+					"name": "Creeper Head",
+					"entries": [
+						"Kiedy pnącze spadnie do 0 punktów trafień od eksplozji naładowanego pnącza (patrz cecha Zniszczenie), umiera, a jego głowa odpada. Odpadająca głowa pełzacza jest pusta i może być noszona jako maska z otworami na oczy i usta."
+					]
+				},
+				{
+					"name": "Destruction",
+					"entries": [
+						"Po zakończeniu swojej tury w promieniu 3 metrów od humanoida, którego widzi, pnącze przestaje się poruszać i wydaje z siebie syk na tyle głośny, że mogą go usłyszeć istoty w promieniu 9 metrów od niego.",
+						"Jeśli pełzacz spadnie do 0 punktów trafień przed rozpoczęciem swojej kolejnej tury, syczenie ustaje, a pełzacz ginie. W przeciwnym razie, na początku następnej tury pełzacza, dzieje się jedna z następujących rzeczy:",
+						{
+							"type": "list",
+							"items": [
+								"Jeśli w promieniu 3 metrów od syczącego pnącza nie ma humanoidów, przestaje ono syczeć. Następnie wykorzystuje dostępny ruch, aby zbliżyć się do najbliższego Humanoida, którego widzi.",
+								"Jeśli w promieniu 3 metrów od syczącego pnącza znajduje się jeden lub więcej humanoidów, pnącze eksploduje kulą energii, która wypełnia sferę o promieniu 6 metrów skupioną wokół niego. Energia ta rozprzestrzenia się wokół narożników. Pnącze zostaje zniszczone, a każda inna istota w obszarze eksplozji musi wykonać {@dc 12} rzut obronny na Zręczność, otrzymując 14 ({@damage 4d6}) obrażeń od błyskawic w przypadku nieudanego rzutu obronnego lub połowę tych obrażeń w przypadku udanego rzutu obronnego. Obrażenia te wzrastają o 7 ({@dice 2d6}), jeśli pnącze jest naładowane (patrz \"Naładowanie elektryczne\" poniżej). Przedmioty w pobliżu, które nie są noszone lub przenoszone, otrzymują 14 ({@damage 4d6}) obrażeń od błyskawic lub 21 ({@damage 6d6}) obrażeń od błyskawic, jeśli pnącze jest naładowane."
+							]
+						}
+					]
+				},
+				{
+					"name": "Electrical Charge",
+					"entries": [
+						"Za każdym razem, gdy pnącze otrzyma obrażenia od błyskawic, nie otrzymuje żadnych obrażeń, a zamiast tego zostaje naładowane na 1 minutę. Po naładowaniu pnącze emituje słabe niebieskie światło w promieniu 1,5 metra."
+					]
+				},
+				{
+					"name": "Fear of Felines",
+					"entries": [
+						"Pnącze ma warunek {@condition frightened} za każdym razem, gdy rozpoczyna swoją turę w promieniu 18 metrów od widocznego kociego stworzenia. Stan ten utrzymuje się do początku następnej tury pnącza."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"L"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ender Dragon",
+			"source": "MCV3MC",
+			"page": 5,
+			"otherSources": [
+				{
+					"source": "LK"
+				}
+			],
+			"size": [
+				"G"
+			],
+			"type": "dragon",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 22,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 350,
+				"formula": "20d20 + 140"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 120
+			},
+			"str": 27,
+			"dex": 14,
+			"con": 25,
+			"int": 10,
+			"wis": 15,
+			"cha": 19,
+			"save": {
+				"con": "+13",
+				"int": "+6",
+				"wis": "+8"
+			},
+			"skill": {
+				"perception": "+14",
+				"stealth": "+8"
+			},
+			"senses": [
+				"darkvision 240 ft."
+			],
+			"passive": 24,
+			"resist": [
+				"fire"
+			],
+			"immune": [
+				"necrotic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Draconic"
+			],
+			"cr": "19",
+			"trait": [
+				{
+					"name": "Dragon Egg",
+					"entries": [
+						"Kiedy Ender Dragon spadnie do 0 punktów życia, wypromieniowuje wiązki fioletowego światła, a następnie znika, pozostawiając po sobie bezwładne, czarne jak smok jajo o wartości 5000 gp."
+					]
+				},
+				{
+					"name": "Legendary Resistance (4/Day)",
+					"entries": [
+						"Jeśli smokowi nie uda się rzut ratunkowy, może zamiast tego wybrać sukces."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Smok wykonuje jeden atak typu Bite i używa Beating Wings."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 14} do trafienia; zasięg 4,5 m., jeden cel. {@h}18 ({@damage 3d6 + 8}) obrażeń przebijających plus 7 ({@damage 2d6}) obrażeń nekrotycznych."
+					]
+				},
+				{
+					"name": "Beating Wings",
+					"entries": [
+						"Smok uderza swoimi wielkimi skrzydłami. Każda istota w promieniu 4,5 metra od smoka musi wykonać {@dc 21} rzut obronny na Zręczność albo otrzyma 10 ({@damage 1d4 + 8}) obrażeń od obrażeń kłutych, zostanie odepchnięta na odległość 3 metrów od smoka i będzie podlegać warunkowi {@condition prone}."
+					]
+				},
+				{
+					"name": "Harmful Breath {@recharge 5}",
+					"entries": [
+						"Smok wydycha zgniły gaz w stożku o średnicy 18 metrów. Każda istota w tym obszarze musi wykonać {@dc 21} rzut obronny na Konstytucję, otrzymując 52 ({@damage 15d6}) obrażeń nekrotycznych w przypadku nieudanego rzutu obronnego lub o połowę mniej obrażeń w przypadku udanego rzutu obronnego. Następnie smok wybiera widoczny punkt, w którym stożek styka się z ziemią. Punkt ten staje się środkiem cylindra gazu o wysokości 3 metrów i promieniu 3 metrów, który znika na początku następnej tury smoka. Każda istota, która rozpocznie swoją turę w cylindrze, otrzymuje 10 ({@damage 3d6}) obrażeń nekrotycznych."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"DR"
+			],
+			"damageTags": [
+				"B",
+				"N",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Enderman",
+			"source": "MCV3MC",
+			"page": 6,
+			"otherSources": [
+				{
+					"source": "LK"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 78,
+				"formula": "12d8 + 24"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 15,
+			"dex": 18,
+			"con": 15,
+			"int": 10,
+			"wis": 18,
+			"cha": 11,
+			"save": {
+				"str": "+5",
+				"con": "+5"
+			},
+			"skill": {
+				"perception": "+7",
+				"stealth": "+7",
+				"survival": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 17,
+			"resist": [
+				"necrotic"
+			],
+			"languages": [
+				"Endspeech"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Evasive Teleportation",
+					"entries": [
+						"Za każdym razem, gdy otrzymuje obrażenia lub jest celem ataku dystansowego, Enderman może teleportować się wraz z całym ekwipunkiem, który ma na sobie lub niesie, do niezajętej przestrzeni, którą widzi w promieniu 6 metrów od siebie (nie jest wymagana żadna akcja). Jeśli efekt ten zostanie wywołany przez atak dystansowy, Enderman teleportuje się tuż przed trafieniem, przez co atak go omija. Ta cecha jest tłumiona, gdy Enderman ma stan {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Implosion",
+					"entries": [
+						"Kiedy Enderman spadnie do 0 punktów wytrzymałości, umiera, a jego ciało imploduje. Rzut na {@dice d10}. Jeśli wypadnie 9 lub mniej, Enderman nie pozostawia po sobie żadnych szczątków. Przy rzucie 10, Enderman pozostawia po sobie świecącą, fioletową kulę zwaną Perłą Endera, wartą 500 gp. Stworzenie może rzucić perłą na odległość do 18 metrów; jeśli perła wyląduje w niezajętej przestrzeni wystarczająco dużej, aby pomieścić stworzenie, stworzenie teleportuje się do tej przestrzeni wraz z całym sprzętem, który nosi lub niesie, a perła znika."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"Podczas przebywania w świetle słonecznym Enderman ma minusy w rolkach ataku."
+					]
+				},
+				{
+					"name": "Water Susceptibility",
+					"entries": [
+						"Enderman otrzymuje 1 obrażenie od zimna za każde 1,5 metra ruchu w wodzie, za każdy galon rozpryskanej na niego wody lub za każdym razem, gdy rozpoczyna swoją turę w deszczu."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Enderman wykonuje dwa ataki Slam."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 7} do trafienia; zasięg 3 m., jeden cel. {@h}8 ({@damage 1d8 + 4}) obrażeń obuchowych plus 9 ({@damage 2d8}) obrażeń nekrotycznych."
+					]
+				}
+			],
+			"traitTags": [
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"C",
+				"N"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Wolf of the Overworld",
+			"source": "MCV3MC",
+			"page": 7,
+			"otherSources": [
+				{
+					"source": "LK"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 11,
+				"formula": "2d8 + 2"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 12,
+			"dex": 15,
+			"con": 12,
+			"int": 3,
+			"wis": 12,
+			"cha": 6,
+			"skill": {
+				"perception": "+5",
+				"stealth": "+4"
+			},
+			"passive": 15,
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"Wilk ma przewagę w rzutach ataku przeciwko stworzeniu, jeśli przynajmniej jeden z sojuszników wilka znajduje się w promieniu 1,5 metra od stworzenia, a sojusznik nie ma warunku {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} do trafienia; zasięg 1,5 m., jeden cel. {@h}7 ({@damage 2d4 + 2}) obrażeń przeszywających. Jeśli celem jest stworzenie, musi mu się udać {@dc 11} rzut obronny na Siłę lub spełnić warunek {@condition prone}."
+					]
+				}
+			],
+			"traitTags": [
+				"Pack Tactics"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

@@ -1,0 +1,502 @@
+{
+	"_meta": {
+		"otherSources": {
+			"monster": {
+				"MPP": "AATM",
+				"MM": "AATM",
+				"MPMM": "AATM",
+				"VRGR": "AATM"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Animated Coffin",
+			"source": "AATM",
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 60,
+				"formula": "8d10 + 16"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 15,
+			"int": 3,
+			"wis": 11,
+			"cha": 3,
+			"senses": [
+				"blindsight 60 ft. (can't see beyond this radius)"
+			],
+			"passive": 10,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Jeśli ożywiona trumna jest nieruchoma na początku walki, ma przewagę w rzucie na inicjatywę. Co więcej, jeśli istota nie zaobserwowała ruchu lub działania trumny, musi wykonać {@dc 18} testu Inteligencji (Śledztwo), aby stwierdzić, że trumna jest ożywiona."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"Animowana trumna może wspinać się po trudnych powierzchniach, w tym do góry nogami po suficie, bez konieczności wykonywania testu umiejętności."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Animowana trumna wykonuje dwa ataki typu Slam."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 5} do trafienia, zasięg 1,5 m., jeden cel. {@h}12 ({@damage 2d8 + 3}) obrażeń obuchowych."
+					]
+				},
+				{
+					"name": "Entrap",
+					"entries": [
+						"{@atk mw} {@hit 5} do trafienia, zasięg 1,5 m., jedno Duże lub mniejsze stworzenie. {@h}Cel ma warunek {@condition grappled} (ucieczka {@dc 13}). Jeśli cel nie jest nieumarłym, to do czasu zakończenia chwytania posiada on warunek {@condition restrained} i otrzymuje 14 ({@damage 4d6}) obrażeń kłutych na początku każdej swojej tury. Ożywiona trumna może chwycić tylko jedną istotę na raz."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance",
+				"Spider Climb"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Factol Skall",
+			"source": "AATM",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "undead",
+				"tags": [
+					"wizard"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 210,
+				"formula": "28d8 + 84"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 11,
+			"dex": 16,
+			"con": 16,
+			"int": 20,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"con": "+9",
+				"int": "+11",
+				"wis": "+8"
+			},
+			"skill": {
+				"arcana": "+17",
+				"history": "+11",
+				"medicine": "+8",
+				"perception": "+8"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 18,
+			"resist": [
+				"cold",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned",
+				"stunned"
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "17",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Skall rzuca jedno z poniższych zaklęć, niewymagające składników materialnych i wykorzystujące Inteligencję jako zdolność rzucania czarów (ratunek przed zaklęciem {@dc 19}):"
+					],
+					"will": [
+						"{@spell detect magic}",
+						"{@spell mage hand}",
+						"{@spell prestidigitation}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell animate dead} (as an action)",
+							"{@spell dispel magic}",
+							"{@spell speak with dead}"
+						],
+						"1e": [
+							"{@spell finger of death}",
+							"{@spell plane shift} (self only)",
+							"{@spell project image}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Aura of Death",
+					"entries": [
+						"Stworzenia znajdujące się w promieniu 9 metrów od Skalla mają utrudnione rzuty obronne na śmierć."
+					]
+				},
+				{
+					"name": "Cosmic Annihilation",
+					"entries": [
+						"Istota zabita przez Skalla może zostać przywrócona do życia tylko za pomocą prawdziwego wskrzeszenia lub {@spell wish} zaklęcia."
+					]
+				},
+				{
+					"name": "Legendary Resistance (4/Day)",
+					"entries": [
+						"Jeśli Skallowi nie powiedzie się rzut obronny, może zamiast tego wybrać rzut udany."
+					]
+				},
+				{
+					"name": "Rejuvenation",
+					"entries": [
+						"Jeśli Skall umrze, obróci się w proch. Jeśli jego orreria dusz nie została zniszczona, Skall ponownie uformuje się w kostnicy w ciągu {@dice 1d10} dni. Pojawia się w odległości 1,5 metra od kryjówki."
+					]
+				},
+				{
+					"name": "Turn Resistance",
+					"entries": [
+						"Skall ma przewagę przy rzutach obronnych przeciwko efektom zmieniającym go w nieumarłego."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Skall wykonuje jeden atak Trawiącym Dotykiem lub używa Zaklęcia. Używa również dwukrotnie Zaklęcia Śmierci."
+					]
+				},
+				{
+					"name": "Withering Touch",
+					"entries": [
+						"{@atk ms} {@hit 11} do trafienia, zasięg 1,5 m., jeden cel. {@h}32 ({@damage 6d8 + 5}) obrażeń od zimna plus 31 ({@damage 7d8}) obrażeń nekrotycznych, a jeśli celem jest stworzenie, nie może odzyskać punktów życia do początku następnej tury Skalla."
+					]
+				},
+				{
+					"name": "Death Knell",
+					"entries": [
+						"Skall wskazuje palcem na istotę, którą widzi w promieniu 36 metrów od siebie, wypełniając umysł celu wizjami śmierci i donośnym biciem żelaznego dzwonu. Cel musi wykonać {@dc 19} rzut obronny na Mądrość albo otrzyma 14 ({@damage 4d6}) obrażeń psychicznych i będzie cierpiał na {@condition frightened} do początku następnej tury Skalla."
+					]
+				},
+				{
+					"name": "Fog of Death (1/Day)",
+					"entries": [
+						"Skall emanuje zabójczą mgłą w kuli o promieniu 9 metrów skupionej na nim samym. Kula rozprzestrzenia się za rogami, a jej obszar jest mocno zaciemniony. Mgła utrzymuje się do początku następnej tury Skalla i nie może zostać rozproszona przez wiatr. Nie przemieszcza się wraz z nim.",
+						"Każda istota, która wejdzie do mgły po raz pierwszy w swojej turze lub rozpocznie w niej swoją turę, musi wykonać {@dc 19} rzut obronny na Konstytucję, otrzymując 28 ({@damage 8d6}) obrażeń nekrotycznych i 28 ({@damage 8d6}) obrażeń od trucizny w przypadku nieudanego rzutu obronnego lub połowę tych obrażeń w przypadku udanego rzutu obronnego. Średni lub mniejszy humanoid zabity przez te obrażenia staje się zombie pod kontrolą Skalla. Zombie działa z inicjatywy Skalla, ale natychmiast po jego turze. W przypadku braku innych poleceń, zombie próbuje zabić każdą napotkaną nieumarłą istotę."
+					]
+				}
+			],
+			"reactionHeader": [
+				"Skall can take up to three reactions per round but only one per turn."
+			],
+			"reaction": [
+				{
+					"name": "Baleful Counterspell",
+					"entries": [
+						"Skall szczerzy zęby, by przerwać rzucanie zaklęcia przez istotę, którą widzi w promieniu 18 metrów od siebie. Jeśli zaklęcie jest 4. lub niższego poziomu, nie powiedzie się i nie wywoła żadnego efektu. Jeśli zaklęcie jest 5. lub wyższego poziomu, Skall wykonuje test Inteligencji ({@dc 10} + poziom zaklęcia). Jeśli test się powiedzie, zaklęcie nie powiedzie się i nie wywoła żadnego efektu. Niezależnie od poziomu zaklęcia, rzucający otrzymuje 10 ({@damage 3d6}) obrażeń nekrotycznych, jeśli zaklęcie się nie powiedzie."
+					]
+				},
+				{
+					"name": "Near-Death Experience",
+					"entries": [
+						"W odpowiedzi na trafienie atakiem, Skall teleportuje się wraz z noszonym ekwipunkiem na odległość do 9 metrów do niezajętej przestrzeni, którą widzi."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Rejuvenation",
+				"Turn Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"C",
+				"I",
+				"N",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Heralds of Dust Exorcist",
+			"source": "AATM",
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				13,
+				{
+					"ac": 16,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 112,
+				"formula": "15d8 + 45"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 16,
+			"con": 16,
+			"int": 17,
+			"wis": 14,
+			"cha": 11,
+			"save": {
+				"int": "+6",
+				"wis": "+5",
+				"cha": "+3"
+			},
+			"skill": {
+				"arcana": "+6",
+				"perception": "+5",
+				"religion": "+6"
+			},
+			"senses": [
+				"truesight 60 ft."
+			],
+			"passive": 15,
+			"resist": [
+				"necrotic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common plus three more languages"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Egzorcysta rzuca jedno z poniższych zaklęć, niewymagające składników materialnych i wykorzystujące Inteligencję jako zdolność rzucania czarów ({@dc 14} ochrony przed zaklęciem, {@hit 6} do trafienia przy atakach zaklęciem):",
+						"W dowolnej chwili: wykrywanie zła i dobra, zbroja maga (tylko dla siebie), ręka maga"
+					],
+					"daily": {
+						"2e": [
+							"{@spell protection from evil and good}",
+							"{@spell remove curse}",
+							"{@spell speak with dead}"
+						],
+						"1e": [
+							"{@spell banishment}",
+							"{@spell dispel evil and good}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Incorruptible Vessel",
+					"entries": [
+						"Egzorcysta nie może zostać opętany przez niebiańskie istoty, diabły lub nieumarłych."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Egzorcysta wykonuje dwa ataki Grave Burst."
+					]
+				},
+				{
+					"name": "Grave Burst",
+					"entries": [
+						"{@atk ms,rs} {@hit 6} do trafienia, zasięg 1,5 m. lub zasięg 36 m., jeden cel. {@h}19 ({@damage 3d10 + 3}) obrażeń nekrotycznych lub promienistych (do wyboru przez egzorcystę)."
+					]
+				},
+				{
+					"name": "Admit Entity {@recharge 5}",
+					"entries": [
+						"Egzorcysta przerzedza zasłonę śmierci dla istoty, którą widzi w promieniu 18 metrów od siebie, wystawiając cel na działanie złowrogich bytów. Cel musi wykonać {@dc 14} rzut obronny na Charyzmę. W przypadku nieudanego rzutu obronnego, cel otrzymuje 36 ({@damage 8d8}) obrażeń psychicznych i cierpi na {@condition incapacitated} stan przez 1 minutę, w czasie której wymiotuje i bełkocze niespójnie głosem, który nie jest jego własnym. Po udanym ocaleniu cel otrzymuje tylko połowę obrażeń. Cel {@condition incapacitated} może powtórzyć rzut obronny na koniec każdej swojej tury, kończąc efekt na sobie w przypadku powodzenia."
+					]
+				}
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"R",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"conditionInflictSpell": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"charisma"
+			],
+			"savingThrowForcedSpell": [
+				"charisma"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

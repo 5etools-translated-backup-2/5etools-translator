@@ -1,0 +1,62 @@
+{
+	"spell": [
+		{
+			"name": "Mind Sliver",
+			"source": "UASorcererAndWarlock",
+			"page": 4,
+			"level": 0,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Du driver en desorienterande spik av psykisk energi in i sinnet på en varelse som du kan se inom räckhåll. Målet måste göra ett räddningsslag för intelligens. Om räddningsslaget inte lyckas tar målet {@damage 1d6} psykisk skada, och första gången det gör ett räddningsslag före slutet av din nästa tur måste det slå ett {@dice d4} och subtrahera det slagna numret från räddningsslaget.",
+				"Denna besvärjelses skada ökar med {@dice 1d6} när du når vissa nivåer: 5:e nivån ({@damage 2d6}), 11:e nivån ({@damage 3d6}), och 17:e nivån ({@damage 4d6})."
+			],
+			"scalingLevelDice": {
+				"label": "psychic damage",
+				"scaling": {
+					"1": "1d6",
+					"5": "2d6",
+					"11": "3d6",
+					"17": "4d6"
+				}
+			},
+			"damageInflict": [
+				"psychic"
+			],
+			"savingThrow": [
+				"intelligence"
+			],
+			"miscTags": [
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		}
+	]
+}

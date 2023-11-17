@@ -1,0 +1,160 @@
+{
+	"spell": [
+		{
+			"name": "Antagonize",
+			"source": "BMT",
+			"page": 50,
+			"level": 3,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "un naipe que representa a un pícaro"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Susurras palabras mágicas que antagonizan a una criatura de tu elección dentro de tu alcance. El objetivo debe realizar una tirada de salvación de Sabiduría. En una salvación fallida, el objetivo recibe {@damage 4d4} de daño psíquico y debe usar inmediatamente su reacción para hacer un ataque cuerpo a cuerpo contra otra criatura de tu elección que puedas ver. Si el objetivo no puede realizar este ataque (por ejemplo, porque no hay nadie a su alcance o porque su reacción no está disponible), el objetivo tiene desventaja en la siguiente tirada de ataque que realice antes del comienzo de tu siguiente turno. Si la salvación tiene éxito, el objetivo sólo recibe la mitad de daño."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 4º nivel o superior, el daño aumenta un {@dice 1d4} por cada nivel de ranura superior al 3º."
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Spirit of Death",
+			"source": "BMT",
+			"page": 50,
+			"level": 4,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un naipe dorado de un valor mínimo de 400 gp que represente a un avatar de la muerte",
+					"cost": 40000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Invocas a un espíritu que encarna la muerte. El espíritu se manifiesta en un espacio desocupado que puedas ver dentro del alcance y utiliza el bloqueo de estadísticas {@creature reaper spirit|BMT}. El espíritu desaparece cuando queda reducido a 0 puntos de vida o cuando finaliza el hechizo.",
+				"El espíritu es un aliado tuyo y de tus compañeros. En combate, el espíritu comparte tu cuenta de iniciativa y toma su turno inmediatamente después del tuyo. Obedece tus órdenes verbales (no requiere ninguna acción por tu parte). Si no le das ninguna orden, realiza la acción {@action Dodge} y utiliza su movimiento para evitar el peligro."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 5º nivel o superior, utiliza el nivel más alto siempre que el nivel del hechizo aparezca en el bloque de estadísticas del espíritu segador."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Spray of Cards",
+			"source": "BMT",
+			"page": 50,
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 15
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "una baraja de cartas"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Rocías un cono de cartas espectrales de 4,5 metros. Cada criatura en esa área debe hacer una tirada de salvación de Destreza. Si falla, la criatura sufre {@damage 2d10} de daño de fuerza y tiene la condición {@condition blinded} hasta el final de su siguiente turno. Si la salvación tiene éxito, la criatura sólo recibe la mitad de daño."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 3er nivel o superior, el daño aumenta un {@dice 1d10} por cada nivel de ranura superior al 2º."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrow": [
+				"dexterity"
+			]
+		}
+	]
+}

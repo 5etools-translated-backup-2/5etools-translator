@@ -1,0 +1,2785 @@
+{
+	"psionic": [
+		{
+			"name": "Adaptive Body",
+			"source": "UATheMysticClass",
+			"page": 10,
+			"type": "D",
+			"order": "Immortal",
+			"entries": [
+				"Vous pouvez modifier votre corps pour l'adapter à votre environnement, ce qui vous permet de résister à des environnements difficiles. Avec une plus grande énergie psi, vous pouvez étendre cette protection aux autres."
+			],
+			"focus": "While focused on this discipline, you don't need to eat, breathe, or sleep. To gain the benefits of a long rest, you can spend 8 hours engaged in light activity, rather than sleeping during any of it.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Environmental Adaptation",
+					"entries": [
+						"Comme action, vous ou une créature que vous touchez ignorez les effets de la chaleur ou du froid extrême (mais pas les dégâts de froid ou de feu) pour l'heure suivante."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Adaptive Shield",
+					"entries": [
+						"Lorsque vous subissez des dégâts d'acide, de froid, de feu, de foudre ou de tonnerre, vous pouvez utiliser votre réaction pour gagner une résistance aux dégâts de ce type - y compris les dégâts déclencheurs - jusqu'à la fin de votre prochain tour."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Energy Adaptation",
+					"entries": [
+						"Au cours d'une action, vous pouvez toucher une créature et lui conférer une résistance aux dégâts d'acide, de froid, de feu, de foudre ou de tonnerre (au choix), qui dure jusqu'à la fin de votre {@status concentration}."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Energy Immunity",
+					"entries": [
+						"Au cours d'une action, vous pouvez toucher une créature et lui conférer une immunité aux dégâts d'acide, de froid, de feu, de foudre ou de tonnerre (au choix), qui dure jusqu'à la fin de votre {@status concentration}."
+					]
+				}
+			]
+		},
+		{
+			"name": "Aura Sight",
+			"source": "UATheMysticClass",
+			"page": 10,
+			"type": "D",
+			"order": "Awakened",
+			"entries": [
+				"Vous recentrez votre vue pour voir l'énergie qui entoure toutes les créatures. Vous percevez des auras, des signatures énergétiques qui peuvent révéler des éléments clés de la nature d'une créature."
+			],
+			"focus": "While focused on this discipline, you have advantage on Wisdom ({@skill Insight}) checks.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Assess Foe",
+					"entries": [
+						"Comme action bonus, vous analysez l'aura d'une créature que vous voyez. Vous apprenez son total de points de vie actuel et toutes ses immunités, résistances et vulnérabilités."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Read Moods",
+					"entries": [
+						"Comme action bonus, vous apprenez un résumé en un mot de l'état émotionnel d'un maximum de six créatures que vous pouvez voir, comme heureux, confus, effrayé ou violent."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "View Aura",
+					"entries": [
+						"Comme action, vous étudiez l'aura d'une créature. Jusqu'à la fin de votre {@status concentration}, tant que vous pouvez voir la cible, vous apprenez si elle est sous l'effet d'un effet magique ou psionique, son nombre de points de vie et son état émotionnel de base. Tant que dure cet effet, vous avez l'avantage aux tests de Sagesse ({@skill Insight}) et de Charisme que vous effectuez contre elle."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Perceive the Unseen",
+					"entries": [
+						"Comme action bonus, vous gagnez la capacité de voir les auras même de {@condition invisible} ou de créatures cachées. Jusqu'à la fin de votre {@status concentration}, vous pouvez voir toutes les créatures, y compris celles qui sont cachées et {@condition invisible}, quelles que soient les conditions d'éclairage."
+					]
+				}
+			]
+		},
+		{
+			"name": "Beacon",
+			"source": "UATheMysticClass",
+			"page": 27,
+			"type": "T",
+			"entries": [
+				"Comme action bonus, vous faites rayonner de votre corps une lumière vive dans un rayon de 6 mètres et une lumière tamisée sur 6 mètres supplémentaires. La lumière peut être colorée comme vous le souhaitez. La lumière dure 1 heure, et vous pouvez l'éteindre plus tôt par une action bonus."
+			]
+		},
+		{
+			"name": "Bestial Form",
+			"source": "UATheMysticClass",
+			"page": 11,
+			"type": "D",
+			"order": "Immortal",
+			"entries": [
+				"Vous transformez votre corps, en acquérant les traits de différentes bêtes."
+			],
+			"focus": "While focused on this discipline, you have advantage on Wisdom ({@skill Animal Handling}) checks.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Bestial Claws",
+					"entries": [
+						"Vous manifestez de longues griffes pendant un instant et effectuez une attaque d'arme de mêlée contre une créature située à moins de 1,5 mètre de vous. En cas de succès, cette attaque inflige {@scaledamage 1d10|1-7|1d10|psi} de dégâts tranchants par point psi dépensé."
+					]
+				},
+				{
+					"name": "Bestial Transformation",
+					"entries": [
+						"Comme action bonus, vous modifiez votre forme physique pour acquérir différentes caractéristiques. Lorsque vous utilisez cette capacité, vous pouvez choisir un ou plusieurs des effets suivants. Chaque effet a son propre coût en points psi. Additionnez-les pour déterminer le coût total. Cette transformation dure 1 heure, jusqu'à votre mort ou jusqu'à ce que vous y mettiez fin par une action bonus."
+					],
+					"submodes": [
+						{
+							"cost": {
+								"min": 2,
+								"max": 2
+							},
+							"name": "Amphibious",
+							"entries": [
+								"Tu acquiers des branchies, tu peux respirer de l'air et de l'eau."
+							]
+						},
+						{
+							"cost": {
+								"min": 2,
+								"max": 2
+							},
+							"name": "Climbing",
+							"entries": [
+								"Il vous pousse de minuscules griffes crochues qui vous donnent une vitesse d'ascension égale à votre vitesse de marche."
+							]
+						},
+						{
+							"cost": {
+								"min": 5,
+								"max": 5
+							},
+							"name": "Flight",
+							"entries": [
+								"Des ailes poussent dans votre dos. Vous gagnez une vitesse de vol égale à votre vitesse de marche."
+							]
+						},
+						{
+							"cost": {
+								"min": 2,
+								"max": 2
+							},
+							"name": "Keen Senses",
+							"entries": [
+								"Vos yeux et vos oreilles deviennent plus sensibles. Vous gagnez un avantage sur les contrôles de Sagesse ({@skill Perception})."
+							]
+						},
+						{
+							"cost": {
+								"min": 3,
+								"max": 3
+							},
+							"name": "Perfect Senses",
+							"entries": [
+								"Vous gagnez un sens aigu de l'odorat et un instinct de détection des proies. Vous pouvez voir {@condition invisible} les créatures et les objets situés à moins de 3 mètres de vous, même si vous êtes à {@condition blinded}."
+							]
+						},
+						{
+							"cost": {
+								"min": 2,
+								"max": 2
+							},
+							"name": "Swimming",
+							"entries": [
+								"Vous gagnez des palmes et des sangles entre vos doigts et vos orteils ; votre vitesse de nage est égale à votre vitesse de marche."
+							]
+						},
+						{
+							"cost": {
+								"min": 2,
+								"max": 2
+							},
+							"name": "Tough Hide",
+							"entries": [
+								"Votre peau devient aussi résistante que du cuir ; vous bénéficiez d'un bonus de +2 à la CA."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Blade Meld",
+			"source": "UATheMysticClass",
+			"page": 27,
+			"type": "T",
+			"entries": [
+				"Comme action bonus, une arme de mêlée à une main que vous tenez ne fait plus qu'un avec votre main. Pendant la minute qui suit, vous ne pouvez pas lâcher l'arme ni la forcer à vous quitter."
+			]
+		},
+		{
+			"name": "Blind Spot",
+			"source": "UATheMysticClass",
+			"page": 27,
+			"type": "T",
+			"entries": [
+				"En tant qu'action, vous effacez votre image de l'esprit d'une créature que vous pouvez voir à moins de 36 mètres de vous ; la cible doit réussir un jet de sauvegarde de Sagesse, ou vous êtes {@condition invisible} pour elle jusqu'à la fin de votre prochain tour."
+			]
+		},
+		{
+			"name": "Brute Force",
+			"source": "UATheMysticClass",
+			"page": 11,
+			"type": "D",
+			"order": "Immortal",
+			"entries": [
+				"Vous augmentez votre force naturelle avec de l'énergie psionique, ce qui vous permet d'accomplir des exploits incroyables."
+			],
+			"focus": "While focused on this discipline, you have advantage on Strength ({@skill Athletics}) checks",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Brute Strike",
+					"entries": [
+						"Comme action bonus, vous gagnez un bonus à votre prochain jet de dégâts contre une cible que vous avez touchée avec une attaque de mêlée pendant le tour en cours. Le bonus est égal à +{@scaledamage 1d6|1-7|1d6|psi} par point psi dépensé, et les dégâts bonus sont du même type que l'attaque. Si l'attaque a plus d'un type de dégâts, vous choisissez lequel utiliser pour les dégâts bonus."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Knock Back",
+					"entries": [
+						"Lorsque vous touchez une cible avec une attaque de mêlée, vous pouvez activer cette capacité en réaction. La cible doit réussir un jet de sauvegarde de Force ou être projetée à 3 mètres de vous par point psi dépensé. La cible se déplace en ligne droite. Si elle heurte un objet, ce mouvement prend immédiatement fin et la cible subit {@scaledamage 1d6|1-7|1d6|psi} de dégâts contondants par point psi dépensé."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Mighty Leap",
+					"entries": [
+						"Dans le cadre de votre mouvement, vous sautez dans n'importe quelle direction jusqu'à 6 mètres par point psi dépensé."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Feat of Strength",
+					"entries": [
+						"Comme action bonus, vous gagnez un bonus de +5 aux tests de Force jusqu'à la fin de votre prochain tour."
+					]
+				}
+			]
+		},
+		{
+			"name": "Celerity",
+			"source": "UATheMysticClass",
+			"page": 12,
+			"type": "D",
+			"order": "Immortal",
+			"entries": [
+				"Vous canalisez la puissance psionique dans votre corps, ce qui vous permet d'améliorer vos réflexes et votre agilité à un degré incroyable. Le monde semble ralentir tandis que vous continuez à vous déplacer normalement."
+			],
+			"focus": "While focused on this discipline, your walking speed increases by 10 feet.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Rapid Step",
+					"entries": [
+						"Comme action bonus, vous augmentez votre vitesse de marche de 3 mètres par point psi dépensé jusqu'à la fin du tour en cours. Si vous avez une vitesse d'escalade ou de nage, cette augmentation s'applique également à cette vitesse."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Agile Defense",
+					"entries": [
+						"Comme action bonus, vous effectuez l'action Esquive."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Blur of Motion",
+					"entries": [
+						"En tant qu'action, vous faites en sorte d'être {@condition invisible} pendant n'importe lequel de vos mouvements pendant le tour en cours."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Surge of Speed",
+					"entries": [
+						"Comme action bonus, vous gagnez deux avantages jusqu'à la fin du tour en cours : vous ne provoquez pas d'attaques d'opportunité et vous avez une vitesse d'escalade égale à votre vitesse de marche."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Surge of Action",
+					"entries": [
+						"Comme action bonus, vous pouvez faire un trait ou une attaque d'arme."
+					]
+				}
+			]
+		},
+		{
+			"name": "Corrosive Metabolism",
+			"source": "UATheMysticClass",
+			"page": 12,
+			"type": "D",
+			"order": "Immortal",
+			"entries": [
+				"Le contrôle que vous exercez sur votre corps vous permet de délivrer des attaques d'acide ou de poison."
+			],
+			"focus": "While focused on this discipline, you have resistance to acid and poison damage",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Corrosive Touch",
+					"entries": [
+						"Au cours d'une action, vous infligez une touche d'acide à une créature à votre portée. La cible doit effectuer un jet de sauvegarde de Dextérité, subissant {@scaledamage 1d10|1-7|1d10|psi} de dégâts d'acide par point psi dépensé en cas de sauvegarde ratée, ou moitié moins de dégâts en cas de sauvegarde réussie."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Venom Strike",
+					"entries": [
+						"Au cours d'une action, vous créez un spray empoisonné qui cible une créature que vous pouvez voir à moins de 9 mètres de vous. La cible doit effectuer un jet de sauvegarde de Constitution. En cas d'échec, elle subit {@scaledamage 1d6|1-7|1d6|psi} de dégâts de poison par point psi dépensé et est {@condition poisoned} jusqu'à la fin de votre prochain tour. En cas de sauvegarde réussie, la cible subit la moitié des dégâts et n'est plus {@condition poisoned}."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Acid Spray",
+					"entries": [
+						"En réaction lorsque vous subissez des dégâts perforants ou tranchants, vous faites jaillir de l'acide de votre blessure ; chaque créature située à moins de 1,5 mètre de vous subit {@damage 2d6} de dégâts d'acide."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Breath of the Black Dragon",
+					"entries": [
+						"Vous exhalez une vague d'acide sur une ligne de 18 mètres de long et de 1,5 mètre de large. Chaque créature dans la ligne doit faire un jet de sauvegarde de Constitution, subissant {@damage 6d6} de dégâts d'acide en cas de sauvegarde ratée, ou moitié moins en cas de réussite. Vous pouvez augmenter les dégâts de {@scaledamage 6d6|5-7|1d6|psi} par point psi supplémentaire dépensé."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"name": "Breath of the Green Dragon",
+					"entries": [
+						"Vous expirez un nuage de poison dans un cône de 27 mètres. Chaque créature dans la ligne doit faire un jet de sauvegarde de Constitution, subissant {@damage 10d6} de dégâts de poison en cas de sauvegarde ratée, ou moitié moins de dégâts en cas de réussite."
+					]
+				}
+			]
+		},
+		{
+			"name": "Crown of Despair",
+			"source": "UATheMysticClass",
+			"page": 12,
+			"type": "D",
+			"order": "Avatar",
+			"entries": [
+				"Vous avez appris à récolter les graines du désespoir dans la psyché d'une créature, en l'accablant de doutes et d'inaction."
+			],
+			"focus": "While focused on this discipline, you have advantage on Charisma ({@skill Intimidation}) checks.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Crowned in Sorrow",
+					"entries": [
+						"Comme action, une créature que vous pouvez voir à moins de 18 mètres de vous doit faire un jet de sauvegarde de Charisme. En cas d'échec, elle subit {@damage 1d8} de dégâts psychiques par point psi dépensé et ne peut pas réagir avant le début de son prochain tour. S'il réussit son jet de sauvegarde, il subit deux fois moins de dégâts."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Call to Inaction",
+					"entries": [
+						"Si vous passez 1 minute à converser avec une créature, vous pouvez tenter de l'ensemencer avec un ennui écrasant. À la fin de la minute, vous pouvez utiliser une action pour forcer la créature à effectuer un jet de sauvegarde de Sagesse. La sauvegarde réussit automatiquement si la cible est immunisée contre l'être {@condition charmed}. En cas d'échec, elle reste assise et est {@condition incapacitated} jusqu'à la fin de votre {@status concentration}. Cet effet prend fin immédiatement si la cible ou un allié qu'elle peut voir est attaqué ou subit des dégâts. En cas de sauvegarde réussie, la créature n'est pas affectée et n'a aucune idée de votre tentative d'infléchir sa volonté."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Visions of Despair",
+					"entries": [
+						"Comme action, vous forcez une créature que vous pouvez voir à moins de 18 mètres de vous à faire un jet de sauvegarde de Charisme. En cas d'échec, elle subit {@damage 3d6} de dégâts psychiques et sa vitesse est réduite à 0 jusqu'à la fin de son prochain tour. S'il réussit son jet de sauvegarde, il subit deux fois moins de dégâts. Vous pouvez augmenter les dégâts de {@scaledamage 3d6|3-7|1d6|psi} par point psi supplémentaire dépensé."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Dolorous Mind",
+					"entries": [
+						"Comme action, vous choisissez une créature que vous pouvez voir dans un rayon de 18 mètres autour de vous. Elle doit réussir un jet de sauvegarde de Charisme, sinon elle est {@condition incapacitated} et a une vitesse de 0 jusqu'à la fin de votre {@status concentration}. Elle peut répéter ce jet de sauvegarde à la fin de chacun de ses tours, mettant fin à l'effet sur elle-même en cas de réussite."
+					]
+				}
+			]
+		},
+		{
+			"name": "Crown of Disgust",
+			"source": "UATheMysticClass",
+			"page": 13,
+			"type": "D",
+			"order": "Avatar",
+			"entries": [
+				"Vous faites en sorte qu'une créature soit inondée d'émotions de dégoût."
+			],
+			"focus": "While you are focused on this discipline, the area in a 5 foot radius around you is {@quickref difficult terrain||3} for any enemy that isn't immune to being {@condition frightened}.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Eye of Horror",
+					"entries": [
+						"Au cours d'une action, choisissez une créature que vous pouvez voir à moins de 18 mètres de vous. La cible doit effectuer un jet de sauvegarde de Charisme. En cas d'échec, elle subit {@scaledamage 1d6|1-7|1d6|psi} de dégâts psychiques par point psi dépensé et ne peut se rapprocher de vous avant la fin de son prochain tour. Si elle réussit son jet de sauvegarde, elle subit deux fois moins de dégâts."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Wall of Repulsion",
+					"entries": [
+						"Comme action, vous créez un mur d'énergie invisible et insubstantiel dans un rayon de 18 mètres autour de vous, mesurant jusqu'à 9 mètres de long, 3 mètres de haut et 0,3 mètre d'épaisseur. Le mur dure jusqu'à la fin de votre {@status concentration}. Toute créature tentant de le traverser doit effectuer un jet de sauvegarde de Sagesse. En cas d'échec, la créature ne peut pas traverser le mur avant le début de son prochain tour. En cas de sauvegarde réussie, la créature peut le traverser. Une créature doit faire ce jet de sauvegarde chaque fois qu'elle tente de traverser le mur, que ce soit volontairement ou non."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Visions of Disgust",
+					"entries": [
+						"Vous amenez une créature à considérer tous les autres êtres comme des entités horribles et étrangères. Comme action, choisissez une créature que vous pouvez voir à moins de 18 mètres de vous. La cible doit effectuer un jet de sauvegarde de Sagesse. En cas de sauvegarde ratée, elle subit {@damage 5d6} de dégâts psychiques, et jusqu'à la fin de votre {@status concentration}, elle subit {@damage 1d6} de dégâts psychiques par créature à moins de 1,5 mètre d'elle à la fin de chacun de ses tours. En cas de sauvegarde réussie, la cible ne subit que la moitié des dégâts initiaux et ne souffre d'aucun des autres effets."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "World of Horror",
+					"entries": [
+						"Comme action, choisissez jusqu'à six créatures dans un rayon de 18 mètres autour de vous. Chaque cible doit effectuer un jet de sauvegarde de Charisme. En cas de sauvegarde ratée, la cible subit {@damage 8d6} de dégâts psychiques, et elle est {@condition frightened} jusqu'à la fin de votre {@status concentration}. En cas de sauvegarde réussie, la cible subit la moitié des dégâts. Pendant que {@condition frightened} est affecté par cet effet, la vitesse de la cible est réduite à 0, et la cible ne peut utiliser son action, et tout bonus d'action qu'elle pourrait avoir, que pour effectuer des attaques de mêlée. La {@condition frightened} cible peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant fin à l'effet sur elle-même en cas de réussite."
+					]
+				}
+			]
+		},
+		{
+			"name": "Crown of Rage",
+			"source": "UATheMysticClass",
+			"page": 13,
+			"type": "D",
+			"order": "Avatar",
+			"entries": [
+				"Vous placez un grain de fureur pure dans l'esprit d'une créature, provoquant une soif de sang qui l'emporte sur ses sens et la pousse à agir comme vous le souhaitez."
+			],
+			"focus": "While you are focused on this discipline, any enemy within 5 feet of you that makes a melee attack roll against creatures other than you does so with disadvantage",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Primal Fury",
+					"entries": [
+						"Comme action, choisissez une créature que vous pouvez voir à moins de 18 mètres de vous. La cible doit réussir un jet de sauvegarde de Charisme ou subir {@scaledamage 1d6|1-7|1d6|psi} de dégâts psychiques par point psi dépensé pour cette capacité et utiliser immédiatement sa réaction pour se déplacer à toute vitesse en ligne droite vers l'ennemi le plus proche. La sauvegarde réussit automatiquement si la cible est immunisée contre l'être {@condition charmed}."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Fighting Words",
+					"entries": [
+						"Si vous passez 1 minute à converser avec une créature, vous pouvez tenter de laisser une violence latente dans son esprit. À la fin de la minute, vous pouvez utiliser une action pour forcer la créature à faire un jet de sauvegarde de Sagesse pour résister à ressentir des pulsions violentes contre une créature que vous lui décrivez ou que vous nommez. La sauvegarde réussit automatiquement si la cible est immunisée contre le fait d'être {@condition charmed}. En cas de sauvegarde ratée, la cible attaque la créature choisie si elle la voit avant la fin de votre {@status concentration}, en utilisant des armes ou des sorts contre une créature envers laquelle elle était déjà hostile ou des coups à mains nues contre un allié ou une créature envers laquelle elle était neutre. Une fois le combat engagé, elle continue d'attaquer pendant 5 rounds avant que cet effet ne prenne fin. Cet effet prend fin immédiatement si la cible ou un allié qu'elle peut voir est attaqué ou subit des dégâts par une créature autre que celle contre laquelle elle a été incitée. En cas de sauvegarde réussie, la créature n'est pas affectée et n'a aucune idée de votre tentative de faire plier sa volonté."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Mindless Courage",
+					"entries": [
+						"Vous faites en sorte que la soif de sang d'une créature l'emporte sur son sens de la préservation. Comme action bonus, choisissez une créature que vous pouvez voir dans un rayon de 18 mètres autour de vous. La cible doit réussir un jet de sauvegarde de Sagesse ou, jusqu'à la fin de votre prochain tour, elle ne peut pas se déplacer volontairement à moins que son mouvement ne la rapproche de l'ennemi le plus proche qu'elle peut voir. La sauvegarde réussit automatiquement si la cible est immunisée contre l'être {@condition charmed}."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Punishing Fury",
+					"entries": [
+						"Vous provoquez la rage d'une créature au point qu'elle attaque sans se soucier de sa propre sécurité. Comme action bonus, choisissez une créature que vous pouvez voir à moins de 18 mètres de vous. La cible doit réussir un jet de sauvegarde de Sagesse ou, jusqu'à la fin de votre {@status concentration}, toute créature située à moins de 1,5 mètre d'elle peut utiliser une réaction pour porter une attaque de mêlée contre elle chaque fois que la cible porte une attaque de mêlée. La sauvegarde réussit automatiquement si la cible est immunisée contre le {@condition charmed}."
+					]
+				}
+			]
+		},
+		{
+			"name": "Delusion",
+			"source": "UATheMysticClass",
+			"page": 27,
+			"type": "T",
+			"entries": [
+				"Comme action, vous plantez une fausse croyance dans l'esprit d'une créature que vous pouvez voir à moins de 18 mètres de vous. Vous pouvez créer un son ou une image. Seule la cible de ce talent perçoit le son ou l'image que vous créez.",
+				"Si vous créez un son, son volume peut aller d'un murmure à un cri. Il peut s'agir de votre voix, de la voix de quelqu'un d'autre, du rugissement d'une créature, d'un instrument de musique ou de tout autre son que vous choisissez. Il dure 1 minute.",
+				"Si vous créez un objet, il doit s'inscrire dans un cube de 1,5 mètre de côté et ne peut ni bouger ni être réfléchissant. L'image ne peut pas créer d'effet influençant un sens autre que la vue. L'image dure 1 minute et disparaît si la créature la touche."
+			]
+		},
+		{
+			"name": "Diminution",
+			"source": "UATheMysticClass",
+			"page": 14,
+			"type": "D",
+			"order": "Immortal",
+			"entries": [
+				"Vous manipulez la matière qui compose votre corps, réduisant drastiquement votre taille sans rien céder de votre puissance."
+			],
+			"focus": "While focused on this discipline, you have advantage on Dexterity ({@skill Stealth}) checks.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Miniature Form",
+					"entries": [
+						"Comme action bonus, vous devenez minuscule jusqu'à ce que votre {@status concentration} se termine. A cette taille, vous gagnez un bonus de +5 aux tests de Dextérité ({@skill Stealth}) et pouvez vous déplacer à travers des espaces allant jusqu'à 6 pouces de large sans vous presser.l save, la créature n'est pas affectée et n'a aucune idée de votre tentative de plier sa volonté. tours, mettant fin à l'effet sur lui-même en cas de succès."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Toppling Shift",
+					"entries": [
+						"En tant qu'action bonus, vous passez à une taille incroyablement petite et revenez soudainement à la normale, envoyant un adversaire voler en arrière. Choisissez une créature que vous pouvez voir dans un rayon de 1,5 mètre autour de vous. Elle doit réussir un jet de sauvegarde de Force ou être assommée {@condition prone}."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Sudden Shift",
+					"entries": [
+						"En réaction à une attaque, vous passez à une taille minuscule pour éviter l'attaque. L'attaque manque, et vous vous déplacez jusqu'à 1,5 mètre sans provoquer d'attaques d'opportunité avant de reprendre votre taille normale."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Microscopic Form",
+					"entries": [
+						"Comme action bonus, vous devenez plus petit que Tiny jusqu'à la fin de votre {@status concentration}. À cette taille, vous bénéficiez d'un bonus de +10 aux tests de Dextérité ({@skill Stealth}) et d'un bonus de +5 à la CA, vous pouvez vous déplacer dans des espaces allant jusqu'à 1 pouce de large sans vous presser, et vous ne pouvez pas effectuer d'attaques à l'arme."
+					]
+				}
+			]
+		},
+		{
+			"name": "Energy Beam",
+			"source": "UATheMysticClass",
+			"page": 27,
+			"type": "T",
+			"entries": [
+				"Comme action, vous ciblez une créature que vous pouvez voir à moins de 27 mètres de vous. La cible doit réussir un jet de sauvegarde de Dextérité ou subir {@damage 1d8} de dégâts d'acide, de froid, de feu, d'éclairs ou de tonnerre (au choix).",
+				"Les dégâts de ce talent augmentent de {@dice 1d8} lorsque vous atteignez le 5e niveau ({@damage 2d8}), le 11e niveau ({@damage 3d8}) et le 17e niveau ({@damage 4d8})."
+			]
+		},
+		{
+			"name": "Giant Growth",
+			"source": "UATheMysticClass",
+			"page": 14,
+			"type": "D",
+			"order": "Immortal",
+			"entries": [
+				"Vous vous imprégnez d'énergie psionique pour atteindre une taille gigantesque, renforçant ainsi votre force et votre durabilité."
+			],
+			"focus": "While focused on this discipline, your reach increases by 5 feet.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Ogre Form",
+					"entries": [
+						"Comme action bonus, vous gagnez 10 points de vie temporaires. De plus, jusqu'à la fin de votre {@status concentration}, vos attaques à l'arme de mêlée infligent un supplément de {@damage 1d4} de dégâts contondants sur un coup, et votre portée augmente de 1,5 mètre. Si vous êtes plus petit que Grand, vous devenez également Grand pour la durée."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Giant Form",
+					"entries": [
+						"Comme action bonus, vous gagnez 30 points de vie temporaires. De plus, jusqu'à la fin de votre {@status concentration}, vos attaques à l'arme de mêlée infligent un {@damage 2d6} de dégâts contondants supplémentaires sur un coup, et votre portée augmente de 3 mètres. Si vous êtes plus petit qu'Énorme, vous devenez également Énorme pour la durée."
+					]
+				}
+			]
+		},
+		{
+			"name": "Intellect Fortress",
+			"source": "UATheMysticClass",
+			"page": 14,
+			"type": "D",
+			"order": "Awakened",
+			"entries": [
+				"Vous forgez un mur indomptable d'énergie psionique autour de votre esprit, qui vous permet de lancer des contre-attaques contre vos adversaires."
+			],
+			"focus": "While focused on this discipline, you gain resistance to psychic damage.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Psychic Backlash",
+					"entries": [
+						"En réaction, vous pouvez imposer un désavantage à un jet d'attaque contre vous si vous pouvez voir l'attaquant. Si l'attaque vous touche quand même, l'attaquant subit {@damage 2d10} de dégâts psychiques."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Psychic Parry",
+					"entries": [
+						"En réaction lorsque vous faites un jet de sauvegarde d'Intelligence, de Sagesse ou de Charisme, vous gagnez un bonus de +1 à ce jet de sauvegarde pour chaque point psi dépensé dans cette capacité. Vous pouvez utiliser cette capacité après avoir lancé le dé mais avant d'en subir les résultats."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Psychic Redoubt",
+					"entries": [
+						"Comme action, vous créez un champ d'énergie psychique protectrice. Choisissez un nombre quelconque de créatures dans un rayon de 9 mètres autour de vous. Jusqu'à la fin de votre {@status concentration}, chaque cible a une résistance aux dégâts psychiques et un avantage aux jets de sauvegarde d'Intelligence, de Sagesse et de Charisme."
+					]
+				}
+			]
+		},
+		{
+			"name": "Iron Durability",
+			"source": "UATheMysticClass",
+			"page": 15,
+			"type": "D",
+			"order": "Immortal",
+			"entries": [
+				"Vous transformez votre corps en un métal vivant, ce qui vous permet d'éviter des attaques qui paralyseraient des créatures plus faibles."
+			],
+			"focus": "While focused on this discipline, you gain a +1 bonus to AC.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Iron Hide",
+					"entries": [
+						"En réaction lorsque vous êtes touché par une attaque, vous gagnez un bonus de +1 à la CA pour chaque point psi dépensé pour cette capacité. Le bonus dure jusqu'à la fin de votre prochain tour. Ce bonus s'applique contre l'attaque déclenchante."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Steel Hide",
+					"entries": [
+						"Comme action bonus, vous gagnez une résistance aux dégâts contondants, perforants et tranchants jusqu'à la fin de votre prochain tour."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Iron Resistance",
+					"entries": [
+						"En tant qu'action, vous gagnez une résistance aux dégâts contondants, perforants ou tranchants (au choix), qui dure jusqu'à la fin de votre {@status concentration}."
+					]
+				}
+			]
+		},
+		{
+			"name": "Light Step",
+			"source": "UATheMysticClass",
+			"page": 27,
+			"type": "T",
+			"entries": [
+				"Comme action bonus, vous modifiez votre densité et votre poids pour améliorer votre mobilité. Pour le reste de votre tour, votre vitesse de marche augmente de 3 mètres, et la première fois que vous vous levez ce tour, vous le faites sans dépenser de mouvement si votre vitesse est supérieure à 0."
+			]
+		},
+		{
+			"name": "Mantle of Awe",
+			"source": "UATheMysticClass",
+			"page": 15,
+			"type": "D",
+			"order": "Awakened",
+			"entries": [
+				"Vous apprenez à utiliser l'énergie psionique pour manipuler les autres avec une combinaison subtile de psi et de votre propre charme naturel."
+			],
+			"focus": "While focused on this discipline, you gain a bonus to Charisma checks. The bonus equals half your Intelligence modifier (minimum of +1).",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Charming Presence",
+					"entries": [
+						"Comme action, vous exercez une aura de pouvoir sympathique. Lancez {@dice 2d8} par point psi dépensé pour cette capacité ; le total correspond au nombre de points de vie des créatures que cette option peut affecter. Les créatures situées à moins de 9 mètres de vous sont affectées dans l'ordre croissant de leur maximum de points de vie, en ignorant les créatures {@condition incapacitated}, les créatures immunisées contre le pouvoir {@condition charmed} et les créatures engagées dans un combat.",
+						"En commençant par la créature qui a le maximum de points de vie le plus bas, chaque créature affectée par cette option est {@condition charmed} par vous pendant 10 minutes, vous considérant comme une connaissance amicale. Soustrayez le maximum de points de vie de chaque créature du total avant de passer à la créature suivante. Le maximum de points de vie d'une créature doit être égal ou inférieur au total restant pour que cette créature soit affectée."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Center of Attention",
+					"entries": [
+						"Au cours d'une action, vous exercez une aura de puissance qui attire l'attention d'une créature. Choisissez une créature que vous pouvez voir dans un rayon de 18 mètres autour de vous. Elle doit effectuer un jet de sauvegarde de Charisme. En cas d'échec, la créature est tellement distraite par vous que toutes les autres créatures sont {@condition invisible} pour elle jusqu'à la fin de votre {@status concentration}. Cet effet prend fin si la créature ne peut plus vous voir ou vous entendre ou si elle subit des dégâts."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Invoke Awe",
+					"entries": [
+						"En tant qu'action, vous exercez une aura qui inspire l'admiration aux autres. Choisissez jusqu'à 5 créatures que vous pouvez voir dans un rayon de 18 mètres autour de vous. Chaque cible doit réussir un jet de sauvegarde d'Intelligence ou être {@condition charmed} par vous jusqu'à la fin de votre {@status concentration}. Pendant {@condition charmed}, la cible obéit à tous vos ordres verbaux au mieux de ses capacités et sans faire quoi que ce soit de manifestement autodestructeur. La cible {@condition charmed} n'attaque que les créatures qu'elle a vu vous attaquer depuis qu'elle est {@condition charmed} ou envers lesquelles elle était déjà hostile. À la fin de chacun de ses tours, elle peut répéter le jet de sauvegarde, mettant fin à l'effet sur elle-même en cas de réussite."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mantle of Command",
+			"source": "UATheMysticClass",
+			"page": 15,
+			"type": "D",
+			"order": "Avatar",
+			"entries": [
+				"Vous exercez une aura de confiance et d'autorité, améliorant la coordination entre vos alliés."
+			],
+			"focus": "While focused on this discipline, when you end your turn and didn't move during it, you can use your reaction to allow one ally you can see within 30 feet of you to move up to half their speed, following a path of your choice. To move in this way, the ally mustn't be {@condition incapacitated}.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Coordinated Movement",
+					"entries": [
+						"Comme action bonus, choisissez jusqu'à cinq alliés que vous pouvez voir dans un rayon de 18 mètres autour de vous. Chacun de ces alliés peut utiliser sa réaction pour se déplacer à la moitié de sa vitesse, en suivant le chemin de son choix."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "rnd"
+					},
+					"name": "Commander's Sight",
+					"entries": [
+						"Comme action, choisissez une créature que vous pouvez voir à moins de 18 mètres de vous. Jusqu'au début de votre prochain tour, vos alliés ont l'avantage aux jets d'attaque contre cette cible."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Command to Strike",
+					"entries": [
+						"Comme action, choisissez un allié que vous pouvez voir à moins de 18 mètres de vous. Cet allié peut utiliser sa réaction pour entreprendre immédiatement l'action Attaque. Vous choisissez les cibles."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Strategic Mind",
+					"entries": [
+						"En tant qu'action, vous exercez une aura de confiance et de commandement qui unit vos alliés en une unité cohésive. Jusqu'à la fin de votre {@status concentration}, tout allié situé à moins de 18 mètres de vous à son tour de jeu peut, en tant qu'action bonus, entreprendre l'action Dash ou Disengage ou effectuer un jet de {@dice d4} et ajouter le nombre obtenu à chaque jet d'attaque qu'il effectue ce tour-là."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"name": "Overwhelming Attack",
+					"entries": [
+						"Comme action, choisissez jusqu'à cinq alliés que vous pouvez voir à moins de 18 mètres de vous. Chacun de ces alliés peut utiliser sa réaction pour entreprendre l'action Attaque. Vous choisissez la cible des attaques."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mantle of Courage",
+			"source": "UATheMysticClass",
+			"page": 16,
+			"type": "D",
+			"order": "Avatar",
+			"entries": [
+				"Vous concentrez votre esprit sur le courage, en rayonnant la confiance et la bravade à vos alliés."
+			],
+			"focus": "While focused on this discipline, you and allies within 10 feet of you who can see you have advantage on saving throws against being {@condition frightened}.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Incite Courage",
+					"entries": [
+						"Comme action bonus, choisissez jusqu'à six créatures que vous pouvez voir dans un rayon de 18 mètres autour de vous. Si l'une de ces créatures est {@condition frightened}, cette condition prend fin pour cette créature."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Aura of Victory",
+					"entries": [
+						"Comme action bonus, vous projetez de l'énergie psionique jusqu'à la fin de votre {@status concentration}. L'énergie vous fortifie, vous et vos alliés, lorsque vos ennemis sont abattus ; lorsqu'un ennemi que vous pouvez voir est réduit à 0 point de vie, vous et chacun de vos alliés situés à moins de 9 mètres de vous gagnez temporairement un nombre de points de vie égal au double des points psi dépensés pour activer cet effet."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "rnd"
+					},
+					"name": "Pillar of Confidence",
+					"entries": [
+						"Comme action, vous et jusqu'à cinq créatures que vous pouvez voir dans un rayon de 18 mètres autour de vous gagnez chacun une action supplémentaire à utiliser lors de vos tours individuels. L'action disparaît si elle n'est pas utilisée avant la fin de votre prochain tour. L'action ne peut être utilisée que pour effectuer une attaque à l'arme ou pour prendre l'action Dash ou Disengage."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mantle of Fear",
+			"source": "UATheMysticClass",
+			"page": 16,
+			"type": "D",
+			"order": "Avatar",
+			"entries": [
+				"Vous puisez dans un puits de peur primitive et vous vous transformez en un phare de terreur pour vos ennemis."
+			],
+			"focus": "While focused on this discipline, you have advantage on Charisma ({@skill Intimidation}) checks.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Incite Fear",
+					"entries": [
+						"Comme action, choisissez une créature que vous pouvez voir à moins de 18 mètres de vous. La cible doit réussir un jet de sauvegarde de Sagesse ou devenir {@condition frightened} de vous jusqu'à la fin de votre {@status concentration}. Chaque fois que la cible {@condition frightened} termine son tour dans un endroit où elle ne peut pas vous voir, elle peut répéter le jet de sauvegarde, mettant fin à l'effet sur elle-même en cas de réussite."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Unsettling Aura",
+					"entries": [
+						"Comme action bonus, vous vous enveloppez d'une énergie psychique troublante. Jusqu'à la fin de votre {@status concentration}, tout ennemi situé à moins de 18 mètres de vous et qui peut vous voir doit dépenser 1 pied de mouvement supplémentaire pour chaque pied qu'il fait vers vous. Une créature ignore cet effet si elle est immunisée contre l'énergie psychique {@condition frightened}."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Incite Panic",
+					"entries": [
+						"Comme action, choisissez jusqu'à huit créatures que vous pouvez voir dans un rayon de 27 mètres autour de vous et qui peuvent vous voir. Au début de chacun des tours d'une cible avant la fin de votre {@status concentration}, la cible doit effectuer un jet de sauvegarde de Sagesse. En cas d'échec, la cible est {@condition frightened} jusqu'au début de son prochain tour, et vous lancez un dé. Si vous obtenez un nombre impair, la cible {@condition frightened} se déplace à la moitié de sa vitesse dans une direction aléatoire et n'entreprend aucune action durant ce tour, si ce n'est de hurler de terreur. Si vous obtenez un nombre pair, la cible {@condition frightened} effectue une attaque de mêlée contre une cible aléatoire à sa portée. S'il n'y a pas de cible, elle se déplace à la moitié de sa vitesse dans une direction aléatoire et n'entreprend aucune action à ce tour. Cet effet prend fin sur une cible si elle réussit trois jets de sauvegarde contre lui."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mantle of Fury",
+			"source": "UATheMysticClass",
+			"page": 16,
+			"type": "D",
+			"order": "Avatar",
+			"entries": [
+				"Vous permettez à la fureur primitive qui se cache au fond de votre esprit d'éclater, vous entraînant, vous et vos alliés, dans une implacable soif de sang."
+			],
+			"focus": "While focused on this discipline in combat, you and any ally who starts their turn within 10 feet of you gains a 5 foot increase to their walking speed during that turn.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Incite Fury",
+					"entries": [
+						"Comme action bonus, choisissez jusqu'à trois alliés que vous pouvez voir à moins de 18 mètres de vous (vous pouvez vous choisir à la place d'un des alliés). Jusqu'à la fin de votre {@status concentration}, chaque cible peut effectuer un jet d'attaque de {@dice d4} lors d'une attaque à l'arme de mêlée et ajouter le nombre obtenu au jet de dégâts."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Mindless Charge",
+					"entries": [
+						"Comme action bonus, choisissez jusqu'à trois créatures que vous pouvez voir dans un rayon de 18 mètres autour de vous. Chaque cible peut immédiatement utiliser sa réaction pour se déplacer à sa vitesse en ligne droite vers l'ennemi le plus proche."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Aura of Bloodletting",
+					"entries": [
+						"En tant qu'action bonus, vous libérez une aura de rage. Jusqu'à la fin de votre {@status concentration}, vous et toute créature située à moins de 18 mètres de vous avez l'avantage aux jets d'attaque en mêlée."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Overwhelming Fury",
+					"entries": [
+						"Comme action, vous inondez de rage une créature que vous pouvez voir dans un rayon de 18 mètres autour de vous. La cible doit réussir un jet de sauvegarde de Charisme, ou elle ne peut utiliser ses actions que pour effectuer des attaques de mêlée jusqu'à la fin de votre {@status concentration}. Elle peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant fin à l'effet sur elle-même en cas de réussite."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mantle of Joy",
+			"source": "UATheMysticClass",
+			"page": 17,
+			"type": "D",
+			"order": "Avatar",
+			"entries": [
+				"Vous puisez dans la joie qui est en vous et la diffusez à l'extérieur sous forme d'une énergie psychique apaisante qui apporte espoir et réconfort aux personnes qui vous entourent."
+			],
+			"focus": "While focused on this discipline, you have advantage on Charisma ({@skill Persuasion}) checks",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Soothing Presence",
+					"entries": [
+						"Comme action bonus, choisissez jusqu'à trois créatures que vous pouvez voir dans un rayon de 18 mètres autour de vous. Chaque cible gagne 3 points de vie temporaires par point psi dépensé pour cet effet."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Comforting Aura",
+					"entries": [
+						"Comme action bonus, choisissez jusqu'à trois alliés que vous pouvez voir (vous pouvez vous choisir à la place d'un des alliés). Jusqu'à la fin de votre {@status concentration}, chaque cible peut effectuer un jet de sauvegarde avec un {@dice d4} et ajouter le nombre obtenu au total."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Aura of Jubilation",
+					"entries": [
+						"Comme action bonus, vous rayonnez une hilarité distrayante jusqu'à la fin de votre {@status concentration}. Toute créature située à moins de 18 mètres de vous et qui peut vous voir subit un désavantage à tous les tests utilisant les compétences {@skill Perception} et {@skill Investigation}."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Beacon of Recovery",
+					"entries": [
+						"Comme action bonus, vous et jusqu'à cinq alliés que vous pouvez voir dans un rayon de 18 mètres autour de vous pouvez immédiatement faire des jets de sauvegarde contre tous les effets qu'ils subissent et qui permettent une sauvegarde au début ou à la fin de leur tour."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mastery of Air",
+			"source": "UATheMysticClass",
+			"page": 17,
+			"type": "D",
+			"order": "Wu Jen",
+			"entries": [
+				"Vous ne faites plus qu'un avec le pouvoir de l'air élémentaire."
+			],
+			"focus": "While focused on this discipline, you take no falling damage, and you ignore {@quickref difficult terrain||3} when walking.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Wind Step",
+					"entries": [
+						"Dans le cadre de votre mouvement à votre tour, vous pouvez voler jusqu'à 6 mètres pour chaque point psi dépensé. Si vous terminez ce vol en l'air, vous tombez à moins que quelque chose d'autre ne vous retienne en l'air."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Wind Stream",
+					"entries": [
+						"Comme action, vous créez une ligne d'air concentrée de 9 mètres de long et 1,5 mètre de large. Chaque créature située dans cette zone doit effectuer un jet de sauvegarde de Force, subissant {@scaledamage 1d8|1-7|1d8|psi} de dégâts de contondant par point psi dépensé et étant assommée {@condition prone} en cas de sauvegarde ratée, ou moitié moins de dégâts en cas de sauvegarde réussie."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Cloak of Air",
+					"entries": [
+						"Comme action bonus, vous prenez le contrôle de l'air autour de vous pour créer un voile protecteur. Jusqu'à la fin de votre {@status concentration}, les jets d'attaque contre vous ont un désavantage, et lorsqu'une créature que vous pouvez voir vous manque avec une attaque de mêlée, vous pouvez utiliser votre réaction pour forcer la créature à répéter le jet d'attaque contre elle-même."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Wind Form",
+					"entries": [
+						"Comme action bonus, vous gagnez une vitesse de vol de 18 mètres, qui dure jusqu'à la fin de votre {@status concentration}."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Misty Form",
+					"entries": [
+						"Comme action, votre corps devient comme un nuage brumeux jusqu'à ce que votre {@status concentration} se termine. Sous cette forme, vous gagnez une résistance aux dégâts contondants, perforants et tranchants, et vous ne pouvez pas entreprendre d'actions autres que l'action Dash. Vous pouvez passer à travers des ouvertures qui ne font pas plus d'un pouce de large sans vous presser."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Animate Air",
+					"entries": [
+						"En une action, vous faites apparaître un élémentaire d'air dans un espace inoccupé que vous pouvez voir à moins de 36 mètres de vous. L'élémentaire dure jusqu'à la fin de votre {@status concentration}, et il obéit à vos ordres verbaux. En combat, vous lancez son initiative et choisissez son comportement pendant ses tours. A la fin de cet effet, l'élémentaire disparaît. Voir le Manuel des Monstres pour son bloc de stat."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mastery of Fire",
+			"source": "UATheMysticClass",
+			"page": 17,
+			"type": "D",
+			"order": "Wu Jen",
+			"entries": [
+				"Vous alignez votre esprit avec l'énergie du feu élémentaire."
+			],
+			"focus": "While focused on this discipline, you gain resistance to fire damage, and you gain a +2 bonus to rolls for fire damage.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Combustion",
+					"entries": [
+						"Comme action, choisissez une créature ou un objet que vous pouvez voir à moins de 36 mètres de vous. La cible doit effectuer une sauvegarde de Constitution. En cas de sauvegarde ratée, la cible subit {@scaledamage 1d10|1-7|1d10|psi} de dégâts de feu par point psi dépensé, et elle prend feu, subissant {@damage 1d6} de dégâts de feu à la fin de chacun de ses tours jusqu'à la fin de votre {@status concentration} ou jusqu'à ce qu'elle ou une créature adjacente à elle éteigne les flammes par une action. En cas de sauvegarde réussie, la cible subit deux fois moins de dégâts et ne s'enflamme pas."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Rolling Flame",
+					"entries": [
+						"Comme action, vous créez du feu dans un cube de 6 mètres par 6 mètres à moins de 1,5 mètre de vous. Le feu dure jusqu'à la fin de votre {@status concentration}. Toute créature se trouvant dans cette zone lorsque vous utilisez cette capacité et toute créature qui y termine son tour subit 5 dégâts de feu."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Detonation",
+					"entries": [
+						"Comme action, vous créez une explosion enflammée à un point que vous pouvez voir à moins de 36 mètres de vous. Chaque créature située dans une sphère de 6 mètres de rayon centrée sur ce point doit effectuer un jet de sauvegarde de Constitution, subissant {@damage 7d6} de dégâts de feu et étant assommée {@condition prone} en cas de sauvegarde ratée, ou moitié moins de dégâts en cas de sauvegarde réussie."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Fire Form",
+					"entries": [
+						"Comme action bonus, vous êtes enveloppé de flammes jusqu'à la fin de votre {@status concentration}. Toute créature terminant son tour à moins de 1,5 mètre de vous subit {@damage 3d6} de dégâts de feu."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Animate Fire",
+					"entries": [
+						"Comme action, vous faites apparaître un élémentaire de feu dans un espace inoccupé que vous pouvez voir à moins de 36 mètres de vous. L'élémentaire dure jusqu'à la fin de votre {@status concentration}, et il obéit à vos ordres verbaux. En combat, il prend l'initiative et choisit son comportement pendant ses tours. A la fin de cet effet, l'élémentaire disparaît. Voir le Manuel des Monstres pour son bloc de stat."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mastery of Force",
+			"source": "UATheMysticClass",
+			"page": 18,
+			"type": "D",
+			"order": "Wu Jen",
+			"entries": [
+				"En tant qu'étudiant du pouvoir psionique, vous percevez l'énergie potentielle qui circule dans toutes les choses. Vous y accédez avec votre esprit, transformant le potentiel en réalité. Les objets et les créatures se déplacent à vos ordres."
+			],
+			"focus": "While focused on this discipline, you have advantage on Strength checks.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Push",
+					"entries": [
+						"Comme action, choisissez une créature que vous pouvez voir dans un rayon de 18 mètres autour de vous. La cible doit effectuer un jet de sauvegarde de Force. En cas d'échec, elle subit {@scaledamage 1d8|1-7|1d8|psi} de dégâts de force par point psi dépensé et est repoussée jusqu'à 1,5 mètre par point dépensé en ligne droite loin de vous. En cas de sauvegarde réussie, elle subit la moitié des dégâts."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 7
+					},
+					"name": "Move",
+					"entries": [
+						"Choisissez un objet que vous pouvez voir à moins de 18 mètres de vous, qui n'est pas porté par une autre créature et qui n'est pas fixé. Il ne doit pas dépasser 6 mètres de côté et son poids maximum dépend des points psi dépensés pour cette capacité, comme indiqué ci-dessous.",
+						"Comme action, vous déplacez l'objet jusqu'à 18 mètres, et vous devez garder l'objet en vue pendant ce mouvement. Si l'objet termine ce mouvement en l'air, il tombe. Si l'objet tombe sur une créature, celle-ci doit réussir un jet de sauvegarde de Dextérité DC 10 ou subir les dégâts indiqués dans la table ci-dessous.",
+						{
+							"type": "table",
+							"colLabels": [
+								"Psi Spent",
+								"Maximum Weight",
+								"Bludgeoning Damage"
+							],
+							"colStyles": [
+								"col-3 text-center",
+								"col-6 text-center",
+								"col-3 text-center"
+							],
+							"rows": [
+								[
+									"2",
+									"25 lbs.",
+									"{@damage 2d6}"
+								],
+								[
+									"3",
+									"50 lbs.",
+									"{@damage 4d6}"
+								],
+								[
+									"5",
+									"250 lbs.",
+									"{@damage 6d6}"
+								],
+								[
+									"6",
+									"500 lbs.",
+									"{@damage 7d6}"
+								],
+								[
+									"7",
+									"1,000 lbs.",
+									"{@damage 8d6}"
+								]
+							]
+						}
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Inertial Armor",
+					"entries": [
+						"Au cours d'une action, vous vous enveloppez d'un champ intangible de force magique. Pendant 8 heures, votre CA de base est de 14 + votre modificateur de Dextérité, et vous gagnez une résistance aux dégâts de force. Cet effet prend fin si vous portez ou enfilez une armure."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Telekinetic Barrier",
+					"entries": [
+						"Comme action, vous créez un mur transparent d'énergie télékinétique, dont au moins une partie doit se trouver à moins de 18 mètres de vous. Le mur mesure 12 mètres de long, 3 mètres de haut et 1 pouce d'épaisseur. Le mur dure jusqu'à la fin de votre {@status concentration}. Chaque section de 3 mètres du mur a une CA de 10 et 10 points de vie."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Grasp",
+					"entries": [
+						"Vous tentez de saisir une créature dans l'énergie télékinétique et de la retenir prisonnière. Comme action, choisissez une créature que vous pouvez voir à moins de 18 mètres de vous. La cible doit réussir un jet de sauvegarde de Force ou être {@condition grappled} par vous jusqu'à la fin de votre {@status concentration} ou jusqu'à ce que la cible sorte de votre portée, qui est de 18 mètres pour cet agrippement.",
+						"La cible {@condition grappled} peut s'échapper en réussissant un test de Force (Athlétisme) ou de Dextérité (Acrobaties) contesté par votre capacité psionique plus votre bonus de compétence. Lorsqu'une cible tente de s'échapper de cette manière, vous pouvez dépenser des points psi pour augmenter votre test, en respectant votre limite psi. Vous gagnez un bonus de +1 par point psi dépensé.",
+						"Pendant qu'une cible est {@condition grappled} de cette manière, vous créez l'un des effets suivants en tant qu'action :"
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Crush",
+					"entries": [
+						"La cible subit {@scaledamage 1d6|1-7|1d6|psi} de dégâts contondants par point psi dépensé."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Move",
+					"entries": [
+						"Vous déplacez la cible jusqu'à 1,5 mètre par point psi dépensé. Vous pouvez la déplacer dans les airs et l'y maintenir. Elle tombe si le grappin se termine."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mastery of Ice",
+			"source": "UATheMysticClass",
+			"page": 19,
+			"type": "D",
+			"order": "Wu Jen",
+			"entries": [
+				"Vous maîtrisez le pouvoir de la glace, la façonnant pour répondre à vos besoins."
+			],
+			"focus": "While focused on this discipline, you have resistance to cold damage.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Ice Spike",
+					"entries": [
+						"Comme action, vous lancez un grain de glace sur une créature que vous pouvez voir à moins de 36 mètres de vous. La cible doit effectuer un jet de sauvegarde de Dextérité. En cas d'échec, la cible subit {@scaledamage 1d8|1-7|1d8|psi} de dégâts de froid par point psi dépensé et voit sa vitesse réduite de moitié jusqu'au début de votre prochain tour. En cas de sauvegarde réussie, la cible subit deux fois moins de dégâts."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Ice Sheet",
+					"entries": [
+						"En guise d'action, choisissez un point sur le sol que vous pouvez voir à moins de 18 mètres de vous. Le sol dans un rayon de 6 mètres centré sur ce point se couvre de glace pendant 10 minutes. Il est {@quickref difficult terrain||3}, et toute créature qui se déplace de plus de 3 mètres dessus doit réussir un jet de sauvegarde de Dextérité ou tomber {@condition prone}. Si la surface est en pente, une créature qui tombe {@condition prone} dans la zone glisse immédiatement au bas de la pente."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Frozen Sanctuary",
+					"entries": [
+						"Comme action bonus, vous vous enveloppez d'une résilience glacée. Vous gagnez 20 points de vie temporaires."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Frozen Rain",
+					"entries": [
+						"Comme action, choisissez un point que vous pouvez voir à moins de 36 mètres de vous. L'air dans une sphère de 6 mètres de rayon centrée sur ce point devient mortellement froid et saturé d'humidité. Chaque créature dans cette zone doit effectuer un jet de sauvegarde de Constitution. En cas d'échec, la cible subit {@damage 6d6} de dégâts de froid et sa vitesse est réduite à 0 jusqu'à la fin de votre {@status concentration}. Si elle réussit son jet de sauvegarde, la cible subit deux fois moins de dégâts.",
+						"Comme action, une cible dont la vitesse est réduite peut mettre fin à l'effet plus tôt si elle réussit un test de Force (Athlétisme) avec un DC égal au DC de sauvegarde de cet effet.",
+						"Vous pouvez augmenter les dégâts de cet effet de {@scaledamage 6d6|5-7|1d6|psi} pour chaque point psi supplémentaire dépensé pour cet effet."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Ice Barrier",
+					"entries": [
+						"Comme action, vous créez un mur de glace, dont au moins une partie doit se trouver à moins de 18 mètres de vous. Le mur mesure 18 mètres de long, 4,5 mètres de haut et 0,3 mètre d'épaisseur. Le mur dure jusqu'à la fin de votre {@status concentration}. Chaque section de 3 mètres du mur a une AC de 12 et 30 points de vie. Une créature qui endommage le mur avec une attaque de mêlée subit des dégâts de froid égaux aux dégâts qu'elle a infligés au mur."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mastery of Light and Darkness",
+			"source": "UATheMysticClass",
+			"page": 19,
+			"type": "D",
+			"order": "Wu Jen",
+			"entries": [
+				"Vous revendiquez la domination de la lumière et des ténèbres par votre esprit."
+			],
+			"focus": "While focused on this discipline, natural and magical darkness within 30 feet of you has no effect on your vision.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Darkness",
+					"entries": [
+						"Au cours d'une action, vous créez une zone d'obscurité magique qui déjoue la vision dans le noir. Choisissez un endroit que vous pouvez voir à moins de 18 mètres de vous. Les ténèbres magiques rayonnent à partir de ce point dans une sphère de 3 mètres de rayon par point psi dépensé pour cette capacité. La lumière produite par les sorts de 2e niveau ou moins est supprimée dans cette zone."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Light",
+					"entries": [
+						"Comme action, un objet que vous touchez irradie de la lumière dans un rayon de 6 mètres et de la lumière tamisée sur 6 mètres supplémentaires. La lumière dure jusqu'à la fin de votre {@status concentration}. Alternativement, une créature que vous touchez irradie de la lumière de la même manière si elle échoue à un jet de sauvegarde de Dextérité. Lorsqu'elle est éclairée de cette manière, elle ne peut pas se cacher et les jets d'attaque contre elle bénéficient d'un avantage."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Shadow Beasts",
+					"entries": [
+						"Comme action, vous faites apparaître deux {@creature shadow||shadows} dans des espaces inoccupés que vous pouvez voir à moins de 18 mètres de vous. Les {@creature shadow||shadows} durent jusqu'à la fin de votre {@status concentration}, et ils obéissent à vos ordres verbaux. En combat, lancez leur initiative et choisissez leur comportement pendant leur tour. À la fin de cet effet, les {@creature shadow||shadows} disparaissent. Voir le Manuel des Monstres pour leur bloc de stat."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Radiant Beam",
+					"entries": [
+						"Comme action, vous projetez un faisceau de lumière sur une créature que vous pouvez voir à moins de 18 mètres de vous. La cible doit effectuer un jet de sauvegarde de Dextérité. En cas de sauvegarde ratée, elle subit {@damage 6d6} de dégâts radiants et est {@condition blinded} jusqu'à la fin de votre {@status concentration}. En cas de sauvegarde réussie, elle subit la moitié des dégâts. Une cible de {@condition blinded} peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant fin à l'effet sur elle-même en cas de réussite.",
+						"Vous pouvez augmenter les dégâts de cet effet de {@scaledamage 6d6|5-7|1d6|psi} pour chaque point psi supplémentaire dépensé pour cet effet."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mastery of Water",
+			"source": "UATheMysticClass",
+			"page": 19,
+			"type": "D",
+			"order": "Wu Jen",
+			"entries": [
+				"Votre esprit ne fait qu'un avec l'eau élémentaire, accordant vos pensées à son flux et reflux."
+			],
+			"focus": "While focused on this discipline, you have a swimming speed equal to your walking speed, and you can breathe underwater.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Desiccate",
+					"entries": [
+						"Comme action, choisissez une créature que vous pouvez voir à moins de 18 mètres de vous. La cible doit effectuer un jet de sauvegarde de Constitution, subissant {@scaledamage 1d10|1-7|1d10|psi} de dégâts nécrotiques par point psi dépensé pour cette capacité, ou moitié moins de dégâts en cas de réussite."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Watery Grasp",
+					"entries": [
+						"En tant qu'action, vous déclenchez une vague qui déferle puis se retire vers vous comme la marée montante. Vous créez une vague dans un carré de 6 mètres par 6 mètres. Au moins une partie de la bordure du carré doit se trouver à moins de 1,5 mètre de vous. Toute créature se trouvant dans ce carré doit effectuer un jet de sauvegarde de Force. En cas d'échec, la cible subit {@damage 2d6} de dégâts de contondant, est projetée {@condition prone} et se retrouve à 3 mètres de vous. En cas de sauvegarde réussie, la cible subit deux fois moins de dégâts. Vous pouvez augmenter les dégâts de cette compétence de {@scaledamage 2d6|2-7|1d6|psi} par point psi supplémentaire dépensé pour elle."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Water Whip",
+					"entries": [
+						"Comme action, vous déclenchez un jet d'eau dans une ligne de 18 mètres de long et 1,5 mètre de large. Chaque créature de la ligne doit effectuer un jet de sauvegarde de Force, subissant {@damage 3d6} de dégâts contondants en cas de sauvegarde ratée, ou moitié moins de dégâts en cas de sauvegarde réussie. De plus, vous pouvez déplacer chaque cible qui rate son jet de sauvegarde vers n'importe quel espace inoccupé touchant la ligne. Vous pouvez augmenter les dégâts de cette capacité de {@scaledamage 3d6|3-7|1d6|psi} par point psi supplémentaire dépensé pour elle."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Water Breathing",
+					"entries": [
+						"Comme action, vous vous accordez, ainsi qu'à un maximum de dix créatures consentantes que vous pouvez voir dans un rayon de 18 mètres, la capacité de respirer sous l'eau pendant les 24 heures suivantes."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Water Sphere",
+					"entries": [
+						"Au cours d'une action, vous créez une sphère d'eau autour d'une créature. Choisissez une créature que vous pouvez voir dans un rayon de 18 mètres autour de vous. La cible doit effectuer un jet de sauvegarde de Dextérité. En cas d'échec, elle est piégée dans la sphère d'eau jusqu'à la fin de votre {@status concentration}. Tant que la cible est piégée, sa vitesse est réduite de moitié, elle subit un désavantage aux jets d'attaque, et elle ne peut rien voir à plus de 3 mètres d'elle. Cependant, les jets d'attaque contre elle subissent également un désavantage. La cible peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant fin à l'effet sur elle-même en cas de réussite."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Animate Water",
+					"entries": [
+						"Comme action, vous faites apparaître un élémentaire d'eau dans un espace inoccupé que vous pouvez voir à moins de 36 mètres de vous. L'élémentaire dure jusqu'à la fin de votre {@status concentration} et obéit à vos ordres verbaux. En combat, vous lancez son initiative et choisissez son comportement pendant ses tours. A la fin de cet effet, l'élémentaire disparaît. Voir le Manuel des Monstres pour son bloc de stat."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mastery of Weather",
+			"source": "UATheMysticClass",
+			"page": 20,
+			"type": "D",
+			"order": "Wu Jen",
+			"entries": [
+				"Votre esprit s'élève dans le ciel, remodelant la matière des tempêtes pour servir vos besoins."
+			],
+			"focus": "While focused on this discipline, you have resistance to lightning and thunder damage.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Cloud Steps",
+					"entries": [
+						"Comme action, vous conjurez les nuages pour créer un escalier solide et translucide qui dure jusqu'à la fin de votre {@status concentration}. Les marches forment une spirale qui remplit une zone de 3 mètres par 3 mètres et s'élève de 6 mètres par point psi dépensé."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Hungry Lightning",
+					"entries": [
+						"Comme action, vous lancez des vrilles d'éclairs sur une créature que vous pouvez voir à moins de 18 mètres de vous. La cible doit effectuer un jet de sauvegarde de Dextérité, avec un désavantage si elle porte une armure lourde. La cible subit {@scaledamage 1d8|1-7|1d8|psi} de dégâts de foudre par point psi dépensé en cas de sauvegarde ratée, ou la moitié des dégâts en cas de sauvegarde réussie."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Wall of Clouds",
+					"entries": [
+						"Comme action, vous créez un mur de nuages, dont au moins une partie doit se trouver à moins de 18 mètres de vous. Le mur mesure 18 mètres de long, 4,5 mètres de haut et 0,3 mètre d'épaisseur. Le mur dure jusqu'à la fin de votre {@status concentration}. Les créatures peuvent le traverser sans encombre, mais le mur bloque la vision."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Whirlwind",
+					"entries": [
+						"Comme action, choisissez un point que vous pouvez voir à moins de 18 mètres de vous. Les vents hurlent dans une sphère de 6 mètres de rayon centrée sur ce point. Chaque créature dans la sphère doit réussir un jet de sauvegarde de Force ou subir {@damage 1d6} de dégâts de contondant et être déplacée dans un espace inoccupé de votre choix dans la sphère. Tout objet libre dans la sphère est déplacé vers un espace inoccupé de votre choix à l'intérieur de la sphère si l'objet ne pèse pas plus de 5 kilogrammes."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Lightning Leap",
+					"entries": [
+						"Comme action, vous déclenchez une ligne d'éclairs de 18 mètres de long et de 1,5 mètre de large. Chaque créature de la ligne doit faire un jet de sauvegarde de Dextérité, subissant {@damage 6d6} de dégâts de foudre en cas de sauvegarde ratée, ou la moitié des dégâts en cas de sauvegarde réussie. Vous pouvez alors vous téléporter dans un espace inoccupé touché par la ligne.",
+						"Vous pouvez augmenter les dégâts de cette capacité de {@scaledamage 6d6|5-7|1d6|psi} par point psi supplémentaire dépensé pour cette capacité."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Wall of Thunder",
+					"entries": [
+						"Comme action, vous créez un mur de tonnerre, dont au moins une partie doit se trouver à moins de 18 mètres de vous. Le mur mesure 18 mètres de long, 4,5 mètres de haut et 0,3 mètre d'épaisseur. Le mur dure jusqu'à la fin de votre {@status concentration}. Chaque pied franchi par le mur coûte 1 pied de mouvement supplémentaire. Lorsqu'une créature entre dans l'espace du mur pour la première fois lors d'un tour ou y commence son tour, cette créature doit réussir un jet de sauvegarde de Force, sinon elle subit {@damage 6d6} de dégâts de tonnerre, est repoussée en ligne droite jusqu'à 9 mètres du mur et subit un choc de {@condition prone}."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"name": "Thunder Clap",
+					"entries": [
+						"Comme action, choisissez un point que vous pouvez voir à moins de 18 mètres de vous. L'énergie du tonnerre jaillit dans une sphère de 6 mètres de rayon centrée sur ce point. Chaque créature dans cette zone doit effectuer un jet de sauvegarde de Constitution. En cas de sauvegarde ratée, la cible subit {@damage 8d6} de dégâts de tonnerre, et elle est {@condition stunned} jusqu'à la fin de votre prochain tour. En cas de sauvegarde réussie, la cible subit la moitié des dégâts."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mastery of Wood and Earth",
+			"source": "UATheMysticClass",
+			"page": 21,
+			"type": "D",
+			"order": "Wu Jen",
+			"entries": [
+				"Vous accordez votre esprit pour prendre le contrôle du bois et de la terre."
+			],
+			"focus": "While focused on this discipline, you have a +1 bonus to AC.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Animate Weapon",
+					"entries": [
+						"Comme action, votre esprit prend le contrôle d'une arme de mêlée à une main que vous tenez. L'arme vole vers une créature que vous pouvez voir à moins de 9 mètres de vous et effectue une attaque d'arme de mêlée à une main contre elle, en utilisant votre modificateur d'attaque de discipline pour les jets d'attaque et de dégâts. En cas de succès, l'arme inflige ses dégâts normaux, plus {@scaledamage 1d10|1-7|1d10|psi} de dégâts de force supplémentaires par point psi dépensé pour cette capacité. L'arme revient dans votre main après l'attaque."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Warp Weapon",
+					"entries": [
+						"Comme action, choisissez une arme non magique tenue par une créature que vous pouvez voir à moins de 18 mètres de vous. Cette créature doit réussir un jet de sauvegarde de Force, ou l'arme choisie ne peut pas être utilisée pour attaquer jusqu'à la fin de votre prochain tour."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Warp Armor",
+					"entries": [
+						"Comme action, choisissez une armure non magique portée par une créature que vous pouvez voir à moins de 18 mètres de vous. Cette créature doit réussir un jet de sauvegarde de Constitution, ou sa CA devient 10 + son modificateur de Dextérité jusqu'à la fin de votre prochain tour."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Wall of Wood",
+					"entries": [
+						"Comme action, vous créez un mur de bois dont au moins une partie doit se trouver à moins de 18 mètres de vous. Le mur mesure 18 mètres de long, 4,5 mètres de haut et 0,3 mètre d'épaisseur. Le mur dure jusqu'à la fin de votre {@status concentration}. Chaque section de 1,5 mètre de large du mur a une AC de 12 et 100 points de vie. La rupture d'une section crée un trou de 1,5 mètre sur 1,5 mètre, mais le mur reste intact."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Armored Form",
+					"entries": [
+						"Comme action bonus, vous gagnez une résistance aux dégâts contondants, perforants et tranchants, qui dure jusqu'à la fin de votre {@status concentration}."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Animate Earth",
+					"entries": [
+						"Comme action, vous faites apparaître un élémentaire de terre dans un espace inoccupé que vous pouvez voir à moins de 36 mètres de vous. L'élémentaire dure jusqu'à la fin de votre {@status concentration}, et il obéit à vos ordres verbaux. En combat, il prend l'initiative et choisit son comportement pendant ses tours. A la fin de cet effet, l'élémentaire disparaît. Voir le Manuel des Monstres pour son bloc de stat."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mind Meld",
+			"source": "UATheMysticClass",
+			"page": 27,
+			"type": "T",
+			"entries": [
+				"Comme action bonus, vous pouvez communiquer télépathiquement avec une créature consentante que vous pouvez voir dans un rayon de 36 mètres autour de vous. La cible doit avoir une Intelligence d'au moins 2, sinon ce talent échoue et l'action est perdue.",
+				"Cette communication peut avoir lieu jusqu'à la fin du tour en cours. Vous n'avez pas besoin de partager une langue avec la cible pour qu'elle comprenne vos paroles télépathiques, et elle vous comprend même si elle n'a pas de langue. Vous avez également accès à une mémoire au choix de la cible, ce qui vous permet de vous souvenir parfaitement d'une chose qu'elle a vue ou faite."
+			]
+		},
+		{
+			"name": "Mind Slam",
+			"source": "UATheMysticClass",
+			"page": 28,
+			"type": "T",
+			"entries": [
+				"Comme action, vous ciblez une créature que vous pouvez voir à moins de 18 mètres de vous. La cible doit réussir un jet de sauvegarde de Constitution ou subir {@damage 1d6} de dégâts de force. Si elle subit l'un de ces dégâts et qu'elle est Grande ou plus petite, elle est assommée {@condition prone}.",
+				"Les dégâts de ce talent augmentent de {@dice 1d6} lorsque vous atteignez le 5e niveau ({@damage 2d6}), le 11e niveau ({@damage 3d6}) et le 17e niveau ({@damage 4d6})."
+			]
+		},
+		{
+			"name": "Mind Thrust",
+			"source": "UATheMysticClass",
+			"page": 28,
+			"type": "T",
+			"entries": [
+				"Comme action, vous ciblez une créature que vous pouvez voir à moins de 36 mètres de vous. La cible doit réussir un jet de sauvegarde d'Intelligence ou subir {@damage 1d10} de dégâts psychiques.",
+				"Les dégâts de ce talent augmentent de {@dice 1d10} lorsque vous atteignez le 5e niveau ({@damage 2d10}), le 11e niveau ({@damage 3d10}) et le 17e niveau ({@damage 4d10})."
+			]
+		},
+		{
+			"name": "Mystic Charm",
+			"source": "UATheMysticClass",
+			"page": 28,
+			"type": "T",
+			"entries": [
+				"Comme action, vous séduisez un humanoïde que vous pouvez voir à moins de 36 mètres de vous. La cible doit réussir un jet de sauvegarde de Charisme ou être {@condition charmed} par vous jusqu'à la fin de votre prochain tour."
+			]
+		},
+		{
+			"name": "Mystic Hand",
+			"source": "UATheMysticClass",
+			"page": 28,
+			"type": "T",
+			"entries": [
+				"Vous pouvez utiliser votre action pour manipuler ou déplacer un objet situé à moins de 9 mètres de vous. L'objet ne peut pas peser plus de 5 kilogrammes, et vous ne pouvez pas affecter un objet porté par une autre créature. Si l'objet n'est pas fixé, vous pouvez le déplacer de 9 mètres dans n'importe quelle direction.",
+				"Ce talent vous permet d'ouvrir une porte non verrouillée, de verser une chope de bière, etc.",
+				"L'objet tombe au sol à la fin de votre tour si vous le laissez suspendu en l'air."
+			]
+		},
+		{
+			"name": "Nomadic Arrow",
+			"source": "UATheMysticClass",
+			"page": 21,
+			"type": "D",
+			"order": "Nomad",
+			"entries": [
+				"Vous imprégnez une arme à distance d'un étrange semblant de sensibilité, lui permettant de trouver infailliblement sa cible."
+			],
+			"focus": "While you are focused on this discipline, any attack roll you make for a ranged weapon attack ignores disadvantage. If disadvantage would normally apply to the roll, that roll also can't benefit from advantage.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Speed Dart",
+					"entries": [
+						"Comme action bonus, vous imprégnez une arme à distance que vous tenez de puissance psionique. La prochaine attaque que vous effectuez avec elle et qui touche avant la fin du tour en cours inflige {@scaledamage 1d10|1-7|1d10|psi} de dégâts psychiques supplémentaires par point psi dépensé."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Seeking Missile",
+					"entries": [
+						"En réaction lorsque vous ratez une attaque à l'arme à distance, vous pouvez répéter le jet d'attaque contre la même cible."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Faithful Archer",
+					"entries": [
+						"Comme action bonus, vous imprégnez une arme à distance d'une sensibilité limitée. Jusqu'à la fin de votre {@status concentration}, vous pouvez effectuer une attaque supplémentaire avec l'arme au début de chacun de vos tours (aucune action requise). S'il s'agit d'une arme jetée, elle revient à votre portée à chaque fois que vous portez une attaque avec elle."
+					]
+				}
+			]
+		},
+		{
+			"name": "Nomadic Chameleon",
+			"source": "UATheMysticClass",
+			"page": 22,
+			"type": "D",
+			"order": "Nomad",
+			"entries": [
+				"Vous créez un écran de pouvoir psychique qui déforme votre apparence, vous permettant de vous fondre dans le décor ou même de devenir invisible."
+			],
+			"focus": "While focused on this discipline, you have advantage on Dexterity ({@skill Stealth}) checks.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Chameleon",
+					"entries": [
+						"En tant qu'action, vous pouvez tenter de vous cacher même si vous ne remplissez pas les conditions requises pour le faire. À la fin du tour en cours, vous restez caché uniquement si vous remplissez alors les conditions normales pour vous cacher."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Step from Sight",
+					"entries": [
+						"En tant qu'action bonus, vous vous dissimulez à la vue. Vous pouvez cibler une créature supplémentaire pour chaque point psi supplémentaire que vous dépensez pour cette capacité. Les cibles ajoutées doivent être visibles et se trouver à moins de 18 mètres de vous. Chaque cible devient {@condition invisible} et le reste jusqu'à la fin de votre {@status concentration} ou jusqu'à ce qu'elle cible, endommage ou affecte autrement une créature avec une attaque, un sort ou une autre capacité."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Enduring Invisibility",
+					"entries": [
+						"Comme action bonus, vous vous transformez en {@condition invisible} et restez ainsi jusqu'à la fin de votre {@status concentration}."
+					]
+				}
+			]
+		},
+		{
+			"name": "Nomadic Mind",
+			"source": "UATheMysticClass",
+			"page": 22,
+			"type": "D",
+			"order": "Nomad",
+			"entries": [
+				"Vous envoyez une partie de votre psyché dans la noosphère, la vista collective des esprits et des connaissances que possèdent les êtres vivants."
+			],
+			"focus": "Whenever you focus on this discipline, you choose one skill or tool and have proficiency with it until your focus ends. Alternatively, you gain the ability to read and write one language of your choice until your focus ends.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Wandering Mind",
+					"entries": [
+						"Vous entrez dans une profonde contemplation. Si vous vous concentrez pendant toute la durée de cette option, vous gagnez jusqu'à trois des compétences suivantes (une compétence par 2 points psi dépensés) : {@skill Animal Handling}, {@skill Arcana}, {@skill History}, {@skill Medicine}, {@skill Nature}, {@skill Performance}, {@skill Religion} et {@skill Survival}. Le bénéfice dure 1 heure, aucun {@status concentration} n'est requis."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Find Creature",
+					"entries": [
+						"Vous lancez votre esprit à la recherche d'informations sur une créature spécifique. Si vous vous concentrez pendant toute la durée de cette option, vous obtenez alors une compréhension générale de l'emplacement actuel de la créature. Vous apprenez la région, la ville, le village ou le quartier où elle se trouve, en localisant une zone comprise entre 1 et 4,5 kilomètres de côté (au choix du MD). Si la créature se trouve sur un autre plan d'existence, vous apprenez quel plan."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Item Lore",
+					"entries": [
+						"Vous étudiez attentivement un objet. Si vous vous concentrez pendant toute la durée de cette option tout en restant à moins de 1,5 mètre de l'objet, vous bénéficiez alors des avantages d'un sort d'identification lancé sur cet objet."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Psychic Speech",
+					"entries": [
+						"En tant qu'action, vous accordez votre esprit à l'empreinte psychique de toute langue. Pendant 1 heure, vous gagnez la capacité de comprendre toute langue que vous entendez ou tentez de lire. De plus, lorsque vous parlez, toutes les créatures capables de comprendre une langue comprennent ce que vous dites, quelle que soit la langue utilisée."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Wandering Eye",
+					"entries": [
+						"Comme action, vous créez un capteur psychique dans un rayon de 18 mètres autour de vous. Le capteur dure jusqu'à la fin de votre {@status concentration}. Le capteur est invisible et plane dans l'air. Vous recevez mentalement des informations visuelles de lui, qui a une vision normale et une vision dans le noir avec une portée de 18 mètres. Le capteur peut regarder dans toutes les directions. Comme action, vous pouvez déplacer le capteur jusqu'à 9 mètres dans n'importe quelle direction. Il n'y a pas de limite à la distance à laquelle l'œil peut s'éloigner de vous, mais il ne peut pas entrer dans un autre plan d'existence. Une barrière solide bloque le mouvement de l'œil, mais l'œil peut passer par une ouverture d'un pouce de diamètre."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Phasing Eye",
+					"entries": [
+						"Comme l'œil vagabond ci-dessus, sauf que l'œil peut se déplacer à travers des objets solides mais ne peut pas terminer son mouvement dans un objet. S'il le fait, l'effet prend fin immédiatement."
+					]
+				}
+			]
+		},
+		{
+			"name": "Nomadic Step",
+			"source": "UATheMysticClass",
+			"page": 22,
+			"type": "D",
+			"order": "Nomad",
+			"entries": [
+				"Vous exercez votre esprit sur la zone qui vous entoure, tordant les voies intraplanaires que vous percevez pour permettre un voyage instantané."
+			],
+			"focus": "After you teleport on your turn while focused on this discipline, your walking speed increases by 10 feet until the end of the turn, as you are propelled by the magic of your teleportation. You can receive this increase only once per turn.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Step of a Dozen Paces",
+					"entries": [
+						"Si vous n'avez pas encore bougé à votre tour, vous prenez une action bonus pour vous téléporter jusqu'à 6 mètres par point psi dépensé vers un espace inoccupé que vous pouvez voir, et votre vitesse est réduite à 0 jusqu'à la fin du tour."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 1
+					},
+					"name": "Nomadic Anchor",
+					"entries": [
+						"Comme action, vous créez une ancre de téléportation invisible et intangible dans un cube de 1,5 mètre que vous pouvez voir dans un rayon de 36 mètres autour de vous. Pendant les 8 heures suivantes, chaque fois que vous utilisez cette discipline psionique pour vous téléporter, vous pouvez vous téléporter vers l'ancre, même si vous ne la voyez pas, mais elle doit être à portée de la capacité de téléportation."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Defensive Step",
+					"entries": [
+						"Lorsque vous êtes touché par une attaque, vous pouvez utiliser votre réaction pour bénéficier d'un bonus de +4 à la CA contre cette attaque, ce qui peut la faire rater. Vous vous téléportez alors jusqu'à 3 mètres dans un espace inoccupé que vous pouvez voir."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "There and Back Again",
+					"entries": [
+						"Comme action bonus, vous vous téléportez jusqu'à 6 mètres dans un espace inoccupé que vous pouvez voir, puis vous vous déplacez à la moitié de votre vitesse. À la fin de votre tour, vous pouvez vous téléporter à nouveau à l'endroit que vous occupiez avant de vous téléporter, à moins qu'il ne soit maintenant occupé ou sur un plan d'existence différent."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Transposition",
+					"entries": [
+						"Si vous n'avez pas encore bougé à votre tour, choisissez un allié que vous voyez à moins de 18 mètres de vous. Comme action bonus, vous et cette créature vous téléportez, en échangeant vos places, et votre vitesse est réduite à 0 jusqu'à la fin du tour. Cette capacité échoue et est gaspillée si l'un de vous deux ne peut pas tenir dans l'espace de destination."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Baleful Transposition",
+					"entries": [
+						"Comme action, choisissez une créature que vous pouvez voir à moins de 36 mètres de vous. Cette créature doit effectuer un jet de sauvegarde de Sagesse. En cas d'échec, vous et cette créature vous téléportez, en changeant de place. Cette capacité échoue et est gaspillée si l'un de vous ne peut pas tenir dans l'espace de destination."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"name": "Phantom Caravan",
+					"entries": [
+						"Comme action, vous et jusqu'à six créatures consentantes de votre choix que vous pouvez voir à moins de 18 mètres de vous vous téléportez jusqu'à 1,5 kilomètre vers un endroit que vous pouvez voir. S'il n'y a pas d'espace libre pour toutes les cibles au point d'arrivée, cette capacité échoue et est gaspillée."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Nomad's Gate",
+					"entries": [
+						"Comme action, vous créez un cube de 1,5 mètre de lumière faible et grise dans un rayon de 1,5 mètre autour de vous. Vous créez un cube identique à un point de votre choix dans un rayon de 1,5 kilomètre que vous avez vu au cours des dernières 24 heures. Jusqu'à la fin de votre {@status concentration}, toute personne entrant dans l'un des cubes se téléporte immédiatement dans l'autre, apparaissant dans un espace inoccupé à côté. La téléportation échoue s'il n'y a pas de place pour la créature."
+					]
+				}
+			]
+		},
+		{
+			"name": "Precognition",
+			"source": "UATheMysticClass",
+			"page": 23,
+			"type": "D",
+			"order": "Awakened",
+			"entries": [
+				"En analysant les informations qui vous entourent, qu'il s'agisse d'allusions subtiles ou de faits apparemment déconnectés, vous apprenez à tisser en un instant une chaîne de probabilités qui vous donne des indications extraordinaires."
+			],
+			"focus": "While focused on this discipline, you have advantage on initiative rolls.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Precognitive Hunch",
+					"entries": [
+						"En tant qu'action bonus, vous vous ouvrez pour recevoir des intuitions momentanées qui améliorent vos chances de réussite ; jusqu'à la fin de votre {@status concentration}, chaque fois que vous faites un jet d'attaque, un jet de sauvegarde ou un test de caractéristique, vous effectuez un jet de {@dice d4} et l'ajoutez au total."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "All-Around Sight",
+					"entries": [
+						"En réponse à une attaque qui vous touche, vous utilisez votre réaction pour imposer un désavantage à ce jet d'attaque, ce qui peut le faire rater."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 8,
+						"unit": "hr"
+					},
+					"name": "Danger Sense",
+					"entries": [
+						"En tant qu'action, vous créez un modèle psychique de la réalité dans votre esprit et vous lui demandez de vous montrer quelques secondes dans le futur. Jusqu'à la fin de votre {@status concentration}, vous ne pouvez pas être {@quickref Surprise|PHB|3|0|surpris}, les jets d'attaque contre vous ne peuvent pas bénéficier d'un avantage, et vous gagnez un bonus de +10 à l'initiative."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"name": "Victory Before Battle",
+					"entries": [
+						"Lorsque vous faites un jet d'initiative, vous pouvez utiliser cette capacité pour vous accorder, ainsi qu'à un maximum de cinq créatures de votre choix situées à moins de 18 mètres de vous, un bonus de +10 à l'initiative."
+					]
+				}
+			]
+		},
+		{
+			"name": "Psionic Restoration",
+			"source": "UATheMysticClass",
+			"page": 23,
+			"type": "D",
+			"order": "Immortal",
+			"entries": [
+				"Vous maniez l'énergie psionique pour soigner les blessures et restaurer votre santé et celle des autres."
+			],
+			"focus": "While focused on this discipline, you can use a bonus action to touch a creature that has 0 hit points and stabilize it.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Mend Wounds",
+					"entries": [
+						"En tant qu'action, vous pouvez dépenser des points psi pour redonner des points de vie à une créature que vous touchez. La créature regagne {@scaledice 1d8|1-7|1d8|psi} de points de vie par point psi dépensé."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Restore Health",
+					"entries": [
+						"Comme action, vous touchez une créature et lui retirez une des conditions suivantes : {@condition blinded}, {@condition deafened}, {@condition paralyzed} ou {@condition poisoned}. Vous pouvez également supprimer une maladie de la créature."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Restore Life",
+					"entries": [
+						"Comme action, vous touchez une créature qui est morte au cours de la dernière minute. La créature revient à la vie avec 1 point de vie. Cette capacité ne peut pas ramener à la vie une créature morte de vieillesse, ni une créature à laquelle il manque des parties vitales du corps."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"name": "Restore Vigor",
+					"entries": [
+						"En tant qu'action, vous pouvez toucher une créature et choisir l'une des options suivantes : supprimer toute réduction à l'un de ses scores de capacité, supprimer un effet qui réduit son maximum de points de vie, ou réduire son niveau de {@condition exhaustion} de un."
+					]
+				}
+			]
+		},
+		{
+			"name": "Psionic Weapon",
+			"source": "UATheMysticClass",
+			"page": 24,
+			"type": "D",
+			"order": "Immortal",
+			"entries": [
+				"Vous avez appris à canaliser l'énergie psionique dans vos attaques, leur conférant une puissance dévastatrice."
+			],
+			"focus": "Whenever you focus on this discipline, choose one weapon you're holding or your unarmed strike. When you attack with it while focused on this discipline, its damage is psychic and magical, rather than its normal damage type. Until you reach 6th level as a mystic, you don't add your Strength or Dexterity modifier to the psychic attack's damage rolls.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 1
+					},
+					"name": "Ethereal Weapon",
+					"entries": [
+						"En tant qu'action bonus, vous transformez temporairement une arme que vous tenez ou votre coup à mains nues en énergie psionique pure. La prochaine attaque que vous portez avec avant la fin de votre tour ignore l'armure de la cible, ne nécessitant aucun jet d'attaque. À la place, la cible effectue un jet de sauvegarde de Dextérité contre cette discipline. En cas d'échec, la cible subit les dégâts normaux de l'attaque et ses effets supplémentaires. En cas de sauvegarde réussie, la cible subit la moitié des dégâts de l'attaque, mais ne subit pas les effets supplémentaires qui seraient normalement imposés en cas de réussite."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Lethal Strike",
+					"entries": [
+						"Comme action bonus, vous imprégnez une arme que vous tenez ou votre frappe à mains nues d'énergie psychique. La prochaine fois que vous frappez avec cette arme avant la fin de votre tour, elle inflige {@scaledamage 1d10|1-7|1d10|psi} de dégâts psychiques supplémentaires par point psi dépensé."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Augmented Weapon",
+					"entries": [
+						"Comme action bonus, touchez un {@filter arme simple ou martiale|items|source=phb|category=basic|type=martial weapon;simple weapon}. Jusqu'à la fin de votre {@status concentration}, cette arme devient une arme magique avec un bonus de +3 à ses jets d'attaque et de dégâts."
+					]
+				}
+			]
+		},
+		{
+			"name": "Psychic Assault",
+			"source": "UATheMysticClass",
+			"page": 24,
+			"type": "D",
+			"order": "Awakened",
+			"entries": [
+				"Vous maniez votre esprit comme une arme, libérant des salves d'énergie psionique."
+			],
+			"focus": "While focused on this discipline, you gain a +2 bonus to damage rolls with psionic talents that deal psychic damage.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Psionic Blast",
+					"entries": [
+						"Comme action, choisissez une créature que vous pouvez voir à moins de 18 mètres de vous. La cible subit {@scaledamage 1d8|1-7|1d8|psi} de dégâts psychiques par point psi dépensé pour cette capacité."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Ego Whip",
+					"entries": [
+						"Comme action, choisissez une créature que vous pouvez voir à moins de 18 mètres de vous. La cible doit effectuer un jet de sauvegarde d'Intelligence. Sur un jet de sauvegarde raté, la créature subit {@damage 3d8} de dégâts psychiques, et elle est remplie de doutes, ce qui lui permet d'utiliser son action à son prochain tour seulement pour prendre l'action Esquiver, Se désengager, ou Se cacher. Sur un jet de sauvegarde réussi, elle subit deux fois moins de dégâts."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Id Insinuation",
+					"entries": [
+						"Comme action, choisissez une créature que vous pouvez voir dans un rayon de 18 mètres autour de vous. La cible doit effectuer un jet de sauvegarde d'Intelligence. En cas d'échec, la créature subit {@damage 5d8} de dégâts psychiques et entre en fureur, son Id se déchaînant. Lors de son prochain tour, elle ne peut utiliser son action que pour effectuer une action d'esquive ou d'attaque. Si elle réussit sa sauvegarde, elle subit deux fois moins de dégâts."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"name": "Psychic Blast",
+					"entries": [
+						"Au cours d'une action, vous libérez une énergie psychique dévastatrice dans un cône de 18 mètres. Chaque créature dans cette zone doit faire un jet de sauvegarde d'Intelligence, subissant {@damage 8d8} de dégâts psychiques en cas de sauvegarde ratée, ou la moitié des dégâts en cas de sauvegarde réussie. Vous pouvez augmenter les dégâts de {@scaledamage 8d8|6-7|2d8|psi} si vous dépensez 1 point psi supplémentaire pour cette capacité."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"name": "Psychic Crush",
+					"entries": [
+						"Comme action, vous créez un cube d'énergie psychique de 6 mètres dans un rayon de 36 mètres autour de vous. Chaque créature dans cette zone doit effectuer un jet de sauvegarde d'Intelligence. En cas de sauvegarde ratée, la cible subit {@damage 8d8} de dégâts psychiques et est {@condition stunned} jusqu'à la fin de votre prochain tour. En cas de sauvegarde réussie, la cible subit la moitié des dégâts."
+					]
+				}
+			]
+		},
+		{
+			"name": "Psychic Disruption",
+			"source": "UATheMysticClass",
+			"page": 24,
+			"type": "D",
+			"order": "Awakened",
+			"entries": [
+				"Vous créez des parasites psychiques qui perturbent la capacité des autres créatures à penser clairement."
+			],
+			"focus": "While focused on this discipline, you have advantage on Charisma ({@skill Deception}) checks.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Distracting Haze",
+					"entries": [
+						"Comme action, choisissez une créature que vous pouvez voir à moins de 18 mètres de vous. Cette créature doit effectuer un jet de sauvegarde d'Intelligence. En cas d'échec, elle subit {@scaledamage 1d10|1-7|1d10|psi} de dégâts psychiques par point psi dépensé et ne peut rien voir à plus de 3 mètres d'elle jusqu'à la fin de votre {@status concentration}. En cas de sauvegarde réussie, elle subit la moitié des dégâts."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Daze",
+					"entries": [
+						"Comme action, choisissez une créature que vous pouvez voir à moins de 18 mètres de vous. Cette créature doit effectuer un jet de sauvegarde d'Intelligence. En cas d'échec, la cible est {@condition incapacitated} jusqu'à la fin de votre prochain tour ou jusqu'à ce qu'elle subisse des dégâts."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Mind Storm",
+					"entries": [
+						"Comme action, choisissez un point que vous pouvez voir dans un rayon de 18 mètres autour de vous. Chaque créature située dans une sphère de 6 mètres de rayon centrée sur ce point doit effectuer un jet de sauvegarde de Sagesse. En cas de sauvegarde ratée, la cible subit {@damage 6d8} de dégâts psychiques et souffre d'un désavantage à tous ses jets de sauvegarde jusqu'à la fin de votre prochain tour. En cas de sauvegarde réussie, la créature subit la moitié des dégâts. Vous pouvez augmenter les dégâts de {@scaledamage 6d8|5-7|1d6|psi} par point psi supplémentaire dépensé pour cette capacité."
+					]
+				}
+			]
+		},
+		{
+			"name": "Psychic Hammer",
+			"source": "UATheMysticClass",
+			"page": 28,
+			"type": "T",
+			"entries": [
+				"Comme action, vous essayez de saisir une créature que vous pouvez voir à moins de 36 mètres de vous, avec une main fabriquée à partir d'énergie télékinétique. La cible doit réussir un jet de sauvegarde de Force ou subir {@damage 1d6} de dégâts de force. Si elle subit l'un de ces dégâts et qu'elle est Grande ou plus petite, vous pouvez la déplacer jusqu'à 3 mètres en ligne droite dans la direction de votre choix. Vous ne pouvez pas soulever la cible du sol à moins qu'elle ne soit déjà en l'air ou sous l'eau.",
+				"Les dégâts de ce talent augmentent de {@dice 1d6} lorsque vous atteignez le 5e niveau ({@damage 2d6}), le 11e niveau ({@damage 3d6}) et le 17e niveau ({@damage 4d6})."
+			]
+		},
+		{
+			"name": "Psychic Inquisition",
+			"source": "UATheMysticClass",
+			"page": 25,
+			"type": "D",
+			"order": "Awakened",
+			"entries": [
+				"Vous pénétrez dans l'esprit d'une créature pour y découvrir des informations ou y implanter des idées."
+			],
+			"focus": "While focused on this discipline, you know when a creature communicating with you via telepathy is lying.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Hammer of Inquisition",
+					"entries": [
+						"Comme action, choisissez une créature que vous pouvez voir dans un rayon de 18 mètres autour de vous. La cible doit effectuer un jet de sauvegarde d'Intelligence. En cas de sauvegarde ratée, elle subit {@scaledamage 1d10|1-7|1d10|psi} de dégâts psychiques par point psi dépensé et souffre d'un désavantage à son prochain jet de sauvegarde de Sagesse avant la fin de votre prochain tour. Si elle réussit son jet de sauvegarde, elle subit deux fois moins de dégâts."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Forceful Query",
+					"entries": [
+						"Comme action, vous posez une question à une créature qui peut vous voir et vous entendre dans un rayon de 9 mètres autour de vous. La question doit être formulée de manière à ce que l'on puisse y répondre par oui ou par non, sinon cette capacité échoue. La cible doit réussir un jet de sauvegarde de Sagesse, sinon elle répond par la vérité. Une créature est immunisée contre cette capacité si elle est immunisée contre le fait d'être {@condition charmed}."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Ransack Mind",
+					"entries": [
+						"Pendant que vous vous concentrez sur cette capacité, vous sondez l'esprit d'une créature. La créature doit se trouver à moins de 9 mètres de vous et vous devez être en mesure de la voir. Si vous atteignez la durée totale de la capacité, la cible doit effectuer trois jets de sauvegarde d'Intelligence, et vous apprenez des informations de sa part en fonction du nombre de jets de sauvegarde qu'elle rate. Avec un jet de sauvegarde raté, vous apprenez ses principaux souvenirs des 12 dernières heures. Avec deux jets de sauvegarde ratés, vous apprenez ses principaux souvenirs des dernières 24 heures. Avec trois jets de sauvegarde ratés, vous apprenez ses principaux souvenirs des dernières 48 heures."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Phantom Idea",
+					"entries": [
+						"Pendant que vous vous concentrez sur cette capacité, vous sondez l'esprit d'une créature. La créature doit se trouver à moins de 9 mètres de vous et vous devez pouvoir la voir. Si vous atteignez la durée totale de la capacité, la cible doit effectuer trois jets de sauvegarde d'Intelligence, et vous plantez en elle un souvenir ou une idée, qui dure un nombre d'heures basé sur le nombre de jets de sauvegarde auxquels elle échoue. Vous choisissez si l'idée ou le souvenir est banal (comme \" J'ai mangé du porridge au petit déjeuner \" ou \" La bière est la pire \") ou s'il définit la personnalité de la cible (\" Je n'ai pas sauvé mon village des maraudeurs orcs et je suis donc un lâche \" ou \" La magie est un fléau, alors j'y renonce \"). Avec un jet de sauvegarde raté, l'idée ou le souvenir dure pendant les 4 heures suivantes. Avec deux jets de sauvegarde ratés, il dure 24 heures. Avec trois jets de sauvegarde ratés, il dure 48 heures."
+					]
+				}
+			]
+		},
+		{
+			"name": "Psychic Phantoms",
+			"source": "UATheMysticClass",
+			"page": 25,
+			"type": "D",
+			"order": "Awakened",
+			"entries": [
+				"Ton pouvoir s'infiltre dans l'esprit d'une créature et lui donne de fausses perceptions."
+			],
+			"focus": "While focused on this discipline, you have advantage on Charisma ({@skill Deception}) checks.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Distracting Figment",
+					"entries": [
+						"Comme action, choisissez une créature que vous pouvez voir à moins de 18 mètres de vous. La cible doit effectuer un jet de sauvegarde d'Intelligence. En cas de sauvegarde ratée, elle subit {@scaledamage 1d10|1-7|1d10|psi} de dégâts psychiques par point psi dépensé et croit percevoir une créature menaçante juste hors de sa vue ; jusqu'à la fin de votre prochain tour, elle ne peut pas utiliser de réactions, et les jets d'attaque au corps à corps contre elle ont l'avantage. En cas de sauvegarde réussie, il subit deux fois moins de dégâts."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Phantom Foe",
+					"entries": [
+						"Comme action, choisissez une créature que vous pouvez voir dans un rayon de 18 mètres autour de vous. La cible doit effectuer un jet de sauvegarde d'Intelligence. En cas de sauvegarde ratée, elle perçoit une créature horrifique adjacente à elle jusqu'à la fin de votre {@status concentration}. Pendant ce temps, la cible ne peut pas réagir et subit {@damage 1d8} de dégâts psychiques au début de chacun de ses tours. La cible peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant fin à l'effet sur elle-même en cas de réussite. Vous pouvez augmenter les dégâts de {@scaledamage 1d8|3-7|1d8|psi} pour chaque point psi supplémentaire dépensé pour cette capacité."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Phantom Betrayal",
+					"entries": [
+						"En une action, vous implantez une paranoïa délirante dans l'esprit d'une créature. Choisissez une créature que vous pouvez voir à moins de 18 mètres de vous. La cible doit réussir un jet de sauvegarde d'Intelligence, ou jusqu'à la fin de votre {@status concentration}, elle doit cibler ses alliés avec des attaques et d'autres effets de dégâts. La cible peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant fin à l'effet sur elle-même en cas de réussite. Une créature est immunisée contre cette capacité si elle est immunisée contre le fait d'être {@condition charmed}."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Phantom Riches",
+					"entries": [
+						"Comme action, vous plantez le fantôme d'un objet très désiré dans l'esprit d'une créature. Choisissez une créature que vous pouvez voir à moins de 18 mètres de vous. La cible doit effectuer un jet de sauvegarde d'Intelligence. En cas d'échec, vous obtenez un contrôle partiel sur le comportement de la cible jusqu'à la fin de votre {@status concentration} ; la cible se déplace comme vous le souhaitez à chacun de ses tours, alors qu'elle pense poursuivre l'objet fantôme qu'elle désire. Si elle n'a pas subi de dégâts depuis son dernier tour, elle ne peut utiliser son action que pour admirer l'objet que vous avez créé dans sa perception. La cible peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant fin à l'effet sur elle-même en cas de réussite."
+					]
+				}
+			]
+		},
+		{
+			"name": "Telepathic Contact",
+			"source": "UATheMysticClass",
+			"page": 26,
+			"type": "D",
+			"order": "Awakened",
+			"entries": [
+				"En canalisant la puissance psionique, vous obtenez la capacité de contrôler d'autres créatures en substituant votre volonté à la leur."
+			],
+			"focus": "While focused on this discipline, you gain the ability to use your Telepathy class feature with up to six creatures at once. If you don't have that feature from the mystic class, you instead gain it while focused on this discipline.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Exacting Query",
+					"entries": [
+						"Comme action, vous ciblez une créature avec laquelle vous pouvez communiquer par télépathie. La cible doit effectuer un jet de sauvegarde d'Intelligence. En cas d'échec, la cible répond honnêtement à une question que vous lui posez par télépathie. En cas de sauvegarde réussie, la cible n'est pas affectée et vous ne pouvez plus utiliser cette capacité sur elle avant d'avoir terminé un long repos. Une créature est immunisée contre cette capacité si elle est immunisée contre le fait d'être {@condition charmed}."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Occluded Mind",
+					"entries": [
+						"Comme action, vous ciblez une créature avec laquelle vous pouvez communiquer par télépathie. La cible doit effectuer un jet de sauvegarde d'Intelligence. En cas d'échec, la cible croit pendant les 5 prochaines minutes une affirmation de votre choix que vous lui communiquez par télépathie. Cette affirmation peut comporter jusqu'à dix mots et doit vous décrire ou décrire une créature ou un objet que la cible peut voir. Si vous réussissez votre sauvegarde, la cible n'est pas affectée et vous ne pouvez plus utiliser cette capacité sur elle avant d'avoir terminé un long repos. Une créature est immunisée contre cette capacité si elle est immunisée contre le fait d'être {@condition charmed}."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Broken Will",
+					"entries": [
+						"En tant qu'action, vous ciblez une créature avec laquelle vous pouvez communiquer par télépathie. La cible doit effectuer un jet de sauvegarde d'Intelligence. En cas d'échec, vous choisissez le mouvement et l'action de la cible à son prochain tour. En cas de sauvegarde réussie, la cible n'est pas affectée et vous ne pouvez plus utiliser cette capacité sur elle avant d'avoir terminé un long repos. Une créature est immunisée contre cette capacité si elle est immunisée contre le fait d'être {@condition charmed}."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Psychic Grip",
+					"entries": [
+						"Comme action, vous ciblez une créature que vous pouvez voir à moins de 18 mètres de vous. La cible doit réussir un jet de sauvegarde d'Intelligence, sinon elle subit un {@condition paralyzed} jusqu'à la fin de votre {@status concentration}. À la fin de chacun de ses tours, elle peut répéter le jet de sauvegarde. En cas de réussite, cet effet prend fin. En cas d'échec, vous pouvez utiliser votre réaction pour forcer la cible à se déplacer jusqu'à la moitié de sa vitesse, même si elle est à {@condition paralyzed}."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Psychic Domination",
+					"entries": [
+						"Comme action, vous ciblez une créature que vous pouvez voir à moins de 18 mètres de vous. La cible doit réussir un jet de sauvegarde d'Intelligence, ou vous choisissez les actions et les déplacements de la créature à ses tours jusqu'à la fin de votre {@status concentration}. À la fin de chacun de ses tours, elle peut répéter le jet de sauvegarde, mettant fin à l'effet sur elle-même en cas de réussite. Une créature est immunisée contre cette capacité si elle est immunisée contre le fait d'être {@condition charmed}."
+					]
+				}
+			]
+		},
+		{
+			"name": "Third Eye",
+			"source": "UATheMysticClass",
+			"page": 26,
+			"type": "D",
+			"order": "Nomad",
+			"entries": [
+				"Vous créez un troisième œil psychique dans votre esprit, que vous projetez dans le monde. Il canalise les pensées et les connaissances vers vous, améliorant considérablement vos sens."
+			],
+			"focus": "While focused on this discipline, you have darkvision with a range of 60 feet. If you already have darkvision with that range or greater, increase its range by 10 feet.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Tremorsense",
+					"entries": [
+						"En tant qu'action bonus, vous obtenez une sensation de tremblement avec un rayon de 9 mètres, qui dure jusqu'à ce que votre {@status concentration} se termine."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Unwavering Eye",
+					"entries": [
+						"Comme action bonus, vous gagnez un avantage sur les tests de sagesse pendant 1 minute."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Piercing Sight",
+					"entries": [
+						"Comme action bonus, vous gagnez la capacité de voir à travers des objets d'une épaisseur maximale de 0,3 mètre dans un rayon de 9 mètres autour de vous. Cette vision dure jusqu'à la fin de votre {@status concentration}."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Truesight",
+					"entries": [
+						"En tant qu'action bonus, vous gagnez une vision de vérité d'un rayon de 9 mètres, qui dure jusqu'à la fin de votre {@status concentration}."
+					]
+				}
+			]
+		}
+	]
+}

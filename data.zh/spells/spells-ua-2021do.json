@@ -1,0 +1,417 @@
+{
+	"spell": [
+		{
+			"name": "Draconic Transformation",
+			"source": "UA2021DraconicOptions",
+			"page": 5,
+			"level": 7,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "龙的雕像，价值至少 500 金镑",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"随着一声怒吼，你借助龙的魔力来改造自己，呈现出各种龙的特征。在咒语结束之前，你会获得以下好处。",
+				{
+					"type": "list",
+					"items": [
+						"您拥有 {@sense blindsight}，射程为 9 米。在这个范围内，你可以有效地看到任何没有被完全遮挡的东西，即使你是（%1%）或在黑暗中。此外，你还能看到 {@condition invisible} 生物，除非该生物成功躲过你的视线。",
+						"从你的背上长出不可思议的翅膀，使你的飞行速度达到 12 米。",
+						"当你施放这个魔法时，以及作为持续时间内后续回合的额外动作，你可以在 9 米锥形范围内吐出一口闪耀的能量。该区域内的每个生物都必须进行一次灵巧蓄力，蓄力失败会受到 {@damage 3d8} 力量伤害，蓄力成功则会受到一半的伤害。"
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"conditionInflict": [
+				"blinded",
+				"invisible"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"SGT",
+				"UBA"
+			]
+		},
+		{
+			"name": "Fizban's Platinum Shield",
+			"source": "UA2021DraconicOptions",
+			"page": 5,
+			"level": 6,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "镀铂龙鳞，价值至少 500 便士",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"你创造一个银色光域，将你选择的一个生物包围在范围内（你可以选择自己）。光场会向 1.5 米外投射暗光。",
+				"作为后续回合的奖励动作，您可以将场地移动到场地周围 18 米内的另一个生物身上。",
+				"受该领域保护的生物获得以下好处。",
+				{
+					"type": "list",
+					"items": [
+						"该生物有一半的掩护。",
+						"该生物对酸、冷、火、闪电和毒伤害有抵抗力。",
+						"如果该生物受到的效果允许它做一个灵巧的蓄力动作来承受一半的伤害，如果蓄力动作成功，该生物就不会受到伤害，如果失败，就只会受到一半的伤害。"
+					]
+				}
+			],
+			"damageResist": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"poison"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"UBA"
+			]
+		},
+		{
+			"name": "Flame Stride",
+			"source": "UA2021DraconicOptions",
+			"page": 6,
+			"level": 3,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"龙的火焰覆盖你的双脚，赋予你爆炸般的速度。在持续时间内，你的速度会增加 6 米，移动时不会引发机会攻击。",
+				"当你移动到未穿戴或携带的生物或物体 1.5 米范围内时，它会受到来自你的热量痕迹的（%0%）火焰伤害。生物或物体在一个回合内只能受到一次伤害。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"当你使用 4 级或更高的法术槽施放此法术时，法术槽等级每超过 3 级，你的速度就会增加 1.5 米。此外，法术槽等级每超过 3 级，就会造成额外 {@damage 1d6} 的火焰伤害。"
+					]
+				}
+			],
+			"damageInflict": [
+				"fire"
+			],
+			"miscTags": [
+				"OBJ"
+			]
+		},
+		{
+			"name": "Icingdeath's Frost",
+			"source": "UA2021DraconicOptions",
+			"page": 6,
+			"level": 2,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 15
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "一小瓶融水"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"一股冰冷的能量从你身上散发开来，形成一个 9 米长的锥形。该区域内的每个生物都必须进行一次体质救赎。如果蓄力失败，生物会受到 {@damage 3d8} 的寒冷伤害，并在 1 分钟内被冰覆盖，直到生物使用行动将冰从自身或其他生物身上打破。如果蓄力成功，生物会受到一半的伤害，但不会受到额外影响。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"当你使用3级或以上的法术槽施放此法术时，每超过2级的法术槽等级，寒冷伤害增加（%0%）。"
+					]
+				}
+			],
+			"damageInflict": [
+				"cold"
+			],
+			"savingThrow": [
+				"constitution"
+			]
+		},
+		{
+			"name": "Nathair's Mischief",
+			"source": "UA2021DraconicOptions",
+			"page": 6,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "饼皮"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"您可以在以您选择的点为中心的 6 米立方体范围内施放佯攻魔法和龙人魔法。在 \"调皮涌动 \"表上掷骰子决定产生的魔法效果。在每个回合开始时，您都可以将立方体移动到 3 米处，并在掷骰子表上重新掷骰子。",
+				{
+					"type": "table",
+					"caption": "Mischievous Surge",
+					"colLabels": [
+						"d4",
+						"Effect"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-12"
+					],
+					"rows": [
+						[
+							"1",
+							"空气中弥漫着苹果派的味道，立方体中的每个生物都必须在智慧救赎中成功，否则就会被你变成（%0%），直到你下一个回合开始。"
+						],
+						[
+							"2",
+							"四周出现花束，立方体中的每个生物都必须在灵巧救赎中成功，否则就会被{@condition blinded}，直到你的下一个回合开始，因为花会向他们脸上喷水。"
+						],
+						[
+							"3",
+							"方块中的每个生物都必须在智慧救赎中成功，否则就会开始傻笑，直到你下一个回合开始。傻笑的生物是{@condition incapacitated}，并使用它所有的动作向一个随机方向移动。"
+						],
+						[
+							"4",
+							"滴滴糖浆出现并在立方体中盘旋，将其变成（%0%），直到你下一回合开始。"
+						]
+					]
+				}
+			],
+			"conditionInflict": [
+				"blinded",
+				"charmed",
+				"incapacitated"
+			],
+			"savingThrow": [
+				"dexterity",
+				"wisdom"
+			],
+			"miscTags": [
+				"RO"
+			]
+		},
+		{
+			"name": "Raulothim's Psychic Lance",
+			"source": "UA2021DraconicOptions",
+			"page": 6,
+			"level": 4,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"你从额头向范围内你能看到的生物释放出一道闪亮的精神力量长矛。或者，你也可以说出该生物的名字。如果指定的目标在范围内，当长矛对准它时，它不会从掩护或隐身中获得任何好处。如果指定的目标不在范围内，长矛就会消散，而法术槽也不会被消耗。",
+				"目标必须在智力救赎中成功，否则会受到{@damage 10d6}精神伤害，并被{@condition incapacitated}，直到你下一回合开始。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"当你使用五级以上的法术槽施放此法术时，每超过四级的法术槽等级，伤害就会增加（%0%）。"
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrow": [
+				"intelligence"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Summon Draconic Spirit",
+			"source": "UA2021DraconicOptions",
+			"page": 7,
+			"level": 5,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "龙囤中的一件艺术品，价值至少 500 古普",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"你召唤出一个龙人的灵魂。它在一个你能看到的范围内的无人空间里显现。",
+				"这个肉身形态使用{@creature Draconic Spirit|UA2021DraconicOptions}的状态块。当你施展这个法术时，选择一个龙族。彩色的、宝石的或金属的。该生物类似于所选家族的龙，这决定了其状态区的某些特征。当该生物的命中率降至0或法术结束时，它就会消失。",
+				"该生物是你和你同伴的盟友。在战斗中，该生物分享你的主动权，但它会在你之后立即进入自己的回合。它听从你的口头命令（不需要你的行动）。如果你没有发出任何命令，它就会采取{@action Dodge}的行动并使用它的移动来避免危险。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"当你使用6级或更高等级的法术槽施放此法术时，在状态块中法术等级出现的地方使用更高的等级。"
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		}
+	]
+}

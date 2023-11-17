@@ -1,0 +1,129 @@
+name: 5eTranslated - Translate
+
+on:
+   workflow_dispatch:
+      inputs:
+         source:
+            description: "Source files"
+            required: True
+            default: ${DEFAULT_SOURCE_FILES}
+   schedule:
+      - cron: "0 0 * * *"
+
+env:
+   DEFAULT_SOURCE_FILES: "data/spells/*.json data/class/*.json data/*.json data/book/*.json data/adventure/*.json data/bestiary/*.json"
+   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+concurrency:
+   group: "translation"
+   cancel-in-progress: false
+
+permissions:
+   contents: write
+   pages: write
+   id-token: write
+
+jobs:
+   merge-upstream:
+      if: ${{ ! contains(github.repository, 'backup')}}
+      runs-on: ubuntu-latest
+      steps:
+         - uses: actions/checkout@main
+           with:
+              ref: "translations"
+              fetch-depth: 0
+         - name: Merge latest upstream
+           continue-on-error: true
+           run: |
+              git remote add upstream https://github.com/5etools-mirror-1/5etools-mirror-1.github.io
+              git fetch upstream
+              git config user.name "Automatic translator"
+              git config user.email "<>"
+              git merge upstream/master
+              git push
+   translate:
+      needs: merge-upstream
+      strategy:
+         max-parallel: 5
+         fail-fast: false
+         matrix:
+            language: ["fr"]
+            convert_to_metric: [true]
+            include:
+               - language: de
+                 convert_to_metric: true
+               - language: de
+                 convert_to_metric: true
+               - language: es
+                 convert_to_metric: true
+               - language: it
+                 convert_to_metric: true
+               - language: pl
+                 convert_to_metric: true
+               - language: sv
+                 convert_to_metric: true
+               - language: nl
+                 convert_to_metric: true
+               - language: zh
+                 convert_to_metric: true
+               - language: ru
+                 convert_to_metric: true
+      runs-on: macos-latest
+      steps:
+         - uses: actions/checkout@main
+           with:
+              ref: "translations"
+         - uses: actions/setup-python@v3
+           with:
+              python-version: "3.11.5"
+              architecture: "x64"
+         - name: Set up dependencies
+           run: |
+              #sudo apt-get install -y firefox
+              pip3 install selenium webdriver_manager
+              pip3 install pyperclip
+         - name: Build command - Base
+           run: |
+              cd $GITHUB_WORKSPACE
+              echo -n "./translation/translate.py --language ${{ matrix.language }} --maxrun 17000 --translate --retranslate-glossary-modified --translate-tags" >> command.sh
+         - name: Build command - Add conversion to metric
+           if: matrix.convert_to_metric
+           run: |
+              echo -n " --convert-to-metric-system" >> command.sh
+         - name: Build command -  Add Files
+           run: |
+              echo -n " ${{inputs.source !='' && inputs.source || env.DEFAULT_SOURCE_FILES}}" >> command.sh
+         - name: Run base command
+           run: |
+              echo "Running command"
+              cat command.sh
+              bash command.sh
+         # - name: Run Replace Glossary Words
+         #   run: |
+         #      # Command to replace words from glossary in identified patterns
+         #      ./translation/replace_glossary_words.py --language ${{matrix.language}} ${{inputs.source !='' && inputs.source || env.DEFAULT_SOURCE_FILES}}
+         - name: Npm run gen
+           run: |
+              mv data data.src
+              ln -s data.${{ matrix.language }} data
+              npm run gen
+              rm -f data
+              mv data.src data
+         - name: Save results
+           continue-on-error: true
+           run: |
+              git config user.name "Automatic translator"
+              git config user.email "<>"
+              git add data.${{ matrix.language }}/ translation/cache/${{ matrix.language }}/
+              git commit -m 'automatic translation'
+              git status
+              git checkout HEAD .
+              git pull --rebase --autostash
+              git push origin translations || true
+              # Try again with a short delay in case it fails (conflicting pushes)
+              sleep $((1 + $RANDOM % 10 * 10))
+              git pull --rebase --autostash
+              git push origin translations || true
+              sleep $((1 + $RANDOM % 10 * 10))
+              git pull --rebase --autostash
+              git push origin translations

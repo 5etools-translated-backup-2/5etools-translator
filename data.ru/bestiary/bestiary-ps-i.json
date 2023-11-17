@@ -1,0 +1,1671 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM",
+				"CoS"
+			]
+		}
+	},
+	"monster": [
+		{
+			"name": "Avacyn",
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Solar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Solar",
+						"with": "Avacyn",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Moonsilver Spear",
+							"entries": [
+								"Ангел Полета Лунного Серебра владеет копьем, сделанным из осколка Гельвальта. Хит-пойнты, потерянные при нанесении урона этим оружием, могут быть восстановлены только во время короткого или длительного отдыха, а не регенерацией, магией или любым другим способом. Один раз за ход, когда ангел поражает существо атакой этим оружием, он может ранить цель. В начале каждого хода раненое существо получает {@damage 1d4} некротического урона за каждый раз, когда ангел ранил его, после чего оно может сделать спасбросок на {@dc 15} Конституцию, и в случае успеха эффект от всех таких ран прекращается. В качестве альтернативы раненое существо или существо в радиусе 1,5 м от него может использовать действие, чтобы сделать проверку {@dc 15} Мудрости ({@skill Medicine}), при успехе которой эффект от таких ран прекращается."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Bruna",
+			"alias": [
+				"Light of Alabaster"
+			],
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Planetar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "planetar",
+						"with": "Bruna",
+						"flags": "i"
+					},
+					"_": {
+						"mode": "addSpells",
+						"will": [
+							"{@spell protection from evil and good}"
+						],
+						"daily": {
+							"1e": [
+								"{@spell dispel evil and good}"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Creepy Doll",
+			"source": "PSI",
+			"page": 25,
+			"size": [
+				"T"
+			],
+			"type": "construct",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 21,
+				"formula": "6d4 + 6"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 6,
+			"dex": 14,
+			"con": 13,
+			"int": 12,
+			"wis": 11,
+			"cha": 10,
+			"skill": {
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed"
+			],
+			"languages": [
+				"speaks and understands the languages known by its creator"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Пока жуткая кукла остается неподвижной, она неотличима от обычной, неодушевленной куклы."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Жуткая кукла делает одну атаку ножницами и использует психическую атаку."
+					]
+				},
+				{
+					"name": "Scissors",
+					"entries": [
+						"{@atk mw} {@hit 4} попадание, радиус действия 1,5 м., одна цель. {@h}7 ({@damage 2d4 + 2}) колющего урона."
+					]
+				},
+				{
+					"name": "Psychic Assault",
+					"entries": [
+						"Жуткая кукла нацеливается на одно существо, которое она видит в радиусе 3 м от себя и которое имеет мозг. Цель должна успешно выполнить бросок спасения {@dc 12} интеллекта или получить 11 ({@damage 2d10}) психического урона. При неудаче также бросьте {@dice 3d6}. Если сумма равна или превышает показатель Интеллекта цели, то этот показатель снижается до 0. Цель находится в состоянии {@condition stunned}, пока не восстановит хотя бы одно очко Интеллекта, как от заклинания {@spell greater restoration} или аналогичной магии."
+					]
+				},
+				{
+					"name": "Body Exchange",
+					"entries": [
+						"Жуткая кукла начинает соревнование на интеллект с гуманоидом {@condition incapacitated}, находящимся в радиусе 1,5 м от нее. Если она побеждает, дух жуткой куклы вселяется в тело цели, а дух цели помещается в тело жуткой куклы. Жуткая кукла полностью контролирует тело цели. Она сохраняет выравнивание, Интеллект, Мудрость, Харизму и иммунитет к бытию {@condition charmed} и {@condition frightened}. В остальном он использует статистику одержимой цели, но не получает доступа к ее знаниям, классовым особенностям и умениям. Цель сохраняет выравнивание, Интеллект, Мудрость и Харизму, пока находится в теле жуткой куклы.",
+						"Обмен телами длится до тех пор, пока дух куклы не будет изгнан магией. (Заклинание {@spell dispel evil and good} позволяет это сделать, хотя кукла не относится к тем типам существ, владение которыми обычно заканчивается). Тело и кукла должны находиться в пределах 1,5 м друг от друга, чтобы эффект сработал. Цель невосприимчива к обмену телами этой куклы в течение 24 часов после победы в конкурсе интеллекта или после окончания обмена."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"S",
+				"Y"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"savingThrowForced": [
+				"intelligence"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Demonlord of Ashmouth",
+			"source": "PSI",
+			"page": 37,
+			"_copy": {
+				"name": "Horned Devil",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "devil",
+						"with": "demon"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"Демон наносит три атаки ближнего боя: две боевым топором и одну хвостом. Вместо любой атаки ближнего боя он может использовать \"Шквал пламени\"."
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Fork",
+							"items": {
+								"name": "Battleaxe",
+								"entries": [
+									"{@atk mw} {@hit 10} попадание, досягаемость 3 м., одна цель. {@h}15 ({@damage 2d8 + 6}) колющего урона или 17 ({@damage 2d10 + 6}) колющего урона при использовании двумя руками."
+								]
+							}
+						}
+					]
+				}
+			},
+			"damageTags": [
+				"F",
+				"P",
+				"S"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Flight Alabaster Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"_": {
+						"mode": "addSpells",
+						"will": [
+							"{@spell protection from evil and good}"
+						],
+						"daily": {
+							"1e": [
+								"{@spell dispel evil and good}"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flight Goldnight Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Goldnight Menace",
+							"entries": [
+								"В качестве действия ангел Полета Золотой Ночи может вселить страх в сердца своих врагов. Каждое существо по выбору ангела, находящееся в пределах 36 метров от него и знающее об этом, должно успешно выполнить бросок спасброска Мудрости или стать {@condition frightened} на 1 минуту. DC для этого броска спасения такой же, как и для черты Innate Spellcasting ангела. Существо может повторить бросок спасброска в конце каждого своего хода, прекращая эффект на себе в случае успеха. Если спасательный бросок существа оказывается успешным или эффект заканчивается для него, существо становится невосприимчивым к Угрозе Золотой Ночи этого ангела на следующие 24 часа."
+							]
+						}
+					}
+				}
+			},
+			"cr": "11",
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flight of Moonsilver Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Moonsilver Spear",
+							"entries": [
+								"Ангел Полета Лунного Серебра владеет копьем, сделанным из осколка Гельвальта. Хит-пойнты, потерянные при нанесении урона этим оружием, могут быть восстановлены только во время короткого или длительного отдыха, а не регенерацией, магией или любым другим способом. Один раз за ход, когда ангел поражает существо атакой этим оружием, он может ранить цель. В начале каждого хода раненое существо получает {@damage 1d4} некротического урона за каждый раз, когда ангел ранил его, после чего оно может сделать спасбросок на {@dc 15} Конституцию, и в случае успеха эффект от всех таких ран прекращается. В качестве альтернативы раненое существо или существо в радиусе 1,5 м от него может использовать действие, чтобы сделать проверку {@dc 15} Мудрости ({@skill Medicine}), при успехе которой эффект от таких ран прекращается."
+							]
+						}
+					}
+				}
+			},
+			"damageTags": [
+				"B",
+				"N",
+				"R"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Geist",
+			"source": "PSI",
+			"page": 19,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 45,
+				"formula": "10d8"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": 40
+			},
+			"str": 7,
+			"dex": 13,
+			"con": 10,
+			"int": 10,
+			"wis": 12,
+			"cha": 17,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"acid",
+				"fire",
+				"lightning",
+				"thunder",
+				"bludgeoning"
+			],
+			"immune": [
+				"cold",
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"grappled"
+			],
+			"languages": [
+				"any languages it knew in life"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Ethereal Sight",
+					"entries": [
+						"Находясь на материальной плоскости, гейст может видеть на 18 метров в Тонко-вещественную плоскость, и наоборот."
+					]
+				},
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"Гейст может перемещаться сквозь других существ и предметы, как если бы они были {@quickref difficult terrain||3}. Он получает 5 ({@dice 1d10}) урона силы, если заканчивает свой ход внутри объекта."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Withering Touch",
+					"entries": [
+						"{@atk mw} {@hit 5} попадание, радиус действия 1,5 м., одной цели {@h}17 ({@damage 4d6 + 3}) некротических повреждений."
+					]
+				},
+				{
+					"name": "Etherealness",
+					"entries": [
+						"Гейст попадает в Тонко-вещественную плоскость из Материальной плоскости, или наоборот. Он виден на материальной плоскости, пока находится в пограничной тонко-вещественной, и наоборот, но он не может повлиять или быть затронутым чем-либо на другой плоскости."
+					]
+				},
+				{
+					"name": "Possession {@recharge}",
+					"entries": [
+						"Одно существо, которое гейст видит в радиусе 1,5 м от себя, должно успешно выполнить бросок спасброска {@dc 13} по Харизме или быть одержимым гейстом; тогда гейст исчезает, а цель теряет контроль над своим телом на {@condition incapacitated}. Теперь гейст контролирует тело, но не лишает цель сознания. На гейста не может быть направлена никакая атака, заклинание или другой эффект, кроме тех, которые превращают нежить, и он сохраняет выравнивание, Интеллект, Мудрость, Харизму и иммунитет к {@condition charmed} и {@condition frightened}. В остальном он использует статистику одержимого, но не получает доступа к его знаниям, классовым особенностям и умениям. Одержимость длится до тех пор, пока тело не опустится до 0 хит-пойнтов, гейст не завершит ее бонусным действием, либо гейст не будет обращен или вытеснен эффектом, подобным заклинанию {@spell dispel evil and good}. Когда одержимость заканчивается, гейст вновь появляется в незанятом пространстве в радиусе 1,5 м от тела. Цель невосприимчива к Одержанию гейста в течение 24 часов после успешного выполнения броска спасброска или после окончания Одержания. Вместо этого гейст может выбрать труп существа, эффективно используя свою собственную жизненную силу для оживления трупа в виде зомби. Оживленный труп использует статистику зомби и возвращается к смерти, если гейст прекращает одержимость."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Geist Powers",
+					"entries": [
+						"Гейсты так же разнообразны, как и люди, которыми они были при жизни. В дополнение к тем чертам и действиям, которыми обладают все гейсты, отдельный гейст может обладать одной из следующих особенностей.",
+						{
+							"name": "Intangible Virtue",
+							"type": "entries",
+							"entries": [
+								"Живое существо, одержимое гейстом с белой линией, получает иммунитет к условиям {@condition charmed} и {@condition frightened}, а также устойчивость к колющему, пронзительному и косому урону от немагических атак. Пока существо одержимо, гейст может позволить ему взять контроль над своим телом, но гейст может вернуть контроль в любое время (действие не требуется)."
+							]
+						},
+						{
+							"name": "Horrifying Visage",
+							"type": "entries",
+							"entries": [
+								"Черные гейсты могут наводить ужас на живых, даже если они одержимы. Каждое неживое существо в радиусе 18 м от гейста, которое может его видеть, должно успешно выполнить бросок спасброска {@dc 13} Мудрости или потерять {@condition frightened} на 1 минуту. Если спасбросок провален на 5 или более баллов, цель также стареет на {@dice 1d4 × 10} лет. Цель {@condition frightened} может повторить бросок спасброска в конце каждого своего хода, в случае успеха снимая с себя условие {@condition frightened}. Если бросок спасброска прошел успешно или эффект закончился для цели, она становится невосприимчивой к Ужасающему облику этого гейста на следующие 24 часа. Эффект старения может быть отменен заклинанием {@spell greater restoration}, но только в течение 24 часов после его наступления."
+							]
+						}
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"N"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Geist: Horrifying Visage",
+					"source": "PSI",
+					"_mod": {
+						"action": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Horrifying Visage",
+								"entries": [
+									"Черные гейсты могут наводить ужас на живых, даже если они одержимы. Каждое неживое существо в радиусе 18 м от гейста, которое может его видеть, должно успешно выполнить бросок спасброска {@dc 13} Мудрости или потерять {@condition frightened} на 1 минуту. Если спасбросок провален на 5 или более баллов, цель также стареет на {@dice 1d4 × 10} лет. Цель {@condition frightened} может повторить бросок спасброска в конце каждого своего хода, в случае успеха снимая с себя условие {@condition frightened}. Если бросок спасброска прошел успешно или эффект закончился для цели, она становится невосприимчивой к Ужасающему облику этого гейста на следующие 24 часа. Эффект старения может быть отменен заклинанием {@spell greater restoration}, но только в течение 24 часов после его наступления."
+								]
+							}
+						}
+					},
+					"variant": null,
+					"conditionInflict": [
+						"frightened",
+						"incapacitated"
+					]
+				},
+				{
+					"name": "Geist: Intangible Virtue",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Intangible Virtue",
+								"entries": [
+									"Живое существо, одержимое гейстом с белой линией, получает иммунитет к условиям {@condition charmed} и {@condition frightened}, а также устойчивость к колющему, пронзительному и косому урону от немагических атак. Пока существо одержимо, гейст может позволить ему взять контроль над своим телом, но гейст может вернуть контроль в любое время (действие не требуется)."
+								]
+							}
+						}
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Gisela",
+			"alias": [
+				"Blade of Goldnight",
+				"Blade of the Church"
+			],
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Planetar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Planetar",
+						"with": "Gisela",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Goldnight Menace",
+							"entries": [
+								"В качестве действия ангел Полета Золотой Ночи может вселить страх в сердца своих врагов. Каждое существо по выбору ангела, находящееся в пределах 36 метров от него и знающее об этом, должно успешно выполнить бросок спасброска Мудрости или стать {@condition frightened} на 1 минуту. DC для этого броска спасения такой же, как и для черты Innate Spellcasting ангела. Существо может повторить бросок спасброска в конце каждого своего хода, прекращая эффект на себе в случае успеха. Если спасательный бросок существа оказывается успешным или эффект заканчивается для него, существо становится невосприимчивым к Угрозе Золотой Ночи этого ангела на следующие 24 часа."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Host of Herons Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Heron Protection",
+							"entries": [
+								"Каждый раз, когда ангел Воинства Цапель или дружественное существо в радиусе 3 м от него делает бросок на спасение, существо получает бонус к броску на спасение, равный модификатору Харизмы ангела. Для получения или предоставления этого бонуса ангел должен находиться в сознании."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Keeper of the Feather",
+			"group": null,
+			"source": "PSI",
+			"page": 40,
+			"_copy": {
+				"name": "Wereraven",
+				"source": "VRGR",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "wereraven",
+						"with": "keeper"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Beak (Raven or Hybrid Form Only)",
+							"items": {
+								"name": "Beak (Raven or Hybrid Form Only)",
+								"entries": [
+									"{@atk mw} {@hit 4} попадание, радиус действия 1,5 м., одна цель. {@h}1 колющий урон в форме ворона или 4 ({@damage 1d4 + 2}) колющих урона в гибридной форме."
+								]
+							}
+						}
+					]
+				}
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Хранитель - заклинатель 4-го уровня. Его способность к заклинаниям - Мудрость (спасение от заклинаний {@dc 12}, {@hit 4} попадания при атаках заклинаниями). У него подготовлены следующие заклинания друидов:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft}",
+								"{@spell produce flame}",
+								"{@spell shillelagh}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell entangle}",
+								"{@spell longstrider}",
+								"{@spell speak with animals}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell animal messenger}",
+								"{@spell barkskin}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"damageTagsSpell": [
+				"F",
+				"T"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Necro-Alchemist",
+			"alias": [
+				"Geistmage"
+			],
+			"source": "PSI",
+			"page": 20,
+			"_copy": {
+				"name": "Mage",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "mage",
+						"with": "Necro-Alchemist",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sigarda",
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Planetar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Planetar",
+						"with": "Sigarda",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Heron Protection",
+							"entries": [
+								"Каждый раз, когда ангел Воинства Цапель или дружественное существо в радиусе 3 м от него делает бросок на спасение, существо получает бонус к броску на спасение, равный модификатору Харизмы ангела. Для получения или предоставления этого бонуса ангел должен находиться в сознании."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Skaab",
+			"source": "PSI",
+			"page": 20,
+			"_copy": {
+				"name": "Flesh Golem",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "golem",
+						"with": "skaab",
+						"flags": "i"
+					}
+				}
+			},
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Skaabs",
+					"entries": [
+						"Самые простые скаабы - это просто {@creature flesh golem|MM|flesh golems}, как описано в Руководстве по монстрам. Но каждый скааберен стремится создать поистине уникальный шедевр, для чего он может создать голема с одной из следующих особых характеристик.",
+						{
+							"type": "entries",
+							"name": "Armor Plating",
+							"page": 20,
+							"entries": [
+								"Повысьте класс брони скааба до 14 и увеличьте его рейтинг сложности до 6 (2 300 XP)."
+							]
+						},
+						{
+							"name": "Six Arms",
+							"type": "entries",
+							"entries": [
+								"Действие мультиатаки скааба позволяет ему совершить три атаки слэмом. Повысьте его рейтинг сложности до 6 (2 300 XP)."
+							]
+						},
+						{
+							"name": "Three Heads",
+							"type": "entries",
+							"entries": [
+								"Скааб имеет преимущество при проверке мудрости ({@skill Perception}) и при бросках спасбросков против ударов {@condition blinded}, {@condition deafened}, {@condition stunned} и нокаута {@condition unconscious}. (Его рейтинг сложности не меняется)."
+							]
+						},
+						{
+							"name": "Skaab Goliath",
+							"type": "entries",
+							"entries": [
+								"У этого скааба три головы, шесть рук и броня. Повысьте его рейтинг сложности до 7 (2 900 XP)."
+							]
+						},
+						{
+							"name": "Winged Skaab",
+							"type": "entries",
+							"entries": [
+								"Скорость полета скааба составляет 9 м."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"_versions": [
+				{
+					"name": "Skaab: Armor Plating",
+					"source": "PSI",
+					"ac": [
+						{
+							"ac": 14,
+							"from": [
+								"armor plating"
+							]
+						}
+					],
+					"cr": "6",
+					"variant": null
+				},
+				{
+					"name": "Skaab: Goliath",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Three Heads",
+								"entries": [
+									"Скааб имеет преимущество при проверке мудрости ({@skill Perception}) и при бросках спасбросков против попадания {@condition blinded}, {@condition deafened}, {@condition stunned} и удара {@condition unconscious}."
+								]
+							}
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"Скааб наносит три атаки слэмом."
+								]
+							}
+						}
+					},
+					"ac": [
+						{
+							"ac": 14,
+							"from": [
+								"armor plating"
+							]
+						}
+					],
+					"cr": "7",
+					"variant": null
+				},
+				{
+					"name": "Skaab: Six Arms",
+					"source": "PSI",
+					"_mod": {
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"Скааб наносит три атаки слэмом."
+								]
+							}
+						}
+					},
+					"cr": "6",
+					"variant": null
+				},
+				{
+					"name": "Skaab: Three Heads",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Three Heads",
+								"entries": [
+									"Скааб имеет преимущество при проверке мудрости ({@skill Perception}) и при бросках спасбросков против попадания {@condition blinded}, {@condition deafened}, {@condition stunned} и удара {@condition unconscious}."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Skaab: Winged",
+					"source": "PSI",
+					"speed": {
+						"walk": 30,
+						"fly": 30
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Strefan Maurer",
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 33,
+			"_copy": {
+				"name": "Strahd von Zarovich",
+				"source": "CoS",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Strahd",
+						"with": "Strefan",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "replaceArr",
+						"replace": "Vampire Weaknesses",
+						"items": {
+							"type": "entries",
+							"name": "Vampire Vulnerabilities",
+							"source": "PSI",
+							"page": 16,
+							"entries": [
+								"Оружие, вырезанное из живого дерева, особенно эффективно против вампиров, хотя любое оружие может причинить им вред или убить. Вампир не может перейти через проточную воду, в которой отражается луна, а вода, освященная Авацином ({@item Holy Water (flask)|PHB|holy water}), жжет плоть вампира, как кислота. Отражение вампира в серебре (в том числе в стеклянном зеркале с серебряной оправой) выглядит так, как выглядел бы вампир без вампирического состояния - не истинный облик и не блеск, а обычный человек, со всеми недостатками. По этой причине вампиры стараются избегать зеркал, а присутствие серебра в любом виде вызывает у них тревогу."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Vampire Neonate",
+			"source": "PSI",
+			"page": 17,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 82,
+				"formula": "11d8 + 33"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 16,
+			"int": 11,
+			"wis": 10,
+			"cha": 12,
+			"save": {
+				"dex": "+6",
+				"wis": "+3"
+			},
+			"skill": {
+				"perception": "+3",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks not made with living wood weapons",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Common"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Regeneration",
+					"entries": [
+						"Вампир восстанавливает 10 хит-пойнтов в начале своего хода, если у него есть хотя бы 1 хит-пойнт. Если вампир получает лучевой урон или урон от святой воды, эта черта не действует в начале следующего хода вампира."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Вампир делает две атаки, только одна из которых может быть атакой укуса."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 6} попадание, досягаемость 1,5 м., одно существо. {@h}8 ({@damage 2d4 + 3}) колющего урона. Вместо нанесения урона вампир может схватить цель (побег {@dc 13})."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 6} попадание, досягаемость 1,5 м., одно желающее существо или существо, находящееся {@condition grappled} у вампира, {@condition incapacitated} или {@condition restrained}. {@h}6 ({@damage 1d6 + 3}) колющего урона плюс 7 ({@damage 2d6}) некротического урона. Максимальное количество хит-пойнтов цели уменьшается на величину, равную полученному некротическому урону, и вампир восстанавливает хит-пойнты на эту величину. Снижение длится до тех пор, пока цель не закончит длительный отдых. Цель умирает, если этот эффект снижает ее максимальное количество хит-пойнтов до 0."
+					]
+				},
+				{
+					"name": "Vampiric Glamer",
+					"entries": [
+						"Вампир скрывает свою форму с помощью магии, воздействующей на разум, которая заставляет других воспринимать его как красивого человека того же размера и формы. Иллюзия прекращается, если вампир совершает бонусное действие, чтобы прекратить ее, или если вампир умирает. Существо, которое видит вампира, может предпринять действие, чтобы визуально осмотреть его, прекратить ментальное воздействие на себя и увидеть истинную форму вампира при успешной {@dc 20} проверке Мудрости (Восприятие)."
+					]
+				},
+				{
+					"name": "Aura of Silence",
+					"entries": [
+						"Вампир окутывает себя плащом тишины в радиусе 0,6 м. В этом радиусе эффект такой же, как от заклинания {@spell silence}."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Elder Vampires",
+					"entries": [
+						"Основная статистика вампиров представляет \"новорожденного\" - только что появившегося на свет вампира. Более взрослые вампиры могут изучать мощную магию разных видов и могут обладать любыми из следующих черт и способностей.",
+						{
+							"type": "entries",
+							"name": "Shapechanger",
+							"entries": [
+								"Вампир обладает чертой Shapechanger {@creature vampire} из Руководства по монстрам, а также меткой shapechanger. Некоторые вампиры могут превращаться в форму летучей мыши, некоторые - в форму тумана, а некоторые могут выбрать любую из этих форм."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Charm",
+							"entries": [
+								"Вампир обладает действием Обаяния {@creature vampire} в Руководстве по монстрам."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Flight",
+							"entries": [
+								"Скорость полета вампира составляет 9 метров."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Gorger",
+							"entries": [
+								"Вампир имеет преимущество при бросках атаки в ближнем бою, но броски атаки против него имеют преимущество."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Spellcasting",
+							"entries": [
+								"Вампир обладает способностями волшебника или клерика."
+							]
+						}
+					]
+				}
+			],
+			"traitTags": [
+				"Regeneration"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"HPR",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Elder Vampire: All Abilities",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Shapechanger",
+									"entries": [
+										"If the vampire isn't in sunlight or running water, it can use its action to polymorph into a Tiny bat or a Medium cloud of mist, or back into its true form.",
+										"While in bat form, the vampire can't speak, its walking speed is 5 feet, and it has a flying speed of 30 feet. Its statistics, other than its size and speed, are unchanged. Anything it is wearing transforms with it, but nothing it is carrying does. It reverts to its true form if it dies.",
+										"While in mist form, the vampire can't take any actions, speak, or manipulate objects. It is weightless, has a flying speed of 20 feet, can hover, and can enter a hostile creature's space and stop there. In addition, if air can pass through a space, the mist can do so without squeezing, and it can't pass through water. It has advantage on Strength, Dexterity, and Constitution saving throws, and it is immune to all nonmagical damage, except the damage it takes from sunlight."
+									]
+								},
+								{
+									"name": "Gorger",
+									"entries": [
+										"The vampire has advantage on melee attack rolls, but attack rolls against it have advantage."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Charm",
+								"entries": [
+									"Вампир выбирает одного гуманоида, которого он видит в радиусе 9 м от себя. Если цель видит вампира, то она должна успешно выполнить бросок на спасение {@dc 17} Мудрости против этой магии или быть {@condition charmed} вампиром. Цель {@condition charmed} воспринимает вампира как надежного друга, к которому следует прислушиваться и которого следует защищать. Хотя цель не находится под контролем вампира, она воспринимает его просьбы или действия наиболее благоприятным для себя образом и охотно атакует его укусом.",
+									"Каждый раз, когда вампир или его спутники наносят вред цели, он может повторить бросок спасброска, завершив эффект на себе в случае успеха. В противном случае эффект длится 24 часа или до тех пор, пока вампир не будет уничтожен, не окажется на другом плане существования, чем цель, или не предпримет бонусное действие для прекращения эффекта."
+								]
+							}
+						}
+					},
+					"type": {
+						"type": "undead",
+						"tags": [
+							"shapechanger"
+						]
+					},
+					"speed": {
+						"walk": 30,
+						"fly": 30
+					},
+					"spellcasting": [
+						{
+							"name": "Cleric Spellcasting",
+							"headerEntries": [
+								"{@note В качестве примера {@creature Priest|MM} использовано значение Cleric.}",
+								"Вампир - заклинатель 5-го уровня. Его заклинательная способность - Мудрость (спасбросок от заклинаний {@dc 13}, {@hit 5} к попаданию при атаках заклинаниями). У вампира подготовлены следующие заклинания клирика:"
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell light}",
+										"{@spell sacred flame}",
+										"{@spell thaumaturgy}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell cure wounds}",
+										"{@spell guiding bolt}",
+										"{@spell sanctuary}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell lesser restoration}",
+										"{@spell spiritual weapon}"
+									]
+								},
+								"3": {
+									"slots": 2,
+									"spells": [
+										"{@spell dispel magic}",
+										"{@spell spirit guardians}"
+									]
+								}
+							},
+							"ability": "wis"
+						},
+						{
+							"name": "Wizard Spellcasting",
+							"headerEntries": [
+								"{@note В качестве примера мастера использовано значение {@creature Mage|MM}.}",
+								"Вампир - заклинатель 9-го уровня. Его способность к заклинаниям - Интеллект (спасбросок от заклинаний {@dc 14}, {@hit 6} к попаданию при атаках заклинаниями). У вампира подготовлены следующие заклинания волшебника:"
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell fire bolt}",
+										"{@spell light}",
+										"{@spell mage hand}",
+										"{@spell prestidigitation}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell detect magic}",
+										"{@spell mage armor}",
+										"{@spell magic missile}",
+										"{@spell shield}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell misty step}",
+										"{@spell suggestion}"
+									]
+								},
+								"3": {
+									"slots": 3,
+									"spells": [
+										"{@spell counterspell}",
+										"{@spell fireball}",
+										"{@spell fly}"
+									]
+								},
+								"4": {
+									"slots": 3,
+									"spells": [
+										"{@spell greater invisibility}",
+										"{@spell ice storm}"
+									]
+								},
+								"5": {
+									"slots": 1,
+									"spells": [
+										"{@spell cone of cold}"
+									]
+								}
+							},
+							"ability": "int"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Charm",
+					"source": "PSI",
+					"_mod": {
+						"action": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Charm",
+								"entries": [
+									"Вампир выбирает одного гуманоида, которого он видит в радиусе 9 м от себя. Если цель видит вампира, то она должна успешно выполнить бросок на спасение {@dc 17} Мудрости против этой магии или быть {@condition charmed} вампиром. Цель {@condition charmed} воспринимает вампира как надежного друга, к которому следует прислушиваться и которого следует защищать. Хотя цель не находится под контролем вампира, она воспринимает его просьбы или действия наиболее благоприятным для себя образом и охотно атакует его укусом.",
+									"Каждый раз, когда вампир или его спутники наносят вред цели, он может повторить бросок спасброска, завершив эффект на себе в случае успеха. В противном случае эффект длится 24 часа или до тех пор, пока вампир не будет уничтожен, не окажется на другом плане существования, чем цель, или не предпримет бонусное действие для прекращения эффекта."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Flight",
+					"source": "PSI",
+					"speed": {
+						"walk": 30,
+						"fly": 30
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Gorger",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Gorger",
+								"entries": [
+									"Вампир имеет преимущество при бросках атаки в ближнем бою, но броски атаки против него имеют преимущество."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Shapechanger",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Shapechanger",
+								"entries": [
+									"Если вампир не находится на солнечном свете или в проточной воде, он может использовать свое действие, чтобы превратиться в крошечную летучую мышь или среднее облако тумана, или обратно в свою истинную форму.",
+									"В форме летучей мыши вампир не может говорить, его скорость передвижения составляет 1,5 м, а скорость полета - 9 м. Статистические данные, кроме размера и скорости, не изменяются. Все, что на нем надето, трансформируется вместе с ним, но ничего, что он несет с собой, не трансформируется. Если он умирает, то возвращается в свою истинную форму.",
+									"Находясь в туманной форме, вампир не может совершать никаких действий, говорить или манипулировать предметами. Он невесом, имеет скорость полета 6 м, может парить, может войти в пространство враждебного существа и остановиться там. Кроме того, если воздух может проходить через пространство, то туман может делать это, не сжимаясь, а через воду он проходить не может. У него есть преимущество при бросках на силу, ловкость и конституцию, и он невосприимчив ко всем немагическим повреждениям, кроме повреждений, получаемых от солнечного света."
+								]
+							}
+						}
+					},
+					"type": {
+						"type": "undead",
+						"tags": [
+							"shapechanger"
+						]
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Spellcasting—Cleric",
+					"source": "PSI",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"{@note В качестве примера {@creature Priest|MM} использовано значение Cleric.}",
+								"Вампир - заклинатель 5-го уровня. Его заклинательная способность - Мудрость (спасбросок от заклинаний {@dc 13}, {@hit 5} к попаданию при атаках заклинаниями). У вампира подготовлены следующие заклинания клирика:"
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell light}",
+										"{@spell sacred flame}",
+										"{@spell thaumaturgy}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell cure wounds}",
+										"{@spell guiding bolt}",
+										"{@spell sanctuary}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell lesser restoration}",
+										"{@spell spiritual weapon}"
+									]
+								},
+								"3": {
+									"slots": 2,
+									"spells": [
+										"{@spell dispel magic}",
+										"{@spell spirit guardians}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Spellcasting—Wizard",
+					"source": "PSI",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"{@note В качестве примера мастера использовано значение {@creature Mage|MM}.}",
+								"Вампир - заклинатель 9-го уровня. Его способность к заклинаниям - Интеллект (спасбросок от заклинаний {@dc 14}, {@hit 6} к попаданию при атаках заклинаниями). У вампира подготовлены следующие заклинания волшебника:"
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell fire bolt}",
+										"{@spell light}",
+										"{@spell mage hand}",
+										"{@spell prestidigitation}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell detect magic}",
+										"{@spell mage armor}",
+										"{@spell magic missile}",
+										"{@spell shield}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell misty step}",
+										"{@spell suggestion}"
+									]
+								},
+								"3": {
+									"slots": 3,
+									"spells": [
+										"{@spell counterspell}",
+										"{@spell fireball}",
+										"{@spell fly}"
+									]
+								},
+								"4": {
+									"slots": 3,
+									"spells": [
+										"{@spell greater invisibility}",
+										"{@spell ice storm}"
+									]
+								},
+								"5": {
+									"slots": 1,
+									"spells": [
+										"{@spell cone of cold}"
+									]
+								}
+							},
+							"ability": "int"
+						}
+					],
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Werewolf (Krallenhorde)",
+			"source": "PSI",
+			"page": 15,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human",
+					"shapechanger"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"condition": "in humanoid form"
+				},
+				{
+					"ac": 12,
+					"from": [
+						"natural armor"
+					],
+					"condition": "in canid form"
+				}
+			],
+			"hp": {
+				"average": 58,
+				"formula": "9d8 + 18"
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "(40 ft. in canid form)"
+				}
+			},
+			"str": 15,
+			"dex": 13,
+			"con": 14,
+			"int": 10,
+			"wis": 11,
+			"cha": 10,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+3"
+			},
+			"passive": 14,
+			"immune": [
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks not made with silvered weapons",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Common (can't speak in canid form)"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Shapechanger",
+					"entries": [
+						"Оборотень полиморфно превращается в волкогуманоидного канида или обратно в человека. Это изменение диктуется луной, но также может быть вызвано травмой или сильными эмоциями. Статистические показатели, кроме AC, в каждой форме одинаковы. Любое снаряжение, которое он носит или несет, не трансформируется. Если он умирает, то возвращается в свою истинную форму."
+					]
+				},
+				{
+					"name": "Keen Hearing and Smell",
+					"entries": [
+						"Оборотень имеет преимущество при проверках мудрости ({@skill Perception}), которые полагаются на слух или обоняние."
+					]
+				},
+				{
+					"name": "Howlpack: Vildin",
+					"entries": [
+						"Vildin Rampage (только в форме канида). Когда оборотень в свой ход снижает количество хитовых очков существа до 0 при атаке в ближнем бою, он может совершить бонусное действие, чтобы переместиться на половину своей скорости и совершить атаку укусом."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack (Canid Form Only)",
+					"entries": [
+						"Оборотень делает две атаки: одну - укусом, другую - когтями или копьем."
+					]
+				},
+				{
+					"name": "Bite (Canid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 4} попадание, радиус действия 1,5 м., одна цель. {@h}6 ({@damage 1d8 + 2}) колющего урона."
+					]
+				},
+				{
+					"name": "Claws (Canid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 4} попадание, радиус действия 1,5 м., одна цель. {@h}7 ({@damage 2d4 + 2}) колющего урона."
+					]
+				},
+				{
+					"name": "Spear (Human Form Only)",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} попадание, радиус действия 1,5 м. или дальность 20/18 м., одна цель. {@h}5 ({@damage 1d6 + 2}) колющего урона или 6 ({@damage 1d8 + 2}) колющего урона, если используется двумя руками для атаки в ближнем бою."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Howlpack Traits",
+					"entries": [
+						"Основные статистические данные оборотня представляют члена Кралленхорда, крупнейшей стаи Иннистрада. Оборотни из других стай могут обладать дополнительными способностями, например, следующими.",
+						{
+							"name": "Vildin Rampage (Canid Form Only)",
+							"type": "entries",
+							"entries": [
+								"Когда оборотень в свой ход снижает количество хит-пойнтов существа до 0 при атаке в ближнем бою, он может предпринять бонусное действие, чтобы переместиться на половину своей скорости и совершить атаку укусом."
+							]
+						},
+						{
+							"name": "Mondronen Wounded Fury",
+							"type": "entries",
+							"entries": [
+								"Пока у оборотня 10 или менее хит-пойнтов, он имеет преимущество при бросках атаки. Кроме того, он наносит дополнительные 7 ({@damage 2d6}) урона любой цели, которую он поражает атакой ближнего боя."
+							]
+						},
+						{
+							"name": "Leeraug Blood Frenzy",
+							"type": "entries",
+							"entries": [
+								"Оборотень имеет преимущество при бросках атаки в ближнем бою против любого существа, не имеющего всех своих хит-пойнтов."
+							]
+						}
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Shapechanger"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Werewolf (Leeraug)",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Leeraug Blood Frenzy",
+								"entries": [
+									"Оборотень имеет преимущество при бросках атаки в ближнем бою против любого существа, не имеющего всех своих хит-пойнтов."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Werewolf (Mondronen)",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Mondronen Wounded Fury",
+								"entries": [
+									"Пока у оборотня 10 или менее хит-пойнтов, он имеет преимущество при бросках атаки. Кроме того, он наносит дополнительные 7 ({@damage 2d6}) урона любой цели, которую он поражает атакой ближнего боя."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Werewolf (Vildin)",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Vildin Rampage (Canid Form Only)",
+								"entries": [
+									"Когда оборотень в свой ход снижает количество хит-пойнтов существа до 0 при атаке в ближнем бою, он может предпринять бонусное действие, чтобы переместиться на половину своей скорости и совершить атаку укусом."
+								]
+							}
+						}
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Zombie Cat",
+			"source": "PSI",
+			"page": 17,
+			"_copy": {
+				"name": "Cat",
+				"source": "MM"
+			},
+			"type": "undead",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Если повреждения снижают кошку до 0 хит-поинтов, она должна сделать бросок на спасение по Конституции с DC равным 5 + полученное повреждение, если только повреждение не лучевое или не получено в результате критического удара. В случае успеха кошка падает до 1 хит-пойнта."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Zombie Rat",
+			"source": "PSI",
+			"page": 17,
+			"_copy": {
+				"name": "Rat",
+				"source": "MM"
+			},
+			"type": "undead",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Если урон снижает количество хит-поинтов крысы до 0, она должна сделать бросок на спасение по Конституции с DC равным 5 + полученный урон, если только урон не лучевой или не нанесен критическим ударом. В случае успеха крыса опускается на 1 хит-пойнт."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Zombie Snake",
+			"source": "PSI",
+			"page": 17,
+			"_copy": {
+				"name": "Poisonous Snake",
+				"source": "MM"
+			},
+			"type": "undead",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Если повреждения снижают змею до 0 хит-поинтов, она должна сделать бросок на спасение по Конституции с DC равным 5 + полученное повреждение, если только повреждение не лучевое или не получено в результате критического удара. В случае успеха змея падает до 1 хит-пойнта."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

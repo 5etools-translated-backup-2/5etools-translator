@@ -1,0 +1,7366 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM",
+				"ToA"
+			]
+		},
+		"otherSources": {
+			"monster": {
+				"MM": "IDRotF",
+				"MTF": "IDRotF",
+				"SKT": "IDRotF",
+				"VRGR": "IDRotF"
+			}
+		},
+		"internalCopies": [
+			"monster"
+		]
+	},
+	"monster": [
+		{
+			"name": "Aruk Thundercaller Thuunlakalaga",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "IDRotF",
+			"page": 169,
+			"_copy": {
+				"name": "Goliath Warrior",
+				"source": "IDRotF",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the goliath",
+						"with": "Aruk",
+						"flags": "i"
+					},
+					"_": [
+						{
+							"mode": "addSkills",
+							"skills": {
+								"insight": 1,
+								"medicine": 1
+							}
+						}
+					]
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Auril (First Form)",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "IDRotF",
+			"page": 275,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 95,
+				"formula": "10d8 + 50"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 60
+			},
+			"str": 14,
+			"dex": 16,
+			"con": 21,
+			"int": 24,
+			"wis": 26,
+			"cha": 28,
+			"save": {
+				"con": "+9",
+				"wis": "+12"
+			},
+			"skill": {
+				"deception": "+13",
+				"insight": "+12",
+				"intimidation": "+13",
+				"perception": "+16"
+			},
+			"senses": [
+				"darkvision 120 ft.",
+				"truesight 120 ft."
+			],
+			"passive": 26,
+			"immune": [
+				"cold",
+				"poison"
+			],
+			"vulnerable": [
+				"radiant"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"stunned"
+			],
+			"languages": [
+				"all",
+				"telepathy 1000 ft."
+			],
+			"cr": "9",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"奥里尔与生俱来的法术能力是魅力（法术救赎（%0%），用法术攻击命中率（%1%））。她可以天生施展以下法术，不需要任何物质成分。"
+					],
+					"will": [
+						"{@spell chromatic orb} (cold orb only; see \"Actions\" below)",
+						"{@spell detect magic}",
+						"{@spell misty step}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell control weather}",
+							"{@spell detect thoughts}",
+							"{@spell ice storm}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Divine Being",
+					"entries": [
+						"欧里尔不能（%0%），也不能违背她的意愿被改变成另一种形式。"
+					]
+				},
+				{
+					"name": "Divine Rejuvenation",
+					"entries": [
+						"当奥瑞尔的命中率降至 0 时，她的身体会变成泥浆并融化。奥瑞尔会立即以她的形态（%0%）重新出现在距离她最初形态消失处 18 米内的空地上。她的行动次数不会改变。"
+					]
+				},
+				{
+					"name": "Legendary Resistance (2/Day in This Form)",
+					"entries": [
+						"如果Auril的拯救动作失败，她可以选择成功。"
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"奥里尔在面对法术和其他魔法效果时，在蓄力攻击方面具有优势。"
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"Auril不需要空气、食物、饮料或睡眠。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"奥里尔用她的爪子攻击了两次。"
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 7} 命中，距离 1.5 米，一个目标。{@h}7 ({@damage 1d8 + 3}) 穿透伤害外加 3 ({@damage 1d6}) 冷伤害。"
+					]
+				},
+				{
+					"name": "Touch of Frost",
+					"entries": [
+						"{@atk ms} {@hit 13} 命中，距离 1.5 米，一个生物。{@h}13 ({@damage 3d8}) 寒冷伤害，目标在下一回合开始前无法做出反应。"
+					]
+				},
+				{
+					"name": "Chromatic Orb",
+					"entries": [
+						"{@atk rs} {@hit 13} 命中，范围 27 米，一个生物。{@h}13 ({@damage 3d8}) 冷伤害。"
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Talons",
+					"entries": [
+						"奥里尔用她的爪子攻击一次。"
+					]
+				},
+				{
+					"name": "Teleport",
+					"entries": [
+						"奥利尔传送到她能看到的 9 米范围内的无人空间。"
+					]
+				},
+				{
+					"name": "Touch of Frost (Costs 2 Actions)",
+					"entries": [
+						"奥里尔使用 \"冰霜之触\"。"
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"SD",
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"TP",
+				"XX"
+			],
+			"damageTags": [
+				"C",
+				"P"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"F",
+				"I",
+				"L",
+				"T"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Auril (Second Form)",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "IDRotF",
+			"page": 277,
+			"size": [
+				"L"
+			],
+			"type": "elemental",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 136,
+				"formula": "13d10 + 65"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 21,
+			"int": 24,
+			"wis": 26,
+			"cha": 28,
+			"save": {
+				"con": "+9",
+				"wis": "+12"
+			},
+			"skill": {
+				"deception": "+13",
+				"insight": "+12",
+				"intimidation": "+13",
+				"perception": "+16"
+			},
+			"senses": [
+				"darkvision 120 ft.",
+				"truesight 120 ft."
+			],
+			"passive": 26,
+			"immune": [
+				"cold",
+				"poison"
+			],
+			"vulnerable": [
+				"fire"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"stunned"
+			],
+			"languages": [
+				"all",
+				"telepathy 1000 ft."
+			],
+			"cr": "10",
+			"trait": [
+				{
+					"name": "Divine Being",
+					"entries": [
+						"欧里尔不能（%0%），也不能违背她的意愿被改变成另一种形式。"
+					]
+				},
+				{
+					"name": "Divine Rejuvenation",
+					"entries": [
+						"当奥瑞尔的命中率降到 0 时，她的身体会坍塌成冰碎片，这时奥瑞尔会立即以她的形态（%0%）重新出现在距离她第二形态被摧毁处 18 米内的空地上。她的行动次数不会改变。"
+					]
+				},
+				{
+					"name": "Legendary Resistance (2/Day in This Form)",
+					"entries": [
+						"如果Auril的拯救动作失败，她可以选择成功。"
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"奥里尔在面对法术和其他魔法效果时，在蓄力攻击方面具有优势。"
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"Auril不需要空气、食物、饮料或睡眠。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"奥里尔用她的冰晨之星攻击两次或投掷三支冰镖。"
+					]
+				},
+				{
+					"name": "Ice Morningstar",
+					"entries": [
+						"{@atk mw} {@hit 7} 命中，距离 1.5 米，一个目标。{@h}7 ({@damage 1d8 + 3}) 穿透伤害外加 9 ({@damage 2d8}) 寒冷伤害。"
+					]
+				},
+				{
+					"name": "Ice Dart",
+					"entries": [
+						"{@atk rw} {@hit 7} 命中，范围 20/18 米，一个目标。{@h}5 ({@damage 1d4 + 3}) 穿透伤害外加 3 ({@damage 1d6}) 寒冷伤害。"
+					]
+				},
+				{
+					"name": "Cone of Cold (Recharges after a Short or Long Rest)",
+					"entries": [
+						"奥瑞尔从手中喷出一股魔法冷气。18 米锥形范围内的每个生物都必须进行 {@dc 21} 体质蓄力，蓄力失败会受到 36（{@damage 8d8}）点寒冷伤害，蓄力成功则会受到一半的伤害。"
+					]
+				},
+				{
+					"name": "Create Ice Mephit (3/Day)",
+					"entries": [
+						"奥瑞尔从身上折下一根冰柱，将其扔到她所能看到的 6 米范围内的空地上，冰柱在那里神奇地变成了一个（%0%）（参见《怪物手册》中的条目）。在行动顺序中，它紧随奥瑞尔之后行动，并服从她的命令。"
+					]
+				},
+				{
+					"name": "Ice Stasis {@recharge 5}",
+					"entries": [
+						"奥瑞尔用魔法制造出一颗宝石大小的冰晶，悬浮在距离她 1.5 米的范围内。然后，奥瑞尔以水晶周围 18 米内她能看到的生物为目标。目标必须在 {@dc 21} 魅力蓄力中成功，否则就会被困在水晶中无法动弹。如果蓄力成功，水晶就会破碎，不会发生任何其他事情。被困在水晶中的生物会受到 {@condition stunned}，完全被水晶外的攻击和其他效果所覆盖，并在每个回合开始时受到 21（{@damage 6d6}）点寒冷伤害。该生物可以在每个回合结束时重复该蓄力攻击，如果成功则获得自由。如果水晶被摧毁，生物也会被释放，水晶是一个 AC 值为 18、命中率为 9、免疫除火焰伤害以外所有伤害的微小物体。被释放的生物会出现在它所选择的距离破碎水晶 9 米以内的空地上。"
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attack",
+					"entries": [
+						"Auril进行一次武器攻击。"
+					]
+				},
+				{
+					"name": "Ice Flurry (Costs 2 Actions)",
+					"entries": [
+						"奥瑞尔周围 9 米内的每个生物都会受到 5 ({@damage 2d4}) 冰漩涡的穿刺伤害，该区域内的非魔法明火也会熄灭。"
+					]
+				},
+				{
+					"name": "Splinter (Costs 3 Actions)",
+					"entries": [
+						"奥瑞尔使用 \"制造冰雪梅菲特 \"或使她能看到的 18 米范围内的一只冰雪梅菲特爆炸并死亡。以这种方式死亡的梅菲特不会使用死亡爆发。取而代之的是，距离爆炸的 mephit 3 米内的每个生物都必须在 {@dc 21} 灵巧蓄力中成功，蓄力失败会受到 13 ({@damage 3d8}) 穿透伤害，蓄力成功则会受到一半的伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"SD",
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"TP",
+				"XX"
+			],
+			"damageTags": [
+				"C",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Auril (Third Form)",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "IDRotF",
+			"page": 278,
+			"size": [
+				"S"
+			],
+			"type": "elemental",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 136,
+				"formula": "16d6 + 80"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 1,
+			"dex": 12,
+			"con": 21,
+			"int": 24,
+			"wis": 26,
+			"cha": 28,
+			"save": {
+				"con": "+9",
+				"wis": "+12"
+			},
+			"skill": {
+				"deception": "+13",
+				"insight": "+12",
+				"intimidation": "+13",
+				"perception": "+16"
+			},
+			"senses": [
+				"blindsight 120 ft. (blind beyond this radius)",
+				"truesight 120 ft."
+			],
+			"passive": 26,
+			"immune": [
+				"cold",
+				"poison"
+			],
+			"vulnerable": [
+				"thunder"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"stunned"
+			],
+			"languages": [
+				"all",
+				"telepathy 1,000 ft."
+			],
+			"cr": "11",
+			"trait": [
+				{
+					"name": "Divine Being",
+					"entries": [
+						"欧里尔不能（%0%），也不能违背她的意愿被改变成另一种形式。"
+					]
+				},
+				{
+					"name": "Divine Resurrection",
+					"entries": [
+						"当Auril的生命值降至0时，她的晶体形态就会破碎，她的神性火花也会消失。她已经死了，直到下一个冬至，她会在她选择的一个寒冷的、偏远的地方以全盛状态重新出现。"
+					]
+				},
+				{
+					"name": "Frigid Aura",
+					"entries": [
+						"只要奥瑞尔在此形态下至少有 1 点命中率，在她的每个回合开始时，距离她 3 米内的每个生物都会受到 10 点寒冷伤害。"
+					]
+				},
+				{
+					"name": "Legendary Resistance (1/Day in This Form)",
+					"entries": [
+						"如果Auril的拯救动作失败，她可以选择成功。"
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"奥里尔在面对法术和其他魔法效果时，在蓄力攻击方面具有优势。"
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"Auril不需要空气、食物、饮料或睡眠。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Auril使用极地射线两次。"
+					]
+				},
+				{
+					"name": "Polar Ray",
+					"entries": [
+						"{@atk rs} {@hit 13} 命中，范围 36 米，一个目标。{@h}14 ({@damage 4d6}) 冷伤害。"
+					]
+				},
+				{
+					"name": "Blizzard Veil",
+					"entries": [
+						"奥瑞尔以自身为中心，在半径 9 米的球体中制造魔法暴风雪。球体内的区域会被严重遮蔽，球体会随着欧瑞尔移动。该效果会持续到奥瑞尔在此形态下的命中率降至 0，直到她选择结束该效果（不需要任何动作），或者直到她的（%0%）被打破（如同（%1%）的咒语）。"
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Polar Ray",
+					"entries": [
+						"Auril使用极地射线。"
+					]
+				},
+				{
+					"name": "Intensify Aura (Costs 2 Actions)",
+					"entries": [
+						"奥里尔的寒冰光环造成额外的10点寒冷伤害，直到她下一回合结束。"
+					]
+				},
+				{
+					"name": "Blinding Gleam (Costs 2 Actions)",
+					"entries": [
+						"奥瑞尔的身形闪烁着蓝光。每个能看到奥瑞尔且距离她 3 米以内的生物都必须在 {@dc 17} 智慧蓄力中成功，否则就会在 1 分钟内被奥瑞尔的魔法光芒 {@condition blinded} 喷射。该 {@condition blinded} 生物可以在每个回合结束时重复该蓄力攻击，如果成功则结束对自身的影响。"
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"B",
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"TP",
+				"XX"
+			],
+			"damageTags": [
+				"C"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Avarice",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "IDRotF",
+			"page": 269,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"tiefling"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 84,
+				"formula": "13d8 + 26"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 16,
+			"con": 14,
+			"int": 17,
+			"wis": 10,
+			"cha": 9,
+			"save": {
+				"int": "+6",
+				"wis": "+3"
+			},
+			"skill": {
+				"arcana": "+6",
+				"history": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"cold",
+				"fire"
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"Infernal",
+				"Orc",
+				"Yeti"
+			],
+			"cr": "7",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"阿瓦里斯是一个10级的施法者。她的法术能力是智力（法术救赎（%0%）；用法术攻击击中（%1%））。她准备了以下巫师法术。"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell fire bolt} (see \"Actions\" below)",
+								"{@spell mage hand}",
+								"{@spell message}",
+								"{@spell minor illusion}",
+								"{@spell prestidigitation}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell detect magic}",
+								"{@spell mage armor}",
+								"{@spell magic missile}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell flaming sphere}",
+								"{@spell knock}",
+								"{@spell scorching ray}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell fireball}",
+								"{@spell fly}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell banishment}",
+								"{@spell fire shield}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell Bigby's hand}",
+								"{@spell Rary's telepathic bond}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Icy Doom",
+					"entries": [
+						"当阿瓦里斯死后，她的尸体会被冻结9天，在此期间，它不能被解冻，不能被火伤害，不能被激活，也不能起死回生。"
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"贪婪挥舞着一个（%0%），有10次充电（见下面的 \"行动\"）。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Fire Bolt (Cantrip)",
+					"entries": [
+						"{@atk rs} {@hit 6} 命中，射程 36 米，一个目标。{@h}11 ({@damage 2d10}) 火伤害。"
+					]
+				},
+				{
+					"name": "Staff of Frost",
+					"entries": [
+						"当持有这根法杖时，阿瓦里斯可以消耗1个或更多的能量，用它来施展以下的法术（法术保全（%0%））。{@dc 14}(5次充电), {@spell cone of cold}(1次充电), {@spell fog cloud}(4次充电), 或{@spell ice storm}(4次充电)。法杖每天在黎明时分重新获得{@spell wall of ice}的能量。如果它的最后一次充电用完了，请掷出{@dice 1d6 + 4}；如果是1，法杖会变成水并被摧毁。"
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Banishing Rebuke (Recharges after a Long Rest)",
+					"entries": [
+						"当阿瓦丽斯受到距离她 18 米范围内的生物伤害时，她可以将该生物放逐到寒冷的异次元监狱中 1 分钟。在那里，该生物会受到 {@condition incapacitated} 并在每个回合开始时受到 5 ({@damage 1d10}) 次寒冷伤害。在每个回合结束时，该生物都可以进行一次 {@dc 14} 魅力蓄力，如果成功就会逃离监狱，并重新出现在它离开的空间，或者最近的一个未被占用的空间（如果该空间已被占用）。在监狱中死亡的生物会被无限期地困在那里。"
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"I",
+				"O",
+				"OTH"
+			],
+			"damageTags": [
+				"C",
+				"F"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"F",
+				"O"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"conditionInflictSpell": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"charisma"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Awakened White Moose",
+			"source": "IDRotF",
+			"page": 82,
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 68,
+				"formula": "8d10 + 24"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 19,
+			"dex": 11,
+			"con": 16,
+			"int": 10,
+			"wis": 12,
+			"cha": 6,
+			"passive": 11,
+			"languages": [
+				"Druidic"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Charge",
+					"entries": [
+						"如果麋鹿向目标直直移动至少 6 米，然后在同一回合用鹿角攻击命中目标，则目标会受到额外的 9（{@damage 2d8}）暴击伤害。如果目标是生物，则必须在 {@dc 14} 力量蓄力中成功，否则会被击倒 {@condition prone}。"
+					]
+				},
+				{
+					"name": "Sure-Footed",
+					"entries": [
+						"麋鹿在面对会击倒它的效果时，在力量和灵巧的拯救动作上有优势（%0%）。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"驼鹿进行两次攻击：一次用鹿角，一次用蹄子。"
+					]
+				},
+				{
+					"name": "Antlers",
+					"entries": [
+						"{@atk mw} {@hit 6} 命中，距离 1.5 米，一个目标。{@h}13 ({@damage 2d8 + 4}) 穿透伤害。"
+					]
+				},
+				{
+					"name": "Hooves",
+					"entries": [
+						"{@atk mw} {@hit 6} 命中，距离 1.5 米，一个目标。{@h}9 ({@damage 2d4 + 4}) 暴击伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"Charge"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DU"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Battlehammer Dwarf",
+			"source": "IDRotF",
+			"page": 107,
+			"_copy": {
+				"name": "Scout",
+				"source": "MM",
+				"_trait": {
+					"name": "Mountain Dwarf",
+					"source": "PHB"
+				},
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "scout",
+						"with": "dwarf"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Longbow",
+							"items": {
+								"name": "Light Crossbow",
+								"entries": [
+									"{@atk rw} {@hit 4} 命中，范围 80/96 米，一个目标。{@h}6 ({@damage 1d8 + 2}) 穿透伤害。"
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Shortsword",
+							"items": {
+								"name": "Handaxe",
+								"entries": [
+									"{@atk mw,rw} {@hit 2} 命中，距离 1.5 米或范围 20/18 米，一个目标。{@h}3 ({@damage 1d6 + 0}) 砍伤。"
+								]
+							}
+						}
+					]
+				}
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"X"
+			],
+			"miscTags": [
+				"MW",
+				"RNG",
+				"RW",
+				"THW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Bjornhild Solvigsdottir",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "IDRotF",
+			"page": 306,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"{@item hide armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 102,
+				"formula": "12d8 + 48"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 11,
+			"con": 18,
+			"int": 14,
+			"wis": 11,
+			"cha": 14,
+			"skill": {
+				"athletics": "+7",
+				"intimidation": "+5",
+				"survival": "+3"
+			},
+			"passive": 10,
+			"languages": [
+				"Common",
+				"Yeti"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Auril's Blessing (3/Day)",
+					"entries": [
+						"当比约恩希尔德用武器攻击击中一个生物时，攻击会造成额外的11({@damage 2d10})寒冷伤害。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"比约恩希尔德进行两次近战攻击。"
+					]
+				},
+				{
+					"name": "Greataxe",
+					"entries": [
+						"{@atk mw} {@hit 7} 命中，距离 1.5 米，一个目标。{@h}10 ({@damage 1d12 + 4}) 砍伤伤害，如果比约恩希尔德使用奥瑞尔的祝福，则加上 11 ({@damage 2d10}) 冷伤害。"
+					]
+				},
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 7} 命中，距离 1.5 米或范围 20/18 米，一个目标。{@h}7（{@damage 1d6 + 4}）次穿刺伤害，或 8（{@damage 1d8 + 4}）次穿刺伤害，如果比约恩希尔德使用奥瑞尔的祝福，则加上 11（{@damage 2d10}）次寒冷伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"greataxe|phb",
+				"spear|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"OTH"
+			],
+			"damageTags": [
+				"C",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Chardalyn Berserker",
+			"source": "IDRotF",
+			"page": 280,
+			"size": [
+				"M"
+			],
+			"type": "fiend",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item hide armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 90,
+				"formula": "12d8 + 36"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 17,
+			"int": 9,
+			"wis": 11,
+			"cha": 9,
+			"skill": {
+				"survival": "+4"
+			},
+			"passive": 10,
+			"languages": [
+				"any one language (usually Common)"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Chardalyn Madness",
+					"entries": [
+						"狂暴战士在每个回合开始时必须掷出（%0%）。在1的时候，狂暴战士在它的回合中什么都不做，除了和一个不存在的、它发誓要服务的邪恶主人说话。"
+					]
+				},
+				{
+					"name": "Reckless",
+					"entries": [
+						"在它的回合开始时，狂暴者可以在该回合内的所有近战武器攻击卷上获得优势，但对它的攻击卷有优势，直到下一回合开始。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"狂暴者用近战武器攻击三次。"
+					]
+				},
+				{
+					"name": "Chardalyn Flail",
+					"entries": [
+						"{@atk mw} {@hit 5} 命中，距离 1.5 米，一个目标。{@h}7 ({@damage 1d8 + 3}) 暴击伤害，目标必须在 {@dc 13} 体质蓄力中成功，否则会 {@condition poisoned} 直到下一回合结束。"
+					]
+				},
+				{
+					"name": "Chardalyn Javelin",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} 命中，距离 1.5 米或范围 30/36 米，一个目标。{@h}6 ({@damage 1d6 + 3}) 穿透伤害，目标必须在{@dc 13}体质蓄力中成功，否则会{@condition poisoned}直到下一回合结束。"
+					]
+				}
+			],
+			"traitTags": [
+				"Reckless"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"poisoned"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Chardalyn Dragon",
+			"source": "IDRotF",
+			"page": 281,
+			"size": [
+				"H"
+			],
+			"type": "construct",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 147,
+				"formula": "14d12 + 56"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 90
+			},
+			"str": 24,
+			"dex": 11,
+			"con": 19,
+			"int": 10,
+			"wis": 10,
+			"cha": 3,
+			"save": {
+				"str": "+11",
+				"con": "+8"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"radiant",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"cold",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"the languages known by its creator"
+			],
+			"cr": "11",
+			"trait": [
+				{
+					"name": "Immutable Form",
+					"entries": [
+						"龙对任何会改变其形态的法术或效果都是免疫的。"
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"龙在面对法术和其他魔法效果时，有优势。"
+					]
+				},
+				{
+					"name": "Siege Monster",
+					"entries": [
+						"龙对物体和结构造成双倍伤害。"
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"龙不需要空气、食物、饮料或睡眠，它不会从完成短期或长期的休息中获得任何好处。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"这条龙使用了它的恶意存在。然后它进行三次攻击：两次用它的爪子，一次用它的尾巴。如果龙没有飞行，它也可以用它的翅膀进行一次攻击。"
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 11} 命中，距离 1.5 米，一个目标。{@h}14 ({@damage 2d6 + 7}) 砍伤。"
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 11} 命中，距离 3 米，一个目标。{@h}18 ({@damage 2d10 + 7}) 暴击伤害。"
+					]
+				},
+				{
+					"name": "Wings",
+					"entries": [
+						"{@atk mw} {@hit 11} 命中，距离 3 米，一个目标。{@h}12 ({@damage 2d4 + 7}) 暴击伤害。"
+					]
+				},
+				{
+					"name": "Malevolent Presence",
+					"entries": [
+						"任何智力在 4 或以上的生物在距离巨龙 9 米范围内，必须在 {@dc 16} 智慧蓄力中成功，否则会被它 {@condition charmed} 持续 1 分钟。生物可以在每个回合结束时重复该蓄力攻击，如果成功则结束对自身的影响。如果生物的蓄力成功或效果结束，该生物在接下来的 24 小时内对龙的邪恶存在免疫。在这种情况下，生物（%2%）会被固定在龙以精神力选择的另一个生物或物体上，并且必须在每个回合中尽可能靠近该目标，并使用行动对其发动近战攻击。如果龙没有选择目标，（%3%）生物可以在其回合中正常行动。"
+					]
+				},
+				{
+					"name": "Radiant Breath {@recharge 5}",
+					"entries": [
+						"巨龙在一条 36 米长、1.5 米宽的直线上吐出一缕辐射能量。这条线上的每个生物都必须进行 {@dc 16} 灵巧蓄力，蓄力失败会受到 31 ({@damage 7d8}) 辐射伤害，蓄力成功则会受到一半的伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"Immutable Form",
+				"Magic Resistance",
+				"Siege Monster",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"R",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Chimeric Baboon",
+			"source": "IDRotF",
+			"page": 246,
+			"_copy": {
+				"name": "Baboon",
+				"source": "MM",
+				"_mod": {
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Bite",
+						"items": {
+							"name": "Bite",
+							"entries": [
+								"{@atk mw} {@hit 1} 命中，距离 1.5 米，一个目标。{@h}1 ({@damage 1d4 - 1}) 穿透伤害，外加额外 3 ({@damage 1d6}) 毒药伤害。"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Chimeric Cat",
+			"source": "IDRotF",
+			"page": 246,
+			"_copy": {
+				"name": "Cat",
+				"source": "MM"
+			},
+			"senses": [
+				"blindsight 60 ft.",
+				"tremorsense 60 ft."
+			],
+			"senseTags": [
+				"B",
+				"T"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Chimeric Fox",
+			"source": "IDRotF",
+			"page": 246,
+			"_copy": {
+				"name": "Fox",
+				"source": "IDRotF",
+				"_mod": {
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "Chimeric Creation",
+							"entries": [
+								"狐狸的皮毛会随着周围环境的变化而改变颜色，使它在灵巧（隐身）检查方面具有优势。"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Chimeric Hare",
+			"source": "IDRotF",
+			"page": 246,
+			"_copy": {
+				"name": "Hare",
+				"source": "IDRotF"
+			},
+			"speed": {
+				"walk": 20,
+				"burrow": 5,
+				"fly": 30
+			},
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Chimeric Rat",
+			"source": "IDRotF",
+			"page": 246,
+			"_copy": {
+				"name": "Rat",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Chimeric Creation",
+							"entries": [
+								"鼠类有鳃，有彩虹色的鳞片，能够呼吸空气和水。"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Chimeric Weasel",
+			"source": "IDRotF",
+			"page": 246,
+			"_copy": {
+				"name": "Weasel",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Chimeric Creation",
+							"entries": [
+								"黄鼠狼有一双会发光的眼睛，能在半径 6 米的范围内发出亮光，并在另外 6 米的范围内发出暗光。"
+							]
+						}
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Bite",
+						"items": {
+							"name": "Bite",
+							"entries": [
+								"{@atk mw} {@hit 5} 命中，距离 1.5 米，一个目标。{@h}1 穿透伤害。"
+							]
+						}
+					}
+				}
+			},
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Chwinga",
+			"source": "IDRotF",
+			"page": 282,
+			"_copy": {
+				"name": "Chwinga",
+				"source": "ToA"
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Coldlight Walker",
+			"source": "IDRotF",
+			"page": 284,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 82,
+				"formula": "11d8 + 33"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 10,
+			"con": 17,
+			"int": 8,
+			"wis": 10,
+			"cha": 8,
+			"save": {
+				"int": "+2",
+				"wis": "+3"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"cold"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"exhaustion",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Blinding Light",
+					"entries": [
+						"行尸在半径 6 米的范围内发出亮光，并在额外 6 米的范围内发出暗光。作为一个额外行动，行尸可以在亮光中瞄准一个它能看到的生物，并迫使它在{@dc 14}体质蓄力中成功，否则就会{@condition blinded}直到行尸的下一个回合开始。"
+					]
+				},
+				{
+					"name": "Icy Doom",
+					"entries": [
+						"任何被丧尸杀死的生物都会被冻结9天，在此期间，它不能被解冻，不能被火伤害，不能被激活，不能起死回生。"
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"步行者不需要空气、食物、饮料或睡眠。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"丧尸会进行两次攻击。"
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 5} 命中，距离 1.5 米，一个目标。{@h}11 ({@damage 2d8 + 2}) 暴击伤害外加 14 ({@damage 4d6}) 冷伤害。"
+					]
+				},
+				{
+					"name": "Cold Ray",
+					"entries": [
+						"{@atk rs} {@hit 3} 命中，范围 18 米，一个目标。{@h}25 ({@damage 4d10 + 3}) 冷伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"C"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Demos Magen",
+			"source": "IDRotF",
+			"page": 300,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item chain mail|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 51,
+				"formula": "6d8 + 24"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 14,
+			"con": 18,
+			"int": 10,
+			"wis": 10,
+			"cha": 7,
+			"passive": 10,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Fiery End",
+					"entries": [
+						"如果马根死了，它的身体会在一阵无害的火和烟中解体，留下它所穿戴或携带的东西。"
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"魔法师在面对法术和其他魔法效果时，在救人方面有优势。"
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"马根不需要空气、食物、饮料或睡眠。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"马根进行两次近战攻击。"
+					]
+				},
+				{
+					"name": "Greatsword",
+					"entries": [
+						"{@atk mw} {@hit 4} 命中，距离 1.5 米，一个目标。{@h}9 ({@damage 2d6 + 2}) 砍伤。"
+					]
+				},
+				{
+					"name": "Light Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 4} 命中，范围 80/96 米，一个目标。{@h}6 ({@damage 1d8 + 2}) 穿透伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"greatsword|phb",
+				"light crossbow|phb"
+			],
+			"traitTags": [
+				"Magic Resistance",
+				"Unusual Nature"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dzaan's Simulacrum",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "IDRotF",
+			"page": 270,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 24,
+				"formula": "9d8 + 9"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 11,
+			"con": 12,
+			"int": 16,
+			"wis": 13,
+			"cha": 15,
+			"save": {
+				"int": "+5",
+				"wis": "+3"
+			},
+			"skill": {
+				"arcana": "+5",
+				"deception": "+4",
+				"history": "+5"
+			},
+			"passive": 11,
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Giant",
+				"Infernal"
+			],
+			"cr": "1",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"仿真人是一个9级的施法者。它的法术能力是智力（法术保存（%0%），用法术攻击命中率（%1%））。它有以下巫师法术准备。"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell acid splash}*",
+								"{@spell light}",
+								"{@spell minor illusion}",
+								"{@spell shocking grasp}*"
+							]
+						},
+						"1": {
+							"slots": 2,
+							"spells": [
+								"{@spell detect magic}",
+								"{@spell disguise self}",
+								"{@spell magic missile}*"
+							]
+						},
+						"2": {
+							"slots": 2,
+							"spells": [
+								"{@spell invisibility}",
+								"{@spell levitate}",
+								"{@spell phantasmal force}"
+							]
+						}
+					},
+					"footerEntries": [
+						"*See \"Actions\" below."
+					],
+					"ability": "int"
+				}
+			],
+			"action": [
+				{
+					"name": "Shocking Grasp (Cantrip)",
+					"entries": [
+						"{@atk ms}{@hit 5}命中，距离 1.5 米，一个生物（如果目标穿着金属盔甲，攻击掷卷有优势）。{@h}9 ({@damage 2d8}) 闪电伤害，目标在下一回合开始前无法做出反应。"
+					]
+				},
+				{
+					"name": "Acid Splash (Cantrip)",
+					"entries": [
+						"模拟人向 18 米范围内它能看到的一个生物，或 1.5 米范围内的两个生物投掷酸性气泡。目标必须在 {@dc 13} 灵巧蓄力中成功，否则会受到 7 ({@damage 2d6}) 酸的伤害。"
+					]
+				},
+				{
+					"name": "Magic Missile (1st-Level Spell; Requires a Spell Slot)",
+					"entries": [
+						"模拟人制造出三枚魔法飞镖。每枚飞镖都能准确无误地击中模拟人所看到的 36 米范围内的一个生物，造成 3（{@damage 1d4 + 1}）力的伤害。如果模拟人使用二级法术槽施放此法术，则会多制造一枚飞镖。"
+					]
+				}
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"GI",
+				"I"
+			],
+			"damageTags": [
+				"A",
+				"L",
+				"O"
+			],
+			"damageTagsSpell": [
+				"A",
+				"L",
+				"O",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"conditionInflictSpell": [
+				"invisible"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"intelligence"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "F'yorl",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "IDRotF",
+			"page": 183,
+			"_copy": {
+				"name": "Mind Flayer",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the mind flayer",
+						"with": "F'yorl",
+						"flags": "i"
+					}
+				}
+			},
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 9,
+				"formula": "13d8 + 13"
+			},
+			"cr": "0",
+			"spellcasting": null,
+			"action": null,
+			"actionTags": [],
+			"spellcastingTags": [],
+			"miscTags": [],
+			"conditionInflict": [],
+			"conditionInflictSpell": [],
+			"hasToken": true
+		},
+		{
+			"name": "Fox",
+			"source": "IDRotF",
+			"page": 288,
+			"size": [
+				"T"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 2,
+				"formula": "1d4"
+			},
+			"speed": {
+				"walk": 30,
+				"burrow": 5
+			},
+			"str": 2,
+			"dex": 16,
+			"con": 11,
+			"int": 3,
+			"wis": 12,
+			"cha": 6,
+			"skill": {
+				"perception": "+3",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Keen Hearing",
+					"entries": [
+						"狐狸在依靠听觉的智慧（感知）检查中具有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} 命中，距离 1.5 米，一个生物。{@h}1 穿透伤害。"
+					]
+				}
+			],
+			"familiar": true,
+			"traitTags": [
+				"Keen Senses"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Frost Druid",
+			"source": "IDRotF",
+			"page": 288,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item hide armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 67,
+				"formula": "9d8 + 27"
+			},
+			"speed": {
+				"walk": {
+					"number": 40,
+					"condition": "(wolf form only)"
+				},
+				"burrow": {
+					"number": 5,
+					"condition": "(fox form only)"
+				},
+				"climb": {
+					"number": 30,
+					"condition": "(goat form only)"
+				},
+				"fly": {
+					"number": 60,
+					"condition": "(owl form only)"
+				}
+			},
+			"str": 12,
+			"dex": 13,
+			"con": 16,
+			"int": 10,
+			"wis": 16,
+			"cha": 9,
+			"save": {
+				"int": "+3",
+				"wis": "+6"
+			},
+			"skill": {
+				"nature": "+3",
+				"perception": "+6",
+				"survival": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft. (beast form only)"
+			],
+			"passive": 16,
+			"resist": [
+				"cold"
+			],
+			"languages": [
+				"Common",
+				"Druidic"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Spellcasting (Humanoid Form Only)",
+					"headerEntries": [
+						"德鲁伊是一个9级的施法者。它的法术能力是智慧（法术救赎（%0%）；用法术攻击击中（%1%））。它有以下德鲁伊法术的准备。"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft}",
+								"{@spell guidance}",
+								"{@spell resistance}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell animal friendship}",
+								"{@spell fog cloud}",
+								"{@spell speak with animals}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell animal messenger}",
+								"{@spell moonbeam}",
+								"{@spell pass without trace}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell conjure animals}",
+								"{@spell sleet storm}",
+								"{@spell wind wall}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell hallucinatory terrain}",
+								"{@spell ice storm}"
+							]
+						},
+						"5": {
+							"slots": 1,
+							"spells": [
+								"{@spell awaken}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"德鲁伊进行两次近战攻击。"
+					]
+				},
+				{
+					"name": "Ice Sickle (Humanoid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 4} 命中，距离 1.5 米，一个目标。{@h}3 ({@damage 1d4 + 1}) 砍伤伤害外加 5 ({@damage 2d4}) 冷伤害。"
+					]
+				},
+				{
+					"name": "Maul (Beast Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 4} 命中，距离 1.5 米，一个目标。{@h}3 ({@damage 1d4 + 1}) 穿透伤害。"
+					]
+				},
+				{
+					"name": "Change Shape",
+					"entries": [
+						"德鲁伊会神奇地多态化为野兽形态--狐狸、山羊、猫头鹰或狼，或者变回其人形形态。它所穿戴或携带的任何装备都会被兽形吸收或承担（由德鲁伊选择）。它死后会恢复成人形。德鲁伊在每种形态下的统计数据都是一样的，除非在本状态块中有所说明。"
+					]
+				}
+			],
+			"attachedItems": [
+				"maul|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"DU"
+			],
+			"damageTags": [
+				"C",
+				"P",
+				"S"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"R"
+			],
+			"spellcastingTags": [
+				"CD",
+				"F"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"prone"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"strength",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Frost Giant Skeleton",
+			"source": "IDRotF",
+			"page": 288,
+			"size": [
+				"H"
+			],
+			"type": "undead",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"armor scraps"
+					]
+				}
+			],
+			"hp": {
+				"average": 102,
+				"formula": "12d12 + 24"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 23,
+			"dex": 9,
+			"con": 15,
+			"int": 6,
+			"wis": 8,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"immune": [
+				"cold",
+				"poison"
+			],
+			"vulnerable": [
+				"bludgeoning"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"understands Giant but can't speak"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"骨架不需要空气、食物、饮料或睡眠。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"骷髅会进行两次大斧头攻击。"
+					]
+				},
+				{
+					"name": "Greataxe",
+					"entries": [
+						"{@atk mw} {@hit 9} 命中，距离 3 米，一个目标。{@h}25 ({@damage 3d12 + 6}) 砍伤。"
+					]
+				},
+				{
+					"name": "Freezing Stare",
+					"entries": [
+						"骷髅的目标是它能看到的 18 米范围内的一个生物。目标必须在{@dc 13}体质蓄力中成功，否则会受到 35（{@damage 10d6}）点寒冷伤害并{@condition paralyzed}直到下一回合结束。"
+					]
+				}
+			],
+			"attachedItems": [
+				"greataxe|phb"
+			],
+			"traitTags": [
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS",
+				"GI"
+			],
+			"damageTags": [
+				"C",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"paralyzed"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Galvan Magen",
+			"source": "IDRotF",
+			"page": 301,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 68,
+				"formula": "8d8 + 32"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 10,
+			"dex": 18,
+			"con": 18,
+			"int": 12,
+			"wis": 10,
+			"cha": 7,
+			"passive": 10,
+			"immune": [
+				"lightning",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Fiery End",
+					"entries": [
+						"如果马根死了，它的身体会在一阵无害的火和烟中解体，留下它所穿戴或携带的东西。"
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"魔法师在面对法术和其他魔法效果时，在救人方面有优势。"
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"马根不需要空气、食物、饮料或睡眠。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"麦根进行了两次震惊的触摸攻击。"
+					]
+				},
+				{
+					"name": "Shocking Touch",
+					"entries": [
+						"{@atk ms} {@hit 6} 命中，距离 1.5 米，一个目标（如果目标身着金属盔甲，则法师在攻击翻滚中占有优势）。{@h}7 ({@damage 1d6 + 4}) 雷电伤害。"
+					]
+				},
+				{
+					"name": "Static Discharge {@recharge 5}",
+					"entries": [
+						"法师在 1.5 米宽的 18 米线上发射一道闪电。这条线上的每个生物都必须进行 {@dc 14} 灵巧蓄力（如果生物穿着金属盔甲则处于劣势），蓄力失败会受到 22 ({@damage 4d10}) 雷电伤害，蓄力成功则会受到一半的伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance",
+				"Unusual Nature"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"L"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Giant Walrus",
+			"source": "IDRotF",
+			"page": 312,
+			"size": [
+				"H"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				9
+			],
+			"hp": {
+				"average": 85,
+				"formula": "9d12 + 27"
+			},
+			"speed": {
+				"walk": 20,
+				"swim": 40
+			},
+			"str": 22,
+			"dex": 9,
+			"con": 16,
+			"int": 3,
+			"wis": 11,
+			"cha": 4,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Hold Breath",
+					"entries": [
+						"海象可以憋气30分钟。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"海象进行两次攻击：一次是用身体翻转，一次是用獠牙。"
+					]
+				},
+				{
+					"name": "Body Flop",
+					"entries": [
+						"{@atk mw} {@hit 8} 命中，距离 1.5 米，一个目标。{@h}15 ({@damage 2d8 + 6}) 暴击伤害。"
+					]
+				},
+				{
+					"name": "Tusks",
+					"entries": [
+						"{@atk mw} {@hit 8} 命中，距离 1.5 米，一个目标。{@h}16 ({@damage 3d6 + 6}) 穿透伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"Hold Breath"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gnoll Vampire",
+			"source": "IDRotF",
+			"page": 290,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "undead",
+				"tags": [
+					"shapechanger"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 93,
+				"formula": "11d8 + 44"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 20,
+			"dex": 18,
+			"con": 18,
+			"int": 6,
+			"wis": 12,
+			"cha": 9,
+			"save": {
+				"dex": "+7",
+				"con": "+7"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Abyssal",
+				"Gnoll"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Keen Smell",
+					"entries": [
+						"吸血鬼在依靠嗅觉的智慧（感知）检查中具有优势。"
+					]
+				},
+				{
+					"name": "Rampage",
+					"entries": [
+						"当它在自己的回合中用近战攻击将一个生物的命中率降低到0时，吸血鬼可以采取一个额外的行动，移动到其速度的一半并进行咬人攻击。"
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"如果吸血鬼至少有1个命中率，并且不在阳光下或流水中，那么它在回合开始时将恢复10个命中率。如果吸血鬼受到辐射伤害或圣水伤害，这个特性在吸血鬼的下一个回合开始时不会发挥作用。"
+					]
+				},
+				{
+					"name": "Shapechanger",
+					"entries": [
+						"如果吸血鬼不在阳光下，它可以用它的行动来多态化为一只大土狼或一团中等大小的雾气，或者回到它的真实形态。",
+						"在鬣狗形态下，吸血鬼不会说话，行走速度为 15 米。除了体型和速度外，它的其他数据不变。它身上的任何物品都会随之变形，但它携带的任何物品都不会。如果它死了，就会恢复原样。",
+						"在迷雾形态下，吸血鬼不能采取任何行动，不能说话，也不能操纵物体。它没有重量，飞行速度为 6 米，可以悬停，可以进入敌对生物的空间并停在那里。此外，如果空气可以穿过空间，迷雾也可以不经挤压穿过，但它不能穿过水。它在力量、灵巧和体质蓄力方面都有优势，并且免疫所有非魔法伤害，但阳光伤害除外。"
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"吸血鬼不需要空气。"
+					]
+				},
+				{
+					"name": "Vampire Weaknesses",
+					"entries": [
+						"这个吸血鬼有以下缺陷。",
+						"{@i 被天体激怒。}如果它听到天人合一的话语，吸血鬼必须在它的下一个回合尝试攻击这些话语的来源。如果这些话来自多个来源且方向相反，吸血鬼就会（%1%）。否则，它就会移动到它认为是最近的来源处进行攻击。",
+						"{@i 被香水击退} 吸血鬼在对任何穿戴香水或携带香水容器的生物进行近身攻击时处于不利地位。",
+						"{@i 直刺心脏}如果一个木制的穿刺武器被刺入吸血鬼的心脏，而吸血鬼在休息的地方是{@condition incapacitated}，吸血鬼是{@condition paralyzed}直到木桩被移除。",
+						"{@i 日光过敏。}当吸血鬼在阳光下开始其回合时，会受到20个辐射伤害。当在阳光下时，它在攻击卷和能力检查上有劣势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack (Vampire Form Only)",
+					"entries": [
+						"吸血鬼进行两次攻击：一次是咬人，一次是用爪子。"
+					]
+				},
+				{
+					"name": "Bite (Hyena or Vampire Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 8} 命中，距离 1.5 米，一个生物。{@h}12 ({@damage 2d6 + 5}) 穿透伤害外加 9 ({@damage 2d8}) 坏死伤害。目标的最高命中率会降低，降低的数值等于受到的坏死伤害，吸血鬼会恢复等同于该数值的命中率。如果目标的最大命中点数降低到 0，则目标死亡。"
+					]
+				},
+				{
+					"name": "Claws (Vampire Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 8} 命中，距离 1.5 米，一个目标。{@h}10 ({@damage 2d4 + 5}) 砍伤。"
+					]
+				},
+				{
+					"name": "Frightful Cackle (Hyena or Vampire Form Only)",
+					"entries": [
+						"吸血鬼发出令人毛骨悚然的 \"咯咯 \"声。吸血鬼选择的每种生物，只要在距离吸血鬼 36 米范围内，并能听到它的咯咯声，就必须在{@dc 15}智慧蓄力中成功，否则会在 1 分钟内变成{@condition frightened}。生物可以在每一回合结束时重复一次蓄力，如果成功则终止对自身的影响。如果生物的蓄力成功或效果结束，则该生物在接下来的 24 小时内免疫吸血鬼的惊恐咯咯声。"
+					]
+				},
+				{
+					"name": "Sickening Gaze (Hyena or Vampire Form Only)",
+					"entries": [
+						"吸血鬼的目标是它能看到的 9 米范围内的一个人形生物。如果目标能看到吸血鬼，目标必须在（%0%）体质蓄力中成功抵御该魔法，否则会（%1%）持续 24 小时。蓄力成功的生物将在 24 小时内免疫吸血鬼的令人作呕的凝视。"
+					]
+				}
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Rampage",
+				"Regeneration",
+				"Shapechanger",
+				"Sunlight Sensitivity",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"OTH"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"HPR",
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened",
+				"poisoned"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gnome Ceremorph",
+			"source": "IDRotF",
+			"page": 303,
+			"size": [
+				"S"
+			],
+			"type": "aberration",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item breastplate|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 58,
+				"formula": "13d6 + 13"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 6,
+			"dex": 14,
+			"con": 12,
+			"int": 19,
+			"wis": 17,
+			"cha": 17,
+			"save": {
+				"int": "+7",
+				"wis": "+6",
+				"cha": "+6"
+			},
+			"skill": {
+				"arcana": "+7",
+				"deception": "+6",
+				"insight": "+6",
+				"perception": "+6",
+				"persuasion": "+6",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"languages": [
+				"Deep Speech",
+				"Gnomish",
+				"telepathy 120 ft.",
+				"Undercommon"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting (Psionics)",
+					"headerEntries": [
+						"ceremorph与生俱来的法术能力是智力（法术保存（%0%））。它可以先天性地施展以下法术，不需要任何组件。"
+					],
+					"will": [
+						"{@spell detect thoughts}",
+						"{@spell levitate}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell dominate monster}",
+							"{@spell plane shift} (self only)"
+						]
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"ceremorph在对抗法术和其他魔法效果时有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Tentacles",
+					"entries": [
+						"{@atk mw} {@hit 7} 命中，距离 1.5 米，一个生物。{@h}15 ({@damage 2d10 + 4}) 精神伤害。如果目标是中型或更小的生物，则会受到 {@condition grappled} （逃脱 {@dc 9}）的伤害，并且必须成功进行 {@dc 15} 智力蓄力，否则会受到 {@condition stunned} 的伤害，直到这次抓取结束。"
+					]
+				},
+				{
+					"name": "Extract Brain",
+					"entries": [
+						"{@atk mw}{@hit 7}命中，距离 1.5 米，一个{@condition incapacitated}类人 {@condition grappled} 受到麦西莫夫。{@h}55 ({@damage 10d10}) 穿透伤害。如果该伤害将目标的命中点数降至 0，则麦西莫夫会通过提取并吞噬其大脑来杀死目标。"
+					]
+				},
+				{
+					"name": "Laser Pistol",
+					"entries": [
+						"{@atk rw} {@hit 5} 命中，范围 40/36 米，一个目标。{@h}12 ({@damage 3d6 + 2}) 辐射伤害。"
+					]
+				},
+				{
+					"name": "Mind Blast {@recharge 5}",
+					"entries": [
+						"Ceremorph 会以魔法的方式在 18 米锥形范围内释放精神能量。该区域内的每个生物都必须成功进行 {@dc 15} 智力蓄力，否则就会受到 22 ({@damage 4d8 + 4}) 精神伤害并 {@condition stunned} 1 分钟。生物可以在每个回合结束时重复该蓄力攻击，如果成功则终止对自身的影响。"
+					]
+				}
+			],
+			"attachedItems": [
+				"laser pistol|dmg"
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Tentacles"
+			],
+			"languageTags": [
+				"DS",
+				"G",
+				"TP",
+				"U"
+			],
+			"damageTags": [
+				"P",
+				"R",
+				"Y"
+			],
+			"spellcastingTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"grappled",
+				"stunned"
+			],
+			"conditionInflictSpell": [
+				"charmed"
+			],
+			"savingThrowForced": [
+				"intelligence"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gnome Squidling",
+			"source": "IDRotF",
+			"page": 303,
+			"size": [
+				"S"
+			],
+			"type": "aberration",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				8
+			],
+			"hp": {
+				"average": 10,
+				"formula": "3d6"
+			},
+			"speed": {
+				"walk": 15
+			},
+			"str": 4,
+			"dex": 7,
+			"con": 10,
+			"int": 4,
+			"wis": 10,
+			"cha": 3,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"understands Deep Speech and Gnomish but can't speak",
+				"telepathy 60 ft."
+			],
+			"cr": "1/2",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting (Psionics)",
+					"headerEntries": [
+						"乌贼的先天法术能力是智力（法术保存（%0%））。它可以随心所欲地施展（%1%），不需要任何组件。"
+					],
+					"will": [
+						"{@spell levitate}"
+					],
+					"ability": "int",
+					"hidden": [
+						"will"
+					]
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"鱿鱼人对法术和其他魔法效果的救赎有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Tentacles",
+					"entries": [
+						"{@atk mw} {@hit 0} 命中，距离 1.5 米，一个生物。{@h}5 ({@damage 2d4}) 精神伤害。如果目标是中型或更小，则会受到 {@condition grappled} （逃脱 {@dc 7}），并且必须在 {@dc 7} 智力蓄力中成功，否则会受到 {@condition stunned} 直到这次抓取结束。"
+					]
+				},
+				{
+					"name": "Extract Brain",
+					"entries": [
+						"{@atk mw}{@hit 0}命中，距离 1.5 米，一个{@condition incapacitated}生物{@condition grappled}被乌贼攻击。{@h}27 ({@damage 5d10}) 穿透伤害。如果该伤害将目标的命中率降至 0，乌贼会通过提取并吞噬其大脑来杀死目标。"
+					]
+				},
+				{
+					"name": "Mind Tickle {@recharge 5}",
+					"entries": [
+						"乌贼会以魔法的方式在 9 米锥形范围内释放精神能量。该区域内的每个生物都必须在一次 {@dc 7} 智力蓄力中成功，否则就会受到 2 ({@damage 1d4}) 精神伤害并 {@condition stunned} 直到下一回合结束。"
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Tentacles"
+			],
+			"languageTags": [
+				"CS",
+				"DS",
+				"G",
+				"TP"
+			],
+			"damageTags": [
+				"P",
+				"Y"
+			],
+			"spellcastingTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"grappled",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"intelligence"
+			],
+			"savingThrowForcedSpell": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Goliath Warrior",
+			"source": "IDRotF",
+			"page": 292,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"goliath"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"{@item hide armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 67,
+				"formula": "9d8 + 27"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 11,
+			"con": 16,
+			"int": 10,
+			"wis": 15,
+			"cha": 10,
+			"skill": {
+				"athletics": "+6",
+				"perception": "+4",
+				"survival": "+4"
+			},
+			"passive": 14,
+			"resist": [
+				"cold"
+			],
+			"languages": [
+				"Common",
+				"Giant"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Mountain Born",
+					"entries": [
+						"巨蜥适应高海拔地区，包括海拔 20 米以上的地区。"
+					]
+				},
+				{
+					"name": "Powerful Build",
+					"entries": [
+						"在确定其运载能力和可推、可拖、可举的重量时，巨人算作大一码。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"歌利亚用它的大斧头进行两次攻击或投掷两支标枪。"
+					]
+				},
+				{
+					"name": "Greataxe",
+					"entries": [
+						"{@atk mw} {@hit 6} 命中，距离 1.5 米，一个目标。{@h}10 ({@damage 1d12 + 4}) 砍伤。"
+					]
+				},
+				{
+					"name": "Javelin",
+					"entries": [
+						"{@atk mw,rw} {@hit 6} 命中，距离 1.5 米或射程 30/36 米，一个目标。{@h}7 ({@damage 1d6 + 4}) 穿透伤害。"
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Stone's Endurance (Recharges after a Short or Long Rest)",
+					"entries": [
+						"当歌利亚受到伤害时，会减少所受的伤害9（（%0%））。"
+					]
+				}
+			],
+			"attachedItems": [
+				"greataxe|phb",
+				"javelin|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GI"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Goliath Werebear",
+			"source": "IDRotF",
+			"page": 293,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"goliath",
+					"shapechanger"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 10,
+					"condition": "in humanoid form"
+				},
+				{
+					"ac": 12,
+					"condition": "in bear or hybrid form",
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 161,
+				"formula": "19d8 + 76"
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "(40 ft. swim 30 ft. in bear or hybrid form)"
+				}
+			},
+			"str": 20,
+			"dex": 10,
+			"con": 18,
+			"int": 10,
+			"wis": 15,
+			"cha": 10,
+			"skill": {
+				"athletics": "+8",
+				"perception": "+8",
+				"survival": "+5"
+			},
+			"passive": 18,
+			"resist": [
+				"cold"
+			],
+			"immune": [
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
+				}
+			],
+			"vulnerable": [
+				"fire"
+			],
+			"languages": [
+				"Common",
+				"Giant (can't speak in bear form)"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Keen Smell",
+					"entries": [
+						"狼人在依靠嗅觉的智慧（感知）检查中具有优势。"
+					]
+				},
+				{
+					"name": "Mountain Born",
+					"entries": [
+						"黑熊能适应高海拔地区，包括海拔 20 米以上的地区。"
+					]
+				},
+				{
+					"name": "Powerful Build (Humanoid Form Only)",
+					"entries": [
+						"在确定其承载能力和可推、可拖、可举的重量时，狼人算作大一码。"
+					]
+				},
+				{
+					"name": "Shapechanger",
+					"entries": [
+						"狼人可以用它的行动来多态化为大熊-人形混合体或大北极熊，或回到它的巨人形态。它的统计数据，除了它的大小和AC，在每种形态下都是一样的。它所穿戴或携带的任何装备都不会被转化。如果它死了，它就会恢复到它的真实形态。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"狼人进行两次近战攻击。"
+					]
+				},
+				{
+					"name": "Bite (Bear or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 8} 命中，距离 1.5 米，一个生物。{@h}16 ({@damage 2d10 + 5}) 穿透伤害。如果目标是人形生物，则必须在{@dc 15}体质蓄力中成功，否则就会受到狼人的诅咒，详见《怪物手册》。"
+					]
+				},
+				{
+					"name": "Claw (Bear or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 8} 命中，距离 1.5 米，一个目标。{@h}14 ({@damage 2d8 + 5}) 砍伤。"
+					]
+				},
+				{
+					"name": "Greataxe (Humanoid or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 8} 命中，距离 1.5 米，一个目标。{@h}11 ({@damage 1d12 + 5}) 砍伤。"
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Stone's Endurance (Recharges after a Short or Long Rest)",
+					"entries": [
+						"当狼人受到伤害时，会减少所受伤害10（（%0%））。"
+					]
+				}
+			],
+			"attachedItems": [
+				"greataxe|phb"
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Shapechanger"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS",
+				"GI"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Grandolpha Muzgardt",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "IDRotF",
+			"page": 176,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"dwarf"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				9
+			],
+			"hp": {
+				"average": 59,
+				"formula": "7d8 + 28"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 14,
+			"dex": 9,
+			"con": 18,
+			"int": 13,
+			"wis": 17,
+			"cha": 16,
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"poison"
+			],
+			"languages": [
+				"Common",
+				"Dwarvish",
+				"Undercommon"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting (Psionics)",
+					"headerEntries": [
+						"Grandolpha与生俱来的法术能力是智慧（法术保存（%0%））。她可以天生施展以下法术，不需要任何物质成分。"
+					],
+					"will": [
+						"{@spell druidcraft}",
+						"{@spell mending}",
+						"{@spell poison spray} (see \"Actions\" below)"
+					],
+					"daily": {
+						"3e": [
+							"{@spell detect magic}",
+							"{@spell enlarge/reduce} (self only)",
+							"{@spell faerie fire}",
+							"{@spell invisibility} (self only)",
+							"{@spell polymorph}",
+							"{@spell stoneskin} (self only)"
+						]
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Duergar Resilience",
+					"entries": [
+						"Grandolpha对毒药、法术和幻觉的救赎有优势，同时也能抵抗{@condition charmed}或{@condition paralyzed}。"
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"在阳光下，Grandolpha在攻击卷上有劣势，在依靠视觉的智慧（感知）检查上也是如此。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Poison Spray (Cantrip)",
+					"entries": [
+						"格兰朵尔菲朝她能看到的 3 米范围内的生物伸出手，并从掌心喷射出一股有毒气体。该生物必须在{@dc 13}体质蓄力中成功，否则会受到 13 ({@damage 2d12})中毒伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"U"
+			],
+			"damageTags": [
+				"I"
+			],
+			"damageTagsSpell": [
+				"I"
+			],
+			"spellcastingTags": [
+				"I",
+				"P"
+			],
+			"conditionInflictSpell": [
+				"invisible"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gunvald Halraggson",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "IDRotF",
+			"page": 305,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item hide armor|PHB}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 76,
+				"formula": "9d8 + 36"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 20,
+			"dex": 8,
+			"con": 18,
+			"int": 9,
+			"wis": 10,
+			"cha": 16,
+			"skill": {
+				"athletics": "+8",
+				"intimidation": "+6",
+				"survival": "+3"
+			},
+			"passive": 10,
+			"languages": [
+				"Common"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Indomitable (3/Day)",
+					"entries": [
+						"Gunvald可以重新掷出他失败的救赎。他必须使用新的卷轴。"
+					]
+				},
+				{
+					"name": "Menacing Blows (1/Turn)",
+					"entries": [
+						"当Gunvald用武器攻击击中目标时，会造成额外的6({@damage 1d12})伤害。如果目标是一个生物，它必须在一个{@dc 14}的智慧救赎中成功，否则会被{@condition frightened}，直到Gunvald的下一回合开始。"
+					]
+				},
+				{
+					"name": "Second Wind (Recharges after a Short or Long Rest)",
+					"entries": [
+						"作为一个额外的动作，Gunvald可以恢复15点生命值。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Gunvald进行了三次近战攻击。"
+					]
+				},
+				{
+					"name": "Battleaxe",
+					"entries": [
+						"{@atk mw} {@hit 8} 命中，距离 1.5 米，一个目标。{@h}9（{@damage 1d8 + 5}）次砍击伤害，或双手使用时 10（{@damage 1d10 + 5}）次砍击伤害，如果冈瓦尔德使用汹涌打击，则加上 6（{@damage 1d12}）次砍击伤害。"
+					]
+				},
+				{
+					"name": "Javelin",
+					"entries": [
+						"{@atk mw,rw} {@hit 8} 命中，范围 30/36 米，一个目标。{@h}8（{@damage 1d6 + 5}）次穿刺伤害，如果冈瓦尔德使用 \"汹涌打击\"，则加上 6（{@damage 1d12}）次穿刺伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"battleaxe|phb",
+				"javelin|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Hare",
+			"source": "IDRotF",
+			"page": 294,
+			"size": [
+				"T"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 1,
+				"formula": "1d4 - 1"
+			},
+			"speed": {
+				"walk": 20,
+				"burrow": 5
+			},
+			"str": 1,
+			"dex": 17,
+			"con": 9,
+			"int": 2,
+			"wis": 11,
+			"cha": 4,
+			"skill": {
+				"perception": "+2",
+				"stealth": "+5"
+			},
+			"passive": 12,
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Escape",
+					"entries": [
+						"兔子可以在它的每个回合中采取冲刺、脱离或隐藏行动作为额外行动。"
+					]
+				}
+			],
+			"familiar": true,
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Headless Iron Golem",
+			"source": "IDRotF",
+			"page": 244,
+			"_copy": {
+				"name": "Iron Golem",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "Headless",
+							"entries": [
+								"巨魔是{@condition blinded}和{@condition deafened}，使它在所有的攻击卷中处于劣势，而且它不能使用毒气。"
+							]
+						}
+					},
+					"action": {
+						"mode": "removeArr",
+						"names": "Poison Breath {@recharge 5}"
+					}
+				}
+			},
+			"hp": {
+				"average": 150,
+				"formula": "10d10 + 50"
+			},
+			"cr": "10",
+			"actionTags": [
+				"Multiattack"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Hengar Aesnvaard",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "IDRotF",
+			"page": 215,
+			"_copy": {
+				"name": "Gladiator",
+				"source": "MM",
+				"_mod": {
+					"*": [
+						{
+							"mode": "replaceTxt",
+							"replace": "the gladiator",
+							"with": "Hengar",
+							"flags": "i"
+						}
+					],
+					"_": [
+						{
+							"mode": "addSkills",
+							"skills": {
+								"survival": 1
+							}
+						}
+					]
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Hypnos Magen",
+			"source": "IDRotF",
+			"page": 301,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 34,
+				"formula": "4d8 + 16"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 18,
+			"int": 14,
+			"wis": 10,
+			"cha": 7,
+			"passive": 10,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak",
+				"telepathy 30 ft."
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Fiery End",
+					"entries": [
+						"如果马根死了，它的身体会在一阵无害的火和烟中解体，留下它所穿戴或携带的东西。"
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"魔法师在面对法术和其他魔法效果时，在救人方面有优势。"
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"马根不需要空气、食物、饮料或睡眠。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Psychic Lash",
+					"entries": [
+						"玛根的眼睛会发出银色光芒，它的目标是 18 米范围内它能看到的一个生物。目标必须在 {@dc 12} 智慧蓄力中成功，否则会受到 11 ({@damage 2d10}) 精神伤害。"
+					]
+				},
+				{
+					"name": "Suggestion",
+					"entries": [
+						"魔法师施展{@spell suggestion}的法术(保存{@dc 12})，不需要任何物质成分。目标必须是该魔法师可以用心灵感应的生物。如果救赎成功，目标在接下来的24小时内对该魔法师的（%2%）法术免疫。该魔法师的法术能力是智力。"
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance",
+				"Unusual Nature"
+			],
+			"languageTags": [
+				"CS",
+				"TP"
+			],
+			"damageTags": [
+				"Y"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ice Piercer",
+			"source": "IDRotF",
+			"page": 226,
+			"_copy": {
+				"name": "Piercer",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "piercer",
+						"with": "ice piercer"
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Drop",
+						"items": {
+							"name": "Drop",
+							"entries": [
+								"{@atk mw} {@hit 3}击中，刺客正下方的一个生物。{@h}10 ({@damage 3d6})穿刺伤害加上10 ({@damage 3d6})寒冷伤害。未击中：穿刺者受到正常坠落距离的一半伤害。"
+							]
+						}
+					}
+				}
+			},
+			"immune": [
+				"cold"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Ice Troll",
+			"source": "IDRotF",
+			"page": 295,
+			"size": [
+				"L"
+			],
+			"type": "giant",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 115,
+				"formula": "10d10 + 60"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 8,
+			"con": 22,
+			"int": 7,
+			"wis": 9,
+			"cha": 7,
+			"skill": {
+				"perception": "+2"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"immune": [
+				"cold"
+			],
+			"languages": [
+				"Giant"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Cold Aura",
+					"entries": [
+						"巨怪活着时会产生一个严寒光环，笼罩周围 3 米内的区域。在巨怪的回合开始时，光环中的所有非魔法火焰都会熄灭。任何在巨怪 3 米范围内开始回合的生物都会受到 10 ({@damage 3d6}) 寒冷伤害。"
+					]
+				},
+				{
+					"name": "Keen Smell",
+					"entries": [
+						"冰雪巨魔在依靠嗅觉的智慧（感知）检查中具有优势。"
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"冰雪巨魔在其回合开始时重新获得10点命中率。如果巨魔受到酸或火的伤害，该特性在巨魔的下一回合开始时不会发挥作用。冰巨魔只有在其回合开始时命中率为0并且没有再生时才会死亡。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"巨魔会进行三次攻击：一次是咬人，两次是用爪子。"
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} 命中，距离 1.5 米，一个目标。{@h}7 ({@damage 1d6 + 4}) 穿透伤害外加 9 ({@damage 2d8}) 寒冷伤害。"
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 7} 命中，距离 1.5 米，一个目标。{@h}11 ({@damage 2d6 + 4}) 次砍击伤害外加 9 ({@damage 2d8}) 次寒冷伤害。如果目标受到任何寒冷伤害，则必须在 {@dc 15} 体质蓄力中成功，否则在其攻击翻滚中处于劣势，直到下一回合结束。"
+					]
+				}
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Regeneration"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"GI"
+			],
+			"damageTags": [
+				"C",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Icewind Kobold",
+			"source": "IDRotF",
+			"page": 296,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"kobold"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item hide armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 9,
+				"formula": "2d6 + 2"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 20
+			},
+			"str": 7,
+			"dex": 15,
+			"con": 12,
+			"int": 8,
+			"wis": 8,
+			"cha": 8,
+			"save": {
+				"dex": "+4",
+				"con": "+3"
+			},
+			"skill": {
+				"perception": "+1",
+				"stealth": "+4",
+				"survival": "+1"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"如果哥布林的盟友中至少有一人在生物的 1.5 米范围内，而该盟友不在生物的 1.5 米范围内，则哥布林在对该生物的攻击翻滚中拥有优势（%0%）。"
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"当在阳光下时，哥布林在攻击卷轴以及依靠视觉的智慧（感知）检查上有劣势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} 命中，距离 1.5 米或范围 20/18 米，一个目标。{@h}4 ({@damage 1d4 + 2}) 穿透伤害。"
+					]
+				},
+				{
+					"name": "Javelin",
+					"entries": [
+						"{@atk mw,rw} {@hit 0} 命中，距离 1.5 米或射程 30/36 米，一个目标。{@h}1 ({@damage 1d6 - 2}) 穿透伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb",
+				"javelin|phb"
+			],
+			"traitTags": [
+				"Pack Tactics",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Icewind Kobold Zombie",
+			"source": "IDRotF",
+			"page": 297,
+			"size": [
+				"S"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 9,
+					"from": [
+						"scraps of hide armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 19,
+				"formula": "3d6 + 9"
+			},
+			"speed": {
+				"walk": 20
+			},
+			"str": 8,
+			"dex": 6,
+			"con": 16,
+			"int": 3,
+			"wis": 6,
+			"cha": 3,
+			"save": {
+				"wis": "+0"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 8,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"understands Common and Draconic but can't speak"
+			],
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"如果伤害使僵尸的命中率降至0，它必须做一个宪法救赎动作，DC为5+所受伤害，除非伤害是辐射或来自关键打击。如果成功，僵尸会下降到1点生命值。"
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"僵尸不需要空气、食物、饮料或睡眠。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Javelin",
+					"entries": [
+						"{@atk mw} {@hit 1} 命中，距离 1.5 米，一个目标。{@h}2 ({@damage 1d6 - 1}) 穿透伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"javelin|phb"
+			],
+			"traitTags": [
+				"Undead Fortitude",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"CS",
+				"DR"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Isarr Kronenstrom",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "IDRotF",
+			"page": 307,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item hide armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 117,
+				"formula": "18d8 + 36"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 15,
+			"int": 14,
+			"wis": 15,
+			"cha": 16,
+			"skill": {
+				"athletics": "+6",
+				"intimidation": "+6",
+				"perception": "+5",
+				"stealth": "+6",
+				"survival": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"languages": [
+				"Common"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Blood Frenzy",
+					"entries": [
+						"Isarr对任何没有全部命中率的生物的近战攻击卷轴具有优势。"
+					]
+				},
+				{
+					"name": "Indomitable (3/Day)",
+					"entries": [
+						"Isarr可以重新掷出他失败的储蓄硬币。他必须使用新的投票。"
+					]
+				},
+				{
+					"name": "Keen Hearing and Smell",
+					"entries": [
+						"Isarr在依靠听觉或嗅觉的智慧（感知）检查中具有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Isarr进行了三次近战攻击。"
+					]
+				},
+				{
+					"name": "Sickle",
+					"entries": [
+						"{@atk mw} {@hit 6} 命中，距离 1.5 米，一个目标。{@h}5 ({@damage 1d4 + 3})次穿刺伤害，如果目标周围 3 米内没有可以看到的盟友，则加上 13 ({@damage 2d12})次穿刺伤害。"
+					]
+				},
+				{
+					"name": "Heavy Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 6} 命中，范围 100/12 米，一个目标。{@h}8 ({@damage 1d10 + 3}) 穿透伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"heavy crossbow|phb",
+				"sickle|phb"
+			],
+			"traitTags": [
+				"Keen Senses"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Jarund Elkhardt",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "IDRotF",
+			"page": 305,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item hide armor|PHB}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 104,
+				"formula": "16d8 + 32"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 10,
+			"con": 15,
+			"int": 12,
+			"wis": 14,
+			"cha": 18,
+			"save": {
+				"con": "+5",
+				"wis": "+5"
+			},
+			"skill": {
+				"athletics": "+7",
+				"intimidation": "+7",
+				"survival": "+5"
+			},
+			"passive": 12,
+			"languages": [
+				"Common",
+				"Dwarvish"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Brute",
+					"entries": [
+						"当Jarund用一个近战武器击中它时，会造成一个额外的伤害模子（包括在攻击中）。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Jarund进行了三次近战攻击。"
+					]
+				},
+				{
+					"name": "Warhammer",
+					"entries": [
+						"{@atk mw} {@hit 7} 命中，距离 1.5 米，一个目标。{@h}13 ({@damage 2d8 + 4}) 暴击伤害，双手使用时为 15 ({@damage 2d10 + 4}) 暴击伤害。"
+					]
+				},
+				{
+					"name": "Shield",
+					"entries": [
+						"{@atk mw} {@hit 7} 命中，距离 1.5 米，一个生物。{@h}11 ({@damage 2d6 + 4}) 暴击伤害，如果目标是大型或小型生物，贾闰德会将其推离自己 1.5 米远。然后贾闰德进入目标腾出的空间。如果目标被推到杰隆德的友方生物 1.5 米范围内，该生物可以作为反应对目标发动攻击。"
+					]
+				},
+				{
+					"name": "Javelin",
+					"entries": [
+						"{@atk mw,rw} {@hit 7} 命中，距离 1.5 米或射程 30/36 米，一个目标。{@h}11 ({@damage 2d6 + 4}) 穿透伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"javelin|phb",
+				"warhammer|phb"
+			],
+			"traitTags": [
+				"Brute"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"D"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Kadroth",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "IDRotF",
+			"page": 42,
+			"_copy": {
+				"name": "Cult Fanatic",
+				"source": "MM",
+				"_trait": {
+					"name": "Tiefling",
+					"source": "PHB"
+				},
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the fanatic",
+						"with": "Kadroth",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"I",
+				"X"
+			],
+			"damageTagsSpell": [
+				"F",
+				"N",
+				"O",
+				"R"
+			],
+			"spellcastingTags": [
+				"CC",
+				"I"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Kingsport",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "IDRotF",
+			"page": 243,
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 5,
+				"formula": "1d8 + 1"
+			},
+			"speed": {
+				"walk": 20,
+				"swim": 40
+			},
+			"str": 6,
+			"dex": 12,
+			"con": 12,
+			"int": 10,
+			"wis": 10,
+			"cha": 4,
+			"senses": [
+				"blindsight 30 ft. (blind beyond this radius)"
+			],
+			"passive": 10,
+			"languages": [
+				"Common"
+			],
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Hold Breath",
+					"entries": [
+						"金斯波特可以屏住呼吸20分钟。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Beak",
+					"entries": [
+						"{@atk mw} {@hit 3} 命中，距离 1.5 米，一个目标。{@h}3 ({@damage 1d4 + 1}) 穿透伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"Hold Breath"
+			],
+			"senseTags": [
+				"B"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Knight of the Black Sword",
+			"source": "IDRotF",
+			"page": 259,
+			"_copy": {
+				"name": "Cult Fanatic",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Icy Doom",
+							"entries": [
+								"当邪教徒死亡时，其尸体会被冻结9天，在此期间，它不能被解冻，不能被火伤害，不能被激活，也不能起死回生。"
+							]
+						}
+					}
+				}
+			},
+			"languages": [
+				"Common",
+				"Infernal"
+			],
+			"languageTags": [
+				"C",
+				"I"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Knucklehead Trout",
+			"source": "IDRotF",
+			"page": 295,
+			"size": [
+				"S"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 7,
+				"formula": "2d6"
+			},
+			"speed": {
+				"walk": 0,
+				"swim": 30
+			},
+			"str": 14,
+			"dex": 14,
+			"con": 11,
+			"int": 1,
+			"wis": 6,
+			"cha": 1,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 8,
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Water Breathing",
+					"entries": [
+						"鳟鱼只能在水下呼吸。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} 命中，距离 1.5 米，一个目标。{@h}4 ({@damage 1d4 + 2}) 穿透伤害。"
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 4} 命中，距离 1.5 米，一个目标。{@h}4 ({@damage 1d4 + 2}) 暴击伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"Water Breathing"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Kobold Vampire Spawn",
+			"source": "IDRotF",
+			"page": 297,
+			"size": [
+				"S"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 39,
+				"formula": "6d6 + 18"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 20
+			},
+			"str": 10,
+			"dex": 18,
+			"con": 16,
+			"int": 8,
+			"wis": 8,
+			"cha": 8,
+			"save": {
+				"dex": "+6",
+				"wis": "+1"
+			},
+			"skill": {
+				"perception": "+1",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"如果吸血鬼的盟友中至少有一人在该生物 1.5 米范围内，而该盟友不在该生物 1.5 米范围内，则吸血鬼在对该生物的攻击翻滚中占有优势（%0%）。"
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"如果吸血鬼至少有1个命中率，并且不在阳光下或流水中，那么它在回合开始时将恢复10个命中率。如果吸血鬼受到辐射伤害或圣水伤害，这个特性在其下一回合开始时不会发挥作用。"
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"吸血鬼不需要空气。"
+					]
+				},
+				{
+					"name": "Vampire Weaknesses",
+					"entries": [
+						"这个吸血鬼有以下缺陷。",
+						"{@i 禁止。}如果没有住户之一的邀请，吸血鬼不能进入住宅。",
+						"{@i 被流水伤害}当吸血鬼在流水中开始转身时，会受到20个酸性伤害。",
+						"{@i 直刺心脏}如果用木制的穿刺武器刺入吸血鬼的心脏，而它在休息的地方{@condition incapacitated}时，吸血鬼会被摧毁。",
+						"{@i 日光过敏。}当吸血鬼在阳光下开始其回合时，会受到20个辐射伤害。当在阳光下时，它在攻击卷和能力检查上有劣势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 6} 命中，距离 1.5 米，一个生物。{@h}6 ({@damage 1d4 + 4}) 穿透伤害外加 5 ({@damage 2d4}) 坏死伤害。目标的最高命中率会降低，降低的数值等于受到的坏死伤害，吸血鬼会恢复等同于该数值的命中率。减免持续到目标完成长时间休息。如果目标的最大命中点数降至 0，则目标死亡。"
+					]
+				}
+			],
+			"traitTags": [
+				"Pack Tactics",
+				"Regeneration",
+				"Sunlight Sensitivity",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"N",
+				"P"
+			],
+			"miscTags": [
+				"HPR",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Living Bigby's Hand",
+			"source": "IDRotF",
+			"page": 298,
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "5d10 + 25"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 60,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 26,
+			"dex": 10,
+			"con": 20,
+			"int": 1,
+			"wis": 10,
+			"cha": 1,
+			"save": {
+				"dex": "+2",
+				"wis": "+2"
+			},
+			"skill": {
+				"perception": "+2",
+				"stealth": "+2"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"unconscious"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"活体法术对法术和其他魔法效果的救赎有优势。"
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"活体法术不需要空气、食物、饮料或睡眠。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Force Fist",
+					"entries": [
+						"{@atk ms} {@hit 10} 命中，距离 1.5 米，一个目标。{@h}26 ({@damage 4d8 + 8}) 力量伤害。如果目标是大型或更小型的生物，活体咒语可以将其移动到 1.5 米处并随其移动，而不会引发机会攻击。"
+					]
+				},
+				{
+					"name": "Grasping Hand",
+					"entries": [
+						"活体咒语会试图抓住 1.5 米内的巨大或更小的生物。目标必须在 {@dc 15} 灵巧蓄力中成功，否则会 {@condition grappled} （逃脱 {@dc 15}）。直到抓取结束，目标在每个回合开始时都会受到 15（{@damage 2d6 + 8}）暴击伤害。活体法术一次只能抓取一个生物，并且在抓取结束前无法使用原力之拳。"
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"B",
+				"O"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Living Blade of Disaster",
+			"source": "IDRotF",
+			"page": 299,
+			"size": [
+				"S"
+			],
+			"type": "construct",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 67,
+				"formula": "9d6 + 36"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 10,
+			"dex": 16,
+			"con": 19,
+			"int": 6,
+			"wis": 10,
+			"cha": 3,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"poison",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"blinded",
+				"deafened",
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"restrained",
+				"unconscious"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"活体法术对法术和其他魔法效果的救赎有优势。"
+					]
+				},
+				{
+					"name": "Unfettered",
+					"entries": [
+						"活生生的咒语可以穿过任何障碍物，甚至是一堵魔力之墙。"
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"活体法术不需要空气、食物、饮料或睡眠。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Force Blade",
+					"entries": [
+						"{@atk ms} {@hit 6} 命中，距离 1.5 米，一个目标。{@h}26 ({@damage 4d12}) 力量伤害，除非活人咒语在攻击的{@dice d20}上掷出了 18 或更高的点数，在这种情况下，该攻击为重击，会造成 78 ({@damage 12d12}) 力量伤害。"
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Preemptive Strike",
+					"entries": [
+						"活体咒语可对距离其 1.5 米范围内的生物发动近战攻击。"
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"O"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Living Demiplane",
+			"source": "IDRotF",
+			"page": 299,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 31,
+				"formula": "7d8"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 1,
+			"dex": 10,
+			"con": 10,
+			"int": 1,
+			"wis": 10,
+			"cha": 1,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained",
+				"stunned",
+				"unconscious"
+			],
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Dimensional Form",
+					"entries": [
+						"活体法术可以进入另一个生物的空间，反之亦然，它可以在一个狭窄到1英寸宽的空间中移动而不被挤压。活体法术不能脱离固体表面，如墙壁、天花板或地板。如果它没有表面可依附，活体法术就会被摧毁（见下面的 \"平面毁灭\"）。"
+					]
+				},
+				{
+					"name": "Extradimensional Chamber",
+					"entries": [
+						"当活体咒语在一个回合中首次进入另一个生物的空间（或反之亦然）时，另一个生物必须在一次（%0%）灵巧蓄力中成功，否则就会被拉入活体咒语的超时空空间--一个每维度 9 米的无家具石室。体型过大的生物无法适应这个空间，但会自动成功完成蓄力。石室中的生物永远不会呼吸不到空气。可以使用在不同空间之间穿梭的魔法，例如空间转移，来逃离这个没有出口的密室。被困在超时空密室中的生物无法看到、瞄准或伤害活体法术；但他们可以破坏周围的房间。密室中每块 1.5 米见方的天花板、墙壁和地板的 AC 值都是 17，命中点数为 50，免疫毒药和精神伤害，免疫非魔法的重击、穿刺和砍伤。如果任何部分的命中率降低到 0，活体咒语及其密室就会被摧毁（见下文 \"平面毁灭\"）。"
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"活体法术对法术和其他魔法效果的救赎有优势。"
+					]
+				},
+				{
+					"name": "Planar Destruction",
+					"entries": [
+						"当活体咒语或其次元室中 1.5 米见方的部分命中率降至 0，或者当活体咒语没有可附着的表面时，活体咒语就会被摧毁。当有生命的咒语被摧毁时，其次元室中的生物会被驱逐出去，尽可能地出现在有生命的咒语之前所在的位置。每个被驱逐的生物都会出现在一个随机确定的未被占用的空间中，同时出现的还有它身上穿戴或携带的任何物品。"
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"活体法术不需要空气、食物、饮料或睡眠。"
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"D"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lonelywood Banshee",
+			"source": "IDRotF",
+			"page": 81,
+			"_copy": {
+				"name": "Banshee",
+				"source": "MM",
+				"_mod": {
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Corrupting Touch",
+						"items": {
+							"name": "Spectral Longbow",
+							"entries": [
+								"{@atk rs} {@hit 4} 命中，范围 150/18 米，一个目标。{@h}12 ({@damage 3d6 + 2}) 坏死伤害。"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Mjenir",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "IDRotF",
+			"page": 215,
+			"_copy": {
+				"name": "Druid",
+				"source": "MM",
+				"_mod": {
+					"*": [
+						{
+							"mode": "replaceTxt",
+							"replace": "the druid",
+							"with": "Mjenir",
+							"flags": "i"
+						}
+					],
+					"_": [
+						{
+							"mode": "addSkills",
+							"skills": {
+								"survival": 1
+							}
+						}
+					]
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Mountain Goat",
+			"source": "IDRotF",
+			"page": 304,
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 13,
+				"formula": "2d8 + 4"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 30
+			},
+			"str": 14,
+			"dex": 12,
+			"con": 14,
+			"int": 2,
+			"wis": 10,
+			"cha": 5,
+			"passive": 10,
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Charge",
+					"entries": [
+						"如果山羊向目标直直移动至少 6 米，然后在同一回合用冲撞攻击命中目标，则目标会受到额外的 3（{@damage 1d6}）暴击伤害。如果目标是生物，则必须在 {@dc 12} 力量蓄力中成功，否则会被击倒 {@condition prone}。"
+					]
+				},
+				{
+					"name": "Sure-Footed",
+					"entries": [
+						"山羊在面对会击倒它的效果时，在力量和灵巧的拯救动作上有优势（%0%）。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Ram",
+					"entries": [
+						"{@atk mw} {@hit 4} 命中，距离 1.5 米，一个目标。{@h}5 ({@damage 1d6 + 2}) 暴击伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"Charge"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Nass Lantomir's Ghost",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "IDRotF",
+			"page": 272,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 45,
+				"formula": "10d8"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": 40
+			},
+			"str": 7,
+			"dex": 13,
+			"con": 10,
+			"int": 17,
+			"wis": 12,
+			"cha": 17,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"acid",
+				"fire",
+				"lightning",
+				"thunder",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"cold",
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Draconic",
+				"Orc"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"幽灵是一个6级的施法者。它的法术能力是智力（法术保存（%0%））。幽灵准备了以下巫师法术。"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell mage hand}",
+								"{@spell message}",
+								"{@spell prestidigitation}",
+								"{@spell ray of frost}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell detect magic}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": []
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell counterspell}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Ethereal Sight",
+					"entries": [
+						"幽灵在物质界时可以看到 18 米外的虚无界，反之亦然。"
+					]
+				},
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"幽灵可以在其他生物和物体中移动，就像它们是{@quickref difficult terrain||3}一样。如果它在一个物体内结束它的回合，它会受到5（（%1%））的力量伤害。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Withering Touch",
+					"entries": [
+						"{@atk mw} {@hit 6} 命中，距离 1.5 米，一个目标。{@h}17 ({@damage 4d6 + 3}) 坏死伤害。"
+					]
+				},
+				{
+					"name": "Etherealness",
+					"entries": [
+						"鬼魂从物质位面进入虚空位面，或反之亦然。当它在边界空灵界时，它在物质界是可见的，反之亦然，但它不能影响或被另一界的任何东西所影响。"
+					]
+				},
+				{
+					"name": "Horrifying Visage",
+					"entries": [
+						"鬼魂周围 18 米内能看到它的每个非亡灵生物都必须在 {@dc 14} 智慧救赎中成功，否则会 {@condition frightened} 1 分钟。如果失败 5 次或更多，目标也会衰老 {@dice 1d4 × 10} 年。{@condition frightened} 目标可以在每个回合结束时重复施法，一旦成功就会终止对自身的 {@condition frightened} 条件。如果目标的蓄力成功或效果结束，则目标在接下来的 24 小时内免疫此幽灵的恐怖面容。衰老效果可以通过 {@spell greater restoration} 法术逆转，但必须在 24 小时内施放。"
+					]
+				},
+				{
+					"name": "Possession {@recharge}",
+					"entries": [
+						"鬼魂在其 1.5 米范围内看到的一个人形生物必须在{@dc 14}魅力蓄力中成功，否则就会被鬼魂附身；然后鬼魂会消失，目标会{@condition incapacitated}并失去对身体的控制。鬼魂现在控制身体，但不会剥夺目标的意识。鬼魂无法成为任何攻击、咒语或其他效果的目标，除了那些能让人变成亡灵的效果，它还保留了自己的排列、智力、智慧、魅力，以及对（%2%）和（%3%）的免疫力。此外，它还会使用被附身目标的统计数据，但不会获得目标的知识、类别特征或精通。附身会持续到身体的命中点数降为 0，鬼魂以额外行动结束附身，或者鬼魂被（%4%）咒语之类的效果转化或强制驱离。附身结束后，幽灵会重新出现在尸体周围 1.5 米内的空地上。目标在蓄力一击成功后或附身结束后的 24 小时内对该幽灵的附身免疫。"
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"DR",
+				"O"
+			],
+			"damageTags": [
+				"N",
+				"O"
+			],
+			"damageTagsSpell": [
+				"C",
+				"T"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened",
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Prisoner 237",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "IDRotF",
+			"page": 160,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 32,
+				"formula": "5d8 + 10"
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "(10 ft. while shackled)"
+				}
+			},
+			"str": 9,
+			"dex": 13,
+			"con": 14,
+			"int": 17,
+			"wis": 10,
+			"cha": 15,
+			"skill": {
+				"arcana": "+5",
+				"deception": "+4",
+				"persuasion": "+4"
+			},
+			"passive": 10,
+			"languages": [
+				"Common",
+				"Draconic",
+				"Infernal",
+				"Orc"
+			],
+			"cr": "1",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"囚犯237是一个5级的施法者。他的法术能力是智力（法术救赎（%0%）；用法术攻击击中（%1%））。他准备了以下巫师法术。"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell light}*",
+								"{@spell message}*",
+								"{@spell prestidigitation}",
+								"{@spell shocking grasp} (see \"Actions\" below)"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell mage armor}*",
+								"{@spell shield}",
+								"{@spell sleep}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell arcane lock}*",
+								"{@spell detect thoughts}*",
+								"{@spell suggestion}*"
+							]
+						},
+						"3": {
+							"slots": 2,
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell lightning bolt}*"
+							]
+						}
+					},
+					"footerEntries": [
+						"*Prisoner 237 needs material components to cast these spells."
+					],
+					"ability": "int"
+				}
+			],
+			"action": [
+				{
+					"name": "Shocking Grasp (Cantrip)",
+					"entries": [
+						"{@atk ms} {@hit 5} 命中（如果目标身着金属盔甲，则在攻击时占优势），攻击距离 1.5 米，对一个生物造成 {@h}9 ({@damage 2d8}) 闪电伤害。{@h}9 ({@damage 2d8}) 闪电伤害，目标在下一回合开始前无法做出反应。"
+					]
+				}
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"I",
+				"O"
+			],
+			"damageTags": [
+				"L"
+			],
+			"damageTagsSpell": [
+				"L"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"conditionInflictSpell": [
+				"unconscious"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Reghed Chieftain",
+			"source": "IDRotF",
+			"page": 152,
+			"_copy": {
+				"name": "Gladiator",
+				"source": "MM",
+				"_mod": {
+					"*": [
+						{
+							"mode": "replaceTxt",
+							"replace": "gladiator",
+							"with": "chieftain"
+						}
+					],
+					"_": [
+						{
+							"mode": "addSkills",
+							"skills": {
+								"survival": 1
+							}
+						}
+					]
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Reghed Great Warrior",
+			"source": "IDRotF",
+			"page": 152,
+			"_copy": {
+				"name": "Gladiator",
+				"source": "MM",
+				"_mod": {
+					"*": [
+						{
+							"mode": "replaceTxt",
+							"replace": "gladiator",
+							"with": "great warrior"
+						}
+					],
+					"_": [
+						{
+							"mode": "addSkills",
+							"skills": {
+								"survival": 1
+							}
+						}
+					]
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Reghed Shaman",
+			"source": "IDRotF",
+			"page": 152,
+			"_copy": {
+				"name": "Druid",
+				"source": "MM",
+				"_mod": {
+					"*": [
+						{
+							"mode": "replaceTxt",
+							"replace": "druid",
+							"with": "shaman"
+						}
+					],
+					"_": [
+						{
+							"mode": "addSkills",
+							"skills": {
+								"survival": 1
+							}
+						}
+					]
+				}
+			},
+			"languages": [
+				"Common",
+				"Druidic"
+			],
+			"languageTags": [
+				"C",
+				"DU"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Reghed Warrior",
+			"source": "IDRotF",
+			"page": 152,
+			"_copy": {
+				"name": "Tribal Warrior",
+				"source": "MM",
+				"_mod": {
+					"*": [
+						{
+							"mode": "replaceTxt",
+							"replace": "tribal warrior",
+							"with": "warrior"
+						}
+					],
+					"_": [
+						{
+							"mode": "addSkills",
+							"skills": {
+								"survival": 1
+							}
+						}
+					]
+				}
+			},
+			"skill": {
+				"survival": "+4"
+			},
+			"languages": [
+				"Common"
+			],
+			"languageTags": [
+				"C"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Reindeer",
+			"source": "IDRotF",
+			"page": 107,
+			"_copy": {
+				"name": "Elk",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "elk",
+						"with": "reindeer"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Seal",
+			"source": "IDRotF",
+			"page": 308,
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 9,
+				"formula": "2d8"
+			},
+			"speed": {
+				"walk": 20,
+				"swim": 40
+			},
+			"str": 10,
+			"dex": 12,
+			"con": 11,
+			"int": 3,
+			"wis": 12,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Hold Breath",
+					"entries": [
+						"海豹可以憋气15分钟。"
+					]
+				},
+				{
+					"name": "Keen Smell",
+					"entries": [
+						"海豹在依靠嗅觉的智慧（感知）检查中具有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 2} 命中，距离 1.5 米，一个目标。{@h}1 穿透伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"Hold Breath",
+				"Keen Senses"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sephek Kaltro",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "IDRotF",
+			"page": 23,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 75,
+				"formula": "10d8 + 30"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 16,
+			"int": 11,
+			"wis": 16,
+			"cha": 18,
+			"skill": {
+				"perception": "+5",
+				"survival": "+5"
+			},
+			"passive": 15,
+			"immune": [
+				"cold"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"萨菲克每天可以先天施放（%0%）三次，不需要任何组件。他与生俱来的施法能力是Charisma。"
+					],
+					"will": [
+						"{@spell misty step}"
+					],
+					"ability": "cha",
+					"hidden": [
+						"will"
+					]
+				}
+			],
+			"trait": [
+				{
+					"name": "Cold Regeneration",
+					"entries": [
+						"如果他周围的温度是华氏0度或更低，Sephek会在他的回合开始时恢复5点生命值。如果他受到火的伤害，这个特性在Sephek的下一个回合开始时不会发挥作用。只有当Sephek在他的回合开始时命中率为0并且没有再生时才会死亡。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"塞菲克用武器攻击了两次。"
+					]
+				},
+				{
+					"name": "Ice Longsword",
+					"entries": [
+						"{@atk mw} {@hit 5} 命中，距离 1.5 米，一个目标。{@h}7 ({@damage 1d8 + 3}) 次砍击伤害，如果赛菲克双手使用武器，则为 8 ({@damage 1d10 + 3}) 次砍击伤害，外加 5 ({@damage 2d4} 次寒冷伤害。"
+					]
+				},
+				{
+					"name": "Ice Dagger",
+					"entries": [
+						"{@atk rw} {@hit 5} 命中，距离 1.5 米或射程 20/18 米，一个目标。{@h}5 ({@damage 1d4 + 3}) 穿透伤害外加 5 ({@damage 2d4}) 寒冷伤害。"
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"C",
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Snow Golem",
+			"source": "IDRotF",
+			"page": 308,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				8
+			],
+			"hp": {
+				"average": 39,
+				"formula": "6d8 + 12"
+			},
+			"speed": {
+				"walk": 10
+			},
+			"str": 15,
+			"dex": 6,
+			"con": 14,
+			"int": 1,
+			"wis": 6,
+			"cha": 1,
+			"senses": [
+				"blindsight 60 ft. (blind beyond this radius)"
+			],
+			"passive": 8,
+			"immune": [
+				"cold",
+				"poison",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"vulnerable": [
+				"fire"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Cold Absorption",
+					"entries": [
+						"每当巨魔受到寒冷伤害时，它不会受到任何伤害，反而会重新获得与所受寒冷伤害相等的命中率点数。"
+					]
+				},
+				{
+					"name": "Immutable Form",
+					"entries": [
+						"傀儡对任何会改变其形态的法术或效果都是免疫的。"
+					]
+				},
+				{
+					"name": "Melt",
+					"entries": [
+						"当在一个极热的区域时，巨魔在每个回合开始时都会失去{@dice 1d6}的命中率。"
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"傀儡不需要空气、食物、饮料或睡眠。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"巨魔会进行三次近战攻击。"
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 4} 命中，距离 1.5 米，一个目标。{@h}5 ({@damage 1d6 + 2}) 暴击伤害外加 7 ({@damage 2d6}) 冷伤害。"
+					]
+				},
+				{
+					"name": "Snowball",
+					"entries": [
+						"{@atk rw} {@hit 0} 命中，范围 18 米，一个目标。{@h}9 ({@damage 2d6 + 2}) 冷伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"Damage Absorption",
+				"Immutable Form",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"C"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Snowy Owlbear",
+			"source": "IDRotF",
+			"page": 309,
+			"_copy": {
+				"name": "Owlbear",
+				"source": "MM"
+			},
+			"speed": {
+				"walk": 40,
+				"swim": 30
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Spellix Romwod",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "IDRotF",
+			"page": 144,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"gnome"
+				]
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item hide armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 33,
+				"formula": "6d6 + 12"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 6,
+			"dex": 15,
+			"con": 14,
+			"int": 15,
+			"wis": 9,
+			"cha": 16,
+			"skill": {
+				"arcana": "+4",
+				"deception": "+5",
+				"history": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"languages": [
+				"Common",
+				"Draconic",
+				"Elvish",
+				"Gnomish",
+				"Goblin"
+			],
+			"cr": "1/2",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"斯佩利克斯的法术能力是魅力（法术救赎（%0%），用法术攻击命中率（%1%））。他可以天生施展以下法术，不需要任何物质成分。"
+					],
+					"will": [
+						"{@spell fire bolt}*",
+						"{@spell mage hand}",
+						"{@spell shocking grasp}*"
+					],
+					"daily": {
+						"3": [
+							"{@spell silent image}"
+						],
+						"1e": [
+							"{@spell chromatic orb}",
+							"{@spell crown of madness}",
+							"{@spell shield}"
+						]
+					},
+					"footerEntries": [
+						"*See \"Actions\" below."
+					],
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Gnome Cunning",
+					"entries": [
+						"Spellix在所有智力、智慧和魅力方面对魔法有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Shocking Grasp (Cantrip)",
+					"entries": [
+						"{@atk ms}{@hit 5}命中（如果目标穿着金属盔甲，则在攻击翻滚中占优势），距离 1.5 米，一个生物。{@h}4 ({@damage 1d8}) 闪电伤害，目标在下一回合开始前无法做出反应。"
+					]
+				},
+				{
+					"name": "Fire Bolt (Cantrip)",
+					"entries": [
+						"{@atk rs} {@hit 5} 命中，射程 36 米，一个目标。{@h}5 ({@damage 1d10}) 火伤害。被该法术击中的易燃物如果没有穿戴或携带，就会被点燃。"
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"E",
+				"G",
+				"GO"
+			],
+			"damageTags": [
+				"F",
+				"L"
+			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"F",
+				"I",
+				"L",
+				"T"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"conditionInflictSpell": [
+				"charmed"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sperm Whale",
+			"source": "IDRotF",
+			"page": 309,
+			"size": [
+				"G"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 189,
+				"formula": "14d20 + 42"
+			},
+			"speed": {
+				"walk": 0,
+				"swim": 60
+			},
+			"str": 26,
+			"dex": 8,
+			"con": 17,
+			"int": 3,
+			"wis": 12,
+			"cha": 5,
+			"senses": [
+				"blindsight 120 ft."
+			],
+			"passive": 11,
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Echolocation",
+					"entries": [
+						"鲸鱼在{@condition deafened}时不能使用它的盲目性。"
+					]
+				},
+				{
+					"name": "Hold Breath",
+					"entries": [
+						"鲸鱼可以屏住呼吸90分钟。"
+					]
+				},
+				{
+					"name": "Keen Hearing",
+					"entries": [
+						"鲸鱼在依靠听觉的智慧（感知）检查方面具有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"鲸鱼进行两次攻击：一次是用它的咬，一次是用它的尾巴。"
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 11} 命中，距离 1.5 米，一个目标。{@h}21 ({@damage 3d8 + 8}) 穿刺伤害。如果目标是大型或更小的生物，则必须在 {@dc 14} 灵巧蓄力中成功，否则会被鲸鱼吞下。被吞下的生物可以完全抵御鲸鱼以外的攻击和其他效果，并且在鲸鱼的每个回合开始时都会受到 3 ({@damage 1d6}) 酸的伤害。如果鲸鱼在单个回合中受到来自其体内生物的 30 或更多伤害，鲸鱼必须在该回合结束时成功进行 {@dc 16} 体质自救，否则会反刍所有被吞下的生物，这些生物会 {@condition prone} 掉落在距离鲸鱼 3 米范围内的空间中。如果鲸鱼死亡，被吞食的生物可以通过 6 米的移动距离逃离尸体，并离开 {@condition prone}。"
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 11} 命中，距离 4.5 米，一个目标。{@h}18 ({@damage 3d6 + 8}) 暴击伤害，如果目标是物体，则为 37 ({@damage 6d6 + 16}) 暴击伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"Hold Breath",
+				"Keen Senses"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Swallow"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Spitting Mimic",
+			"source": "IDRotF",
+			"page": 302,
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "monstrosity",
+				"tags": [
+					"shapechanger"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 85,
+				"formula": "10d10 + 30"
+			},
+			"speed": {
+				"walk": 20
+			},
+			"str": 21,
+			"dex": 12,
+			"con": 17,
+			"int": 9,
+			"wis": 15,
+			"cha": 10,
+			"skill": {
+				"stealth": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"immune": [
+				"acid"
+			],
+			"conditionImmune": [
+				"prone"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Shapechanger",
+					"entries": [
+						"模仿者可以用它的行动来多态化为一个物体或回到它真正的、无定形的形态。它的统计数据在每种形态下都是一样的。它所穿戴或携带的任何装备都不会被转化。如果它死了，它将恢复到它的真实形态。"
+					]
+				},
+				{
+					"name": "Adhesive (Object Form Only)",
+					"entries": [
+						"拟态会附着在任何接触它的东西上。粘附在模仿者身上的巨大或较小的生物也会被它{@condition grappled}（逃脱{@dc 16}）。为逃脱这个抓捕而进行的能力检查是不利的。"
+					]
+				},
+				{
+					"name": "False Appearance (Object Form Only)",
+					"entries": [
+						"当模仿者保持不动，它与普通物体没有区别。"
+					]
+				},
+				{
+					"name": "Grappler",
+					"entries": [
+						"模仿者对它身边的任何生物在攻击卷轴上都有优势（%0%）。"
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"模仿者在面对法术和其他魔法效果时，在蓄力攻击方面具有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"拟态的攻击有三次：两次用其假肢，一次用其咬。"
+					]
+				},
+				{
+					"name": "Pseudopods",
+					"entries": [
+						"{@atk mw} {@hit 8} 命中，距离 3 米，一个目标。{@h}10 ({@damage 1d10 + 5}) 暴击伤害。如果拟态体是物体形态，目标会受到其粘附特性的影响。"
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 8} 命中，距离 1.5 米，一个生物。{@h}10 ({@damage 1d10 + 5}) 穿透伤害外加 7 ({@damage 2d6}) 酸性伤害。"
+					]
+				},
+				{
+					"name": "Spit Acid {@recharge 5}",
+					"entries": [
+						"拟态人会向 9 米范围内它能看到的一个生物喷吐酸液。目标必须进行 {@dc 14} 灵巧蓄力，蓄力失败会受到 32 ({@damage 9d6 + 1}) 酸的伤害，蓄力成功则会受到一半的伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance",
+				"Magic Resistance",
+				"Shapechanger"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Telepathic Pentacle",
+			"source": "IDRotF",
+			"page": 244,
+			"_copy": {
+				"name": "Hydra",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "hydra",
+						"with": "Telepathic Pentacle"
+					}
+				}
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30,
+				"climb": 30
+			},
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Tomb Tapper",
+			"source": "IDRotF",
+			"page": 310,
+			"size": [
+				"H"
+			],
+			"type": "construct",
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 207,
+				"formula": "18d12 + 90"
+			},
+			"speed": {
+				"walk": 30,
+				"burrow": 10
+			},
+			"str": 22,
+			"dex": 10,
+			"con": 21,
+			"int": 14,
+			"wis": 14,
+			"cha": 11,
+			"skill": {
+				"perception": "+6"
+			},
+			"senses": [
+				"blindsight 240 ft. (blind beyond this radius)"
+			],
+			"passive": 16,
+			"resist": [
+				"lightning"
+			],
+			"immune": [
+				"cold",
+				"fire"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"understands Common and Undercommon but doesn't speak",
+				"telepathy 60 ft."
+			],
+			"cr": "10",
+			"trait": [
+				{
+					"name": "Petrified Death",
+					"entries": [
+						"盗墓者的命中率降至0，会变成一尊没有生命的石像。它所穿戴或携带的任何东西都不会被转化。"
+					]
+				},
+				{
+					"name": "Sense Magic",
+					"entries": [
+						"盗墓者可以感知 9 米范围内的魔法，并可以使用一个动作来确定该范围内任何带有魔法的生物、物体或区域的位置。这种感应可以穿透障碍物，但会被一层薄薄的铅片阻挡。"
+					]
+				},
+				{
+					"name": "Tunneler",
+					"entries": [
+						"盗墓者能以其一半的掘进速度钻过坚硬的岩石，并留下一条 3 米宽、6 米高的隧道。"
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"盗墓者不需要空气或睡眠。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"盗墓者可以使用大锤或爪子进行两次近战攻击。如果它的两只爪子都击中了同一个生物，它可以将该生物拉到距它嘴 1.5 米的范围内，并对其发动咬合攻击。"
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 10} 命中，距离 1.5 米，一个目标。{@h}22 ({@damage 3d10 + 6}) 砍伤。"
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 10} 命中，距离 3 米，一个目标。{@h}16 ({@damage 3d6 + 6}) 砍伤。"
+					]
+				},
+				{
+					"name": "Sledgehammer",
+					"entries": [
+						"{@atk mw,rw} {@hit 10} 命中，距离 4.5 米或射程 30/36 米，一个目标。{@h}27 ({@damage 6d6 + 6}) 暴击或力量伤害（攻墓者可选）。如果掷出锤子，锤子会在其回合结束时返回攻墓者，如果攻墓者没有空手接住武器，锤子会落在攻墓者脚下。"
+					]
+				}
+			],
+			"traitTags": [
+				"Tunneler",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"TP",
+				"U"
+			],
+			"damageTags": [
+				"B",
+				"O",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Tribal Warrior Spore Servant",
+			"source": "IDRotF",
+			"page": 52,
+			"_copy": {
+				"name": "Tribal Warrior",
+				"source": "MM",
+				"_mod": {
+					"*": [
+						{
+							"mode": "replaceTxt",
+							"replace": "tribal warrior",
+							"with": "spore servant",
+							"flags": "i"
+						}
+					]
+				}
+			},
+			"type": "plant",
+			"alignment": [
+				"U"
+			],
+			"speed": {
+				"walk": 20
+			},
+			"str": 13,
+			"dex": 11,
+			"con": 12,
+			"int": 2,
+			"wis": 6,
+			"cha": 1,
+			"senses": [
+				"blindsight 30 ft. (blind beyond this radius)"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"frightened",
+				"paralyzed"
+			],
+			"languages": null,
+			"trait": null,
+			"traitTags": [],
+			"senseTags": [
+				"B"
+			],
+			"languageTags": [],
+			"hasToken": true
+		},
+		{
+			"name": "Vellynne Harpell",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "IDRotF",
+			"page": 273,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item bracers of defense}"
+					]
+				}
+			],
+			"hp": {
+				"average": 67,
+				"formula": "9d8 + 27"
+			},
+			"speed": {
+				"walk": 20
+			},
+			"str": 10,
+			"dex": 12,
+			"con": 17,
+			"int": 18,
+			"wis": 15,
+			"cha": 13,
+			"save": {
+				"int": "+6",
+				"wis": "+4"
+			},
+			"skill": {
+				"arcana": "+6",
+				"history": "+6"
+			},
+			"passive": 12,
+			"languages": [
+				"Common",
+				"Draconic",
+				"Dwarvish",
+				"Elvish",
+				"Orc"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"薇琳是一个8级的施法者。她的法术能力是智力（法术保存（%0%），用法术攻击命中率（%1%））。她准备了以下巫师法术。"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch} (see \"Actions\" below)",
+								"{@spell light}",
+								"{@spell mage hand}",
+								"{@spell message}",
+								"{@spell prestidigitation}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell comprehend languages}",
+								"{@spell detect magic}",
+								"{@spell ray of sickness}",
+								"{@spell Tasha's hideous laughter}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell darkvision}",
+								"{@spell hold person}",
+								"{@spell ray of enfeeblement}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell animate dead}",
+								"{@spell Leomund's tiny hut}",
+								"{@spell vampiric touch} (see \"Actions\" below)"
+							]
+						},
+						"4": {
+							"slots": 2,
+							"spells": [
+								"{@spell arcane eye}",
+								"{@spell blight}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"薇琳戴着防御手镯，并携带一根魔法飞弹的魔杖（见下文 \"行动\"）。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Vampiric Touch (3rd-Level Spell; Requires a Spell Slot)",
+					"entries": [
+						"{@atk ms} {@hit 6} 命中，距离 1.5 米，一个生物。{@h}10（{@damage 3d6}）次坏死伤害，薇琳恢复的命中点数等于所造成的坏死伤害的一半。如果薇琳使用 4 级或更高的法术插槽施放此法术，则每超过 3 级插槽，尸毒伤害就会增加 {@dice 1d6}。"
+					]
+				},
+				{
+					"name": "Chill Touch (Cantrip)",
+					"entries": [
+						"{@atk rs} {@hit 6} 命中，范围 36 米，一个生物。{@h}9 ({@damage 2d8}) 坏死伤害，目标在维纶的下一回合开始前无法恢复命中点数。"
+					]
+				},
+				{
+					"name": "Wand of Magic Missiles",
+					"entries": [
+						"在持有这根魔杖时，薇琳可以消耗它的7个电荷中的1个或多个来施放其中的（%0%）法术。她可以消耗1个电荷来施放1级版本的法术。她每消耗一个额外的电荷，就可以增加一个法术槽的等级。魔杖每天在黎明时分重新获得（%1%）已消耗的电荷。如果魔杖的最后一次充电已经用完，请掷出{@spell magic missile}；如果掷出1，魔杖就会碎成灰烬并被摧毁。"
+					]
+				}
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"DR",
+				"E",
+				"O"
+			],
+			"damageTags": [
+				"N"
+			],
+			"damageTagsSpell": [
+				"I",
+				"N"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"conditionInflictSpell": [
+				"incapacitated",
+				"paralyzed",
+				"poisoned",
+				"prone"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Verbeeg Longstrider",
+			"source": "IDRotF",
+			"page": 311,
+			"size": [
+				"L"
+			],
+			"type": "giant",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item hide armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 119,
+				"formula": "14d10 + 42"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 19,
+			"dex": 15,
+			"con": 16,
+			"int": 13,
+			"wis": 14,
+			"cha": 10,
+			"save": {
+				"dex": "+5",
+				"con": "+6",
+				"wis": "+5"
+			},
+			"skill": {
+				"animal handling": "+5",
+				"athletics": "+7",
+				"stealth": "+5"
+			},
+			"passive": 12,
+			"languages": [
+				"Common",
+				"Giant"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"verbeeg的先天法术能力是智慧。它可以天生施展以下法术，不需要任何组件。"
+					],
+					"daily": {
+						"1e": [
+							"{@spell animal messenger}",
+							"{@spell fog cloud}",
+							"{@spell freedom of movement}",
+							"{@spell pass without trace}",
+							"{@spell silence}",
+							"{@spell water walk}"
+						]
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Simple Weapon Wielder",
+					"entries": [
+						"当Verbeeg用它击中时，简单的武器会造成一个额外的伤害（包括在攻击中）。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"椎名犬进行两次近战攻击。"
+					]
+				},
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 7} 命中，距离 1.5 米或射程 20/18 米，一个目标。{@h}14 ({@damage 3d6 + 4})次穿刺伤害，或 17 ({@damage 3d8 + 4})次穿刺伤害（如果用于远程攻击或双手用于近战攻击）。"
+					]
+				},
+				{
+					"name": "Sling",
+					"entries": [
+						"{@atk rw} {@hit 5} 命中，射程 30/36 米，一个目标。{@h}9 ({@damage 3d4 + 2}) 暴击伤害。如果目标是生物，则必须在{@dc 15}体质蓄力中成功，否则会{@condition stunned}直到下一回合结束。"
+					]
+				}
+			],
+			"attachedItems": [
+				"sling|phb",
+				"spear|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GI"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"conditionInflictSpell": [
+				"deafened"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Verbeeg Marauder",
+			"source": "IDRotF",
+			"page": 311,
+			"size": [
+				"L"
+			],
+			"type": "giant",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item hide armor|PHB}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 85,
+				"formula": "10d10 + 30"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 19,
+			"dex": 11,
+			"con": 16,
+			"int": 11,
+			"wis": 10,
+			"cha": 9,
+			"save": {
+				"dex": "+2",
+				"con": "+5"
+			},
+			"skill": {
+				"animal handling": "+2",
+				"athletics": "+6",
+				"stealth": "+2"
+			},
+			"passive": 10,
+			"languages": [
+				"Common",
+				"Giant"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Simple Weapon Wielder",
+					"entries": [
+						"当Verbeeg用它击中时，简单的武器会造成一个额外的伤害（包括在攻击中）。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"椎名犬进行两次近战攻击。"
+					]
+				},
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 6} 命中，距离 1.5 米或射程 20/18 米，一个目标。{@h}14 ({@damage 3d6 + 4})次穿刺伤害，或 17 ({@damage 3d8 + 4})次穿刺伤害（如果用于远程攻击或双手用于近战攻击）。"
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GI"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Walrus",
+			"source": "IDRotF",
+			"page": 312,
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				9
+			],
+			"hp": {
+				"average": 22,
+				"formula": "3d10 + 6"
+			},
+			"speed": {
+				"walk": 20,
+				"swim": 40
+			},
+			"str": 15,
+			"dex": 9,
+			"con": 14,
+			"int": 3,
+			"wis": 11,
+			"cha": 4,
+			"passive": 10,
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Hold Breath",
+					"entries": [
+						"海象可以屏住呼吸10分钟。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Tusks",
+					"entries": [
+						"{@atk mw} {@hit 4} 命中，距离 1.5 米，一个目标。{@h}7 ({@damage 2d4 + 2}) 穿透伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"Hold Breath"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Xardorok Sunblight",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "IDRotF",
+			"page": 287,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"dwarf"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item chain mail|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 93,
+				"formula": "11d8 + 44"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 16,
+			"dex": 11,
+			"con": 18,
+			"int": 12,
+			"wis": 13,
+			"cha": 18,
+			"save": {
+				"wis": "+4",
+				"cha": "+7"
+			},
+			"skill": {
+				"arcana": "+4",
+				"deception": "+7",
+				"intimidation": "+7"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"poison"
+			],
+			"languages": [
+				"Common",
+				"Dwarvish"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"Xardorok与生俱来的法术能力是魅力（法术救赎（%0%），用法术攻击命中率为（%1%））。他可以天生施展以下法术，不需要任何物质成分。"
+					],
+					"will": [
+						"{@spell eldritch blast} (see \"Actions\" below)",
+						"{@spell mage hand}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell hold person}",
+							"{@spell suggestion}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Duergar Resilience",
+					"entries": [
+						"Xardorok在对毒药、法术和幻觉的救赎上有优势，同时也能抵御{@condition charmed}或{@condition paralyzed}。"
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"在阳光下时，Xardorok在攻击卷上有劣势，在依靠视觉的智慧（感知）检查上也是如此。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Xardorok用武器攻击两次或施放{@spell eldritch blast}两次。"
+					]
+				},
+				{
+					"name": "Spiked Gauntlet",
+					"entries": [
+						"{@atk mw} {@hit 6} 命中，距离 1.5 米，一个目标。{@h}5 ({@damage 1d4 + 3}) 次穿刺伤害，或在 Xardorok 放大时造成 8 ({@damage 2d4 + 3}) 次穿刺伤害。"
+					]
+				},
+				{
+					"name": "Eldritch Blast (Cantrip)",
+					"entries": [
+						"{@atk rs} {@hit 7} 命中，范围 36 米，一个生物。{@h}9 ({@damage 1d10 + 4}) 力量伤害。"
+					]
+				},
+				{
+					"name": "Enlarge (Recharges after a Short or Long Rest)",
+					"entries": [
+						"在1分钟内，Xardorok会神奇地变大，连同他所穿戴或携带的东西。在变大的时候，Xardorok是大型的，在基于力量的武器攻击中，他的伤害骰子是双倍的（包括在他的攻击中），并且在进行力量检查和力量投掷时具有优势。如果Xardorok没有足够的空间变成大号，他就会在现有的空间内达到最大的尺寸。"
+					]
+				},
+				{
+					"name": "Invisibility {@recharge 4}",
+					"entries": [
+						"Xardorok会神奇地变成{@condition invisible}，直到他攻击，他施法，他使用他的扩大，或者他的{@status concentration}被打破（就像{@status concentration||concentrating}在施法）。Xardorok所穿戴或携带的任何装备都会与他一起（%3%）。"
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Hellish Rebuke (2/Day)",
+					"entries": [
+						"当萨多罗克被距离他 18 米以内他能看到的生物伤害时，伤害他的生物会被地狱火焰吞噬，并且必须进行 {@dc 15} 灵巧蓄力，蓄力失败会受到 16（{@damage 3d10}）点火焰伤害，蓄力成功则会受到一半的伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"D"
+			],
+			"damageTags": [
+				"F",
+				"O",
+				"P"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"invisible"
+			],
+			"conditionInflictSpell": [
+				"paralyzed"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Yeti Tyke",
+			"source": "IDRotF",
+			"page": 313,
+			"size": [
+				"S"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 9,
+				"formula": "2d6 + 2"
+			},
+			"speed": {
+				"walk": 20,
+				"climb": 20
+			},
+			"str": 10,
+			"dex": 11,
+			"con": 12,
+			"int": 6,
+			"wis": 8,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"immune": [
+				"cold"
+			],
+			"languages": [
+				"understands Yeti but can't speak"
+			],
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Keen Smell",
+					"entries": [
+						"雪人在依靠嗅觉的智慧（感知）检查中具有优势。"
+					]
+				},
+				{
+					"name": "Snow Camouflage",
+					"entries": [
+						"雪人在雪地上躲藏时，对灵巧（隐身）的检查有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 2} 命中，距离 1.5 米，一个目标。{@h}2 ({@damage 1d4}) 砍伤伤害外加 2 ({@damage 1d4}) 冷伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"Keen Senses"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"CS",
+				"OTH"
+			],
+			"damageTags": [
+				"C",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Young Griffon (Medium)",
+			"source": "IDRotF",
+			"page": 163,
+			"_copy": {
+				"name": "Griffon",
+				"source": "MM",
+				"_mod": {
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Beak",
+							"items": {
+								"name": "Beak",
+								"entries": [
+									"{@atk mw} {@hit 3} 命中，距离 1.5 米，一个目标。{@h}4 ({@damage 1d6 + 1}) 穿透伤害。"
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Claws",
+							"items": {
+								"name": "Claws",
+								"entries": [
+									"{@atk mw} {@hit 3} 命中，距离 1.5 米，一个目标。{@h}6 ({@damage 2d4 + 1}) 砍伤。"
+								]
+							}
+						}
+					]
+				}
+			},
+			"size": [
+				"M"
+			],
+			"hp": {
+				"average": 32,
+				"formula": "5d6 + 15"
+			},
+			"str": 12,
+			"dex": 15,
+			"con": 16,
+			"cr": "1",
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Young Griffon (Small)",
+			"source": "IDRotF",
+			"page": 163,
+			"_copy": {
+				"name": "Griffon",
+				"source": "MM",
+				"_mod": {
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Beak",
+							"items": {
+								"name": "Beak",
+								"entries": [
+									"{@atk mw} {@hit 1} 命中，距离 1.5 米，一个目标。{@h}2 ({@damage 1d4}) 穿透伤害。"
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Claws",
+							"items": {
+								"name": "Claws",
+								"entries": [
+									"{@atk mw} {@hit 1} 命中，距离 1.5 米，一个目标。{@h}2 ({@damage 1d4}) 砍伤。"
+								]
+							}
+						}
+					]
+				}
+			},
+			"size": [
+				"S"
+			],
+			"hp": {
+				"average": 13,
+				"formula": "2d6 + 6"
+			},
+			"str": 8,
+			"cr": "1/4",
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Young Griffon (Tiny)",
+			"source": "IDRotF",
+			"page": 163,
+			"_copy": {
+				"name": "Griffon",
+				"source": "MM",
+				"_mod": {
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Beak",
+							"items": {
+								"name": "Beak",
+								"entries": [
+									"{@atk mw} {@hit 0} 命中，距离 1.5 米，一个目标。{@h}1 穿透伤害。"
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Claws",
+							"items": {
+								"name": "Claws",
+								"entries": [
+									"{@atk mw} {@hit 0} 命中，距离 1.5 米，一个目标。{@h}1 砍伤。"
+								]
+							}
+						}
+					]
+				}
+			},
+			"size": [
+				"T"
+			],
+			"hp": {
+				"average": 5,
+				"formula": "1d4 + 3"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 40
+			},
+			"str": 2,
+			"dex": 15,
+			"con": 16,
+			"cr": "0",
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

@@ -1,0 +1,160 @@
+{
+	"spell": [
+		{
+			"name": "Antagonize",
+			"source": "BMT",
+			"page": 50,
+			"level": 3,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "karta do gry przedstawiająca łotrzyka"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Szepczesz magiczne słowa, które antagonizują jedną wybraną przez ciebie istotę w zasięgu. Cel musi wykonać rzut obronny Mądrości. W przypadku nieudanego rzutu obronnego, cel otrzymuje {@damage 4d4} obrażeń psychicznych i musi natychmiast użyć swojej reakcji, aby wykonać atak w zwarciu przeciwko innej wybranej istocie, którą widzisz. Jeśli cel nie może wykonać tego ataku (na przykład dlatego, że nie ma nikogo w jego zasięgu lub ponieważ jego reakcja jest niedostępna), zamiast tego cel ma niekorzystny wpływ na następny rzut ataku, który wykona przed rozpoczęciem następnej tury. Po udanym rzucie obronnym cel otrzymuje tylko połowę obrażeń."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Kiedy rzucasz to zaklęcie przy użyciu slotu zaklęć 4. poziomu lub wyższego, obrażenia wzrastają o {@dice 1d4} za każdy slot na poziomie wyższym niż 3."
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Spirit of Death",
+			"source": "BMT",
+			"page": 50,
+			"level": 4,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "pozłacana karta do gry warta co najmniej 400 gp i przedstawiająca awatara śmierci",
+					"cost": 40000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Przywołujesz ducha, który uosabia śmierć. Duch manifestuje się w niezajętej przestrzeni w zasięgu twojego wzroku i używa {@creature reaper spirit|BMT} bloku statystyk. Duch znika, gdy jego liczba punktów życia spadnie do 0 lub gdy zaklęcie dobiegnie końca.",
+				"Duch jest sojusznikiem gracza i jego towarzyszy. W walce duch dzieli z tobą liczbę inicjatyw i wykonuje swoją turę zaraz po tobie. Jest posłuszny twoim ustnym poleceniom (nie wymaga od ciebie żadnych działań). Jeśli nie wydasz duchowi żadnych poleceń, wykona on akcję {@action Dodge} i użyje swojego ruchu, aby uniknąć niebezpieczeństwa."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Kiedy rzucasz to zaklęcie, używając slotu zaklęć 5. poziomu lub wyższego, użyj wyższego poziomu wszędzie tam, gdzie poziom zaklęcia pojawia się w bloku statystyk ducha żniwiarza."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Spray of Cards",
+			"source": "BMT",
+			"page": 50,
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 15
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "talia kart"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Rozpylasz 4,5-metrowy stożek widmowych kart. Każda istota w tym obszarze musi wykonać rzut obronny na Zręczność. Jeśli rzut się nie powiedzie, istota otrzymuje {@damage 2d10} obrażeń od siły i ma {@condition blinded} kondycji do końca swojej następnej tury. W przypadku udanego rzutu obronnego, istota otrzymuje tylko połowę obrażeń."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Kiedy rzucasz to zaklęcie, używając slotu zaklęć 3. poziomu lub wyższego, obrażenia wzrastają o {@dice 1d10} za każdy poziom slotu powyżej 2. poziomu."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrow": [
+				"dexterity"
+			]
+		}
+	]
+}

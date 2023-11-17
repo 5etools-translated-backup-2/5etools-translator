@@ -1,0 +1,96 @@
+{
+	"spell": [
+		{
+			"name": "Create Magen",
+			"source": "IDRotF",
+			"page": 318,
+			"level": 7,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "en injektionsflaska med kvicksilver värd 500 gp och en mänsklig docka i naturlig storlek, som båda förbrukas av besvärjelsen, samt en invecklad kristallstav värd minst 1 500 gp som inte förbrukas",
+					"cost": 50000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"När du uttalar besvärjelsen placerar du en injektionsflaska med kvicksilver i bröstet på en mänsklig docka i naturlig storlek som är fylld med aska eller damm. Du syr sedan ihop dockan och droppar ditt blod på den. I slutet av besvärjelsen slår du på dockan med en kristallstav och förvandlar den till en {@filter magen|bestiary|search=magen|source=IDRotF} klädd i det som dockan hade på sig. Typen av magen väljs av dig under besvärjelsen. Se {@adventure appendix C|IDRotF|21} för olika typer av magen och deras statistik.",
+				"När magen dyker upp minskar dina maximala träffpoäng med ett belopp som är lika med magens utmaningspoäng (minsta minskning är 1). Endast en {@spell wish} besvärjelse kan upphäva denna minskning av dina maximala träffpoäng.",
+				"Alla magen som du skapar med den här besvärjelsen lyder dina kommandon utan att ifrågasätta dem."
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Frost Fingers",
+			"source": "IDRotF",
+			"page": 318,
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 15
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Isande kyla strålar från dina fingertoppar i en kon på 4,5 meter. Varje varelse i området måste göra ett konstitutionellt räddningsslag och tar {@damage 2d8} köldskada vid ett misslyckat räddningsslag eller hälften så mycket skada vid ett lyckat.",
+				"Kylan fryser icke-magiska vätskor i området som inte bärs eller bärs."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 2:a nivån eller högre, ökar skadan med {@dice 1d8} för varje besvärjelseplatsnivå över 1:a."
+					]
+				}
+			],
+			"damageInflict": [
+				"cold"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"areaTags": [
+				"N"
+			]
+		}
+	]
+}

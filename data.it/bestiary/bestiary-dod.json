@@ -1,0 +1,197 @@
+{
+	"monster": [
+		{
+			"name": "Yarnspinner",
+			"isNamedCreature": true,
+			"source": "DoD",
+			"page": 22,
+			"size": [
+				"H"
+			],
+			"type": {
+				"type": "fey",
+				"tags": [
+					"archfey"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 138,
+				"formula": "12d12 + 60"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40
+			},
+			"str": 24,
+			"dex": 16,
+			"con": 21,
+			"int": 18,
+			"wis": 21,
+			"cha": 19,
+			"save": {
+				"con": "+9",
+				"wis": "+9",
+				"cha": "+8"
+			},
+			"skill": {
+				"perception": "+13",
+				"stealth": "+7"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 23,
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"Druidic",
+				"Sylvan"
+			],
+			"cr": "10",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Yarnspinner lancia uno dei seguenti incantesimi, che non richiedono componenti materiali e utilizzano la Saggezza come abilità di incantatore (tiro salvezza {@dc 17}):"
+					],
+					"will": [
+						"{@spell faerie fire}",
+						"{@spell speak with animals}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell animal friendship}",
+							"{@spell create food and water}",
+							"{@spell revivify}"
+						],
+						"1e": [
+							"{@spell awaken} (as an action)",
+							"{@spell pass without trace}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Fey Rebirth",
+					"entries": [
+						"Se Yarnspinner muore nel suo Dominio della Delizia, rivive con tutti i suoi punti ferita {@dice 1d4} giorni dopo in un luogo sicuro di quel dominio."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se Yarnspinner fallisce un tiro salvezza, può invece scegliere di avere successo."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"Yarnspinner può arrampicarsi su superfici difficili, anche a testa in giù sui soffitti, senza bisogno di effettuare una prova di abilità."
+					]
+				},
+				{
+					"name": "Web Walker",
+					"entries": [
+						"Yarnspinner ignora le restrizioni di movimento causate dalle fettucce."
+					]
+				},
+				{
+					"name": "Web Weaver (3/Day)",
+					"entries": [
+						"Yarnspinner può impiegare 1 minuto per creare una delle seguenti strutture da una fettuccia:",
+						{
+							"type": "list",
+							"items": [
+								"Una parete opaca di fettuccia spessa 3 pollici, composta da un massimo di tre sezioni di 3 metri di lato, ognuna delle quali deve essere ancorata su almeno due lati da altre pareti o superfici. Ogni sezione ha CA 12, 20 punti ferita, vulnerabilità ai danni da fuoco e immunità ai danni da percosse, veleno e psichici.",
+								"Una capanna abbastanza piccola da entrare in un cubo di 3 metri. La capanna è dotata di una porta richiudibile e di un comodo letto fatto di fettucce, adatto a una creatura Tiny, Small o Medium.",
+								"Un messaggio composto da non più di venticinque caratteri, ancorato in vari punti in modo che rimanga sospeso nell'aria."
+							]
+						}
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Yarnspinner effettua due attacchi di Morso e usa Incantesimo o Ragnatela una volta."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 11} per colpire, portata 3 m., un bersaglio. {@h}17 ({@damage 3d6 + 7}) danni da perforazione più 11 ({@damage 2d10}) danni da veleno."
+					]
+				},
+				{
+					"name": "Web",
+					"entries": [
+						"L'infilatore di fili spara fettucce a una creatura che riesce a vedere nel raggio di 36 metri da sé. Il bersaglio deve riuscire in un tiro salvezza di Forza {@dc 17} o subire {@condition restrained} per 1 ora. Il bersaglio può ripetere il tiro salvezza alla fine di ogni suo turno, terminando l'effetto su se stesso in caso di successo."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Spider Climb",
+				"Web Walker"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DU",
+				"S"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"conditionInflictSpell": [
+				"charmed"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

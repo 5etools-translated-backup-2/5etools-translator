@@ -1,0 +1,1671 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM",
+				"CoS"
+			]
+		}
+	},
+	"monster": [
+		{
+			"name": "Avacyn",
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Solar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Solar",
+						"with": "Avacyn",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Moonsilver Spear",
+							"entries": [
+								"Un ange du Vol de l'Argent Lunaire manie une lance faite d'un éclat du Helvault. Les points de vie perdus à cause des dégâts de cette arme ne peuvent être regagnés que par un repos court ou long, et non par régénération, magie ou autre. Une fois par tour, lorsque l'ange touche une créature avec une attaque utilisant cette arme, il peut blesser la cible. Au début de chacun des tours de la créature blessée, elle subit {@damage 1d4} de dégâts nécrotiques pour chaque fois que l'ange l'a blessée, puis elle peut effectuer un jet de sauvegarde de {@dc 15} Constitution, mettant fin à l'effet de toutes ces blessures sur elle-même en cas de réussite. Alternativement, la créature blessée, ou une créature située à moins de 1,5 mètre d'elle, peut utiliser une action pour faire un test de Sagesse ({@dc 15}), mettant fin à l'effet de ces blessures sur elle en cas de succès."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Bruna",
+			"alias": [
+				"Light of Alabaster"
+			],
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Planetar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "planetar",
+						"with": "Bruna",
+						"flags": "i"
+					},
+					"_": {
+						"mode": "addSpells",
+						"will": [
+							"{@spell protection from evil and good}"
+						],
+						"daily": {
+							"1e": [
+								"{@spell dispel evil and good}"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Creepy Doll",
+			"source": "PSI",
+			"page": 25,
+			"size": [
+				"T"
+			],
+			"type": "construct",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 21,
+				"formula": "6d4 + 6"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 6,
+			"dex": 14,
+			"con": 13,
+			"int": 12,
+			"wis": 11,
+			"cha": 10,
+			"skill": {
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed"
+			],
+			"languages": [
+				"speaks and understands the languages known by its creator"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Si la poupée effrayante reste immobile, il est impossible de la distinguer d'une poupée inanimée ordinaire."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"La poupée effrayante fait une attaque avec ses ciseaux et utilise l'attaque psychique."
+					]
+				},
+				{
+					"name": "Scissors",
+					"entries": [
+						"{@atk mw} {@hit 4} pour toucher, portée de 1,5 m, une cible. {@h}7 ({@damage 2d4 + 2}) dégâts tranchants."
+					]
+				},
+				{
+					"name": "Psychic Assault",
+					"entries": [
+						"La poupée effrayante cible une créature dotée d'un cerveau qu'elle peut voir dans un rayon de 3 mètres. La cible doit réussir un jet de sauvegarde d'Intelligence de {@dc 12} ou subir 11 ({@damage 2d10}) dégâts psychiques. En cas d'échec, lancez {@dice 3d6}. Si le total est égal ou supérieur au score d'Intelligence de la cible, ce score est réduit à 0. La cible subit {@condition stunned} jusqu'à ce qu'elle regagne au moins un point d'Intelligence, comme par le sort {@spell greater restoration} ou une magie similaire."
+					]
+				},
+				{
+					"name": "Body Exchange",
+					"entries": [
+						"La poupée effrayante lance un concours d'intelligence avec un humanoïde {@condition incapacitated} situé à moins de 1,5 mètre d'elle. Si elle gagne le concours, l'esprit de la poupée effrayante habite le corps de la cible tandis que l'esprit de la cible est placé dans le corps de la poupée effrayante. La poupée effrayante contrôle entièrement le corps de la cible. Elle conserve son alignement, son Intelligence, sa Sagesse, son Charisme et son immunité à l'être {@condition charmed} et {@condition frightened}. Elle utilise les statistiques de la cible possédée, mais n'a pas accès à ses connaissances, caractéristiques de classe ou compétences. La cible conserve son alignement, son Intelligence, sa Sagesse et son Charisme lorsqu'elle habite le corps de la poupée effrayante.",
+						"L'échange de corps dure jusqu'à ce que l'esprit de la poupée soit expulsé par la magie. (Le sort {@spell dispel evil and good} y parviendra, bien que la poupée ne fasse pas partie des créatures dont ce sort met normalement fin à la possession). Le corps et la poupée doivent se trouver à moins de 1,5 mètre l'un de l'autre pour que cet effet fonctionne. La cible est immunisée contre l'échange de corps de cette poupée pendant 24 heures après avoir gagné le concours d'intelligence ou après la fin de l'échange."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"S",
+				"Y"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"savingThrowForced": [
+				"intelligence"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Demonlord of Ashmouth",
+			"source": "PSI",
+			"page": 37,
+			"_copy": {
+				"name": "Horned Devil",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "devil",
+						"with": "demon"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"Le démon effectue trois attaques de mêlée : deux avec sa hache de guerre et une avec sa queue. Il peut utiliser Hurlement de flammes à la place de n'importe quelle attaque de mêlée."
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Fork",
+							"items": {
+								"name": "Battleaxe",
+								"entries": [
+									"{@atk mw} {@hit 10} pour toucher, atteindre 3 m., une cible. {@h}15 ({@damage 2d8 + 6}) dégâts tranchants, ou 17 ({@damage 2d10 + 6}) dégâts tranchants si utilisé à deux mains."
+								]
+							}
+						}
+					]
+				}
+			},
+			"damageTags": [
+				"F",
+				"P",
+				"S"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Flight Alabaster Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"_": {
+						"mode": "addSpells",
+						"will": [
+							"{@spell protection from evil and good}"
+						],
+						"daily": {
+							"1e": [
+								"{@spell dispel evil and good}"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flight Goldnight Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Goldnight Menace",
+							"entries": [
+								"Au cours d'une action, un ange du vol de minuit peut semer la terreur dans le cœur de ses ennemis. Chaque créature au choix de l'ange qui se trouve à moins de 36 mètres de lui et qui en est consciente doit réussir un jet de sauvegarde de Sagesse ou devenir {@condition frightened} pendant 1 minute. Le DC pour ce jet de sauvegarde est le même que pour le trait de lanceur de sorts inné de l'ange. Une créature peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant fin à l'effet sur elle-même en cas de réussite. Si le jet de sauvegarde d'une créature est réussi ou si l'effet prend fin pour elle, la créature est immunisée contre la Menace de la nuit d'or de cet ange pour les 24 heures suivantes."
+							]
+						}
+					}
+				}
+			},
+			"cr": "11",
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flight of Moonsilver Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Moonsilver Spear",
+							"entries": [
+								"Un ange du Vol de l'Argent Lunaire manie une lance faite d'un éclat du Helvault. Les points de vie perdus à cause des dégâts de cette arme ne peuvent être regagnés que par un repos court ou long, et non par régénération, magie ou autre. Une fois par tour, lorsque l'ange touche une créature avec une attaque utilisant cette arme, il peut blesser la cible. Au début de chacun des tours de la créature blessée, elle subit {@damage 1d4} de dégâts nécrotiques pour chaque fois que l'ange l'a blessée, puis elle peut effectuer un jet de sauvegarde de {@dc 15} Constitution, mettant fin à l'effet de toutes ces blessures sur elle-même en cas de réussite. Alternativement, la créature blessée, ou une créature située à moins de 1,5 mètre d'elle, peut utiliser une action pour faire un test de Sagesse ({@dc 15}), mettant fin à l'effet de ces blessures sur elle en cas de succès."
+							]
+						}
+					}
+				}
+			},
+			"damageTags": [
+				"B",
+				"N",
+				"R"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Geist",
+			"source": "PSI",
+			"page": 19,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 45,
+				"formula": "10d8"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": 40
+			},
+			"str": 7,
+			"dex": 13,
+			"con": 10,
+			"int": 10,
+			"wis": 12,
+			"cha": 17,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"acid",
+				"fire",
+				"lightning",
+				"thunder",
+				"bludgeoning"
+			],
+			"immune": [
+				"cold",
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"grappled"
+			],
+			"languages": [
+				"any languages it knew in life"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Ethereal Sight",
+					"entries": [
+						"Le géiste peut voir à 18 mètres dans le plan éthéré alors qu'il se trouve sur le plan matériel, et vice versa."
+					]
+				},
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"Le geist peut se déplacer à travers les autres créatures et objets comme s'ils étaient {@quickref difficult terrain||3}. Il subit 5 ({@dice 1d10}) de dégâts de force s'il termine son tour à l'intérieur d'un objet."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Withering Touch",
+					"entries": [
+						"{@atk mw} {@hit 5} pour toucher, portée de 1,5 m., une cible {@h}17 ({@damage 4d6 + 3}) dégâts nécrotiques."
+					]
+				},
+				{
+					"name": "Etherealness",
+					"entries": [
+						"Le geist entre dans le plan éthéré depuis le plan matériel, ou vice versa. Il est visible sur le plan matériel alors qu'il se trouve dans l'éthéré frontalier, et vice versa, mais il ne peut pas affecter ou être affecté par quoi que ce soit sur l'autre plan."
+					]
+				},
+				{
+					"name": "Possession {@recharge}",
+					"entries": [
+						"Une créature que le geist peut voir dans un rayon de 1,5 mètre doit réussir un jet de sauvegarde de Charisme {@dc 13} ou être possédée par le geist ; ce dernier disparaît alors, et la cible est à {@condition incapacitated} et perd le contrôle de son corps. Le geist contrôle désormais le corps mais ne prive pas la cible de conscience. Le geist ne peut être pris pour cible par aucune attaque, aucun sort ni aucun autre effet, à l'exception de ceux qui transforment les morts-vivants, et il conserve son alignement, son Intelligence, sa Sagesse, son Charisme et son immunité contre les {@condition charmed} et les {@condition frightened}. Elle utilise par ailleurs les statistiques de la cible possédée, mais n'a pas accès à ses connaissances, caractéristiques de classe ou compétences. La possession dure jusqu'à ce que le corps tombe à 0 point de vie, que le geist y mette fin par une action bonus, ou que le geist soit retourné ou chassé par un effet comme le sort {@spell dispel evil and good}. Lorsque la possession prend fin, le geist réapparaît dans un espace inoccupé à moins de 1,5 mètre du corps. La cible est immunisée contre la possession de ce geist pendant 24 heures après avoir réussi le jet de sauvegarde ou après la fin de la possession. Le geist peut également cibler le cadavre d'une créature, utilisant alors sa propre force vitale pour animer le cadavre comme un zombie. Le cadavre animé utilise les statistiques des zombies et revient à la mort si le geist met fin à la possession."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Geist Powers",
+					"entries": [
+						"Les géistes sont aussi variés que les humains qu'ils étaient dans la vie. En plus des traits et des actions que tous les géistes possèdent, un géiste individuel peut avoir l'une des caractéristiques spéciales suivantes.",
+						{
+							"name": "Intangible Virtue",
+							"type": "entries",
+							"entries": [
+								"Une créature vivante possédée par un geist d'alignement blanc gagne une immunité aux conditions {@condition charmed} et {@condition frightened}, ainsi qu'une résistance aux dégâts de matraquage, de perçage et d'entaille des attaques non magiques. Tant que la créature est possédée, le geist peut lui permettre de prendre le contrôle de son corps, mais le geist peut en reprendre le contrôle à tout moment (aucune action requise)."
+							]
+						},
+						{
+							"name": "Horrifying Visage",
+							"type": "entries",
+							"entries": [
+								"Les géistes d'alignement noir peuvent se rendre terribles à voir, même lorsqu'ils possèdent des vivants. Toute créature non morte-vivante située à moins de 18 mètres du géiste et qui peut le voir doit réussir un jet de sauvegarde de Sagesse de {@dc 13} ou être {@condition frightened} pendant 1 minute. Si la sauvegarde échoue de 5 ou plus, la cible vieillit également de {@dice 1d4 × 10} ans. Une cible de {@condition frightened} peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant fin à la condition de {@condition frightened} sur elle-même en cas de succès. Si le jet de sauvegarde d'une cible est réussi ou si l'effet prend fin pour elle, la cible est immunisée contre la Visage horrifiant de ce geist pendant les 24 heures suivantes. L'effet de vieillissement peut être annulé par un sort à {@spell greater restoration}, mais seulement dans les 24 heures qui suivent."
+							]
+						}
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"N"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Geist: Horrifying Visage",
+					"source": "PSI",
+					"_mod": {
+						"action": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Horrifying Visage",
+								"entries": [
+									"Les géistes d'alignement noir peuvent se rendre terribles à voir, même lorsqu'ils possèdent des vivants. Toute créature non morte-vivante située à moins de 18 mètres du géiste et qui peut le voir doit réussir un jet de sauvegarde de Sagesse de {@dc 13} ou être {@condition frightened} pendant 1 minute. Si la sauvegarde échoue de 5 ou plus, la cible vieillit également de {@dice 1d4 × 10} ans. Une cible de {@condition frightened} peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant fin à la condition de {@condition frightened} sur elle-même en cas de succès. Si le jet de sauvegarde d'une cible est réussi ou si l'effet prend fin pour elle, la cible est immunisée contre la Visage horrifiant de ce geist pendant les 24 heures suivantes. L'effet de vieillissement peut être annulé par un sort à {@spell greater restoration}, mais seulement dans les 24 heures qui suivent."
+								]
+							}
+						}
+					},
+					"variant": null,
+					"conditionInflict": [
+						"frightened",
+						"incapacitated"
+					]
+				},
+				{
+					"name": "Geist: Intangible Virtue",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Intangible Virtue",
+								"entries": [
+									"Une créature vivante possédée par un geist d'alignement blanc gagne une immunité aux conditions {@condition charmed} et {@condition frightened}, ainsi qu'une résistance aux dégâts de matraquage, de perçage et d'entaille des attaques non magiques. Tant que la créature est possédée, le geist peut lui permettre de prendre le contrôle de son corps, mais le geist peut en reprendre le contrôle à tout moment (aucune action requise)."
+								]
+							}
+						}
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Gisela",
+			"alias": [
+				"Blade of Goldnight",
+				"Blade of the Church"
+			],
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Planetar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Planetar",
+						"with": "Gisela",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Goldnight Menace",
+							"entries": [
+								"Au cours d'une action, un ange du vol de minuit peut semer la terreur dans le cœur de ses ennemis. Chaque créature au choix de l'ange qui se trouve à moins de 36 mètres de lui et qui en est consciente doit réussir un jet de sauvegarde de Sagesse ou devenir {@condition frightened} pendant 1 minute. Le DC pour ce jet de sauvegarde est le même que pour le trait de lanceur de sorts inné de l'ange. Une créature peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant fin à l'effet sur elle-même en cas de réussite. Si le jet de sauvegarde d'une créature est réussi ou si l'effet prend fin pour elle, la créature est immunisée contre la Menace de la nuit d'or de cet ange pour les 24 heures suivantes."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Host of Herons Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Heron Protection",
+							"entries": [
+								"Chaque fois qu'un ange de l'hôte des hérons ou une créature amie située à moins de 3 mètres de lui effectue un jet de sauvegarde, la créature gagne un bonus au jet de sauvegarde égal au modificateur de Charisme de l'ange. L'ange doit être conscient pour recevoir ou accorder ce bonus."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Keeper of the Feather",
+			"group": null,
+			"source": "PSI",
+			"page": 40,
+			"_copy": {
+				"name": "Wereraven",
+				"source": "VRGR",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "wereraven",
+						"with": "keeper"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Beak (Raven or Hybrid Form Only)",
+							"items": {
+								"name": "Beak (Raven or Hybrid Form Only)",
+								"entries": [
+									"{@atk mw} {@hit 4} pour toucher, atteindre 1,5 m., une cible. {@h}1 dégâts perforants sous forme de corbeau, ou 4 ({@damage 1d4 + 2}) dégâts perforants sous forme hybride."
+								]
+							}
+						}
+					]
+				}
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Le gardien est un lanceur de sorts de 4e niveau. Sa capacité à lancer des sorts est la Sagesse (sauvegarde contre les sorts {@dc 12}, {@hit 4} pour toucher avec les attaques de sorts). Il a les sorts de druide suivants préparés :"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft}",
+								"{@spell produce flame}",
+								"{@spell shillelagh}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell entangle}",
+								"{@spell longstrider}",
+								"{@spell speak with animals}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell animal messenger}",
+								"{@spell barkskin}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"damageTagsSpell": [
+				"F",
+				"T"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Necro-Alchemist",
+			"alias": [
+				"Geistmage"
+			],
+			"source": "PSI",
+			"page": 20,
+			"_copy": {
+				"name": "Mage",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "mage",
+						"with": "Necro-Alchemist",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sigarda",
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Planetar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Planetar",
+						"with": "Sigarda",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Heron Protection",
+							"entries": [
+								"Chaque fois qu'un ange de l'hôte des hérons ou une créature amie située à moins de 3 mètres de lui effectue un jet de sauvegarde, la créature gagne un bonus au jet de sauvegarde égal au modificateur de Charisme de l'ange. L'ange doit être conscient pour recevoir ou accorder ce bonus."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Skaab",
+			"source": "PSI",
+			"page": 20,
+			"_copy": {
+				"name": "Flesh Golem",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "golem",
+						"with": "skaab",
+						"flags": "i"
+					}
+				}
+			},
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Skaabs",
+					"entries": [
+						"Les skaabs les plus basiques sont simplement {@creature flesh golem|MM|flesh golems}, comme décrit dans le Manuel des Monstres. Mais l'aspiration de chaque skaberen est de produire un chef-d'œuvre vraiment unique, un objectif qui peut amener un stitcher à créer des golems avec l'une des caractéristiques spéciales suivantes.",
+						{
+							"type": "entries",
+							"name": "Armor Plating",
+							"page": 20,
+							"entries": [
+								"Augmenter la classe d'armure du skaab à 14 et augmenter son indice de difficulté à 6 (2 300 XP)."
+							]
+						},
+						{
+							"name": "Six Arms",
+							"type": "entries",
+							"entries": [
+								"L'action multi-attaque du skaab lui permet d'effectuer trois attaques de type slam. Augmentez son niveau de difficulté à 6 (2 300 XP)."
+							]
+						},
+						{
+							"name": "Three Heads",
+							"type": "entries",
+							"entries": [
+								"Le skaab a un avantage sur les tests de Sagesse ({@skill Perception}) et sur les jets de sauvegarde contre le fait d'être {@condition blinded}, {@condition deafened}, {@condition stunned}, et frappé {@condition unconscious}. (Son indice de difficulté ne change pas)."
+							]
+						},
+						{
+							"name": "Skaab Goliath",
+							"type": "entries",
+							"entries": [
+								"Ce skaab a trois têtes, six bras et une armure. Augmentez son niveau de difficulté à 7 (2 900 XP)."
+							]
+						},
+						{
+							"name": "Winged Skaab",
+							"type": "entries",
+							"entries": [
+								"Le skaab a une vitesse de vol de 9 mètres."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"_versions": [
+				{
+					"name": "Skaab: Armor Plating",
+					"source": "PSI",
+					"ac": [
+						{
+							"ac": 14,
+							"from": [
+								"armor plating"
+							]
+						}
+					],
+					"cr": "6",
+					"variant": null
+				},
+				{
+					"name": "Skaab: Goliath",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Three Heads",
+								"entries": [
+									"Le skaab a un avantage sur les tests de Sagesse ({@skill Perception}) et sur les jets de sauvegarde contre le fait d'être {@condition blinded}, {@condition deafened}, {@condition stunned}, et frappé {@condition unconscious}."
+								]
+							}
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"Le skaab effectue trois attaques de type slam."
+								]
+							}
+						}
+					},
+					"ac": [
+						{
+							"ac": 14,
+							"from": [
+								"armor plating"
+							]
+						}
+					],
+					"cr": "7",
+					"variant": null
+				},
+				{
+					"name": "Skaab: Six Arms",
+					"source": "PSI",
+					"_mod": {
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"Le skaab effectue trois attaques de type slam."
+								]
+							}
+						}
+					},
+					"cr": "6",
+					"variant": null
+				},
+				{
+					"name": "Skaab: Three Heads",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Three Heads",
+								"entries": [
+									"Le skaab a un avantage sur les tests de Sagesse ({@skill Perception}) et sur les jets de sauvegarde contre le fait d'être {@condition blinded}, {@condition deafened}, {@condition stunned}, et frappé {@condition unconscious}."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Skaab: Winged",
+					"source": "PSI",
+					"speed": {
+						"walk": 30,
+						"fly": 30
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Strefan Maurer",
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 33,
+			"_copy": {
+				"name": "Strahd von Zarovich",
+				"source": "CoS",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Strahd",
+						"with": "Strefan",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "replaceArr",
+						"replace": "Vampire Weaknesses",
+						"items": {
+							"type": "entries",
+							"name": "Vampire Vulnerabilities",
+							"source": "PSI",
+							"page": 16,
+							"entries": [
+								"Les armes taillées dans du bois vivant sont particulièrement efficaces contre les vampires, mais n'importe quelle arme peut les blesser ou les tuer. Un vampire ne peut pas traverser une eau courante qui montre le reflet de la lune, et l'eau bénie par Avacyn ({@item Holy Water (flask)|PHB|holy water}) brûle la chair des vampires comme de l'acide. Le reflet d'un vampire dans l'argent (y compris dans un miroir en verre à fond argenté) apparaît tel que le vampire aurait été sans sa condition vampirique - ni sa véritable apparence, ni son éclat, mais un humain normal, avec ses défauts et tout le reste. C'est pourquoi les vampires s'efforcent d'éviter les miroirs, et la présence d'argent, sous quelque forme que ce soit, les perturbe."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Vampire Neonate",
+			"source": "PSI",
+			"page": 17,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 82,
+				"formula": "11d8 + 33"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 16,
+			"int": 11,
+			"wis": 10,
+			"cha": 12,
+			"save": {
+				"dex": "+6",
+				"wis": "+3"
+			},
+			"skill": {
+				"perception": "+3",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks not made with living wood weapons",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Common"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Regeneration",
+					"entries": [
+						"Le vampire regagne 10 points de vie au début de son tour s'il a au moins 1 point de vie. Si le vampire subit des dégâts radiants ou des dégâts d'eau bénite, ce trait ne fonctionne pas au début du prochain tour du vampire."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Le vampire effectue deux attaques, dont une seule peut être une attaque de morsure."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 6} pour toucher, portée de 1,5 m, une créature. {@h}8 ({@damage 2d4 + 3}) dégâts tranchants. Au lieu d'infliger des dégâts, le vampire peut agripper la cible (fuite {@dc 13})."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 6} pour toucher, atteindre 1,5 m, une créature consentante, ou une créature qui est {@condition grappled} par le vampire, {@condition incapacitated}, ou {@condition restrained}. {@h}6 ({@damage 1d6 + 3}) de dégâts perforants plus 7 ({@damage 2d6}) de dégâts nécrotiques. Le maximum de points de vie de la cible est réduit d'un montant égal aux dégâts nécrotiques subis, et le vampire regagne un nombre de points de vie égal à ce montant. La réduction dure jusqu'à ce que la cible termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0."
+					]
+				},
+				{
+					"name": "Vampiric Glamer",
+					"entries": [
+						"Le vampire obscurcit sa forme avec une magie affectant l'esprit qui le fait percevoir comme un bel humain de la même taille et de la même forme. L'illusion prend fin si le vampire effectue une action bonus pour y mettre fin ou si le vampire meurt. Une créature qui peut voir le vampire peut entreprendre une action pour l'inspecter visuellement, mettre fin à l'effet mental sur elle-même et voir la véritable forme du vampire en réussissant un test de Sagesse (Perception) de {@dc 20}."
+					]
+				},
+				{
+					"name": "Aura of Silence",
+					"entries": [
+						"Le vampire s'enveloppe d'une cape de silence dans un rayon de 0,6 mètre. Dans ce rayon, l'effet est le même que celui du sort {@spell silence}."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Elder Vampires",
+					"entries": [
+						"Les statistiques de base sur les vampires représentent un \"nouveau-né\", c'est-à-dire un vampire nouvellement engendré. Les vampires plus âgés peuvent apprendre de puissantes magies de différents types et peuvent avoir l'un des traits et capacités suivants.",
+						{
+							"type": "entries",
+							"name": "Shapechanger",
+							"entries": [
+								"Le vampire possède le trait de changeur de forme du {@creature vampire} du Manuel des monstres, ainsi que l'étiquette de changeur de forme. Certains vampires peuvent se transformer en chauve-souris, d'autres en brume, et quelques-uns peuvent choisir l'une ou l'autre forme."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Charm",
+							"entries": [
+								"Le vampire possède l'action de charme du {@creature vampire} du Manuel des monstres."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Flight",
+							"entries": [
+								"Le vampire a une vitesse de vol de 9 mètres."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Gorger",
+							"entries": [
+								"Le vampire a l'avantage sur les jets d'attaque en mêlée, mais les jets d'attaque contre lui ont l'avantage."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Spellcasting",
+							"entries": [
+								"Le vampire a les capacités de lanceur de sorts d'un magicien ou d'un clerc."
+							]
+						}
+					]
+				}
+			],
+			"traitTags": [
+				"Regeneration"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"HPR",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Elder Vampire: All Abilities",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Shapechanger",
+									"entries": [
+										"If the vampire isn't in sunlight or running water, it can use its action to polymorph into a Tiny bat or a Medium cloud of mist, or back into its true form.",
+										"While in bat form, the vampire can't speak, its walking speed is 5 feet, and it has a flying speed of 30 feet. Its statistics, other than its size and speed, are unchanged. Anything it is wearing transforms with it, but nothing it is carrying does. It reverts to its true form if it dies.",
+										"While in mist form, the vampire can't take any actions, speak, or manipulate objects. It is weightless, has a flying speed of 20 feet, can hover, and can enter a hostile creature's space and stop there. In addition, if air can pass through a space, the mist can do so without squeezing, and it can't pass through water. It has advantage on Strength, Dexterity, and Constitution saving throws, and it is immune to all nonmagical damage, except the damage it takes from sunlight."
+									]
+								},
+								{
+									"name": "Gorger",
+									"entries": [
+										"The vampire has advantage on melee attack rolls, but attack rolls against it have advantage."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Charm",
+								"entries": [
+									"Le vampire cible un humanoïde qu'il peut voir dans un rayon de 9 mètres. Si la cible peut voir le vampire, elle doit réussir un jet de sauvegarde de {@dc 17} Sagesse contre cette magie ou être {@condition charmed} par le vampire. La cible {@condition charmed} considère le vampire comme un ami de confiance qu'il faut écouter et protéger. Bien que la cible ne soit pas sous le contrôle du vampire, elle prend les demandes ou les actions du vampire de la manière la plus favorable possible, et elle est une cible consentante pour l'attaque de morsure du vampire.",
+									"Chaque fois que le vampire ou ses compagnons font quoi que ce soit de nuisible à la cible, celle-ci peut répéter le jet de sauvegarde, mettant fin à l'effet sur elle-même en cas de réussite. Sinon, l'effet dure 24 heures ou jusqu'à ce que le vampire soit détruit, qu'il se trouve sur un plan d'existence différent de celui de la cible ou qu'il entreprenne une action bonus pour mettre fin à l'effet."
+								]
+							}
+						}
+					},
+					"type": {
+						"type": "undead",
+						"tags": [
+							"shapechanger"
+						]
+					},
+					"speed": {
+						"walk": 30,
+						"fly": 30
+					},
+					"spellcasting": [
+						{
+							"name": "Cleric Spellcasting",
+							"headerEntries": [
+								"{@note Le {@creature Priest|MM} a été utilisé comme exemple Clerc.}",
+								"Le vampire est un lanceur de sorts de 5e niveau. Sa capacité de lanceur de sorts est Sagesse (sauvegarde contre les sorts {@dc 13}, {@hit 5} pour toucher avec les attaques de sort). Le vampire a préparé les sorts de clerc suivants :"
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell light}",
+										"{@spell sacred flame}",
+										"{@spell thaumaturgy}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell cure wounds}",
+										"{@spell guiding bolt}",
+										"{@spell sanctuary}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell lesser restoration}",
+										"{@spell spiritual weapon}"
+									]
+								},
+								"3": {
+									"slots": 2,
+									"spells": [
+										"{@spell dispel magic}",
+										"{@spell spirit guardians}"
+									]
+								}
+							},
+							"ability": "wis"
+						},
+						{
+							"name": "Wizard Spellcasting",
+							"headerEntries": [
+								"{@note Le {@creature Mage|MM} a été utilisé comme exemple Magicien.}",
+								"Le vampire est un lanceur de sorts de 9ème niveau. Sa capacité de lanceur de sorts est Intelligence (sauvegarde contre les sorts {@dc 14}, {@hit 6} pour toucher avec les attaques de sort). Le vampire a préparé les sorts de sorcier suivants :"
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell fire bolt}",
+										"{@spell light}",
+										"{@spell mage hand}",
+										"{@spell prestidigitation}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell detect magic}",
+										"{@spell mage armor}",
+										"{@spell magic missile}",
+										"{@spell shield}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell misty step}",
+										"{@spell suggestion}"
+									]
+								},
+								"3": {
+									"slots": 3,
+									"spells": [
+										"{@spell counterspell}",
+										"{@spell fireball}",
+										"{@spell fly}"
+									]
+								},
+								"4": {
+									"slots": 3,
+									"spells": [
+										"{@spell greater invisibility}",
+										"{@spell ice storm}"
+									]
+								},
+								"5": {
+									"slots": 1,
+									"spells": [
+										"{@spell cone of cold}"
+									]
+								}
+							},
+							"ability": "int"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Charm",
+					"source": "PSI",
+					"_mod": {
+						"action": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Charm",
+								"entries": [
+									"Le vampire cible un humanoïde qu'il peut voir dans un rayon de 9 mètres. Si la cible peut voir le vampire, elle doit réussir un jet de sauvegarde de {@dc 17} Sagesse contre cette magie ou être {@condition charmed} par le vampire. La cible {@condition charmed} considère le vampire comme un ami de confiance qu'il faut écouter et protéger. Bien que la cible ne soit pas sous le contrôle du vampire, elle prend les demandes ou les actions du vampire de la manière la plus favorable possible, et elle est une cible consentante pour l'attaque de morsure du vampire.",
+									"Chaque fois que le vampire ou ses compagnons font quoi que ce soit de nuisible à la cible, celle-ci peut répéter le jet de sauvegarde, mettant fin à l'effet sur elle-même en cas de réussite. Sinon, l'effet dure 24 heures ou jusqu'à ce que le vampire soit détruit, qu'il se trouve sur un plan d'existence différent de celui de la cible ou qu'il entreprenne une action bonus pour mettre fin à l'effet."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Flight",
+					"source": "PSI",
+					"speed": {
+						"walk": 30,
+						"fly": 30
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Gorger",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Gorger",
+								"entries": [
+									"Le vampire a l'avantage sur les jets d'attaque en mêlée, mais les jets d'attaque contre lui ont l'avantage."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Shapechanger",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Shapechanger",
+								"entries": [
+									"Si le vampire n'est pas au soleil ou dans l'eau courante, il peut utiliser son action pour se transformer en une chauve-souris minuscule ou en un nuage de brume de taille moyenne, ou reprendre sa véritable forme.",
+									"Lorsqu'il est sous forme de chauve-souris, le vampire ne peut pas parler, sa vitesse de marche est de 1,5 mètre et sa vitesse de vol est de 9 mètres. Ses statistiques, autres que sa taille et sa vitesse, restent inchangées. Tout ce qu'il porte se transforme avec lui, mais rien de ce qu'il transporte ne le fait. Il reprend sa forme réelle s'il meurt.",
+									"Lorsqu'il est sous forme de brume, le vampire ne peut entreprendre aucune action, parler ou manipuler des objets. Il est en apesanteur, a une vitesse de vol de 6 mètres, peut planer et peut entrer dans l'espace d'une créature hostile et s'y arrêter. De plus, si l'air peut traverser un espace, la brume peut le faire sans se presser, et elle ne peut pas traverser l'eau. Elle a l'avantage aux jets de sauvegarde de Force, de Dextérité et de Constitution, et elle est immunisée contre tous les dégâts non magiques, à l'exception des dégâts qu'elle subit sous l'effet de la lumière du soleil."
+								]
+							}
+						}
+					},
+					"type": {
+						"type": "undead",
+						"tags": [
+							"shapechanger"
+						]
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Spellcasting—Cleric",
+					"source": "PSI",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"{@note Le {@creature Priest|MM} a été utilisé comme exemple Clerc.}",
+								"Le vampire est un lanceur de sorts de 5e niveau. Sa capacité de lanceur de sorts est Sagesse (sauvegarde contre les sorts {@dc 13}, {@hit 5} pour toucher avec les attaques de sort). Le vampire a préparé les sorts de clerc suivants :"
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell light}",
+										"{@spell sacred flame}",
+										"{@spell thaumaturgy}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell cure wounds}",
+										"{@spell guiding bolt}",
+										"{@spell sanctuary}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell lesser restoration}",
+										"{@spell spiritual weapon}"
+									]
+								},
+								"3": {
+									"slots": 2,
+									"spells": [
+										"{@spell dispel magic}",
+										"{@spell spirit guardians}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Spellcasting—Wizard",
+					"source": "PSI",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"{@note Le {@creature Mage|MM} a été utilisé comme exemple Magicien.}",
+								"Le vampire est un lanceur de sorts de 9ème niveau. Sa capacité de lanceur de sorts est Intelligence (sauvegarde contre les sorts {@dc 14}, {@hit 6} pour toucher avec les attaques de sort). Le vampire a préparé les sorts de sorcier suivants :"
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell fire bolt}",
+										"{@spell light}",
+										"{@spell mage hand}",
+										"{@spell prestidigitation}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell detect magic}",
+										"{@spell mage armor}",
+										"{@spell magic missile}",
+										"{@spell shield}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell misty step}",
+										"{@spell suggestion}"
+									]
+								},
+								"3": {
+									"slots": 3,
+									"spells": [
+										"{@spell counterspell}",
+										"{@spell fireball}",
+										"{@spell fly}"
+									]
+								},
+								"4": {
+									"slots": 3,
+									"spells": [
+										"{@spell greater invisibility}",
+										"{@spell ice storm}"
+									]
+								},
+								"5": {
+									"slots": 1,
+									"spells": [
+										"{@spell cone of cold}"
+									]
+								}
+							},
+							"ability": "int"
+						}
+					],
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Werewolf (Krallenhorde)",
+			"source": "PSI",
+			"page": 15,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human",
+					"shapechanger"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"condition": "in humanoid form"
+				},
+				{
+					"ac": 12,
+					"from": [
+						"natural armor"
+					],
+					"condition": "in canid form"
+				}
+			],
+			"hp": {
+				"average": 58,
+				"formula": "9d8 + 18"
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "(40 ft. in canid form)"
+				}
+			},
+			"str": 15,
+			"dex": 13,
+			"con": 14,
+			"int": 10,
+			"wis": 11,
+			"cha": 10,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+3"
+			},
+			"passive": 14,
+			"immune": [
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks not made with silvered weapons",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Common (can't speak in canid form)"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Shapechanger",
+					"entries": [
+						"Le loup-garou se polymorphe en une forme de loup-humanoïde canidé, ou reprend sa véritable forme humaine. Ce changement est dicté par la lune, mais peut aussi être induit par un traumatisme ou une forte émotion. Ses statistiques, autres que sa CA, sont les mêmes dans chaque forme. L'équipement qu'il porte n'est pas transformé. Il revient à sa véritable forme s'il meurt."
+					]
+				},
+				{
+					"name": "Keen Hearing and Smell",
+					"entries": [
+						"Le loup-garou a un avantage sur les contrôles de Sagesse ({@skill Perception}) qui reposent sur l'ouïe ou l'odorat."
+					]
+				},
+				{
+					"name": "Howlpack: Vildin",
+					"entries": [
+						"Rampage vildin (forme canidé uniquement). Lorsque le loup-garou réduit une créature à 0 point de vie avec une attaque de mêlée à son tour, il peut prendre une action bonus pour se déplacer jusqu'à la moitié de sa vitesse et faire une attaque de morsure."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack (Canid Form Only)",
+					"entries": [
+						"Le loup-garou effectue deux attaques : une avec sa morsure et une avec ses griffes ou sa lance."
+					]
+				},
+				{
+					"name": "Bite (Canid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 4} pour toucher, portée de 1,5 m, une cible. {@h}6 ({@damage 1d8 + 2}) dégâts perforants."
+					]
+				},
+				{
+					"name": "Claws (Canid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 4} pour toucher, portée de 1,5 m, une cible. {@h}7 ({@damage 2d4 + 2}) dégâts tranchants."
+					]
+				},
+				{
+					"name": "Spear (Human Form Only)",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} pour toucher, portée de 1,5 m. ou portée de 20/18 m., une cible. {@h}5 ({@damage 1d6 + 2}) dégâts perforants, ou 6 ({@damage 1d8 + 2}) dégâts perforants si on l'utilise à deux mains pour faire une attaque de mêlée."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Howlpack Traits",
+					"entries": [
+						"Les statistiques de base des loups-garous représentent un membre de la Krallenhorde, la plus grande meute d'Innistrad. Les loups-garous d'autres meutes peuvent avoir des capacités supplémentaires telles que les suivantes.",
+						{
+							"name": "Vildin Rampage (Canid Form Only)",
+							"type": "entries",
+							"entries": [
+								"Lorsque le loup-garou réduit une créature à 0 point de vie avec une attaque de mêlée à son tour, il peut entreprendre une action bonus pour se déplacer jusqu'à la moitié de sa vitesse et effectuer une attaque de morsure."
+							]
+						},
+						{
+							"name": "Mondronen Wounded Fury",
+							"type": "entries",
+							"entries": [
+								"Tant qu'il a 10 points de vie ou moins, le loup-garou a l'avantage aux jets d'attaque. De plus, il inflige 7 ({@damage 2d6}) points de dégâts supplémentaires à toute cible qu'il touche avec une attaque de mêlée."
+							]
+						},
+						{
+							"name": "Leeraug Blood Frenzy",
+							"type": "entries",
+							"entries": [
+								"Le loup-garou a l'avantage aux jets d'attaque en mêlée contre toute créature qui n'a pas tous ses points de vie."
+							]
+						}
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Shapechanger"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Werewolf (Leeraug)",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Leeraug Blood Frenzy",
+								"entries": [
+									"Le loup-garou a l'avantage aux jets d'attaque en mêlée contre toute créature qui n'a pas tous ses points de vie."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Werewolf (Mondronen)",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Mondronen Wounded Fury",
+								"entries": [
+									"Tant qu'il a 10 points de vie ou moins, le loup-garou a l'avantage aux jets d'attaque. De plus, il inflige 7 ({@damage 2d6}) points de dégâts supplémentaires à toute cible qu'il touche avec une attaque de mêlée."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Werewolf (Vildin)",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Vildin Rampage (Canid Form Only)",
+								"entries": [
+									"Lorsque le loup-garou réduit une créature à 0 point de vie avec une attaque de mêlée à son tour, il peut entreprendre une action bonus pour se déplacer jusqu'à la moitié de sa vitesse et effectuer une attaque de morsure."
+								]
+							}
+						}
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Zombie Cat",
+			"source": "PSI",
+			"page": 17,
+			"_copy": {
+				"name": "Cat",
+				"source": "MM"
+			},
+			"type": "undead",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Si les dégâts réduisent le chat à 0 point de vie, il doit effectuer un jet de sauvegarde de Constitution avec un DC de 5 + les dégâts subis, sauf si les dégâts sont rayonnants ou proviennent d'un coup critique. En cas de réussite, le chat est ramené à 1 point de vie."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Zombie Rat",
+			"source": "PSI",
+			"page": 17,
+			"_copy": {
+				"name": "Rat",
+				"source": "MM"
+			},
+			"type": "undead",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Si les dégâts réduisent le rat à 0 point de vie, il doit effectuer un jet de sauvegarde de Constitution avec un DC de 5 + les dégâts subis, sauf si les dégâts sont rayonnants ou proviennent d'un coup critique. En cas de réussite, le rat est ramené à 1 point de vie."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Zombie Snake",
+			"source": "PSI",
+			"page": 17,
+			"_copy": {
+				"name": "Poisonous Snake",
+				"source": "MM"
+			},
+			"type": "undead",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Si les dégâts réduisent le serpent à 0 point de vie, il doit effectuer un jet de sauvegarde de Constitution avec un DC de 5 + les dégâts subis, sauf si les dégâts sont rayonnants ou proviennent d'un coup critique. En cas de réussite, le serpent tombe à 1 point de vie à la place."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

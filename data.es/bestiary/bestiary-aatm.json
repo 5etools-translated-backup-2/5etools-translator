@@ -1,0 +1,502 @@
+{
+	"_meta": {
+		"otherSources": {
+			"monster": {
+				"MPP": "AATM",
+				"MM": "AATM",
+				"MPMM": "AATM",
+				"VRGR": "AATM"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Animated Coffin",
+			"source": "AATM",
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 60,
+				"formula": "8d10 + 16"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 15,
+			"int": 3,
+			"wis": 11,
+			"cha": 3,
+			"senses": [
+				"blindsight 60 ft. (can't see beyond this radius)"
+			],
+			"passive": 10,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Si el ataúd animado está inmóvil al comienzo del combate, tiene ventaja en su tirada de iniciativa. Además, si una criatura no ha observado al ataúd moverse o actuar, dicha criatura debe tener éxito en un chequeo de Inteligencia (Investigación) {@dc 18} para discernir que el ataúd está animado."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"El ataúd animado puede trepar por superficies difíciles, incluidos los techos boca abajo, sin necesidad de realizar un chequeo de habilidad."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El ataúd animado hace dos ataques de Slam."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 5} para golpear, alcance 1,5 m., un objetivo. {@h}12 ({@damage 2d8 + 3}) de daño contundente."
+					]
+				},
+				{
+					"name": "Entrap",
+					"entries": [
+						"{@atk mw} {@hit 5} para golpear, alcance 1,5 m., una criatura Grande o menor. {@h}El objetivo tiene la condición {@condition grappled} (escapar {@dc 13}). Hasta que este agarrón termine, si el objetivo no es un No Muerto, el objetivo tiene la condición {@condition restrained} y recibe 14 ({@damage 4d6}) puntos de daño perforante al inicio de cada uno de sus turnos. El ataúd animado sólo puede agarrar a una criatura a la vez."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance",
+				"Spider Climb"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Factol Skall",
+			"source": "AATM",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "undead",
+				"tags": [
+					"wizard"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 210,
+				"formula": "28d8 + 84"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 11,
+			"dex": 16,
+			"con": 16,
+			"int": 20,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"con": "+9",
+				"int": "+11",
+				"wis": "+8"
+			},
+			"skill": {
+				"arcana": "+17",
+				"history": "+11",
+				"medicine": "+8",
+				"perception": "+8"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 18,
+			"resist": [
+				"cold",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned",
+				"stunned"
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "17",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Skall lanza uno de los siguientes hechizos, que no requieren componentes materiales y utilizan la Inteligencia como habilidad de conjuro (salvación de hechizo {@dc 19}):"
+					],
+					"will": [
+						"{@spell detect magic}",
+						"{@spell mage hand}",
+						"{@spell prestidigitation}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell animate dead} (as an action)",
+							"{@spell dispel magic}",
+							"{@spell speak with dead}"
+						],
+						"1e": [
+							"{@spell finger of death}",
+							"{@spell plane shift} (self only)",
+							"{@spell project image}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Aura of Death",
+					"entries": [
+						"Las criaturas en un radio de 9 metros de Skall tienen desventaja en las tiradas de salvación por muerte."
+					]
+				},
+				{
+					"name": "Cosmic Annihilation",
+					"entries": [
+						"Una criatura asesinada por Skall sólo puede volver a la vida mediante un hechizo de resurrección verdadera o {@spell wish}."
+					]
+				},
+				{
+					"name": "Legendary Resistance (4/Day)",
+					"entries": [
+						"Si Skall falla una tirada de salvación, puede elegir tener éxito en su lugar."
+					]
+				},
+				{
+					"name": "Rejuvenation",
+					"entries": [
+						"Si Skall muere, se convierte en polvo. Si su Oratorio de almas no ha sido destruido, Skall vuelve a formarse en el Mortuorio en {@dice 1d10} días. Aparece en un radio de 1,5 metros del oratorio."
+					]
+				},
+				{
+					"name": "Turn Resistance",
+					"entries": [
+						"Skall tiene ventaja en las tiradas de salvación contra cualquier efecto que convierta en No Muerto."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Skall hace un ataque de Toque Mortal o usa Hechizo. También usa Invocación de la Muerte dos veces."
+					]
+				},
+				{
+					"name": "Withering Touch",
+					"entries": [
+						"{@atk ms} {@hit 11} para golpear, alcance 1,5 m., un objetivo. {@h}32 ({@damage 6d8 + 5}) de daño de frío más 31 ({@damage 7d8}) de daño necrótico, y si el objetivo es una criatura, no puede recuperar puntos de golpe hasta el inicio del siguiente turno de Skall."
+					]
+				},
+				{
+					"name": "Death Knell",
+					"entries": [
+						"Skall apunta con su dedo a una criatura que pueda ver en un radio de 36 metros, llenando la mente del objetivo con visiones de muerte y el tañido plangente de una campana de hierro. El objetivo debe tener éxito en una tirada de salvación de Sabiduría {@dc 19} o recibir 14 ({@damage 4d6}) puntos de daño psíquico y sufrir la condición {@condition frightened} hasta el inicio del siguiente turno de Skall."
+					]
+				},
+				{
+					"name": "Fog of Death (1/Day)",
+					"entries": [
+						"Skall exuda una niebla asesina en una esfera de 9 metros de radio centrada en sí mismo. La esfera se extiende por las esquinas y su área queda muy oscurecida. La niebla dura hasta el inicio del siguiente turno de Skall, y no puede ser dispersada por el viento. No se mueve con él.",
+						"Cada criatura que entre en la niebla por primera vez en un turno o que empiece su turno allí debe hacer una tirada de salvación de Constitución {@dc 19}, recibiendo 28 ({@damage 8d6}) puntos de daño necrótico y 28 ({@damage 8d6}) puntos de daño venenoso si falla la tirada de salvación, o la mitad de daño si tiene éxito. Un Humanoide mediano o más pequeño muerto por este daño se convierte en un zombi bajo el control de Skall. El zombi actúa a iniciativa de Skall, pero inmediatamente después de su turno. En ausencia de cualquier otra orden, el zombi intenta matar a cualquier criatura no Muerta que encuentre."
+					]
+				}
+			],
+			"reactionHeader": [
+				"Skall can take up to three reactions per round but only one per turn."
+			],
+			"reaction": [
+				{
+					"name": "Baleful Counterspell",
+					"entries": [
+						"Skall castañetea los dientes para interrumpir a una criatura que pueda ver en un radio de 18 metros y que esté lanzando un hechizo. Si el hechizo es de 4º nivel o inferior, falla y no tiene efecto. Si el hechizo es de 5º nivel o superior, Skall hace un chequeo de Inteligencia ({@dc 10} + el nivel del hechizo). Si tiene éxito, el hechizo falla y no tiene efecto. Sea cual sea el nivel del hechizo, el lanzador recibe 10 ({@damage 3d6}) puntos de daño necrótico si el hechizo falla."
+					]
+				},
+				{
+					"name": "Near-Death Experience",
+					"entries": [
+						"En respuesta a un ataque, Skall se teletransporta, junto con el equipo que lleve puesto, hasta 9 metros a un espacio desocupado que pueda ver."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Rejuvenation",
+				"Turn Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"C",
+				"I",
+				"N",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Heralds of Dust Exorcist",
+			"source": "AATM",
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				13,
+				{
+					"ac": 16,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 112,
+				"formula": "15d8 + 45"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 16,
+			"con": 16,
+			"int": 17,
+			"wis": 14,
+			"cha": 11,
+			"save": {
+				"int": "+6",
+				"wis": "+5",
+				"cha": "+3"
+			},
+			"skill": {
+				"arcana": "+6",
+				"perception": "+5",
+				"religion": "+6"
+			},
+			"senses": [
+				"truesight 60 ft."
+			],
+			"passive": 15,
+			"resist": [
+				"necrotic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common plus three more languages"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"El exorcista lanza uno de los siguientes conjuros, que no requieren componentes materiales y utilizan la Inteligencia como habilidad de conjuro (salvación de conjuro {@dc 14}, {@hit 6} para golpear con ataques de conjuro):",
+						"A voluntad: detectar el mal y el bien, armadura de mago (sólo yo), mano de mago"
+					],
+					"daily": {
+						"2e": [
+							"{@spell protection from evil and good}",
+							"{@spell remove curse}",
+							"{@spell speak with dead}"
+						],
+						"1e": [
+							"{@spell banishment}",
+							"{@spell dispel evil and good}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Incorruptible Vessel",
+					"entries": [
+						"El exorcista no puede ser poseído por Celestiales, Demonios o No Muertos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El exorcista hace dos ataques de Ráfaga de Tumbas."
+					]
+				},
+				{
+					"name": "Grave Burst",
+					"entries": [
+						"{@atk ms,rs} {@hit 6} para golpear, alcance 1,5 m. o alcance 36 m., un objetivo. {@h}19 ({@damage 3d10 + 3}) de daño necrótico o radiante (a elección del exorcista)."
+					]
+				},
+				{
+					"name": "Admit Entity {@recharge 5}",
+					"entries": [
+						"El exorcista descorre el velo de la muerte de una criatura que pueda ver en un radio de 18 metros, exponiendo al objetivo a entidades malévolas. El objetivo debe realizar una tirada de salvación de Carisma {@dc 14}. Si falla la tirada de salvación, el objetivo recibe 36 ({@damage 8d8}) de daño psíquico y sufre la condición {@condition incapacitated} durante 1 minuto, durante el cual tiene arcadas y balbucea incoherencias con una voz que no es la suya. Si la salvación tiene éxito, el objetivo sólo recibe la mitad de daño. Un objetivo {@condition incapacitated} puede repetir la tirada de salvación al final de cada uno de sus turnos, terminando el efecto sobre sí mismo en caso de éxito."
+					]
+				}
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"R",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"conditionInflictSpell": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"charisma"
+			],
+			"savingThrowForcedSpell": [
+				"charisma"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

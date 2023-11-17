@@ -1,0 +1,417 @@
+{
+	"spell": [
+		{
+			"name": "Draconic Transformation",
+			"source": "UA2021DraconicOptions",
+			"page": 5,
+			"level": 7,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "statuetka smoka, warta co najmniej 500 gp",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Z rykiem korzystasz z magii smoków, aby się przemienić, przybierając różne smocze cechy. Do końca działania zaklęcia zyskujesz następujące korzyści:",
+				{
+					"type": "list",
+					"items": [
+						"Masz {@sense blindsight} zasięgu 9 metrów. W tym zasięgu możesz skutecznie dostrzec wszystko, co nie znajduje się za całkowitą osłoną, nawet jeśli jesteś {@condition blinded} lub w ciemności. Co więcej, możesz dostrzec {@condition invisible} istotę, chyba że ta skutecznie się przed tobą ukryje.",
+						"Bezcielesne skrzydła wyrastają z pleców, zapewniając prędkość lotu wynoszącą 12 metrów.",
+						"Podczas rzucania tego zaklęcia, a także jako akcję dodatkową w kolejnych turach przez cały czas jego trwania, możesz wydychać powiew migoczącej energii w stożku o średnicy 9 metrów. Każda istota w tym obszarze musi wykonać rzut obronny na Zręczność, otrzymując {@damage 3d8} obrażeń od siły w przypadku nieudanego rzutu obronnego lub połowę obrażeń w przypadku udanego rzutu obronnego."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"conditionInflict": [
+				"blinded",
+				"invisible"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"SGT",
+				"UBA"
+			]
+		},
+		{
+			"name": "Fizban's Platinum Shield",
+			"source": "UA2021DraconicOptions",
+			"page": 5,
+			"level": 6,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "platynowana smocza łuska, warta co najmniej 500 gp",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Tworzysz pole srebrzystego światła, które otacza wybraną przez ciebie istotę w zasięgu (możesz wybrać siebie). Pole rzuca słabe światło na odległość do 1,5 metra.",
+				"Jako dodatkową akcję w kolejnych turach możesz przenieść pole na inną istotę w promieniu 18 metrów od pola.",
+				"Istota chroniona przez to pole zyskuje następujące korzyści:",
+				{
+					"type": "list",
+					"items": [
+						"Stworzenie ma pół osłony.",
+						"Stworzenie jest odporne na obrażenia od kwasu, zimna, ognia, błyskawic i trucizny.",
+						"Jeśli stworzenie jest poddane efektowi, który pozwala mu wykonać rzut na Zręczność, aby otrzymać tylko połowę obrażeń, nie otrzymuje żadnych obrażeń, jeśli uda mu się wykonać rzut na Zręczność, i tylko połowę obrażeń, jeśli się nie uda."
+					]
+				}
+			],
+			"damageResist": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"poison"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"UBA"
+			]
+		},
+		{
+			"name": "Flame Stride",
+			"source": "UA2021DraconicOptions",
+			"page": 6,
+			"level": 3,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Buchające płomienie smoka pokrywają twoje stopy, zapewniając ci wybuchową prędkość. Na czas działania tej umiejętności twoja prędkość wzrasta o 6 metrów, a poruszanie się nie prowokuje ataków przy okazji.",
+				"Kiedy przemieścisz się w promieniu 1,5 metra od stworzenia lub przedmiotu, który nie jest noszony, otrzymuje on {@damage 1d6} obrażeń od ognia zadanych przez twoją smugę ciepła. Stworzenie lub przedmiot może otrzymać te obrażenia tylko raz w ciągu tury."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Kiedy rzucasz to zaklęcie, używając slotu zaklęć 4. poziomu lub wyższego, zwiększasz swoją prędkość o 1,5 metra za każdy slot zaklęć powyżej 3. poziomu. Ponadto zaklęcie zadaje dodatkowe {@damage 1d6} obrażeń od ognia za każdy slot powyżej 3. poziomu."
+					]
+				}
+			],
+			"damageInflict": [
+				"fire"
+			],
+			"miscTags": [
+				"OBJ"
+			]
+		},
+		{
+			"name": "Icingdeath's Frost",
+			"source": "UA2021DraconicOptions",
+			"page": 6,
+			"level": 2,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 15
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "fiolka z roztopioną wodą"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Wybuch lodowato zimnej energii emanuje z ciebie w stożku o średnicy 9 metrów. Każda istota w tym obszarze musi wykonać rzut obronny na Konstytucję. W przypadku nieudanego rzutu obronnego, istota otrzymuje {@damage 3d8} obrażeń od zimna i zostaje pokryta lodem na 1 minutę lub do momentu, w którym istota użyje swojej akcji, aby oderwać lód od siebie lub innej istoty. Prędkość istoty pokrytej lodem zostaje zmniejszona do 0. W przypadku udanego rzutu obronnego, istota otrzymuje o połowę mniej obrażeń bez dodatkowych efektów."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Kiedy rzucasz to zaklęcie, używając gniazda zaklęć 3. poziomu lub wyższego, zwiększ obrażenia od zimna o {@dice 1d8} za każdy poziom gniazda powyżej 2."
+					]
+				}
+			],
+			"damageInflict": [
+				"cold"
+			],
+			"savingThrow": [
+				"constitution"
+			]
+		},
+		{
+			"name": "Nathair's Mischief",
+			"source": "UA2021DraconicOptions",
+			"page": 6,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "kawałek skórki z szarlotki"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Wypełniasz 6-metrowy sześcian wyśrodkowany na wybranym punkcie w zasięgu magią fey i draconów. Rzuć na stół Złośliwego przypływu, aby określić wywołany efekt magiczny. Na początku każdej swojej tury możesz przesunąć sześcian o maksymalnie 3 metry i ponownie rzucić na tabelę.",
+				{
+					"type": "table",
+					"caption": "Mischievous Surge",
+					"colLabels": [
+						"d4",
+						"Effect"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-12"
+					],
+					"rows": [
+						[
+							"1",
+							"W powietrzu unosi się zapach szarlotki, a każda istota w kostce musi wykonać rzut ratujący z Mądrości, albo stanie się {@condition charmed} przez ciebie do początku twojej następnej tury."
+						],
+						[
+							"2",
+							"Wokół pojawiają się bukiety kwiatów, a każda istota w kostce musi zdać rzut na Zręczność lub stracić {@condition blinded} do początku twojej następnej tury, ponieważ kwiaty pryskają im wodą w twarz."
+						],
+						[
+							"3",
+							"Każdemu stworzeniu w kostce musi udać się rzut ratunkowy na Mądrość, albo zacznie chichotać do początku twojej następnej tury. Chichoczące stworzenie ma {@condition incapacitated} i wykorzystuje cały swój ruch, aby poruszać się w losowym kierunku."
+						],
+						[
+							"4",
+							"Pojawiają się krople melasy i zawisają na kostce, zamieniając ją w {@quickref difficult terrain||3} do początku twojej następnej tury."
+						]
+					]
+				}
+			],
+			"conditionInflict": [
+				"blinded",
+				"charmed",
+				"incapacitated"
+			],
+			"savingThrow": [
+				"dexterity",
+				"wisdom"
+			],
+			"miscTags": [
+				"RO"
+			]
+		},
+		{
+			"name": "Raulothim's Psychic Lance",
+			"source": "UA2021DraconicOptions",
+			"page": 6,
+			"level": 4,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Wypuszczasz z czoła mieniącą się lancę mocy psychicznej w kierunku istoty, którą widzisz w zasięgu. Możesz też wypowiedzieć imię stworzenia. Jeśli wskazany cel znajduje się w zasięgu, nie zyskuje żadnych korzyści z osłony lub niewidzialności, gdy lanca zbliża się do niego. Jeśli wskazany cel nie znajduje się w zasięgu, lanca rozprasza się, a slot na zaklęcie nie zostaje wykorzystany.",
+				"Celowi musi się udać rzut ratunkowy na inteligencję albo otrzyma {@damage 10d6} obrażeń psychicznych i będzie {@condition incapacitated} do początku twojej następnej tury."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Kiedy rzucasz to zaklęcie, używając gniazda zaklęć 5. poziomu lub wyższego, obrażenia zwiększają się o {@dice 1d6} za każdy poziom gniazda powyżej 4. poziomu."
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrow": [
+				"intelligence"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Summon Draconic Spirit",
+			"source": "UA2021DraconicOptions",
+			"page": 7,
+			"level": 5,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "przedmiot artystyczny ze smoczego skarbca, wart co najmniej 500 gp",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Przywołujesz smoczego ducha. Manifestuje się on w niezajętej przestrzeni, którą widzisz w zasięgu.",
+				"Ta cielesna forma wykorzystuje blok statystyk {@creature Draconic Spirit|UA2021DraconicOptions}. Podczas rzucania tego zaklęcia wybierz rodzinę smoków: Chromatyczną, Klejnotową lub Metaliczną. Stworzenie przypomina smoka z wybranej rodziny, co determinuje pewne cechy w jego bloku statystyk. Stworzenie znika, gdy spadnie do 0 punktów trafień lub gdy zaklęcie się skończy.",
+				"Stworzenie jest sprzymierzeńcem twoim i twoich towarzyszy. W walce dzieli twoją inicjatywę, ale zaczyna swoją turę zaraz po twojej. Wykonuje twoje słowne rozkazy (nie wymaga od ciebie żadnej akcji). Jeśli nie wydasz żadnego, wykonuje akcję {@action Dodge} i wykorzystuje swój ruch, aby uniknąć niebezpieczeństwa."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Kiedy rzucasz to zaklęcie, używając gniazda zaklęć 6. poziomu lub wyższego, użyj wyższego poziomu wszędzie tam, gdzie poziom zaklęcia pojawia się w bloku statystyk."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		}
+	]
+}

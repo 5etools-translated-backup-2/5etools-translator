@@ -1,0 +1,955 @@
+{
+	"spell": [
+		{
+			"name": "Cause Fear (UA)",
+			"source": "UAStarterSpells",
+			"page": 2,
+			"level": 1,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Risvegliate il senso di mortalità in una creatura che potete vedere nel raggio d'azione. Il bersaglio deve riuscire in un tiro salvezza di Saggezza o diventare {@condition frightened} per tutta la durata. Un bersaglio con 25 o meno punti ferita effettua il tiro salvezza con svantaggio. L'incantesimo non ha effetto su costrutti o non morti."
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Ceremony (UA)",
+			"source": "UAStarterSpells",
+			"page": 2,
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "25 gp di argento in polvere",
+					"cost": 2500
+				}
+			},
+			"duration": [
+				{
+					"type": "instant",
+					"condition": "see text"
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"Eseguite una delle diverse cerimonie religiose. Quando si lancia l'incantesimo, si sceglie una delle seguenti cerimonie, il cui bersaglio deve trovarsi entro 3 metri da voi per tutta la durata del lancio.",
+				{
+					"type": "entries",
+					"name": "Atonement",
+					"entries": [
+						"Si tocca una creatura consenziente il cui allineamento è cambiato e si effettua una prova di Saggezza a CC 20 ({@skill Insight}). In caso di successo, si ripristina l'allineamento originale del bersaglio."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Bless Water",
+					"entries": [
+						"Toccate un {@item vial|phb} d'acqua e lo fate diventare {@item Holy Water (flask)|phb|holy water}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Coming of Age",
+					"entries": [
+						"Si tocca un umanoide abbastanza vecchio da essere un giovane adulto. Per le prossime 24 ore, ogni volta che il bersaglio effettua una prova di abilità, può tirare un {@dice d4} e aggiungere il numero tirato alla prova di abilità. Una creatura può beneficiare di questa cerimonia una sola volta."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Dedication",
+					"entries": [
+						"Toccate un umanoide che si convertirebbe volentieri alla vostra religione o che desidera dedicarsi al servizio del vostro dio. Per le prossime 24 ore, ogni volta che il bersaglio effettua un tiro salvezza, può tirare un {@dice d4} e aggiungere il numero tirato al tiro salvezza. Una creatura può beneficiare di questa cerimonia una sola volta."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Funeral Rite",
+					"entries": [
+						"Benedici un cadavere entro 1,5 metri da te. Per le 24 ore successive, il bersaglio non può diventare un non-morto con nessun altro mezzo se non con un incantesimo {@spell wish}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Investiture",
+					"entries": [
+						"Tocca un umanoide consenziente. Scegli un incantesimo di 1° livello che hai preparato e spendi uno slot incantesimo ed eventuali componenti materiali come se stessi lanciando quell'incantesimo. L'incantesimo non ha effetto. Invece, il bersaglio può lanciare questo incantesimo una volta senza dover spendere uno slot incantesimo o utilizzare componenti materiali. Se il bersaglio non lancia l'incantesimo entro 1 ora, l'incantesimo investito va perso."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Marriage",
+					"entries": [
+						"Toccate umanoidi adulti disposti a unirsi in matrimonio. Per le 24 ore successive, ogni bersaglio ottiene un bonus di +2 alla CA e ai tiri salvezza quando si trova entro 9 metri l'uno dall'altro. Una creatura può beneficiare di questa cerimonia una sola volta."
+					]
+				}
+			],
+			"affectsCreatureType": [
+				"humanoid"
+			],
+			"miscTags": [
+				"MAC"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Chaos Bolt (UA)",
+			"source": "UAStarterSpells",
+			"page": 2,
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Scagliate una massa ondeggiante e gorgheggiante di energia caotica contro una creatura nel raggio d'azione. Effettuare un attacco con incantesimo a distanza contro il bersaglio. Se viene colpito, il bersaglio subisce {@damage 2d8} danni. Scegliere uno dei {@dice d8}. Il numero tirato determina il tipo di danno, come mostrato di seguito.",
+				{
+					"type": "table",
+					"caption": "Chaos Bolt",
+					"colLabels": [
+						"{@dice d8}",
+						"Damage Type"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 1
+								}
+							},
+							"Acido"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 2
+								}
+							},
+							"Freddo"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 3
+								}
+							},
+							"Fuoco"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 4
+								}
+							},
+							"Forza"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 5
+								}
+							},
+							"Fulmine"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 6
+								}
+							},
+							"Veleno"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 7
+								}
+							},
+							"Psichico"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 8
+								}
+							},
+							"Tuono"
+						]
+					]
+				},
+				"Se si tira lo stesso numero su entrambi i {@dice d8}, l'energia caotica salta dal bersaglio a un'altra creatura a scelta entro 9 metri da esso. Effettuare un nuovo tiro di attacco contro il nuovo bersaglio e un nuovo tiro di danno, che potrebbe far balzare nuovamente l'energia caotica. Una creatura può essere bersagliata una sola volta da questa massa di energia caotica."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando si lancia questo incantesimo utilizzando uno slot incantesimo di 2° livello o superiore, ogni bersaglio subisce danni extra del tipo tirato. Il danno extra è pari a {@scaledamage 2d8|1-9|1d6} per ogni livello di slot superiore al 1°."
+					]
+				}
+			],
+			"damageInflict": [
+				"acid",
+				"cold",
+				"fire",
+				"force",
+				"lightning",
+				"poison",
+				"psychic",
+				"thunder"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"miscTags": [
+				"RO"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Guiding Hand (UA)",
+			"source": "UAStarterSpells",
+			"page": 3,
+			"level": 1,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 5
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					},
+					"concentration": true
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"Crei una Piccola mano incorporea di luce scintillante in uno spazio non occupato che puoi vedere nel raggio d'azione. La mano esiste per la durata, ma scompare se ti teletrasporti o se viaggi in un altro piano di esistenza.",
+				"Quando la mano appare, nominate un punto di riferimento importante, come una città, una montagna, un castello o un campo di battaglia sul vostro stesso piano di esistenza. Qualcuno nella storia deve aver visitato il sito e averlo mappato. Se il punto di riferimento non compare su nessuna mappa esistente, l'incantesimo fallisce. In caso contrario, ogni volta che vi muovete verso la mano, questa si allontana da voi alla stessa velocità con cui vi siete mossi e si muove nella direzione del punto di riferimento, rimanendo sempre a 1,5 metri di distanza da voi.",
+				"Se non vi muovete verso la mano, questa rimane al suo posto finché non lo fate e vi fa cenno di seguirla una volta ogni {@dice 1d4} minuti."
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Hand of Radiance (UA)",
+			"source": "UAStarterSpells",
+			"page": 3,
+			"level": 0,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 5
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Alzate la mano e da essa si sprigiona un'ardente radiosità. Ogni creatura a vostra scelta che potete vedere entro 1,5 metri da voi deve superare un tiro salvezza di Costituzione o subire {@damage 1d6} danni da irraggiamento.",
+				"I danni dell'incantesimo aumentano del {@dice 1d6} al 5° livello ({@damage 2d6}), all'11° livello ({@damage 3d6}) e al 17° livello ({@damage 4d6})."
+			],
+			"scalingLevelDice": {
+				"label": "radiant damage",
+				"scaling": {
+					"1": "1d6",
+					"5": "2d6",
+					"11": "3d6",
+					"17": "4d6"
+				}
+			},
+			"damageInflict": [
+				"radiant"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Healing Elixir (UA)",
+			"source": "UAStarterSpells",
+			"page": 3,
+			"level": 1,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "forniture per alchimisti"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"entries": [
+				"Crei un elisir curativo in una semplice fiala che appare nella tua mano. L'elisir mantiene la sua potenza per la durata o fino a quando non viene consumato, a quel punto la fiala svanisce.",
+				"Come azione, una creatura può bere l'elisir o somministrarlo a un'altra creatura. Chi lo beve recupera {@dice 2d4 + 2} punti ferita."
+			],
+			"miscTags": [
+				"HL"
+			]
+		},
+		{
+			"name": "Infestation (UA)",
+			"source": "UAStarterSpells",
+			"page": 3,
+			"level": 0,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "una pulce vivente"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Si fa apparire momentaneamente acari, pulci e altri parassiti su una creatura che si vede nel raggio d'azione. Il bersaglio deve riuscire in un tiro salvezza di Costituzione o subire {@damage 1d6} danni da perforazione. Se subisce uno di questi danni, il bersaglio si sposta di 1,5 metri in una direzione casuale. Tirare un {@dice d8} per la direzione: 1, nord; 2, nord-est; 3, est; 4, sud-est; 5, sud; 6, sud-ovest; 7, ovest; o 8, nord-ovest.",
+				"I danni dell'incantesimo aumentano del {@dice 1d6} al 5° livello ({@damage 2d6}), all'11° livello ({@damage 3d6}) e al 17° livello ({@damage 4d6})."
+			],
+			"scalingLevelDice": {
+				"label": "piercing damage",
+				"scaling": {
+					"1": "1d6",
+					"5": "2d6",
+					"11": "3d6",
+					"17": "4d6"
+				}
+			},
+			"damageInflict": [
+				"piercing"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Primal Savagery (UA)",
+			"source": "UAStarterSpells",
+			"page": 3,
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"I denti o le unghie si allungano e si affilano. Scegliete voi quale. Effettuare un attacco con incantesimo in mischia contro una creatura entro 1,5 metri da voi. Se viene colpito, il bersaglio subisce {@damage 1d10} danni da perforazione o da taglio (a scelta). Dopo l'attacco, i denti o le unghie tornano normali.",
+				"I danni dell'incantesimo aumentano del {@dice 1d10} al 5° livello ({@damage 2d10}), all'11° livello ({@damage 3d10}) e al 17° livello ({@damage 4d10})."
+			],
+			"scalingLevelDice": {
+				"label": "piercing damage",
+				"scaling": {
+					"1": "1d10",
+					"5": "2d10",
+					"11": "3d10",
+					"17": "4d10"
+				}
+			},
+			"damageInflict": [
+				"piercing",
+				"slashing"
+			],
+			"spellAttack": [
+				"M"
+			],
+			"miscTags": [
+				"SCL"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Puppet (UA)",
+			"source": "UAStarterSpells",
+			"page": 3,
+			"level": 1,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Il tuo gesto costringe un umanoide che puoi vedere nel raggio d'azione a effettuare un tiro salvezza di Costituzione. Se il tiro salvezza fallisce, il bersaglio deve spostarsi alla sua velocità in una direzione scelta da te. Inoltre, si può far sì che il bersaglio lasci cadere qualsiasi cosa abbia in mano. Questo incantesimo non ha effetto su un umanoide immune all'essere {@condition charmed}."
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"affectsCreatureType": [
+				"humanoid"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Sense Emotion (UA)",
+			"source": "UAStarterSpells",
+			"page": 4,
+			"level": 1,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Sintonizzate i vostri sensi per captare le emozioni degli altri per tutta la durata. Quando si lancia l'incantesimo, e come azione di ogni turno fino alla fine dell'incantesimo, si possono concentrare i sensi su un umanoide visibile entro 9 metri da noi. Si apprende immediatamente l'emozione prevalente del bersaglio, che sia amore, rabbia, dolore, paura, calma o altro. Se il bersaglio non è un umanoide o è immune {@condition charmed}, si percepisce che è calmo."
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Snare (UA)",
+			"source": "UAStarterSpells",
+			"page": 4,
+			"level": 1,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "9 metri di corda, che vengono consumati dall'incantesimo.",
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "permanent",
+					"ends": [
+						"dispel",
+						"trigger"
+					]
+				}
+			],
+			"entries": [
+				"Mentre si lancia questo incantesimo, si usa la corda o il cavo per creare un cerchio con un raggio di 1,5 metri su una superficie piana alla propria portata. Al termine del lancio, la corda o il cavo scompaiono e diventano una trappola magica.",
+				"La trappola è quasi invisibile e per essere individuata richiede una prova di Intelligenza ({@skill Investigation}) contro la propria D.C. di salvataggio degli incantesimi. La trappola scatta quando una creatura Piccola o più grande si muove nell'area protetta dall'incantesimo.",
+				"La creatura innescata deve riuscire in un tiro salvezza di Destrezza o cadere {@condition prone} ed essere sollevata in aria fino a rimanere sospesa a testa in giù a 0,9 metri sopra la superficie protetta, dove si trova {@condition restrained}.",
+				"La creatura {@condition restrained} può effettuare un tiro salvezza di Destrezza con svantaggio alla fine di ogni suo turno e termina l'effetto {@condition restrained} in caso di successo. In alternativa, un'altra creatura in grado di raggiungere la creatura {@condition restrained} può usare un'azione per effettuare una prova di Intelligenza ({@skill Arcana}) contro la DC di salvataggio dell'incantesimo. In caso di successo, anche l'effetto {@condition restrained} termina."
+			],
+			"conditionInflict": [
+				"prone",
+				"restrained"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"abilityCheck": [
+				"intelligence"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Sudden Awakening (UA)",
+			"source": "UAStarterSpells",
+			"page": 4,
+			"level": 1,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Ogni creatura addormentata scelta nel raggio d'azione si risveglia e ogni {@condition prone} creatura nel raggio d'azione può alzarsi senza spendere alcun movimento."
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Toll the Dead (UA)",
+			"source": "UAStarterSpells",
+			"page": 4,
+			"level": 0,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Indicate una creatura che riuscite a vedere nel raggio d'azione e il suono di una campana dolorosa riempie l'aria intorno ad essa per un momento. Il bersaglio deve riuscire in un tiro salvezza di Saggezza o subire {@damage 1d8} danni necrotici. Se il bersaglio non ha punti ferita, subisce {@damage 1d12} danni necrotici.",
+				"I danni dell'incantesimo aumentano di un dado al 5° livello ({@damage 2d8} o {@damage 2d12}), all'11° livello ({@damage 3d8} o {@damage 3d12}) e al 17° livello ({@damage 4d8} o {@damage 4d12})."
+			],
+			"scalingLevelDice": [
+				{
+					"label": "necrotic damage",
+					"scaling": {
+						"1": "1d8",
+						"5": "2d8",
+						"11": "3d8",
+						"17": "4d8"
+					}
+				},
+				{
+					"label": "necrotic damage to wounded creature",
+					"scaling": {
+						"1": "1d12",
+						"5": "2d12",
+						"11": "3d12",
+						"17": "4d12"
+					}
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Unearthly Chorus (UA)",
+			"source": "UAStarterSpells",
+			"page": 4,
+			"level": 1,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "radius",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"La musica di uno stile a scelta riempie l'aria intorno a voi in un raggio di 9 metri. La musica si diffonde negli angoli e può essere ascoltata fino a 3 metri di distanza. La musica si muove con voi, centrandovi per tutta la durata.",
+				"Fino al termine dell'incantesimo, si effettuano prove di Carisma ({@skill Performance}) con vantaggio. Inoltre, è possibile utilizzare un'azione bonus in ogni turno per sedurre una creatura a scelta entro 9 metri da voi, che può vedervi e sentire la musica. La creatura deve effettuare un tiro salvezza di Carisma. Se voi o i vostri compagni la state attaccando, la creatura riesce automaticamente nel tiro salvezza. In caso di fallimento, la creatura diventa amichevole per voi finché può sentire la musica e per 1 ora dopo. Si effettuano con vantaggio le prove di Carisma ({@skill Deception}) e di Carisma ({@skill Persuasion}) contro le creature rese amichevoli da questo incantesimo."
+			],
+			"savingThrow": [
+				"charisma"
+			],
+			"miscTags": [
+				"UBA"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Virtue (UA)",
+			"source": "UAStarterSpells",
+			"page": 5,
+			"level": 0,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Si tocca una creatura, infondendole vitalità. Se il bersaglio ha almeno 1 punto ferita, guadagna un numero di punti ferita temporanei pari a {@dice 1d4} + il modificatore di capacità incantatoria. I punti ferita temporanei vengono persi al termine dell'incantesimo."
+			],
+			"miscTags": [
+				"THP"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Wild Cunning (UA)",
+			"source": "UAStarterSpells",
+			"page": 5,
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"Invoca gli spiriti della natura perché ti aiutino. Quando lanci questo incantesimo, scegli uno dei seguenti effetti:",
+				{
+					"type": "list",
+					"items": [
+						"Se ci sono tracce sul terreno nel raggio d'azione, si sa dove sono e si effettuano prove di Saggezza ({@skill Survival}) per seguire queste tracce con vantaggio per 1 ora o finché non si lancia di nuovo questo incantesimo.",
+						"Se c'è del foraggio commestibile a portata di mano, lo si conosce e si sa dove trovarlo.",
+						"Se c'è acqua potabile pulita a portata di mano, la conosci e sai dove trovarla.",
+						"Se c'è un riparo adatto a voi e ai vostri compagni con portata, lo sapete e sapete dove trovarlo.",
+						"Manda gli spiriti a riportare la legna per il fuoco e ad allestire un accampamento nella zona usando le tue provviste. Gli spiriti costruiscono il fuoco in un cerchio di pietre, montano le tende, srotolano i sacchi a pelo e mettono fuori le razioni e l'acqua per il consumo.",
+						"Fai in modo che gli spiriti smontino immediatamente un campeggio, il che include lo spegnimento del fuoco, lo smontaggio delle tende, l'impacchettamento dei sacchi e il seppellimento della spazzatura."
+					]
+				}
+			]
+		},
+		{
+			"name": "Zephyr Strike (UA)",
+			"source": "UAStarterSpells",
+			"page": 5,
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Ti muovi come il vento. Per tutta la durata, il tuo movimento non provoca attacchi di opportunità.",
+				"Inoltre, la prima volta che si effettua un attacco con l'arma nel proprio turno prima della fine dell'incantesimo, si effettua il tiro per colpire con vantaggio e la velocità aumenta di 9 metri fino alla fine del turno."
+			]
+		}
+	]
+}

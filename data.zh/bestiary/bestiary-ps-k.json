@@ -1,0 +1,821 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		}
+	},
+	"monster": [
+		{
+			"name": "Angel",
+			"source": "PSK",
+			"page": 27,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"trait": {
+						"mode": "replaceArr",
+						"replace": "Angelic Weapons",
+						"items": {
+							"name": "Angelic Weapons",
+							"entries": [
+								"魔法师的武器攻击是神奇的。当魔王用任何武器击中时，武器会造成额外的（%0%）辐射伤害（包括在攻击中）。"
+							]
+						}
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"魔法师进行四次近战攻击。"
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Mace",
+							"items": {
+								"name": "Shortsword",
+								"entries": [
+									"{@atk mw} {@hit 8} 命中，距离 1.5 米，一个目标。{@h}7 ({@damage 1d6 + 4}) 次砍击伤害外加 13 ({@damage 1d10} 次辐射伤害。"
+								]
+							}
+						}
+					]
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Construct (Animated Armor)",
+			"source": "PSK",
+			"page": 32,
+			"_copy": {
+				"name": "Animated Armor",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "armor",
+						"with": "construct"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Construct (Helmed Horror)",
+			"source": "PSK",
+			"page": 32,
+			"_copy": {
+				"name": "Helmed Horror",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "helmed horror",
+						"with": "construct"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Construct (Modron)",
+			"source": "PSK",
+			"page": 32,
+			"_copy": {
+				"name": "Monodrone",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "monodrone",
+						"with": "construct"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Construct (Shield Guardian)",
+			"source": "PSK",
+			"page": 32,
+			"_copy": {
+				"name": "Shield Guardian",
+				"source": "MM",
+				"_mod": {
+					"*": [
+						{
+							"mode": "replaceTxt",
+							"replace": "shield guardian",
+							"with": "construct"
+						},
+						{
+							"mode": "replaceTxt",
+							"replace": "guardian",
+							"with": "construct"
+						}
+					]
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Demon",
+			"source": "PSK",
+			"page": 27,
+			"_copy": {
+				"name": "Erinyes",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "erinyes",
+						"with": "demon"
+					},
+					"trait": {
+						"mode": "replaceArr",
+						"replace": "Hellish Weapons",
+						"items": {
+							"name": "Hellish Weapons",
+							"entries": [
+								"恶魔的武器攻击是魔法攻击，命中时会造成额外 13 ({@dice 3d8}) 的尸毒伤害（包含在攻击中）。"
+							]
+						}
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Longsword",
+							"items": {
+								"name": "Longsword",
+								"entries": [
+									"{@atk mw} {@hit 8} 命中，距离 1.5 米，一个目标。{@h}8 ({@damage 1d8 + 4}) 次砍伤，或 9 ({@damage 1d10 + 4} 次砍伤（如果双手使用），外加 13 ({@damage 3d8} 次坏死伤害。"
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Longbow",
+							"items": {
+								"name": "Longbow",
+								"entries": [
+									"{@atk rw} {@hit 7} 命中，范围 150/18 米，一个目标。{@h}7 ({@damage 1d8 + 3}) 穿透伤害外加 13 ({@damage 3d8}) 坏死伤害。"
+								]
+							}
+						}
+					]
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dragon",
+			"source": "PSK",
+			"page": 29,
+			"_copy": {
+				"name": "Adult Red Dragon",
+				"source": "MM",
+				"_mod": {
+					"action": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Fiery Bite {@recharge 5}",
+							"entries": [
+								"{@atk mw} {@hit 14} 命中，距离 3 米，一个目标。{@h}19 ({@damage 2d10 + 8}) 穿透伤害外加 63 ({@damage 18d6}) 火焰伤害。这也算使用了龙的呼吸武器。"
+							]
+						}
+					}
+				},
+				"_preserve": {
+					"legendaryGroup": true
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Drake (Large)",
+			"source": "PSK",
+			"page": 29,
+			"_copy": {
+				"name": "Giant Eagle",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "eagle",
+						"with": "drake"
+					}
+				}
+			},
+			"languages": null,
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Drake (Small)",
+			"source": "PSK",
+			"page": 29,
+			"_copy": {
+				"name": "Pteranodon",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "pteranodon",
+						"with": "drake"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Giant",
+			"source": "PSK",
+			"page": 30,
+			"_copy": {
+				"name": "Stone Giant",
+				"source": "MM"
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gremlin",
+			"source": "PSK",
+			"page": 26,
+			"size": [
+				"S"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 27,
+				"formula": "5d8 + 5"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 12,
+			"dex": 13,
+			"con": 13,
+			"int": 3,
+			"wis": 13,
+			"cha": 6,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Aether Scent",
+					"entries": [
+						"小妖精可以通过气味确定 9 米范围内精炼或未精炼乙醚的位置。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 3} 命中，距离 1.5 米，一个目标。{@h}5 ({@damage 1d8 + 1}) 砍伤。"
+					]
+				},
+				{
+					"name": "Siphon",
+					"entries": [
+						"小妖精会从它能看到的 1.5 米范围内的乙醚供电装置中吸取乙醚。如果物品没有被佩戴或携带，触碰会自动耗尽乙太。如果该物品被生物所佩戴或携带，该生物必须在{@dc 11}灵巧蓄力中成功，才能使其远离灰妖的触及范围。",
+						"如果乙太驱动的设备给予任何奖励（对攻击卷、伤害卷、护甲等级等），该奖励将减少1。否则，它将停止运作1轮。如果不受阻碍，小精灵可以完全摧毁一个以乙太为动力的设备。"
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hellion (Huge)",
+			"source": "PSK",
+			"page": 31,
+			"_copy": {
+				"name": "Remorhaz",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "remorhaz",
+						"with": "hellion"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hellion (Large)",
+			"source": "PSK",
+			"page": 31,
+			"_copy": {
+				"name": "Young Remorhaz",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "remorhaz",
+						"with": "hellion"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hydra",
+			"source": "PSK",
+			"page": 30,
+			"_copy": {
+				"name": "Hydra",
+				"source": "MM"
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lifecraft Elephant",
+			"source": "PSK",
+			"page": 33,
+			"_copy": {
+				"name": "Elephant",
+				"source": "MM"
+			},
+			"type": "construct",
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"poisoned"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Servo",
+			"source": "PSK",
+			"page": 32,
+			"size": [
+				"T"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 10,
+				"formula": "3d4 + 3"
+			},
+			"speed": {
+				"walk": 20
+			},
+			"str": 4,
+			"dex": 11,
+			"con": 12,
+			"int": 3,
+			"wis": 10,
+			"cha": 7,
+			"passive": 10,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"poisoned"
+			],
+			"cr": "0",
+			"action": [
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 0} 命中，距离 1.5 米，一个目标。{@h}1 砍伤。"
+					]
+				}
+			],
+			"familiar": true,
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sky Leviathan",
+			"source": "PSK",
+			"page": 28,
+			"size": [
+				"G"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 247,
+				"formula": "15d20 + 90"
+			},
+			"speed": {
+				"fly": {
+					"number": 50,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 28,
+			"dex": 7,
+			"con": 22,
+			"int": 1,
+			"wis": 8,
+			"cha": 4,
+			"save": {
+				"con": "+10",
+				"wis": "+3"
+			},
+			"passive": 9,
+			"cr": "10",
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 9} 命中，距离 3 米，一个目标。{@h}22 ({@damage 3d8 + 9}) 穿刺伤害。如果目标是大型或更小的生物，必须在 {@dc 18} 灵巧蓄力中成功，否则会被利维坦吞下。被吞下的生物会受到{@condition blinded}和{@condition restrained}的保护，可以完全抵御利维坦以外的攻击和其他影响，并在利维坦的每个回合开始时受到 21 ({@damage 6d6})的酸性伤害。",
+						"如果利维坦在一回合内受到体内生物 30 或更多的伤害，则利维坦必须在该回合结束时成功进行 {@dc 21} 体质自救，否则会反噬所有被吞下的生物，这些生物会 {@condition prone} 掉落在利维坦周围 3 米内的空间。如果利维坦死亡，被吞食的生物将不再被它吞食 {@condition restrained}，并且可以通过 6 米的移动距离逃离尸体，离开 {@condition prone}。"
+					]
+				}
+			],
+			"actionTags": [
+				"Swallow"
+			],
+			"damageTags": [
+				"A",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"blinded",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sky Whale",
+			"source": "PSK",
+			"page": 28,
+			"_copy": {
+				"name": "Giant Crocodile",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "crocodile",
+						"with": "whale"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Bite",
+							"items": {
+								"name": "Flipper",
+								"entries": [
+									"{@atk mw} {@hit 8} 命中，距离 3 米，一个未被鲸鱼 {@condition grappled} 的目标。{@h}14 ({@damage 2d8 + 5}) 暴击伤害。如果目标是生物，则必须成功进行 {@dc 16} 力量蓄力，否则会被击倒 {@condition prone}。"
+								]
+							}
+						}
+					]
+				}
+			},
+			"speed": {
+				"fly": {
+					"number": 50,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Thopter (Bat)",
+			"source": "PSK",
+			"page": 33,
+			"_copy": {
+				"name": "Bat",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "bat",
+						"with": "thopter"
+					}
+				}
+			},
+			"type": "construct",
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"poisoned"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Thopter (Blood Hawk)",
+			"source": "PSK",
+			"page": 33,
+			"_copy": {
+				"name": "Blood Hawk",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "hawk",
+						"with": "thopter"
+					}
+				}
+			},
+			"type": "construct",
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"poisoned"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Thopter (Eagle)",
+			"source": "PSK",
+			"page": 33,
+			"_copy": {
+				"name": "Eagle",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "eagle",
+						"with": "thopter"
+					}
+				}
+			},
+			"type": "construct",
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"poisoned"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Thopter (Hawk)",
+			"source": "PSK",
+			"page": 33,
+			"_copy": {
+				"name": "Hawk",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "hawk",
+						"with": "thopter"
+					}
+				}
+			},
+			"type": "construct",
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"poisoned"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Thopter (Owl)",
+			"source": "PSK",
+			"page": 33,
+			"_copy": {
+				"name": "Owl",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "owl",
+						"with": "thopter"
+					}
+				}
+			},
+			"type": "construct",
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"poisoned"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Thopter (Pseudodragon)",
+			"source": "PSK",
+			"page": 33,
+			"_copy": {
+				"name": "Pseudodragon",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "pseudodragon",
+						"with": "thopter"
+					}
+				}
+			},
+			"type": "construct",
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"poisoned"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Thopter (Raven)",
+			"source": "PSK",
+			"page": 33,
+			"_copy": {
+				"name": "Raven",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "raven",
+						"with": "thopter"
+					}
+				}
+			},
+			"type": "construct",
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"poisoned"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Thopter (Vulture)",
+			"source": "PSK",
+			"page": 33,
+			"_copy": {
+				"name": "Vulture",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "vulture",
+						"with": "thopter"
+					}
+				}
+			},
+			"type": "construct",
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"poisoned"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Wurm",
+			"source": "PSK",
+			"page": 31,
+			"_copy": {
+				"name": "Purple Worm",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "worm",
+						"with": "wurm"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

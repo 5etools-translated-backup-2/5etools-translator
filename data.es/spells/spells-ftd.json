@@ -1,0 +1,443 @@
+{
+	"spell": [
+		{
+			"name": "Ashardalon's Stride",
+			"source": "FTD",
+			"page": 19,
+			"level": 3,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Las ondulantes llamas de un dragón salen de tus pies y te otorgan una velocidad explosiva. Mientras dura, tu velocidad aumenta en 6 metros y moverte no provoca ataques de oportunidad.",
+				"Cuando te mueves a menos de 1,5 metros de una criatura o un objeto que no llevas puesto o transportas, recibe {@damage 1d6} de daño de fuego de tu estela de calor. Una criatura u objeto solo puede recibir este daño una vez por turno."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 4º nivel o superior, aumenta tu velocidad en 1,5 m por cada nivel de ranura de hechizo superior al 3º. El hechizo inflige un {@scaledamage 1d6|3-9|1d6} de daño de fuego adicional por cada nivel de ranura superior al 3º."
+					]
+				}
+			],
+			"damageInflict": [
+				"fire"
+			],
+			"miscTags": [
+				"OBJ"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Draconic Transformation",
+			"source": "FTD",
+			"page": 19,
+			"level": 7,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "una estatuilla de un dragón, por valor de al menos 500 gp",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Con un rugido, recurres a la magia de los dragones para transformarte, adoptando rasgos dracónicos. Obtienes los siguientes beneficios hasta que el hechizo termine:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Blindsight",
+							"entries": [
+								"Tienes {@sense blindsight} con un alcance de 9 metros. Dentro de ese alcance, puedes ver efectivamente cualquier cosa que no esté detrás de una cobertura total, incluso si estás {@condition blinded} o en la oscuridad. Además, puedes ver a una criatura {@condition invisible}, a menos que la criatura consiga ocultarse de ti."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Breath Weapon",
+							"entries": [
+								"Cuando lanzas este hechizo, y como acción adicional en los turnos siguientes mientras dure, puedes exhalar energía resplandeciente en un cono de 18 metros. Cada criatura en esa área debe hacer una tirada de salvación de Destreza, recibiendo {@damage 6d8} de daño de fuerza en una salvación fallida, o la mitad de daño en una exitosa."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Wings",
+							"entries": [
+								"De tu espalda brotan alas incorpóreas que te dan una velocidad de vuelo de 18 metros."
+							]
+						}
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"SGT",
+				"UBA"
+			]
+		},
+		{
+			"name": "Fizban's Platinum Shield",
+			"source": "FTD",
+			"page": 20,
+			"level": 6,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "una escama de dragón bañada en platino, por valor de al menos 500 gp",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Creas un campo de luz plateada que rodea a una criatura de tu elección dentro de tu alcance (puedes elegirte a ti mismo). El campo emite una luz tenue hasta 1,5 metros. Mientras esté rodeada por el campo, la criatura obtiene los siguientes beneficios:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Cover",
+							"entries": [
+								"La criatura tiene media cobertura."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Damage Resistance",
+							"entries": [
+								"La criatura tiene resistencia al daño por ácido, frío, fuego, rayo y veneno."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Evasion",
+							"entries": [
+								"Si la criatura está sometida a un efecto que le permite hacer una tirada de salvación de Destreza para recibir sólo la mitad del daño, la criatura no recibe ningún daño si tiene éxito en la tirada de salvación, y sólo la mitad del daño si falla."
+							]
+						}
+					]
+				},
+				"Como acción adicional en turnos posteriores, puedes mover el campo a otra criatura en un radio de 18 metros del campo."
+			],
+			"miscTags": [
+				"UBA"
+			]
+		},
+		{
+			"name": "Nathair's Mischief",
+			"source": "FTD",
+			"page": 20,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "un trozo de corteza de tarta de manzana"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Llenas un cubo de 6 metros que puedes ver dentro del alcance con magia fey y dracónica. Tira en la tabla de Oleada traviesa para determinar el efecto mágico producido, y vuelve a tirar al principio de cada uno de tus turnos hasta que el hechizo termine. Puedes mover el cubo hasta 3 metros antes de tirar.",
+				{
+					"type": "table",
+					"caption": "Mischievous Surge",
+					"colLabels": [
+						"d4",
+						"Effect"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1",
+							"El olor a tarta de manzana llena el aire, y cada criatura del cubo debe tener éxito en una tirada de salvación de Sabiduría o convertirse en {@condition charmed} por ti hasta el inicio de tu siguiente turno."
+						],
+						[
+							"2",
+							"Aparecen ramos de flores por todas partes, y cada criatura del cubo debe tener éxito en una tirada de salvación de Destreza o quedar {@condition blinded} hasta el inicio de tu siguiente turno mientras las flores les rocían agua en la cara."
+						],
+						[
+							"3",
+							"Cada criatura del cubo debe tener éxito en una tirada de salvación de Sabiduría o empezar a reírse hasta el inicio de tu siguiente turno. Una criatura risueña es {@condition incapacitated} y utiliza todo su movimiento para moverse en una dirección aleatoria."
+						],
+						[
+							"4",
+							"Gotas de melaza flotan en el cubo, haciéndolo {@quickref difficult terrain||3} hasta el inicio de tu siguiente turno."
+						]
+					]
+				}
+			],
+			"savingThrow": [
+				"dexterity",
+				"wisdom"
+			],
+			"miscTags": [
+				"RO",
+				"SGT"
+			]
+		},
+		{
+			"name": "Raulothim's Psychic Lance",
+			"source": "FTD",
+			"page": 21,
+			"level": 4,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Desatas una brillante lanza de poder psíquico desde tu frente hacia una criatura que puedas ver dentro de tu alcance. También puedes pronunciar el nombre de una criatura. Si el objetivo nombrado está dentro del alcance, se convierte en el objetivo del hechizo aunque no puedas verlo. Si el objetivo nombrado no está dentro del alcance, la lanza se disipa sin efecto.",
+				"El objetivo debe realizar una tirada de salvación de Inteligencia. Si falla la tirada de salvación, el objetivo sufre {@damage 7d6} de daño psíquico y queda {@condition incapacitated} incapacitado hasta el inicio de tu siguiente turno. Con una salvación exitosa, la criatura recibe la mitad de daño y no queda {@condition incapacitated}."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 5º nivel o superior, el daño aumenta un {@scaledamage 7d6|4-9|1d6} por cada nivel de ranura superior al 4º."
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrow": [
+				"intelligence"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Rime's Binding Ice",
+			"source": "FTD",
+			"page": 21,
+			"level": 2,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "un vial de agua de deshielo"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Una ráfaga de energía fría emana de ti en un cono de 9 metros. Cada criatura en esa área debe hacer una tirada de salvación de Constitución. Si falla la tirada de salvación, la criatura recibe {@damage 3d8} de daño por frío y se ve obstaculizada por formaciones de hielo durante 1 minuto, o hasta que ella u otra criatura a su alcance utilice una acción para romper el hielo. La velocidad de una criatura obstaculizada por el hielo se reduce a 0. Si la salvación tiene éxito, la criatura recibe la mitad de daño y no se ve obstaculizada por el hielo."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 3er nivel o superior, aumenta el daño de frío en {@scaledamage 3d8|2-9|1d8} por cada nivel de ranura superior al 2º."
+					]
+				}
+			],
+			"damageInflict": [
+				"cold"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"areaTags": [
+				"N"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Summon Draconic Spirit",
+			"source": "FTD",
+			"page": 21,
+			"level": 5,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un objeto con la imagen de un dragón grabada, de un valor mínimo de 500 gp",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Llamas a un {@creature draconic spirit|FTD}. Se manifiesta en un espacio desocupado que puedas ver dentro de su alcance. Esta forma corpórea utiliza el bloque de estadísticas Espíritu dracónico. Cuando lances este hechizo, elige una familia de dragón: cromático, gema o metálico. La criatura se asemeja a un dragón de la familia elegida, lo que determina ciertos rasgos en su bloque de estadísticas. La criatura desaparece cuando baja a 0 puntos de golpe o cuando finaliza el hechizo.",
+				"La criatura es un aliado para ti y tus compañeros. En combate, la criatura comparte tu cuenta de iniciativa, pero toma su turno inmediatamente después del tuyo. Obedece tus órdenes verbales (no requiere ninguna acción por tu parte). Si no emites ninguna, realiza la acción {@action Dodge} y utiliza su movimiento para evitar el peligro."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 6º nivel o superior, utiliza el nivel más alto siempre que el nivel del hechizo aparezca en el bloque de estadísticas."
+					]
+				}
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		}
+	]
+}

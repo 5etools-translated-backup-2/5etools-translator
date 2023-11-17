@@ -1,0 +1,924 @@
+{
+	"monster": [
+		{
+			"name": "Aberrant Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 3,
+			"summonedBySpell": "Summon Aberrant Spirit|UA2020SpellsAndMagicTattoos",
+			"summonedBySpellLevel": 4,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"special": "11 + the level of the spell (natural armor)"
+				}
+			],
+			"hp": {
+				"special": "equal the aberration's Constitution modifier + your spellcasting ability modifier + ten times the spell's level"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(beholderkin only; hover)"
+				},
+				"canHover": true
+			},
+			"str": 16,
+			"dex": 10,
+			"con": 15,
+			"int": 16,
+			"wis": 10,
+			"cha": 6,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"psychic"
+			],
+			"languages": [
+				"Deep Speech",
+				"understands the languages you speak"
+			],
+			"trait": [
+				{
+					"name": "Regeneration (Slaadi Only)",
+					"entries": [
+						"Aberracja odzyskuje 10 punktów trafień na początku swojej tury, jeśli ma przynajmniej 1 punkt trafienia."
+					]
+				},
+				{
+					"name": "Whispering Aura (Star Spawn Only)",
+					"entries": [
+						"Na początku każdej tury aberracji każda istota znajdująca się w odległości 1,5 metra od niej musi wykonać rzut obronny Mądrości przeciwko DC ochrony przed zaklęciem lub otrzymać {@damage 3d6} obrażeń psychicznych, pod warunkiem, że aberracja nie jest {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Aberracja wykonuje liczbę ataków równą połowie poziomu tego zaklęcia (zaokrągloną w dół)."
+					]
+				},
+				{
+					"name": "Eye Ray (Beholderkin Only)",
+					"entries": [
+						"{@atk rs} {@hit 3 + summonSpellLevel} do trafienia, zasięg 9 m., jedna istota. {@h}{@damage 1d8 + 3 + summonSpellLevel} obrażeń psychicznych."
+					]
+				},
+				{
+					"name": "Claws (Slaadi Only)",
+					"entries": [
+						"{@atk mw} {@hit 3 + summonSpellLevel} do trafienia, zasięg 1,5 m., jeden cel. {@h}{@damage 1d10 + 3 + summonSpellLevel} obrażeń kłutych. Jeśli celem jest stworzenie, nie może ono odzyskać punktów życia do początku następnej tury aberracji."
+					]
+				},
+				{
+					"name": "Psychic Slam (Star Spawn Only)",
+					"entries": [
+						"{@atk ms} {@hit 3 + summonSpellLevel} do trafienia, zasięg 1,5 m., jedna istota. {@h}{@damage 1d6 + 3 + summonSpellLevel} obrażeń psychicznych."
+					]
+				}
+			],
+			"traitTags": [
+				"Regeneration"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DS"
+			],
+			"damageTags": [
+				"S",
+				"Y"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Bestial Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 4,
+			"summonedBySpell": "Summon Bestial Spirit|UA2020SpellsAndMagicTattoos",
+			"summonedBySpellLevel": 2,
+			"size": [
+				"S"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"special": "11 + the level of the spell (natural armor)"
+				}
+			],
+			"hp": {
+				"special": "equal the beast's Constitution modifier + your spellcasting ability modifier + ten times the spell's level"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": {
+					"number": 30,
+					"condition": "(land only)"
+				},
+				"fly": {
+					"number": 60,
+					"condition": "(air only)"
+				},
+				"swim": {
+					"number": 30,
+					"condition": "(water only)"
+				}
+			},
+			"str": 18,
+			"dex": 11,
+			"con": 16,
+			"int": 4,
+			"wis": 14,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"languages": [
+				"understands the languages you speak"
+			],
+			"trait": [
+				{
+					"name": "Amphibious (Water Only)",
+					"entries": [
+						"Bestia może oddychać powietrzem i wodą."
+					]
+				},
+				{
+					"name": "Flyby (Air Only)",
+					"entries": [
+						"Bestia nie prowokuje ataku, gdy wylatuje poza zasięg wroga."
+					]
+				},
+				{
+					"name": "Pack Tactics (Land and Water Only)",
+					"entries": [
+						"Bestia ma przewagę w rzucie ataku przeciwko stworzeniu, jeśli przynajmniej jeden z sojuszników bestii znajduje się w promieniu 1,5 metra od stworzenia, a sojusznik nie {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Bestia wykonuje pewną liczbę ataków równą połowie poziomu tego zaklęcia (zaokrągloną w dół)."
+					]
+				},
+				{
+					"name": "Maul",
+					"entries": [
+						"{@atk mw} {@hit 4 + summonSpellLevel} do trafienia, zasięg 1,5 m., jeden cel. {@h}{@damage 1d8 + 4 + summonSpellLevel} obrażeń przebijających."
+					]
+				}
+			],
+			"attachedItems": [
+				"maul|phb"
+			],
+			"traitTags": [
+				"Amphibious",
+				"Flyby",
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Celestial Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 4,
+			"summonedBySpell": "Summon Celestial Spirit|UA2020SpellsAndMagicTattoos",
+			"summonedBySpellLevel": 5,
+			"size": [
+				"L"
+			],
+			"type": "celestial",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"special": "11 + the level of the spell (natural armor)"
+				}
+			],
+			"hp": {
+				"special": "equal the celestial's Constitution modifier + your spellcasting ability modifier + ten times the spell's level"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 40
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 16,
+			"int": 10,
+			"wis": 14,
+			"cha": 16,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"radiant"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Celestial",
+				"understands the languages you speak"
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Niebiański wykonuje liczbę ataków równą połowie poziomu tego zaklęcia (zaokrągloną w dół)."
+					]
+				},
+				{
+					"name": "Radiant Bow (Avenger Only)",
+					"entries": [
+						"{@atk rw} {@hit 2 + summonSpellLevel} do trafienia, zasięg 150/18 m., jeden cel. {@h}{@damage 2d6 + 2 + summonSpellLevel} obrażeń od promieniowania."
+					]
+				},
+				{
+					"name": "Radiant Mace (Defender Only)",
+					"entries": [
+						"{@atk mw} {@hit 3 + summonSpellLevel} do trafienia, zasięg 1,5 m., jeden cel. {@h}{@damage 1d10 + 3 + summonSpellLevel} obrażeń od promieniowania, a niebianin może wybrać siebie lub inną istotę, którą widzi w promieniu 3 metrów od celu. Wybrana istota otrzymuje tymczasowe punkty wytrzymałości równe zadanym obrażeniom, o ile nie posiada już tymczasowych punktów wytrzymałości."
+					]
+				},
+				{
+					"name": "Healing Touch (1/Day)",
+					"entries": [
+						"Niebiańska istota dotyka inną istotę. Cel magicznie odzyskuje punkty trafień równe {@dice 2d8 + summonSpellLevel}."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CE"
+			],
+			"damageTags": [
+				"R"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Elemental Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 5,
+			"summonedBySpell": "Summon Elemental Spirit|UA2020SpellsAndMagicTattoos",
+			"summonedBySpellLevel": 4,
+			"size": [
+				"M"
+			],
+			"type": "elemental",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"special": "11 + the level of the spell (natural armor)"
+				}
+			],
+			"hp": {
+				"special": "equal the elemental's Constitution modifier + your spellcasting ability modifier + ten times the spell's level"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": {
+					"number": 40,
+					"condition": "(air only hover)"
+				},
+				"burrow": {
+					"number": 40,
+					"condition": "(earth only)"
+				},
+				"swim": {
+					"number": 40,
+					"condition": "(water only)"
+				},
+				"canHover": true
+			},
+			"str": 18,
+			"dex": 15,
+			"con": 17,
+			"int": 4,
+			"wis": 10,
+			"cha": 16,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"lightning",
+				{
+					"resist": [
+						"thunder"
+					],
+					"note": "(air only)"
+				},
+				"piercing",
+				{
+					"resist": [
+						"slashing"
+					],
+					"note": "(earth only)"
+				},
+				{
+					"resist": [
+						"acid"
+					],
+					"note": "(water only)"
+				}
+			],
+			"immune": [
+				"poison",
+				{
+					"immune": [
+						"fire"
+					],
+					"note": "(fire only)"
+				}
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"unconscious"
+			],
+			"languages": [
+				"Primordial",
+				"understands the languages you speak"
+			],
+			"trait": [
+				{
+					"name": "Amorphous Form (Air, Fire, and Water Only)",
+					"entries": [
+						"Elemental może poruszać się w przestrzeni tak wąskiej, jak 1 cal szerokości, nie ściskając się."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Żywiołak wykonuje liczbę ataków równą połowie poziomu tego zaklęcia (zaokrągloną w dół)."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 4 + summonSpellLevel} do trafienia, zasięg 1,5 m., jeden cel. {@h}{@damage 1d10 + 4 + summonSpellLevel} obrażeń kłutych (tylko powietrze, ziemia i woda) lub obrażeń od ognia (tylko ogień)."
+					]
+				}
+			],
+			"traitTags": [
+				"Amorphous"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"P"
+			],
+			"damageTags": [
+				"B",
+				"F"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Fey Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 5,
+			"summonedBySpell": "Summon Fey Spirit|UA2020SpellsAndMagicTattoos",
+			"summonedBySpellLevel": 3,
+			"size": [
+				"S"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"special": "11 + the level of the spell (natural armor)"
+				}
+			],
+			"hp": {
+				"special": "equal the fey's Constitution modifier + your spellcasting ability modifier + ten times the spell's level"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 13,
+			"dex": 16,
+			"con": 14,
+			"int": 14,
+			"wis": 11,
+			"cha": 16,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"conditionImmune": [
+				"charmed"
+			],
+			"languages": [
+				"Sylvan",
+				"understands the languages you speak"
+			],
+			"trait": [
+				{
+					"name": "Fey Step",
+					"entries": [
+						"Jako dodatkową akcję, fey może magicznie teleportować się na odległość do 9 metrów do niezajętej przestrzeni, którą widzi."
+					]
+				},
+				{
+					"name": "Darkening Step (Deceitful Only)",
+					"entries": [
+						"Natychmiast po użyciu Fey Step, fey może wypełnić 1,5-metrowy sześcian w promieniu 1,5 metra od niego magiczną ciemnością, która utrzymuje się do końca następnej tury fey."
+					]
+				},
+				{
+					"name": "Ecstatic Step (Joyful Only)",
+					"entries": [
+						"Natychmiast po użyciu Fey Step, fey może wybrać istotę, którą widzi w promieniu 3 metrów od siebie i zmusić ją do udanego rzutu obronnego na Mądrość przeciwko DC ochrony przed zaklęciem lub bycia {@condition charmed} przez fey przez 1 minutę. Urok wygasa, jeśli fey lub którykolwiek z jego towarzyszy zada celowi jakiekolwiek obrażenia."
+					]
+				},
+				{
+					"name": "Impassioned Step (Furious Only)",
+					"entries": [
+						"Natychmiast po użyciu Kroku Fey, fey ma przewagę w następnym ataku, który wykona przed końcem swojej tury."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Fey wykonuje pewną liczbę ataków równą połowie poziomu tego zaklęcia (zaokrągloną w dół)."
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 3 + summonSpellLevel} do trafienia, zasięg 1,5 m., jeden cel. {@h}{@damage 1d6 + 3 + summonSpellLevel} obrażeń przebijających {@damage + 1d6} obrażeń od siły."
+					]
+				}
+			],
+			"attachedItems": [
+				"shortsword|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"S"
+			],
+			"damageTags": [
+				"O",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Fiendish Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 6,
+			"summonedBySpell": "Summon Fiendish Spirit|UA2020SpellsAndMagicTattoos",
+			"summonedBySpellLevel": 6,
+			"size": [
+				"L"
+			],
+			"type": "fiend",
+			"alignment": [
+				{
+					"alignment": [
+						"C",
+						"E"
+					],
+					"note": "Demon only"
+				},
+				{
+					"alignment": [
+						"L",
+						"E"
+					],
+					"note": "Devil only"
+				},
+				{
+					"alignment": [
+						"N",
+						"E"
+					],
+					"note": "Yugoloth only"
+				}
+			],
+			"ac": [
+				{
+					"special": "11 + the level of the spell (natural armor)"
+				}
+			],
+			"hp": {
+				"special": "equal the fiend's Constitution modifier + your spellcasting ability modifier + ten times the spell's level"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": {
+					"number": 40,
+					"condition": "(demon only)"
+				},
+				"fly": {
+					"number": 60,
+					"condition": "(devil only)"
+				}
+			},
+			"str": 13,
+			"dex": 16,
+			"con": 15,
+			"int": 10,
+			"wis": 10,
+			"cha": 16,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"fire"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"Infernal",
+				"telepathy 60 ft."
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Diabeł ma przewagę w rzutach ratunkowych przeciwko zaklęciom i innym magicznym efektom."
+					]
+				},
+				{
+					"name": "Death Throes (Demon Only)",
+					"entries": [
+						"Gdy liczba punktów życia upiora spadnie do 0 lub zaklęcie dobiegnie końca, upiór eksploduje, a każda istota w promieniu 3 metrów od niego musi wykonać rzut obronny na Zręczność przeciwko współczynnikowi DC ochrony przed zaklęciem. Istota otrzymuje {@damage 2d10 + summonSpellLevel} obrażeń od ognia w przypadku nieudanego rzutu obronnego lub połowę obrażeń w przypadku udanego rzutu obronnego."
+					]
+				},
+				{
+					"name": "Devil's Sight (Devil Only)",
+					"entries": [
+						"Magiczna ciemność nie utrudnia Czarodziejowi widzenia w ciemnościach."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Potwór wykonuje liczbę ataków równą połowie poziomu tego zaklęcia (zaokrągloną w dół)."
+					]
+				},
+				{
+					"name": "Bite (Demon Only)",
+					"entries": [
+						"{@atk mw} {@hit 3 + summonSpellLevel} do trafienia, zasięg 1,5 m., jeden cel. {@h}{@damage 1d12 + 3 + summonSpellLevel} obrażeń nekrotycznych."
+					]
+				},
+				{
+					"name": "Claws (Yugoloth Only)",
+					"entries": [
+						"{@atk mw} {@hit 3 + summonSpellLevel} do trafienia, zasięg 1,5 m., jeden cel. {@h}{@damage 1d8 + 3 + summonSpellLevel} obrażeń kłutych. Natychmiast po trafieniu lub chybieniu, czart może teleportować się na odległość do 9 metrów do niezajętej przestrzeni, którą widzi."
+					]
+				},
+				{
+					"name": "Hurl Flame (Devil Only)",
+					"entries": [
+						"{@atk rs} {@hit 3 + summonSpellLevel} do trafienia, zasięg 45 m., jeden cel. {@h}{@damage 2d6 + 3 + summonSpellLevel} obrażeń od ognia. Jeśli celem jest łatwopalny przedmiot, który nie jest noszony, również staje w ogniu."
+					]
+				}
+			],
+			"traitTags": [
+				"Death Burst",
+				"Devil's Sight",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"I",
+				"TP"
+			],
+			"damageTags": [
+				"F",
+				"N",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Shadow Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 7,
+			"summonedBySpell": "Summon Shadow Spirit|UA2020SpellsAndMagicTattoos",
+			"summonedBySpellLevel": 3,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"special": "11 + the level of the spell (natural armor)"
+				}
+			],
+			"hp": {
+				"special": "equal the shadow's Constitution modifier + your spellcasting ability modifier + ten times the spell's level"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 13,
+			"dex": 16,
+			"con": 15,
+			"int": 4,
+			"wis": 10,
+			"cha": 16,
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"necrotic"
+			],
+			"conditionImmune": [
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"understands the languages you speak"
+			],
+			"trait": [
+				{
+					"name": "Bloodthirsty Frenzy (Fury Only)",
+					"entries": [
+						"Duch ma przewagę w walce z {@condition frightened} stworzeń."
+					]
+				},
+				{
+					"name": "Shadow Stealth (Fear Only)",
+					"entries": [
+						"Przebywając w słabym świetle lub ciemności, duch może wykonać akcję Ukryj jako dodatkową akcję."
+					]
+				},
+				{
+					"name": "Weight of Ages (Despair Only)",
+					"entries": [
+						"Każda bestia lub humanoid, inny niż ty, który rozpoczyna swoją turę w odległości 1,5 metra od ducha, ma zmniejszoną prędkość o 6 metrów do początku następnej tury tej bestii lub humanoida."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Duch wykonuje pewną liczbę ataków równą połowie poziomu tego zaklęcia (zaokrągloną w dół)."
+					]
+				},
+				{
+					"name": "Chilling Rend",
+					"entries": [
+						"{@atk mw} {@hit 3 + summonSpellLevel} do trafienia, zasięg 1,5 m., jeden cel. {@h}{@damage 2d8 + 3 + summonSpellLevel} obrażeń od zimna."
+					]
+				},
+				{
+					"name": "Dreadful Scream (1/Day)",
+					"entries": [
+						"Duch krzyczy. Każda istota znajdująca się w promieniu 9 metrów od niego musi wykonać rzut obronny na Mądrość przeciwko DC ochrony przed zaklęciem lub zostać {@condition frightened} duchem przez 1 minutę. {@condition frightened} stworzenia może powtórzyć rzut obronny na koniec każdej swojej tury, kończąc efekt na sobie w przypadku sukcesu."
+					]
+				}
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"C"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Undead Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 8,
+			"summonedBySpell": "Summon Undead Spirit|UA2020SpellsAndMagicTattoos",
+			"summonedBySpellLevel": 3,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"special": "11 + the level of the spell (natural armor)"
+				}
+			],
+			"hp": {
+				"special": "equal the undead's Constitution modifier + your spellcasting ability modifier + ten times the spell's level"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 40,
+					"condition": "(ghostly only; hover)"
+				},
+				"canHover": true
+			},
+			"str": 12,
+			"dex": 16,
+			"con": 15,
+			"int": 4,
+			"wis": 10,
+			"cha": 9,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"understands the languages you speak"
+			],
+			"trait": [
+				{
+					"name": "Incorporeal Movement (Ghostly Only)",
+					"entries": [
+						"Nieumarły może stać się bezcielesny podczas poruszania się i przechodzić przez inne stworzenia i obiekty tak, jakby były {@quickref difficult terrain||3}. Jeśli zakończy swoją turę wewnątrz obiektu, zostanie przeniesiony do najbliższej wolnej przestrzeni i otrzyma {@damage 1d10} obrażeń od siły za każde przebyte 1,5 metra."
+					]
+				},
+				{
+					"name": "Festering Aura (Putrid Only)",
+					"entries": [
+						"Każda istota inna niż ty, która rozpocznie swoją turę w promieniu 1,5 metra od nieumarłego, musi wykonać udany rzut obronny na Konstytucję przeciwko DC ochrony przed zaklęciem lub zostać {@condition poisoned} do początku swojej następnej tury."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Duch wykonuje pewną liczbę ataków równą połowie poziomu tego zaklęcia (zaokrągloną w dół)."
+					]
+				},
+				{
+					"name": "Deathly Touch (Ghostly Only)",
+					"entries": [
+						"{@atk mw} {@hit 3 + summonSpellLevel} do trafienia, zasięg 1,5 m., jedna istota. {@h}{@damage 1d8 + 3 + summonSpellLevel} obrażeń nekrotycznych, a istota musi wykonać udany rzut obronny Mądrości przeciwko DC ochrony przed zaklęciem lub zostanie {@condition frightened} nieumarłym do końca następnej tury celu."
+					]
+				},
+				{
+					"name": "Grave Bolt (Skeletal Only)",
+					"entries": [
+						"{@atk rs} {@hit 3 + summonSpellLevel} do trafienia, zasięg 45 m., jeden cel. {@h}{@damage 2d8 + 3 + summonSpellLevel} obrażeń nekrotycznych."
+					]
+				},
+				{
+					"name": "Rotting Claw (Putrid Only)",
+					"entries": [
+						"{@atk mw} {@hit 3 + summonSpellLevel} do trafienia, zasięg 1,5 m., jeden cel. {@h}{@damage 1d6 + 3 + summonSpellLevel} obrażeń kłutych. Jeśli cel ma {@condition poisoned}, musi wykonać rzut obronny na Obronę Konstytucji przeciwko DC ochrony przed zaklęciem lub zostanie {@condition paralyzed} do końca swojej następnej tury."
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"O",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"hasToken": true
+		}
+	]
+}

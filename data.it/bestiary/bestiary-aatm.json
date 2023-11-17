@@ -1,0 +1,502 @@
+{
+	"_meta": {
+		"otherSources": {
+			"monster": {
+				"MPP": "AATM",
+				"MM": "AATM",
+				"MPMM": "AATM",
+				"VRGR": "AATM"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Animated Coffin",
+			"source": "AATM",
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 60,
+				"formula": "8d10 + 16"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 15,
+			"int": 3,
+			"wis": 11,
+			"cha": 3,
+			"senses": [
+				"blindsight 60 ft. (can't see beyond this radius)"
+			],
+			"passive": 10,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Se la bara animata è immobile all'inizio del combattimento, ha un vantaggio sul tiro iniziativa. Inoltre, se una creatura non ha osservato la bara muoversi o agire, deve superare una prova di Intelligenza {@dc 18} per capire che la bara è animata."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"La bara animata può arrampicarsi su superfici difficili, anche a testa in giù sui soffitti, senza dover effettuare una prova di abilità."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"La bara animata effettua due attacchi Slam."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 5} per colpire, portata 1,5 m., un bersaglio. {@h}12 ({@damage 2d8 + 3}) danni da percosse."
+					]
+				},
+				{
+					"name": "Entrap",
+					"entries": [
+						"{@atk mw} {@hit 5} per colpire, raggiungere 1,5 m., una creatura Grande o più piccola. {@h}Il bersaglio ha la condizione {@condition grappled} (fuga {@dc 13}). Finché questa presa non termina, se il bersaglio non è un Non Morto, ha la condizione {@condition restrained} e subisce 14 ({@damage 4d6}) danni da perforazione all'inizio di ogni suo turno. La bara animata può afferrare solo una creatura alla volta."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance",
+				"Spider Climb"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Factol Skall",
+			"source": "AATM",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "undead",
+				"tags": [
+					"wizard"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 210,
+				"formula": "28d8 + 84"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 11,
+			"dex": 16,
+			"con": 16,
+			"int": 20,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"con": "+9",
+				"int": "+11",
+				"wis": "+8"
+			},
+			"skill": {
+				"arcana": "+17",
+				"history": "+11",
+				"medicine": "+8",
+				"perception": "+8"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 18,
+			"resist": [
+				"cold",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned",
+				"stunned"
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "17",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Skall lancia uno dei seguenti incantesimi, che non richiedono componenti materiali e utilizzano l'Intelligenza come capacità di incantesimo (tiro salvezza {@dc 19}):"
+					],
+					"will": [
+						"{@spell detect magic}",
+						"{@spell mage hand}",
+						"{@spell prestidigitation}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell animate dead} (as an action)",
+							"{@spell dispel magic}",
+							"{@spell speak with dead}"
+						],
+						"1e": [
+							"{@spell finger of death}",
+							"{@spell plane shift} (self only)",
+							"{@spell project image}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Aura of Death",
+					"entries": [
+						"Le creature entro 9 metri da Skall hanno svantaggio sui tiri salvezza per la morte."
+					]
+				},
+				{
+					"name": "Cosmic Annihilation",
+					"entries": [
+						"Una creatura uccisa da Skall può essere riportata in vita solo tramite un incantesimo di vera resurrezione o {@spell wish}."
+					]
+				},
+				{
+					"name": "Legendary Resistance (4/Day)",
+					"entries": [
+						"Se Skall fallisce un tiro salvezza, può invece scegliere di avere successo."
+					]
+				},
+				{
+					"name": "Rejuvenation",
+					"entries": [
+						"Se Skall muore, si trasforma in polvere. Se l'orreria delle anime non è stata distrutta, Skall si riformerà all'interno dell'Obitorio in {@dice 1d10} giorni. Appare entro 1,5 metri dall'orreria."
+					]
+				},
+				{
+					"name": "Turn Resistance",
+					"entries": [
+						"Skall ha vantaggio ai tiri salvezza contro qualsiasi effetto che trasforma i non morti."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Skall effettua un attacco di Tocco Avvizzente o usa Incantesimo. Utilizza inoltre due volte Incantesimo di Morte."
+					]
+				},
+				{
+					"name": "Withering Touch",
+					"entries": [
+						"{@atk ms} {@hit 11} per colpire, portata 1,5 m., un bersaglio. {@h}32 ({@damage 6d8 + 5}) danni da freddo più 31 ({@damage 7d8}) danni necrotici; se il bersaglio è una creatura, non può recuperare punti ferita fino all'inizio del prossimo turno di Skall."
+					]
+				},
+				{
+					"name": "Death Knell",
+					"entries": [
+						"Skall punta il dito contro una creatura che può vedere nel raggio di 36 metri da sé, riempiendo la mente del bersaglio con visioni di morte e con il rintocco plangente di una campana di ferro. Il bersaglio deve riuscire in un tiro salvezza di Saggezza {@dc 19} o subire 14 ({@damage 4d6}) danni psichici e subire la condizione {@condition frightened} fino all'inizio del prossimo turno di Skall."
+					]
+				},
+				{
+					"name": "Fog of Death (1/Day)",
+					"entries": [
+						"Skall emana una nebbia mortale in una sfera di 9 metri di raggio centrata su di sé. La sfera si diffonde intorno agli angoli e la sua area è fortemente oscurata. La nebbia dura fino all'inizio del prossimo turno di Skall e non può essere dispersa dal vento. Non si muove con lui.",
+						"Ogni creatura che entra nella nebbia per la prima volta in un turno o che inizia il proprio turno deve effettuare un tiro salvezza di Costituzione {@dc 19}, subendo 28 ({@damage 8d6}) danni necrotici e 28 ({@damage 8d6}) danni da veleno in caso di tiro salvezza fallito, o la metà dei danni in caso di tiro salvezza riuscito. Un umanoide medio o più piccolo ucciso da questo danno diventa uno zombi sotto il controllo di Skall. Lo zombi agisce su iniziativa di Skall, ma subito dopo il suo turno. In assenza di altri comandi, lo zombi cerca di uccidere qualsiasi creatura non morta che incontra."
+					]
+				}
+			],
+			"reactionHeader": [
+				"Skall can take up to three reactions per round but only one per turn."
+			],
+			"reaction": [
+				{
+					"name": "Baleful Counterspell",
+					"entries": [
+						"Skall digrigna i denti per interrompere una creatura che può vedere entro 18 metri da sé e che sta lanciando un incantesimo. Se l'incantesimo è di 4° livello o inferiore, fallisce e non ha effetto. Se l'incantesimo è di 5° livello o superiore, Skall effettua una prova di Intelligenza ({@dc 10} + il livello dell'incantesimo). Se la prova ha successo, l'incantesimo fallisce e non ha effetto. Qualunque sia il livello dell'incantesimo, l'incantatore subisce 10 ({@damage 3d6}) danni necrotici se l'incantesimo fallisce."
+					]
+				},
+				{
+					"name": "Near-Death Experience",
+					"entries": [
+						"In risposta a un attacco, Skall si teletrasporta, insieme all'equipaggiamento che indossa o trasporta, fino a 9 metri in uno spazio non occupato che riesce a vedere."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Rejuvenation",
+				"Turn Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"C",
+				"I",
+				"N",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Heralds of Dust Exorcist",
+			"source": "AATM",
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				13,
+				{
+					"ac": 16,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 112,
+				"formula": "15d8 + 45"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 16,
+			"con": 16,
+			"int": 17,
+			"wis": 14,
+			"cha": 11,
+			"save": {
+				"int": "+6",
+				"wis": "+5",
+				"cha": "+3"
+			},
+			"skill": {
+				"arcana": "+6",
+				"perception": "+5",
+				"religion": "+6"
+			},
+			"senses": [
+				"truesight 60 ft."
+			],
+			"passive": 15,
+			"resist": [
+				"necrotic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common plus three more languages"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"L'esorcista lancia uno dei seguenti incantesimi, che non richiedono componenti materiali e utilizzano l'Intelligenza come capacità di incantesimo (tiro salvezza {@dc 14}, {@hit 6} per colpire con gli attacchi dell'incantesimo):",
+						"Su volontà: individuare il male e il bene, armatura da mago (solo per sé), mano da mago"
+					],
+					"daily": {
+						"2e": [
+							"{@spell protection from evil and good}",
+							"{@spell remove curse}",
+							"{@spell speak with dead}"
+						],
+						"1e": [
+							"{@spell banishment}",
+							"{@spell dispel evil and good}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Incorruptible Vessel",
+					"entries": [
+						"L'esorcista non può essere posseduto da Celestiali, Demoni o Non-morti."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"L'esorcista compie due attacchi di Esplosione di tombe."
+					]
+				},
+				{
+					"name": "Grave Burst",
+					"entries": [
+						"{@atk ms,rs} {@hit 6} per colpire, portata 1,5 m. o 36 m., un bersaglio. {@h}19 ({@damage 3d10 + 3}) danni necrotici o radianti (a scelta dell'esorcista)."
+					]
+				},
+				{
+					"name": "Admit Entity {@recharge 5}",
+					"entries": [
+						"L'esorcista scioglie il velo della morte per una creatura che può vedere entro 18 metri da sé, esponendo il bersaglio alle entità maligne. Il bersaglio deve effettuare un tiro salvezza di Carisma {@dc 14}. Se il tiro salvezza fallisce, il bersaglio subisce 36 ({@damage 8d8}) danni psichici e subisce la condizione {@condition incapacitated} per 1 minuto, durante il quale rantola e farfuglia incoerentemente con una voce che non è la sua. Se il tiro salvezza riesce, il bersaglio subisce solo la metà dei danni. Un bersaglio {@condition incapacitated} può ripetere il tiro salvezza alla fine di ogni suo turno, terminando l'effetto su se stesso in caso di successo."
+					]
+				}
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"R",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"conditionInflictSpell": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"charisma"
+			],
+			"savingThrowForcedSpell": [
+				"charisma"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

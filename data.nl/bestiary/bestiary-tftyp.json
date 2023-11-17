@@ -1,0 +1,7303 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM",
+				"VGM",
+				"MTF"
+			]
+		},
+		"internalCopies": [
+			"monster"
+		],
+		"otherSources": {
+			"monster": {
+				"MM": "TftYP",
+				"VGM": "TftYP",
+				"MTF": "TftYP"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Amphisbaena",
+			"source": "TftYP",
+			"page": 84,
+			"_copy": {
+				"name": "Giant Constrictor Snake",
+				"source": "MM",
+				"_mod": {
+					"action": {
+						"mode": "prependArr",
+						"items": {
+							"name": "Multiattack",
+							"entries": [
+								"De amphisbaena doet twee aanvallen, waarvan er maar één een vernauwende aanval kan zijn."
+							]
+						}
+					}
+				}
+			},
+			"cr": "3",
+			"actionTags": [
+				"Multiattack"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Animated Table",
+			"source": "TftYP",
+			"page": 230,
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 39,
+				"formula": "6d10 + 6"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 18,
+			"dex": 8,
+			"con": 13,
+			"int": 1,
+			"wis": 3,
+			"cha": 1,
+			"senses": [
+				"blindsight 60 ft. (blind beyond this radius)"
+			],
+			"passive": 6,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Antimagic Susceptibility",
+					"entries": [
+						"De tafel is {@condition incapacitated} terwijl in het gebied van een {@spell antimagic field}. Als de tafel het doelwit is van een {@spell dispel magic}, moet hij slagen op een grondwettelijke worp tegen de DC van de spell of hij valt {@condition unconscious} gedurende 1 minuut."
+					]
+				},
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Terwijl de tafel onbeweeglijk blijft, is hij niet te onderscheiden van een normale tafel."
+					]
+				},
+				{
+					"name": "Charge",
+					"entries": [
+						"Als de tafel minstens 6 meter recht naar een doelwit beweegt en het dan raakt met een ramaanval in dezelfde beurt, krijgt het doelwit 9 ({@damage 2d8}) extra schade door verplettering. Als het doelwit een wezen is, moet het slagen voor een {@dc 15} Sterkte reddingsworp of worden geslagen {@condition prone}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Ram",
+					"entries": [
+						"{@atk mw} {@hit 6}, bereik 1,5 m., één doelwit. {@h}13 ({@damage 2d8 + 4}) kneuzing schade."
+					]
+				}
+			],
+			"traitTags": [
+				"Antimagic Susceptibility",
+				"Charge",
+				"False Appearance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ashdra",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 158,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM",
+				"_trait": {
+					"name": "Drow",
+					"source": "PHB"
+				}
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"traitTags": [
+				"Fey Ancestry",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"C",
+				"E",
+				"X"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Bandagh",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 159,
+			"_copy": {
+				"name": "Orc",
+				"source": "MM"
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Belak the Outcast",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 9,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				11,
+				{
+					"ac": 16,
+					"condition": "with {@spell barkskin}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 27,
+				"formula": "5d8 + 5"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 12,
+			"con": 13,
+			"int": 12,
+			"wis": 15,
+			"cha": 11,
+			"skill": {
+				"medicine": "+4",
+				"nature": "+3",
+				"perception": "+4"
+			},
+			"passive": 14,
+			"languages": [
+				"Druidic plus any two languages"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"De druïde is een spellcaster van het 4e niveau. Zijn spellcasting ability is Wisdom (spell save {@dc 12}, {@hit 4} to hit with spell attacks). Hij heeft de volgende druïde spreuken voorbereid:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft}",
+								"{@spell poison spray}",
+								"{@spell shillelagh}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell cure wounds}",
+								"{@spell entangle}",
+								"{@spell faerie fire}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell barkskin}",
+								"{@spell flaming sphere}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"action": [
+				{
+					"name": "Quarterstaff",
+					"entries": [
+						"{@atk mw} {@hit 2} te raken ({@hit 4} te raken met shillelagh), bereik 1,5 m., één doelwit. {@h}3 ({@damage 1d6}) schade door kneuzing, of 6 ({@damage 1d8 + 2}) schade door kneuzing met shillelagh of indien vastgehouden met twee handen."
+					]
+				}
+			],
+			"attachedItems": [
+				"quarterstaff|phb"
+			],
+			"languageTags": [
+				"DU",
+				"X"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"F",
+				"I",
+				"T"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Bugbear Gardener",
+			"source": "TftYP",
+			"page": 29,
+			"_copy": {
+				"name": "Bugbear",
+				"source": "MM",
+				"_mod": {
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Morningstar",
+						"items": {
+							"name": "Glaive",
+							"entries": [
+								"{@atk mw} {@hit 4} te raken, reikwijdte 3 m., één doelwit. {@h}13 ({@damage 2d10 + 2}) schade door snijden."
+							]
+						}
+					}
+				}
+			},
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RCH",
+				"RW",
+				"THW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Bugbear Lieutenant",
+			"source": "TftYP",
+			"page": 173,
+			"_copy": {
+				"name": "Bugbear",
+				"source": "MM",
+				"_mod": {
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Morningstar",
+						"items": {
+							"name": "Longsword",
+							"entries": [
+								"{@atk mw} {@hit 4} te raken, reikwijdte 3 m., één doelwit. {@h}11 ({@damage 2d8 + 2}) schade door snijden, of 13 ({@damage 2d10 + 2}) schade door snijden als het met beide handen wordt gebruikt."
+							]
+						}
+					}
+				}
+			},
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RCH",
+				"RW",
+				"THW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Calcryx",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 23,
+			"size": [
+				"M"
+			],
+			"type": "dragon",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 32,
+				"formula": "5d8 + 10"
+			},
+			"speed": {
+				"walk": 30,
+				"burrow": 15,
+				"fly": 60,
+				"swim": 30
+			},
+			"str": 14,
+			"dex": 10,
+			"con": 14,
+			"int": 5,
+			"wis": 10,
+			"cha": 11,
+			"save": {
+				"dex": "+2",
+				"con": "+4",
+				"wis": "+2",
+				"cha": "+2"
+			},
+			"skill": {
+				"perception": "+4",
+				"stealth": "+2"
+			},
+			"senses": [
+				"blindsight 10 ft.",
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"immune": [
+				"cold"
+			],
+			"languages": [
+				"Draconic"
+			],
+			"cr": "2",
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} te raken, reikwijdte 1,5 m., één doelwit. {@h}7 ({@damage 1d10 + 2}) doordringende schade plus 2 ({@damage 1d4}) koude schade."
+					]
+				},
+				{
+					"name": "Cold Breath {@recharge 5}",
+					"entries": [
+						"De draak ademt een ijzige hagelstraal uit in een kegel van 4,5 meter. Elk wezen in dat gebied moet een {@dc 12} grondwetsreddende worp doen en krijgt 22 ({@damage 5d8}) koude schade als de redding mislukt, of de helft als de redding slaagt."
+					]
+				}
+			],
+			"senseTags": [
+				"B",
+				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
+			],
+			"languageTags": [
+				"DR"
+			],
+			"damageTags": [
+				"C",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Centaur Mummy",
+			"source": "TftYP",
+			"page": 231,
+			"size": [
+				"L"
+			],
+			"type": "undead",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 85,
+				"formula": "10d10 + 30"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 20,
+			"dex": 12,
+			"con": 16,
+			"int": 5,
+			"wis": 14,
+			"cha": 12,
+			"save": {
+				"wis": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"vulnerable": [
+				"fire"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Sylvan"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Charge",
+					"entries": [
+						"Als de centaur mummie minstens 6 meter recht naar een doelwit beweegt en het dan raakt met een snoekaanval in dezelfde beurt, krijgt het doelwit 10 ({@damage 3d6}) extra doordringende schade."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De centaurmummie voert twee mêlee-aanvallen uit, één met zijn snoek en één met zijn hoeven, of hij valt aan met zijn snoek en gebruikt Dreadful Glare."
+					]
+				},
+				{
+					"name": "Pike",
+					"entries": [
+						"{@atk mw} {@hit 8} om te raken, reikwijdte 3 m., één doelwit. {@h}10 ({@damage 1d10 + 5}) doordringende schade."
+					]
+				},
+				{
+					"name": "Hooves",
+					"entries": [
+						"{@atk mw} {@hit 8} te raken, reikwijdte 1,5 m., één doelwit. {@h}12 ({@damage 2d6 + 5}) doordringende schade plus 10 ({@damage 3d6}) necrotische schade. Als het doelwit een wezen is, moet het slagen voor een {@dc 14} grondwetsreddende worp of vervloekt worden met mummie rot. Het vervloekte doelwit kan geen nieuwe hitpoints krijgen en het maximale aantal hitpoints neemt af met 10 ({@dice 3d6}) voor elke 24 uur die verstrijkt. Als de vloek het maximale aantal hitpoints van het doelwit tot 0 verlaagt, sterft het doelwit en verandert zijn lichaam in stof. De vloek duurt totdat deze wordt verwijderd door de {@spell remove curse} spreuk of soortgelijke magie."
+					]
+				},
+				{
+					"name": "Dreadful Glare",
+					"entries": [
+						"De centaur mummie richt zich op één wezen dat hij kan zien binnen een straal van 18 meter. Als het doelwit de mummie kan zien, moet het doelwit slagen in een {@dc 12} Wisdom saving throw tegen deze magie of {@condition frightened} worden tot het einde van de volgende beurt van de mummie. Als het doelwit faalt met 5 of meer is het ook {@condition paralyzed} voor dezelfde duur. Een doelwit dat slaagt in de reddingsworp is immuun voor de Vreselijke Blik van alle mummies (maar niet van mummieheren) voor de volgende 24 uur."
+					]
+				}
+			],
+			"attachedItems": [
+				"pike|phb"
+			],
+			"traitTags": [
+				"Charge"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"N",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"frightened",
+				"paralyzed"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Chief Nosnra",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 170,
+			"_copy": {
+				"name": "Frost Giant",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the giant",
+						"with": "Chief Nosnra",
+						"flags": "i"
+					}
+				}
+			},
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item splint armor|phb}"
+					]
+				}
+			],
+			"immune": null,
+			"conditionInflict": [],
+			"hasToken": true
+		},
+		{
+			"name": "Cloud Giant Noble",
+			"source": "TftYP",
+			"page": 206,
+			"_copy": {
+				"name": "Cloud Giant",
+				"source": "MM"
+			},
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item chain mail|phb}"
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Curran Corvalin",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 158,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM",
+				"_trait": {
+					"name": "Stout Halfling",
+					"source": "PHB"
+				}
+			},
+			"languageTags": [
+				"C",
+				"H",
+				"X"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Dragonpriest",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 16,
+			"_copy": {
+				"name": "Troll",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "troll",
+						"with": "dragonpriest",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "replaceArr",
+						"replace": "Regeneration",
+						"items": {
+							"name": "Regeneration",
+							"entries": [
+								"De drakenpriester krijgt 5 hit points terug aan het begin van zijn beurt. Als de drakenpriester zuur- of vuurschade oploopt, werkt deze eigenschap niet aan het begin van de volgende beurt van de drakenpriester. De drakenpriester sterft alleen als hij zijn beurt begint met 0 hit points en niet regenereert."
+							]
+						}
+					},
+					"action": {
+						"mode": "removeArr",
+						"names": "Multiattack"
+					}
+				}
+			},
+			"hp": {
+				"average": 30,
+				"formula": "8d10 + 40"
+			},
+			"languages": [
+				"Elvish",
+				"Draconic"
+			],
+			"cr": {
+				"cr": "5",
+				"xp": 450
+			},
+			"actionTags": [],
+			"hasToken": true
+		},
+		{
+			"name": "Dread Warrior",
+			"source": "TftYP",
+			"page": 233,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item chain mail|phb}",
+						"{@item shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 37,
+				"formula": "5d8 + 15"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 11,
+			"con": 16,
+			"int": 10,
+			"wis": 12,
+			"cha": 10,
+			"save": {
+				"wis": "+3"
+			},
+			"skill": {
+				"athletics": "+4",
+				"perception": "+3"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"Common"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Als de schade de dread warrior tot 0 hit points reduceert, moet hij een Constitution saving throw doen met een DC van 5+de opgelopen schade, tenzij de schade radiant is of van een critical hit. Bij succes zakt de krijger naar 1 hit point."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De Dread krijger doet twee mêlee aanvallen."
+					]
+				},
+				{
+					"name": "Battleaxe",
+					"entries": [
+						"{@atk mw} {@hit 4} te raken, reikwijdte 1,5 m., één doelwit. {@h}6 ({@damage 1d8 + 2}) snijdende schade, of 7 ({@damage 1d10 + 2}) snijdende schade indien met twee handen gehanteerd."
+					]
+				},
+				{
+					"name": "Javelin",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} om te raken, bereik 1,5 m. of 30/36 m., één doelwit. {@h}5 ({@damage 1d6 + 2}) doordringende schade."
+					]
+				}
+			],
+			"attachedItems": [
+				"battleaxe|phb",
+				"javelin|phb"
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Drevin",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 126,
+			"_copy": {
+				"name": "Spy",
+				"source": "MM",
+				"_trait": {
+					"name": "Stout Halfling",
+					"source": "PHB"
+				},
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the spy",
+						"with": "Drevin",
+						"flags": "i"
+					}
+				}
+			},
+			"languageTags": [
+				"H",
+				"X"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Drow Commander",
+			"source": "TftYP",
+			"page": 209,
+			"_copy": {
+				"name": "Drow Elite Warrior",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "Special Equipment",
+							"entries": [
+								"De drow draagt drie magische bouten, als volgt:",
+								{
+									"type": "list",
+									"items": [
+										"Een {@i grendel}, die {@spell hold person} uitbrengt op een doelwit dat geraakt is met de grendel, evenals op maximaal twee andere doelwitten binnen 9 meter van dat doelwit.",
+										"Een {@i bliksemschicht}, die {@spell blindness/deafness} blindheid toedient aan een doelwit dat geraakt is met de grendel, evenals maximaal twee andere doelwitten binnen 9 meter van dat doelwit.",
+										"A {@i schicht van dampen}, die {@spell stinking cloud} werpt, gecentreerd op het punt dat hij raakt"
+									]
+								},
+								"Elk van deze effecten heeft een spell save DC van 15 en een duur van 1 minuut."
+							]
+						}
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Shortsword",
+							"items": {
+								"name": "Shortsword +2",
+								"entries": [
+									"{@atk mw} {@hit 9} te raken, reikwijdte 1,5 m., één doelwit. {@h}9 ({@damage 1d6 + 6}) doordringende schade plus 10 ({@damage 3d6}) gifschade."
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Hand Crossbow",
+							"items": {
+								"name": "Hand Crossbow +1",
+								"entries": [
+									"{@atk rw} {@hit 8} om te raken, bereik 30/36 m., één doelwit. {@h}8 ({@damage 1d6 + 5}) doordringende schade en het doelwit moet slagen voor een DC 13 grondwetsreddende worp of {@condition poisoned} gedurende 1 uur. Als de reddingsworp faalt met 5 of meer, wordt het doelwit ook {@condition unconscious} terwijl {@condition poisoned} op deze manier. Het doelwit ontwaakt als het schade oploopt of als een ander wezen een actie onderneemt om het wakker te schudden."
+								]
+							}
+						}
+					]
+				}
+			},
+			"hp": {
+				"average": 110,
+				"formula": "11d8 + 22"
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Duergar Spy",
+			"source": "TftYP",
+			"page": 234,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"dwarf"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|phb|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 33,
+				"formula": "6d8 + 6"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 10,
+			"dex": 16,
+			"con": 12,
+			"int": 12,
+			"wis": 10,
+			"cha": 13,
+			"skill": {
+				"deception": "+5",
+				"insight": "+2",
+				"investigation": "+5",
+				"perception": "+4",
+				"persuasion": "+3",
+				"sleight of hand": "+5",
+				"stealth": "+7"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 14,
+			"resist": [
+				"poison"
+			],
+			"languages": [
+				"Dwarvish",
+				"Undercommon"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"In elk van zijn beurten kan de spion een bonusactie gebruiken om de actie Dash, Disengage, of Hide uit te voeren."
+					]
+				},
+				{
+					"name": "Duergar Resilience",
+					"entries": [
+						"De spion heeft voordeel bij het opslaan van worpen tegen gif, spreuken en illusies, en ook om weerstand te bieden tegen {@condition charmed} of {@condition paralyzed}."
+					]
+				},
+				{
+					"name": "Sneak Attack",
+					"entries": [
+						"Eenmaal per beurt kan de spion 7 ({@dice 2d6}) extra schade toebrengen wanneer hij een doelwit raakt met een wapenaanval en voordeel heeft op de aanvalsrol, of wanneer het doelwit binnen 1,5 meter is van een bondgenoot van de spion die niet {@condition incapacitated} is en de spion geen nadeel heeft op de aanvalsrol."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"In het zonlicht heeft de spion nadeel bij aanvalsrollen en bij wijsheidscontroles die op zicht gebaseerd zijn."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De spion maakt twee kortezwaard aanvallen."
+					]
+				},
+				{
+					"name": "Enlarge (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Gedurende 1 minuut wordt de spion op magische wijze groter, samen met alles wat hij draagt of bij zich draagt. Tijdens de vergroting is de spion Groot, verdubbelt ze haar schade-dobbelstenen bij wapenaanvallen op basis van sterkte (in de aanvallen inbegrepen) en doet ze Strengthchecks en Strength saving throws met voordeel. Als de spion de ruimte niet heeft om Large te worden, bereikt hij de maximale grootte die in de beschikbare ruimte mogelijk is."
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 5} te raken, reikwijdte 1,5 m., één doelwit. {@h}6 ({@damage 1d6 + 3}) doordringende schade, of 10 ({@damage 2d6 + 3}) doordringende schade terwijl vergroot."
+					]
+				},
+				{
+					"name": "Hand Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 5} om te raken, bereik 30/36 m., één doelwit. {@h}6 ({@damage 1d6 + 3}) doordringende schade."
+					]
+				},
+				{
+					"name": "Invisibility (Recharges after a Short or Long Rest)",
+					"entries": [
+						"De spion draait magisch {@condition invisible} totdat hij aanvalt, schade toebrengt, een spreuk uitspreekt of zijn Vergroting gebruikt, of totdat zijn {@status concentration} wordt verbroken, tot 1 uur (alsof {@status concentration||concentrating} op een spreuk). Alle uitrusting die de spion draagt of bij zich draagt is {@condition invisible} mee."
+					]
+				}
+			],
+			"attachedItems": [
+				"hand crossbow|phb",
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Sneak Attack",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"D",
+				"U"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"conditionInflict": [
+				"invisible"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Durnn",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 25,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"goblinoid"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"{@item splint armor|phb}",
+						"{@item shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 18,
+				"formula": "2d8 + 2"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 12,
+			"con": 12,
+			"int": 10,
+			"wis": 10,
+			"cha": 9,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Common",
+				"Goblin"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Martial Advantage",
+					"entries": [
+						"Eenmaal per beurt kan de kobold 7 ({@dice 2d6}) extra schade toebrengen aan een wezen dat hij raakt met een wapenaanval als dat wezen binnen 1,5 meter is van een bondgenoot van de kobold die niet {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 4} te raken, reikwijdte 1,5 m., één doelwit. {@h}5 ({@damage 1d8 + 1}) schade door snijden, of 6 ({@damage 1d10 + 2}) schade door snijden indien gebruikt met twee handen."
+					]
+				},
+				{
+					"name": "Longbow",
+					"entries": [
+						"{@atk rw} {@hit 4} om te raken, bereik 150/18 m., één doelwit. {@h}5 ({@damage 1d8 + 1}) doordringende schade."
+					]
+				}
+			],
+			"attachedItems": [
+				"longbow|phb",
+				"longsword|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"GO"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Eira",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 159,
+			"_copy": {
+				"name": "Druid",
+				"source": "MM",
+				"_trait": {
+					"name": "Wood Elf",
+					"source": "PHB"
+				},
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the druid",
+						"with": "Eira",
+						"flags": "i"
+					}
+				}
+			},
+			"traitTags": [
+				"Fey Ancestry"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Elder Black Pudding",
+			"source": "TftYP",
+			"page": 143,
+			"_copy": {
+				"name": "Black Pudding",
+				"source": "MM"
+			},
+			"size": [
+				"H"
+			],
+			"hp": {
+				"average": 130,
+				"formula": "10d12 + 30"
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Elder Giant Lizard",
+			"source": "TftYP",
+			"page": 176,
+			"_copy": {
+				"name": "Giant Crocodile",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "crocodile",
+						"with": "lizard",
+						"flags": "i"
+					}
+				}
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Erky Timbers",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 22,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"gnome"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 17,
+				"formula": "5d6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 10,
+			"con": 10,
+			"int": 10,
+			"wis": 14,
+			"cha": 11,
+			"skill": {
+				"medicine": "+4",
+				"religion": "+2"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"languages": [
+				"Common",
+				"Draconic",
+				"Gnomish",
+				"Goblin"
+			],
+			"cr": "1/4",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"De acoliet is een 1ste level spellcaster. Zijn spellcasting ability is Wisdom (spell save {@dc 12}, {@hit 4} to hit with spell attacks). De acoliet heeft de volgende cleric spreuken voorbereid:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell light}",
+								"{@spell sacred flame}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"slots": 3,
+							"spells": [
+								"{@spell bless}",
+								"{@spell cure wounds}",
+								"{@spell sanctuary}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"action": [
+				{
+					"name": "Club",
+					"entries": [
+						"{@atk mw} {@hit 2} te raken, reikwijdte 1,5 m., één doelwit. {@h}2 ({@damage 1d4}) kneuzing schade."
+					]
+				},
+				{
+					"name": "Channel Divinity: Turn Undead (1/Short Rest)",
+					"entries": [
+						"Erky presenteert zijn heilige symbool en spreekt een gebed uit waarin hij de Undead terechtwijst. Elke Ondode die Erky kan zien of horen binnen een straal van 9 meter van hem moet een {@dc 12} Wisdom saving throw doen. Als het wezen faalt in de reddingsworp, wordt het 1 minuut lang omgedraaid of totdat het schade oploopt.",
+						"Een omgedraaid wezen moet zijn beurten besteden aan het proberen zo ver mogelijk van Erky weg te gaan, en het kan niet vrijwillig naar een veld binnen 9 meter van hem gaan. Het kan ook geen reacties uitvoeren. Voor zijn actie kan hij alleen de actie Dash gebruiken of proberen te ontsnappen aan een effect dat hem verhindert om te bewegen. Als het nergens heen kan, kan het wezen de actie Uitwijken gebruiken."
+					]
+				}
+			],
+			"attachedItems": [
+				"club|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"G",
+				"GO"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"R"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Estia",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 189,
+			"_copy": {
+				"name": "Cloud Giant",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the giant",
+						"with": "Estia",
+						"flags": "i"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Morningstar",
+							"items": {
+								"name": "Morningstar +2",
+								"entries": [
+									"{@atk mw} {@hit 14} te raken, reikwijdte 3 m., één doelwit. {@h}23 ({@damage 3d8 + 10}) doordringende schade."
+								]
+							}
+						}
+					]
+				}
+			},
+			"immune": [
+				"cold"
+			],
+			"spellcasting": null,
+			"trait": null,
+			"traitTags": [],
+			"spellcastingTags": [],
+			"hasToken": true
+		},
+		{
+			"name": "Fire Giant Royal Headsman",
+			"source": "TftYP",
+			"page": 201,
+			"_copy": {
+				"name": "Fire Giant",
+				"source": "MM",
+				"_mod": {
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"De reus doet twee Greataxe aanvallen."
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Greatsword",
+							"items": {
+								"name": "Greataxe +2",
+								"entries": [
+									"{@atk mw} {@hit 13} om te raken, reikwijdte 3 m., één doelwit. {@h}28 ({@damage 3d12 + 9}) schade door snijden."
+								]
+							}
+						}
+					]
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Fire Giant Servant",
+			"source": "TftYP",
+			"page": 171,
+			"_copy": {
+				"name": "Hill Giant",
+				"source": "MM",
+				"_mod": {
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"De reus doet twee langezwaard aanvallen."
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Greatclub",
+							"items": {
+								"name": "Longsword",
+								"entries": [
+									"{@atk mw} {@hit 8} te raken, reikwijdte 3 m., één doelwit. {@h}18 ({@damage 3d8 + 5}) schade door snijden, of 21 ({@damage 3d10 + 5}) schade door snijden als het met beide handen wordt gebruikt."
+								]
+							}
+						}
+					]
+				}
+			},
+			"immune": [
+				"fire"
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Flying Shield",
+			"source": "TftYP",
+			"page": 224,
+			"_copy": {
+				"name": "Flying Sword",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "sword",
+						"with": "shield",
+						"flags": "i"
+					}
+				}
+			},
+			"action": null,
+			"miscTags": [],
+			"hasToken": true
+		},
+		{
+			"name": "Four-Armed Gargoyle",
+			"source": "TftYP",
+			"page": 129,
+			"size": [
+				"M"
+			],
+			"type": "elemental",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 63,
+				"formula": "7d8 + 21"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 60
+			},
+			"str": 15,
+			"dex": 11,
+			"con": 16,
+			"int": 6,
+			"wis": 11,
+			"cha": 7,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"Terran"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Hoewel de waterspuwer onbeweeglijk blijft, is hij niet te onderscheiden van een levenloos standbeeld."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De waterspuwer doet drie aanvallen: één met zijn beet en twee met zijn klauwen."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} te raken, reikwijdte 1,5 m., één doelwit. {@h}5 ({@damage 1d6 + 2}) doordringende schade."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 4} om te raken, reikwijdte 1,5 m., één doelwit. {@h}5 ({@damage 1d6 + 2}) schade door snijden."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"T"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Frost Giant Servant",
+			"source": "TftYP",
+			"page": 187,
+			"_copy": {
+				"name": "Hill Giant",
+				"source": "MM"
+			},
+			"immune": [
+				"cold"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Gargantuan Rug of Smothering",
+			"source": "TftYP",
+			"page": 56,
+			"_copy": {
+				"name": "Rug of Smothering",
+				"source": "MM"
+			},
+			"size": [
+				"G"
+			],
+			"hp": {
+				"average": 63,
+				"formula": "6d20"
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Giant Crayfish",
+			"source": "TftYP",
+			"page": 235,
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 45,
+				"formula": "7d10 + 7"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 15,
+			"dex": 13,
+			"con": 13,
+			"int": 1,
+			"wis": 9,
+			"cha": 3,
+			"skill": {
+				"stealth": "+3"
+			},
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 9,
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"De reuzenkreeft kan lucht en water inademen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De reuzenkreeft doet twee klauw aanvallen."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 4} te raken, bereik 1,5 m., één doelwit. {@h}7 ({@damage 1d10 + 2}) stompschade, en het doelwit is {@condition grappled} (ontsnapping {@dc 12}). De rivierkreeft heeft twee klauwen die elk slechts één doelwit kunnen grijpen."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Giant Ice Toad",
+			"source": "TftYP",
+			"page": 235,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "7d10 + 14"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 13,
+			"con": 14,
+			"int": 8,
+			"wis": 10,
+			"cha": 6,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"cold"
+			],
+			"languages": [
+				"Ice Toad"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"De pad kan lucht en water inademen."
+					]
+				},
+				{
+					"name": "Cold Aura",
+					"entries": [
+						"Elk wezen dat zijn beurt begint binnen 3 meter van de pad krijgt 5 ({@damage 1d10}) koudeschade."
+					]
+				},
+				{
+					"name": "Standing Leap",
+					"entries": [
+						"De pad kan verspringen tot 6 meter en hoogspringen tot 3 meter, met of zonder renstart."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} te raken, bereik 1,5 m., één doelwit. {@h}10 ({@damage 2d6 + 3}) doordringende schade, en het doelwit is {@condition grappled} (ontsnappen {@dc 13}). Tot deze houdgreep eindigt, is het doelwit {@condition restrained} en kan de pad geen ander doelwit bijten."
+					]
+				},
+				{
+					"name": "Swallow",
+					"entries": [
+						"{@atk mw} {@hit 5} om te raken, bereik 1,5 m., één Medium of kleiner wezen dat de pad vastgrijpt. {@h}10 ({@damage 2d6 + 3}) doordringende schade, het doel wordt opgeslokt en de houdgreep eindigt. Het ingeslikte doelwit is {@condition blinded} en {@condition restrained}, het heeft totale dekking tegen aanvallen en andere effecten buiten de pad, en het krijgt 10 ({@damage 3d6}) zure schade en 11 ({@damage 2d10}) koude schade aan het begin van elke beurt van de pad. De pad kan maar één doelwit tegelijk laten inslikken.",
+						"Als de pad sterft, wordt een ingeslikt wezen er niet langer {@condition restrained} door geraakt en kan het uit het lijk ontsnappen met 1,5 meter beweging en {@condition prone} ontsnappen."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Swallow"
+			],
+			"languageTags": [
+				"OTH"
+			],
+			"damageTags": [
+				"A",
+				"C",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded",
+				"grappled",
+				"restrained"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Giant Lightning Eel",
+			"source": "TftYP",
+			"page": 236,
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 42,
+				"formula": "5d10 + 15"
+			},
+			"speed": {
+				"walk": 5,
+				"swim": 30
+			},
+			"str": 11,
+			"dex": 17,
+			"con": 16,
+			"int": 2,
+			"wis": 12,
+			"cha": 3,
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"lightning"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Water Breathing",
+					"entries": [
+						"De paling kan alleen onder water ademen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De aal doet twee bijt aanvallen."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} te raken, reikwijdte 1,5 m., één doelwit. {@h}10 ({@damage 2d6 + 3}) doordringende schade plus 4 ({@damage 1d8}) bliksemschade."
+					]
+				},
+				{
+					"name": "Lightning Jolt {@recharge 5}",
+					"entries": [
+						"Eén wezen dat de aal aanraakt binnen 1,5 meter buiten het water, of elk wezen binnen 4,5 meter in een waterlichaam, moet een {@dc 12} reddingsslag uitvoeren. Als de redding mislukt, krijgt het doelwit 13 ({@damage 3d8}) bliksemschade. Als het doelwit iets van deze schade oploopt, is het doelwit {@condition stunned} tot het einde van de volgende beurt van de paling. Als de save slaagt, krijgt het doelwit half zoveel schade en is het niet {@condition stunned}."
+					]
+				}
+			],
+			"traitTags": [
+				"Water Breathing"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"L",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Giant Skeleton",
+			"source": "TftYP",
+			"page": 236,
+			"otherSources": [
+				{
+					"source": "DC"
+				},
+				{
+					"source": "SDW"
+				},
+				{
+					"source": "IMR"
+				}
+			],
+			"size": [
+				"H"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 115,
+				"formula": "10d12 + 50"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 21,
+			"dex": 10,
+			"con": 20,
+			"int": 4,
+			"wis": 6,
+			"cha": 6,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 8,
+			"immune": [
+				"poison"
+			],
+			"vulnerable": [
+				"bludgeoning"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"understands Giant but can't speak"
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "Evasion",
+					"entries": [
+						"Als het skelet onderhevig is aan een effect dat het toestaat om een reddingsworp te doen om slechts de helft van de schade te nemen, neemt het in plaats daarvan geen schade als het slaagt op de reddingsworp, en slechts de helft van de schade als het niet slaagt."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Het skelet heeft voordeel bij het redden van spreuken en andere magische effecten."
+					]
+				},
+				{
+					"name": "Turn Immunity",
+					"entries": [
+						"Het skelet is immuun voor effecten die ondoden veranderen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Het skelet doet drie kromzwaard aanvallen."
+					]
+				},
+				{
+					"name": "Scimitar",
+					"entries": [
+						"{@atk mw} {@hit 8} te raken, reikwijdte 3 m., één doelwit. {@h}15 ({@damage 3d6 + 5}) schade door snijden."
+					]
+				}
+			],
+			"attachedItems": [
+				"scimitar|phb"
+			],
+			"traitTags": [
+				"Magic Resistance",
+				"Turn Immunity"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS",
+				"GI"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Giant Subterranean Lizard",
+			"source": "TftYP",
+			"page": 236,
+			"size": [
+				"H"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 66,
+				"formula": "7d12 + 21"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 50
+			},
+			"str": 21,
+			"dex": 9,
+			"con": 17,
+			"int": 2,
+			"wis": 10,
+			"cha": 7,
+			"skill": {
+				"stealth": "+3"
+			},
+			"passive": 10,
+			"cr": "4",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De hagedis doet twee aanvallen: een met zijn beet en een met zijn staart. Eén aanval kan worden vervangen door Slikken."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} te raken, bereik 1,5 m., één doelwit. {@h}16 ({@damage 2d10 + 5}) doordringende schade en het doelwit is {@condition grappled} (ontsnappen {@dc 15}). Tot deze houdgreep eindigt, is het doelwit {@condition restrained} en kan de hagedis geen ander doelwit bijten."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 7} te raken, reikwijdte 3 m., één doelwit. {@h}12 ({@damage 2d6 + 5}) doordringende schade. Als het doelwit een wezen is, moet het slagen voor een {@dc 15} Sterkte reddingsworp of worden geslagen {@condition prone}."
+					]
+				},
+				{
+					"name": "Swallow",
+					"entries": [
+						"{@atk mw} {@hit 7} om te raken, bereik 1,5 m., één Medium of kleiner wezen dat de hagedis vastgrijpt. {@h}16 ({@damage 2d10 + 5}) doordringende schade. Het doelwit wordt opgeslokt en de houdgreep eindigt. Het ingeslikte doelwit is {@condition blinded} en {@condition restrained}, het heeft totale dekking tegen aanvallen en andere effecten buiten de hagedis, en het krijgt 10 ({@damage 3d6}) zure schade aan het begin van elke beurt van de hagedis. De hagedis kan maar één doelwit tegelijk laten inslikken.",
+						"Als de hagedis sterft, wordt een ingeslikt wezen er niet langer {@condition restrained} door geraakt en kan het uit het lijk ontsnappen met behulp van 3 meter beweging, waarbij het {@condition prone} naar buiten komt."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack",
+				"Swallow"
+			],
+			"damageTags": [
+				"A",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"blinded",
+				"grappled",
+				"prone",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Goblin Commoner",
+			"source": "TftYP",
+			"page": 24,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM",
+				"_trait": {
+					"name": "Goblin",
+					"source": "DMG"
+				}
+			},
+			"hp": {
+				"average": 3,
+				"formula": "1d6"
+			},
+			"str": 8,
+			"action": [
+				{
+					"name": "Club",
+					"entries": [
+						"{@atk mw} {@hit 1} te raken, reikwijdte 1,5 m., één doelwit. {@h}1 ({@damage 1d4 - 1}) kneuzing schade."
+					]
+				}
+			],
+			"attachedItems": [
+				"club|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"GO",
+				"X"
+			],
+			"miscTags": [
+				"MLW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Gorvan Ironheart",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 151,
+			"_copy": {
+				"name": "Priest",
+				"source": "MM",
+				"_trait": {
+					"name": "Mountain Dwarf",
+					"source": "PHB"
+				},
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the priest",
+						"with": "Gorvan",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Great Ulfe",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 42,
+			"_copy": {
+				"name": "Ogre",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the ogre",
+						"with": "Ulfe",
+						"flags": "i"
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Greatclub",
+						"items": {
+							"name": "Greataxe",
+							"entries": [
+								"{@atk mw} {@hit 6} te raken, reikwijdte 1,5 m., één doelwit. {@h}17 ({@damage 2d12 + 4}) schade door snijden."
+							]
+						}
+					}
+				}
+			},
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Greater Zombie",
+			"source": "TftYP",
+			"page": 237,
+			"otherSources": [
+				{
+					"source": "DC"
+				},
+				{
+					"source": "SDW"
+				},
+				{
+					"source": "IMR"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 97,
+				"formula": "13d8 + 39"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 10,
+			"con": 17,
+			"int": 4,
+			"wis": 6,
+			"cha": 6,
+			"save": {
+				"wis": "+1"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 8,
+			"resist": [
+				"cold",
+				"necrotic"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages it knew in life but can't speak"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Turn Resistance",
+					"entries": [
+						"De zombie heeft voordeel op saving throws tegen elk effect dat ondoden verandert."
+					]
+				},
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Als de schade de zombie tot 0 hit points reduceert, moet hij een constitutie-reddingsworp doen met een DC van 5 + de opgelopen schade, tenzij de schade radiant is of van een critical hit komt. Als hij slaagt, heeft de zombie nog maar 1 hit."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De zombie doet twee melee aanvallen."
+					]
+				},
+				{
+					"name": "Empowered Slam",
+					"entries": [
+						"{@atk mw} {@hit 7} te raken, reikwijdte 1,5 m., één doelwit. {@h}7 ({@damage 1d6 + 4}) kneuzing schade en 7 ({@damage 2d6}) necrotische schade."
+					]
+				}
+			],
+			"traitTags": [
+				"Turn Resistance",
+				"Undead Fortitude"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS",
+				"LF"
+			],
+			"damageTags": [
+				"B",
+				"N"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Grenl",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 25,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"goblinoid"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item leather armor|phb}",
+						"{@item shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 10,
+				"formula": "3d6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 14,
+			"con": 10,
+			"int": 10,
+			"wis": 13,
+			"cha": 8,
+			"skill": {
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"languages": [
+				"Common",
+				"Goblin"
+			],
+			"cr": "1/4",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Grenl is een 1ste level spellcaster. Haar spellcasting ability is Wisdom (spell save {@dc 11}, {@hit 3} to hit with spell attacks). Ze heeft de volgende cleric spreuken voorbereid:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell poison spray}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"slots": 2,
+							"spells": [
+								"{@spell bane}",
+								"{@spell inflict wounds}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Nimble Escape",
+					"entries": [
+						"De kobold kan de actie Terugtrekken of Verstoppen als bonusactie uitvoeren op elk van zijn beurten."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Scimitar",
+					"entries": [
+						"{@atk mw} {@hit 4}, bereik 1,5 m., één doelwit. {@h}5 ({@damage 1d6 + 2}) doordringende schade."
+					]
+				},
+				{
+					"name": "Shortbow",
+					"entries": [
+						"{@atk rw} {@hit 4}, bereik 80/96 m., één doelwit. {@h}5 ({@damage 1d6 + 2}) doordringende schade."
+					]
+				}
+			],
+			"attachedItems": [
+				"scimitar|phb",
+				"shortbow|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"GO"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"I",
+				"N"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Grutha",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 170,
+			"_copy": {
+				"name": "Hill Giant",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the giant",
+						"with": "Grutha",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Guthash",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 21,
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 16,
+				"formula": "2d6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 7,
+			"dex": 15,
+			"con": 11,
+			"int": 2,
+			"wis": 10,
+			"cha": 4,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"cr": "1/4",
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} te raken, reikwijdte 1,5 m., één doelwit. {@h}4 ({@damage 1d4 + 2}) doordringende schade. Als het doelwit een wezen is, moet het slagen voor een {@dc 10} grondwetsreddende worp of een ziekte oplopen. Tot de ziekte genezen is, kan het doelwit geen nieuwe hitpoints krijgen, behalve op magische wijze, en het maximale aantal hitpoints van het doelwit neemt elke 24 uur af met 3 ({@dice 1d6}). Als het maximale aantal hitpoints van het doelwit daalt tot 0 als gevolg van deze ziekte, sterft het doelwit."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Hedrun Arnsfirth",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 160,
+			"_copy": {
+				"name": "Deathlock Wight",
+				"source": "MTF",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the wight",
+						"with": "Hedrun",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Hill Giant Sergeant",
+			"source": "TftYP",
+			"page": 170,
+			"_copy": {
+				"name": "Hill Giant",
+				"source": "MM"
+			},
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item chain mail|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 115,
+				"formula": "10d12 + 40"
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Hill Giant Servant",
+			"source": "TftYP",
+			"page": 170,
+			"_copy": {
+				"name": "Ogre",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "ogre",
+						"with": "giant"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Hill Giant Subchief",
+			"source": "TftYP",
+			"page": 170,
+			"_copy": {
+				"name": "Stone Giant",
+				"source": "MM"
+			},
+			"trait": null,
+			"hasToken": true
+		},
+		{
+			"name": "Huge Giant Crab",
+			"source": "TftYP",
+			"page": 103,
+			"otherSources": [
+				{
+					"source": "SLW"
+				}
+			],
+			"size": [
+				"H"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 161,
+				"formula": "14d12 + 70"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 20,
+			"dex": 15,
+			"con": 20,
+			"int": 1,
+			"wis": 9,
+			"cha": 3,
+			"skill": {
+				"stealth": "+5"
+			},
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 9,
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"paralyzed"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Banded Claw",
+					"entries": [
+						"Aan een van zijn klauwen draagt de krab een met runen bedekte koperen band die hem immuun maakt voor {@condition charmed}, {@condition frightened}, en {@condition paralyzed}. De koperen band is waardeloos als schat, omdat de magie op deze krab is afgestemd."
+					]
+				},
+				{
+					"name": "Amphibious",
+					"entries": [
+						"De krab kan lucht en water inademen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 9} te raken, bereik 3 m., één doelwit. {@h}27 ({@damage 4d10 + 5}) kneuzing schade, en het doelwit is {@condition grappled}, ontsnappen {@dc 14}. De krab heeft twee klauwen die elk slechts één doelwit kunnen grijpen."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Huge Ochre Jelly",
+			"source": "TftYP",
+			"page": 225,
+			"_copy": {
+				"name": "Ochre Jelly",
+				"source": "MM"
+			},
+			"size": [
+				"H"
+			],
+			"hp": {
+				"average": 51,
+				"formula": "6d12 + 12"
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Huge Polar Bear",
+			"source": "TftYP",
+			"page": 187,
+			"_copy": {
+				"name": "Polar Bear",
+				"source": "MM"
+			},
+			"size": [
+				"H"
+			],
+			"hp": {
+				"average": 65,
+				"formula": "5d12 + 15"
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Irisoth",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 157,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM",
+				"_trait": {
+					"name": "Half-Elf",
+					"source": "PHB"
+				}
+			},
+			"traitTags": [
+				"Fey Ancestry"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"E",
+				"X"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Jarl Grugnur",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 189,
+			"_copy": {
+				"name": "Cloud Giant",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the giant",
+						"with": "Grugnur",
+						"flags": "i"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"Grugnur doet twee langezwaard aanvallen."
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Morningstar",
+							"items": {
+								"name": "Longsword +2",
+								"entries": [
+									"{@atk mw} {@hit 14} te raken, reikwijdte 3 m., één doelwit. {@h}23 ({@damage 3d8 + 10}) schade door snijden, of 26 ({@damage 3d10 + 10}) schade door snijden als het met beide handen wordt gebruikt."
+								]
+							}
+						}
+					]
+				}
+			},
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item chain mail|phb}",
+						"{@item arrow-catching shield}"
+					]
+				},
+				{
+					"ac": 20,
+					"condition": "against ranged attacks",
+					"braces": true
+				}
+			],
+			"immune": [
+				"cold"
+			],
+			"spellcasting": null,
+			"trait": null,
+			"traitTags": [],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"spellcastingTags": [],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Jot",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 15,
+			"_copy": {
+				"name": "Quasit",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the quasit",
+						"with": "Jot",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Kaarghaz",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 45,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"troglodyte"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 39,
+				"formula": "6d8 + 12"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 10,
+			"con": 14,
+			"int": 6,
+			"wis": 10,
+			"cha": 15,
+			"skill": {
+				"stealth": "+2"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Draconic",
+				"Troglodyte"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Kaarghaz is een 4de level spellcaster. Zijn tovervaardigheid is Charisma (spell save {@dc 12}, {@hit 4} to hit met spell attacks). Hij kent de volgende tovenaarsspreuken:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell fire bolt}",
+								"{@spell mage hand}",
+								"{@spell poison spray}",
+								"{@spell prestidigitation}",
+								"{@spell ray of frost}"
+							]
+						},
+						"1": {
+							"slots": 6,
+							"spells": [
+								"{@spell burning hands}",
+								"{@spell shield}",
+								"{@spell sleep}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell invisibility}",
+								"{@spell scorching ray}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Chameleon Skin",
+					"entries": [
+						"De troglodyte heeft voordeel op Dexterity (Stealth) controles gemaakt om te verbergen."
+					]
+				},
+				{
+					"name": "Stench",
+					"entries": [
+						"Elk ander wezen dan een troglodyte dat zijn beurt begint binnen 1,5 meter van de troglodyte moet slagen in een {@dc 12} Constitution saving throw of {@condition poisoned} tot het begin van de volgende beurt van het wezen. Bij een succesvolle reddingsworp is het wezen immuun voor de stank van alle troglodieten gedurende 1 uur."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"In zonlicht heeft de troglodyte nadeel bij aanvalsrollen en bij wijsheidscontroles ({@skill Perception}) die op zicht gebaseerd zijn."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De troglodyte doet drie aanvallen: één met zijn beet en twee met zijn klauwen."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} te raken, reikwijdte 1,5 m., één doelwit. {@h}4 ({@damage 1d4 + 2}) doordringende schade."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 4} te raken, reikwijdte 1,5 m., één doelwit. {@h}4 ({@damage 1d4 + 2}) schade door snijden."
+					]
+				}
+			],
+			"traitTags": [
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DR",
+				"OTH"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"damageTagsSpell": [
+				"C",
+				"F",
+				"I"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"poisoned"
+			],
+			"conditionInflictSpell": [
+				"invisible",
+				"unconscious"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Kalka-Kylla",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 238,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 85,
+				"formula": "10d10 + 30"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 17,
+			"dex": 12,
+			"con": 16,
+			"int": 15,
+			"wis": 16,
+			"cha": 12,
+			"skill": {
+				"deception": "+3",
+				"insight": "+5",
+				"stealth": "+3"
+			},
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 13,
+			"languages": [
+				"Olman"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"Kalka-Kylla kan lucht en water inademen."
+					]
+				},
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Terwijl Kalka-Kylla roerloos en verborgen in zijn schild blijft, is hij niet te onderscheiden van een gepolijste kei."
+					]
+				},
+				{
+					"name": "Shell",
+					"entries": [
+						"Kalka-Kylla kan een bonusactie gebruiken om zijn schild in te trekken of uit zijn schild te komen. In ingetrokken toestand krijgt de Kalka-Kylla een bonus van +4 op AC, en hij heeft een snelheid van 0 en kan niet profiteren van snelheidsbonussen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Kalka-Kylla doet twee klauw aanvallen."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 5} om te raken, reikwijdte 1,5 m., één doelwit. {@h}10 ({@damage 2d6 + 3}) kneuzing schade, en als het doelwit een Medium of kleiner wezen is, is het {@condition grappled} (ontsnappen {@dc 13}). Tot deze houdgreep eindigt, is het doelwit {@condition restrained}. Kalka-Kylla heeft twee klauwen die elk slechts één doelwit kunnen vastgrijpen."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious",
+				"False Appearance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"OTH"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Kelpie",
+			"source": "TftYP",
+			"page": 238,
+			"size": [
+				"M"
+			],
+			"type": "plant",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 67,
+				"formula": "9d8 + 27"
+			},
+			"speed": {
+				"walk": 10,
+				"swim": 30
+			},
+			"str": 14,
+			"dex": 14,
+			"con": 16,
+			"int": 7,
+			"wis": 12,
+			"cha": 10,
+			"skill": {
+				"perception": "+3",
+				"stealth": "+4"
+			},
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"fire",
+				"bludgeoning",
+				"piercing"
+			],
+			"conditionImmune": [
+				"blinded",
+				"deafened",
+				"exhaustion"
+			],
+			"languages": [
+				"Common",
+				"Sylvan"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"De kelpie kan lucht en water inademen."
+					]
+				},
+				{
+					"name": "Seaweed Shape",
+					"entries": [
+						"De kelpie kan zijn actie gebruiken om zijn lichaam te veranderen in de vorm van een mensachtige of beest dat Klein, Middelgroot of Groot is. Zijn statistieken zijn verder ongewijzigd. De vermomming is overtuigend, tenzij de kelpie zich in fel licht bevindt of de kijker zich binnen een straal van 9 meter bevindt, in welk geval de naden tussen de zeewierstrengen zichtbaar zijn. De kelpie keert terug naar zijn ware gedaante als hij daarvoor een bonusactie onderneemt of als hij sterft."
+					]
+				},
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Hoewel de kelpie in zijn ware vorm onbeweeglijk blijft, is hij niet te onderscheiden van gewoon zeewier."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De kelpie doet twee slam aanvallen."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 4} te raken, reikwijdte 3 m., één doelwit. {@h}11 ({@damage 2d8 + 2}) doordringende schade. Als het doelwit een Medium of kleiner wezen is, is het {@condition grappled} (ontsnappen {@dc 12})."
+					]
+				},
+				{
+					"name": "Drowning Hypnosis",
+					"entries": [
+						"De kelpie kiest een mensachtige die hij kan zien binnen een straal van 45 meter. Als het doelwit de kelpie kan zien, moet het doelwit slagen op een {@dc 11} Wisdom saving throw of magisch {@condition charmed} worden terwijl de kelpie {@status concentration} aanhoudt, maximaal 10 minuten (alsof {@status concentration||concentrating} op een spreuk). Het {@condition charmed} doelwit is {@condition incapacitated}, en in plaats van zijn adem in te houden onder water, probeert het normaal te ademen en raakt onmiddellijk buiten adem, tenzij het water kan ademen. Als het {@condition charmed} doelwit meer dan 1,5 meter van de kelpie verwijderd is, moet het doelwit op zijn beurt naar de kelpie toe bewegen via de meest directe route, en proberen binnen 1,5 meter te komen. Het ontwijkt geen gelegenheidsaanvallen.",
+						"Voordat het doelwit zich in schadelijk terrein begeeft, zoals lava of een kuil, en telkens wanneer het schade oploopt door een andere bron dan de kelpie of verdrinking, kan het doelwit de reddingsworp herhalen. Een {@condition charmed} doelwit kan de reddingsworp ook herhalen aan het einde van elke beurt. Als de reddingsworp succesvol is, eindigt het effect op het doelwit.",
+						"Een doelwit dat succesvol redt, is immuun voor de hypnose van deze kelpie voor de komende 24 uur."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious",
+				"False Appearance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"charmed",
+				"grappled",
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Kelson Darktreader",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 132,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM",
+				"_trait": {
+					"name": "Half-Elf",
+					"source": "PHB"
+				}
+			},
+			"traitTags": [
+				"Fey Ancestry"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"E",
+				"X"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Kieren",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 157,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM"
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"hasToken": true
+		},
+		{
+			"name": "King Snurre",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 193,
+			"_copy": {
+				"name": "Fire Giant",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the giant",
+						"with": "Snurre",
+						"flags": "i"
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Greatsword",
+						"items": {
+							"name": "Greatsword",
+							"entries": [
+								"{@atk mw} {@hit 11} te raken, reikwijdte 3 m., één doelwit. {@h}28 ({@damage 6d6 + 7}) schade door snijden plus 7 ({@damage 2d6}) schade door vuur."
+							]
+						}
+					}
+				}
+			},
+			"hp": {
+				"average": 187,
+				"formula": "15d12 + 90"
+			},
+			"resist": [
+				"cold"
+			],
+			"languages": [
+				"Common",
+				"Giant"
+			],
+			"cr": "11",
+			"languageTags": [
+				"C",
+				"GI"
+			],
+			"damageTags": [
+				"B",
+				"F",
+				"S"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Kobold Commoner",
+			"source": "TftYP",
+			"page": 18,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM",
+				"_trait": {
+					"name": "Kobold",
+					"source": "DMG"
+				}
+			},
+			"hp": {
+				"average": 3,
+				"formula": "1d6"
+			},
+			"action": [
+				{
+					"name": "Club",
+					"entries": [
+						"{@atk mw} {@hit 1} te raken, reikwijdte 1,5 m., één doelwit. {@h}1 ({@damage 1d4 - 1}) kneuzing schade."
+					]
+				}
+			],
+			"attachedItems": [
+				"club|phb"
+			],
+			"traitTags": [
+				"Pack Tactics",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"X"
+			],
+			"miscTags": [
+				"MLW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Kobold Elite",
+			"source": "TftYP",
+			"page": 18,
+			"_copy": {
+				"name": "Kobold",
+				"source": "MM"
+			},
+			"hp": {
+				"average": 7,
+				"formula": "2d6 - 2"
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Lacedon",
+			"source": "TftYP",
+			"page": 147,
+			"otherSources": [
+				{
+					"source": "EGW"
+				}
+			],
+			"_copy": {
+				"name": "Ghoul",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "ghoul",
+						"with": "lacedon",
+						"flags": "i"
+					}
+				}
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Lahnis",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 131,
+			"_copy": {
+				"name": "Evoker",
+				"source": "VGM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the evoker",
+						"with": "Lahnis",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lesser Mummy Lord",
+			"source": "TftYP",
+			"page": 224,
+			"_copy": {
+				"name": "Mummy Lord",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Special Equipment",
+							"entries": [
+								"De mummie draagt een {@item ring of fire resistance}."
+							]
+						}
+					}
+				}
+			},
+			"resist": [
+				"fire"
+			],
+			"vulnerable": null,
+			"cr": {
+				"cr": "15",
+				"xp": 6500
+			},
+			"spellcasting": null,
+			"legendary": null,
+			"damageTagsSpell": [],
+			"spellcastingTags": [],
+			"hasToken": true
+		},
+		{
+			"name": "Lumalia",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 153,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the deva",
+						"with": "Lumalia",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Malformed Kraken",
+			"source": "TftYP",
+			"page": 239,
+			"size": [
+				"H"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 172,
+				"formula": "15d12 + 75"
+			},
+			"speed": {
+				"walk": 20,
+				"swim": 40
+			},
+			"str": 25,
+			"dex": 11,
+			"con": 20,
+			"int": 11,
+			"wis": 15,
+			"cha": 15,
+			"save": {
+				"str": "+11",
+				"con": "+9",
+				"int": "+4",
+				"wis": "+6",
+				"cha": "+6"
+			},
+			"senses": [
+				"truesight 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"lightning"
+			],
+			"conditionImmune": [
+				"frightened",
+				"paralyzed"
+			],
+			"languages": [
+				"understands Common but can't speak",
+				"telepathy 60 ft."
+			],
+			"cr": "10",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"De kraken kunnen lucht en water inademen."
+					]
+				},
+				{
+					"name": "Siege Monster",
+					"entries": [
+						"De kraken brengt dubbele schade toe aan objecten en structuren."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De kraken doet drie tentakelaanvallen. Eén daarvan kan worden vervangen door een bijtaanval, en elk van hen kan worden vervangen door Fling."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 11} te raken, reikwijdte 1,5 m., één doelwit. {@h}16 ({@damage 2d8 + 7}) doordringende schade."
+					]
+				},
+				{
+					"name": "Tentacle",
+					"entries": [
+						"{@atk mw} {@hit 11} te raken, bereik 6 m., één doelwit. {@h}14 ({@damage 2d6 + 7}) kneuzing en het doelwit is {@condition grappled} (ontsnapping {@dc 16}). Tot deze houdgreep eindigt, is het doelwit {@condition restrained}. De kraken heeft tien tentakels die elk één doelwit kunnen vastgrijpen."
+					]
+				},
+				{
+					"name": "Fling",
+					"entries": [
+						"Een middelgroot of kleiner voorwerp dat of wezen {@condition grappled} dat door de tentakels van de kraken wordt vastgehouden, wordt tot 18 meter in een willekeurige richting gegooid en geslagen {@condition prone}. Als een gegooid doelwit een vast oppervlak raakt, krijgt het doelwit 3 ({@damage 1d6}) stompschade voor elke 3 meter dat het gegooid werd. Als het doelwit naar een ander wezen wordt gegooid, moet dat wezen slagen voor een {@dc 16} Behendigheidsreddende worp of dezelfde schade oplopen en worden geslagen {@condition prone}."
+					]
+				},
+				{
+					"name": "Lightning Storm",
+					"entries": [
+						"De kraken creëert drie bliksemschichten die elk een doelwit kunnen treffen dat de kraken kan zien binnen een straal van 45 meter. Het doelwit moet een {@dc 16} vaardigheidsreddende worp doen en krijgt 16 ({@damage 3d10}) bliksemschade als de redding mislukt, of half zoveel schade als de redding slaagt."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious",
+				"Siege Monster"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Tentacles"
+			],
+			"languageTags": [
+				"C",
+				"CS",
+				"TP"
+			],
+			"damageTags": [
+				"B",
+				"L",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"prone",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Mennek Ariz",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 157,
+			"_copy": {
+				"name": "Enchanter",
+				"source": "VGM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the enchanter",
+						"with": "Mennek",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Nahual",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 91,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"demon"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 52,
+				"formula": "8d8 + 16"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 18,
+			"con": 14,
+			"int": 11,
+			"wis": 12,
+			"cha": 14,
+			"skill": {
+				"deception": "+6",
+				"insight": "+3"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"conditionImmune": [
+				"charmed"
+			],
+			"languages": [
+				"Common"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Shapechanger",
+					"entries": [
+						"De dubbelganger kan zijn actie gebruiken om te polymorpheren in een Small of Medium mensachtige die hij heeft gezien, of terug in zijn ware gedaante. Zijn statistieken, behalve zijn grootte, zijn hetzelfde in elke vorm. Alle uitrusting die hij draagt, wordt niet getransformeerd. Hij keert terug naar zijn ware gedaante als hij sterft."
+					]
+				},
+				{
+					"name": "Ambusher",
+					"entries": [
+						"In de eerste ronde van een gevecht heeft de dubbelganger voordeel bij aanvalsrollen tegen elk wezen dat hij heeft {@quickref Surprise|PHB|3|0|verrast}."
+					]
+				},
+				{
+					"name": "Surprise Attack",
+					"entries": [
+						"Als de dubbelganger een wezen verrast en het raakt met een aanval tijdens de eerste gevechtsronde, neemt het doelwit een extra 10 ({@dice 3d6}) schade van de aanval."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De dubbelganger doet twee melee aanvallen."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 6} te raken, reikwijdte 1,5 m., één doelwit. {@h}7 ({@damage 1d6 + 4}) vernietigende kracht."
+					]
+				},
+				{
+					"name": "Read Thoughts",
+					"entries": [
+						"De dubbelganger leest op magische wijze de oppervlaktegedachten van één wezen binnen een straal van 18 meter. Het effect kan door barrières heen dringen, maar 0,9 meter hout of aarde, 0,6 meter steen, 2 centimeter metaal of een dunne plaat lood houdt het tegen. Terwijl het doelwit binnen bereik is, kan de dubbelganger doorgaan met het lezen van zijn gedachten, zolang de {@status concentration} van de dubbelganger niet verbroken is (alsof {@status concentration||concentrating} van een spreuk). Tijdens het lezen van de gedachten van het doelwit heeft de dubbelganger voordeel bij Wisdom ({@skill Insight}) en Charisma ({@skill Deception}, {@skill Intimidation} en {@skill Persuasion}) controles tegen het doelwit."
+					]
+				}
+			],
+			"traitTags": [
+				"Ambusher",
+				"Shapechanger"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Nedylene",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 209,
+			"_copy": {
+				"name": "Drow Priestess of Lolth",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the drow",
+						"with": "Nedylene",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "Special Equipment",
+							"entries": [
+								"Nedylene draagt een {@item staff of swarming insects}."
+							]
+						}
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Scourge",
+						"items": {
+							"name": "Scourge +2",
+							"entries": [
+								"{@atk mw} {@hit 7} te raken, reikwijdte 1,5 m., één doelwit. {@h}7 ({@damage 1d6 + 4}) doordringende schade plus 17 ({@damage 5d6}) gifschade."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Nereid",
+			"source": "TftYP",
+			"page": 240,
+			"size": [
+				"M"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"G",
+				"NY",
+				"E"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 44,
+				"formula": "8d8 + 8"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 60
+			},
+			"str": 10,
+			"dex": 17,
+			"con": 12,
+			"int": 13,
+			"wis": 14,
+			"cha": 16,
+			"skill": {
+				"acrobatics": "+5",
+				"nature": "+3",
+				"stealth": "+5",
+				"survival": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"languages": [
+				"Aquan",
+				"Common",
+				"Elvish",
+				"Sylvan"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"De nereïde kan lucht en water inademen."
+					]
+				},
+				{
+					"name": "Aquatic Invisibility",
+					"entries": [
+						"Indien ondergedompeld in water, kan de nereïde zichzelf {@condition invisible} maken als bonusactie. Hij blijft {@condition invisible} totdat hij het water verlaat, de onzichtbaarheid beëindigt als bonusactie, of sterft."
+					]
+				},
+				{
+					"name": "Mantle Dependent",
+					"entries": [
+						"De nereïde draagt een mantel van zijdeachtige stof in de kleur van zeeschuim, die de geest van het wezen vasthoudt. De mantel heeft een AC en hit points gelijk aan die van de nereïde, maar het kledingstuk kan niet direct worden geschaad zolang de nereïde het draagt. Als de mantel wordt vernietigd, wordt de nereïde {@condition poisoned} en sterft binnen 1 uur. Een nereïde is bereid alles te doen wat in haar macht ligt om de mantel terug te krijgen als deze gestolen is, inclusief het dienen van de dief."
+					]
+				},
+				{
+					"name": "Shape Water",
+					"entries": [
+						"De nereïde kan naar believen {@spell control water} spreuken, waarvoor geen componenten nodig zijn. Zijn spreukvaardigheid hiervoor is Charisma. Dit gebruik van de spreuk heeft een bereik van 9 meter en kan een kubus water beïnvloeden die niet groter is dan 9 meter aan één kant."
+					]
+				},
+				{
+					"name": "Speak With Animals",
+					"entries": [
+						"De nereïde kan begrijpen en verbaal communiceren met beesten."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Blinding Acid",
+					"entries": [
+						"{@atk ms,rs} {@hit 5} om te raken, bereik 1,5 m. of 9 m., één doelwit. {@h}16 ({@damage 2d12 + 3}) zure schade en het doelwit is {@condition blinded} tot het begin van de volgende beurt van de nereid."
+					]
+				},
+				{
+					"name": "Drowning Kiss {@recharge 5}",
+					"entries": [
+						"De nereïde raakt één wezen aan dat hij kan zien binnen een straal van 1,5 meter. Het doelwit moet slagen voor een {@dc 13} grondwetsreddende worp of 22 ({@damage 3d12 + 3}) zure schade oplopen. Als hij faalt, raakt hij buiten adem en kan hij 1 minuut niet spreken. Aan het einde van elke beurt kan het de reddingsslag herhalen, waarbij het effect op zichzelf eindigt als het slaagt."
+					]
+				},
+				{
+					"name": "Water Lash",
+					"entries": [
+						"De nereïde zorgt ervoor dat een kubus water van 1,5 meter binnen 18 meter van hem een vorm naar keuze aanneemt en een doel treft dat hij kan zien binnen 1,5 meter van dat water. Het doelwit moet een {@dc 13} Sterkte reddingsworp doen. Als de worp niet slaagt, krijgt het 17 ({@damage 4d6 + 3}) stompschade en als het een groot of kleiner wezen is, wordt het tot 4,5 meter in een rechte lijn geduwd of wordt het geslagen {@condition prone} (naar keuze van de nereid). Als de save slaagt, krijgt het doelwit half zoveel schade en wordt het niet geduwd of geslagen {@condition prone}."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AQ",
+				"C",
+				"E",
+				"S"
+			],
+			"damageTags": [
+				"A",
+				"B"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"conditionInflict": [
+				"blinded",
+				"prone"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Nimira",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 54,
+			"_copy": {
+				"name": "Duergar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the duergar",
+						"with": "Nimira",
+						"flags": "i"
+					},
+					"action": {
+						"mode": "prependArr",
+						"items": [
+							{
+								"name": "Multiattack",
+								"entries": [
+									"Multiattack. Nimira makes two greatsword attacks."
+								]
+							},
+							{
+								"name": "Greatsword",
+								"entries": [
+									"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}9 ({@damage 2d6 + 2}) slashing damage, or 16 ({@damage 4d6 + 2}) slashing damage while enlarged."
+								]
+							}
+						]
+					}
+				}
+			},
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item splint armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "8d8 + 16"
+			},
+			"cr": "3",
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Obmi",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 196,
+			"_copy": {
+				"name": "Assassin",
+				"source": "MM",
+				"_trait": {
+					"name": "Mountain Dwarf",
+					"source": "PHB"
+				},
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the assassin",
+						"with": "Obmi",
+						"flags": "i"
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Multiattack",
+						"items": {
+							"name": "Multiattack",
+							"entries": [
+								"Obmi doet drie kortezwaard aanvallen."
+							]
+						}
+					}
+				}
+			},
+			"str": 16,
+			"cha": 16,
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ogre Skeleton",
+			"source": "TftYP",
+			"page": 54,
+			"_copy": {
+				"name": "Ogre",
+				"source": "MM",
+				"_trait": {
+					"name": "Skeleton",
+					"source": "DMG"
+				}
+			},
+			"languageTags": [
+				"C",
+				"CS",
+				"GI",
+				"LF"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Ooze Master",
+			"source": "TftYP",
+			"page": 241,
+			"size": [
+				"H"
+			],
+			"type": "undead",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 9,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 138,
+				"formula": "12d12 + 60"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 16,
+			"dex": 1,
+			"con": 20,
+			"int": 17,
+			"wis": 10,
+			"cha": 16,
+			"save": {
+				"int": "+7",
+				"wis": "+4"
+			},
+			"skill": {
+				"arcana": "+7",
+				"insight": "+4"
+			},
+			"senses": [
+				"blindsight 120 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"lightning",
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"acid",
+				"cold",
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned",
+				"prone"
+			],
+			"languages": [
+				"Common",
+				"Primordial",
+				"Thayan"
+			],
+			"cr": "10",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"De Ooze Master is een 9e level spellcaster. Zijn tovervaardigheid is intelligentie (spell save {@dc 15}, {@hit 7} to hit met spell attacks). Hij heeft de volgende tovenaarsspreuken voorbereid:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell acid splash}",
+								"{@spell friends}",
+								"{@spell mage hand}",
+								"{@spell poison spray}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell charm person}",
+								"{@spell detect magic}",
+								"{@spell magic missile}",
+								"{@spell ray of sickness}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell detect thoughts}",
+								"{@spell Melf's acid arrow}",
+								"{@spell suggestion}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell fear}",
+								"{@spell slow}",
+								"{@spell stinking cloud}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell confusion}",
+								"{@spell Evard's black tentacles}"
+							]
+						},
+						"5": {
+							"slots": 1,
+							"spells": [
+								"{@spell cloudkill}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Corrosive Form",
+					"entries": [
+						"Een wezen dat de Ooze Master aanraakt of raakt met een melee aanval terwijl het zich binnen 1,5 meter ervan bevindt, krijgt 9 ({@damage 2d8}) zure schade. Elk niet-magisch wapen dat de Ooze Master raakt, corrodeert. Na het toebrengen van schade krijgt het wapen een permanente en cumulatieve penalty van -1 op schadepogingen. Als de penalty daalt tot -5, wordt het wapen vernietigd. Niet-magische munitie die de Ooze Master raakt, wordt vernietigd na het toebrengen van schade.",
+						"De Ooze Meester kan door 2-inch dik, niet magisch hout of metaal eten in 1 ronde."
+					]
+				},
+				{
+					"name": "Instinctive Attack",
+					"entries": [
+						"Wanneer de Ooze Master een spreuk uitspreekt met een worp tijd van 1 actie, kan hij een pseudopod aanval uitvoeren als een bonus actie."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"De Ooze Master kan moeilijke oppervlakken beklimmen, inclusief ondersteboven op plafonds, zonder een vaardigheidscheck te hoeven doen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Pseudopod",
+					"entries": [
+						"{@atk mw} {@hit 7} te raken, reikwijdte 3 m., één doelwit. {@h}13 ({@damage 3d6 + 3}) schade door kneuzing plus 10 ({@damage 3d6}) schade door zuur."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Instinctive Charm",
+					"entries": [
+						"Als een wezen dat de Ooze Master kan zien een aanval op hem uitvoert binnen een straal van 9 meter, kan de Ooze Master een reactie gebruiken om de aanval af te leiden als een ander wezen binnen het bereik van de aanval is. De aanvaller moet een {@dc 15} Wisdom saving throw doen. Als de aanval mislukt, richt de aanvaller zich op het wezen dat het dichtst bij hem is, exclusief zichzelf of de Ooze Master. Als er meerdere wezens het dichtst in de buurt zijn, kiest de aanvaller welk wezen het doelwit wordt. Als de save slaagt, is de aanvaller 24 uur immuun voor deze Instinctieve Charme. Wezens die geen {@condition charmed} kunnen zijn, zijn immuun voor dit effect."
+					]
+				}
+			],
+			"traitTags": [
+				"Spider Climb"
+			],
+			"senseTags": [
+				"B"
+			],
+			"languageTags": [
+				"C",
+				"OTH",
+				"P"
+			],
+			"damageTags": [
+				"A",
+				"B"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"I",
+				"O"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"frightened",
+				"poisoned",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Orc Commoner",
+			"source": "TftYP",
+			"page": 167,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM",
+				"_trait": {
+					"name": "Orc",
+					"source": "DMG"
+				}
+			},
+			"traitTags": [
+				"Aggressive"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"O",
+				"X"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Oussa",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 157,
+			"_copy": {
+				"name": "Yuan-ti Malison (Type 3)",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the yuan-ti",
+						"with": "Oussa",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Phaia",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 132,
+			"_copy": {
+				"name": "Necromancer",
+				"source": "VGM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the necromancer",
+						"with": "Phaia",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Reduced-Threat Aboleth",
+			"source": "TftYP",
+			"page": 113,
+			"_copy": {
+				"name": "Aboleth",
+				"source": "MM",
+				"_trait": {
+					"name": "Reduced Threat",
+					"source": "TftYP"
+				}
+			},
+			"damageTagsLegendary": [],
+			"hasToken": true
+		},
+		{
+			"name": "Reduced-Threat Basilisk",
+			"source": "TftYP",
+			"page": 113,
+			"_copy": {
+				"name": "Basilisk",
+				"source": "MM",
+				"_trait": {
+					"name": "Reduced Threat",
+					"source": "TftYP"
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Reduced-Threat Behir",
+			"source": "TftYP",
+			"page": 113,
+			"_copy": {
+				"name": "Behir",
+				"source": "MM",
+				"_trait": {
+					"name": "Reduced Threat",
+					"source": "TftYP"
+				},
+				"_mod": {
+					"action": {
+						"mode": "removeArr",
+						"names": [
+							"Constrict",
+							"Swallow"
+						]
+					}
+				}
+			},
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"damageTags": [
+				"L",
+				"P"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Reduced-Threat Beholder",
+			"source": "TftYP",
+			"page": 113,
+			"_copy": {
+				"name": "Beholder",
+				"source": "MM",
+				"_trait": {
+					"name": "Reduced Threat",
+					"source": "TftYP"
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Reduced-Threat Black Pudding",
+			"source": "TftYP",
+			"page": 113,
+			"_copy": {
+				"name": "Black Pudding",
+				"source": "MM",
+				"_trait": {
+					"name": "Reduced Threat",
+					"source": "TftYP"
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Reduced-Threat Carrion Crawler",
+			"source": "TftYP",
+			"page": 113,
+			"_copy": {
+				"name": "Carrion Crawler",
+				"source": "MM",
+				"_trait": {
+					"name": "Reduced Threat",
+					"source": "TftYP"
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Reduced-Threat Clay Golem",
+			"source": "TftYP",
+			"page": 113,
+			"_copy": {
+				"name": "Clay Golem",
+				"source": "MM",
+				"_trait": {
+					"name": "Reduced Threat",
+					"source": "TftYP"
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Reduced-Threat Darkmantle",
+			"source": "TftYP",
+			"page": 113,
+			"_copy": {
+				"name": "Darkmantle",
+				"source": "MM",
+				"_trait": {
+					"name": "Reduced Threat",
+					"source": "TftYP"
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Reduced-Threat Displacer Beast",
+			"source": "TftYP",
+			"page": 113,
+			"_copy": {
+				"name": "Displacer Beast",
+				"source": "MM",
+				"_trait": {
+					"name": "Reduced Threat",
+					"source": "TftYP"
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Reduced-Threat Dragon Turtle",
+			"source": "TftYP",
+			"page": 113,
+			"_copy": {
+				"name": "Dragon Turtle",
+				"source": "MM",
+				"_trait": {
+					"name": "Reduced Threat",
+					"source": "TftYP"
+				},
+				"_mod": {
+					"action": [
+						{
+							"mode": "removeArr",
+							"names": [
+								"Tail"
+							]
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"De drakenschildpad voert drie aanvallen uit: één met zijn beet en twee met zijn klauwen."
+								]
+							}
+						}
+					]
+				}
+			},
+			"damageTags": [
+				"F",
+				"P",
+				"S"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Reduced-Threat Ettercap",
+			"source": "TftYP",
+			"page": 113,
+			"_copy": {
+				"name": "Ettercap",
+				"source": "MM",
+				"_trait": {
+					"name": "Reduced Threat",
+					"source": "TftYP"
+				}
+			},
+			"damageTags": [
+				"I",
+				"P",
+				"S"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Reduced-Threat Flesh Golem",
+			"source": "TftYP",
+			"page": 113,
+			"_copy": {
+				"name": "Flesh Golem",
+				"source": "MM",
+				"_trait": {
+					"name": "Reduced Threat",
+					"source": "TftYP"
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Reduced-Threat Glabrezu",
+			"source": "TftYP",
+			"page": 113,
+			"_copy": {
+				"name": "Glabrezu",
+				"source": "MM",
+				"_trait": {
+					"name": "Reduced Threat",
+					"source": "TftYP"
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Reduced-Threat Gray Ooze",
+			"source": "TftYP",
+			"page": 113,
+			"_copy": {
+				"name": "Gray Ooze",
+				"source": "MM",
+				"_trait": {
+					"name": "Reduced Threat",
+					"source": "TftYP"
+				}
+			},
+			"damageTags": [
+				"A",
+				"B"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Reduced-Threat Helmed Horror",
+			"source": "TftYP",
+			"page": 113,
+			"_copy": {
+				"name": "Helmed Horror",
+				"source": "MM",
+				"_trait": {
+					"name": "Reduced Threat",
+					"source": "TftYP"
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Reduced-Threat Hezrou",
+			"source": "TftYP",
+			"page": 113,
+			"_copy": {
+				"name": "Hezrou",
+				"source": "MM",
+				"_trait": {
+					"name": "Reduced Threat",
+					"source": "TftYP"
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Reduced-Threat Hook Horror",
+			"source": "TftYP",
+			"page": 113,
+			"_copy": {
+				"name": "Hook Horror",
+				"source": "MM",
+				"_trait": {
+					"name": "Reduced Threat",
+					"source": "TftYP"
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Reduced-Threat Ochre Jelly",
+			"source": "TftYP",
+			"page": 113,
+			"_copy": {
+				"name": "Ochre Jelly",
+				"source": "MM",
+				"_trait": {
+					"name": "Reduced Threat",
+					"source": "TftYP"
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Reduced-Threat Otyugh",
+			"source": "TftYP",
+			"page": 113,
+			"_copy": {
+				"name": "Otyugh",
+				"source": "MM",
+				"_trait": {
+					"name": "Reduced Threat",
+					"source": "TftYP"
+				},
+				"_mod": {
+					"action": [
+						{
+							"mode": "removeArr",
+							"names": [
+								"Tentacle Slam"
+							]
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Tentacle",
+							"items": {
+								"name": "Tentacle",
+								"entries": [
+									"{@atk mw} {@hit 6} te raken, reikwijdte 3 m., één doelwit. {@h}7 ({@damage 1d8 + 3}) kneuzing plus 4 ({@damage 1d8}) doordringende schade."
+								]
+							}
+						}
+					]
+				}
+			},
+			"conditionInflict": [
+				"poisoned"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Reduced-Threat Owlbear",
+			"source": "TftYP",
+			"page": 113,
+			"_copy": {
+				"name": "Owlbear",
+				"source": "MM",
+				"_trait": {
+					"name": "Reduced Threat",
+					"source": "TftYP"
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Reduced-Threat Peryton",
+			"source": "TftYP",
+			"page": 113,
+			"_copy": {
+				"name": "Peryton",
+				"source": "MM",
+				"_trait": {
+					"name": "Reduced Threat",
+					"source": "TftYP"
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Reduced-Threat Remorhaz",
+			"source": "TftYP",
+			"page": 113,
+			"_copy": {
+				"name": "Remorhaz",
+				"source": "MM",
+				"_trait": {
+					"name": "Reduced Threat",
+					"source": "TftYP"
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Reduced-Threat Stone Golem",
+			"source": "TftYP",
+			"page": 113,
+			"_copy": {
+				"name": "Stone Golem",
+				"source": "MM",
+				"_trait": {
+					"name": "Reduced Threat",
+					"source": "TftYP"
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Reduced-Threat Vrock",
+			"source": "TftYP",
+			"page": 113,
+			"_copy": {
+				"name": "Vrock",
+				"source": "MM",
+				"_trait": {
+					"name": "Reduced Threat",
+					"source": "TftYP"
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Reduced-Threat Wight",
+			"source": "TftYP",
+			"page": 113,
+			"_copy": {
+				"name": "Wight",
+				"source": "MM",
+				"_trait": {
+					"name": "Reduced Threat",
+					"source": "TftYP"
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Reduced-Threat Wyvern",
+			"source": "TftYP",
+			"page": 113,
+			"_copy": {
+				"name": "Wyvern",
+				"source": "MM",
+				"_trait": {
+					"name": "Reduced Threat",
+					"source": "TftYP"
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Scrag",
+			"source": "TftYP",
+			"page": 147,
+			"_copy": {
+				"name": "Troll",
+				"source": "MM"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Sea Lion",
+			"source": "TftYP",
+			"page": 242,
+			"otherSources": [
+				{
+					"source": "LR"
+				},
+				{
+					"source": "GoS",
+					"page": 252
+				}
+			],
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 90,
+				"formula": "12d10 + 24"
+			},
+			"speed": {
+				"walk": 10,
+				"swim": 40
+			},
+			"str": 17,
+			"dex": 15,
+			"con": 15,
+			"int": 3,
+			"wis": 12,
+			"cha": 8,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+5"
+			},
+			"passive": 14,
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"De zeeleeuw kan lucht en water inademen."
+					]
+				},
+				{
+					"name": "Keen Smell",
+					"entries": [
+						"De zeeleeuw heeft voordeel op Wijsheid ({@skill Perception}) controles die berusten op reuk."
+					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"De zeeleeuw heeft voordeel bij een aanvalsrol tegen een wezen als ten minste één van de bondgenoten van de zeeleeuw binnen 1,5 meter van het wezen is en de bondgenoot niet {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Swimming Leap",
+					"entries": [
+						"Met een zwemstart van 3 meter kan de zeeleeuw tot 7,5 meter ver uit of over het water springen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De zeeleeuw voert drie aanvallen uit: een bijtaanval en twee klauwaanvallen."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 6} te raken, reikwijdte 1,5 m., één doelwit. {@h}12 ({@damage 2d8 + 3}) doordringende schade."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 6} te raken, reikwijdte 1,5 m., één doelwit. {@h}12 ({@damage 2d8 + 3}) doordringende schade."
+					]
+				}
+			],
+			"altArt": [
+				{
+					"name": "Sea Lion",
+					"source": "GoS"
+				}
+			],
+			"traitTags": [
+				"Amphibious",
+				"Keen Senses",
+				"Pack Tactics"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sentient Gray Ooze",
+			"source": "TftYP",
+			"page": 158,
+			"_copy": {
+				"name": "Gray Ooze",
+				"source": "MM",
+				"_mod": {
+					"conditionImmune": {
+						"mode": "removeArr",
+						"items": "charmed"
+					}
+				}
+			},
+			"int": 5,
+			"languages": [
+				"Common"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"A",
+				"B"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Sentient Ochre Jelly",
+			"source": "TftYP",
+			"page": 158,
+			"_copy": {
+				"name": "Ochre Jelly",
+				"source": "MM",
+				"_mod": {
+					"conditionImmune": {
+						"mode": "removeArr",
+						"items": "charmed"
+					}
+				}
+			},
+			"int": 5,
+			"languages": [
+				"Common"
+			],
+			"languageTags": [
+				"C"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Shalendra Floshin",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 119,
+			"_copy": {
+				"name": "Knight",
+				"source": "MM",
+				"_trait": {
+					"name": "High Elf",
+					"source": "PHB"
+				}
+			},
+			"traitTags": [
+				"Fey Ancestry"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Sharwyn Hucrele",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 242,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"Barkskin trait"
+					]
+				}
+			],
+			"hp": {
+				"average": 13,
+				"formula": "2d8 + 4"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 13,
+			"con": 14,
+			"int": 16,
+			"wis": 14,
+			"cha": 9,
+			"skill": {
+				"arcana": "+5",
+				"insight": "+4",
+				"persuasion": "+1"
+			},
+			"passive": 12,
+			"languages": [
+				"Common",
+				"Draconic",
+				"Goblin"
+			],
+			"cr": "1/2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Sharwyn is een 1ste level spellcaster. Haar tovervaardigheid is intelligentie (spell save {@dc 13}, {@hit 5} to hit met spell attacks). Ze heeft de volgende tovenaarsspreuken voorbereid:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell light}",
+								"{@spell prestidigitation}",
+								"{@spell ray of frost}"
+							]
+						},
+						"1": {
+							"slots": 2,
+							"spells": [
+								"{@spell color spray}",
+								"{@spell magic missile}",
+								"{@spell shield}",
+								"{@spell sleep}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Barkskin",
+					"entries": [
+						"Sharwyn's AC kan niet lager zijn dan 16."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Sharwyn heeft een {@item spellbook|phb} die de spreuken bevat die in haar Spellcasting eigenschap staan, plus {@spell detect magic} en {@spell silent image}."
+					]
+				},
+				{
+					"name": "Tree Thrall",
+					"entries": [
+						"Als de Gulthias Boom sterft, sterft Sharwyn 24 uur later."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw} {@hit 4}, bereik 1,5 m., één doelwit. {@h}4 ({@damage 1d4 + 2}) doordringende schade."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"GO"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"C",
+				"O"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Sir Braford",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 243,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item chain mail|phb}",
+						"{@item shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 19,
+				"formula": "3d8 + 6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 9,
+			"con": 14,
+			"int": 10,
+			"wis": 13,
+			"cha": 14,
+			"skill": {
+				"athletics": "+5",
+				"perception": "+3"
+			},
+			"passive": 13,
+			"languages": [
+				"Common"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Barkskin",
+					"entries": [
+						"Sir Braford's AC kan niet lager zijn dan 16."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Sir Braford draagt {@item Shatterspike|tftyp}, een magisch langzwaard dat een bonus van +1 geeft op aanvals- en schadeworpen die ermee gedaan worden (inbegrepen in zijn aanval). Zie de Shatterspike-handout voor de andere eigenschappen van het voorwerp."
+					]
+				},
+				{
+					"name": "Tree Thrall",
+					"entries": [
+						"Als de Gulthias Boom sterft, sterft Sir Braford 24 uur later."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 6} te raken, reikwijdte 1,5 m., één doelwit. {@h}8 ({@damage 1d8 + 4}) schade door snijden, of 9 ({@damage 1d10 + 4}) schade door snijden indien gebruikt met twee handen."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Protection",
+					"entries": [
+						"Wanneer een wezen dat Sir Braford kan zien een ander doelwit aanvalt dat zich binnen 1,5 meter van hem bevindt, kan hij een reactie gebruiken om zijn schild te gebruiken om nadeel op te leggen op de aanvalsworp."
+					]
+				}
+			],
+			"attachedItems": [
+				"longsword|phb"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Siren",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 243,
+			"otherSources": [
+				{
+					"source": "MOT"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 38,
+				"formula": "7d8 + 7"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 10,
+			"dex": 18,
+			"con": 12,
+			"int": 13,
+			"wis": 14,
+			"cha": 16,
+			"skill": {
+				"medicine": "+4",
+				"nature": "+3",
+				"stealth": "+6",
+				"survival": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"languages": [
+				"Common",
+				"Elvish",
+				"Sylvan"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"Siren's aangeboren tovervaardigheid is Charisma (spell save {@dc 13}). Ze kan de volgende spreuken aangeboren bezweringen doen, waarvoor geen materiële componenten nodig zijn:"
+					],
+					"daily": {
+						"1e": [
+							"{@spell charm person}",
+							"{@spell fog cloud}",
+							"{@spell greater invisibility}",
+							"{@spell polymorph} (self only)"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"Siren kan lucht en water inademen."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Sirene heeft voordeel bij het redden van worpen tegen spreuken en andere magische effecten."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 6} te raken, reikwijdte 1,5 m., één doelwit. {@h}7 ({@damage 1d6 + 4}) doordringende schade."
+					]
+				},
+				{
+					"name": "Stupefying Touch",
+					"entries": [
+						"Siren raakt één wezen aan dat ze kan zien binnen 1,5 meter van haar. Het wezen moet slagen in een {@dc 13} intelligentie reddingsworp of krijgt 13 ({@damage 3d6 + 3}) psychische schade en wordt {@condition stunned} tot het begin van Sirens volgende beurt."
+					]
+				}
+			],
+			"attachedItems": [
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Amphibious",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"E",
+				"S"
+			],
+			"damageTags": [
+				"P",
+				"Y"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"invisible"
+			],
+			"savingThrowForced": [
+				"intelligence"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Snarla",
+			"group": [
+				"Lycanthropes"
+			],
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 102,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human",
+					"shapechanger"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"condition": "in humanoid form"
+				},
+				{
+					"ac": 12,
+					"from": [
+						"natural armor"
+					],
+					"condition": "in wolf and hybrid forms"
+				}
+			],
+			"hp": {
+				"average": 58,
+				"formula": "9d8 + 18"
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "(40 ft. in wolf form)"
+				}
+			},
+			"str": 15,
+			"dex": 13,
+			"con": 14,
+			"int": 16,
+			"wis": 11,
+			"cha": 10,
+			"skill": {
+				"perception": "+3"
+			},
+			"passive": 14,
+			"immune": [
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Common (can't speak in wolf form)"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Snarla is een 6e niveau spellcaster. Haar tovervaardigheid is intelligentie (spell save {@dc 14}, +6 to hit met spell attacks). Ze heeft de volgende tovenaarsspreuken voorbereid:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell fire bolt}",
+								"{@spell light}",
+								"{@spell mage hand}",
+								"{@spell shocking grasp}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell magic missile}",
+								"{@spell shield}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell mirror image}",
+								"{@spell web}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell dispel magic}",
+								"{@spell fear}",
+								"{@spell haste}",
+								"{@spell stinking cloud}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Shapechanger",
+					"entries": [
+						"De weerwolf kan zijn actie gebruiken om te polymorphen in een wolf-humanoïde hybride of in een wolf, of terug in zijn ware gedaante, die mensachtig is. Zijn statistieken, met uitzondering van zijn AC, zijn hetzelfde in elke vorm. De uitrusting die hij draagt of bij zich draagt, wordt niet getransformeerd. Hij keert terug naar zijn ware gedaante als hij sterft."
+					]
+				},
+				{
+					"name": "Keen Hearing and Smell",
+					"entries": [
+						"De weerwolf heeft voordeel op Wijsheid ({@skill Perception}) controles die op gehoor of reuk vertrouwen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack (Humanoid or Hybrid Form Only)",
+					"entries": [
+						"De weerwolf doet twee aanvallen: één met zijn beet en één met zijn klauwen of speer."
+					]
+				},
+				{
+					"name": "Bite (Wolf or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 4} te raken, reikwijdte 1,5 m., één doelwit. {@h}6 ({@damage 1d8 + 2}) doordringende schade. Als het doelwit een mensachtige is, moet deze slagen voor een {@dc 12} grondwetsreddende worp of vervloekt worden met weerwolflycantropie."
+					]
+				},
+				{
+					"name": "Claws (Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 4} te raken, reikwijdte 1,5 m., één wezen. {@h}7 ({@damage 2d4 + 2}) schade door snijden."
+					]
+				},
+				{
+					"name": "Spear (Humanoid Form Only)",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} om te raken, reikwijdte 1,5 m. of bereik 20/18 m., één wezen. {@h}5 ({@damage 1d6 + 2}) doordringende schade, of 6 ({@damage 1d8 + 2}) doordringende schade indien gebruikt met twee handen om een melee aanval uit te voeren."
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Shapechanger"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"damageTagsSpell": [
+				"F",
+				"L",
+				"O",
+				"T"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Snow Leopard",
+			"source": "TftYP",
+			"page": 183,
+			"_copy": {
+				"name": "Tiger",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "tiger",
+						"with": "leopard",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Snurrevin",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 53,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"dwarf"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item scale mail|phb}",
+						"{@item shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 45,
+				"formula": "7d8 + 14"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 14,
+			"dex": 11,
+			"con": 14,
+			"int": 14,
+			"wis": 10,
+			"cha": 9,
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"poison"
+			],
+			"languages": [
+				"Dwarvish",
+				"Undercommon"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Snurrevin is een spellcaster van het 3e niveau. Zijn tovervaardigheid is Intelligentie (spell save {@dc 12}, {@hit 4} to hit met spell attacks). Hij heeft de volgende tovenaarsspreuken voorbereid:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell fire bolt}",
+								"{@spell mage hand}",
+								"{@spell minor illusion}",
+								"{@spell shocking grasp}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell color spray}",
+								"{@spell shield}",
+								"{@spell silent image}"
+							]
+						},
+						"2": {
+							"slots": 2,
+							"spells": [
+								"{@spell hold person}",
+								"{@spell shatter}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Duergar Resilience",
+					"entries": [
+						"De duergar heeft voordeel op saving throws tegen gif, spreuken en illusies, en ook om weerstand te bieden tegen {@condition charmed} of {@condition paralyzed} zijn."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"In zonlicht heeft de duergar nadeel bij aanvalsrollen en bij wijsheidscontroles ({@skill Perception}) die op zicht gebaseerd zijn."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Enlarge (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Gedurende 1 minuut wordt de duergar magisch groter, samen met alles wat hij draagt of bij zich draagt. Tijdens de vergroting is de duergar Large, verdubbelt hij zijn schade-dobbelstenen bij wapenaanvallen op basis van kracht (in de aanvallen inbegrepen) en doet hij Strengthchecks en Strength saving throws met voordeel. Als de duergar niet de ruimte heeft om Large te worden, bereikt hij de maximaal mogelijke grootte in de beschikbare ruimte."
+					]
+				},
+				{
+					"name": "War Pick",
+					"entries": [
+						"{@atk mw} {@hit 4} te raken, reikwijdte 1,5 m., één doelwit. {@h}6 ({@damage 1d8 + 2}) doordringende schade, of 11 ({@damage 2d8 + 2}) doordringende schade terwijl vergroot."
+					]
+				},
+				{
+					"name": "Javelin",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} te raken, bereik 1,5 m. of 30/36 m., één doelwit. {@h}5 ({@damage 1d6 + 2}) doordringende schade, of 9 ({@damage 2d6 + 2}) doordringende schade terwijl vergroot."
+					]
+				},
+				{
+					"name": "Invisibility (Recharges after a Short or Long Rest)",
+					"entries": [
+						"De duergar draait magisch {@condition invisible} tot hij aanvalt, een spreuk uitspreekt of zijn Vergroting gebruikt, of tot zijn {@status concentration} wordt verbroken, tot 1 uur (alsof {@status concentration||concentrating} op een spreuk). Alle uitrusting die de duergar draagt of bij zich heeft, is {@condition invisible} mee. tegen het doelwit.t beweegt op zijn beurt naar de kelpie toe via de meest directe route, en probeert binnen 5 voet te komen. Hij vermijdt geen gelegenheidsaanvallen."
+					]
+				}
+			],
+			"attachedItems": [
+				"javelin|phb",
+				"war pick|phb"
+			],
+			"traitTags": [
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"D",
+				"U"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"F",
+				"L",
+				"T"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"invisible"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"paralyzed"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Stone Dragon Statue",
+			"source": "TftYP",
+			"page": 85,
+			"_copy": {
+				"name": "Stone Golem",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "golem",
+						"with": "statue",
+						"flags": "i"
+					}
+				}
+			},
+			"action": [
+				{
+					"name": "Steam Breath",
+					"entries": [
+						"Het standbeeld ademt stoom uit in een lijn die 9 meter lang en 3 meter breed is. Elk wezen in dat gebied moet een {@dc 15} grondwetsreddende worp doen en krijgt 7 ({@damage 2d4 + 2}) brandschade als de redding mislukt, of half zoveel schade als de redding slaagt."
+					]
+				}
+			],
+			"actionTags": [
+				"Breath Weapon"
+			],
+			"damageTags": [
+				"F"
+			],
+			"miscTags": [],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Tarul Var",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 244,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 105,
+				"formula": "14d8 + 42"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 16,
+			"con": 16,
+			"int": 19,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"con": "+8",
+				"int": "+9",
+				"wis": "+7"
+			},
+			"skill": {
+				"arcana": "+9",
+				"history": "+9",
+				"insight": "+7",
+				"perception": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 17,
+			"resist": [
+				"cold",
+				"lightning",
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Infernal",
+				"Primordial",
+				"Thayan"
+			],
+			"cr": "13",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Var is een 12e niveau spellcaster. Zijn tovervaardigheid is Intelligentie (spell save {@dc 17}, {@hit 9} to hit met spell attacks). Hij heeft de volgende tovenaarsspreuken voorbereid:",
+						"*Bezweringsspreuk van het 1e niveau of hoger."
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell fire bolt}",
+								"{@spell mage hand}",
+								"{@spell minor illusion}",
+								"{@spell prestidigitation}",
+								"{@spell ray of frost}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell detect magic}",
+								"{@spell magic missile}",
+								"{@spell shield}",
+								"{@spell unseen servant}*"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell detect thoughts}",
+								"{@spell flaming sphere}*",
+								"{@spell mirror image}",
+								"{@spell scorching ray}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell dispel magic}",
+								"{@spell fireball}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell dimension door}*",
+								"{@spell Evard's black tentacles}*"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell cloudkill}*",
+								"{@spell scrying}"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell circle of death}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Focused Conjuration",
+					"entries": [
+						"Terwijl Var {@status concentration||concentrating} bezig is met een bezweringsspreuk, kan zijn {@status concentration} niet gebroken worden als gevolg van het oplopen van schade."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Als Var faalt in een reddingsworp, kan hij kiezen om te slagen."
+					]
+				},
+				{
+					"name": "Rejuvenation",
+					"entries": [
+						"Als Var wordt vernietigd maar zijn phylactery intact blijft, krijgt Var een nieuw lichaam in {@dice 1d10} dagen, waarbij hij al zijn hitpoints terugkrijgt en weer actief wordt. Het nieuwe lichaam verschijnt binnen 1,5 meter van de phylactery."
+					]
+				},
+				{
+					"name": "Turn Resistance",
+					"entries": [
+						"Var heeft voordeel op saving throws tegen elk effect dat ondoden verandert."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Paralyzing Touch",
+					"entries": [
+						"{@atk ms} {@hit 9} om te raken, reikwijdte 1,5 m., één wezen. {@h}10 ({@damage 3d6}) koude schade. Het doelwit moet slagen in een {@dc 17} reddingsworp of {@condition paralyzed} gedurende 1 minuut. Het doelwit kan de reddingsworp herhalen aan het einde van elk van zijn beurten, waarbij het effect op zichzelf eindigt als hij slaagt."
+					]
+				},
+				{
+					"name": "Benign Transposition",
+					"entries": [
+						"Var teleporteert tot 9 meter naar een onbezette ruimte die hij kan zien. Als alternatief kan hij een ruimte binnen bereik kiezen die wordt bezet door een Klein of Medium wezen. Als dat wezen bereid is, teleporteren beide wezens en wisselen van plaats. Var kan deze eigenschap pas weer gebruiken na een lange rustpauze of nadat hij een bezweringsspreuk van 1e niveau of hoger heeft uitgesproken."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Cantrip",
+					"entries": [
+						"Var gebruikt een bezweringsformule."
+					]
+				},
+				{
+					"name": "Paralyzing Touch (Costs 2 Actions)",
+					"entries": [
+						"Var gebruikt Verlammende aanraking."
+					]
+				},
+				{
+					"name": "Frightening Gaze (Costs 2 Actions)",
+					"entries": [
+						"Var richt zijn blik op één wezen dat hij kan zien binnen een straal van 3 meter van hem. Het doelwit moet slagen in een {@dc 17} Wisdom saving throw tegen deze magie of wordt {@condition frightened} gedurende 1 minuut. Het {@condition frightened} doelwit kan de reddingsworp herhalen aan het einde van elk van zijn beurten en het effect op zichzelf beëindigen als hij slaagt. Als de reddingsworp van een doelwit succesvol is of het effect voor het doelwit eindigt, is het doelwit de komende 24 uur immuun voor de blik van Var."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Rejuvenation",
+				"Turn Resistance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"I",
+				"OTH",
+				"P"
+			],
+			"damageTags": [
+				"C"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"F",
+				"I",
+				"N",
+				"O"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"conditionInflict": [
+				"frightened",
+				"paralyzed"
+			],
+			"conditionInflictSpell": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Tecuziztecatl",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 245,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 102,
+				"formula": "12d10 + 36"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30,
+				"swim": 30
+			},
+			"str": 17,
+			"dex": 10,
+			"con": 16,
+			"int": 15,
+			"wis": 16,
+			"cha": 13,
+			"skill": {
+				"deception": "+3",
+				"stealth": "+2"
+			},
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 13,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"acid"
+			],
+			"languages": [
+				"Olman",
+				"Primordial"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"Tecuziztecatl kan lucht en water inademen."
+					]
+				},
+				{
+					"name": "Glowing",
+					"entries": [
+						"Tecuziztecatl werpt zwak licht binnen 6 meter van zichzelf."
+					]
+				},
+				{
+					"name": "Flexible",
+					"entries": [
+						"Tecuziztecatl kan in een ruimte komen die groot genoeg is voor een medium wezen zonder te knijpen."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"Tecuziztecatl kan op moeilijke oppervlakken klimmen, ook ondersteboven op plafonds, zonder dat hij daarvoor een vaardigheidscontrole hoeft te doen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Tecuziztecatl doet twee pseudopod aanvallen."
+					]
+				},
+				{
+					"name": "Pseudopod",
+					"entries": [
+						"{@atk mw} {@hit 5} te raken, reikwijdte 3 m., één doelwit. {@h}12 ({@damage 2d8 + 3}) vernietigende kracht."
+					]
+				},
+				{
+					"name": "Spit Acid {@recharge 4}",
+					"entries": [
+						"Tecuziztecatl ademt zuur uit in een lijn van 9 meter die 1,5 meter breed is. Elk wezen in die lijn moet een {@dc 13} vaardigheidsreddende worp doen en krijgt 18 ({@damage 4d8}) zure schade als de redding mislukt, of de helft als de redding slaagt."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious",
+				"Spider Climb"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"OTH"
+			],
+			"damageTags": [
+				"A",
+				"B"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Thayan Apprentice",
+			"source": "TftYP",
+			"page": 245,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"NX",
+				"C",
+				"NY",
+				"E"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 27,
+				"formula": "5d8 + 5"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 12,
+			"int": 15,
+			"wis": 13,
+			"cha": 11,
+			"skill": {
+				"arcana": "+4"
+			},
+			"passive": 11,
+			"languages": [
+				"Common",
+				"Thayan"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"De leerling is een tovenaar van het 4e niveau. Zijn tovervaardigheid is Intelligentie (spell save {@dc 12}, {@hit 4} to hit met spell attacks). Hij heeft de volgende tovenaarsspreuken voorbereid:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell fire bolt}",
+								"{@spell mage hand}",
+								"{@spell prestidigitation}",
+								"{@spell shocking grasp}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell burning hands}",
+								"{@spell detect magic}",
+								"{@spell mage armor}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell blur}",
+								"{@spell scorching ray}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Doomvault Devotion",
+					"entries": [
+						"Binnen de Doomvault, heeft de leerling voordeel op saving throws tegen {@condition charmed} of {@condition frightened} zijn."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} om te raken, reikwijdte 1,5 m. of bereik 20/18 m., één doelwit. {@h}4 ({@damage 1d4 + 2}) doordringende schade."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"languageTags": [
+				"C",
+				"OTH"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"F",
+				"L"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Thayan Warrior",
+			"source": "TftYP",
+			"page": 246,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"NX",
+				"C",
+				"NY",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item chain shirt|phb}",
+						"{@item shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "8d8 + 16"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 13,
+			"con": 14,
+			"int": 10,
+			"wis": 11,
+			"cha": 11,
+			"skill": {
+				"perception": "+2"
+			},
+			"passive": 12,
+			"languages": [
+				"Common",
+				"Thayan"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Doomvault Devotion",
+					"entries": [
+						"Binnen de Doomvault, heeft de krijger voordeel op saving throws tegen {@condition charmed} of {@condition frightened} zijn."
+					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"De krijger heeft voordeel bij een aanvalsrol tegen een wezen als minstens één van de bondgenoten van de krijger zich binnen 1,5 meter van het wezen bevindt en de bondgenoot niet {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De krijger doet twee melee aanvallen."
+					]
+				},
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 5} te raken, reikwijdte 1,5 m., één doelwit. {@h}7 ({@damage 1d8 + 3}) schade door snijden, of 8 ({@damage 1d10 + 3}) schade door snijden indien gebruikt met twee handen."
+					]
+				},
+				{
+					"name": "Javelin",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} te raken, bereik 1,5 m. of 30/36 m., één doelwit. {@h}6 ({@damage 1d6 + 3}) doordringende schade."
+					]
+				}
+			],
+			"attachedItems": [
+				"javelin|phb",
+				"longsword|phb"
+			],
+			"traitTags": [
+				"Pack Tactics"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"OTH"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "The Keeper",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 173,
+			"_copy": {
+				"name": "Stone Giant",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "giant",
+						"with": "Keeper",
+						"flags": "i"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"De Wachter voert twee strijdbijlaanvallen uit."
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Greatclub",
+							"items": {
+								"name": "Battleaxe +2",
+								"entries": [
+									"{@atk mw} {@hit 10} te raken, reikwijdte 4,5 m., één doelwit. {@h}20 ({@damage 3d8 + 7}) schade door snijden, of 23 ({@damage 3d10 + 7}) schade door snijden indien gebruikt met beide handen."
+								]
+							}
+						}
+					]
+				}
+			},
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item chain mail|phb}"
+					]
+				}
+			],
+			"trait": null,
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Therzt",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 158,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM",
+				"_trait": {
+					"name": "Drow",
+					"source": "PHB"
+				}
+			},
+			"traitTags": [
+				"Fey Ancestry",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"C",
+				"E",
+				"X"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Thorn Slinger",
+			"source": "TftYP",
+			"page": 246,
+			"size": [
+				"L"
+			],
+			"type": "plant",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 32,
+				"formula": "5d10 + 5"
+			},
+			"speed": {
+				"walk": 10
+			},
+			"str": 13,
+			"dex": 12,
+			"con": 12,
+			"int": 1,
+			"wis": 10,
+			"cha": 1,
+			"senses": [
+				"blindsight 60 ft. (blind beyond this radius)"
+			],
+			"passive": 10,
+			"conditionImmune": [
+				"blinded",
+				"deafened",
+				"frightened"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Adhesive Blossoms",
+					"entries": [
+						"De doornslinger kleeft aan alles wat hem aanraakt. Een medium of kleiner wezen dat aan de doornslinger kleeft, wordt ook {@condition grappled} door hem vastgegrepen (ontsnapping {@dc 11}). Vermogenschecks om aan deze greep te ontsnappen zijn nadelig.",
+						"Aan het eind van elke beurt van de doorn slinger, krijgt alles {@condition grappled} door hem 3 ({@damage 1d6}) zuurschade."
+					]
+				},
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Terwijl de doornstruik onbeweeglijk blijft, is hij niet te onderscheiden van een levenloze struik."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Thorns",
+					"entries": [
+						"{@atk mw,rw} {@hit 3} te raken, bereik 1,5 m. of 9 m., één doelwit. {@h}8 ({@damage 2d6 + 1}) doordringende schade."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"A",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Tloques-Popolocas",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 68,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 82,
+				"formula": "11d8 + 33"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 16,
+			"int": 11,
+			"wis": 10,
+			"cha": 12,
+			"save": {
+				"dex": "+6",
+				"wis": "+3"
+			},
+			"skill": {
+				"perception": "+3",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"languages": [
+				"the languages it knew in life"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"Tloques kan {@spell hold person} ({@dc 14}) naar believen uitroepen, zonder dat daarvoor onderdelen nodig zijn, maar zijn doelwit moet hem wel kunnen zien."
+					],
+					"will": [
+						"{@spell hold person}"
+					],
+					"hidden": [
+						"will"
+					]
+				}
+			],
+			"trait": [
+				{
+					"name": "Regeneration",
+					"entries": [
+						"De vampier krijgt 10 hit points terug aan het begin van zijn beurt als hij minstens 1 hit point heeft en zich niet in zonlicht of stromend water bevindt. Als de vampier stralingsschade of schade door wijwater oploopt, werkt deze eigenschap niet aan het begin van de volgende beurt van de vampier."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"De vampier kan moeilijke oppervlakken beklimmen, inclusief ondersteboven op plafonds, zonder dat hij een vaardigheidscontrole hoeft te doen."
+					]
+				},
+				{
+					"name": "Vampire Weaknesses",
+					"entries": [
+						"De vampier heeft de volgende gebreken:",
+						{
+							"type": "list",
+							"items": [
+								"Verboden. De vampier kan geen woning binnengaan zonder een uitnodiging van een van de bewoners.",
+								"Geschaad door stromend water. De vampier krijgt 20 zuurschade als hij zijn beurt eindigt in stromend water.",
+								"Steek in het hart. De vampier wordt vernietigd als een doorborend wapen van hout in zijn hart wordt gestoken terwijl hij {@condition incapacitated} in zijn rustplaats is.",
+								"Zonlicht overgevoeligheid. De vampier krijgt 20 stralingsschade als hij zijn beurt in zonlicht begint. Als hij in het zonlicht staat, heeft hij nadeel bij aanvalsrollen en vaardigheidscontroles."
+							]
+						}
+					]
+				},
+				{
+					"name": "Shapechanger",
+					"entries": [
+						"Als de vampier zich niet in zonlicht of stromend water bevindt, kan hij zijn actie gebruiken om te Polymorphen in een Kleine vleermuis, of terug in zijn ware gedaante.",
+						"In vleermuisvorm kan de vampier niet spreken, zijn loopsnelheid is 1,5 meter en hij heeft een vliegsnelheid van 9 meter. Zijn statistiek, behalve zijn grootte en snelheid, is onveranderd. Alles wat hij draagt transformeert mee, maar niets wat hij bij zich draagt wel. Hij keert terug naar zijn ware vorm als hij sterft."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De vampier doet twee aanvallen."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 6} om te raken, reikwijdte 1,5 m., één wezen. {@h}8 ({@damage 2d4 + 3}) snijdende schade. In plaats van schade toe te brengen, kan de vampier het doelwit grijpen, ontsnappen {@dc 13}."
+					]
+				},
+				{
+					"name": "Children of the Night (1/Day)",
+					"entries": [
+						"De vampier roept op magische wijze {@dice 2d4} zwermen vleermuizen op, mits de zon niet op is. De opgeroepen beesten arriveren in {@dice 1d4} rondes, treden op als bondgenoten van de vampier en gehoorzamen zijn gesproken bevelen. De beesten blijven 1 uur, tot de vampier sterft, of tot de vampier ze afwijst als bonusactie."
+					]
+				},
+				{
+					"name": "Tloques' Berserker Axe +2",
+					"entries": [
+						"{@atk mw} {@hit 5} te raken, reikwijdte 1,5 m., één doelwit. {@h}9 ({@damage 1d8 + 5}) schade door snijden."
+					]
+				}
+			],
+			"traitTags": [
+				"Regeneration",
+				"Shapechanger",
+				"Spider Climb",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"S"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"paralyzed"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Torlin Silvershield",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 159,
+			"_copy": {
+				"name": "Wight",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the wight",
+						"with": "Torlin",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Werejaguar",
+			"source": "TftYP",
+			"page": 79,
+			"_copy": {
+				"name": "Weretiger",
+				"source": "MM",
+				"_mod": {
+					"*": [
+						{
+							"mode": "replaceTxt",
+							"replace": "tiger",
+							"with": "jaguar",
+							"flags": "i"
+						},
+						{
+							"mode": "replaceTxt",
+							"props": [
+								"name"
+							],
+							"replace": "Tiger",
+							"with": "Jaguar"
+						}
+					]
+				}
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "(40 ft. in jaguar form)"
+				}
+			},
+			"languages": [
+				"Common (can't speak in jaguar form)"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "White Maw",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 248,
+			"size": [
+				"G"
+			],
+			"type": "ooze",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				5
+			],
+			"hp": {
+				"average": 217,
+				"formula": "14d20 + 70"
+			},
+			"speed": {
+				"walk": 10
+			},
+			"str": 18,
+			"dex": 1,
+			"con": 20,
+			"int": 12,
+			"wis": 10,
+			"cha": 3,
+			"senses": [
+				"blindsight 60 ft. (blind beyond this radius)"
+			],
+			"passive": 10,
+			"resist": [
+				"acid",
+				"cold",
+				"fire"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"poisoned",
+				"prone"
+			],
+			"languages": [
+				"telepathy 50 ft."
+			],
+			"cr": "10",
+			"trait": [
+				{
+					"name": "Amorphous Form",
+					"entries": [
+						"White Maw kan de ruimte van een ander wezen innemen en vice versa."
+					]
+				},
+				{
+					"name": "Corrode Metal",
+					"entries": [
+						"Elk niet magisch wapen gemaakt van metaal dat White Maw raakt, corrodeert. Na het toebrengen van schade, krijgt het wapen een permanente en cumulatieve -1 vermindering op de schade worpen. Als de vermindering daalt tot -5, wordt het wapen vernietigd. Niet-magische munitie van metaal die White Maw raakt, wordt vernietigd na het toebrengen van schade.",
+						"White Maw kan door 2-inch dik, niet magisch metaal eten in 1 ronde."
+					]
+				},
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Terwijl White Maw onbeweeglijk blijft, is hij niet te onderscheiden van witte steen."
+					]
+				},
+				{
+					"name": "Killer Response",
+					"entries": [
+						"Elk wezen dat zijn beurt begint in White Maw's ruimte is het doelwit van een pseudopod aanval als White Maw dat niet is {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Pseudopod",
+					"entries": [
+						"{@atk mw} {@hit 8} te raken, reikwijdte 3 m., één doelwit. {@h}22 ({@damage 4d8 + 4}) slagschade plus 9 ({@damage 2d8}) zuurschade. Als het doelwit een niet-magisch metalen harnas draagt, wordt zijn harnas gedeeltelijk aangetast en krijgt het een permanente en cumulatieve penalty van -1 op de AC die het biedt. Het pantser wordt vernietigd als de penalty de AC tot 10 verlaagt."
+					]
+				}
+			],
+			"traitTags": [
+				"Amorphous",
+				"False Appearance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"languageTags": [
+				"TP"
+			],
+			"damageTags": [
+				"A",
+				"B"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Xilonen",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 83,
+			"_copy": {
+				"name": "Roper",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the roper",
+						"with": "Xilonen",
+						"flags": "i"
+					}
+				}
+			},
+			"int": 2,
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Yeti Leader",
+			"source": "TftYP",
+			"page": 183,
+			"_copy": {
+				"name": "Yeti",
+				"source": "MM",
+				"_mod": {
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"De yeti kan zijn Chilling Gaze gebruiken en doet twee greatsword aanvallen."
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Claw",
+							"items": {
+								"name": "Frost Brand Greatsword",
+								"entries": [
+									"{@atk mw} {@hit 6} te raken, reikwijdte 1,5 m., één doelwit. {@h}11 ({@damage 2d6 + 4}) schade door snijden plus 3 ({@damage 1d6}) schade door kou."
+								]
+							}
+						}
+					]
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Young Fire Giant",
+			"source": "TftYP",
+			"page": 192,
+			"_copy": {
+				"name": "Ogre",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "ogre",
+						"with": "giant",
+						"flags": "i"
+					}
+				}
+			},
+			"immune": [
+				"fire"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Young Frost Giant",
+			"source": "TftYP",
+			"page": 187,
+			"_copy": {
+				"name": "Ogre",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "ogre",
+						"with": "giant",
+						"flags": "i"
+					}
+				}
+			},
+			"immune": [
+				"cold"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Young Hill Giant",
+			"source": "TftYP",
+			"page": 167,
+			"_copy": {
+				"name": "Orc",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "orc",
+						"with": "giant",
+						"flags": "i"
+					}
+				}
+			},
+			"type": "giant",
+			"hasToken": true
+		},
+		{
+			"name": "Young Ogre Servant",
+			"source": "TftYP",
+			"page": 171,
+			"_copy": {
+				"name": "Orc",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "orc",
+						"with": "ogre",
+						"flags": "i"
+					}
+				}
+			},
+			"type": "giant",
+			"hasToken": true
+		},
+		{
+			"name": "Young Troglodyte",
+			"source": "TftYP",
+			"page": 176,
+			"_copy": {
+				"name": "Kobold",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "kobold",
+						"with": "troglodyte",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"troglodyte"
+				]
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Young Winter Wolf",
+			"source": "TftYP",
+			"page": 181,
+			"_copy": {
+				"name": "Dire Wolf",
+				"source": "MM"
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Yusdrayl",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "TftYP",
+			"page": 248,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"kobold"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 16,
+				"formula": "3d6 + 6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 15,
+			"con": 14,
+			"int": 10,
+			"wis": 10,
+			"cha": 16,
+			"skill": {
+				"arcana": "+2",
+				"insight": "+2",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"cr": "1",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Yusdrayl is een spellcaster van het 2de niveau. Haar tovervaardigheid is Charisma (spell save {@dc 13}, {@hit 5} to hit met spell attacks). Ze kent de volgende tovenaarsspreuken:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell mage hand}",
+								"{@spell prestidigitation}",
+								"{@spell ray of frost}",
+								"{@spell shocking grasp}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell burning hands}",
+								"{@spell chromatic orb}",
+								"{@spell mage armor}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"Als Yusdrayl in het zonlicht staat, is hij nadelig op aanvalsrollen en op wijsheidscontroles ({@skill Perception}) die op zicht gebaseerd zijn."
+					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"Yusdrayl heeft voordeel bij een aanvalsrol tegen een wezen als ten minste een van haar bondgenoten zich binnen 1,5 meter van het wezen bevindt en de bondgenoot niet {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw} {@hit 4} te raken, reikwijdte 1,5 m., één doelwit. {@h}4 ({@damage 1d4 + 2}) doordringende schade."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"traitTags": [
+				"Pack Tactics",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"F",
+				"I",
+				"L",
+				"T"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

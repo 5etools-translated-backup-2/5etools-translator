@@ -1,0 +1,921 @@
+{
+	"monster": [
+		{
+			"name": "Coral",
+			"isNamedCreature": true,
+			"source": "MisMV1",
+			"page": 4,
+			"size": [
+				"L"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 135,
+				"formula": "18d10 + 36"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": 60,
+				"swim": 60
+			},
+			"str": 20,
+			"dex": 13,
+			"con": 15,
+			"int": 14,
+			"wis": 18,
+			"cha": 19,
+			"save": {
+				"dex": "+5",
+				"con": "+6",
+				"wis": "+8",
+				"cha": "+8"
+			},
+			"skill": {
+				"arcana": "+6",
+				"insight": "+8",
+				"perception": "+8"
+			},
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 18,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Primordial",
+				"Sylvan"
+			],
+			"cr": "9",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Коралл имеет преимущество при бросках на спасение против заклинаний и других магических эффектов."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Коралл делает две атаки копытами и использует \"Удар хвостом\"."
+					]
+				},
+				{
+					"name": "Hoof",
+					"entries": [
+						"{@atk mw} {@hit 9} попадание, радиус действия 1,5 м., одна цель. {@h}12 ({@damage 2d6 + 5}) повреждений от удара."
+					]
+				},
+				{
+					"name": "Tail Thump",
+					"entries": [
+						"Коралл опускает хвост и выпускает всплеск магической силы в сторону одного существа, которое она видит в радиусе 18 м от себя. Цель должна сделать бросок на ловкость {@dc 16}. При неудачном спасброске цель получает 22 ({@damage 4d10}) урона силой и получает состояние {@condition prone}. При успешном спасброске цель получает в два раза меньше урона. Если этот урон снижает количество хит-пойнтов до 0, цель умирает, а ее тело превращается в мелкую пыль."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Bubbles of Whimsy (2/Day)",
+					"entries": [
+						"Коралл выпускает из своего рога поток магических пузырьков. Эти пузыри летят в сторону существа, которое Коралл видит в радиусе 18 м от себя. Бросок {@dice d6} определяет эффект пузырьков:",
+						{
+							"type": "list",
+							"items": [
+								{
+									"name": "1-2: Bolstering Treat",
+									"type": "item",
+									"entries": [
+										"Пузырьки превращаются в {@dice 1d4} печенье, которое появляется в пространстве цели. Цель получает 11 ({@dice 2d8 + 2}) временных хит-пойнтов, если немедленно использует свою реакцию, чтобы съесть одно из печений. Оставшееся печенье очень вкусное, но не дает никаких преимуществ."
+									]
+								},
+								{
+									"name": "3-4: Sparkle Burst",
+									"type": "item",
+									"entries": [
+										"Пузырьки превращаются в блестки, которые кружатся вокруг цели, а затем вырываются наружу. Каждое существо в радиусе 1,5 м от цели должно успешно выполнить бросок спасброска на {@dc 16} Конституцию или получить состояние {@condition blinded} до начала следующего хода Коралла."
+									]
+								},
+								{
+									"name": "5-6: Stink Bomb Shield",
+									"type": "item",
+									"entries": [
+										"Пузырьки превращаются в облако газа с неприятным запахом, которое окружает цель и защищает ее. Цель имеет половину прикрытия до тех пор, пока газ не исчезнет в начале следующего хода Коралла."
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Gift of Speech (1/Day)",
+					"entries": [
+						"Коралл выбирает одного зверя, которого она видит в радиусе 3 м от себя. Цель обретает способность понимать и говорить на Common или Sylvan (по выбору Корал) на 10 минут."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"P",
+				"S"
+			],
+			"damageTags": [
+				"B",
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded",
+				"prone"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dandylion",
+			"source": "MisMV1",
+			"page": 6,
+			"size": [
+				"L"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 90,
+				"formula": "12d10 + 24"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 22,
+			"dex": 19,
+			"con": 14,
+			"int": 16,
+			"wis": 17,
+			"cha": 18,
+			"save": {
+				"str": "+9",
+				"cha": "+7"
+			},
+			"skill": {
+				"nature": "+9",
+				"perception": "+6",
+				"survival": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 16,
+			"languages": [
+				"Common",
+				"Sylvan"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Дендилион произносит одно из следующих заклинаний, не требующих материальных компонентов и использующих Харизму в качестве заклинательной способности (спасение от заклинания {@dc 15}):"
+					],
+					"will": [
+						"{@spell druidcraft}",
+						"{@spell guidance}",
+						"{@spell purify food and drink}"
+					],
+					"daily": {
+						"1": [
+							"{@spell speak with plants}"
+						],
+						"2e": [
+							"{@spell entangle}",
+							"{@spell goodberry}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Дендилион имеет преимущество при бросках спасбросков против заклинаний и других магических эффектов."
+					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"Дендилион имеет преимущество при броске атаки против существа, если хотя бы один из союзников дендилиона находится в пределах 1,5 м от существа и у союзника нет состояния {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Дендилион делает одну атаку укусом и одну атаку когтями."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 9} попадание, радиус действия 1,5 м., одна цель. {@h}13 ({@damage 2d6 + 6}) колющего урона."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 9} попадание, радиус действия 1,5 м., одна цель. {@h}20 ({@damage 4d6 + 6}) колющего урона. Если непосредственно перед ударом дендилион двигался к цели не менее чем на 6 м, цель должна успешно выполнить бросок спасброска на силу {@dc 17} или получить состояние {@condition prone}. Если цель находится в состоянии {@condition prone}, дендилион может произвести против нее одну атаку укусом в качестве бонусного действия."
+					]
+				},
+				{
+					"name": "Rejuvenating Seedpods (2/Day)",
+					"entries": [
+						"Дендилион выпускает из своего хвоста взрыв семенных косточек, заполняющих сферу радиусом 3 м, расположенную в центре. Каждое существо по выбору дендилиона, находящееся в этой сфере, может немедленно наложить на себя одно из следующих условий (по выбору существа): {@condition blinded}, {@condition deafened}, {@condition paralyzed} или {@condition poisoned}. Кроме того, вся почва в области сферы обогащается, восстанавливая увядшую растительность в области до полного здоровья и заставляя все культуры в области давать вдвое больше обычного урожая на следующий год."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Roar of Pride",
+					"entries": [
+						"Когда существо, находящееся в пределах 18 м от дендилиона, поражает его броском атаки, дендилион может издать яростный рев. Существо, вызвавшее эту реакцию, должно успешно выполнить бросок спасброска {@dc 15} Мудрости или получить состояние {@condition frightened} до конца следующего хода дендилиона."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance",
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"conditionInflictSpell": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"strength",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Rain",
+			"isNamedCreature": true,
+			"source": "MisMV1",
+			"page": 8,
+			"size": [
+				"S"
+			],
+			"type": "celestial",
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 60,
+				"formula": "11d6 + 22"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 120
+			},
+			"str": 10,
+			"dex": 11,
+			"con": 14,
+			"int": 14,
+			"wis": 18,
+			"cha": 15,
+			"save": {
+				"dex": "+3",
+				"con": "+5",
+				"wis": "+7"
+			},
+			"skill": {
+				"acrobatics": "+3",
+				"insight": "+7",
+				"stealth": "+3"
+			},
+			"passive": 14,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"fire",
+				"poison",
+				"radiant"
+			],
+			"conditionImmune": [
+				"charmed",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"Celestial",
+				"Common"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Fiery Wings",
+					"entries": [
+						"Крылья Дождя сделаны из пламени, они излучают яркий свет на расстояние до 4,5 м и тусклый свет еще на 4,5 м. В начале каждого хода Дождя каждое существо по выбору Дождя в радиусе 1,5 м от него получает 3 ({@damage 1d6}) урона огнем. Существо, поразившее Дождь атакой в ближнем бою, получает 3 ({@damage 1d6}) урона огнем."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Дождь имеет преимущество при бросках спасбросков против заклинаний и других магических эффектов."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Дождь делает две атаки копытами."
+					]
+				},
+				{
+					"name": "Hoof",
+					"entries": [
+						"{@atk mw} {@hit 3} попадание, радиус действия 1,5 м., одна цель. {@h}5 ({@damage 2d4}) повреждений от удара."
+					]
+				},
+				{
+					"name": "Haloed Horn Burst {@recharge 5}",
+					"entries": [
+						"Дождь использует свой рог с ореолом для получения одного из следующих магических эффектов:"
+					]
+				},
+				{
+					"name": "Glitterstorm",
+					"entries": [
+						"Дождь испускает радужный луч на 9-метровой линии шириной 1,5 м. Каждое существо в этой области должно сделать бросок спасброска на ловкость {@dc 15}, при неудачном броске оно получает 21 ({@damage 6d6}) лучевой урон, при удачном - в два раза меньше; у существ злого уровня при этом броске спасброска имеет недостаток. Если урон от этого эффекта снижает количество хит-пойнтов существа до 0, оно умирает, а его тело превращается в сверкающие цветы."
+					]
+				},
+				{
+					"name": "Healing Rainbows",
+					"entries": [
+						"Дождь выпускает волну омолаживающего разноцветного света в конусе диаметром 9 м. Каждое существо по выбору Дождя в этой области восстанавливает 18 ({@dice 4d8}) хит-пойнтов."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Nimble Escape",
+					"entries": [
+						"Дождь выполняет действие \"Отключиться\" или \"Спрятаться\"."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CE"
+			],
+			"damageTags": [
+				"B",
+				"F",
+				"R"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Scrapper",
+			"source": "MisMV1",
+			"page": 10,
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 126,
+				"formula": "12d10 + 60"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 20,
+			"dex": 10,
+			"con": 20,
+			"int": 3,
+			"wis": 10,
+			"cha": 1,
+			"skill": {
+				"perception": "+6"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"resist": [
+				"lightning"
+			],
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Electrified Chassis",
+					"entries": [
+						"Существо, попавшее в скребок атакой ближнего боя в радиусе 1,5 м от него, получает 19 ({@damage 3d12}) урона молнией."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Скребок наносит две атаки Spike Punch. Он может заменить одну из них атакой \"Провода\"."
+					]
+				},
+				{
+					"name": "Spike Punch",
+					"entries": [
+						"{@atk mw} {@hit 8} попадание, радиус действия 1,5 м., одна цель. {@h}14 ({@damage 2d8 + 5}) колющего урона плюс 5 ({@damage 1d10}) колющего урона."
+					]
+				},
+				{
+					"name": "Wires",
+					"entries": [
+						"{@atk mw} {@hit 8} попадание, досягаемость 6 м., одно крупное или более мелкое существо. {@h}Цель находится в состоянии {@condition grappled} (бегство {@dc 16}) и должна преуспеть в броске спасения {@dc 16} силы или будет втянута в незанятое пространство в пределах 1,5 м от скрепера и получит 19 ({@damage 3d12}) урона молнией. Одновременно в ловушке может находиться только одно существо {@condition grappled}."
+					]
+				},
+				{
+					"name": "Eye Beam {@recharge 5}",
+					"entries": [
+						"Скребок выстреливает магическим лучом из своего расширенного глаза в одно существо, которое он видит в радиусе 36 м от себя. Цель должна сделать спасбросок на ловкость {@dc 16}, получив 44 ({@damage 8d10}) урона силы при неудачном спасброске, или вдвое меньше при удачном."
+					]
+				}
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"L",
+				"O",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Seth the Shapeshifting Dragon",
+			"isNamedCreature": true,
+			"source": "MisMV1",
+			"page": 12,
+			"size": [
+				"M"
+			],
+			"type": "dragon",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				17
+			],
+			"hp": {
+				"average": 153,
+				"formula": "18d8 + 72"
+			},
+			"speed": {
+				"walk": 50,
+				"swim": 50
+			},
+			"str": 16,
+			"dex": 25,
+			"con": 19,
+			"int": 13,
+			"wis": 15,
+			"cha": 14,
+			"save": {
+				"str": "+7",
+				"dex": "+11",
+				"con": "+8"
+			},
+			"skill": {
+				"perception": "+6",
+				"stealth": "+11"
+			},
+			"senses": [
+				"blindsight 30 ft.",
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"resist": [
+				"cold",
+				"fire"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"grappled",
+				"poisoned",
+				"restrained"
+			],
+			"languages": [
+				"Aquan",
+				"Common",
+				"Draconic"
+			],
+			"cr": "10",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"Сет может дышать воздухом и водой."
+					]
+				},
+				{
+					"name": "Invisible in Water",
+					"entries": [
+						"Сет имеет состояние {@condition invisible} при полном погружении в воду."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Сет делает одну атаку укусом и две атаки когтями."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 11} попадание, радиус действия 3 м., одна цель. {@h}10 ({@damage 1d6 + 7}) колющего урона плюс 9 ({@damage 2d8}) холодного урона."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 11} попадание, радиус действия 1,5 м., одна цель. {@h}14 ({@damage 2d6 + 7}) колющего урона."
+					]
+				},
+				{
+					"name": "Riptide Breath {@recharge 5}",
+					"entries": [
+						"Сет выдыхает поток фригидной воды в конус диаметром 9 м. Каждое существо в этой области должно сделать бросок спасброска на {@dc 16} конституцию. При неудачном спасброске существо получает 36 ({@damage 8d8}) урона холодом и находится в состоянии {@condition incapacitated} до конца своего следующего хода. При успешном спасброске существо получает в два раза меньше повреждений."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Сет магическим образом превращается в маленького гуманоида или зверя, который является крошечным или маленьким, сохраняя при этом свою игровую статистику (кроме размера). Это превращение заканчивается, если Сет уменьшается до 0 хит-пойнтов или использует другое бонусное действие для его завершения."
+					]
+				},
+				{
+					"name": "Superspeed (2/Day)",
+					"entries": [
+						"Скорость Сета удваивается до тех пор, пока он поддерживает {@status concentration} (как если бы {@status concentration||concentrating} было на заклинании). Пока его скорость увеличена таким образом, все броски атаки против него выполняются с недостатком, и он становится частично бесплотным, что позволяет ему двигаться сквозь существ и предметы, как если бы они были труднопроходимой местностью. Сет получает 5 ({@damage 1d10}) урона силы, если заканчивает свой ход внутри объекта."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"AQ",
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"C",
+				"O",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sheldon the Blueberry Dragon",
+			"isNamedCreature": true,
+			"source": "MisMV1",
+			"page": 14,
+			"size": [
+				"L"
+			],
+			"type": "dragon",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 142,
+				"formula": "15d10 + 60"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 60
+			},
+			"str": 19,
+			"dex": 13,
+			"con": 18,
+			"int": 17,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"dex": "+4",
+				"con": "+7",
+				"int": "+6"
+			},
+			"skill": {
+				"acrobatics": "+7",
+				"athletics": "+7",
+				"performance": "+6"
+			},
+			"senses": [
+				"blindsight 30 ft.",
+				"darkvision 120 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"force",
+				"psychic"
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"telepathy 120 ft."
+			],
+			"cr": "7",
+			"spellcasting": [
+				{
+					"name": "Spellcasting (Psionics)",
+					"headerEntries": [
+						"Шелдон произносит одно из следующих заклинаний, не требующих компонентов заклинания и использующих интеллект в качестве заклинательной способности (спасение от заклинания {@dc 14}):"
+					],
+					"will": [
+						"{@spell light}",
+						"{@spell mage hand} (the hand is invisible)"
+					],
+					"daily": {
+						"1e": [
+							"{@spell dimension door}",
+							"{@spell telekinesis}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Space Dweller",
+					"entries": [
+						"Шелдон может нормально дышать в вакууме."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Шелдон делает либо две атаки \"Укус\", либо две атаки \"Черничный бросок\", либо одну из них."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} попадание, досягаемость 1,5 м., одна цель. {@h}7 ({@damage 1d6 + 4}) колющего урона плюс 4 ({@damage 1d8}) психического урона."
+					]
+				},
+				{
+					"name": "Blueberry Fling",
+					"entries": [
+						"{@atk rw} {@hit 7} к попаданию, дальность 9 м., одно существо. {@h}11 ({@damage 2d6 + 4}) чернокнижного урона."
+					]
+				},
+				{
+					"name": "Jetstream Breath {@recharge 5}",
+					"entries": [
+						"Шелдон выдыхает линию магического ветра длиной 18 м и шириной 1,5 м. Каждое существо в этой области должно сделать бросок на спасбросок {@dc 15} силы. При неудачном спасброске существо получает 21 ({@damage 6d6}) урон силой, отталкивается от Шелдона на 4,5 м и получает состояние {@condition prone}. При успешном спасброске существо получает в два раза меньше урона."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Wind Dash (2/Day)",
+					"entries": [
+						"Шелдон вызывает мощный порыв ветра и летит, увеличивая свою скорость. Это движение не провоцирует атаки по возможности. В конце этого движения каждое существо в радиусе 1,5 м от Шелдона должно успешно выполнить бросок спасброска на силу {@dc 15} или получить состояние {@condition prone}, так как вокруг Шелдона бушует ветер."
+					]
+				}
+			],
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"TP"
+			],
+			"damageTags": [
+				"O",
+				"P",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"conditionInflictSpell": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

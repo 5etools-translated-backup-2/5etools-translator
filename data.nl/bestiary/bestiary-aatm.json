@@ -1,0 +1,502 @@
+{
+	"_meta": {
+		"otherSources": {
+			"monster": {
+				"MPP": "AATM",
+				"MM": "AATM",
+				"MPMM": "AATM",
+				"VRGR": "AATM"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Animated Coffin",
+			"source": "AATM",
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 60,
+				"formula": "8d10 + 16"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 15,
+			"int": 3,
+			"wis": 11,
+			"cha": 3,
+			"senses": [
+				"blindsight 60 ft. (can't see beyond this radius)"
+			],
+			"passive": 10,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Als de doodskist onbeweeglijk is aan het begin van het gevecht, heeft het een voordeel op zijn initiatiefrol. Bovendien, als een wezen de doodskist niet heeft zien bewegen of handelen, moet dat wezen slagen voor een {@dc 18} intelligentiecontrole (onderzoek) om te ontdekken dat de doodskist bezield is."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"De geanimeerde doodskist kan moeilijke oppervlakken beklimmen, inclusief ondersteboven op plafonds, zonder een vaardigheidstest te hoeven doen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De geanimeerde doodskist doet twee Slam-aanvallen."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 5} te raken, reikwijdte 1,5 m., één doelwit. {@h}12 ({@damage 2d8 + 3}) vernietigende kracht."
+					]
+				},
+				{
+					"name": "Entrap",
+					"entries": [
+						"{@atk mw} {@hit 5} te raken, bereik 1,5 m., een groot of kleiner wezen. {@h}Het doelwit heeft de {@condition grappled} conditie (ontsnappen {@dc 13}). Totdat deze houdgreep eindigt, als het doelwit geen Ondode is, heeft het doelwit de {@condition restrained} conditie en neemt 14 ({@damage 4d6}) doordringende schade aan het begin van elk van zijn beurten. De geanimeerde doodskist kan maar één wezen tegelijk grijpen."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance",
+				"Spider Climb"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Factol Skall",
+			"source": "AATM",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "undead",
+				"tags": [
+					"wizard"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 210,
+				"formula": "28d8 + 84"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 11,
+			"dex": 16,
+			"con": 16,
+			"int": 20,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"con": "+9",
+				"int": "+11",
+				"wis": "+8"
+			},
+			"skill": {
+				"arcana": "+17",
+				"history": "+11",
+				"medicine": "+8",
+				"perception": "+8"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 18,
+			"resist": [
+				"cold",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned",
+				"stunned"
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "17",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Skall spreekt een van de volgende spreuken uit, waarvoor geen materiële componenten nodig zijn en waarbij Intelligentie wordt gebruikt als spreukvaardigheid (spreuk redden {@dc 19}):"
+					],
+					"will": [
+						"{@spell detect magic}",
+						"{@spell mage hand}",
+						"{@spell prestidigitation}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell animate dead} (as an action)",
+							"{@spell dispel magic}",
+							"{@spell speak with dead}"
+						],
+						"1e": [
+							"{@spell finger of death}",
+							"{@spell plane shift} (self only)",
+							"{@spell project image}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Aura of Death",
+					"entries": [
+						"Wezens binnen een straal van 9 meter van Skall hebben nadeel bij reddingsworpen."
+					]
+				},
+				{
+					"name": "Cosmic Annihilation",
+					"entries": [
+						"Een wezen dat is gedood door Skall kan alleen weer tot leven worden gewekt door middel van een echte wederopstanding of {@spell wish} spreuk."
+					]
+				},
+				{
+					"name": "Legendary Resistance (4/Day)",
+					"entries": [
+						"Als Skall faalt in een reddingsworp, kan hij ervoor kiezen om in plaats daarvan te slagen."
+					]
+				},
+				{
+					"name": "Rejuvenation",
+					"entries": [
+						"Als Skall sterft, verandert hij in stof. Als zijn zielenoriëntatie niet is vernietigd, wordt Skall binnen {@dice 1d10} dagen opnieuw gevormd in het mortuarium. Hij verschijnt binnen 1,5 meter van de orrerie."
+					]
+				},
+				{
+					"name": "Turn Resistance",
+					"entries": [
+						"Skall heeft voordeel op save throws tegen elk effect dat Undead verandert."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Skall doet één Withering Touch-aanval of gebruikt Spellcasting. Hij gebruikt ook twee keer Death Knell."
+					]
+				},
+				{
+					"name": "Withering Touch",
+					"entries": [
+						"{@atk ms} {@hit 11} om te raken, reikwijdte 1,5 m., één doelwit. {@h}32 ({@damage 6d8 + 5}) koude schade plus 31 ({@damage 7d8}) necrotische schade, en als het doelwit een wezen is, kan het geen nieuwe hitpoints krijgen tot het begin van Skall's volgende beurt."
+					]
+				},
+				{
+					"name": "Death Knell",
+					"entries": [
+						"Skall wijst met zijn vinger naar een wezen dat hij binnen een straal van 36 meter van zichzelf kan zien en vult de geest van het doelwit met visioenen van de dood en het luiden van een ijzeren bel. Het doelwit moet slagen in een {@dc 19} Wisdom saving throw of 14 ({@damage 4d6}) psychische schade oplopen en de {@condition frightened} conditie hebben tot het begin van Skall's volgende beurt."
+					]
+				},
+				{
+					"name": "Fog of Death (1/Day)",
+					"entries": [
+						"Skall verspreidt een dodende mist in een bol met een straal van 9 meter die op hemzelf is gecentreerd. De sfeer verspreidt zich rond hoeken en het gebied is zwaar verduisterd. De mist blijft hangen tot het begin van Skall's volgende beurt en kan niet worden verspreid door de wind. Hij beweegt niet met hem mee.",
+						"Elk wezen dat voor het eerst de mist ingaat tijdens een beurt of zijn beurt daar begint, moet een {@dc 19} Constitution saving throw doen en krijgt 28 ({@damage 8d6}) necrotische schade en 28 ({@damage 8d6}) gifschade bij een mislukte save, of half zoveel schade bij een geslaagde save. Een middelgrote of kleinere mensachtige die door deze schade wordt gedood, wordt een zombie onder controle van Skall. De zombie handelt op Skall's initiatief, maar onmiddellijk na zijn beurt. Zonder een ander commando probeert de zombie elk niet-ondode wezen dat hij tegenkomt te doden."
+					]
+				}
+			],
+			"reactionHeader": [
+				"Skall can take up to three reactions per round but only one per turn."
+			],
+			"reaction": [
+				{
+					"name": "Baleful Counterspell",
+					"entries": [
+						"Skall kletst met zijn tanden om een wezen te onderbreken dat hij binnen 18 meter van zichzelf kan zien en dat een spreuk uitspreekt. Als de spreuk van niveau 4 of lager is, faalt hij en heeft hij geen effect. Als de spreuk 5e niveau of hoger is, doet Skall een intelligentiecontrole ({@dc 10} + het niveau van de spreuk). Als de test slaagt, faalt de spreuk en heeft hij geen effect. Ongeacht het niveau van de spreuk krijgt de caster 10 ({@damage 3d6}) necrotische schade als de spreuk faalt."
+					]
+				},
+				{
+					"name": "Near-Death Experience",
+					"entries": [
+						"Als reactie op een aanval teleporteert Skall, samen met alle uitrusting die hij draagt of bij zich heeft, tot 9 meter naar een onbezette ruimte die hij kan zien."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Rejuvenation",
+				"Turn Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"C",
+				"I",
+				"N",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Heralds of Dust Exorcist",
+			"source": "AATM",
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				13,
+				{
+					"ac": 16,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 112,
+				"formula": "15d8 + 45"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 16,
+			"con": 16,
+			"int": 17,
+			"wis": 14,
+			"cha": 11,
+			"save": {
+				"int": "+6",
+				"wis": "+5",
+				"cha": "+3"
+			},
+			"skill": {
+				"arcana": "+6",
+				"perception": "+5",
+				"religion": "+6"
+			},
+			"senses": [
+				"truesight 60 ft."
+			],
+			"passive": 15,
+			"resist": [
+				"necrotic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common plus three more languages"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"De exorcist spreekt een van de volgende spreuken uit, waarvoor geen materiële componenten nodig zijn en waarbij intelligentie wordt gebruikt als spreukvaardigheid (spreuk save {@dc 14}, {@hit 6} om te raken met spreukaanvallen):",
+						"At-will: detecteer kwaad en goed, magisch harnas (alleen zelf), magische hand"
+					],
+					"daily": {
+						"2e": [
+							"{@spell protection from evil and good}",
+							"{@spell remove curse}",
+							"{@spell speak with dead}"
+						],
+						"1e": [
+							"{@spell banishment}",
+							"{@spell dispel evil and good}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Incorruptible Vessel",
+					"entries": [
+						"De exorcist kan niet bezeten zijn door Celestials, Fiends of Undead."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De exorcist doet twee Grave Burst aanvallen."
+					]
+				},
+				{
+					"name": "Grave Burst",
+					"entries": [
+						"{@atk ms,rs} {@hit 6} om te raken, bereik 1,5 m. of 36 m., één doelwit. {@h}19 ({@damage 3d10 + 3}) necrotische of stralingsschade (exorcist's keuze)."
+					]
+				},
+				{
+					"name": "Admit Entity {@recharge 5}",
+					"entries": [
+						"De exorcist dooft de sluier van de dood voor een wezen dat hij kan zien binnen 18 meter van zichzelf, waardoor het doelwit wordt blootgesteld aan kwaadwillige entiteiten. Het doelwit moet een {@dc 14} Charisma reddingsslag doen. Als de redding mislukt, krijgt het doelwit 36 ({@damage 8d8}) psychische schade en heeft het de {@condition incapacitated} conditie voor 1 minuut, waarin het kokhalst en onsamenhangend brabbelt met een stem die niet de zijne is. Als de save slaagt, krijgt het doelwit slechts half zoveel schade. Een {@condition incapacitated} doelwit kan de reddingsworp herhalen aan het einde van elk van zijn beurten, waarbij het effect op zichzelf eindigt als hij slaagt."
+					]
+				}
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"R",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"conditionInflictSpell": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"charisma"
+			],
+			"savingThrowForcedSpell": [
+				"charisma"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

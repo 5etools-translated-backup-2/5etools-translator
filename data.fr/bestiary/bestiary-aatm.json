@@ -1,0 +1,502 @@
+{
+	"_meta": {
+		"otherSources": {
+			"monster": {
+				"MPP": "AATM",
+				"MM": "AATM",
+				"MPMM": "AATM",
+				"VRGR": "AATM"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Animated Coffin",
+			"source": "AATM",
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 60,
+				"formula": "8d10 + 16"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 15,
+			"int": 3,
+			"wis": 11,
+			"cha": 3,
+			"senses": [
+				"blindsight 60 ft. (can't see beyond this radius)"
+			],
+			"passive": 10,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Si le cercueil animé est immobile au début du combat, il bénéficie d'un avantage sur son jet d'initiative. De plus, si une créature n'a pas observé le cercueil bouger ou agir, elle doit réussir un test d'Intelligence (Investigation) de {@dc 18} pour discerner que le cercueil est animé."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"Le cercueil animé peut grimper sur des surfaces difficiles, y compris la tête en bas sur les plafonds, sans avoir besoin de faire un test de caractéristique."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Le cercueil animé effectue deux attaques de type Slam."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 5} à toucher, portée 1,5 m., une cible. {@h}12 ({@damage 2d8 + 3}) dégâts contondants."
+					]
+				},
+				{
+					"name": "Entrap",
+					"entries": [
+						"{@atk mw} {@hit 5} pour toucher, portée de 1,5 m, une créature Grande ou plus petite. {@h} La cible a la condition {@condition grappled} (fuite {@dc 13}). Jusqu'à la fin de ce grappin, si la cible n'est pas un mort-vivant, elle a la condition {@condition restrained} et subit 14 ({@damage 4d6}) dégâts perforants au début de chacun de ses tours. Le cercueil animé ne peut saisir qu'une seule créature à la fois."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance",
+				"Spider Climb"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Factol Skall",
+			"source": "AATM",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "undead",
+				"tags": [
+					"wizard"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 210,
+				"formula": "28d8 + 84"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 11,
+			"dex": 16,
+			"con": 16,
+			"int": 20,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"con": "+9",
+				"int": "+11",
+				"wis": "+8"
+			},
+			"skill": {
+				"arcana": "+17",
+				"history": "+11",
+				"medicine": "+8",
+				"perception": "+8"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 18,
+			"resist": [
+				"cold",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned",
+				"stunned"
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "17",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Skall lance l'un des sorts suivants, ne nécessitant aucune composante matérielle et utilisant l'Intelligence comme capacité de lanceur de sorts (sauvegarde contre les sorts {@dc 19}) :"
+					],
+					"will": [
+						"{@spell detect magic}",
+						"{@spell mage hand}",
+						"{@spell prestidigitation}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell animate dead} (as an action)",
+							"{@spell dispel magic}",
+							"{@spell speak with dead}"
+						],
+						"1e": [
+							"{@spell finger of death}",
+							"{@spell plane shift} (self only)",
+							"{@spell project image}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Aura of Death",
+					"entries": [
+						"Les créatures situées à moins de 9 mètres de Skall ont un désavantage aux jets de sauvegarde contre la mort."
+					]
+				},
+				{
+					"name": "Cosmic Annihilation",
+					"entries": [
+						"Une créature tuée par Skall ne peut être ramenée à la vie qu'au moyen d'une véritable résurrection ou d'un sort {@spell wish}."
+					]
+				},
+				{
+					"name": "Legendary Resistance (4/Day)",
+					"entries": [
+						"Si Skall rate un jet de sauvegarde, il peut choisir de le réussir à la place."
+					]
+				},
+				{
+					"name": "Rejuvenation",
+					"entries": [
+						"Si Skall meurt, il se transforme en poussière. Si son orrerie d'âmes n'a pas été détruite, Skall se reforme dans la morgue en {@dice 1d10} jours. Il apparaît à moins de 1,5 mètre de l'orrerie."
+					]
+				},
+				{
+					"name": "Turn Resistance",
+					"entries": [
+						"Skall a l'avantage sur les jets de sauvegarde contre tout effet qui transforme les morts-vivants."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Skall effectue une attaque Withering Touch ou utilise Spellcasting. Il utilise également deux fois Death Knell."
+					]
+				},
+				{
+					"name": "Withering Touch",
+					"entries": [
+						"{@atk ms} {@hit 11} pour toucher, portée de 1,5 m, une cible. {@h}32 ({@damage 6d8 + 5}) dégâts de froid plus 31 ({@damage 7d8}) dégâts nécrotiques, et si la cible est une créature, elle ne peut pas regagner de points de vie avant le début du prochain tour de Skall."
+					]
+				},
+				{
+					"name": "Death Knell",
+					"entries": [
+						"Skall pointe son doigt vers une créature qu'il peut voir à moins de 36 mètres de lui, remplissant l'esprit de la cible de visions de mort et du tintement d'une cloche de fer. La cible doit réussir un jet de sauvegarde de {@dc 19} Sagesse ou subir 14 ({@damage 4d6}) dégâts psychiques et avoir la condition {@condition frightened} jusqu'au début du prochain tour de Skall."
+					]
+				},
+				{
+					"name": "Fog of Death (1/Day)",
+					"entries": [
+						"Skall dégage un brouillard mortel dans une sphère de 9 mètres de rayon centrée sur lui. La sphère s'étend autour des coins, et sa zone est fortement obscurcie. Le brouillard dure jusqu'au début du prochain tour de Skall, et il ne peut pas être dispersé par le vent. Il ne se déplace pas avec lui.",
+						"Chaque créature qui pénètre dans le brouillard pour la première fois lors d'un tour ou qui y commence son tour doit effectuer un jet de sauvegarde de {@dc 19} Constitution, subissant 28 ({@damage 8d6}) points de dégâts nécrotiques et 28 ({@damage 8d6}) points de dégâts de poison en cas de sauvegarde ratée, ou la moitié de ces dégâts en cas de sauvegarde réussie. Un humanoïde de taille moyenne ou inférieure tué par ces dégâts devient un zombie sous le contrôle de Skall. Le zombie agit à l'initiative de Skall, mais immédiatement après son tour. En l'absence de tout autre ordre, le zombie tente de tuer toute créature non-morte qu'il rencontre."
+					]
+				}
+			],
+			"reactionHeader": [
+				"Skall can take up to three reactions per round but only one per turn."
+			],
+			"reaction": [
+				{
+					"name": "Baleful Counterspell",
+					"entries": [
+						"Skall claque des dents pour interrompre une créature qu'il peut voir à moins de 18 mètres de lui et qui est en train de lancer un sort. Si le sort est de 4e niveau ou moins, il échoue et n'a aucun effet. Si le sort est de niveau 5 ou plus, Skall fait un test d'Intelligence ({@dc 10} + le niveau du sort). Si le test est réussi, le sort échoue et n'a pas d'effet. Quel que soit le niveau du sort, le lanceur subit 10 ({@damage 3d6}) points de dégâts nécrotiques en cas d'échec."
+					]
+				},
+				{
+					"name": "Near-Death Experience",
+					"entries": [
+						"En réponse à une attaque, Skall se téléporte, avec tout l'équipement qu'il porte, jusqu'à 9 mètres dans un espace inoccupé qu'il peut voir."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Rejuvenation",
+				"Turn Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"C",
+				"I",
+				"N",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Heralds of Dust Exorcist",
+			"source": "AATM",
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				13,
+				{
+					"ac": 16,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 112,
+				"formula": "15d8 + 45"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 16,
+			"con": 16,
+			"int": 17,
+			"wis": 14,
+			"cha": 11,
+			"save": {
+				"int": "+6",
+				"wis": "+5",
+				"cha": "+3"
+			},
+			"skill": {
+				"arcana": "+6",
+				"perception": "+5",
+				"religion": "+6"
+			},
+			"senses": [
+				"truesight 60 ft."
+			],
+			"passive": 15,
+			"resist": [
+				"necrotic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common plus three more languages"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"L'exorciste lance l'un des sorts suivants, ne nécessitant aucune composante matérielle et utilisant l'Intelligence comme capacité de lanceur de sorts (sauvegarde contre les sorts {@dc 14}, {@hit 6} pour toucher avec les attaques du sort) :",
+						"At-will : détection du mal et du bien, armure de mage (soi uniquement), main de mage"
+					],
+					"daily": {
+						"2e": [
+							"{@spell protection from evil and good}",
+							"{@spell remove curse}",
+							"{@spell speak with dead}"
+						],
+						"1e": [
+							"{@spell banishment}",
+							"{@spell dispel evil and good}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Incorruptible Vessel",
+					"entries": [
+						"L'exorciste ne peut pas être possédé par un Céleste, un démon ou un mort-vivant."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"L'exorciste effectue deux attaques Grave Burst."
+					]
+				},
+				{
+					"name": "Grave Burst",
+					"entries": [
+						"{@atk ms,rs} {@hit 6} pour toucher, portée de 1,5 m. ou portée de 36 m., une cible. {@h}19 ({@damage 3d10 + 3}) dégâts nécrotiques ou radiants (au choix de l'exorciste)."
+					]
+				},
+				{
+					"name": "Admit Entity {@recharge 5}",
+					"entries": [
+						"L'exorciste dissipe le voile de la mort pour une créature qu'il peut voir dans un rayon de 18 mètres, exposant la cible à des entités malveillantes. La cible doit effectuer un jet de sauvegarde de {@dc 14} Charisme. En cas d'échec, la cible subit 36 ({@damage 8d8}) points de dégâts psychiques et souffre de la condition {@condition incapacitated} pendant 1 minute, durant laquelle elle vomit et bafouille de façon incohérente d'une voix qui n'est pas la sienne. En cas de sauvegarde réussie, la cible ne subit que la moitié des dégâts. Une cible à {@condition incapacitated} peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant fin à l'effet sur elle-même en cas de réussite."
+					]
+				}
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"R",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"conditionInflictSpell": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"charisma"
+			],
+			"savingThrowForcedSpell": [
+				"charisma"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

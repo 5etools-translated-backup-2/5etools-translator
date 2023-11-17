@@ -1,0 +1,374 @@
+{
+	"monster": [
+		{
+			"name": "Apprentice",
+			"source": "HoL",
+			"page": 201,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 7,
+				"formula": "2d8 - 2"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 10,
+			"con": 9,
+			"int": 13,
+			"wis": 11,
+			"cha": 12,
+			"save": {
+				"int": "+3"
+			},
+			"skill": {
+				"arcana": "+3",
+				"history": "+3"
+			},
+			"passive": 10,
+			"languages": [
+				"any one language (usually Common)"
+			],
+			"pbNote": "+2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Du kastar en av följande trollformler (besvärjelseräddning {@dc 11}), med intelligens som besvärjelseförmåga:"
+					],
+					"will": [
+						"{@spell minor illusion}",
+						{
+							"entry": "{@spell Fire Bolt}",
+							"hidden": true
+						}
+					],
+					"daily": {
+						"2": [
+							"{@spell grease}"
+						],
+						"2e": [
+							{
+								"entry": "{@spell Burning Hands}",
+								"hidden": true
+							}
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"action": [
+				{
+					"name": "Quarterstaff",
+					"entries": [
+						"{@atk mw} {@hit 1} att träffa, räckvidd 1,5 m., ett mål. {@h}2 ({@damage 1d6 - 1}) knytnävsslag, eller 3 ({@damage 1d8 - 1}) knytnävsslag om det används med två händer."
+					]
+				},
+				{
+					"name": "Burning Hands (1st-Level Spell; 2/Day)",
+					"entries": [
+						"Du skjuter ut en eldkon på 4,5 meter. Varje varelse i området måste göra ett {@dc 11} räddningsslag i dexteritet. En varelse tar 10 ({@damage 3d6}) eldskador vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat räddningsslag Elden antänder alla brännbara föremål i området som inte bärs eller bärs."
+					]
+				},
+				{
+					"name": "Fire Bolt (Cantrip)",
+					"entries": [
+						"{@atk rs} Fjärrbesvärjelseattack: {@hit 3} för att träffa, räckvidd 36 m., ett mål. {@h}5 ({@damage 1d10}) eldskada. Ett brännbart föremål som träffas av denna besvärjelse antänds om det inte bärs eller bärs."
+					]
+				}
+			],
+			"attachedItems": [
+				"quarterstaff|phb"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"B",
+				"F"
+			],
+			"damageTagsSpell": [
+				"F"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Disciple",
+			"source": "HoL",
+			"page": 201,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"ac": [
+				{
+					"ac": 11,
+					"from": [
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 9,
+				"formula": "2d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 9,
+			"con": 10,
+			"int": 11,
+			"wis": 13,
+			"cha": 9,
+			"save": {
+				"wis": "+3"
+			},
+			"skill": {
+				"perception": "+3",
+				"religion": "+2"
+			},
+			"passive": 13,
+			"languages": [
+				"any one language (usually Common)"
+			],
+			"pbNote": "+2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Du kastar en av följande klerikala besvärjelser (besvärjelsebesparing {@dc 11}), med Visdom som besvärjelseförmåga:"
+					],
+					"will": [
+						"{@spell guidance}",
+						{
+							"entry": "{@spell Sacred Flame}",
+							"hidden": true
+						}
+					],
+					"daily": {
+						"2": [
+							"{@spell cure wounds}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"action": [
+				{
+					"name": "Mace",
+					"entries": [
+						"{@atk mw} {@hit 3} att träffa, räckvidd 1,5 m., ett mål. {@h}4 ({@damage 1d6 + 1}) knytnävsslag."
+					]
+				},
+				{
+					"name": "Sacred Flame (Cantrip)",
+					"entries": [
+						"Du riktar dig mot en varelse som du kan se inom 18 meter från dig. Målet måste lyckas med ett {@dc 11} räddningsslag i Dexterity eller ta 4 ({@damage 1d8}) strålningsskada. Målet får ingen fördel av täckning för detta räddningsslag."
+					]
+				}
+			],
+			"attachedItems": [
+				"mace|phb"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"B",
+				"R"
+			],
+			"damageTagsSpell": [
+				"R"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Sneak",
+			"source": "HoL",
+			"page": 201,
+			"size": [
+				"S"
+			],
+			"type": "humanoid",
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 9,
+				"formula": "2d6 + 2"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 13,
+			"con": 12,
+			"int": 11,
+			"wis": 12,
+			"cha": 9,
+			"save": {
+				"dex": "+3"
+			},
+			"skill": {
+				"sleight of hand": "+3",
+				"stealth": "+3"
+			},
+			"passive": 11,
+			"languages": [
+				"any one language (usually Common)"
+			],
+			"pbNote": "+2",
+			"action": [
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 3} att träffa, räckvidd 1,5 m. eller räckvidd 20/18 m., ett mål. {@h}3 ({@damage 1d4 + 1}) genomträngande skada."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Disengage",
+					"entries": [
+						"Du utför åtgärden \"Disengage\"."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Squire",
+			"source": "HoL",
+			"page": 201,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 11,
+				"formula": "2d8 + 2"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 10,
+			"con": 12,
+			"int": 8,
+			"wis": 11,
+			"cha": 9,
+			"save": {
+				"str": "+3"
+			},
+			"skill": {
+				"athletics": "+3"
+			},
+			"passive": 10,
+			"languages": [
+				"any one language (usually Common)"
+			],
+			"pbNote": "+2",
+			"action": [
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 3} att träffa, räckvidd 1,5 m., ett mål. {@h}5 ({@damage 1d8 + 1}) slashingskador, eller 6 ({@damage 1d10 + 1}) slashingskador om det används med två händer."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Shove",
+					"entries": [
+						"När du använder en sköld försöker du knuffa en varelse inom 1,5 meter från dig."
+					]
+				}
+			],
+			"attachedItems": [
+				"longsword|phb"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true
+		}
+	]
+}

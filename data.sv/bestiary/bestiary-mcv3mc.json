@@ -1,0 +1,575 @@
+{
+	"monster": [
+		{
+			"name": "Blaze",
+			"source": "MCV3MC",
+			"page": 3,
+			"otherSources": [
+				{
+					"source": "LK"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "elemental",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 75,
+				"formula": "10d8 + 30"
+			},
+			"speed": {
+				"walk": 20,
+				"fly": {
+					"number": 20,
+					"condition": "(vertical movement only; hover)"
+				},
+				"canHover": true
+			},
+			"str": 16,
+			"dex": 17,
+			"con": 16,
+			"int": 6,
+			"wis": 10,
+			"cha": 7,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"fire"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Blaze Rod",
+					"entries": [
+						"När elden sjunker till 0 träffpunkter försvinner den i ett rökmoln och har 50 procents chans att lämna efter sig en glödande stav värd 100 gp. Staven sprider svagt ljus i en radie av 1,5 meter. Som en aktion kan en varelse försöka knäcka staven och lyckas med en {@dc 14} styrkekontroll. Den knäckta staven släpper ut sin eldiga energi i en sfär med 1,5 meters radie centrerad på sig själv. Varje varelse i det området måste göra ett {@dc 14} räddningsslag i Dexterity, och tar 6 ({@damage 1d12}) eldskador vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat."
+					]
+				},
+				{
+					"name": "Heat Aura",
+					"entries": [
+						"Alla varelser som börjar sin tur inom 1,5 meter från elden tar 3 ({@damage 1d6}) eldskador."
+					]
+				},
+				{
+					"name": "Illumination",
+					"entries": [
+						"Elden sprider starkt ljus i en radie på 6 meter och svagt ljus i ytterligare 6 meter."
+					]
+				},
+				{
+					"name": "Water Susceptibility",
+					"entries": [
+						"Elden tar 1 köldskada för varje 1,5 meter den rör sig i vatten, för varje gallon vatten som stänks på den, eller när den börjar sin tur i regn."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Blåljuset gör tre Fiery Doom-attacker."
+					]
+				},
+				{
+					"name": "Fiery Doom",
+					"entries": [
+						"{@atk ms,rs} {@hit 6} att träffa; räckvidd 1,5 m. eller avstånd 18 m., ett mål. {@h}8 ({@damage 1d10 + 3}) eldskador, och målet fattar eld om det är en varelse eller ett brännbart föremål. Tills en varelse vidtar en åtgärd för att släcka elden, tar det brinnande målet 3 ({@damage 1d6}) eldskador i slutet av var och en av sina varv."
+					]
+				}
+			],
+			"traitTags": [
+				"Illumination"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"C",
+				"F"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Creeper",
+			"source": "MCV3MC",
+			"page": 4,
+			"otherSources": [
+				{
+					"source": "LK"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 19,
+				"formula": "3d8 + 6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 11,
+			"con": 14,
+			"int": 6,
+			"wis": 8,
+			"cha": 3,
+			"skill": {
+				"perception": "+3",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"immune": [
+				"lightning"
+			],
+			"conditionImmune": [
+				"exhaustion"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Bizarre Physiology",
+					"entries": [
+						"Krypet kan inte utföra handlingar förutom {@action Dash}, {@action Disengage}, {@action Hide} och {@action Search}. Den kan inte utföra bonusåtgärder eller reaktioner."
+					]
+				},
+				{
+					"name": "Creeper Head",
+					"entries": [
+						"När en krypande insekt sjunker till 0 träffpoäng av en laddad krypande insekts explosion (se egenskapen Förstörelse), dör den och dess huvud faller av. En creeper's fallna huvud är ihåligt och kan bäras som en mask med ögon- och munöppningar."
+					]
+				},
+				{
+					"name": "Destruction",
+					"entries": [
+						"När den avslutar sin tur inom 3 meter från en humanoid som den kan se, slutar den att röra sig och avger ett väsande ljud som är tillräckligt högt för att höras av varelser inom 9 meter från den själv.",
+						"Om krypen sjunker till 0 träffpoäng före början av nästa vändning, upphör svischandet och krypen dör. I annat fall, i början av kryptens nästa vändning, händer en av följande saker:",
+						{
+							"type": "list",
+							"items": [
+								"Om det inte finns några humanoider inom 3 meter från den väsande rankan, slutar den väsande. Den använder sedan all tillgänglig rörelse för att närma sig den närmaste humanoid den kan se.",
+								"Om det finns en eller flera humanoider inom 3 meter från den väsande kryparen, exploderar kryparen i en energiboll som fyller en sfär med 6 meters radie centrerad på sig själv. Denna energi sprider sig runt hörnen. Krypet förstörs, och alla andra varelser i explosionens omgivning måste göra ett {@dc 12} räddningsslag i Dexterity, och tar 14 ({@damage 4d6}) blixtskador vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat. Öka denna skada med 7 ({@dice 2d6}) om krypet är laddat (se \"Elektrisk laddning\" nedan). Föremål i området som inte bärs eller bärs på tar 14 ({@damage 4d6}) blixtskador, eller 21 ({@damage 6d6}) blixtskador om krypet är laddat."
+							]
+						}
+					]
+				},
+				{
+					"name": "Electrical Charge",
+					"entries": [
+						"När krypningen utsätts för blixtnedslag tar den ingen skada och blir istället laddad i 1 minut. När den är laddad avger den svagt blått ljus inom en radie på 1,5 meter."
+					]
+				},
+				{
+					"name": "Fear of Felines",
+					"entries": [
+						"Krypet har tillståndet {@condition frightened} när det börjar sin tur inom 18 meter från en kattvarelse som det kan se. Tillståndet varar till början av krypets nästa tur."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"L"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ender Dragon",
+			"source": "MCV3MC",
+			"page": 5,
+			"otherSources": [
+				{
+					"source": "LK"
+				}
+			],
+			"size": [
+				"G"
+			],
+			"type": "dragon",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 22,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 350,
+				"formula": "20d20 + 140"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 120
+			},
+			"str": 27,
+			"dex": 14,
+			"con": 25,
+			"int": 10,
+			"wis": 15,
+			"cha": 19,
+			"save": {
+				"con": "+13",
+				"int": "+6",
+				"wis": "+8"
+			},
+			"skill": {
+				"perception": "+14",
+				"stealth": "+8"
+			},
+			"senses": [
+				"darkvision 240 ft."
+			],
+			"passive": 24,
+			"resist": [
+				"fire"
+			],
+			"immune": [
+				"necrotic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Draconic"
+			],
+			"cr": "19",
+			"trait": [
+				{
+					"name": "Dragon Egg",
+					"entries": [
+						"När Ender Dragon sjunker till 0 träffpunkter utstrålar den lila ljusstrålar och försvinner sedan och lämnar efter sig ett inert, helsvart drakägg värt 5 000 gp."
+					]
+				},
+				{
+					"name": "Legendary Resistance (4/Day)",
+					"entries": [
+						"Om draken misslyckas med ett räddningskast kan den välja att lyckas istället."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Draken gör en bettattack och använder Beating Wings."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 14} att träffa; räckvidd 4,5 m., ett mål. {@h}18 ({@damage 3d6 + 8}) genomträngande skada plus 7 ({@damage 2d6}) nekrotisk skada."
+					]
+				},
+				{
+					"name": "Beating Wings",
+					"entries": [
+						"Draken slår med sina stora vingar. Varje varelse inom 4,5 meter från draken måste lyckas med ett {@dc 21} dexteritetsräddningskast eller ta 10 ({@damage 1d4 + 8}) knytnävsslag, knuffas 3 meter bort från draken och få {@condition prone} villkoret."
+					]
+				},
+				{
+					"name": "Harmful Breath {@recharge 5}",
+					"entries": [
+						"Draken andas ut ruttnande gas i en kon på 18 meter. Varje varelse i området måste göra ett {@dc 21} Konstitutionsräddningsslag, och tar 52 ({@damage 15d6}) nekrotisk skada om räddningsslaget misslyckas, eller hälften så mycket skada om det lyckas. Draken väljer sedan en punkt som den kan se där konen har kontakt med marken. Den punkten blir centrum för en 3 meter hög och 3 meter lång cylinder av kvardröjande gas som försvinner i början av drakens nästa tur. Alla varelser som börjar sin tur i cylindern tar 10 ({@damage 3d6}) nekrotisk skada."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"DR"
+			],
+			"damageTags": [
+				"B",
+				"N",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Enderman",
+			"source": "MCV3MC",
+			"page": 6,
+			"otherSources": [
+				{
+					"source": "LK"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 78,
+				"formula": "12d8 + 24"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 15,
+			"dex": 18,
+			"con": 15,
+			"int": 10,
+			"wis": 18,
+			"cha": 11,
+			"save": {
+				"str": "+5",
+				"con": "+5"
+			},
+			"skill": {
+				"perception": "+7",
+				"stealth": "+7",
+				"survival": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 17,
+			"resist": [
+				"necrotic"
+			],
+			"languages": [
+				"Endspeech"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Evasive Teleportation",
+					"entries": [
+						"Närhelst den tar skada eller är målet för en distansattack kan Enderman teleportera sig, tillsammans med all utrustning den bär eller har på sig, till ett ledigt utrymme den kan se inom 6 meter från sig själv (ingen åtgärd krävs). Om denna effekt utlöses av en distansattack teleporterar sig Enderman precis innan attacken träffar, vilket gör att attacken missar den. Denna egenskap undertrycks medan Enderman har tillståndet {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Implosion",
+					"entries": [
+						"När Enderman sjunker till 0 träffpunkter dör den när dess kropp imploderar. Slå ett {@dice d10}. Vid ett kast på 9 eller mindre lämnar Enderman inga kvarlevor. Vid ett kast på 10 lämnar Endermannen efter sig ett glödande, lila klot som kallas Enderpärla, värt 500 gp. En varelse kan kasta pärlan upp till 18 meter; om pärlan landar i ett ledigt utrymme som är tillräckligt stort för att rymma varelsen teleporteras varelsen till det utrymmet, tillsammans med all utrustning den bär på sig eller bär med sig, och pärlan försvinner."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"När Enderman befinner sig i solljus har han nackdel på attackkast."
+					]
+				},
+				{
+					"name": "Water Susceptibility",
+					"entries": [
+						"Endermannen tar 1 köldskada för varje 1,5 meter den rör sig i vatten, för varje gallon vatten som stänks på den, eller när den börjar sin tur i regn."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Enderman gör två Slam-attacker."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 7} att träffa; räckvidd 3 m., ett mål. {@h}8 ({@damage 1d8 + 4}) knytnävsslag plus 9 ({@damage 2d8}) nekrotiska skador."
+					]
+				}
+			],
+			"traitTags": [
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"C",
+				"N"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Wolf of the Overworld",
+			"source": "MCV3MC",
+			"page": 7,
+			"otherSources": [
+				{
+					"source": "LK"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 11,
+				"formula": "2d8 + 2"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 12,
+			"dex": 15,
+			"con": 12,
+			"int": 3,
+			"wis": 12,
+			"cha": 6,
+			"skill": {
+				"perception": "+5",
+				"stealth": "+4"
+			},
+			"passive": 15,
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"Vargen har fördel i attackkast mot en varelse om minst en av vargens allierade befinner sig inom 1,5 meter från varelsen och den allierade inte har {@condition incapacitated} villkoret."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} att träffa; räckvidd 1,5 m., ett mål. {@h}7 ({@damage 2d4 + 2}) genomträngande skada. Om målet är en varelse måste den lyckas med ett {@dc 11} räddningsslag för styrka eller drabbas av {@condition prone} villkoret."
+					]
+				}
+			],
+			"traitTags": [
+				"Pack Tactics"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

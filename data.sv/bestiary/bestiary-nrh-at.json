@@ -1,0 +1,264 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		},
+		"otherSources": {
+			"monster": {
+				"NRH-TCMC": "NRH-AT",
+				"NRH-ASS": "NRH-AT"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Emo",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "NRH-AT",
+			"page": 9,
+			"_copy": {
+				"name": "Beholder",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the beholder",
+						"with": "Emo",
+						"flags": "i"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Eye Rays",
+							"items": {
+								"name": "Eye Rays",
+								"entries": [
+									"Emo skjuter tre av följande magiska ögonstrålar slumpmässigt (omkasta dubbletter) och väljer ett till tre mål som den kan se inom 36 meter från den:",
+									{
+										"type": "list",
+										"style": "list-hang-notitle",
+										"items": [
+											{
+												"name": "1. Happiness Ray",
+												"entries": [
+													"Målvarelsen måste lyckas med ett {@dc 14} Visdomssparande eller falla {@condition prone} av skratt, bli {@condition incapacitated} och oförmögen att stå upp i 1 minut eller tills Emo skadar varelsen. Målet kan upprepa räddningsslaget i slutet av var och en av sina varv och avsluta effekten på sig själv vid en framgång."
+												],
+												"type": "item"
+											},
+											{
+												"name": "2. Sadness Ray",
+												"entries": [
+													"Den utsatta varelsen måste lyckas med ett {@dc 15} räddningsslag för intelligens. Vid ett misslyckat räddningsslag överväldigas målet av sorg och tar {@damage 3d6} psykisk skada, och det kan inte ta en reaktion förrän i slutet av sin nästa tur. På sin nästa tur kan den använda antingen en handling eller en bonushandling, inte båda. Vid ett lyckat räddningsslag tar målet hälften så mycket skada och drabbas inte av några av de andra effekterna."
+												],
+												"type": "item"
+											},
+											{
+												"name": "3. Anger Ray",
+												"entries": [
+													"Målvarelsen måste lyckas med ett {@dc 14} visdomsräddningsslag eller tvingas duellera med Emo i 1 minut. Målet har nackdel vid attackkast mot andra varelser än Emo och måste göra ett visdomsräddningskast varje gång det försöker röra sig mer än 9 meter bort från Emo."
+												],
+												"type": "item"
+											},
+											{
+												"name": "4. Anxiety Ray",
+												"entries": [
+													"Varelsen måste lyckas med ett {@dc 15} intelligenssparande eller förlora förmågan att skilja vän från fiende och betrakta alla varelser den kan se som fiender i 1 minut. Varje gång målet tar skada kan det upprepa räddningsslaget och avsluta effekten på sig själv vid en framgång.",
+													"När den drabbade varelsen riktar sig mot en annan varelse med en attack, besvärjelse eller annan förmåga måste den välja mål slumpmässigt bland de varelser den kan se inom räckvidden för attacken, besvärjelsen eller den andra förmågan som den använder. Om en fiende provocerar fram en tillfällig attack från den drabbade varelsen måste varelsen göra den attacken om den kan göra det."
+												],
+												"type": "item"
+											},
+											{
+												"name": "5. Fear Ray",
+												"entries": [
+													"Varelsen måste lyckas med ett {@dc 14} räddningsslag i visdom eller bli {@condition frightened} i 1 minut.",
+													"Målet kan upprepa räddningskastet i slutet av var och en av sina vändor, vilket avslutar effekten på sig själv om det lyckas."
+												],
+												"type": "item"
+											},
+											{
+												"name": "6. Desolation Ray",
+												"entries": [
+													"Den utsatta varelsen måste lyckas med ett {@dc 14} räddningsslag för intelligens. Vid ett lyckat räddningsslag tar målet {@damage 5d10} psykisk skada och besvärjelsen upphör. Vid ett misslyckat räddningsslag tar målet {@damage 5d10} psykisk skada och upplever sig vara instängd i en illusorisk stencell i 1 minut. Målet kan inte se eller höra något utanför cellen och är {@condition restrained}."
+												],
+												"type": "item"
+											},
+											{
+												"name": "7. Jealousy Ray",
+												"entries": [
+													"Den utsatta varelsen måste lyckas med ett {@dc 14} Visdomsparningsslag eller bli {@condition charmed} i 1 minut. Medan målet är {@condition charmed} på detta sätt måste det använda sin handling innan det rör sig på var och en av sina varv för att göra en närstridsattack mot en varelse som Emo väljer. Målet kan upprepa räddningskastet i slutet av var och en av sina vändor, och effekten på sig själv upphör om det lyckas."
+												],
+												"type": "item"
+											},
+											{
+												"name": "8. Disgusting Ray",
+												"entries": [
+													"Den utsatta varelsen måste lyckas med ett {@dc 15} Konstitutionsparningsslag mot gift. Vid ett misslyckat räddningsslag omsluts målet av en sfär av gul, kväljande gas och spenderar sin handling på nästa tur med att kväljas och rulla upp."
+												],
+												"type": "item"
+											},
+											{
+												"name": "9. Surprise Ray",
+												"entries": [
+													"Den måltavlade varelsen måste lyckas med en",
+													"{@dc 15} Dexterity räddningskast eller bli {@condition blinded} av en spray av färg till slutet av dess nästa tur."
+												],
+												"type": "item"
+											},
+											{
+												"name": "10. Trust Ray",
+												"entries": [
+													"Den måltavlade varelsen måste lyckas med en",
+													"{@dc 16} Visdomssparkast eller bli {@condition charmed} av Emo i 1 timme eller tills Emo skadar varelsen."
+												],
+												"type": "item"
+											}
+										]
+									}
+								]
+							}
+						}
+					]
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Maude",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "NRH-AT",
+			"page": 12,
+			"_copy": {
+				"name": "Bugbear Chief",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the bugbear",
+						"with": "Maude",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Mr. Greystone",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "NRH-AT",
+			"page": 13,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|PHB|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 112,
+				"formula": "15d8 + 45"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 15,
+			"con": 16,
+			"int": 10,
+			"wis": 12,
+			"cha": 15,
+			"save": {
+				"str": "+7",
+				"dex": "+5",
+				"con": "+6"
+			},
+			"skill": {
+				"athletics": "+10",
+				"intimidation": "+5"
+			},
+			"passive": 11,
+			"languages": [
+				"Common",
+				"Goblin"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Brave",
+					"entries": [
+						"Mr Greystone har fördel i räddningsslag mot att vara {@condition frightened}."
+					]
+				},
+				{
+					"name": "Brute",
+					"entries": [
+						"Ett närstridsvapen ger en extra tärning av sin skada när Mr Greystone träffar med det (ingår i attacken)."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Mr Greystone gör två närstridsattacker eller två distansattacker."
+					]
+				},
+				{
+					"name": "Club",
+					"entries": [
+						"{@atk mw} {@hit 7} att träffa, räckvidd 1,5 m., ett mål. {@h}11 ({@damage 2d6 + 4}) knytnävsslag."
+					]
+				},
+				{
+					"name": "Hand Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 5} att träffa, räckvidd 30/36 m., ett mål. {@h}5 ({@damage 1d6 + 2}) genomträngande skada."
+					]
+				}
+			],
+			"attachedItems": [
+				"club|phb",
+				"hand crossbow|phb"
+			],
+			"traitTags": [
+				"Brute"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GO"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true
+		}
+	]
+}

@@ -1,0 +1,96 @@
+{
+	"spell": [
+		{
+			"name": "Create Magen",
+			"source": "IDRotF",
+			"page": 318,
+			"level": 7,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ein Fläschchen mit Quecksilber im Wert von 500 gp und eine lebensgroße menschliche Puppe, die beide durch den Zauber verbraucht werden, sowie ein komplizierter Kristallstab im Wert von mindestens 1.500 gp, der nicht verbraucht wird",
+					"cost": 50000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Während du den Zauber sprichst, legst du eine Phiole mit Quecksilber in die Brust einer lebensgroßen menschlichen Puppe, die mit Asche oder Staub gefüllt ist. Dann nähst du die Puppe zu und träufelst dein Blut auf sie. Am Ende des Zaubers berührst du die Puppe mit einem Kristallstab und verwandelst sie in einen {@filter magen|bestiary|search=magen|source=IDRotF}, der das trägt, was die Puppe getragen hat. Die Art des Magens wird von dir während des Zaubers gewählt. Siehe {@adventure appendix C|IDRotF|21} für verschiedene Arten von Magiern und ihre Statistiken.",
+				"Wenn der Magier erscheint, verringert sich dein Trefferpunkte-Maximum um einen Betrag, der dem Herausforderungswert des Magens entspricht (Mindestreduktion von 1). Nur ein {@spell wish}-Zauber kann diese Verringerung deines Trefferpunktmaximums rückgängig machen.",
+				"Jeder Magier, den du mit diesem Zauberspruch erschaffst, gehorcht deinen Befehlen, ohne zu fragen."
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Frost Fingers",
+			"source": "IDRotF",
+			"page": 318,
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 15
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Aus Ihren Fingerspitzen strömt eisige Kälte in einem 4,5 Meter hohen Kegel. Jede Kreatur in diesem Bereich muss einen Rettungswurf auf die Konstitution machen und erleidet bei einem misslungenen Rettungswurf {@damage 2d8} Kälteschaden, bei einem erfolgreichen Rettungswurf die Hälfte des Schadens.",
+				"Durch die Kälte gefrieren nichtmagische Flüssigkeiten in dem Bereich, der nicht getragen wird."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberslot der Stufe 2 oder höher wirkst, erhöht sich der Schaden um {@dice 1d8} für jeden Slot der Stufe 1."
+					]
+				}
+			],
+			"damageInflict": [
+				"cold"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"areaTags": [
+				"N"
+			]
+		}
+	]
+}

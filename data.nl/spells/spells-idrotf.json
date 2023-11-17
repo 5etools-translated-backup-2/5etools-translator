@@ -1,0 +1,96 @@
+{
+	"spell": [
+		{
+			"name": "Create Magen",
+			"source": "IDRotF",
+			"page": 318,
+			"level": 7,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "een flesje kwikzilver ter waarde van 500 gp en een levensgrote menselijke pop, die beide door de spreuk worden verbruikt, en een ingewikkelde kristallen staaf ter waarde van minstens 1.500 gp die niet wordt verbruikt.",
+					"cost": 50000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Terwijl je de spreuk uitspreekt, plaats je een flacon kwikzilver in de borst van een levensgrote menselijke pop, gevuld met as of stof. Vervolgens naai je de pop dicht en druppel je er je bloed op. Aan het einde van de spreuk tik je met een kristallen staaf op de pop, waardoor deze verandert in een {@filter magen|bestiary|search=magen|source=IDRotF} gekleed in wat de pop ook droeg. Het type magene wordt door jou gekozen tijdens het uitspreken van de spreuk. Zie {@adventure appendix C|IDRotF|21} voor de verschillende soorten magen en hun statistieken.",
+				"Wanneer de magiër verschijnt, vermindert je maximale aantal hit points met een bedrag gelijk aan de uitdaging van de magiër (minimale vermindering van 1). Alleen een spreuk {@spell wish} kan deze vermindering ongedaan maken.",
+				"Elke magene die je met deze spreuk creëert, gehoorzaamt je bevelen zonder vragen te stellen."
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Frost Fingers",
+			"source": "IDRotF",
+			"page": 318,
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 15
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"IJzige kou straalt uit je vingertoppen in een kegel van 4,5 meter. Elk wezen in dat gebied moet een grondwetsreddende worp doen, waarbij {@damage 2d8} koudeschade wordt opgelopen als de redding mislukt, of half zoveel schade als de redding slaagt.",
+				"De kou bevriest niet-magische vloeistoffen in het gebied die niet gedragen of gedragen worden."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Als je deze spreuk uitspreekt met een spreukengroef van het 2e niveau of hoger, neemt de schade toe met {@dice 1d8} voor elk groefniveau boven het 1e."
+					]
+				}
+			],
+			"damageInflict": [
+				"cold"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"areaTags": [
+				"N"
+			]
+		}
+	]
+}

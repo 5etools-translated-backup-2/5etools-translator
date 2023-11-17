@@ -1,0 +1,840 @@
+{
+	"spell": [
+		{
+			"name": "Dark Star",
+			"source": "EGW",
+			"page": 186,
+			"level": 8,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 150
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "一块玛瑙碎片和一滴施法者的血，施法时会消耗这两样东西",
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"这个法术会以您选择的一个点为中心，在范围内形成一个球体。球体半径可达 12 米。球体范围内充满了魔法黑暗和压迫引力。",
+				"在持续时间内，该法术的区域为（%0%）。拥有黑暗视觉的生物无法看穿魔法黑暗，非魔法光线也无法照亮它。没有声音可以在该区域内产生或通过。任何完全在球体内的生物或物体都对雷霆伤害免疫，而生物在完全在球体内时，对雷霆伤害的免疫率为（%1%）。在那里不可能施展包含语言成分的法术。",
+				"任何在一个回合中第一次进入该法术区域的生物，或在那里开始它的回合，都必须做一个宪法救赎动作。蓄力失败时，该生物会受到{@damage 8d10}武力伤害，蓄力成功时则受到一半的伤害。被这种伤害降低到0点的生物会被瓦解。被瓦解的生物和它所穿戴和携带的一切，除了魔法物品，都会变成一堆灰色的细小灰尘。"
+			],
+			"damageInflict": [
+				"force"
+			],
+			"conditionInflict": [
+				"deafened"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"DFT",
+				"OBJ"
+			],
+			"areaTags": [
+				"S"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Fortune's Favor",
+			"source": "EGW",
+			"page": 186,
+			"level": 2,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "一颗价值至少 100 便士的白珍珠，咒语会消耗这颗白珍珠",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"你将潜在的运气传给你自己或一个你能看到的范围内的自愿生物。当被选中的生物在咒语结束前进行攻击卷、能力检查或蓄力投掷时，它可以对自己解除这个咒语，以掷出一个额外的（%0%），并选择使用其中的（%1%）。或者，当被选中的生物受到攻击时，它可以在自己身上解除这个法术，以掷出一个{@dice d20}，并选择使用哪一个{@dice d20}，是自己掷的还是攻击者掷的。",
+				"如果原来的（%0%）卷有优势或劣势，则该生物在优势或劣势被应用于原来的卷之后，再卷出额外的（%1%）。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"当你使用3级或更高等级的法术槽施放此法术时，你可以针对2级以上的每一个法术槽等级的一个额外生物。"
+					]
+				}
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Gift of Alacrity",
+			"source": "EGW",
+			"page": 186,
+			"level": 1,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"你触摸一个愿意的生物。在持续时间内，目标可以在其主动性卷轴上增加（%0%）。"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Gravity Fissure",
+			"source": "EGW",
+			"page": 187,
+			"level": 6,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "line",
+				"distance": {
+					"type": "feet",
+					"amount": 100
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "铁屑"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"你在以你为起点的一条长 3 米、宽 1.5 米的直线上显现出引力能量峡谷。这条线上的每个生物都必须进行一次体质蓄力，蓄力失败会受到 {@damage 8d8} 重力伤害，蓄力成功则会受到一半的伤害。",
+				"每一个距离这条线 3 米以内但不在其内的生物都必须成功进行一次体质蓄力，否则就会受到（%0%）力的伤害，并被拉向这条直线，直到该生物进入其范围内。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"当你使用七级以上的法术槽施放此法术时，每超过六级的法术槽等级，伤害就会增加（%0%）。"
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"areaTags": [
+				"L"
+			]
+		},
+		{
+			"name": "Gravity Sinkhole",
+			"source": "EGW",
+			"page": 187,
+			"level": 4,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "瑿"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"在你能看到的范围内，一个半径为 6 米的球体会形成碾压之力，并拉扯那里的生物。球体中的每个生物都必须进行一次体质救赎。如果蓄力失败，该生物会受到 {@damage 5d10} 力的伤害，并被直线拉向球体中心，最后被拉到尽可能靠近球体中心的无人空间（即使该空间是在空中）。如果成功获救，生物会受到一半的伤害，并且不会被拉动。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"当你使用五级以上的法术槽施放此法术时，每超过四级的法术槽等级，伤害就会增加（%0%）。"
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Immovable Object",
+			"source": "EGW",
+			"page": 187,
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "至少价值 25 金镑的金粉，该咒语消耗这些金粉",
+					"cost": 2500,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"您触摸一个重量不超过 5 千克的物体，并使它以魔法的方式固定在原地。您和您在施法时指定的生物可以正常移动该物体。您还可以设置一个口令，在距离该物体 1.5 米范围内说出该口令时，该咒语会被抑制 1 分钟。",
+				"如果物体固定在空中，它最多可承受 4 千克的重量。更大的重量会导致物体坠落。否则，生物可以使用一个动作对你的法术救赎DC进行力量检定。如果成功，该生物可以将物体移动最多 3 米。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"如果您使用 4 级或 5 级法术槽施放此法术，移动物体的难度增加 5，最多可承载 8 公斤的重量，持续时间增加到 24 小时。如果您使用六级或六级以上的法术槽施放此法术，移动物体的难度增加 10，物体最多可承载 20 公斤的重量，效果永久持续，直到被驱散。"
+					]
+				}
+			],
+			"abilityCheck": [
+				"strength"
+			],
+			"miscTags": [
+				"OBJ"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Magnify Gravity",
+			"source": "EGW",
+			"page": 188,
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"以你能看到的一个点为中心，半径 3 米的球体内的重力会在一瞬间增加。在你施法的那一回合，球体中的每个生物都必须进行一次体质蓄力。如果蓄力失败，生物会受到 {@damage 2d8} 力量伤害，速度减半，直到下一回合结束。如果蓄力成功，生物受到的伤害减半，速度不会降低。",
+				"在你下一个回合开始之前，任何没有在球体中穿戴或携带的物体，都需要对你的法术保全DC进行成功的力量检查才能拿起或移动。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"当你使用二级以上的法术槽施放此法术时，每超过一级的法术槽等级，伤害就会增加（%0%）。"
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"OBJ",
+				"SGT"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Pulse Wave",
+			"source": "EGW",
+			"page": 188,
+			"level": 3,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"你可以制造强大的压力，并将其释放到一个 9 米长的锥形范围内，然后决定压力是拉还是推生物和物体。锥形范围内的每个生物都必须进行一次体质救赎。如果蓄力失败，生物会受到 {@damage 6d6} 力的伤害，如果蓄力成功，生物会受到一半的伤害。每个失败的生物都会被拉到离你 4.5 米远的地方，或者被推到离你 4.5 米远的地方，这取决于你对咒语的选择。",
+				"此外，完全位于锥体内的未固定物体同样会被拉动或推动 4.5 米。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"使用 4 级或更高的法术槽施放此法术时，伤害增加（%0%），法术槽等级每超过 3 级，拉或推的距离增加 1.5 米。"
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"FMV",
+				"OBJ"
+			],
+			"areaTags": [
+				"N"
+			]
+		},
+		{
+			"name": "Ravenous Void",
+			"source": "EGW",
+			"page": 188,
+			"level": 9,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 1000
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "铁制小九星"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"你以范围内你能看到的一点为中心，创造一个半径 6 米的破坏引力球。在咒语持续时间内，球体及其周围 3 米内的任何空间都会受到（%0%）的破坏，如果球体内的非魔法物品没有被穿戴或携带，则会被摧毁。",
+				"当球体出现时，以及在咒语结束前的每个回合开始时，球体周围 3 米内的未固定物体都会被拉向球体中心，并在尽可能靠近球体中心的空地上结束。",
+				"在球体 3 米范围内开始回合的生物必须在力量蓄力中成功，否则会被直接拉向球体中心，并在尽可能靠近球体中心的空地上结束回合。生物在一个回合中首次进入球体或在那里开始回合时会受到 {@damage 5d10} 力量伤害和 {@condition restrained} 伤害，直到不再处于球体中为止。如果球体在空中，则 {@condition restrained} 生物会在球体内盘旋。生物可以使用它的行动对你的法术救赎DC进行力量检定，结束它自身或球体中它可以接触到的另一个生物的（%3%）状态。被此咒语减至 0 命中点的生物连同其身上或携带的任何非魔法物品都会被消灭。"
+			],
+			"damageInflict": [
+				"force"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrow": [
+				"strength"
+			],
+			"abilityCheck": [
+				"strength"
+			],
+			"miscTags": [
+				"OBJ",
+				"SGT"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Reality Break",
+			"source": "EGW",
+			"page": 189,
+			"level": 8,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "水晶棱镜"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"你粉碎了现实和时间线之间的障碍，将一个生物推入动荡和疯狂之中。目标必须在智慧救赎中获得成功，否则在法术结束前它不能做出反应。受影响的目标也必须在它的每个回合开始时掷出一个（%0%）；掷出的数字决定了目标所发生的事情，如现实破碎效果表所示。",
+				"在它的每个回合结束时，受影响的目标可以重复智慧救赎的动作，如果成功则结束对自己的咒语。",
+				{
+					"type": "table",
+					"caption": "Reality Break Effects",
+					"colLabels": [
+						"d10",
+						"Effect"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1-2",
+							"{@b 遥远国度的愿景}目标受到{@damage 6d12}精神伤害，并且是{@condition stunned}直到回合结束。"
+						],
+						[
+							"3-5",
+							"{@b 弯曲裂缝}目标必须做一个灵巧的蓄力动作，蓄力失败会受到{@damage 8d12}武力伤害，成功则受到一半的伤害。"
+						],
+						[
+							"6-8",
+							"{@b 虫洞} 将目标连同其穿戴和携带的所有物品传送到 9 米外你所选择的一个你能看到的空地上。目标还会受到 {@damage 10d12} 力的伤害并被击倒 {@condition prone}。"
+						],
+						[
+							"9-10",
+							"{@b 黑暗虚空的寒意}目标受到{@damage 10d12}寒冷伤害，并且是{@condition blinded}直到回合结束。"
+						]
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic",
+				"force",
+				"cold"
+			],
+			"conditionInflict": [
+				"stunned",
+				"prone",
+				"blinded"
+			],
+			"savingThrow": [
+				"wisdom",
+				"dexterity"
+			],
+			"miscTags": [
+				"RO",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sapping Sting",
+			"source": "EGW",
+			"page": 189,
+			"level": 0,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"你会消耗一个你能看到的范围内的生物的生命力。目标必须在体质救赎中成功，否则会受到{@damage 1d4}坏死性的伤害并倒下{@condition prone}。",
+				"当你达到5级（{@dice 1d4}）、11级（{@dice 2d4}）和17级（{@dice 3d4}）时，该法术的伤害增加{@dice 4d4}。"
+			],
+			"scalingLevelDice": {
+				"label": "necrotic damage",
+				"scaling": {
+					"1": "1d4",
+					"5": "2d4",
+					"11": "3d4",
+					"17": "4d4"
+				}
+			},
+			"damageInflict": [
+				"necrotic"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Temporal Shunt",
+			"source": "EGW",
+			"page": 189,
+			"level": 5,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "taken when a creature you can see makes an attack roll or starts to cast a spell"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"你的目标是触发的生物，它必须在智慧救赎中成功，否则就会消失，被扔到另一个时间点，导致攻击失败或法术被浪费掉。在下一个回合开始时，目标会重新出现在它原来的地方或最近的无人空间。目标不记得你施了法术或受到它的影响。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"当你使用 6 级或更高的法术槽施放此法术时，每超过 5 级法术槽，你就可以多瞄准一个生物。所有目标之间的距离必须在 9 米以内。"
+					]
+				}
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Tether Essence",
+			"source": "EGW",
+			"page": 189,
+			"level": 7,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "一卷至少价值 250 便士的铂金绳，该咒语消耗铂金绳",
+					"cost": 25000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"你能看到范围内的两个生物必须进行一次体质蓄力，如果彼此距离在 9 米以内，则会处于劣势。任何生物都可以自愿失败。如果任何一方蓄力成功，则咒语无效。如果两个求救都失败了，那么无论它们之间的距离有多远，这两个生物都会在持续时间内被魔法连接在一起。当其中一个受到伤害时，另一个也会受到同样的伤害。如果其中一个生物恢复了命中点数，另一个生物也会恢复相同的命中点数。如果其中一个被拴住的生物的命中点数降为 0，则两个生物的咒语都会结束。如果咒语在一个生物身上结束，则在两个生物身上都会结束。"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Time Ravage",
+			"source": "EGW",
+			"page": 189,
+			"level": 9,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "一个装满钻石粉尘的沙漏，价值至少 5,000 金普，施法时会消耗钻石粉尘",
+					"cost": 500000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"你的目标是范围内你能看到的一个生物，让它的身体形态经历快速老化的破坏。目标必须做一个宪法救赎，如果救赎失败，会受到（%0%）坏死性的伤害，如果救赎成功，会受到一半的伤害。如果救赎失败，目标也会衰老到只剩下30天就会老死的程度。在这种衰老状态下，目标在攻击卷轴、能力检查和救赎方面都处于劣势，而且其行走速度减半。只有{@damage 10d12}法术或{@spell wish}用9级法术槽施法才能结束这些影响，并使目标恢复到以前的年龄。"
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Wristpocket",
+			"source": "EGW",
+			"page": 190,
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"你轻弹手腕，使手中的一件物品消失。只有你才能拿着这个重量不超过 2.5 千克的物体，它将被传送到一个异次元空间，并在那里停留一段时间。",
+				"在咒语结束之前，你可以用你的行动将物体召唤到你的自由手中，你也可以用你的行动将物体送回次元空间。当法术结束时，仍在口袋平面的物体会出现在你的空间里，在你的脚下。"
+			],
+			"areaTags": [
+				"ST"
+			]
+		}
+	]
+}

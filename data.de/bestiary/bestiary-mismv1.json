@@ -1,0 +1,921 @@
+{
+	"monster": [
+		{
+			"name": "Coral",
+			"isNamedCreature": true,
+			"source": "MisMV1",
+			"page": 4,
+			"size": [
+				"L"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 135,
+				"formula": "18d10 + 36"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": 60,
+				"swim": 60
+			},
+			"str": 20,
+			"dex": 13,
+			"con": 15,
+			"int": 14,
+			"wis": 18,
+			"cha": 19,
+			"save": {
+				"dex": "+5",
+				"con": "+6",
+				"wis": "+8",
+				"cha": "+8"
+			},
+			"skill": {
+				"arcana": "+6",
+				"insight": "+8",
+				"perception": "+8"
+			},
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 18,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Primordial",
+				"Sylvan"
+			],
+			"cr": "9",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Die Koralle hat einen Vorteil bei Rettungswürfen gegen Zauber und andere magische Effekte."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Koralle führt zwei Hufangriffe aus und setzt Schwanzstoßen ein."
+					]
+				},
+				{
+					"name": "Hoof",
+					"entries": [
+						"{@atk mw} {@hit 9} bis zum Treffer, Reichweite 1,5 m, ein Ziel. {@h}12 ({@damage 2d6 + 5}) Schaden durch Wucht."
+					]
+				},
+				{
+					"name": "Tail Thump",
+					"entries": [
+						"Coral schlägt mit ihrem Schwanz nach unten und entfesselt einen Schwall magischer Kraft auf eine Kreatur, die sie im Umkreis von 18 Metern sehen kann. Das Ziel muss einen {@dc 16} Rettungswurf auf Geschicklichkeit machen. Bei einem misslungenen Schutzwurf erleidet das Ziel 22 ({@damage 4d10}) Kraftschaden und hat den Zustand {@condition prone}. Bei einem erfolgreichen Schutzwurf erleidet das Ziel nur halb so viel Schaden. Wenn dieser Schaden das Ziel auf 0 Trefferpunkte reduziert, stirbt das Ziel, und sein Körper wird zu feinem Staub."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Bubbles of Whimsy (2/Day)",
+					"entries": [
+						"Coral produziert einen Strom magischer Blasen aus ihrem Horn. Diese Seifenblasen schweben zu einer Kreatur, die Coral in einem Umkreis von 18 Metern von sich aus sehen kann. Wirf einen {@dice d6}, um die Wirkung der Seifenblasen zu bestimmen:",
+						{
+							"type": "list",
+							"items": [
+								{
+									"name": "1-2: Bolstering Treat",
+									"type": "item",
+									"entries": [
+										"Die Blasen verwandeln sich in {@dice 1d4} Kekse, die im Raum des Ziels erscheinen. Das Ziel erhält 11 ({@dice 2d8 + 2}) temporäre Trefferpunkte, wenn es sofort seine Reaktion einsetzt, um einen der Kekse zu essen. Übriggebliebene Kekse sind köstlich, bringen aber keine Vorteile."
+									]
+								},
+								{
+									"name": "3-4: Sparkle Burst",
+									"type": "item",
+									"entries": [
+										"Die Blasen verwandeln sich in Glitzer, der um das Ziel herumwirbelt, bevor er nach außen hin zerplatzt. Jede Kreatur im Umkreis von 1,5 Metern um das Ziel muss einen {@dc 16} Rettungswurf auf die Konstitution bestehen oder bis zum Beginn des nächsten Zuges der Koralle den Zustand {@condition blinded} erleiden."
+									]
+								},
+								{
+									"name": "5-6: Stink Bomb Shield",
+									"type": "item",
+									"entries": [
+										"Die Blasen verwandeln sich in eine übel riechende Gaswolke, die das Ziel umgibt und abschirmt. Das Ziel hat halbe Deckung, bis das Gas zu Beginn von Corals nächstem Zug verschwindet."
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Gift of Speech (1/Day)",
+					"entries": [
+						"Coral zielt auf eine Bestie, die sie in einem Umkreis von 3 Metern von sich aus sehen kann. Das Ziel erhält die Fähigkeit, 10 Minuten lang Common oder Sylvan (nach Corals Wahl) zu verstehen und zu sprechen."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"P",
+				"S"
+			],
+			"damageTags": [
+				"B",
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded",
+				"prone"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dandylion",
+			"source": "MisMV1",
+			"page": 6,
+			"size": [
+				"L"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 90,
+				"formula": "12d10 + 24"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 22,
+			"dex": 19,
+			"con": 14,
+			"int": 16,
+			"wis": 17,
+			"cha": 18,
+			"save": {
+				"str": "+9",
+				"cha": "+7"
+			},
+			"skill": {
+				"nature": "+9",
+				"perception": "+6",
+				"survival": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 16,
+			"languages": [
+				"Common",
+				"Sylvan"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Der Dandylion wirkt einen der folgenden Zauber, die keine materiellen Komponenten benötigen und Charisma als Zauberfähigkeit verwenden (Zauberschutz {@dc 15}):"
+					],
+					"will": [
+						"{@spell druidcraft}",
+						"{@spell guidance}",
+						"{@spell purify food and drink}"
+					],
+					"daily": {
+						"1": [
+							"{@spell speak with plants}"
+						],
+						"2e": [
+							"{@spell entangle}",
+							"{@spell goodberry}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Der Dandylion hat einen Vorteil bei Rettungswürfen gegen Zauber und andere magische Effekte."
+					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"Der Dandylion hat einen Vorteil bei einem Angriffswurf gegen eine Kreatur, wenn sich mindestens ein Verbündeter des Dandylions innerhalb von 1,5 Metern um die Kreatur befindet und der Verbündete nicht die {@condition incapacitated} Bedingung erfüllt."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Der Dandylion führt eine Biss-Attacke und eine Klauen-Attacke durch."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 9} bis zum Treffer, Reichweite 1,5 m, ein Ziel. {@h}13 ({@damage 2d6 + 6}) Stich-Schaden."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 9} bis zum Treffer, Reichweite 1,5 m, ein Ziel. {@h}20 ({@damage 4d6 + 6}) Hiebschaden. Wenn sich der Dandylion unmittelbar vor dem Treffer mindestens 6 Meter geradeaus auf das Ziel zubewegt hat, muss das Ziel einen {@dc 17}-Stärke-Rettungswurf bestehen oder die {@condition prone}-Bedingung erfüllen. Wenn das Ziel die {@condition prone} Bedingung erfüllt, kann der Dandylion eine Biss-Attacke gegen es als Bonusaktion durchführen."
+					]
+				},
+				{
+					"name": "Rejuvenating Seedpods (2/Day)",
+					"entries": [
+						"Der Dandylion stößt aus seinem Schwanz einen Schwall von Samenschoten aus, die eine Kugel mit einem Radius von 3 Metern um ihn herum füllen. Jede Kreatur der Wahl des Dandylions in der Sphäre kann sofort einen der folgenden Zustände auf sich selbst beenden (Wahl der Kreatur): {@condition blinded}, {@condition deafened}, {@condition paralyzed}, oder {@condition poisoned}. Außerdem wird der gesamte Boden im Gebiet der Kugel angereichert, wodurch die verdorrte Vegetation in diesem Gebiet wieder voll gesund wird und alle Pflanzen in diesem Gebiet im nächsten Jahr doppelt so viel Ertrag bringen wie normal."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Roar of Pride",
+					"entries": [
+						"Wenn eine Kreatur im Umkreis von 18 Metern vom Dandylion mit einem Angriffswurf getroffen wird, kann der Dandylion ein wütendes Brüllen entfesseln. Die Kreatur, die diese Reaktion ausgelöst hat, muss einen {@dc 15} Rettungswurf in Weisheit bestehen oder bis zum Ende des nächsten Zuges des Dandylions den Zustand {@condition frightened} haben."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance",
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"conditionInflictSpell": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"strength",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Rain",
+			"isNamedCreature": true,
+			"source": "MisMV1",
+			"page": 8,
+			"size": [
+				"S"
+			],
+			"type": "celestial",
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 60,
+				"formula": "11d6 + 22"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 120
+			},
+			"str": 10,
+			"dex": 11,
+			"con": 14,
+			"int": 14,
+			"wis": 18,
+			"cha": 15,
+			"save": {
+				"dex": "+3",
+				"con": "+5",
+				"wis": "+7"
+			},
+			"skill": {
+				"acrobatics": "+3",
+				"insight": "+7",
+				"stealth": "+3"
+			},
+			"passive": 14,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"fire",
+				"poison",
+				"radiant"
+			],
+			"conditionImmune": [
+				"charmed",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"Celestial",
+				"Common"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Fiery Wings",
+					"entries": [
+						"Rains Flügel bestehen aus Flammen und verbreiten helles Licht bis zu einer Entfernung von 4,5 Metern und schwaches Licht bis zu weiteren 4,5 Metern. Zu Beginn jeder von Rains Runden erleidet jede Kreatur von Rains Wahl im Umkreis von 1,5 Metern um sie 3 ({@damage 1d6}) Feuerschaden. Eine Kreatur, die Rain mit einem Nahkampfangriff trifft, erleidet 3 ({@damage 1d6}) Feuerschaden."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Regen hat einen Vorteil bei Rettungswürfen gegen Zauber und andere magische Effekte."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Regen macht zwei Hufangriffe."
+					]
+				},
+				{
+					"name": "Hoof",
+					"entries": [
+						"{@atk mw} {@hit 3} bis zum Treffer, Reichweite 1,5 m, ein Ziel. {@h}5 ({@damage 2d4}) Schaden durch Wucht."
+					]
+				},
+				{
+					"name": "Haloed Horn Burst {@recharge 5}",
+					"entries": [
+						"Rain benutzt ihr mit einem Heiligenschein versehenes Horn, um einen der folgenden magischen Effekte zu erzeugen:"
+					]
+				},
+				{
+					"name": "Glitterstorm",
+					"entries": [
+						"Regen sendet einen Regenbogenstrahl in einer 9 Meter langen Linie aus, die 1,5 Meter breit ist. Jede Kreatur in diesem Bereich muss einen {@dc 15} Rettungswurf in Geschicklichkeit machen und erleidet bei einem misslungenen Rettungswurf 21 ({@damage 6d6}) Strahlenschaden, bei einem erfolgreichen Rettungswurf die Hälfte des Schadens; Kreaturen mit böser Ausrichtung haben bei diesem Rettungswurf einen Nachteil. Wenn der Schaden durch diesen Effekt eine Kreatur auf 0 Trefferpunkte reduziert, stirbt die Kreatur und ihr Körper verwandelt sich in glitzernde Blumen."
+					]
+				},
+				{
+					"name": "Healing Rainbows",
+					"entries": [
+						"Rain setzt eine Welle verjüngenden, vielfarbigen Lichts in einem 9 Meter großen Kegel frei. Jede Kreatur von Rain's Wahl in diesem Gebiet erhält 18 ({@dice 4d8}) Trefferpunkte zurück."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Nimble Escape",
+					"entries": [
+						"Rain führt entweder die Aktion \"Abrücken\" oder \"Verstecken\" aus."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CE"
+			],
+			"damageTags": [
+				"B",
+				"F",
+				"R"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Scrapper",
+			"source": "MisMV1",
+			"page": 10,
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 126,
+				"formula": "12d10 + 60"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 20,
+			"dex": 10,
+			"con": 20,
+			"int": 3,
+			"wis": 10,
+			"cha": 1,
+			"skill": {
+				"perception": "+6"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"resist": [
+				"lightning"
+			],
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Electrified Chassis",
+					"entries": [
+						"Eine Kreatur, die den Schrotthaufen mit einem Nahkampfangriff trifft, während sie sich innerhalb von 1,5 Metern von ihm befindet, erleidet 19 ({@damage 3d12}) Blitzschaden."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Der Schläger führt zwei Stachelhieb-Angriffe aus. Einen davon kann er durch einen Angriff mit Drähten ersetzen."
+					]
+				},
+				{
+					"name": "Spike Punch",
+					"entries": [
+						"{@atk mw} {@hit 8} bis zum Treffer, Reichweite 1,5 m, ein Ziel. {@h}14 ({@damage 2d8 + 5}) Schaden durch Wucht plus 5 ({@damage 1d10}) Schaden durch Stich."
+					]
+				},
+				{
+					"name": "Wires",
+					"entries": [
+						"{@atk mw} {@hit 8} auf Treffer, Reichweite 6 m, eine große oder kleinere Kreatur. {@h}Das Ziel hat die {@condition grappled}-Bedingung (Flucht {@dc 16}) und muss einen {@dc 16}-Stärke-Rettungswurf schaffen oder in einen unbesetzten Raum innerhalb von 1,5 Metern um den Schrotthändler gezogen werden und 19 ({@damage 3d12}) Blitzschaden erleiden. Der Schrotthändler kann jeweils nur eine Kreatur {@condition grappled} auf diese Weise in seiner Gewalt haben."
+					]
+				},
+				{
+					"name": "Eye Beam {@recharge 5}",
+					"entries": [
+						"Der Schrotthaufen schießt einen magischen Strahl aus seinem verlängerten Auge auf eine Kreatur, die er im Umkreis von 36 Metern um sich herum sieht. Das Ziel muss einen {@dc 16} Rettungswurf in Geschicklichkeit machen und erleidet bei einem misslungenen Rettungswurf 44 ({@damage 8d10}) Kraftschaden, bei einem erfolgreichen Rettungswurf halb so viel Schaden."
+					]
+				}
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"L",
+				"O",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Seth the Shapeshifting Dragon",
+			"isNamedCreature": true,
+			"source": "MisMV1",
+			"page": 12,
+			"size": [
+				"M"
+			],
+			"type": "dragon",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				17
+			],
+			"hp": {
+				"average": 153,
+				"formula": "18d8 + 72"
+			},
+			"speed": {
+				"walk": 50,
+				"swim": 50
+			},
+			"str": 16,
+			"dex": 25,
+			"con": 19,
+			"int": 13,
+			"wis": 15,
+			"cha": 14,
+			"save": {
+				"str": "+7",
+				"dex": "+11",
+				"con": "+8"
+			},
+			"skill": {
+				"perception": "+6",
+				"stealth": "+11"
+			},
+			"senses": [
+				"blindsight 30 ft.",
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"resist": [
+				"cold",
+				"fire"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"grappled",
+				"poisoned",
+				"restrained"
+			],
+			"languages": [
+				"Aquan",
+				"Common",
+				"Draconic"
+			],
+			"cr": "10",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"Seth kann Luft und Wasser atmen."
+					]
+				},
+				{
+					"name": "Invisible in Water",
+					"entries": [
+						"Seth hat den Zustand {@condition invisible}, während er vollständig in Wasser eingetaucht ist."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Seth führt einen Bissangriff und zwei Klauenangriffe aus."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 11} auf Treffer, Reichweite 3 m, ein Ziel. {@h}10 ({@damage 1d6 + 7}) Stichschaden plus 9 ({@damage 2d8}) Kälteschaden."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 11} bis zum Treffer, Reichweite 1,5 m, ein Ziel. {@h}14 ({@damage 2d6 + 7}) Hiebschaden."
+					]
+				},
+				{
+					"name": "Riptide Breath {@recharge 5}",
+					"entries": [
+						"Seth stößt einen Strom aus eiskaltem Wasser in einem Kegel von 9 Metern Höhe aus. Jede Kreatur in diesem Bereich muss einen {@dc 16} Rettungswurf auf Konstitution machen. Bei einem misslungenen Schutzwurf erleidet die Kreatur 36 ({@damage 8d8}) Kälteschaden und befindet sich bis zum Ende ihrer nächsten Runde im Zustand {@condition incapacitated}. Bei einem erfolgreichen Schutzwurf erleidet die Kreatur nur halb so viel Schaden."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Seth verwandelt sich auf magische Weise in einen kleinen Humanoiden oder eine Bestie, die winzig oder klein ist, wobei er seine Spielstatistiken (außer seiner Größe) beibehält. Diese Verwandlung endet, wenn Seth auf 0 Trefferpunkte reduziert wird oder eine andere Bonusaktion nutzt, um sie zu beenden."
+					]
+				},
+				{
+					"name": "Superspeed (2/Day)",
+					"entries": [
+						"Seths Geschwindigkeit wird verdoppelt, solange er {@status concentration} beibehält (als ob {@status concentration||concentrating} auf einen Zauber wirken würde). Während seine Geschwindigkeit auf diese Weise erhöht ist, werden alle Angriffswürfe gegen ihn mit Nachteil ausgeführt, und er wird teilweise körperlos, was ihm erlaubt, sich durch Kreaturen und Objekte zu bewegen, als wären sie schwieriges Terrain. Seth erleidet 5 ({@damage 1d10}) Kraftschaden, wenn er seinen Zug innerhalb eines Objekts beendet."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"AQ",
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"C",
+				"O",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sheldon the Blueberry Dragon",
+			"isNamedCreature": true,
+			"source": "MisMV1",
+			"page": 14,
+			"size": [
+				"L"
+			],
+			"type": "dragon",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 142,
+				"formula": "15d10 + 60"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 60
+			},
+			"str": 19,
+			"dex": 13,
+			"con": 18,
+			"int": 17,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"dex": "+4",
+				"con": "+7",
+				"int": "+6"
+			},
+			"skill": {
+				"acrobatics": "+7",
+				"athletics": "+7",
+				"performance": "+6"
+			},
+			"senses": [
+				"blindsight 30 ft.",
+				"darkvision 120 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"force",
+				"psychic"
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"telepathy 120 ft."
+			],
+			"cr": "7",
+			"spellcasting": [
+				{
+					"name": "Spellcasting (Psionics)",
+					"headerEntries": [
+						"Sheldon wirkt einen der folgenden Zauber, für die keine Zauberkomponenten benötigt werden und bei denen Intelligenz als Zaubernde Fähigkeit verwendet wird (Zauberschutz {@dc 14}):"
+					],
+					"will": [
+						"{@spell light}",
+						"{@spell mage hand} (the hand is invisible)"
+					],
+					"daily": {
+						"1e": [
+							"{@spell dimension door}",
+							"{@spell telekinesis}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Space Dweller",
+					"entries": [
+						"Sheldon kann in einem Vakuum normal atmen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Sheldon macht entweder zwei Biss-Attacken, zwei Blaubeerschleuder-Attacken oder eine von beiden."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} bis zum Treffer, Reichweite 1,5 m, ein Ziel. {@h}7 ({@damage 1d6 + 4}) Stich-Schaden plus 4 ({@damage 1d8}) psychischer Schaden."
+					]
+				},
+				{
+					"name": "Blueberry Fling",
+					"entries": [
+						"{@atk rw} {@hit 7} bis Treffer, Reichweite 9 m, eine Kreatur. {@h}11 ({@damage 2d6 + 4}) Heidelbeerschaden."
+					]
+				},
+				{
+					"name": "Jetstream Breath {@recharge 5}",
+					"entries": [
+						"Sheldon stößt eine Linie magischen Windes aus, die 18 Meter lang und 1,5 Meter breit ist. Jede Kreatur in diesem Bereich muss einen {@dc 15} Rettungswurf in Stärke machen. Bei einem misslungenen Schutzwurf erleidet die Kreatur 21 ({@damage 6d6}) Kraftschaden, wird 4,5 Meter von Sheldon weggestoßen und hat den Zustand {@condition prone}. Bei einem erfolgreichen Schutzwurf erleidet die Kreatur nur halb so viel Schaden."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Wind Dash (2/Day)",
+					"entries": [
+						"Sheldon beschwört einen starken Windstoß und fliegt bis zu seiner Geschwindigkeit. Diese Bewegung provoziert keine Gelegenheitsangriffe. Am Ende dieser Bewegung muss jede Kreatur im Umkreis von 1,5 Metern um Sheldon einen {@dc 15} Rettungswurf auf Stärke bestehen oder den Zustand {@condition prone} erleiden, da der Wind um Sheldon herumfliegt."
+					]
+				}
+			],
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"TP"
+			],
+			"damageTags": [
+				"O",
+				"P",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"conditionInflictSpell": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

@@ -1,0 +1,354 @@
+{
+	"monster": [
+		{
+			"name": "Dirt-Under-Nails",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "RtG",
+			"page": 32,
+			"size": [
+				"M"
+			],
+			"type": "plant",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 78,
+				"formula": "12d8 + 24"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 15,
+			"int": 12,
+			"wis": 12,
+			"cha": 18,
+			"save": {
+				"wis": "+4",
+				"cha": "+7"
+			},
+			"skill": {
+				"arcana": "+4",
+				"deception": "+7",
+				"persuasion": "+7",
+				"religion": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"vulnerable": [
+				"fire"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"telepathy 60 ft."
+			],
+			"cr": "7",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"Wrodzoną umiejętnością czarnoksiężnika jest Charyzma. Może on rzucać następujące zaklęcia (oszczędność zaklęć {@dc 15}), nie wymagające żadnych składników materialnych:"
+					],
+					"will": [
+						"{@spell alter self}",
+						"{@spell false life}",
+						"{@spell levitate} (self only)",
+						"{@spell mage armor} (self only)",
+						"{@spell silent image}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell feeblemind}",
+							"{@spell finger of death}",
+							"{@spell plane shift}"
+						]
+					},
+					"ability": "cha"
+				},
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Dirt-Under-Nails jest czarodziejem 17 poziomu. Jego zdolność czarowania to Charyzma (obrona przed zaklęciami {@dc 17}, {@hit 9} trafienia przy atakach zaklęciami). Po zakończeniu krótkiego lub długiego odpoczynku odzyskuje zużyte sloty na czary. Zna następujące zaklęcia czarnoksiężnika:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch}",
+								"{@spell eldritch blast}",
+								"{@spell friends}",
+								"{@spell mage hand}",
+								"{@spell minor illusion}",
+								"{@spell prestidigitation}",
+								"{@spell shocking grasp}"
+							]
+						},
+						"5": {
+							"lower": 1,
+							"slots": 4,
+							"spells": [
+								"{@spell armor of Agathys}",
+								"{@spell banishment}",
+								"{@spell burning hands}",
+								"{@spell cloudkill}",
+								"{@spell flame strike}",
+								"{@spell magic circle}",
+								"{@spell scorching ray}",
+								"{@spell scrying}",
+								"{@spell stinking cloud}",
+								"{@spell suggestion}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Dark One's Own Luck (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Kiedy Czarnoksiężnik wykonuje test umiejętności lub rzut ratunkowy, może dodać {@dice d10} do wyniku. Może to zrobić po wykonaniu rzutu, ale przed pojawieniem się jakichkolwiek efektów."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"Dirt-Under-Nails odzyskuje 10 punktów życia na początku swojej tury, jeśli jest w kontakcie z ziemią. Jeśli Dirt-Under-Nails otrzyma obrażenia od ognia, ta cecha nie działa na początku jego następnej tury. Dirt-Under-Nails umiera tylko wtedy, gdy zaczyna swoją turę z 0 punktami trafień i nie regeneruje się."
+					]
+				},
+				{
+					"name": "Shared Senses",
+					"entries": [
+						"Dirt-Under-Nails może widzieć i słyszeć to, co każda roślina w promieniu 36 m. Ponadto Dirt-Under-Nails może komunikować się telepatycznie z każdą rośliną w tym zasięgu."
+					]
+				},
+				{
+					"name": "Special Equipment (+2 Rod of the Pact Keeper)",
+					"entries": [
+						"Trzymając go {@item +2 Rod of the Pact Keeper||rod}, Dirt-Under-Nails zyskuje premię +2 do ataków zaklęciami i do wartości DC rzutów ratujących jego zaklęć czarnoksięskich (uwzględnione w modyfikacjach, poniżej). Ponadto, w czasie trzymania laski może odzyskać 1 slot na zaklęcie czarnoksięskie jako akcję. Nie może użyć tej umiejętności ponownie, dopóki nie skończy długiego odpoczynku."
+					]
+				},
+				{
+					"name": "Tree Stride",
+					"entries": [
+						"Raz na turę Brudnopis może wykorzystać 3 metry swojego ruchu, aby magicznie wejść do jednego zagajnika grzybów w promieniu 1,5 metra od niego i wyjść z drugiego zagajnika grzybów w promieniu 18 metrów od niego, pojawiając się na niezajętej przestrzeni w promieniu 1,5 metra od drugiego zagajnika. Oba zagajniki grzybów muszą być duże lub większe. Dirt-Under-Nails nie musi widzieć drugiego zagajnika, aby użyć tej zdolności."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Mace",
+					"entries": [
+						"{@atk mw} {@hit 3} do trafienia, zasięg 1,5 m., jeden cel. {@h}3 ({@damage 1d6}) obrażeń obuchowych plus 10 ({@damage 3d6}) obrażeń od ognia."
+					]
+				}
+			],
+			"attachedItems": [
+				"mace|phb"
+			],
+			"traitTags": [
+				"Regeneration",
+				"Tree Stride"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"TP"
+			],
+			"damageTags": [
+				"B",
+				"F"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"F",
+				"I",
+				"L",
+				"N",
+				"O",
+				"P",
+				"R",
+				"S",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CL",
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"incapacitated"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"intelligence",
+				"wisdom"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Rotter",
+			"source": "RtG",
+			"page": 34,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 75,
+				"formula": "10d8 + 30"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 18,
+			"dex": 12,
+			"con": 16,
+			"int": 10,
+			"wis": 13,
+			"cha": 8,
+			"skill": {
+				"athletics": "+7",
+				"perception": "+4",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"resist": [
+				"bludgeoning",
+				"piercing"
+			],
+			"immune": [
+				"poison"
+			],
+			"vulnerable": [
+				"fire"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"telepathy 60 ft."
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Magic Club",
+					"entries": [
+						"W ręku gnida jego pałka jest magiczna i zadaje 7 ({@damage 3d4}) dodatkowych obrażeń (wliczanych do jego ataków)."
+					]
+				},
+				{
+					"name": "Plant Camouflage",
+					"entries": [
+						"Gnilec ma przewagę w testach Zręczności (Stealth), które wykonuje w terenie z dużą ilością roślin zasłaniających."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"Gnilec odzyskuje 10 punktów życia na początku swojej tury, jeśli jest w kontakcie z ziemią. Jeśli gnilec otrzyma obrażenia od ognia, ta cecha nie działa na początku jego następnej tury. Gnilec ginie tylko wtedy, gdy zaczyna swoją turę z 0 punktami trafień i nie regeneruje się."
+					]
+				},
+				{
+					"name": "Shared Senses",
+					"entries": [
+						"Rotter widzi i słyszy to, co każda roślina w promieniu 36 m. Ponadto może komunikować się telepatycznie z każdą rośliną w tym zasięgu."
+					]
+				},
+				{
+					"name": "Tree Stride",
+					"entries": [
+						"Raz na turę gnilec może wykorzystać 3 metry swojego ruchu, aby magicznie wejść do jednego zagajnika grzybów w promieniu 1,5 metra od niego i wyjść z drugiego zagajnika grzybów w promieniu 18 metrów od niego, pojawiając się na niezajętej przestrzeni w promieniu 1,5 metra od drugiego zagajnika. Oba zagajniki grzybów muszą być duże lub większe. Zgnilizna nie musi widzieć drugiego zagajnika, aby użyć tej zdolności."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Gnilec wykonuje dwa ataki swoją pałką."
+					]
+				},
+				{
+					"name": "Club",
+					"entries": [
+						"{@atk mw} {@hit 7} do trafienia, zasięg 1,5 m., jeden cel. {@h}14 ({@damage 4d4 + 4}) obrażeń obuchowych."
+					]
+				}
+			],
+			"attachedItems": [
+				"club|phb"
+			],
+			"traitTags": [
+				"Regeneration",
+				"Tree Stride"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"TP"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true
+		}
+	]
+}

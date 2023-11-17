@@ -1,0 +1,417 @@
+{
+	"spell": [
+		{
+			"name": "Draconic Transformation",
+			"source": "UA2021DraconicOptions",
+			"page": 5,
+			"level": 7,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "una statuetta di un drago, del valore di almeno 500 gp",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Con un ruggito, attingi alla magia dei draghi per trasformarti, assumendo varie caratteristiche draconiche. Otterrai i seguenti benefici fino al termine dell'incantesimo:",
+				{
+					"type": "list",
+					"items": [
+						"Avete {@sense blindsight} con una portata di 9 metri. All'interno di questo raggio d'azione, si può effettivamente vedere tutto ciò che non si trova dietro una copertura totale, anche se si è {@condition blinded} o nell'oscurità. Inoltre, è possibile vedere una creatura {@condition invisible}, a meno che la creatura non si nasconda con successo.",
+						"Dalla schiena spuntano ali incorporee che danno una velocità di volo di 12 metri.",
+						"Quando si lancia questo incantesimo, e come azione bonus nei turni successivi per tutta la durata, si può esalare un soffio di energia scintillante in un cono di 9 metri. Ogni creatura nell'area deve effettuare un tiro salvezza di Destrezza, subendo {@damage 3d8} danni alla forza se il tiro fallisce o la metà dei danni se riesce."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"conditionInflict": [
+				"blinded",
+				"invisible"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"SGT",
+				"UBA"
+			]
+		},
+		{
+			"name": "Fizban's Platinum Shield",
+			"source": "UA2021DraconicOptions",
+			"page": 5,
+			"level": 6,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "una squama di drago placcata in platino, del valore di almeno 500 gp",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Si crea un campo di luce argentea che circonda una creatura a scelta nel raggio d'azione (si può scegliere se stessi). Il campo diffonde una luce fioca fino a 1,5 metri.",
+				"Come azione bonus nei turni successivi, si può spostare il campo su un'altra creatura entro 18 metri dal campo.",
+				"La creatura protetta dal campo guadagna i seguenti benefici:",
+				{
+					"type": "list",
+					"items": [
+						"La creatura ha mezza copertura.",
+						"La creatura ha resistenza ai danni da acido, freddo, fuoco, fulmine e veleno.",
+						"Se la creatura è soggetta a un effetto che le permette di effettuare un tiro salvezza di Destrezza per prendere solo metà dei danni, la creatura invece non prende alcun danno se riesce nel tiro salvezza, e solo metà dei danni se fallisce."
+					]
+				}
+			],
+			"damageResist": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"poison"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"UBA"
+			]
+		},
+		{
+			"name": "Flame Stride",
+			"source": "UA2021DraconicOptions",
+			"page": 6,
+			"level": 3,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Le fiamme ondeggianti di un drago coprono i vostri piedi e vi garantiscono una velocità esplosiva. Per tutta la durata, la velocità aumenta di 6 metri e muoversi non provoca attacchi di opportunità.",
+				"Quando ci si sposta entro 1,5 metri da una creatura o da un oggetto non indossato o trasportato, questo subisce {@damage 1d6} danni da fuoco dalla propria scia di calore. Una creatura o un oggetto può subire questo danno una sola volta durante un turno."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando si lancia questo incantesimo usando uno slot incantesimo di 4° livello o superiore, si aumenta la velocità di 1,5 metri per ogni livello di slot incantesimo superiore al 3°. Inoltre, l'incantesimo infligge un ulteriore {@damage 1d6} danno da fuoco per ogni livello di slot superiore al 3°."
+					]
+				}
+			],
+			"damageInflict": [
+				"fire"
+			],
+			"miscTags": [
+				"OBJ"
+			]
+		},
+		{
+			"name": "Icingdeath's Frost",
+			"source": "UA2021DraconicOptions",
+			"page": 6,
+			"level": 2,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 15
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "una fiala di acqua di fusione"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Un'esplosione di energia gelida emana da voi in un cono di 9 metri. Ogni creatura in quell'area deve effettuare un tiro salvezza di Costituzione. Se il tiro salvezza fallisce, la creatura subisce {@damage 3d8} danni da freddo ed è ricoperta di ghiaccio per 1 minuto o finché una creatura non usa la sua azione per rompere il ghiaccio da sé o da un'altra creatura. Una creatura coperta di ghiaccio ha la velocità ridotta a 0. Se il tiro salvezza riesce, la creatura subisce la metà dei danni senza effetti aggiuntivi."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando si lancia questo incantesimo utilizzando uno slot di 3° livello o superiore, i danni da freddo aumentano del {@dice 1d8} per ogni livello di slot superiore al 2°."
+					]
+				}
+			],
+			"damageInflict": [
+				"cold"
+			],
+			"savingThrow": [
+				"constitution"
+			]
+		},
+		{
+			"name": "Nathair's Mischief",
+			"source": "UA2021DraconicOptions",
+			"page": 6,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "un pezzo di crosta di una torta di mele"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Riempi un cubo di 6 metri centrato su un punto a tua scelta nel raggio d'azione con magia fey e draconica. Tirare sulla tabella Impennata maliziosa per determinare l'effetto magico prodotto. All'inizio di ogni turno, si può spostare il cubo fino a 3 metri e ripetere il tiro sulla tabella.",
+				{
+					"type": "table",
+					"caption": "Mischievous Surge",
+					"colLabels": [
+						"d4",
+						"Effect"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-12"
+					],
+					"rows": [
+						[
+							"1",
+							"L'odore di torta di mele riempie l'aria e ogni creatura nel cubo deve riuscire in un tiro salvezza della Saggezza o diventare {@condition charmed} da voi fino all'inizio del vostro prossimo turno. "
+						],
+						[
+							"2",
+							"I mazzi di fiori appaiono tutt'intorno e ogni creatura nel cubo deve riuscire in un tiro salvezza di Destrezza o subire {@condition blinded} fino all'inizio del tuo prossimo turno, mentre i fiori gli spruzzano acqua in faccia."
+						],
+						[
+							"3",
+							"Ogni creatura nel cubo deve riuscire in un tiro salvezza di Saggezza o iniziare a ridacchiare fino all'inizio del tuo prossimo turno. Una creatura che ridacchia è {@condition incapacitated} e usa tutto il suo movimento per muoversi in una direzione casuale."
+						],
+						[
+							"4",
+							"Gocce di melassa appaiono e si librano nel cubo, trasformandolo in {@quickref difficult terrain||3} fino all'inizio del tuo prossimo turno."
+						]
+					]
+				}
+			],
+			"conditionInflict": [
+				"blinded",
+				"charmed",
+				"incapacitated"
+			],
+			"savingThrow": [
+				"dexterity",
+				"wisdom"
+			],
+			"miscTags": [
+				"RO"
+			]
+		},
+		{
+			"name": "Raulothim's Psychic Lance",
+			"source": "UA2021DraconicOptions",
+			"page": 6,
+			"level": 4,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Scateni una lancia scintillante di potere psichico dalla tua fronte verso una creatura che puoi vedere nel raggio d'azione. In alternativa, puoi pronunciare il nome della creatura. Se il bersaglio nominato si trova nel raggio d'azione, non ottiene alcun beneficio dalla copertura o dall'invisibilità mentre la lancia si concentra su di esso. Se il bersaglio nominato non è nel raggio d'azione, la lancia si dissipa e lo slot dell'incantesimo non viene consumato.",
+				"Il bersaglio deve riuscire in un tiro salvezza di Intelligenza o subire {@damage 10d6} danni psichici e subire {@condition incapacitated} fino all'inizio del proprio turno successivo."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando si lancia questo incantesimo utilizzando uno slot di 5° livello o superiore, i danni aumentano del {@dice 1d6} per ogni livello di slot superiore al 4°."
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrow": [
+				"intelligence"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Summon Draconic Spirit",
+			"source": "UA2021DraconicOptions",
+			"page": 7,
+			"level": 5,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un oggetto d'arte proveniente dal tesoro di un drago, del valore di almeno 500 gp",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Richiami uno spirito draconico. Si manifesta in uno spazio non occupato che puoi vedere a portata di mano.",
+				"Questa forma corporea utilizza il blocco di statistiche {@creature Draconic Spirit|UA2021DraconicOptions}. Quando si lancia questo incantesimo, scegliere una famiglia di draghi: Cromatica, Gemma o Metallica. La creatura assomiglia a un drago della famiglia scelta, il che determina alcuni tratti del suo blocco di statistiche. La creatura scompare quando scende a 0 punti ferita o quando l'incantesimo termina.",
+				"La creatura è un'alleata di voi e dei vostri compagni. In combattimento, la creatura condivide il vostro conteggio dell'iniziativa, ma prende il suo turno immediatamente dopo il vostro. Obbedisce ai vostri comandi verbali (non è richiesta alcuna azione da parte vostra). Se non vengono impartiti, la creatura compie un'azione {@action Dodge} e usa il suo movimento per evitare il pericolo."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando lanci questo incantesimo usando uno slot incantesimo di 6° livello o superiore, usa il livello più alto ovunque appaia il livello dell'incantesimo nel blocco delle statistiche."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		}
+	]
+}

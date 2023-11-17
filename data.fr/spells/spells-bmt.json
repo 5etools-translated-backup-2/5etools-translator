@@ -1,0 +1,160 @@
+{
+	"spell": [
+		{
+			"name": "Antagonize",
+			"source": "BMT",
+			"page": 50,
+			"level": 3,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "une carte à jouer représentant un voyou"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Vous murmurez des mots magiques qui contrarient une créature de votre choix à portée. La cible doit effectuer un jet de sauvegarde de Sagesse. En cas de sauvegarde ratée, la cible subit {@damage 4d4} de dégâts psychiques et doit immédiatement utiliser sa réaction pour effectuer une attaque de mêlée contre une autre créature de votre choix que vous pouvez voir. Si la cible ne peut pas porter cette attaque (par exemple, parce qu'il n'y a personne à sa portée ou parce que sa réaction est indisponible), elle a à la place un désavantage au prochain jet d'attaque qu'elle effectue avant le début de votre prochain tour. En cas de sauvegarde réussie, la cible ne subit que la moitié des dégâts."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Lorsque vous lancez ce sort en utilisant un emplacement de sort de 4e niveau ou plus, les dégâts augmentent de {@dice 1d4} pour chaque niveau d'emplacement supérieur au 3e."
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Spirit of Death",
+			"source": "BMT",
+			"page": 50,
+			"level": 4,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "une carte à jouer dorée d'une valeur d'au moins 400 po et représentant un avatar de la mort",
+					"cost": 40000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Vous invoquez un esprit qui incarne la mort. L'esprit se manifeste dans un espace inoccupé que vous pouvez voir à portée et utilise le bloc de statues {@creature reaper spirit|BMT}. L'esprit disparaît lorsqu'il est réduit à 0 point de vie ou lorsque le sort prend fin.",
+				"L'esprit est un allié pour vous et vos compagnons. En combat, l'esprit partage votre compte d'initiative et prend son tour immédiatement après le vôtre. Il obéit à vos ordres verbaux (aucune action n'est requise de votre part). Si vous ne lui donnez aucun ordre, il prend l'action {@action Dodge} et utilise son mouvement pour éviter le danger."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Lorsque vous lancez ce sort en utilisant un emplacement de sort de 5e niveau ou plus, utilisez le niveau le plus élevé partout où le niveau du sort apparaît dans le bloc de stat de l'esprit faucheur."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Spray of Cards",
+			"source": "BMT",
+			"page": 50,
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 15
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "un jeu de cartes"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Vous pulvérisez un cône de 4,5 mètres de cartes spectrales. Chaque créature située dans cette zone doit effectuer un jet de sauvegarde de Dextérité. En cas d'échec, la créature subit {@damage 2d10} de dégâts de force et souffre de la condition {@condition blinded} jusqu'à la fin de son prochain tour. Si elle réussit son jet de sauvegarde, la créature ne subit que la moitié des dégâts."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Lorsque vous lancez ce sort en utilisant un emplacement de sort de 3e niveau ou plus, les dégâts augmentent de {@dice 1d10} pour chaque niveau d'emplacement supérieur au 2e."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrow": [
+				"dexterity"
+			]
+		}
+	]
+}

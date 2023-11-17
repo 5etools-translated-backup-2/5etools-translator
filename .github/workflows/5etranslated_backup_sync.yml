@@ -1,0 +1,33 @@
+name: 5etranslated - Backup Sync
+
+on:
+   schedule:
+      - cron: "0 */4 * * *"
+   workflow_dispatch:
+
+permissions:
+   contents: write
+
+jobs:
+   sync:
+      runs-on: ubuntu-latest
+      # Run only if it's the backup repository
+      if: ${{ contains(github.repository, 'backup')}}
+      steps:
+         - uses: actions/checkout@main
+           with:
+              ref: "translations"
+              # Must be created in User settings
+              # Then added to the repo in Settings > Actions > Secrets
+              # Must have Workflows / Contents rights
+              token: ${{ secrets.ACTIONS_TOKEN }}
+
+         - name: Merge latest from main repo
+           run: |
+              git checkout translations
+              git remote add upstream https://github.com/5etools-translator-mirror-3/5etools-translator
+              git fetch upstream
+              git reset --hard upstream/translations
+              git config user.name "GH Actions Automation"
+              git config user.email "<>"
+              git push --force

@@ -1,0 +1,1671 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM",
+				"CoS"
+			]
+		}
+	},
+	"monster": [
+		{
+			"name": "Avacyn",
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Solar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Solar",
+						"with": "Avacyn",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Moonsilver Spear",
+							"entries": [
+								"Un ángel del Vuelo de la Plata Lunar empuña una lanza hecha con un fragmento del Helvault. Los puntos de golpe perdidos por el daño de esta arma sólo pueden recuperarse mediante un descanso corto o largo, y no por regeneración, magia o cualquier otro medio. Una vez por turno, cuando el ángel golpea a una criatura con un ataque con esta arma, puede herir al objetivo. Al comienzo de cada turno de la criatura herida, ésta recibe {@damage 1d4} de daño necrótico por cada vez que el ángel la haya herido, y entonces puede realizar una tirada de salvación de Constitución {@dc 15}, acabando con el efecto de todas esas heridas sobre sí misma si tiene éxito. Alternativamente, la criatura herida, o una criatura en un radio de 1,5 metros de ella, puede usar una acción para hacer un chequeo de Sabiduría ({@skill Medicine}) {@dc 15}, acabando con el efecto de dichas heridas en ella si tiene éxito."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Bruna",
+			"alias": [
+				"Light of Alabaster"
+			],
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Planetar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "planetar",
+						"with": "Bruna",
+						"flags": "i"
+					},
+					"_": {
+						"mode": "addSpells",
+						"will": [
+							"{@spell protection from evil and good}"
+						],
+						"daily": {
+							"1e": [
+								"{@spell dispel evil and good}"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Creepy Doll",
+			"source": "PSI",
+			"page": 25,
+			"size": [
+				"T"
+			],
+			"type": "construct",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 21,
+				"formula": "6d4 + 6"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 6,
+			"dex": 14,
+			"con": 13,
+			"int": 12,
+			"wis": 11,
+			"cha": 10,
+			"skill": {
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed"
+			],
+			"languages": [
+				"speaks and understands the languages known by its creator"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Aunque el espeluznante muñeco permanece inmóvil, no se distingue de un muñeco ordinario e inanimado."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El espeluznante muñeco realiza un ataque con sus tijeras y utiliza Asalto Psíquico."
+					]
+				},
+				{
+					"name": "Scissors",
+					"entries": [
+						"{@atk mw} {@hit 4} para golpear, alcance 1,5 m., un objetivo. {@h}7 ({@damage 2d4 + 2}) de daño cortante."
+					]
+				},
+				{
+					"name": "Psychic Assault",
+					"entries": [
+						"El muñeco espeluznante apunta a una criatura que pueda ver en un radio de 3 metros y que tenga cerebro. El objetivo debe tener éxito en una tirada de salvación de Inteligencia {@dc 12} o sufrir 11 ({@damage 2d10}) de daño psíquico. También en caso de fallo, tira {@dice 3d6}. Si el total iguala o supera la puntuación de Inteligencia del objetivo, dicha puntuación se reduce a 0. El objetivo queda {@condition stunned} hasta que recupere al menos un punto de Inteligencia, como por el conjuro {@spell greater restoration} o magia similar."
+					]
+				},
+				{
+					"name": "Body Exchange",
+					"entries": [
+						"La muñeca espeluznante inicia un concurso de Inteligencia con un {@condition incapacitated} humanoide que se encuentre a menos de 1,5 metros de ella. Si gana el concurso, el espíritu del muñeco espeluznante habita el cuerpo del objetivo, mientras que el espíritu del objetivo se coloca en el cuerpo del muñeco espeluznante. El muñeco espeluznante controla completamente el cuerpo del objetivo. Conserva su alineamiento, Inteligencia, Sabiduría, Carisma e inmunidad a ser {@condition charmed} y {@condition frightened}. Por lo demás, utiliza las estadísticas del objetivo poseído, pero no obtiene acceso a los conocimientos, rasgos de clase o aptitudes del objetivo. El objetivo conserva su alineamiento, Inteligencia, Sabiduría y Carisma mientras habita el cuerpo del muñeco espeluznante.",
+						"El intercambio de cuerpos dura hasta que el espíritu de la muñeca es expulsado por arte de magia. (El hechizo {@spell dispel evil and good} logrará esto, aunque la muñeca no es uno de los tipos de criatura cuya posesión termina normalmente ese hechizo). El cuerpo y la muñeca deben estar a menos de 1,5 metros de distancia para que este efecto funcione. El objetivo es inmune al Intercambio de Cuerpos de este muñeco durante 24 horas tras ganar el concurso de Inteligencia o tras finalizar el intercambio."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"S",
+				"Y"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"savingThrowForced": [
+				"intelligence"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Demonlord of Ashmouth",
+			"source": "PSI",
+			"page": 37,
+			"_copy": {
+				"name": "Horned Devil",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "devil",
+						"with": "demon"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"El demonio realiza tres ataques cuerpo a cuerpo: dos con su hacha de guerra y uno con su cola. Puede utilizar Lanzar llamas en lugar de cualquier ataque cuerpo a cuerpo."
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Fork",
+							"items": {
+								"name": "Battleaxe",
+								"entries": [
+									"{@atk mw} {@hit 10} para golpear, alcance 3 m., un objetivo. {@h}15 ({@damage 2d8 + 6}) de daño cortante, o 17 ({@damage 2d10 + 6}) de daño cortante si se usa a dos manos."
+								]
+							}
+						}
+					]
+				}
+			},
+			"damageTags": [
+				"F",
+				"P",
+				"S"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Flight Alabaster Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"_": {
+						"mode": "addSpells",
+						"will": [
+							"{@spell protection from evil and good}"
+						],
+						"daily": {
+							"1e": [
+								"{@spell dispel evil and good}"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flight Goldnight Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Goldnight Menace",
+							"entries": [
+								"Como acción, un ángel de la Noche Dorada del Vuelo puede infundir miedo en el corazón de sus enemigos. Cada criatura a elección del ángel que se encuentre en un radio de 36 metros y sea consciente de ello debe superar con éxito una tirada de salvación de Sabiduría o se convertirá en {@condition frightened} durante 1 minuto. La CC para esta tirada de salvación es la misma que para el rasgo Hechizo Innato del ángel. Una criatura puede repetir la tirada de salvación al final de cada uno de sus turnos, terminando el efecto sobre sí misma si tiene éxito. Si la tirada de salvación de una criatura tiene éxito o el efecto termina para ella, la criatura es inmune a la Amenaza de la Noche Dorada de ese ángel durante las siguientes 24 horas."
+							]
+						}
+					}
+				}
+			},
+			"cr": "11",
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flight of Moonsilver Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Moonsilver Spear",
+							"entries": [
+								"Un ángel del Vuelo de la Plata Lunar empuña una lanza hecha con un fragmento del Helvault. Los puntos de golpe perdidos por el daño de esta arma sólo pueden recuperarse mediante un descanso corto o largo, y no por regeneración, magia o cualquier otro medio. Una vez por turno, cuando el ángel golpea a una criatura con un ataque con esta arma, puede herir al objetivo. Al comienzo de cada turno de la criatura herida, ésta recibe {@damage 1d4} de daño necrótico por cada vez que el ángel la haya herido, y entonces puede realizar una tirada de salvación de Constitución {@dc 15}, acabando con el efecto de todas esas heridas sobre sí misma si tiene éxito. Alternativamente, la criatura herida, o una criatura en un radio de 1,5 metros de ella, puede usar una acción para hacer un chequeo de Sabiduría ({@skill Medicine}) {@dc 15}, acabando con el efecto de dichas heridas en ella si tiene éxito."
+							]
+						}
+					}
+				}
+			},
+			"damageTags": [
+				"B",
+				"N",
+				"R"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Geist",
+			"source": "PSI",
+			"page": 19,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 45,
+				"formula": "10d8"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": 40
+			},
+			"str": 7,
+			"dex": 13,
+			"con": 10,
+			"int": 10,
+			"wis": 12,
+			"cha": 17,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"acid",
+				"fire",
+				"lightning",
+				"thunder",
+				"bludgeoning"
+			],
+			"immune": [
+				"cold",
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"grappled"
+			],
+			"languages": [
+				"any languages it knew in life"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Ethereal Sight",
+					"entries": [
+						"El geist puede ver 18 metros en el Plano Etéreo cuando está en el Plano Material, y viceversa."
+					]
+				},
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"El geist puede moverse a través de otras criaturas y objetos como si fueran {@quickref difficult terrain||3}. Recibe 5 ({@dice 1d10}) de daño de fuerza si termina su turno dentro de un objeto."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Withering Touch",
+					"entries": [
+						"{@atk mw} {@hit 5} para golpear, alcance 1,5 m., un objetivo {@h}17 ({@damage 4d6 + 3}) de daño necrótico."
+					]
+				},
+				{
+					"name": "Etherealness",
+					"entries": [
+						"El geist entra en el Plano Etéreo desde el Plano Material, o viceversa. Es visible en el Plano Material mientras está en el Etéreo Fronterizo, y viceversa, pero no puede afectar ni ser afectado por nada en el otro plano."
+					]
+				},
+				{
+					"name": "Possession {@recharge}",
+					"entries": [
+						"Una criatura que el geist pueda ver en un radio de 1,5 metros debe tener éxito en una tirada de salvación de Carisma {@dc 13} o ser poseída por el geist; entonces el geist desaparece, y el objetivo queda {@condition incapacitated} y pierde el control de su cuerpo. El geist controla ahora el cuerpo pero no priva al objetivo de la consciencia. El geist no puede ser objetivo de ningún ataque, hechizo u otro efecto, excepto los que convierten en no muertos, y conserva su alineamiento, Inteligencia, Sabiduría, Carisma e inmunidad a ser {@condition charmed} y {@condition frightened}. Por lo demás, utiliza las estadísticas del objetivo poseído, pero no obtiene acceso a los conocimientos, rasgos de clase o aptitudes del objetivo. La posesión dura hasta que el cuerpo cae a 0 puntos de golpe, el geist la termina como una acción de bonificación, o el geist es convertido o forzado a salir por un efecto como el hechizo {@spell dispel evil and good}. Cuando la posesión termina, el geist reaparece en un espacio desocupado a 1,5 metros del cuerpo. El objetivo es inmune a la Posesión de este geist durante 24 horas tras tener éxito en la tirada de salvación o tras finalizar la posesión. En su lugar, el geist puede apuntar al cadáver de una criatura, utilizando su propia fuerza vital para animar el cadáver como un zombi. El cadáver animado utiliza estadísticas de zombi y vuelve a la muerte si el geist termina la posesión."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Geist Powers",
+					"entries": [
+						"Los geists son tan variados como los humanos que fueron en vida. Además de los rasgos y acciones que poseen todos los geists, un geist individual puede tener alguna de las siguientes características especiales.",
+						{
+							"name": "Intangible Virtue",
+							"type": "entries",
+							"entries": [
+								"Una criatura viva poseída por un geist de alineamiento blanco gana inmunidad a las condiciones {@condition charmed} y {@condition frightened}, y resistencia al daño contundente, perforante y cortante de ataques no mágicos. Mientras la criatura está poseída, el geist puede permitirle tomar el control de su cuerpo, pero el geist puede recuperar el control en cualquier momento (no requiere ninguna acción)."
+							]
+						},
+						{
+							"name": "Horrifying Visage",
+							"type": "entries",
+							"entries": [
+								"Los geists de alineamiento negro pueden hacerse terribles a la vista, incluso cuando están poseyendo a los vivos. Cada criatura no muerta en un radio de 18 m del geist que pueda verlo debe tener éxito en una tirada de salvación de Sabiduría {@dc 13} o envejecer {@condition frightened} durante 1 minuto. Si la salvación falla por 5 o más, el objetivo también envejece {@dice 1d4 × 10} años. Un objetivo {@condition frightened} puede repetir la tirada de salvación al final de cada uno de sus turnos, terminando la condición {@condition frightened} sobre sí mismo si tiene éxito. Si la tirada de salvación de un objetivo tiene éxito o el efecto termina para él, el objetivo es inmune al Visaje Horripilante de este geist durante las siguientes 24 horas. El efecto de envejecimiento puede revertirse con un conjuro de {@spell greater restoration}, pero sólo en las 24 horas siguientes."
+							]
+						}
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"N"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Geist: Horrifying Visage",
+					"source": "PSI",
+					"_mod": {
+						"action": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Horrifying Visage",
+								"entries": [
+									"Los geists de alineamiento negro pueden hacerse terribles a la vista, incluso cuando están poseyendo a los vivos. Cada criatura no muerta en un radio de 18 m del geist que pueda verlo debe tener éxito en una tirada de salvación de Sabiduría {@dc 13} o envejecer {@condition frightened} durante 1 minuto. Si la salvación falla por 5 o más, el objetivo también envejece {@dice 1d4 × 10} años. Un objetivo {@condition frightened} puede repetir la tirada de salvación al final de cada uno de sus turnos, terminando la condición {@condition frightened} sobre sí mismo si tiene éxito. Si la tirada de salvación de un objetivo tiene éxito o el efecto termina para él, el objetivo es inmune al Visaje Horripilante de este geist durante las siguientes 24 horas. El efecto de envejecimiento puede revertirse con un conjuro de {@spell greater restoration}, pero sólo en las 24 horas siguientes."
+								]
+							}
+						}
+					},
+					"variant": null,
+					"conditionInflict": [
+						"frightened",
+						"incapacitated"
+					]
+				},
+				{
+					"name": "Geist: Intangible Virtue",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Intangible Virtue",
+								"entries": [
+									"Una criatura viva poseída por un geist de alineamiento blanco gana inmunidad a las condiciones {@condition charmed} y {@condition frightened}, y resistencia al daño contundente, perforante y cortante de ataques no mágicos. Mientras la criatura está poseída, el geist puede permitirle tomar el control de su cuerpo, pero el geist puede recuperar el control en cualquier momento (no requiere ninguna acción)."
+								]
+							}
+						}
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Gisela",
+			"alias": [
+				"Blade of Goldnight",
+				"Blade of the Church"
+			],
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Planetar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Planetar",
+						"with": "Gisela",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Goldnight Menace",
+							"entries": [
+								"Como acción, un ángel de la Noche Dorada del Vuelo puede infundir miedo en el corazón de sus enemigos. Cada criatura a elección del ángel que se encuentre en un radio de 36 metros y sea consciente de ello debe superar con éxito una tirada de salvación de Sabiduría o se convertirá en {@condition frightened} durante 1 minuto. La CC para esta tirada de salvación es la misma que para el rasgo Hechizo Innato del ángel. Una criatura puede repetir la tirada de salvación al final de cada uno de sus turnos, terminando el efecto sobre sí misma si tiene éxito. Si la tirada de salvación de una criatura tiene éxito o el efecto termina para ella, la criatura es inmune a la Amenaza de la Noche Dorada de ese ángel durante las siguientes 24 horas."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Host of Herons Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Heron Protection",
+							"entries": [
+								"Siempre que un ángel de la Hueste de las Garzas o una criatura amiga en un radio de 3 metros realice una tirada de salvación, la criatura obtiene un bonificador a la tirada de salvación igual al modificador de Carisma del ángel. El ángel debe estar consciente para recibir o conceder esta bonificación."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Keeper of the Feather",
+			"group": null,
+			"source": "PSI",
+			"page": 40,
+			"_copy": {
+				"name": "Wereraven",
+				"source": "VRGR",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "wereraven",
+						"with": "keeper"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Beak (Raven or Hybrid Form Only)",
+							"items": {
+								"name": "Beak (Raven or Hybrid Form Only)",
+								"entries": [
+									"{@atk mw} {@hit 4} para golpear, alcance 1,5 m., un objetivo. {@h}1 de daño perforante en forma de cuervo, o 4 ({@damage 1d4 + 2}) de daño perforante en forma híbrida."
+								]
+							}
+						}
+					]
+				}
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"El guardián es un hechicero de 4º nivel. Su habilidad de hechizo es Sabiduría (salvación de hechizo {@dc 12}, {@hit 4} para golpear con ataques de hechizo). Tiene preparados los siguientes conjuros de druida:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft}",
+								"{@spell produce flame}",
+								"{@spell shillelagh}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell entangle}",
+								"{@spell longstrider}",
+								"{@spell speak with animals}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell animal messenger}",
+								"{@spell barkskin}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"damageTagsSpell": [
+				"F",
+				"T"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Necro-Alchemist",
+			"alias": [
+				"Geistmage"
+			],
+			"source": "PSI",
+			"page": 20,
+			"_copy": {
+				"name": "Mage",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "mage",
+						"with": "Necro-Alchemist",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sigarda",
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Planetar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Planetar",
+						"with": "Sigarda",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Heron Protection",
+							"entries": [
+								"Siempre que un ángel de la Hueste de las Garzas o una criatura amiga en un radio de 3 metros realice una tirada de salvación, la criatura obtiene un bonificador a la tirada de salvación igual al modificador de Carisma del ángel. El ángel debe estar consciente para recibir o conceder esta bonificación."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Skaab",
+			"source": "PSI",
+			"page": 20,
+			"_copy": {
+				"name": "Flesh Golem",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "golem",
+						"with": "skaab",
+						"flags": "i"
+					}
+				}
+			},
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Skaabs",
+					"entries": [
+						"Los skaabs más básicos son simplemente {@creature flesh golem|MM|flesh golems}, como se describe en el Manual del Monstruo. Pero la aspiración de todo skaberen es producir una obra maestra verdaderamente única, una meta que podría ver a un cosedor crear gólems con una de las siguientes características especiales.",
+						{
+							"type": "entries",
+							"name": "Armor Plating",
+							"page": 20,
+							"entries": [
+								"Aumenta la Clase de Armadura del skaab a 14 y aumenta su índice de desafío a 6 (2.300 XP)."
+							]
+						},
+						{
+							"name": "Six Arms",
+							"type": "entries",
+							"entries": [
+								"La acción de multiataque del skaab le permite realizar tres ataques de golpe. Aumenta su índice de desafío a 6 (2.300 XP)."
+							]
+						},
+						{
+							"name": "Three Heads",
+							"type": "entries",
+							"entries": [
+								"El skaab tiene ventaja en los chequeos de Sabiduría ({@skill Perception}) y en las tiradas de salvación contra el ser {@condition blinded}, {@condition deafened}, {@condition stunned} y el ser golpeado {@condition unconscious}. (Su índice de desafío no cambia)."
+							]
+						},
+						{
+							"name": "Skaab Goliath",
+							"type": "entries",
+							"entries": [
+								"Este skaab tiene tres cabezas, seis brazos y una armadura. Aumenta su índice de desafío a 7 (2.900 XP)."
+							]
+						},
+						{
+							"name": "Winged Skaab",
+							"type": "entries",
+							"entries": [
+								"El skaab tiene una velocidad de vuelo de 9 metros."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"_versions": [
+				{
+					"name": "Skaab: Armor Plating",
+					"source": "PSI",
+					"ac": [
+						{
+							"ac": 14,
+							"from": [
+								"armor plating"
+							]
+						}
+					],
+					"cr": "6",
+					"variant": null
+				},
+				{
+					"name": "Skaab: Goliath",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Three Heads",
+								"entries": [
+									"El skaab tiene ventaja en los chequeos de Sabiduría ({@skill Perception}) y en las tiradas de salvación contra ser {@condition blinded}, {@condition deafened}, {@condition stunned} y golpeado {@condition unconscious}."
+								]
+							}
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"El skaab hace tres ataques de golpe."
+								]
+							}
+						}
+					},
+					"ac": [
+						{
+							"ac": 14,
+							"from": [
+								"armor plating"
+							]
+						}
+					],
+					"cr": "7",
+					"variant": null
+				},
+				{
+					"name": "Skaab: Six Arms",
+					"source": "PSI",
+					"_mod": {
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"El skaab hace tres ataques de golpe."
+								]
+							}
+						}
+					},
+					"cr": "6",
+					"variant": null
+				},
+				{
+					"name": "Skaab: Three Heads",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Three Heads",
+								"entries": [
+									"El skaab tiene ventaja en los chequeos de Sabiduría ({@skill Perception}) y en las tiradas de salvación contra ser {@condition blinded}, {@condition deafened}, {@condition stunned} y golpeado {@condition unconscious}."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Skaab: Winged",
+					"source": "PSI",
+					"speed": {
+						"walk": 30,
+						"fly": 30
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Strefan Maurer",
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 33,
+			"_copy": {
+				"name": "Strahd von Zarovich",
+				"source": "CoS",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Strahd",
+						"with": "Strefan",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "replaceArr",
+						"replace": "Vampire Weaknesses",
+						"items": {
+							"type": "entries",
+							"name": "Vampire Vulnerabilities",
+							"source": "PSI",
+							"page": 16,
+							"entries": [
+								"Las armas cortadas de madera viva son particularmente eficaces contra los vampiros, aunque cualquier arma puede dañarlos o matarlos. Un vampiro no puede cruzar agua corriente que muestre el reflejo de la luna, y el agua bendecida por Avacyn ({@item Holy Water (flask)|PHB|holy water}) quema la carne del vampiro como si fuera ácido. El reflejo de un vampiro en la plata (incluido un espejo de cristal con fondo de plata) aparece tal y como el vampiro se habría visto sin la condición vampírica -ni su verdadera apariencia ni su brillo, sino un humano normal, con defectos y todo. Por esta razón, los vampiros se esfuerzan mucho por evitar los espejos, y la presencia de plata en cualquier forma les resulta inquietante."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Vampire Neonate",
+			"source": "PSI",
+			"page": 17,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 82,
+				"formula": "11d8 + 33"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 16,
+			"int": 11,
+			"wis": 10,
+			"cha": 12,
+			"save": {
+				"dex": "+6",
+				"wis": "+3"
+			},
+			"skill": {
+				"perception": "+3",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks not made with living wood weapons",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Common"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Regeneration",
+					"entries": [
+						"El vampiro recupera 10 puntos de vida al comienzo de su turno si tiene al menos 1 punto de vida. Si el vampiro recibe daño radiante o daño de agua bendita, este rasgo no funciona al comienzo del siguiente turno del vampiro."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El vampiro realiza dos ataques, de los cuales sólo uno puede ser de mordida."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 6} para golpear, alcance 1,5 m., una criatura. {@h}8 ({@damage 2d4 + 3}) de daño cortante. En lugar de infligir daño, el vampiro puede agarrar al objetivo (escapar {@dc 13})."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 6} para golpear, alcanza 1,5 m., a una criatura dispuesta, o a una criatura que esté {@condition grappled} por el vampiro, {@condition incapacitated}, o {@condition restrained}. {@h}6 ({@damage 1d6 + 3}) de daño perforante más 7 ({@damage 2d6}) de daño necrótico. El máximo de puntos de golpe del objetivo se reduce en una cantidad igual al daño necrótico recibido, y el vampiro recupera puntos de golpe iguales a esa cantidad. La reducción dura hasta que el objetivo termina un descanso largo. El objetivo muere si este efecto reduce su máximo de puntos de golpe a 0."
+					]
+				},
+				{
+					"name": "Vampiric Glamer",
+					"entries": [
+						"El vampiro oscurece su forma con magia que afecta a la mente y hace que los demás lo perciban como un hermoso humano del mismo tamaño y forma. La ilusión termina si el vampiro realiza una acción de bonificación para acabar con ella o si el vampiro muere. Una criatura que pueda ver al vampiro puede realizar una acción para inspeccionarlo visualmente, terminando el efecto mental sobre sí misma y viendo la verdadera forma del vampiro con un chequeo de Sabiduría (Percepción) exitoso {@dc 20}."
+					]
+				},
+				{
+					"name": "Aura of Silence",
+					"entries": [
+						"El vampiro se envuelve en un manto de silencio en un radio de 0,6 metros. Dentro de ese radio, el efecto es el mismo que el del hechizo {@spell silence}."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Elder Vampires",
+					"entries": [
+						"Las estadísticas básicas de los vampiros representan a un \"neonato\", un vampiro recién engendrado. Los vampiros mayores pueden aprender magia poderosa de muchos tipos diferentes, y pueden tener cualquiera de los siguientes rasgos y habilidades.",
+						{
+							"type": "entries",
+							"name": "Shapechanger",
+							"entries": [
+								"El vampiro tiene el rasgo Shapechanger del {@creature vampire} en el Manual de Monstruos, así como la etiqueta shapechanger. Algunos vampiros pueden transformarse en forma de murciélago, otros pueden adoptar la forma de niebla, y unos pocos pueden elegir cualquiera de las dos formas."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Charm",
+							"entries": [
+								"El vampiro tiene la acción de Encanto del {@creature vampire} en el Manual de Monstruos."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Flight",
+							"entries": [
+								"El vampiro tiene una velocidad de vuelo de 9 metros."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Gorger",
+							"entries": [
+								"El vampiro tiene ventaja en las tiradas de ataque cuerpo a cuerpo, pero las tiradas de ataque contra él tienen ventaja."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Spellcasting",
+							"entries": [
+								"El vampiro tiene las habilidades de lanzamiento de hechizos de un mago o clérigo."
+							]
+						}
+					]
+				}
+			],
+			"traitTags": [
+				"Regeneration"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"HPR",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Elder Vampire: All Abilities",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Shapechanger",
+									"entries": [
+										"If the vampire isn't in sunlight or running water, it can use its action to polymorph into a Tiny bat or a Medium cloud of mist, or back into its true form.",
+										"While in bat form, the vampire can't speak, its walking speed is 5 feet, and it has a flying speed of 30 feet. Its statistics, other than its size and speed, are unchanged. Anything it is wearing transforms with it, but nothing it is carrying does. It reverts to its true form if it dies.",
+										"While in mist form, the vampire can't take any actions, speak, or manipulate objects. It is weightless, has a flying speed of 20 feet, can hover, and can enter a hostile creature's space and stop there. In addition, if air can pass through a space, the mist can do so without squeezing, and it can't pass through water. It has advantage on Strength, Dexterity, and Constitution saving throws, and it is immune to all nonmagical damage, except the damage it takes from sunlight."
+									]
+								},
+								{
+									"name": "Gorger",
+									"entries": [
+										"The vampire has advantage on melee attack rolls, but attack rolls against it have advantage."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Charm",
+								"entries": [
+									"El vampiro apunta a un humanoide que pueda ver en un radio de 9 metros. Si el objetivo puede ver al vampiro, el objetivo debe tener éxito en una tirada de salvación de Sabiduría {@dc 17} contra esta magia o ser {@condition charmed} por el vampiro. El {@condition charmed} objetivo considera al vampiro como un amigo de confianza al que hay que prestar atención y proteger. Aunque el objetivo no está bajo el control del vampiro, toma las peticiones o acciones del vampiro de la forma más favorable que puede, y es un objetivo dispuesto para el ataque de mordedura del vampiro.",
+									"Cada vez que el vampiro o sus compañeros hagan algo dañino al objetivo, puede repetir la tirada de salvación, terminando el efecto sobre sí mismo si tiene éxito. De lo contrario, el efecto dura 24 horas o hasta que el vampiro sea destruido, se encuentre en un plano de existencia diferente al del objetivo o realice una acción de bonificación para poner fin al efecto."
+								]
+							}
+						}
+					},
+					"type": {
+						"type": "undead",
+						"tags": [
+							"shapechanger"
+						]
+					},
+					"speed": {
+						"walk": 30,
+						"fly": 30
+					},
+					"spellcasting": [
+						{
+							"name": "Cleric Spellcasting",
+							"headerEntries": [
+								"{@note El {@creature Priest|MM} se ha utilizado como ejemplo Clérigo.}",
+								"El vampiro es un hechicero de 5º nivel. Su habilidad de conjuro es Sabiduría (salvación de conjuro {@dc 13}, {@hit 5} para golpear con ataques de conjuro). El vampiro tiene preparados los siguientes conjuros de clérigo:"
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell light}",
+										"{@spell sacred flame}",
+										"{@spell thaumaturgy}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell cure wounds}",
+										"{@spell guiding bolt}",
+										"{@spell sanctuary}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell lesser restoration}",
+										"{@spell spiritual weapon}"
+									]
+								},
+								"3": {
+									"slots": 2,
+									"spells": [
+										"{@spell dispel magic}",
+										"{@spell spirit guardians}"
+									]
+								}
+							},
+							"ability": "wis"
+						},
+						{
+							"name": "Wizard Spellcasting",
+							"headerEntries": [
+								"{@note El {@creature Mage|MM} se ha utilizado como ejemplo Asistente.}",
+								"El vampiro es un hechicero de 9º nivel. Su habilidad de conjuro es Inteligencia (salvación de conjuro {@dc 14}, {@hit 6} para golpear con ataques de conjuro). El vampiro tiene preparados los siguientes hechizos de mago:"
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell fire bolt}",
+										"{@spell light}",
+										"{@spell mage hand}",
+										"{@spell prestidigitation}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell detect magic}",
+										"{@spell mage armor}",
+										"{@spell magic missile}",
+										"{@spell shield}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell misty step}",
+										"{@spell suggestion}"
+									]
+								},
+								"3": {
+									"slots": 3,
+									"spells": [
+										"{@spell counterspell}",
+										"{@spell fireball}",
+										"{@spell fly}"
+									]
+								},
+								"4": {
+									"slots": 3,
+									"spells": [
+										"{@spell greater invisibility}",
+										"{@spell ice storm}"
+									]
+								},
+								"5": {
+									"slots": 1,
+									"spells": [
+										"{@spell cone of cold}"
+									]
+								}
+							},
+							"ability": "int"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Charm",
+					"source": "PSI",
+					"_mod": {
+						"action": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Charm",
+								"entries": [
+									"El vampiro apunta a un humanoide que pueda ver en un radio de 9 metros. Si el objetivo puede ver al vampiro, el objetivo debe tener éxito en una tirada de salvación de Sabiduría {@dc 17} contra esta magia o ser {@condition charmed} por el vampiro. El {@condition charmed} objetivo considera al vampiro como un amigo de confianza al que hay que prestar atención y proteger. Aunque el objetivo no está bajo el control del vampiro, toma las peticiones o acciones del vampiro de la forma más favorable que puede, y es un objetivo dispuesto para el ataque de mordedura del vampiro.",
+									"Cada vez que el vampiro o sus compañeros hagan algo dañino al objetivo, puede repetir la tirada de salvación, terminando el efecto sobre sí mismo si tiene éxito. De lo contrario, el efecto dura 24 horas o hasta que el vampiro sea destruido, se encuentre en un plano de existencia diferente al del objetivo o realice una acción de bonificación para poner fin al efecto."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Flight",
+					"source": "PSI",
+					"speed": {
+						"walk": 30,
+						"fly": 30
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Gorger",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Gorger",
+								"entries": [
+									"El vampiro tiene ventaja en las tiradas de ataque cuerpo a cuerpo, pero las tiradas de ataque contra él tienen ventaja."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Shapechanger",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Shapechanger",
+								"entries": [
+									"Si el vampiro no está a la luz del sol o en agua corriente, puede utilizar su acción para polimorfarse en un Murciélago diminuto o en una nube de niebla mediana, o volver a su forma verdadera.",
+									"Cuando está en forma de murciélago, el vampiro no puede hablar, su velocidad al caminar es de 1,5 metros y su velocidad al volar es de 9 metros. Sus estadísticas, aparte de su tamaño y velocidad, no cambian. Todo lo que lleva puesto se transforma con él, pero nada de lo que lleva encima lo hace. Si muere, vuelve a su forma original.",
+									"Mientras está en forma de niebla, el vampiro no puede realizar ninguna acción, hablar ni manipular objetos. Es ingrávido, tiene una velocidad de vuelo de 6 metros, puede planear y puede entrar en el espacio de una criatura hostil y detenerse en él. Además, si el aire puede atravesar un espacio, la niebla puede hacerlo sin apretarse, y no puede atravesar el agua. Tiene ventaja en las tiradas de salvación de Fuerza, Destreza y Constitución, y es inmune a todo daño no mágico, excepto al daño que recibe de la luz solar."
+								]
+							}
+						}
+					},
+					"type": {
+						"type": "undead",
+						"tags": [
+							"shapechanger"
+						]
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Spellcasting—Cleric",
+					"source": "PSI",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"{@note El {@creature Priest|MM} se ha utilizado como ejemplo Clérigo.}",
+								"El vampiro es un hechicero de 5º nivel. Su habilidad de conjuro es Sabiduría (salvación de conjuro {@dc 13}, {@hit 5} para golpear con ataques de conjuro). El vampiro tiene preparados los siguientes conjuros de clérigo:"
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell light}",
+										"{@spell sacred flame}",
+										"{@spell thaumaturgy}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell cure wounds}",
+										"{@spell guiding bolt}",
+										"{@spell sanctuary}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell lesser restoration}",
+										"{@spell spiritual weapon}"
+									]
+								},
+								"3": {
+									"slots": 2,
+									"spells": [
+										"{@spell dispel magic}",
+										"{@spell spirit guardians}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Spellcasting—Wizard",
+					"source": "PSI",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"{@note El {@creature Mage|MM} se ha utilizado como ejemplo Asistente.}",
+								"El vampiro es un hechicero de 9º nivel. Su habilidad de conjuro es Inteligencia (salvación de conjuro {@dc 14}, {@hit 6} para golpear con ataques de conjuro). El vampiro tiene preparados los siguientes hechizos de mago:"
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell fire bolt}",
+										"{@spell light}",
+										"{@spell mage hand}",
+										"{@spell prestidigitation}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell detect magic}",
+										"{@spell mage armor}",
+										"{@spell magic missile}",
+										"{@spell shield}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell misty step}",
+										"{@spell suggestion}"
+									]
+								},
+								"3": {
+									"slots": 3,
+									"spells": [
+										"{@spell counterspell}",
+										"{@spell fireball}",
+										"{@spell fly}"
+									]
+								},
+								"4": {
+									"slots": 3,
+									"spells": [
+										"{@spell greater invisibility}",
+										"{@spell ice storm}"
+									]
+								},
+								"5": {
+									"slots": 1,
+									"spells": [
+										"{@spell cone of cold}"
+									]
+								}
+							},
+							"ability": "int"
+						}
+					],
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Werewolf (Krallenhorde)",
+			"source": "PSI",
+			"page": 15,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human",
+					"shapechanger"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"condition": "in humanoid form"
+				},
+				{
+					"ac": 12,
+					"from": [
+						"natural armor"
+					],
+					"condition": "in canid form"
+				}
+			],
+			"hp": {
+				"average": 58,
+				"formula": "9d8 + 18"
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "(40 ft. in canid form)"
+				}
+			},
+			"str": 15,
+			"dex": 13,
+			"con": 14,
+			"int": 10,
+			"wis": 11,
+			"cha": 10,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+3"
+			},
+			"passive": 14,
+			"immune": [
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks not made with silvered weapons",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Common (can't speak in canid form)"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Shapechanger",
+					"entries": [
+						"El hombre lobo se polimorfa en una forma cánida de lobo-humanoide, o vuelve a su verdadera forma humana. Este cambio lo dicta la luna, pero también puede ser inducido por un trauma o una emoción fuerte. Sus estadísticas, aparte de su CA, son las mismas en cada forma. El equipo que lleve puesto o que porte no se transforma. Vuelve a su verdadera forma si muere."
+					]
+				},
+				{
+					"name": "Keen Hearing and Smell",
+					"entries": [
+						"El hombre lobo tiene ventaja en los chequeos de Sabiduría ({@skill Perception}) que dependen del oído o del olfato."
+					]
+				},
+				{
+					"name": "Howlpack: Vildin",
+					"entries": [
+						"Vildin Rampage (sólo forma cánida). Cuando el hombre lobo reduce a una criatura a 0 puntos de golpe con un ataque cuerpo a cuerpo en su turno, puede realizar una acción de bonificación para moverse hasta la mitad de su velocidad y realizar un ataque de mordisco."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack (Canid Form Only)",
+					"entries": [
+						"El hombre lobo realiza dos ataques: uno con su mordida y otro con sus garras o lanza."
+					]
+				},
+				{
+					"name": "Bite (Canid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 4} para golpear, alcance 1,5 m., un objetivo. {@h}6 ({@damage 1d8 + 2}) de daño perforante."
+					]
+				},
+				{
+					"name": "Claws (Canid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 4} para golpear, alcance 1,5 m., un objetivo. {@h}7 ({@damage 2d4 + 2}) de daño cortante."
+					]
+				},
+				{
+					"name": "Spear (Human Form Only)",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} para golpear, alcance 1,5 m. o alcance 20/18 m., un objetivo. {@h}5 ({@damage 1d6 + 2}) de daño perforante, o 6 ({@damage 1d8 + 2}) de daño perforante si se usa con las dos manos para hacer un ataque cuerpo a cuerpo."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Howlpack Traits",
+					"entries": [
+						"Las estadísticas básicas de los hombres lobo representan a un miembro de la Krallenhorde, la manada más grande de Innistrad. Los hombres lobo de otras manadas pueden tener habilidades adicionales como las siguientes.",
+						{
+							"name": "Vildin Rampage (Canid Form Only)",
+							"type": "entries",
+							"entries": [
+								"Cuando el hombre lobo reduce a 0 puntos de golpe a una criatura con un ataque cuerpo a cuerpo en su turno, puede realizar una acción de bonificación para moverse hasta la mitad de su velocidad y realizar un ataque de mordisco."
+							]
+						},
+						{
+							"name": "Mondronen Wounded Fury",
+							"type": "entries",
+							"entries": [
+								"Mientras tenga 10 puntos de vida o menos, el hombre lobo tiene ventaja en las tiradas de ataque. Además, inflige un 7 ({@damage 2d6}) de daño adicional a cualquier objetivo al que alcance con un ataque cuerpo a cuerpo."
+							]
+						},
+						{
+							"name": "Leeraug Blood Frenzy",
+							"type": "entries",
+							"entries": [
+								"El hombre lobo tiene ventaja en las tiradas de ataque cuerpo a cuerpo contra cualquier criatura que no tenga todos sus puntos de golpe."
+							]
+						}
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Shapechanger"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Werewolf (Leeraug)",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Leeraug Blood Frenzy",
+								"entries": [
+									"El hombre lobo tiene ventaja en las tiradas de ataque cuerpo a cuerpo contra cualquier criatura que no tenga todos sus puntos de golpe."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Werewolf (Mondronen)",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Mondronen Wounded Fury",
+								"entries": [
+									"Mientras tenga 10 puntos de vida o menos, el hombre lobo tiene ventaja en las tiradas de ataque. Además, inflige un 7 ({@damage 2d6}) de daño adicional a cualquier objetivo al que alcance con un ataque cuerpo a cuerpo."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Werewolf (Vildin)",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Vildin Rampage (Canid Form Only)",
+								"entries": [
+									"Cuando el hombre lobo reduce a 0 puntos de golpe a una criatura con un ataque cuerpo a cuerpo en su turno, puede realizar una acción de bonificación para moverse hasta la mitad de su velocidad y realizar un ataque de mordisco."
+								]
+							}
+						}
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Zombie Cat",
+			"source": "PSI",
+			"page": 17,
+			"_copy": {
+				"name": "Cat",
+				"source": "MM"
+			},
+			"type": "undead",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Si el daño reduce al gato a 0 puntos de vida, debe realizar una tirada de salvación de Constitución con una DC de 5 + el daño recibido, a menos que el daño sea radiante o de un golpe crítico. Si tiene éxito, el gato baja a 1 punto de vida."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Zombie Rat",
+			"source": "PSI",
+			"page": 17,
+			"_copy": {
+				"name": "Rat",
+				"source": "MM"
+			},
+			"type": "undead",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Si el daño reduce la rata a 0 puntos de vida, debe hacer una tirada de salvación de Constitución con una DC de 5 + el daño recibido, a menos que el daño sea radiante o de un golpe crítico. Si tiene éxito, la rata queda reducida a 1 punto de vida."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Zombie Snake",
+			"source": "PSI",
+			"page": 17,
+			"_copy": {
+				"name": "Poisonous Snake",
+				"source": "MM"
+			},
+			"type": "undead",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Si el daño reduce la serpiente a 0 puntos de vida, debe hacer una tirada de salvación de Constitución con una DC de 5 + el daño recibido, a menos que el daño sea radiante o de un golpe crítico. Si tiene éxito, la serpiente queda reducida a 1 punto de vida."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

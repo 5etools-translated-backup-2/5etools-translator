@@ -1,0 +1,1892 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		},
+		"internalCopies": [
+			"monster"
+		],
+		"otherSources": {
+			"monster": {
+				"HotDQ": "RoT",
+				"MM": "RoT"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Animated Tile Chimera",
+			"source": "RoT",
+			"page": 42,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 128
+				}
+			],
+			"_copy": {
+				"name": "Chimera",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "Rejuvenation",
+							"entries": [
+								"Als het tegelwezen wordt vernietigd, krijgt het al zijn hit points terug en wordt het na 24 uur weer actief, tenzij ten minste de helft van zijn tegels wordt verzameld en apart wordt gehouden van de rest van de tegels van het wezen."
+							]
+						}
+					},
+					"reaction": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Narrow Dodge",
+							"entries": [
+								"Bij een aanval uit de lucht kan het tegelwezen een reactie doen om zijn smalste aspect naar de aanvaller te draaien. De aanvaller heeft nadeel bij de aanvalsrol."
+							]
+						}
+					}
+				}
+			},
+			"resist": [
+				"piercing"
+			],
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"traitTags": [
+				"Rejuvenation"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Aquatic Troll",
+			"source": "RoT",
+			"page": 36,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 112
+				},
+				{
+					"source": "PotA",
+					"page": 88
+				}
+			],
+			"_copy": {
+				"name": "Troll",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Water Breathing",
+							"entries": [
+								"De trol kan onder water ademen."
+							]
+						}
+					}
+				}
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"resist": [
+				"cold"
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Regeneration",
+				"Water Breathing"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Carnivorous Flower",
+			"source": "RoT",
+			"page": 67,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 153
+				}
+			],
+			"_copy": {
+				"name": "Otyugh",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "otyugh",
+						"with": "plant"
+					}
+				}
+			},
+			"type": "plant",
+			"speed": {
+				"walk": 0
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Diderius",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "RoT",
+			"page": 40,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 131
+				}
+			],
+			"_copy": {
+				"name": "Mummy Lord",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the mummy lord",
+						"with": "Diderius",
+						"flags": "i"
+					}
+				}
+			},
+			"int": 18,
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Diderius is een 10e niveau tovenaar. Zijn spreukvaardigheid is Intelligentie (spell save {@dc 17}, {@hit 9} om te raken met spreukaanvallen). Hij heeft de volgende tovenaarsspreuken voorbereid:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell minor illusion}",
+								"{@spell ray of frost}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell charm person}",
+								"{@spell detect magic}",
+								"{@spell shield}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell cloud of daggers}",
+								"{@spell hold person}",
+								"{@spell see invisibility}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell animate dead}",
+								"{@spell dispel magic}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell fire shield}",
+								"{@spell greater invisibility}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell cloudkill}",
+								"{@spell wall of stone}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Dragonfang",
+			"source": "RoT",
+			"page": 89,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 182
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|phb|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 78,
+				"formula": "12d8 + 24"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 16,
+			"con": 14,
+			"int": 12,
+			"wis": 12,
+			"cha": 14,
+			"save": {
+				"wis": "+4"
+			},
+			"skill": {
+				"deception": "+5",
+				"stealth": "+6"
+			},
+			"passive": 11,
+			"resist": [
+				{
+					"resist": [
+						"acid",
+						"cold",
+						"fire",
+						"lightning",
+						"poison"
+					],
+					"preNote": "one of the following:"
+				}
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"Infernal"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Dragon Fanatic",
+					"entries": [
+						"De dragonfang heeft voordeel op saving throws tegen {@condition charmed} of {@condition frightened} zijn. Terwijl de dragonfang een draak of een cultusmedewerker van de Cult of the Dragon kan zien die met hem bevriend is, negeert de dragonfang de effecten van {@condition charmed} of {@condition frightened} zijn."
+					]
+				},
+				{
+					"name": "Fanatic Advantage",
+					"entries": [
+						"Eenmaal per beurt, als de dragonfang een wapenaanval doet met voordeel op de aanvalsrol en raakt, neemt het doelwit een extra 10 ({@dice 3d6}) schade."
+					]
+				},
+				{
+					"name": "Limited Flight",
+					"entries": [
+						"De draakvogel kan een bonusactie gebruiken om een vliegsnelheid van 9 meter te krijgen tot het einde van zijn beurt."
+					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"De dragonfang heeft voordeel bij een aanvalsrol tegen een wezen als ten minste één van de bondgenoten van de dragonfang zich binnen 1,5 meter van het wezen bevindt en de bondgenoot niet {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De Dragonfang valt twee keer aan met zijn korte zwaard."
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 6} te raken, reikwijdte 1,5 m., één doelwit. {@h}6 ({@damage 1d6 + 3}) doordringende schade plus 7 ({@dice 2d6}) schade van het type waartegen de Dragonfang weerstand heeft."
+					]
+				},
+				{
+					"name": "Orb of Dragon's Breath (2/Day)",
+					"entries": [
+						"{@atk rs} {@hit 5} om te raken, bereik 15 m., één doelwit. {@h}22 ({@dice 5d8}) schade van het type waartegen de Dragonfang weerstand heeft."
+					]
+				}
+			],
+			"attachedItems": [
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Pack Tactics"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"I"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Dragonsoul",
+			"source": "RoT",
+			"page": 89,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 183
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item studded leather armor|phb|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 110,
+				"formula": "17d8 + 34"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 18,
+			"con": 14,
+			"int": 13,
+			"wis": 12,
+			"cha": 16,
+			"save": {
+				"wis": "+4"
+			},
+			"skill": {
+				"deception": "+6",
+				"stealth": "+7"
+			},
+			"passive": 11,
+			"resist": [
+				{
+					"resist": [
+						"acid",
+						"cold",
+						"fire",
+						"lightning",
+						"poison"
+					],
+					"preNote": "one of the following:"
+				}
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"Infernal"
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "Dragon Fanatic",
+					"entries": [
+						"De drakenziel heeft voordeel bij reddingen tegen {@condition charmed} of {@condition frightened} zijn. Terwijl de drakenziel een draak of een cultusmedewerker van de Drakencultus van een hogere rang kan zien die met hem bevriend is, negeert de drakenziel de effecten van {@condition charmed} of {@condition frightened} zijn."
+					]
+				},
+				{
+					"name": "Fanatic Advantage",
+					"entries": [
+						"Eenmaal per beurt, als de drakenziel een wapenaanval doet met voordeel op de aanvalsrol en raakt, neemt het doelwit een extra 10 ({@dice 3d6}) schade."
+					]
+				},
+				{
+					"name": "Limited Flight",
+					"entries": [
+						"De drakenziel kan een bonusactie gebruiken om een vliegsnelheid van 9 meter te krijgen tot het einde van zijn beurt."
+					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"De drakenziel heeft voordeel bij een aanvalsrol tegen een wezen als minstens één van de bondgenoten van de drakenziel binnen 1,5 meter van het wezen is en de bondgenoot niet {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De drakenziel valt twee keer aan met zijn korte zwaard."
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 7} te raken, reikwijdte 1,5 m., één doelwit. {@h}6 ({@damage 1d6 + 3}) doordringende schade plus 10 ({@dice 3d6}) schade van het type waartegen de drakenziel weerstand heeft."
+					]
+				},
+				{
+					"name": "Orb of Dragon's Breath (3/Day)",
+					"entries": [
+						"{@atk rs} {@hit 7} om te raken, bereik 27 m., één doelwit. {@h}27 ({@dice 6d8}) schade van het type waartegen de drakenziel weerstand heeft."
+					]
+				}
+			],
+			"attachedItems": [
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Pack Tactics"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"I"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Galvan",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "RoT",
+			"page": 9,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 12
+				}
+			],
+			"_copy": {
+				"name": "Dragonsoul",
+				"source": "RoT",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the dragonsoul",
+						"with": "Galvan",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "prependArr",
+						"items": [
+							{
+								"name": "5etools Note",
+								"entries": [
+									"While Galvan is not presented in an encounter in {@adventure The Rise of Tiamat|RoT}, the {@creature dragonsoul|RoT} stat block has been provided here for ease of use, with optional alterations for the {@item Blue Dragon Mask|RoTOS}."
+								]
+							},
+							{
+								"name": "Special Equipment",
+								"entries": [
+									"Galvan has the {@item Blue Dragon Mask|RoTOS}."
+								]
+							},
+							{
+								"name": "Draconic Majesty",
+								"entries": [
+									"While wearing no armor and wearing the Blue Dragon Mask, Galvan adds his Charisma bonus to her AC (included)."
+								]
+							},
+							{
+								"name": "Lingering Shock",
+								"entries": [
+									"If Galvan deals lightning damage to a creature while wearing the Blue Dragon Mask, that creature can't take reactions until its next turn."
+								]
+							},
+							{
+								"name": "Legendary Resistance (1/Day)",
+								"entries": [
+									"If Galvan fails a saving throw while wearing the Blue Dragon Mask, he can choose to succeed instead."
+								]
+							}
+						]
+					}
+				}
+			},
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item studded leather armor|phb|studded leather}"
+					]
+				},
+				{
+					"ac": 17,
+					"condition": "with the Blue Dragon Mask",
+					"braces": true
+				}
+			],
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"immune": [
+				"lightning"
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Half-Blue Dragon Gladiator",
+			"source": "RoT",
+			"page": 55,
+			"otherSources": [
+				{
+					"source": "DC"
+				},
+				{
+					"source": "ToD",
+					"page": 141
+				}
+			],
+			"_copy": {
+				"name": "Gladiator",
+				"source": "MM",
+				"_trait": {
+					"name": "Large or Smaller Half-Blue Dragon",
+					"source": "MM"
+				},
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "gladiator",
+						"with": "half-dragon"
+					}
+				}
+			},
+			"senseTags": [
+				"B",
+				"D"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack",
+				"Parry"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"X"
+			],
+			"damageTags": [
+				"B",
+				"L",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Half-Green Dragon Assassin",
+			"source": "RoT",
+			"page": 56,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 142
+				}
+			],
+			"_copy": {
+				"name": "Assassin",
+				"source": "MM",
+				"_trait": {
+					"name": "Large or Smaller Half-Green Dragon",
+					"source": "MM"
+				},
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "assassin",
+						"with": "half-dragon"
+					}
+				}
+			},
+			"senseTags": [
+				"B",
+				"D"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"DR",
+				"TC",
+				"X"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Half-Red Dragon Gladiator",
+			"source": "RoT",
+			"page": 56,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 142
+				}
+			],
+			"_copy": {
+				"name": "Gladiator",
+				"source": "MM",
+				"_trait": {
+					"name": "Large or Smaller Half-Red Dragon",
+					"source": "MM"
+				},
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "gladiator",
+						"with": "half-dragon"
+					}
+				}
+			},
+			"senseTags": [
+				"B",
+				"D"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack",
+				"Parry"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"X"
+			],
+			"damageTags": [
+				"B",
+				"F",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Ice Toad",
+			"source": "RoT",
+			"page": 90,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 185
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 32,
+				"formula": "5d8 + 10"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 13,
+			"dex": 10,
+			"con": 14,
+			"int": 8,
+			"wis": 10,
+			"cha": 6,
+			"skill": {
+				"perception": "+2"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"immune": [
+				"cold"
+			],
+			"languages": [
+				"Ice Toad"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"De pad kan lucht of water inademen."
+					]
+				},
+				{
+					"name": "Cold Aura",
+					"entries": [
+						"Elk wezen dat zijn beurt begint binnen 1,5 meter van de pad krijgt 3 ({@damage 1d6}) koudeschade."
+					]
+				},
+				{
+					"name": "Standing Leap",
+					"entries": [
+						"De pad kan verspringen tot 6 meter en hoogspringen tot 3 meter, met of zonder renstart."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 3} om te raken, reikwijdte 1,5 m., één doelwit. {@h}4 ({@damage 1d8}) koude schade. Als het doelwit een Medium of kleiner wezen is, is het {@condition grappled} (ontsnappen {@dc 11}). Tot deze houdgreep eindigt, kan de pad geen ander doelwit bijten."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"OTH"
+			],
+			"damageTags": [
+				"C"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Ice Troll",
+			"source": "RoT",
+			"page": 30,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 121
+				}
+			],
+			"_copy": {
+				"name": "Troll",
+				"source": "MM"
+			},
+			"resist": [
+				"cold"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Iskander",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "RoT",
+			"page": 62,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 148
+				}
+			],
+			"_copy": {
+				"name": "Mage",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "5etools Note",
+							"entries": [
+								"Iskander wordt in {@adventure The Rise of Tiamat|RoT} voorgesteld als een neutrale kwaadaardige mannelijke tovenaar. Het {@creature mage} statistiekenblok is hier opgenomen voor het gemak."
+							]
+						}
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Maccath the Crimson",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "RoT",
+			"page": 33,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 111
+				}
+			],
+			"_copy": {
+				"name": "Mage",
+				"source": "MM",
+				"_trait": {
+					"name": "Tiefling",
+					"source": "PHB"
+				},
+				"_mod": {
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "5etools Note",
+							"entries": [
+								"Maccath the Crimson wordt in {@adventure The Rise of Tiamat|RoT} voorgesteld als een vrouwelijke Tiefling tovenaar en lid van de Arcane Brotherhood. Het {@creature mage} statistiekenblok, aangepast met tiefling raseigenschappen, is hier voorzien voor het gemak."
+							]
+						}
+					}
+				}
+			},
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"I",
+				"X"
+			],
+			"spellcastingTags": [
+				"CW",
+				"I"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Marfulb",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "RoT",
+			"page": 35,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 121
+				}
+			],
+			"_copy": {
+				"name": "Ice Toad",
+				"source": "RoT"
+			},
+			"int": 13,
+			"hasToken": true
+		},
+		{
+			"name": "Mend-nets",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "RoT",
+			"page": 32,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 116
+				}
+			],
+			"_copy": {
+				"name": "Tribal Warrior",
+				"source": "MM"
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Naergoth Bladelord",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "RoT",
+			"page": 90,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 186
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item plate armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 135,
+				"formula": "18d8 + 54"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 20,
+			"dex": 12,
+			"con": 16,
+			"int": 12,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"dex": "+5",
+				"wis": "+6"
+			},
+			"skill": {
+				"perception": "+6",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 16,
+			"resist": [
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"cr": "11",
+			"trait": [
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"Als Naergoth in het zonlicht staat, heeft hij een nadeel op aanvalsrollen en op wijsheidscontroles die op zicht gebaseerd zijn."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Naergoth voert drie aanvallen uit, ofwel met zijn langzwaard ofwel met zijn longbow. Hij kan Life Drain gebruiken in plaats van één langzwaard aanval."
+					]
+				},
+				{
+					"name": "Life Drain",
+					"entries": [
+						"{@atk mw} {@hit 9} te raken, reikwijdte 1,5 m., één doelwit. {@h}20 ({@damage 5d6 + 3}) necrotische schade. Het doelwit moet slagen voor een {@dc 15} grondwetsreddende worp of zijn maximale aantal geraakt punten wordt verminderd met een hoeveelheid die gelijk is aan de opgelopen schade. Deze vermindering duurt totdat het doelwit klaar is met een lange rustpauze. Het doelwit sterft als dit effect zijn maximale aantal geraakt punten tot 0 verlaagt."
+					]
+				},
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 9} te raken, reikwijdte 1,5 m., één doelwit. {@h}9 ({@damage 1d8 + 5}) snijdende schade, of 10 ({@dice 1d10 + 5}) indien gebruikt met twee handen, plus 10 ({@damage 3d6}) necrotische schade."
+					]
+				},
+				{
+					"name": "Longbow",
+					"entries": [
+						"{@atk rw} {@hit 5} te raken, bereik 150/18 m., één doelwit. {@h}5 ({@damage 1d8 + 1}) doordringende schade plus 10 ({@damage 3d6}) necrotische schade."
+					]
+				}
+			],
+			"attachedItems": [
+				"longbow|phb",
+				"longsword|phb"
+			],
+			"traitTags": [
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"HPR",
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Neronvain",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "RoT",
+			"page": 91,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 187
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"elf"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				17
+			],
+			"hp": {
+				"average": 117,
+				"formula": "18d8 + 36"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 17,
+			"con": 15,
+			"int": 16,
+			"wis": 13,
+			"cha": 18,
+			"save": {
+				"con": "+5",
+				"wis": "+4"
+			},
+			"skill": {
+				"arcana": "+6",
+				"perception": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"Elvish",
+				"Infernal"
+			],
+			"cr": "9",
+			"trait": [
+				{
+					"name": "Draconic Majesty",
+					"entries": [
+						"Neronvain voegt zijn Charisma bonus toe aan zijn AC (inbegrepen)."
+					]
+				},
+				{
+					"name": "Fey Ancestry",
+					"entries": [
+						"Magie kan Neronvain niet in slaap brengen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Neronvain doet twee aanvallen, ofwel met zijn kortezwaard ofwel met zijn Eldritch Arrow."
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 7} te raken, reikwijdte 1,5 m., één doelwit. {@h}6 ({@damage 1d6 + 3}) doordringende schade plus 13 ({@damage 3d8}) gifschade."
+					]
+				},
+				{
+					"name": "Eldritch Arrow",
+					"entries": [
+						"{@atk rs} {@hit 7} te raken, bereik 36 m., één doelwit. {@h}11 ({@damage 2d10}) krachtschade plus 9 ({@damage 2d8}) gifschade."
+					]
+				},
+				{
+					"name": "Poisonous Cloud (2/Day)",
+					"entries": [
+						"Gifgas vult een bol met een straal van 6 meter gecentreerd op een punt dat Neronvain kan zien binnen 15 meter van hem. Het gas verspreidt zich om hoeken en blijft tot het begin van Neronvains volgende beurt. Elk wezen dat zijn beurt begint in het gas moet slagen voor een {@dc 16} grondwetsreddende worp of {@condition poisoned} voor 1 minuut. Een wezen kan de reddingsworp herhalen aan het einde van elk van zijn beurten en het effect op zichzelf beëindigen als het slaagt."
+					]
+				}
+			],
+			"attachedItems": [
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Fey Ancestry"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"E",
+				"I"
+			],
+			"damageTags": [
+				"I",
+				"O",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"poisoned"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Paper Whirlwind",
+			"source": "RoT",
+			"page": 72,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 158
+				}
+			],
+			"_copy": {
+				"name": "Swarm of Ravens",
+				"source": "MM"
+			},
+			"type": {
+				"type": "construct",
+				"swarmSize": "T"
+			},
+			"vulnerable": [
+				"fire"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Red Wizard",
+			"source": "RoT",
+			"page": 76,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 171
+				}
+			],
+			"_copy": {
+				"name": "Mage",
+				"source": "MM"
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Severin",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "RoT",
+			"page": 92,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 189
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				16
+			],
+			"hp": {
+				"average": 150,
+				"formula": "20d8 + 60"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 13,
+			"con": 16,
+			"int": 17,
+			"wis": 12,
+			"cha": 20,
+			"save": {
+				"dex": "+5",
+				"wis": "+5"
+			},
+			"skill": {
+				"arcana": "+7",
+				"religion": "+7"
+			},
+			"senses": [
+				"While wearing the Mask of the Dragon Queen: darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				{
+					"resist": [
+						"acid",
+						"cold",
+						"lightning",
+						"poison",
+						{
+							"resist": [
+								"bludgeoning",
+								"piercing",
+								"slashing"
+							],
+							"note": "from nonmagical attacks",
+							"cond": true
+						}
+					],
+					"preNote": "While wearing the mask of the Dragon Queen:"
+				}
+			],
+			"immune": [
+				{
+					"immune": [
+						"fire"
+					],
+					"preNote": "While wearing the mask of the Dragon Queen:"
+				}
+			],
+			"conditionImmune": [
+				{
+					"conditionImmune": [
+						"charmed",
+						"frightened",
+						"poisoned"
+					],
+					"preNote": "While wearing the mask of the Dragon Queen:"
+				}
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"Infernal"
+			],
+			"cr": "11",
+			"trait": [
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Severin heeft de {@item Mask of the Dragon Queen|rot}."
+					]
+				},
+				{
+					"name": "Draconic Majesty",
+					"entries": [
+						"Severin voegt zijn Charisma bonus toe aan zijn AC (inbegrepen)."
+					]
+				},
+				{
+					"name": "Ignite Enemy",
+					"entries": [
+						"Als Severin vuurschade toebrengt aan een wezen terwijl hij het Masker van de Drakenkoningin draagt, vliegt het doelwit in brand. Aan het begin van elke beurt neemt het brandende doelwit 5 ({@damage 1d10}) brandschade op. Een wezen binnen het bereik van het vuur kan een actie gebruiken om het vuur te doven."
+					]
+				},
+				{
+					"name": "Legendary Resistance (5/Day)",
+					"entries": [
+						"Als Severin het Masker van de Drakenkoningin draagt en een reddingsworp mislukt, kan hij kiezen om te slagen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Burning Touch",
+					"entries": [
+						"{@atk ms} {@hit 9} te raken, reikwijdte 1,5 m., één doelwit. {@h}18 ({@damage 4d8}) brandschade."
+					]
+				},
+				{
+					"name": "Flaming Orb",
+					"entries": [
+						"{@atk rs} {@hit 9} om te raken, bereik 27 m., één doelwit. {@h}40 ({@damage 9d8}) brandschade."
+					]
+				},
+				{
+					"name": "Scorching Burst",
+					"entries": [
+						"Severin kiest een punt dat hij kan zien binnen 18 meter van hem. Elk wezen binnen 1,5 meter van dat punt moet een {@dc 17} vaardigheidsreddende worp doen, waarbij hij 18 ({@damage 4d8}) brandschade oploopt als hij niet slaagt, of half zoveel schade als hij slaagt."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"entries": [
+						"Als Severin het Masker van de Drakenkoningin draagt, kan hij 3 legendarische acties uitvoeren, waarbij hij kan kiezen uit de opgesomde opties. Er kan slechts één legendarische actie per keer worden gebruikt en alleen aan het einde van de beurt van een ander wezen. Severin krijgt de gebruikte legendarische acties terug aan het begin van zijn beurt."
+					]
+				},
+				{
+					"name": "Attack",
+					"entries": [
+						"Severin doet een aanval."
+					]
+				},
+				{
+					"name": "Fiery Teleport (Costs 2 Actions)",
+					"entries": [
+						"Severin, samen met alle voorwerpen die hij draagt of bij zich heeft, teleporteert tot 18 meter naar een onbezette ruimte die hij kan zien. Elk wezen binnen 1,5 meter van Severin voordat hij teleporteert, krijgt 5 ({@damage 1d10}) brandschade."
+					]
+				},
+				{
+					"name": "Hellish Chains (Costs 3 Actions)",
+					"entries": [
+						"Severin richt zich op één wezen dat hij kan zien binnen een straal van 9 meter van hem. Het doelwit wordt gewikkeld in magische ketens van vuur en {@condition restrained}. Het {@condition restrained} doelwit krijgt 21 ({@damage 6d6}) vuurschade aan het begin van elk van zijn beurten. Aan het einde van zijn beurten kan het doelwit een {@dc 17} Sterkte reddingsworp doen, waardoor het effect op zichzelf eindigt als hij slaagt."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"I"
+			],
+			"damageTags": [
+				"F"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sled Dog",
+			"source": "RoT",
+			"page": 27,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 113
+				}
+			],
+			"_copy": {
+				"name": "Wolf",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "wolf",
+						"with": "dog"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Snake Horror",
+			"source": "RoT",
+			"page": 46,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 132
+				}
+			],
+			"_copy": {
+				"name": "Helmed Horror",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "helmed horror",
+						"with": "snake horror"
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Longsword",
+						"items": {
+							"name": "Longsword",
+							"entries": [
+								"{@atk mw} {@hit 6} te raken, reikwijdte 1,5 m., één doelwit. {@h}8 ({@damage 1d8 + 4}) snijdende schade, of 9 ({@damage 1d10 + 4}) snijdende schade indien gebruikt met twee handen, en het doelwit moet een DC 12 grondwetsreddende worp maken, waarbij 9 ({@damage 2d8}) gifschade wordt opgelopen als de redding mislukt, of half zoveel schade als de redding slaagt."
+							]
+						}
+					}
+				}
+			},
+			"damageTags": [
+				"I",
+				"S"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Tiamat",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "RoT",
+			"page": 92,
+			"otherSources": [
+				{
+					"source": "BGDIA"
+				},
+				{
+					"source": "ToD",
+					"page": 190
+				}
+			],
+			"size": [
+				"G"
+			],
+			"type": "fiend",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 25,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 615,
+				"formula": "30d20 + 300"
+			},
+			"speed": {
+				"walk": 60,
+				"fly": 120
+			},
+			"str": 30,
+			"dex": 10,
+			"con": 30,
+			"int": 26,
+			"wis": 26,
+			"cha": 28,
+			"save": {
+				"str": "+19",
+				"dex": "+9",
+				"wis": "+17"
+			},
+			"skill": {
+				"arcana": "+17",
+				"perception": "+26",
+				"religion": "+17"
+			},
+			"senses": [
+				"darkvision 240 ft.",
+				"truesight 120 ft."
+			],
+			"passive": 36,
+			"immune": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"poison",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"frightened",
+				"poisoned",
+				"stunned"
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"Infernal"
+			],
+			"cr": "30",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"Tiamat kan van nature de volgende spreuk uitspreken, haar spreukvaardigheid is Charisma (spell save {@dc 26}):"
+					],
+					"daily": {
+						"3": [
+							"{@spell divine word}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Discorporation",
+					"entries": [
+						"Wanneer Tiamat tot 0 hit points zakt of sterft, wordt haar lichaam vernietigd, maar haar essentie reist terug naar haar domein in de Negen Hells, en zij is een tijd lang niet in staat om een fysieke vorm aan te nemen."
+					]
+				},
+				{
+					"name": "Legendary Resistance (5/Day)",
+					"entries": [
+						"Als Tiamat een reddingsworp faalt, kan ze kiezen om te slagen."
+					]
+				},
+				{
+					"name": "Limited Magic Immunity",
+					"entries": [
+						"Tiamat is immuun voor spreuken van 6e niveau of lager, tenzij ze zelf wil worden beïnvloed. Ze is in het voordeel bij reddingsacties tegen alle andere spreuken en magische effecten."
+					]
+				},
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"Tiamat's wapenaanvallen zijn magisch."
+					]
+				},
+				{
+					"name": "Multiple Heads",
+					"entries": [
+						"Tiamat kan één reactie per beurt uitvoeren, in plaats van slechts één per ronde. Ze heeft ook een voordeel bij het redden van worpen tegen verdoving {@condition unconscious}. Als ze niet slaagt voor een reddingsworp tegen een effect dat een wezen zou kunnen verdoven, wordt een van haar ongebruikte legendarische acties gebruikt."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"Tiamat krijgt 30 hit points terug aan het begin van haar beurt."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Tiamat kan haar Angstaanjagende Aanwezigheid gebruiken. Dan doet ze drie aanvallen: twee met haar klauwen en één met haar staart."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 19} te raken, reikwijdte 4,5 m., één doelwit. {@h}24 ({@damage 4d6 + 10}) schade door snijden."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 19} te raken, reikwijdte 7,5 m., één doelwit. {@h}28 ({@damage 4d8 + 10}) doordringende schade."
+					]
+				},
+				{
+					"name": "Frightful Presence",
+					"entries": [
+						"Elk wezen naar keuze van Tiamat dat zich binnen 72 meter van Tiamat bevindt en zich van haar bewust is, moet slagen in een {@dc 26} Wisdom saving throw of {@condition frightened} worden gedurende 1 minuut. Een wezen kan de reddingsworp herhalen aan het einde van elk van zijn beurten en het effect op zichzelf beëindigen als het slaagt. Als de reddingsworp van een wezen succesvol is of het effect eindigt voor het wezen, is het wezen immuun voor Tiamat's Frightful Presence voor de volgende 24 uur."
+					]
+				}
+			],
+			"legendaryHeader": [
+				"Tiamat can take 5 legendary actions, choosing from the options below. Only one legendary action can be used at a time and only at the end of another creature's turn. Tiamat regains spent legendary actions at the start of its turn.",
+				"Tiamat's legendary action options are associated with her five dragon heads (a bite and a breath weapon for each). Once Tiamat chooses a legendary action option for one of her heads, she can't choose another one associated with that head until the start of her next turn."
+			],
+			"legendaryActions": 5,
+			"legendary": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 19} te raken, reikwijdte 6 m., één doelwit. {@h}32 ({@damage 4d10 + 10}) schade door snijden plus 14 ({@damage 4d6}) zuurschade (zwarte drakenkop), bliksemschade (blauwe drakenkop), gifschade (groene drakenkop), vuurschade (rode drakenkop) of koudeschade (witte drakenkop)."
+					]
+				},
+				{
+					"name": "Black Dragon Head: Acid Breath (Costs 2 Actions)",
+					"entries": [
+						"Tiamat ademt zuur in een lijn van 36 meter die 3 meter breed is. Elk wezen in die lijn moet een {@dc 27} vaardigheidsreddende worp doen en 67 ({@damage 15d8}) zure schade oplopen als de redding mislukt, of half zoveel schade als de redding slaagt."
+					]
+				},
+				{
+					"name": "Blue Dragon Head: Lightning Breath (Costs 2 Actions)",
+					"entries": [
+						"Tiamat ademt bliksem in een lijn van 36 meter die 3 meter breed is. Elk wezen in die lijn moet een {@dc 27} vaardigheidsreddende worp doen en krijgt 88 ({@damage 16d10}) bliksemschade als de redding mislukt, of de helft als de redding slaagt."
+					]
+				},
+				{
+					"name": "Green Dragon Head: Poison Breath (Costs 2 Actions)",
+					"entries": [
+						"Tiamat ademt giftig gas uit in een kegel van 27 meter. Elk wezen in dat gebied moet een {@dc 27} grondwetsreddende worp doen en krijgt 77 ({@damage 22d6}) gifschade als hij niet slaagt, of half zoveel schade als hij slaagt."
+					]
+				},
+				{
+					"name": "Red Dragon Head: Fire Breath (Costs 2 Actions)",
+					"entries": [
+						"Tiamat ademt vuur in een kegel van 27 meter. Elk wezen in dat gebied moet een {@dc 27} vaardigheidsreddende worp doen en krijgt 91 ({@damage 26d6}) brandschade als de redding mislukt, of de helft als de redding slaagt."
+					]
+				},
+				{
+					"name": "White Dragon Head: Cold Breath (Costs 2 Actions)",
+					"entries": [
+						"Tiamat ademt een ijzige straal uit in een kegel van 27 meter. Elk wezen in dat gebied moet een {@dc 27} vaardigheidsreddende worp doen en krijgt 72 ({@damage 16d8}) koude schade als de redding mislukt, of half zoveel schade als de redding slaagt."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Weapons",
+				"Regeneration"
+			],
+			"senseTags": [
+				"SD",
+				"U"
+			],
+			"actionTags": [
+				"Frightful Presence",
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"I"
+			],
+			"damageTags": [
+				"A",
+				"C",
+				"F",
+				"I",
+				"L",
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Varram",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "RoT",
+			"page": 9,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 8
+				}
+			],
+			"_copy": {
+				"name": "Dragonsoul",
+				"source": "RoT",
+				"_trait": {
+					"name": "Mountain Dwarf",
+					"source": "PHB"
+				},
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the dragonsoul",
+						"with": "Varram",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "5etools Note",
+							"entries": [
+								"Varram wordt in {@adventure The Rise of Tiamat|RoT} voorgesteld als een mannelijke dwerg. Het {@creature dragonsoul|RoT} statistiekenblok, aangepast met raskenmerken van dwergen, is hier voor het gemak opgenomen."
+							]
+						}
+					}
+				}
+			},
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"DR",
+				"I"
+			],
+			"hasToken": true
+		}
+	]
+}

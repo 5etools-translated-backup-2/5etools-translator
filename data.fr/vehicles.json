@@ -1,0 +1,4175 @@
+{
+	"vehicle": [
+		{
+			"name": "Airship",
+			"source": "UAOfShipsAndSea",
+			"page": 2,
+			"vehicleType": "SHIP",
+			"size": "G",
+			"dimensions": [
+				"80 ft.",
+				"20 ft."
+			],
+			"terrain": [
+				"air"
+			],
+			"capCrew": 20,
+			"capPassenger": 10,
+			"capCargo": 1,
+			"pace": 9,
+			"str": 14,
+			"dex": 14,
+			"con": 12,
+			"int": 0,
+			"wis": 0,
+			"cha": 0,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"incapacitated",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"stunned",
+				"unconscious"
+			],
+			"hull": {
+				"ac": 13,
+				"hp": 300
+			},
+			"control": [
+				{
+					"name": "Helm",
+					"ac": 16,
+					"hp": 50,
+					"entries": [
+						"Se déplacer jusqu'à la vitesse de son moteur élémentaire, avec un virage à 90 degrés. Si la barre est détruite, le dirigeable ne peut pas tourner."
+					]
+				}
+			],
+			"movement": [
+				{
+					"name": "Elemental Engine",
+					"ac": 18,
+					"hp": 100,
+					"hpNote": "-20 ft. speed per 25 damage taken",
+					"locomotion": [
+						{
+							"mode": "air",
+							"entries": [
+								"puissance élémentaire, vitesse 24 m. Si le moteur est détruit, le vaisseau s'écrase immédiatement."
+							]
+						}
+					]
+				}
+			],
+			"weapon": [
+				{
+					"name": "Ballistas",
+					"count": 4,
+					"ac": 15,
+					"hp": 50,
+					"entries": [
+						"{@atk rw} {@hit 6} pour toucher, portée 120/144 m., une cible. {@h}16 ({@damage 3d10}) dégâts perforants."
+					]
+				}
+			],
+			"other": [
+				{
+					"name": "Actions",
+					"entries": [
+						"A son tour, le dirigeable peut utiliser sa barre pour se déplacer en utilisant son moteur élémentaire. Il peut également tirer ses ballistas. S'il a la moitié de son équipage ou moins, il ne peut tirer que deux de ses ballistas."
+					]
+				}
+			]
+		},
+		{
+			"name": "Apparatus of Kwalish",
+			"source": "DMG",
+			"page": 151,
+			"srd": "Apparatus of the Crab",
+			"vehicleType": "OBJECT",
+			"size": "L",
+			"terrain": [
+				"sea"
+			],
+			"capCrew": 1,
+			"capPassenger": 1,
+			"ac": 20,
+			"speed": {
+				"walk": 30,
+				"swim": 30,
+				"note": "(or 0 ft. for both if the legs and tail aren't extended)"
+			},
+			"hp": 200,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"entries": [
+				"Cet objet semble d'abord être un grand tonneau en fer scellé pesant 25 kilogrammes. Le tonneau a un loquet caché, qui peut être trouvé avec un test d'Intelligence ({@skill Investigation}) DC 20 réussi. Le déverrouillage du loquet ouvre une trappe à l'une des extrémités du tonneau, permettant à deux créatures de taille moyenne ou plus petite de ramper à l'intérieur. Dix leviers sont alignés à l'autre bout du tonneau, chacun en position neutre, pouvant se déplacer vers le haut ou vers le bas. Lorsque certains leviers sont actionnés, l'appareil se transforme pour ressembler à un homard géant.",
+				"Pour être utilisé comme véhicule, l'appareil nécessite un pilote. Lorsque la trappe de l'appareil est fermée, le compartiment est étanche à l'air et à l'eau. Le compartiment contient suffisamment d'air pour 10 heures de respiration, divisé par le nombre de créatures respirant à l'intérieur.",
+				"L'appareil flotte sur l'eau. Il peut également aller sous l'eau jusqu'à une profondeur de 27 mètres. En deçà, le véhicule subit {@damage 2d6} de dégâts contondants par minute dus à la pression.",
+				"Une créature dans le compartiment peut utiliser une action pour déplacer jusqu'à deux des leviers de l'appareil vers le haut ou vers le bas. Après chaque utilisation, un levier revient à sa position neutre. Chaque levier, de gauche à droite, fonctionne comme indiqué dans la table Submersible de Kwalish Levers.",
+				{
+					"type": "table",
+					"caption": "Apparatus of Kwalish Levers:",
+					"colLabels": [
+						"Lever",
+						"Up",
+						"Down"
+					],
+					"colStyles": [
+						"col-1 text-center",
+						"col-5-5",
+						"col-5-5"
+					],
+					"rows": [
+						[
+							"1",
+							"Les pattes et la queue s'étendent, permettant à l'appareil de marcher et de nager.",
+							"Les pattes et la queue se rétractent, réduisant la vitesse de l'appareil à 0 et le rendant incapable de bénéficier des bonus de vitesse."
+						],
+						[
+							"2",
+							"Le volet de la fenêtre avant s'ouvre.",
+							"Le volet de la fenêtre avant se ferme."
+						],
+						[
+							"3",
+							"Les volets des fenêtres latérales sont ouverts (deux par côté).",
+							"Les volets des fenêtres latérales se ferment (deux par côté)."
+						],
+						[
+							"4",
+							"Deux griffes s'étendent sur les faces avant de l'appareil.",
+							"Les griffes se rétractent."
+						],
+						[
+							"5",
+							"Chaque griffe étendue effectue l'attaque d'arme de mêlée suivante : {@hit 8} pour toucher, portée de 1,5 m, une cible. {@h} 7 ({@damage 2d6}) dégâts contondants.",
+							"Chaque griffe étendue effectue l'attaque d'arme de mêlée suivante : {@hit 8} pour toucher, portée de 1,5 m, une cible. {@h} La cible est {@condition grappled} (fuite {@dc 15})."
+						],
+						[
+							"6",
+							"L'appareil marche ou nage en avant.",
+							"L'appareil marche ou nage à reculons."
+						],
+						[
+							"7",
+							"L'appareil tourne de 90 degrés à gauche.",
+							"L'appareil tourne de 90 degrés à droite."
+						],
+						[
+							"8",
+							"Les luminaires en forme d'œil émettent une lumière vive dans un rayon de 9 mètres et une lumière faible sur 9 mètres supplémentaires.",
+							"La lumière s'éteint."
+						],
+						[
+							"9",
+							"L'appareil s'enfonce jusqu'à 6 mètres dans le liquide.",
+							"L'appareil monte jusqu'à 6 mètres dans le liquide."
+						],
+						[
+							"10",
+							"Le hayon arrière se déverrouille et s'ouvre.",
+							"La trappe arrière se ferme et s'étanche."
+						]
+					]
+				}
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Astral Brig",
+			"source": "MTF",
+			"page": 90,
+			"vehicleType": "SHIP",
+			"size": "G",
+			"dimensions": [
+				"90 ft.",
+				"30 ft."
+			],
+			"terrain": [
+				"air"
+			],
+			"capCrew": 5,
+			"capPassenger": 60,
+			"pace": 12,
+			"weapon": [
+				{
+					"name": "Ballistas",
+					"count": 2,
+					"entries": [
+						"{@atk rw} {@hit 6} pour toucher, portée 120/144 m., une cible. {@h}16 ({@damage 3d10}) dégâts perforants."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Astral Skiff",
+			"source": "MTF",
+			"page": 90,
+			"vehicleType": "SHIP",
+			"size": "H",
+			"dimensions": [
+				"30 ft.",
+				"10 ft."
+			],
+			"terrain": [
+				"air"
+			],
+			"capCrew": 3,
+			"capPassenger": 12,
+			"pace": 15,
+			"hasFluff": true
+		},
+		{
+			"name": "Battle Balloon",
+			"source": "AI",
+			"page": 218,
+			"vehicleType": "SHIP",
+			"size": "G",
+			"dimensions": [
+				"80 ft.",
+				"20 ft."
+			],
+			"terrain": [
+				"air"
+			],
+			"capCrew": 20,
+			"capPassenger": 10,
+			"capCargo": 1,
+			"pace": 9,
+			"str": 18,
+			"dex": 17,
+			"con": 20,
+			"int": 0,
+			"wis": 0,
+			"cha": 0,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"incapacitated",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"stunned",
+				"unconscious"
+			],
+			"hull": {
+				"ac": 15,
+				"hp": 500,
+				"dt": 15
+			},
+			"control": [
+				{
+					"name": "Helm",
+					"ac": 18,
+					"hp": 50,
+					"entries": [
+						"Se déplacer jusqu'à la vitesse de l'hélice du navire, avec un virage à 90 degrés. Si la barre est détruite, le navire ne peut pas tourner."
+					]
+				},
+				{
+					"name": "Balloon",
+					"ac": 12,
+					"hp": 75,
+					"entries": [
+						"Si son ballon est détruit, un ballon de combat ne peut pas maintenir son altitude."
+					]
+				}
+			],
+			"movement": [
+				{
+					"name": "Propeller",
+					"ac": 12,
+					"hp": 100,
+					"hpNote": "-5 ft. speed per 25 damage taken",
+					"speed": [
+						{
+							"mode": "air",
+							"entries": [
+								"24 m. ; 15 m. en volant face au vent ; 3 m. en volant avec le vent"
+							]
+						}
+					]
+				}
+			],
+			"weapon": [
+				{
+					"name": "Green Flame Arbalester",
+					"ac": 15,
+					"hp": 75,
+					"entries": [
+						"{@atk rw} {@hit 8} pour toucher, portée 200/24 m. (ne peut toucher les cibles à moins de 18 m.) une cible. {@h}16 ({@damage 3d10}) de dégâts perforants et 22 ({@damage 4d10}) de dégâts de feu. Si l'attaque manque, le MD détermine l'endroit où le boulon d'arbalète touche. Chaque créature située à moins de 3 mètres de cet endroit doit effectuer un jet de sauvegarde de Dextérité DC 15 pour éviter le boulon qui se brise, subissant 5 ({@damage 1d10}) de dégâts perforants et 5 ({@damage 1d10}) de dégâts de feu en cas de sauvegarde ratée."
+					]
+				},
+				{
+					"name": "Harpoon Gun",
+					"count": 3,
+					"ac": 15,
+					"hp": 50,
+					"entries": [
+						"{@atk rw} {@hit 8} pour toucher, portée 120/144 m., une cible. {@h}11 ({@damage 2d10}) dégâts perforants, et la cible est {@condition grappled} (échappatoire DC 16). Jusqu'à la fin du grappin, la vitesse de la cible est réduite de moitié et elle ne peut pas s'éloigner du ballon de combat. Chaque canon harpon du ballon de combat peut agripper une cible. Tant qu'il a une ou plusieurs cibles {@condition grappled} avec son attaque de canon-harpon, la vitesse du ballon de bataille n'est pas réduite de moitié."
+					]
+				}
+			],
+			"actionThresholds": {
+				"0": 0,
+				"1": 1,
+				"2": 10,
+				"3": 20
+			},
+			"action": [
+				"On its turn the battle balloon can take 3 actions if it has twenty or more crew, 2 actions if it has ten or more crew, or 1 action if it has fewer than ten crew, choosing from the options below. It cannot take any actions if it has no remaining crew.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Fire Ballista",
+							"entry": "Le ballon de combat peut tirer ses canons à harpon."
+						},
+						{
+							"type": "item",
+							"name": "Fire Green Flame Arbalester",
+							"entry": "Le ballon de combat peut tirer sa flamme verte arbalester."
+						},
+						{
+							"type": "item",
+							"name": "Move",
+							"entry": "Le ballon de combat peut utiliser sa barre pour se déplacer à l'aide de son hélice. Si le ballon de bataille entre dans l'espace d'une créature Grande ou plus petite, cette créature est automatiquement poussée au bord de l'espace du ballon de bataille. La créature doit également réussir un jet de sauvegarde de Dextérité DC 15 ou subir 5 ({@damage 1d10}) points de dégâts contondants."
+						},
+						{
+							"type": "item",
+							"name": "Harpoon Haul",
+							"entry": "Le ballon de combat peut tirer chaque cible {@condition grappled} par lui jusqu'à 9 mètres vers le ballon de combat."
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Bombard",
+			"source": "AAG",
+			"page": 26,
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"140 ft.",
+				"30 ft."
+			],
+			"terrain": [
+				"space",
+				"sea"
+			],
+			"capCrew": 12,
+			"capCargo": 150,
+			"cost": 5000000,
+			"pace": {
+				"fly": 4
+			},
+			"speed": {
+				"fly": 35
+			},
+			"hull": {
+				"ac": 15,
+				"acFrom": [
+					"wood"
+				],
+				"hp": 300,
+				"dt": 20
+			},
+			"weapon": [
+				{
+					"name": "Ballistae",
+					"crew": 3,
+					"count": 2,
+					"ac": 15,
+					"hp": 50,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"Il faut 1 action pour charger une baliste, 1 action pour la viser, et 1 action pour la tirer."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} +6 pour toucher, portée 120/144 m., une cible. {@h}16 ({@dice 3d10}) dégâts perforants."
+							]
+						}
+					]
+				},
+				{
+					"name": "Giant Cannon",
+					"crew": 4,
+					"ac": 19,
+					"hp": 250,
+					"costs": [
+						{
+							"note": "cannon"
+						},
+						{
+							"cost": 100000,
+							"note": "giant cannon ball"
+						}
+					],
+					"entries": [
+						"Il faut 3 actions pour charger l'énorme canon et 1 action pour le tirer."
+					],
+					"action": [
+						{
+							"name": "Cannon Ball",
+							"entries": [
+								"{@atk rw} +6 au toucher, portée 600/2,12 m., une cible. {@h}88 ({@dice 16d10}) dégâts contondants."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Damselfly Ship",
+			"source": "AAG",
+			"page": 26,
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"100 ft.",
+				"20 ft."
+			],
+			"terrain": [
+				"space"
+			],
+			"capCrew": 9,
+			"capCargo": 5,
+			"cost": 2000000,
+			"pace": {
+				"fly": 8
+			},
+			"speed": {
+				"fly": 70
+			},
+			"hull": {
+				"ac": 19,
+				"acFrom": [
+					"metal"
+				],
+				"hp": 200,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballista",
+					"crew": 3,
+					"ac": 15,
+					"hp": 50,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"Il faut 1 action pour charger la baliste, 1 action pour la viser, et 1 action pour la tirer."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} +6 pour toucher, portée 120/144 m., une cible. {@h}16 ({@dice 3d10}) dégâts perforants."
+							]
+						}
+					]
+				},
+				{
+					"name": "Mangonel",
+					"crew": 4,
+					"ac": 15,
+					"hp": 100,
+					"costs": [
+						{
+							"cost": 10000,
+							"note": "mangonel"
+						},
+						{
+							"note": "stone"
+						}
+					],
+					"entries": [
+						"Il faut 2 actions pour charger le mangonneau, 1 action pour le diriger à l'aide du rotateur de tourelle (zone 2 sur le plan de pont ci-joint), et 1 action pour le tirer."
+					],
+					"action": [
+						{
+							"name": "Mangonel Stone",
+							"entries": [
+								"{@atk rw} +5 au toucher, portée 200/24 m. (ne peut toucher les cibles à moins de 18 mètres), une cible. {@h}27 ({@dice 5d10}) dégâts contondants."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Demon Grinder",
+			"source": "BGDIA",
+			"page": 219,
+			"vehicleType": "INFWAR",
+			"size": "G",
+			"weight": 12000,
+			"terrain": [
+				"land"
+			],
+			"capCreature": 8,
+			"capCargo": 2000,
+			"speed": 100,
+			"str": 18,
+			"dex": 10,
+			"con": 18,
+			"int": 0,
+			"wis": 0,
+			"cha": 0,
+			"hp": {
+				"hp": 200,
+				"dt": 10,
+				"mt": 20
+			},
+			"immune": [
+				"fire",
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"stunned",
+				"unconscious"
+			],
+			"trait": [
+				{
+					"name": "Crushing Wheels",
+					"entries": [
+						"Le Démon broyeur peut se déplacer dans l'espace de n'importe quelle créature Grande ou plus petite. Lorsqu'il le fait, la créature doit réussir un jet de sauvegarde de Dextérité DC 11 ou subir 22 ({@damage 4d10}) points de dégâts contondants et être assommée {@condition prone}. Si la créature était déjà {@condition prone}, elle subit 22 ({@damage 4d10}) dégâts de contondant supplémentaires. Ce trait ne peut être utilisé contre une créature particulière plus d'une fois par tour."
+					]
+				},
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"Les attaques des armes du Broyeur de démons sont magiques."
+					]
+				},
+				{
+					"name": "Prone Deficiency",
+					"entries": [
+						"Si le Broyeur de démons se renverse et tombe de {@condition prone}, il ne peut pas se redresser et subit une perte de {@condition incapacitated} jusqu'à ce qu'il soit redressé."
+					]
+				}
+			],
+			"actionStation": [
+				{
+					"name": "Helm (Requires 1 Crew and Grants Three-Quarters Cover)",
+					"entries": [
+						"Conduisez et dirigez le Demon Grinder."
+					]
+				},
+				{
+					"name": "Chomper (Requires 1 Crew and Grants Half Cover)",
+					"entries": [
+						"{@atk mw} {@hit 9} pour toucher, portée de 1,5 m, une cible. {@h}25 ({@damage 6d6 + 4}) dégâts perforants. Une cible réduite à 0 point de vie par ces dégâts est réduite en miettes et recrachée par des tuyaux situés de part et d'autre du broyeur de démons. Les objets non magiques que la cible tenait ou transportait sont également détruits."
+					]
+				},
+				{
+					"name": "Wrecking Ball (Requires 1 Crew and Grants Half Cover)",
+					"entries": [
+						"{@atk mw} {@hit 9} pour toucher, portée de 4,5 m, une cible. {@h}40 ({@damage 8d8 + 4}) dégâts contondants. Double les dégâts si la cible est un objet ou une structure."
+					]
+				},
+				{
+					"name": "2 Harpoon Flingers (Each Station Requires 1 Crew and Grants Half Cover)",
+					"entries": [
+						"{@atk rw} {@hit 5} pour toucher, portée 36 m., une cible. {@h}9 ({@damage 2d8}) dégâts perforants."
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Devil's Ride",
+			"source": "BGDIA",
+			"page": 218,
+			"vehicleType": "INFWAR",
+			"size": "L",
+			"weight": 500,
+			"terrain": [
+				"land"
+			],
+			"capCreature": 1,
+			"capCargo": 100,
+			"speed": 120,
+			"str": 14,
+			"dex": 18,
+			"con": 12,
+			"int": 0,
+			"wis": 0,
+			"cha": 0,
+			"hp": {
+				"hp": 30,
+				"dt": 5,
+				"mt": 10
+			},
+			"immune": [
+				"fire",
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"stunned",
+				"unconscious"
+			],
+			"trait": [
+				{
+					"name": "Jump",
+					"entries": [
+						"Si la Chevauchée du Diable se déplace d'au moins 9 mètres en ligne droite, elle peut franchir une distance allant jusqu'à 18 mètres en sautant par-dessus un gouffre, un ravin ou une autre brèche. Chaque pied franchi lors du saut coûte un pied de mouvement."
+					]
+				},
+				{
+					"name": "Prone Deficiency",
+					"entries": [
+						"Si la Chevauchée du Diable tombe {@condition prone}, elle ne peut pas se redresser et reste {@condition incapacitated} jusqu'à ce qu'elle soit redressée."
+					]
+				},
+				{
+					"name": "Stunt",
+					"entries": [
+						"A son tour, le conducteur de la Chevauchée du Diable peut dépenser 3 mètres de mouvement pour effectuer une cascade gratuite, comme un wheelie ou un burnout. Avant de pouvoir effectuer la cascade, la Chevauchée du Diable doit se déplacer d'au moins 3 mètres en ligne droite. Si le conducteur réussit un test de Dextérité DC 10 en utilisant la Dextérité de la moto, la cascade est réussie. Sinon, le conducteur est incapable de réaliser la cascade et ne peut pas en tenter une autre avant le début de son prochain tour. Si le test échoue de 5 ou plus, la Chevauchée du Diable et toutes les créatures qui la montent tombent immédiatement {@condition prone} tandis que la moto s'essouffle et s'arrête net."
+					]
+				}
+			],
+			"actionStation": [
+				{
+					"name": "Helm (Requires 1 Crew and Grants Half Cover)",
+					"entries": [
+						"Conduisez et dirigez le Devil's Ride."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"type": "entries",
+					"name": "Juke",
+					"entries": [
+						"Si la Chevauchée du Diable est capable de se déplacer, le conducteur peut utiliser sa réaction pour accorder à la Chevauchée du Diable l'avantage sur un jet de sauvegarde de Dextérité."
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flying Fish Ship",
+			"source": "AAG",
+			"page": 26,
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"120 ft.",
+				"30 ft."
+			],
+			"terrain": [
+				"space",
+				"sea"
+			],
+			"capCrew": 10,
+			"capCargo": 13,
+			"cost": 2000000,
+			"pace": {
+				"fly": "4½"
+			},
+			"speed": {
+				"fly": 40
+			},
+			"hull": {
+				"ac": 15,
+				"acFrom": [
+					"wood"
+				],
+				"hp": 250,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballista",
+					"crew": 3,
+					"ac": 15,
+					"hp": 50,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"Il faut 1 action pour charger la baliste, 1 action pour la viser, et 1 action pour la tirer."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} +6 pour toucher, portée 120/144 m., une cible. {@h}16 ({@dice 3d10}) dégâts perforants."
+							]
+						}
+					]
+				},
+				{
+					"name": "Mangonel",
+					"crew": 5,
+					"ac": 15,
+					"hp": 100,
+					"costs": [
+						{
+							"cost": 10000,
+							"note": "mangonel"
+						},
+						{
+							"note": "stone"
+						}
+					],
+					"entries": [
+						"Il faut 2 actions pour charger le mangonneau, 2 actions pour le viser et 1 action pour le tirer."
+					],
+					"action": [
+						{
+							"name": "Mangonel Stone",
+							"entries": [
+								"{@atk rw} +5 au toucher, portée 200/24 m. (ne peut toucher les cibles à moins de 18 mètres), une cible. {@h}27 ({@dice 5d10}) dégâts contondants."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Galley",
+			"source": "GoS",
+			"page": 187,
+			"vehicleType": "SHIP",
+			"size": "G",
+			"dimensions": [
+				"130 ft.",
+				"20 ft."
+			],
+			"terrain": [
+				"sea"
+			],
+			"capCrew": 80,
+			"capPassenger": 40,
+			"capCargo": 150,
+			"pace": 4,
+			"str": 24,
+			"dex": 4,
+			"con": 20,
+			"int": 0,
+			"wis": 0,
+			"cha": 0,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"incapacitated",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"stunned",
+				"unconscious"
+			],
+			"hull": {
+				"ac": 15,
+				"hp": 500,
+				"dt": 20
+			},
+			"control": [
+				{
+					"name": "Helm",
+					"ac": 16,
+					"hp": 50,
+					"entries": [
+						"Se déplacer jusqu'à la vitesse d'une de ses composantes de mouvement, avec un virage à 90 degrés. Si la barre est détruite, la galère ne peut pas tourner."
+					]
+				}
+			],
+			"movement": [
+				{
+					"name": "Oars",
+					"ac": 12,
+					"hp": 100,
+					"hpNote": "-5 ft. speed per 25 damage taken",
+					"speed": [
+						{
+							"mode": "water",
+							"entries": [
+								"9 m. (nécessite au moins 40 personnes)"
+							]
+						}
+					]
+				},
+				{
+					"name": "Sails",
+					"ac": 12,
+					"hp": 100,
+					"hpNote": "-10 ft. speed per 25 damage taken",
+					"speed": [
+						{
+							"mode": "water",
+							"entries": [
+								"10,5 m. ; 4,5 m. en naviguant face au vent ; 15 m. en naviguant face au vent"
+							]
+						}
+					]
+				}
+			],
+			"weapon": [
+				{
+					"name": "Ballistas",
+					"count": 4,
+					"ac": 15,
+					"hp": 50,
+					"entries": [
+						"{@atk rw} {@hit 6} pour toucher, portée 120/144 m., une cible. {@h}16 ({@damage 3d10}) dégâts perforants."
+					]
+				},
+				{
+					"name": "Mangonels",
+					"count": 2,
+					"ac": 15,
+					"hp": 100,
+					"entries": [
+						"{@atk rw} {@hit 5} pour toucher, portée 200/24 m. (ne peut toucher les cibles à moins de 18 m.), une cible. {@h}27 ({@damage 5d10}) dégâts contondants."
+					]
+				},
+				{
+					"name": "Naval Ram",
+					"ac": 20,
+					"hp": 100,
+					"dt": 10,
+					"entries": [
+						"La galère a l'avantage sur tous les jets de sauvegarde relatifs à l'écrasement lorsqu'elle s'écrase contre une créature ou un objet. Les dégâts qu'elle subit lors de l'écrasement sont appliqués au bélier naval plutôt qu'au navire. Ces avantages ne s'appliquent pas si un autre navire s'écrase sur la galère."
+					]
+				}
+			],
+			"actionThresholds": {
+				"0": 0,
+				"1": 3,
+				"2": 20,
+				"3": 40
+			},
+			"action": [
+				"On its turn, the galley can take 3 actions, choosing from the options below. It can take only 2 actions if it has fewer than forty crew and only 1 action if it has fewer than twenty. It can't take these actions if it has fewer than three crew.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Fire Ballistas",
+							"entry": "La galère peut tirer ses {@object ballista||ballistas} (DMG, ch. 8)."
+						},
+						{
+							"type": "item",
+							"name": "Fire Mangonels",
+							"entry": "La galère peut tirer ses {@object mangonel||mangonels} (DMG, ch. 8)."
+						},
+						{
+							"type": "item",
+							"name": "Move",
+							"entry": "La galère peut utiliser sa barre pour se déplacer avec ses rames ou ses voiles. Dans le cadre de ce déplacement, elle peut utiliser son bélier naval."
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Galley",
+			"source": "UAOfShipsAndSea",
+			"page": 2,
+			"vehicleType": "SHIP",
+			"size": "G",
+			"dimensions": [
+				"130 ft.",
+				"20 ft."
+			],
+			"terrain": [
+				"sea"
+			],
+			"capCrew": 80,
+			"capPassenger": 40,
+			"capCargo": 150,
+			"pace": 4,
+			"str": 24,
+			"dex": 4,
+			"con": 20,
+			"int": 0,
+			"wis": 0,
+			"cha": 0,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"incapacitated",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"stunned",
+				"unconscious"
+			],
+			"hull": {
+				"ac": 15,
+				"hp": 500,
+				"dt": 20
+			},
+			"control": [
+				{
+					"name": "Helm",
+					"ac": 16,
+					"hp": 50,
+					"entries": [
+						"Se déplacer jusqu'à la vitesse d'une de ses composantes de mouvement, avec un virage à 90 degrés. Si la barre est détruite, la galère ne peut pas tourner."
+					]
+				}
+			],
+			"movement": [
+				{
+					"name": "Sails",
+					"ac": 12,
+					"hp": 100,
+					"hpNote": "-10 ft. speed per 25 damage taken",
+					"locomotion": [
+						{
+							"mode": "water",
+							"entries": [
+								"voiles, vitesse 10,5 m. ; 4,5 m. en naviguant contre le vent ; 15 m. en naviguant avec le vent."
+							]
+						}
+					]
+				},
+				{
+					"name": "Oars",
+					"ac": 12,
+					"hp": 100,
+					"hpNote": "-5 ft. speed per 25 damage taken",
+					"locomotion": [
+						{
+							"mode": "water",
+							"entries": [
+								"rames, vitesse 9 m."
+							]
+						}
+					]
+				}
+			],
+			"weapon": [
+				{
+					"name": "Ballistas",
+					"count": 4,
+					"ac": 15,
+					"hp": 50,
+					"entries": [
+						"{@atk rw} {@hit 6} pour toucher, portée 120/144 m., une cible. {@h}16 ({@damage 3d10}) dégâts perforants."
+					]
+				},
+				{
+					"name": "Mangonels",
+					"count": 2,
+					"ac": 15,
+					"hp": 100,
+					"entries": [
+						"{@atk rw} {@hit 5} pour toucher, portée 200/24 m. (ne peut toucher les cibles à moins de 18 m.), une cible. {@h}27 ({@damage 5d10}) dégâts contondants."
+					]
+				},
+				{
+					"name": "Ram",
+					"ac": 20,
+					"hp": 100,
+					"dt": 10,
+					"entries": [
+						"La galère bénéficie d'un avantage sur tous les jets de sauvegarde relatifs à l'écrasement lorsqu'elle s'écrase contre une créature ou un objet, et les dégâts qu'elle subit du fait de l'écrasement sont à la place appliqués au bélier. Ces avantages ne s'appliquent pas si un véhicule s'écrase sur la galère."
+					]
+				}
+			],
+			"other": [
+				{
+					"name": "Actions",
+					"entries": [
+						"A son tour, la galère peut se déplacer en utilisant sa barre. Elle peut également tirer avec ses ballistas et ses mangonneaux. Si elle a la moitié de son équipage ou moins, elle se déplace à demi-vitesse et ne peut tirer qu'avec la moitié de ses armes."
+					]
+				}
+			]
+		},
+		{
+			"name": "Hammerhead Ship",
+			"source": "AAG",
+			"page": 32,
+			"otherSources": [
+				{
+					"source": "SjA"
+				}
+			],
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"250 ft.",
+				"25 ft."
+			],
+			"terrain": [
+				"space",
+				"sea"
+			],
+			"capCrew": 15,
+			"capCargo": 30,
+			"cost": 4000000,
+			"pace": {
+				"fly": 4
+			},
+			"speed": {
+				"fly": 35
+			},
+			"hull": {
+				"ac": 15,
+				"acFrom": [
+					"wood"
+				],
+				"hp": 400,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballista",
+					"ac": 15,
+					"hp": 50,
+					"crew": 3,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"Il faut 1 action pour charger la baliste, 1 action pour la viser, et 1 action pour la tirer."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} {@hit 6} pour toucher, portée 120/144 m., une cible. {@h}16 ({@damage 3d10}) dégâts perforants."
+							]
+						}
+					]
+				},
+				{
+					"name": "Mangonels",
+					"count": 2,
+					"ac": 15,
+					"hp": 100,
+					"crew": 5,
+					"costs": [
+						{
+							"cost": 10000,
+							"note": "mangonel"
+						},
+						{
+							"note": "stone"
+						}
+					],
+					"entries": [
+						"Il faut 2 actions pour charger un mangonneau, 2 actions pour le viser et 1 action pour le tirer."
+					],
+					"action": [
+						{
+							"name": "Mangonel Stone",
+							"entries": [
+								"{@atk rw} {@hit 5} pour toucher, portée 200/24 m. (ne peut toucher les cibles à moins de 18 m.), une cible. {@h}27 ({@damage 5d10}) dégâts contondants."
+							]
+						}
+					]
+				},
+				{
+					"name": "Blunt Ram",
+					"costs": [
+						{
+							"note": "included in ship cost"
+						}
+					],
+					"entries": [
+						"Le lanceur de sorts du navire peut effectuer l'attaque suivante lorsque le navire se heurte à un autre objet ou à une créature gargantuesque (voir \"Crashing\" dans le chapitre 2 du Guide de l'aventurier astral)."
+					],
+					"action": [
+						{
+							"name": "Blunt Ram",
+							"entries": [
+								"{@atk mw} {@hit 8} pour toucher, portée m. un objet ou une créature gargantuesque. {@h}88 ({@damage 16d10}) dégâts contondants. Le navire marteau subit la moitié des dégâts et s'arrête net. {@m} L'attaque n'inflige aucun dégât, la cible se déplace dans l'espace inoccupé le plus proche qui ne se trouve pas sur la trajectoire du navire marteau, et le navire marteau peut continuer à se déplacer s'il lui reste du mouvement."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Keelboat",
+			"source": "GoS",
+			"page": 188,
+			"vehicleType": "SHIP",
+			"size": "G",
+			"dimensions": [
+				"60 ft.",
+				"20 ft."
+			],
+			"terrain": [
+				"sea"
+			],
+			"capCrew": 3,
+			"capPassenger": 4,
+			"capCargo": 0.5,
+			"pace": 3,
+			"str": 16,
+			"dex": 7,
+			"con": 13,
+			"int": 0,
+			"wis": 0,
+			"cha": 0,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"incapacitated",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"stunned",
+				"unconscious"
+			],
+			"hull": {
+				"ac": 15,
+				"hp": 100,
+				"dt": 10
+			},
+			"control": [
+				{
+					"name": "Helm",
+					"ac": 12,
+					"hp": 50,
+					"entries": [
+						"Se déplacer jusqu'à la vitesse d'une de ses composantes de mouvement, avec un virage à 90 degrés. Si la barre est détruite, le quillard ne peut pas tourner."
+					]
+				}
+			],
+			"movement": [
+				{
+					"name": "Oars",
+					"ac": 12,
+					"hp": 100,
+					"hpNote": "-5 ft. speed per 25 damage taken",
+					"speed": [
+						{
+							"mode": "water",
+							"entries": [
+								"6 m."
+							]
+						}
+					]
+				},
+				{
+					"name": "Sails",
+					"ac": 12,
+					"hp": 100,
+					"hpNote": "-5 ft. speed per 20 damage taken",
+					"speed": [
+						{
+							"mode": "water",
+							"entries": [
+								"7,5 m. ; 4,5 m. en naviguant face au vent ; 10,5 m. en naviguant avec le vent."
+							]
+						}
+					]
+				}
+			],
+			"weapon": [
+				{
+					"name": "Ballista",
+					"ac": 15,
+					"hp": 50,
+					"entries": [
+						"{@atk rw} {@hit 6} pour toucher, portée 120/144 m., une cible. {@h}16 ({@damage 3d10}) dégâts perforants.",
+						"Les quillards ne comprennent généralement une baliste que lorsqu'ils sont équipés pour le combat."
+					]
+				}
+			],
+			"actionThresholds": {
+				"0": 0,
+				"1": 1,
+				"2": 2
+			},
+			"action": [
+				"On its turn, the keelboat can take 2 actions, choosing from the options below. It can take only 1 action if it has only one crew. It can't take these actions if it has no crew.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Fire Ballista",
+							"entry": "Le quillard peut tirer ses {@object ballista} (DMG, ch. 8)."
+						},
+						{
+							"type": "item",
+							"name": "Move",
+							"entry": "Le quillard peut utiliser sa barre pour se déplacer avec ses rames ou ses voiles."
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Keelboat",
+			"source": "UAOfShipsAndSea",
+			"page": 3,
+			"vehicleType": "SHIP",
+			"size": "G",
+			"dimensions": [
+				"60 ft.",
+				"20 ft."
+			],
+			"terrain": [
+				"sea"
+			],
+			"capCrew": 3,
+			"capPassenger": 4,
+			"capCargo": 0.5,
+			"pace": 3,
+			"str": 16,
+			"dex": 7,
+			"con": 13,
+			"int": 0,
+			"wis": 0,
+			"cha": 0,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"incapacitated",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"stunned",
+				"unconscious"
+			],
+			"hull": {
+				"ac": 15,
+				"hp": 100,
+				"dt": 10
+			},
+			"control": [
+				{
+					"name": "Helm",
+					"ac": 12,
+					"hp": 50,
+					"entries": [
+						"Se déplacer jusqu'à la vitesse d'une de ses composantes de mouvement, avec un virage à 90 degrés. Si la barre est détruite, le quillard ne peut pas tourner."
+					]
+				}
+			],
+			"movement": [
+				{
+					"name": "Sails",
+					"ac": 12,
+					"hp": 100,
+					"hpNote": "-5 ft. speed per 20 damage taken",
+					"locomotion": [
+						{
+							"mode": "water",
+							"entries": [
+								"voiles, vitesse 7,5 m. ; 4,5 m. face au vent ; 10,5 m. face au vent."
+							]
+						}
+					]
+				},
+				{
+					"name": "Oars",
+					"ac": 12,
+					"hp": 100,
+					"hpNote": "-5 ft. speed per 25 damage taken",
+					"locomotion": [
+						{
+							"mode": "water",
+							"entries": [
+								"rames, vitesse 6 m."
+							]
+						}
+					]
+				}
+			],
+			"weapon": [
+				{
+					"name": "Ballista",
+					"ac": 15,
+					"hp": 50,
+					"entries": [
+						"{@atk rw} {@hit 6} pour toucher, portée 120/144 m., une cible. {@h}16 ({@damage 3d10}) dégâts perforants. Les quillards ne sont généralement équipés d'une baliste que lorsqu'ils sont équipés pour le combat."
+					]
+				}
+			],
+			"other": [
+				{
+					"name": "Actions",
+					"entries": [
+						"A son tour, le quillier peut se déplacer en utilisant sa barre. Il peut également tirer sa baliste s'il en est équipé. S'il a la moitié de son équipage ou moins, il se déplace à demi-vitesse et ne peut pas utiliser sa baliste."
+					]
+				}
+			]
+		},
+		{
+			"name": "Lamprey Ship",
+			"source": "AAG",
+			"page": 34,
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"115 ft.",
+				"25 ft."
+			],
+			"terrain": [
+				"space",
+				"sea"
+			],
+			"capCrew": 15,
+			"capCargo": 6,
+			"cost": 2000000,
+			"pace": {
+				"fly": 4
+			},
+			"speed": {
+				"fly": 35
+			},
+			"hull": {
+				"ac": 15,
+				"acFrom": [
+					"wood"
+				],
+				"hp": 250,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballistae",
+					"crew": 3,
+					"count": 4,
+					"ac": 15,
+					"hp": 50,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"Il faut 1 action pour charger une baliste, 1 action pour la viser, et 1 action pour la tirer."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} +6 pour toucher, portée 120/144 m., une cible. {@h}16 ({@dice 3d10}) dégâts perforants."
+							]
+						}
+					]
+				},
+				{
+					"name": "Grappling Jaws",
+					"crew": 1,
+					"costs": [
+						{
+							"note": "included in ship cost"
+						}
+					],
+					"entries": [
+						"Il faut 1 action pour faire une attaque de mâchoires de grappin."
+					],
+					"action": [
+						{
+							"name": "Grappling Jaws",
+							"entries": [
+								"{@atk mw} +6 au toucher, portée de 3 m, un navire ou une créature gargantuesque. {@h}22 ({@dice 4d10}) dégâts perforants, et la vitesse du navire lamproie et de la cible devient 0 jusqu'à la fin du grappin. Comme action, une créature peut utiliser les commandes des mâchoires du grappin pour libérer la cible. Sinon, l'effet prend fin lorsque la cible ou le navire lamproie tombe à 0 point de vie."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Living Ship",
+			"source": "AAG",
+			"page": 36,
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"80 ft.",
+				"20 ft."
+			],
+			"terrain": [
+				"space",
+				"sea"
+			],
+			"capCrew": 5,
+			"capCrewNote": "(plus le {@creature treant})",
+			"capCargo": 10,
+			"cost": 2500000,
+			"pace": {
+				"fly": "4½"
+			},
+			"speed": {
+				"fly": 40
+			},
+			"hull": {
+				"ac": 15,
+				"acFrom": [
+					"wood"
+				],
+				"hp": 250,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballista",
+					"crew": 3,
+					"ac": 15,
+					"hp": 50,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"Il faut 1 action pour charger la baliste, 1 action pour la viser, et 1 action pour la tirer."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} +6 pour toucher, portée 120/144 m., une cible. {@h}16 ({@dice 3d10}) dégâts perforants."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Longship",
+			"source": "GoS",
+			"page": 190,
+			"vehicleType": "SHIP",
+			"size": "G",
+			"dimensions": [
+				"70 ft.",
+				"20 ft."
+			],
+			"terrain": [
+				"sea"
+			],
+			"capCrew": 40,
+			"capPassenger": 100,
+			"capCargo": 10,
+			"pace": 5,
+			"str": 20,
+			"dex": 6,
+			"con": 17,
+			"int": 0,
+			"wis": 0,
+			"cha": 0,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"incapacitated",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"stunned",
+				"unconscious"
+			],
+			"hull": {
+				"ac": 15,
+				"hp": 300,
+				"dt": 15
+			},
+			"control": [
+				{
+					"name": "Helm",
+					"ac": 16,
+					"hp": 50,
+					"entries": [
+						"Se déplacer jusqu'à la vitesse d'une de ses composantes de mouvement, avec un virage à 90 degrés. Si la barre est détruite, le drakkar ne peut pas tourner."
+					]
+				}
+			],
+			"movement": [
+				{
+					"name": "Oars",
+					"ac": 12,
+					"hp": 100,
+					"hpNote": "-5 ft. speed per 25 damage taken",
+					"speed": [
+						{
+							"mode": "water",
+							"entries": [
+								"6 m. (nécessite au moins 20 personnes)"
+							]
+						}
+					]
+				},
+				{
+					"name": "Sails",
+					"ac": 12,
+					"hp": 100,
+					"hpNote": "-10 ft. speed per 25 damage taken",
+					"speed": [
+						{
+							"mode": "water",
+							"entries": [
+								"13,5 m. ; 4,5 m. en naviguant contre le vent ; 18 m. en naviguant avec le vent."
+							]
+						}
+					]
+				}
+			],
+			"actionThresholds": {
+				"0": 0,
+				"1": 1
+			},
+			"action": [
+				"On its turn, the longship can take the move action below. It can't take this action if it has no crew.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Move",
+							"entry": "Le longship peut utiliser sa barre pour se déplacer avec ses rames ou ses voiles."
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Longship",
+			"source": "UAOfShipsAndSea",
+			"page": 4,
+			"vehicleType": "SHIP",
+			"size": "G",
+			"dimensions": [
+				"70 ft.",
+				"20 ft."
+			],
+			"terrain": [
+				"sea"
+			],
+			"capCrew": 40,
+			"capPassenger": 100,
+			"capCargo": 10,
+			"pace": 5,
+			"str": 20,
+			"dex": 6,
+			"con": 17,
+			"int": 0,
+			"wis": 0,
+			"cha": 0,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"incapacitated",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"stunned",
+				"unconscious"
+			],
+			"hull": {
+				"ac": 15,
+				"hp": 300,
+				"dt": 15
+			},
+			"control": [
+				{
+					"name": "Helm",
+					"ac": 16,
+					"hp": 50,
+					"entries": [
+						"Se déplacer jusqu'à la vitesse d'une de ses composantes de mouvement, avec un virage à 90 degrés. Si la barre est détruite, le drakkar ne peut pas tourner."
+					]
+				}
+			],
+			"movement": [
+				{
+					"name": "Sails",
+					"ac": 12,
+					"hp": 100,
+					"hpNote": "-10 ft. speed per 25 damage taken",
+					"locomotion": [
+						{
+							"mode": "water",
+							"entries": [
+								"voiles, vitesse 13,5 m. ; 4,5 m. en naviguant contre le vent ; 18 m. en naviguant avec le vent."
+							]
+						}
+					]
+				},
+				{
+					"name": "Oars",
+					"ac": 12,
+					"hp": 100,
+					"hpNote": "-5 ft. speed per 25 damage taken",
+					"locomotion": [
+						{
+							"mode": "water",
+							"entries": [
+								"rames, vitesse 6 m."
+							]
+						}
+					]
+				}
+			],
+			"other": [
+				{
+					"name": "Actions",
+					"entries": [
+						"A son tour, le drakkar peut se déplacer en utilisant sa barre. Si le drakkar perd la moitié ou plus de son équipage, il se déplace à demi-vitesse."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mechanical Beholder",
+			"source": "AI",
+			"page": 219,
+			"vehicleType": "SHIP",
+			"size": "H",
+			"dimensions": [
+				"15 ft.",
+				"15 ft."
+			],
+			"terrain": [
+				"land",
+				"sea",
+				"air"
+			],
+			"capCrew": 1,
+			"capPassenger": 5,
+			"capCargo": "crew and passengers' normal gear",
+			"pace": 3,
+			"str": 18,
+			"dex": 12,
+			"con": 18,
+			"int": 0,
+			"wis": 0,
+			"cha": 0,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"incapacitated",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"stunned",
+				"unconscious"
+			],
+			"hull": {
+				"ac": 18,
+				"hp": 200,
+				"dt": 10
+			},
+			"control": [
+				{
+					"name": "Helm",
+					"ac": 16,
+					"hp": 25,
+					"entries": [
+						"Se déplacer à la vitesse de l'unité de propulsion magique du navire, avec un virage à 90 degrés. La barre ne peut être attaquée que si la coque a subi 100 dégâts ou plus. Si la barre est détruite, le spectateur mécanique ne peut plus se déplacer."
+					]
+				}
+			],
+			"movement": [
+				{
+					"name": "Magical Propulsion Unit",
+					"ac": 16,
+					"hp": 100,
+					"hpNote": "-5 ft. speed per 25 damage taken",
+					"speed": [
+						{
+							"mode": "magical",
+							"entries": [
+								"creuser 9 m., voler 9 m. (en vol stationnaire), nager 9 m."
+							]
+						}
+					]
+				}
+			],
+			"weapon": [
+				{
+					"name": "Eye Ray Tentacles",
+					"count": 6,
+					"ac": 14,
+					"hp": 50,
+					"entries": [
+						"{@atk g} Le porteur de regard mécanique tire les rayons oculaires magiques suivants sur un maximum de trois cibles visibles par l'équipage et situées à moins de 36 mètres de lui.",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "Disintegration Ray",
+									"entry": "Si la cible est une créature, elle doit réussir un jet de sauvegarde de Dextérité DC 15 ou subir 18 ({@damage 4d8}) dégâts de force. Si ces dégâts réduisent la créature à 0 point de vie, son corps devient un tas de fine poussière grise. Si la cible est un objet non magique de grande taille ou plus petit, ou une création de force magique, elle est désintégrée sans jet de sauvegarde. Si la cible est un objet ou une création de force magique de taille énorme ou supérieure, ce rayon en désintègre un cube de 3 mètres de côté."
+								},
+								{
+									"type": "item",
+									"name": "Enervation Ray",
+									"entry": "La créature ciblée doit effectuer un jet de sauvegarde de Constitution DC 15, subissant 18 ({@damage 4d8}) points de dégâts nécrotiques en cas de sauvegarde ratée, ou moitié moins de dégâts en cas de sauvegarde réussie."
+								},
+								{
+									"type": "item",
+									"name": "Paralyzing Ray",
+									"entry": "La créature ciblée doit réussir un jet de sauvegarde de Constitution DC 15 ou être {@condition paralyzed} pendant 1 minute. La cible peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant fin à l'effet sur elle-même en cas de réussite."
+								}
+							]
+						}
+					]
+				}
+			],
+			"actionThresholds": {
+				"0": 0,
+				"1": 1
+			},
+			"action": [
+				"On its turn the mechanical beholder can take 1 action. It cannot take any actions if it has no crew.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Eye Rays",
+							"entry": "L'observateur mécanique peut utiliser ses tentacules à rayon oculaire."
+						},
+						{
+							"type": "item",
+							"name": "Move",
+							"entry": "Le contemplateur mécanique peut utiliser son heaume pour se déplacer en utilisant son unité de propulsion magique."
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Nautiloid",
+			"source": "AAG",
+			"page": 38,
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"180 ft.",
+				"30 ft."
+			],
+			"terrain": [
+				"space"
+			],
+			"capCrew": 20,
+			"capCargo": 17,
+			"cost": 5000000,
+			"pace": {
+				"fly": "4½"
+			},
+			"speed": {
+				"fly": 40
+			},
+			"hull": {
+				"ac": 15,
+				"acFrom": [
+					"wood"
+				],
+				"hp": 400,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballistae",
+					"crew": 3,
+					"count": 4,
+					"ac": 15,
+					"hp": 50,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"Il faut 1 action pour charger une baliste, 1 action pour la viser, et 1 action pour la tirer."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} +6 pour toucher, portée 120/144 m., une cible. {@h}16 ({@dice 3d10}) dégâts perforants."
+							]
+						}
+					]
+				},
+				{
+					"name": "Mangonel",
+					"crew": 5,
+					"ac": 15,
+					"hp": 100,
+					"costs": [
+						{
+							"cost": 10000,
+							"note": "mangonel"
+						},
+						{
+							"note": "stone"
+						}
+					],
+					"entries": [
+						"Il faut 2 actions pour charger le mangonneau, 2 actions pour le viser et 1 action pour le tirer."
+					],
+					"action": [
+						{
+							"name": "Mangonel Stone",
+							"entries": [
+								"{@atk rw} +5 au toucher, portée 200/24 m. (ne peut toucher les cibles à moins de 18 mètres), une cible. {@h}27 ({@dice 5d10}) dégâts contondants."
+							]
+						}
+					]
+				},
+				{
+					"name": "Tentacles",
+					"costs": [
+						{
+							"note": "included in ship cost"
+						}
+					],
+					"entries": [
+						"En tant qu'action, le lanceur de sorts du navire peut effectuer l'une des attaques suivantes avec les tentacules du navire."
+					],
+					"action": [
+						{
+							"name": "Grappling Tentacles",
+							"entries": [
+								"{@atk mw} +8 au toucher, portée de 9 m, une cible énorme ou gargantuesque. {@h}22 ({@dice 4d10}) dégâts de contondant, et la vitesse du nautiloïde devient 0 jusqu'à ce que son lanceur de sorts utilise une action pour libérer la cible. Si la cible est une créature, elle subit {@condition grappled} (échappatoire DC 16). Si la cible est un autre navire, sa vitesse devient nulle jusqu'à ce que le nautiloïde la relâche, ou jusqu'à ce que la cible ou le nautiloïde tombe à 0 point de vie."
+							]
+						},
+						{
+							"name": "Teleport",
+							"entries": [
+								"{@atk ms} +8 au toucher, portée de 9 m, une créature. {@h}La cible doit réussir un jet de sauvegarde de Constitution DC 15 ou être téléportée dans un espace inoccupé à bord du nautiloïde que le lanceur de sorts du nautiloïde peut voir."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Nightspider",
+			"source": "AAG",
+			"page": 40,
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"175 ft.",
+				"50 ft."
+			],
+			"terrain": [
+				"space"
+			],
+			"capCrew": 25,
+			"capCargo": 50,
+			"cost": 5000000,
+			"pace": {
+				"fly": "4½"
+			},
+			"speed": {
+				"fly": 40
+			},
+			"hull": {
+				"ac": 19,
+				"acFrom": [
+					"metal"
+				],
+				"hp": 300,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballistae",
+					"crew": 3,
+					"count": 4,
+					"ac": 15,
+					"hp": 50,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"Il faut 1 action pour charger une baliste, 1 action pour la viser, et 1 action pour la tirer."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} +6 pour toucher, portée 120/144 m., une cible. {@h}16 ({@dice 3d10}) dégâts perforants."
+							]
+						}
+					]
+				},
+				{
+					"name": "Mangonel",
+					"crew": 5,
+					"ac": 15,
+					"hp": 100,
+					"costs": [
+						{
+							"cost": 10000,
+							"note": "mangonel"
+						},
+						{
+							"note": "stone"
+						}
+					],
+					"entries": [
+						"Il faut 2 actions pour charger le mangonneau, 2 actions pour le viser et 1 action pour le tirer."
+					],
+					"action": [
+						{
+							"name": "Mangonel Stone",
+							"entries": [
+								"{@atk rw} +5 au toucher, portée 200/24 m. (ne peut toucher les cibles à moins de 18 mètres), une cible. {@h}27 ({@dice 5d10}) dégâts contondants."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Planar Raider",
+			"source": "MTF",
+			"page": 90,
+			"vehicleType": "SHIP",
+			"size": "H",
+			"dimensions": [
+				"120 ft.",
+				"40 ft."
+			],
+			"terrain": [
+				"air"
+			],
+			"capCrew": 10,
+			"capPassenger": 100,
+			"pace": 12,
+			"weapon": [
+				{
+					"name": "Ballistas",
+					"count": 2,
+					"entries": [
+						"{@atk rw} {@hit 6} pour toucher, portée 120/144 m., une cible. {@h}16 ({@damage 3d10}) dégâts perforants."
+					]
+				},
+				{
+					"name": "Catapult",
+					"entries": [
+						"{@atk rw} {@hit 5} pour toucher, portée 200/24 m. (ne peut toucher les cibles situées à moins de 18 mètres), une cible. {@h}27 ({@damage 5d10}) dégâts contondants."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Rowboat",
+			"source": "GoS",
+			"page": 190,
+			"vehicleType": "SHIP",
+			"size": "L",
+			"dimensions": [
+				"10 ft.",
+				"5 ft."
+			],
+			"terrain": [
+				"sea"
+			],
+			"capCrew": 2,
+			"capPassenger": 2,
+			"capCargo": 0.25,
+			"pace": 3,
+			"str": 11,
+			"dex": 8,
+			"con": 11,
+			"int": 0,
+			"wis": 0,
+			"cha": 0,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"incapacitated",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"stunned",
+				"unconscious"
+			],
+			"hull": {
+				"ac": 11,
+				"hp": 50
+			},
+			"movement": [
+				{
+					"name": "Oars",
+					"isControl": true,
+					"ac": 12,
+					"hp": 25,
+					"speed": [
+						{
+							"mode": "water",
+							"entries": [
+								"4.5 m.",
+								"Avancez jusqu'à sa vitesse, avec un virage à 90 degrés. Sans rames, la vitesse de la barque est de 0."
+							]
+						}
+					]
+				}
+			],
+			"actionThresholds": {
+				"0": 0,
+				"1": 1
+			},
+			"action": [
+				"On its turn, the rowboat can take the move action below. It can't take this action if it has no crew.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Move",
+							"entry": "La barque peut se déplacer à l'aide de ses rames."
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Rowboat",
+			"source": "UAOfShipsAndSea",
+			"page": 4,
+			"vehicleType": "SHIP",
+			"size": "L",
+			"dimensions": [
+				"10 ft.",
+				"5 ft."
+			],
+			"terrain": [
+				"sea"
+			],
+			"capCrew": 2,
+			"capPassenger": 2,
+			"capCargo": 0.25,
+			"pace": 3,
+			"str": 11,
+			"dex": 8,
+			"con": 11,
+			"int": 0,
+			"wis": 0,
+			"cha": 0,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"incapacitated",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"stunned",
+				"unconscious"
+			],
+			"hull": {
+				"ac": 11,
+				"hp": 50,
+				"dt": 0
+			},
+			"movement": [
+				{
+					"name": "Oars",
+					"isControl": true,
+					"ac": 12,
+					"hp": 25,
+					"locomotion": [
+						{
+							"mode": "water",
+							"entries": [
+								"rames, vitesse 4,5 m. Se déplacer à sa vitesse, avec un virage à 90 degrés. Sans rames, la vitesse de la barque est de 0."
+							]
+						}
+					]
+				}
+			],
+			"other": [
+				{
+					"name": "Actions",
+					"entries": [
+						"A son tour, la barque peut se déplacer en utilisant ses rames."
+					]
+				}
+			]
+		},
+		{
+			"name": "Sailing Ship",
+			"source": "GoS",
+			"page": 192,
+			"vehicleType": "SHIP",
+			"size": "G",
+			"dimensions": [
+				"100 ft.",
+				"20 ft."
+			],
+			"terrain": [
+				"sea"
+			],
+			"capCrew": 30,
+			"capPassenger": 20,
+			"capCargo": 100,
+			"pace": 5,
+			"str": 20,
+			"dex": 7,
+			"con": 17,
+			"int": 0,
+			"wis": 0,
+			"cha": 0,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"incapacitated",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"stunned",
+				"unconscious"
+			],
+			"hull": {
+				"ac": 15,
+				"hp": 300,
+				"dt": 15
+			},
+			"control": [
+				{
+					"name": "Helm",
+					"ac": 18,
+					"hp": 50,
+					"entries": [
+						"Se déplace jusqu'à la vitesse de ses voiles, avec un virage à 90 degrés. Si la barre est détruite, le navire ne peut pas tourner."
+					]
+				}
+			],
+			"movement": [
+				{
+					"name": "Sails",
+					"ac": 12,
+					"hp": 100,
+					"hpNote": "-5 ft. speed per 25 damage taken",
+					"speed": [
+						{
+							"mode": "water",
+							"entries": [
+								"13,5 m. ; 4,5 m. en naviguant contre le vent ; 18 m. en naviguant avec le vent."
+							]
+						}
+					]
+				}
+			],
+			"weapon": [
+				{
+					"name": "Ballista",
+					"ac": 15,
+					"hp": 50,
+					"entries": [
+						"{@atk rw} {@hit 6} pour toucher, portée 120/144 m., une cible. {@h}16 ({@damage 3d10}) dégâts perforants."
+					]
+				},
+				{
+					"name": "Mangonel",
+					"ac": 15,
+					"hp": 100,
+					"entries": [
+						"{@atk rw} {@hit 5} pour toucher, portée 200/24 m. (ne peut toucher les cibles à moins de 18 m.), une cible. {@h}27 ({@damage 5d10}) dégâts contondants."
+					]
+				}
+			],
+			"actionThresholds": {
+				"0": 0,
+				"1": 3,
+				"2": 10,
+				"3": 20
+			},
+			"action": [
+				"On its turn, the ship can take 3 actions, choosing from the options below. It can take only 2 actions if it has fewer than twenty crew and only 1 action if it has fewer than ten. It can't take these actions if it has fewer than three crew.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Fire Ballista",
+							"entry": "Le navire peut tirer ses {@object ballista} (DMG, ch. 8)."
+						},
+						{
+							"type": "item",
+							"name": "Fire Mangonel",
+							"entry": "Le navire peut tirer ses {@object mangonel} (DMG, ch. 8)."
+						},
+						{
+							"type": "item",
+							"name": "Move",
+							"entry": "Le navire peut utiliser sa barre pour se déplacer avec ses voiles."
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sailing Ship",
+			"source": "UAOfShipsAndSea",
+			"page": 4,
+			"vehicleType": "SHIP",
+			"size": "G",
+			"dimensions": [
+				"80 ft.",
+				"20 ft."
+			],
+			"terrain": [
+				"sea"
+			],
+			"capCrew": 30,
+			"capPassenger": 20,
+			"capCargo": 100,
+			"pace": 5,
+			"str": 20,
+			"dex": 7,
+			"con": 17,
+			"int": 0,
+			"wis": 0,
+			"cha": 0,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"incapacitated",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"stunned",
+				"unconscious"
+			],
+			"hull": {
+				"ac": 15,
+				"hp": 300,
+				"dt": 15
+			},
+			"control": [
+				{
+					"name": "Helm",
+					"ac": 18,
+					"hp": 50,
+					"entries": [
+						"Se déplace jusqu'à la vitesse de ses voiles, avec un virage à 90 degrés. Si la barre est détruite, le navire ne peut pas tourner."
+					]
+				}
+			],
+			"movement": [
+				{
+					"name": "Sails",
+					"ac": 12,
+					"hp": 100,
+					"hpNote": "-5 ft. speed per 25 damage taken",
+					"locomotion": [
+						{
+							"mode": "water",
+							"entries": [
+								"voiles, vitesse 13,5 m. ; 4,5 m. en naviguant contre le vent ; 18 m. en naviguant avec le vent."
+							]
+						}
+					]
+				}
+			],
+			"weapon": [
+				{
+					"name": "Ballista",
+					"ac": 15,
+					"hp": 50,
+					"entries": [
+						"{@atk rw} {@hit 6} pour toucher, portée 120/144 m., une cible. {@h}16 ({@damage 3d10}) dégâts perforants."
+					]
+				},
+				{
+					"name": "Mangonel",
+					"ac": 15,
+					"hp": 100,
+					"entries": [
+						"{@atk rw} {@hit 5} pour toucher, portée 200/24 m. (ne peut toucher les cibles à moins de 18 m.), une cible. {@h}27 ({@damage 5d10}) dégâts contondants."
+					]
+				}
+			],
+			"other": [
+				{
+					"name": "Actions",
+					"entries": [
+						"A son tour, le voilier peut se déplacer en utilisant sa barre. Il peut également tirer sa baliste et sa mangonne. S'il a la moitié de son équipage ou moins, il se déplace à demi-vitesse et peut tirer soit sa baliste, soit sa mangonne."
+					]
+				}
+			]
+		},
+		{
+			"name": "Scavenger",
+			"source": "BGDIA",
+			"page": 219,
+			"vehicleType": "INFWAR",
+			"size": "H",
+			"weight": 9000,
+			"terrain": [
+				"land"
+			],
+			"capCreature": 8,
+			"capCargo": 4000,
+			"speed": 100,
+			"str": 20,
+			"dex": 12,
+			"con": 20,
+			"int": 0,
+			"wis": 0,
+			"cha": 0,
+			"hp": {
+				"hp": 150,
+				"dt": 10,
+				"mt": 20
+			},
+			"immune": [
+				"fire",
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"stunned",
+				"unconscious"
+			],
+			"trait": [
+				{
+					"name": "Crushing Wheels",
+					"entries": [
+						"Le Charognard peut se déplacer dans l'espace de n'importe quelle créature Grande ou plus petite. Lorsqu'il le fait, la créature doit réussir un jet de sauvegarde de Dextérité DC 12 ou subir 16 ({@damage 3d10}) points de dégâts contondants et être assommée {@condition prone}. Si la créature était déjà {@condition prone}, elle subit 16 ({@damage 3d10}) dégâts de contondant supplémentaires. Ce trait ne peut pas être utilisé contre une créature particulière plus d'une fois par tour."
+					]
+				},
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"Les attaques des armes du charognard sont magiques."
+					]
+				},
+				{
+					"name": "Prone Deficiency",
+					"entries": [
+						"Si le charognard se retourne et tombe de {@condition prone}, il ne peut pas se redresser et subit une perte de {@condition incapacitated} jusqu'à ce qu'il se redresse."
+					]
+				}
+			],
+			"actionStation": [
+				{
+					"name": "Helm (Requires 1 Crew and Grants Three-Quarters Cover)",
+					"entries": [
+						"Conduisez et dirigez le Scavenger."
+					]
+				},
+				{
+					"name": "Grappling Claw (Requires 1 Crew and Grants Half Cover)",
+					"entries": [
+						"{@atk mw} {@hit 10} pour toucher, atteindre 4,5 m., une cible. {@h}La cible est {@condition grappled} (échappatoire DC 12). Si la cible est une créature, elle est {@condition restrained} jusqu'à ce que le grappin prenne fin. La griffe ne peut saisir qu'une seule cible à la fois, et son utilisateur peut utiliser une action bonus pour la faire lâcher ce qu'elle tient."
+					]
+				},
+				{
+					"name": "2 Harpoon Flingers (Each Station Requires 1 Crew and Grants Half Cover)",
+					"entries": [
+						"{@atk rw} {@hit 6} pour toucher, portée 36 m., une cible. {@h}10 ({@damage 2d8 + 1}) dégâts perforants."
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Scorpion Ship",
+			"source": "AAG",
+			"page": 42,
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"75 ft.",
+				"25 ft."
+			],
+			"terrain": [
+				"space",
+				"land"
+			],
+			"capCrew": 12,
+			"capCargo": 12,
+			"cost": 2500000,
+			"pace": {
+				"walk": "3½",
+				"fly": "3½"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 30
+			},
+			"hull": {
+				"ac": 19,
+				"acFrom": [
+					"metal"
+				],
+				"hp": 250,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballista",
+					"crew": 3,
+					"ac": 15,
+					"hp": 50,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"Il faut 1 action pour charger la baliste, 1 action pour la viser, et 1 action pour la tirer."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} +6 pour toucher, portée 120/144 m., une cible. {@h}16 ({@dice 3d10}) dégâts perforants."
+							]
+						}
+					]
+				},
+				{
+					"name": "Claws",
+					"crew": 1,
+					"count": 2,
+					"costs": [
+						{
+							"note": "included in ship cost"
+						}
+					],
+					"entries": [
+						"Il faut 1 action pour effectuer une attaque de Griffe."
+					],
+					"action": [
+						{
+							"name": "Claw",
+							"entries": [
+								"{@atk mw} +3 pour toucher, portée de 6 m, une cible. {@h}11 ({@dice 2d10}) dégâts contondants. Si la cible est une créature énorme ou plus petite, elle subit également {@condition grappled} (échappatoire DC 13). Jusqu'à ce que ce grappin prenne fin, la créature subit 11 ({@dice 2d10}) dégâts de contondant au début de chacun de ses tours."
+							]
+						}
+					]
+				},
+				{
+					"name": "Mangonel",
+					"crew": 5,
+					"ac": 15,
+					"hp": 100,
+					"costs": [
+						{
+							"cost": 10000,
+							"note": "mangonel"
+						},
+						{
+							"note": "stone"
+						}
+					],
+					"entries": [
+						"Il faut 2 actions pour charger le mangonneau, 2 actions pour le viser et 1 action pour le tirer."
+					],
+					"action": [
+						{
+							"name": "Mangonel Stone",
+							"entries": [
+								"{@atk rw} +5 au toucher, portée 200/24 m. (ne peut toucher les cibles à moins de 18 mètres), une cible. {@h}27 ({@dice 5d10}) dégâts contondants."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Shrike Ship",
+			"source": "AAG",
+			"page": 44,
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"100 ft.",
+				"20 ft."
+			],
+			"terrain": [
+				"space",
+				"sea"
+			],
+			"capCrew": 11,
+			"capCargo": 20,
+			"cost": 2000000,
+			"pace": {
+				"fly": 8
+			},
+			"speed": {
+				"fly": 70
+			},
+			"hull": {
+				"ac": 15,
+				"acFrom": [
+					"wood"
+				],
+				"hp": 250,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballistae",
+					"crew": 3,
+					"count": 3,
+					"ac": 15,
+					"hp": 50,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"Il faut 1 action pour charger une baliste, 1 action pour la viser, et 1 action pour la tirer."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} +6 pour toucher, portée 120/144 m., une cible. {@h}16 ({@dice 3d10}) dégâts perforants."
+							]
+						}
+					]
+				},
+				{
+					"name": "Piercing Ram",
+					"costs": [
+						{
+							"note": "included in ship cost"
+						}
+					],
+					"entries": [
+						"Le jeteur de sorts du navire peut effectuer l'attaque suivante lorsque le navire heurte un autre objet ou une créature gargantuesque (voir \"{@book Crashing|AAG|2|Crashing}\" plus haut dans le chapitre)."
+					],
+					"action": [
+						{
+							"name": "Piercing Ram",
+							"entries": [
+								"{@atk mw} +8 au toucher, portée m., un objet ou une créature gargantuesque. {@h}88 ({@dice 16d10}) dégâts perforants. Le navire pie-grièche subit la moitié des dégâts et s'arrête net. Manque : l'attaque n'inflige aucun dégât, la cible se déplace dans l'espace inoccupé le plus proche qui ne se trouve pas sur la trajectoire du navire-grièche, et le navire-grièche peut continuer à se déplacer s'il lui reste du mouvement."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Space Galleon",
+			"source": "AAG",
+			"page": 46,
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"130 ft.",
+				"30 ft."
+			],
+			"terrain": [
+				"space",
+				"sea"
+			],
+			"capCrew": 20,
+			"capCargo": 20,
+			"cost": 3000000,
+			"pace": {
+				"fly": 4
+			},
+			"speed": {
+				"fly": 35
+			},
+			"hull": {
+				"ac": 15,
+				"acFrom": [
+					"wood"
+				],
+				"hp": 400,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballistae",
+					"crew": 3,
+					"count": 2,
+					"ac": 15,
+					"hp": 50,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"Il faut 1 action pour charger une baliste, 1 action pour la viser, et 1 action pour la tirer."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} +6 pour toucher, portée 120/144 m., une cible. {@h}16 ({@dice 3d10}) dégâts perforants."
+							]
+						}
+					]
+				},
+				{
+					"name": "Mangonel",
+					"crew": 5,
+					"ac": 15,
+					"hp": 100,
+					"costs": [
+						{
+							"cost": 10000,
+							"note": "mangonel"
+						},
+						{
+							"note": "stone"
+						}
+					],
+					"entries": [
+						"Il faut 2 actions pour charger le mangonneau, 2 actions pour le viser et 1 action pour le tirer."
+					],
+					"action": [
+						{
+							"name": "Mangonel Stone",
+							"entries": [
+								"{@atk rw} +5 au toucher, portée 200/24 m. (ne peut toucher les cibles à moins de 18 mètres), une cible. {@h}27 ({@dice 5d10}) dégâts contondants."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Squid Ship",
+			"source": "AAG",
+			"page": 48,
+			"otherSources": [
+				{
+					"source": "SjA"
+				}
+			],
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"250 ft.",
+				"25 ft."
+			],
+			"terrain": [
+				"space",
+				"sea"
+			],
+			"capCrew": 13,
+			"capCargo": 20,
+			"cost": 2500000,
+			"pace": {
+				"fly": "3½"
+			},
+			"speed": {
+				"fly": 30
+			},
+			"hull": {
+				"ac": 15,
+				"acFrom": [
+					"wood"
+				],
+				"hp": 300,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballista",
+					"count": 2,
+					"ac": 15,
+					"hp": 50,
+					"crew": 3,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"Il faut 1 action pour charger la baliste, 1 action pour la viser, et 1 action pour la tirer."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} {@hit 6} pour toucher, portée 120/144 m., une cible. {@h}16 ({@damage 3d10}) dégâts perforants."
+							]
+						}
+					]
+				},
+				{
+					"name": "Mangonels",
+					"ac": 15,
+					"hp": 100,
+					"crew": 5,
+					"costs": [
+						{
+							"cost": 10000,
+							"note": "mangonel"
+						},
+						{
+							"note": "stone"
+						}
+					],
+					"entries": [
+						"Il faut 2 actions pour charger un mangonneau, 2 actions pour le viser et 1 action pour le tirer."
+					],
+					"action": [
+						{
+							"name": "Mangonel Stone",
+							"entries": [
+								"{@atk rw} {@hit 5} pour toucher, portée 200/24 m. (ne peut toucher les cibles à moins de 18 m.), une cible. {@h}27 ({@damage 5d10}) dégâts contondants."
+							]
+						}
+					]
+				},
+				{
+					"name": "Piercing Ram",
+					"costs": [
+						{
+							"note": "included in ship cost"
+						}
+					],
+					"entries": [
+						"Le lanceur de sorts du navire peut effectuer l'attaque suivante lorsque le navire se heurte à un autre objet ou à une créature gargantuesque (voir \"Crashing\" dans le chapitre 2 du Guide de l'aventurier astral)."
+					],
+					"action": [
+						{
+							"name": "Piercing Ram",
+							"entries": [
+								"{@atk mw} {@hit 8} pour toucher, portée m. un objet ou une créature gargantuesque. {@h}88 ({@damage 16d10}) dégâts perforants. Le navire calmar subit la moitié des dégâts et s'arrête net. {@m} L'attaque n'inflige aucun dégât, la cible se déplace dans l'espace inoccupé le plus proche qui ne se trouve pas sur la trajectoire du vaisseau calamar, et le vaisseau calamar peut continuer à se déplacer s'il lui reste du mouvement."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Stahlmaster",
+			"source": "DD",
+			"page": 235,
+			"vehicleType": "CREATURE",
+			"size": [
+				"L"
+			],
+			"type": "vehicle",
+			"terrain": [
+				"land"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 10,
+			"con": 14,
+			"int": 0,
+			"wis": 0,
+			"cha": 0,
+			"hp": {
+				"average": 67,
+				"formula": "9d10 + 18"
+			},
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"unconscious"
+			],
+			"trait": [
+				{
+					"name": "Pilot",
+					"entries": [
+						"Le Stahlmaster nécessite un humanoïde de taille moyenne pour le piloter. A l'intérieur du Stahlmaster, le pilote utilise la vitesse et les options d'action du véhicule et ne peut pas prendre de réactions ou utiliser des actions bonus, et le pilote bénéficie d'une couverture totale. Si le Stahlmaster tombe à 0 point de vie, le pilote en est éjecté et atterrit {@condition prone} dans un espace inoccupé à moins de 1,5 mètre du véhicule."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Le Stahlmaster effectue deux attaques de mêlée, ou une attaque de mêlée et une attaque à distance."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 6} pour toucher, atteindre 1,5 m., une cible. {@h}9 ({@damage 1d10 + 4}) dégâts contondants."
+					]
+				},
+				{
+					"name": "Shoulder-Mounted Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 2} pour toucher, portée 30/36 m., une cible. {@h}6 ({@damage 1d12}) dégâts perforants."
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Star Moth",
+			"source": "AAG",
+			"page": 50,
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"200 ft.",
+				"20 ft."
+			],
+			"terrain": [
+				"space",
+				"sea"
+			],
+			"capCrew": 13,
+			"capCargo": 30,
+			"cost": 4000000,
+			"pace": {
+				"fly": "5½"
+			},
+			"speed": {
+				"fly": 50
+			},
+			"hull": {
+				"ac": 13,
+				"acFrom": [
+					"ceramic"
+				],
+				"hp": 400,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballistae",
+					"crew": 3,
+					"count": 2,
+					"ac": 15,
+					"hp": 50,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"Il faut 1 action pour charger une baliste, 1 action pour la viser, et 1 action pour la tirer."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} +6 pour toucher, portée 120/144 m., une cible. {@h}16 ({@dice 3d10}) dégâts perforants."
+							]
+						}
+					]
+				},
+				{
+					"name": "Mangonel",
+					"crew": 5,
+					"ac": 15,
+					"hp": 100,
+					"costs": [
+						{
+							"cost": 10000,
+							"note": "mangonel"
+						},
+						{
+							"note": "stone"
+						}
+					],
+					"entries": [
+						"Il faut 2 actions pour charger le mangonneau, 2 actions pour le viser et 1 action pour le tirer."
+					],
+					"action": [
+						{
+							"name": "Mangonel Stone",
+							"entries": [
+								"{@atk rw} +5 au toucher, portée 200/24 m. (ne peut toucher les cibles à moins de 18 mètres), une cible. {@h}27 ({@dice 5d10}) dégâts contondants."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Tormentor",
+			"source": "BGDIA",
+			"page": 218,
+			"vehicleType": "INFWAR",
+			"size": "H",
+			"weight": 3000,
+			"terrain": [
+				"land"
+			],
+			"capCreature": 4,
+			"capCargo": 500,
+			"speed": 100,
+			"str": 16,
+			"dex": 14,
+			"con": 14,
+			"int": 0,
+			"wis": 0,
+			"cha": 0,
+			"hp": {
+				"hp": 60,
+				"dt": 10,
+				"mt": 20
+			},
+			"immune": [
+				"fire",
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"stunned",
+				"unconscious"
+			],
+			"trait": [
+				{
+					"name": "Crushing Wheels",
+					"entries": [
+						"Le tourmenteur peut se déplacer dans l'espace de n'importe quelle créature de taille moyenne ou plus petite. Lorsqu'il le fait, la créature doit réussir un jet de sauvegarde de Dextérité DC 13 ou subir 11 ({@damage 2d10}) de dégâts de contondant et être assommée {@condition prone}.Si la créature était déjà {@condition prone}, elle subit 11 ({@damage 2d10}) de dégâts de contondant supplémentaires.Ce trait ne peut pas être utilisé contre une créature particulière plus d'une fois par tour."
+					]
+				},
+				{
+					"name": "Prone Deficiency",
+					"entries": [
+						"Si le Tourmenteur se retourne et tombe de {@condition prone}, il ne peut pas se redresser et subit {@condition incapacitated} jusqu'à ce qu'il se redresse."
+					]
+				},
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"Les attaques des armes du Tourmenteur sont magiques."
+					]
+				},
+				{
+					"name": "Raking Scythes",
+					"entries": [
+						"Lorsque le tourmenteur se déplace à moins de 1,5 mètre d'une créature qui n'est pas {@condition prone} ou d'un autre véhicule pour la première fois lors d'un tour, il peut ratisser la créature ou le véhicule avec ses lames saillantes pour 13 ({@damage 2d10 + 2}) de dégâts tranchants. Une créature s'écarte du chemin et ne subit aucun dégât si elle réussit un jet de sauvegarde de Dextérité DC 13.Un véhicule s'écarte du chemin et ne subit aucun dégât si son conducteur réussit son jet de sauvegarde."
+					]
+				}
+			],
+			"actionStation": [
+				{
+					"name": "Helm (Requires 1 Crew and Grants Three-Quarters Cover)",
+					"entries": [
+						"Conduire et diriger le Tormentor"
+					]
+				},
+				{
+					"name": "Harpoon Flinger (Requires 1 Crew and Grants Half Cover)",
+					"entries": [
+						"{@atk rw} {@hit 7} pour toucher, portée 36 m., une cible. {@h}11 ({@damage 2d8 + 2}) dégâts perforants."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"type": "entries",
+					"name": "Juke",
+					"entries": [
+						"Si le tourmenteur est capable de se déplacer, le conducteur peut utiliser sa réaction pour accorder au tourmenteur l'avantage sur un jet de sauvegarde de Dextérité."
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Turtle Ship",
+			"source": "AAG",
+			"page": 52,
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"95 ft.",
+				"70 ft."
+			],
+			"terrain": [
+				"space",
+				"sea"
+			],
+			"capCrew": 16,
+			"capCargo": 30,
+			"cost": 4000000,
+			"pace": {
+				"fly": 3,
+				"swim": 3
+			},
+			"speed": {
+				"fly": 25,
+				"swim": 25
+			},
+			"hull": {
+				"ac": 19,
+				"acFrom": [
+					"metal"
+				],
+				"hp": 300,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballistae",
+					"crew": 3,
+					"count": 3,
+					"ac": 15,
+					"hp": 50,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"Il faut 1 action pour charger une baliste, 1 action pour la viser, et 1 action pour la tirer."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} +6 pour toucher, portée 120/144 m., une cible. {@h}16 ({@dice 3d10}) dégâts perforants."
+							]
+						}
+					]
+				},
+				{
+					"name": "Mangonel",
+					"crew": 5,
+					"ac": 15,
+					"hp": 100,
+					"costs": [
+						{
+							"cost": 10000,
+							"note": "mangonel"
+						},
+						{
+							"note": "stone"
+						}
+					],
+					"entries": [
+						"Il faut 2 actions pour charger le mangonneau, 2 actions pour le viser et 1 action pour le tirer."
+					],
+					"action": [
+						{
+							"name": "Mangonel Stone",
+							"entries": [
+								"{@atk rw} +5 au toucher, portée 200/24 m. (ne peut toucher les cibles à moins de 18 mètres), une cible. {@h}27 ({@dice 5d10}) dégâts contondants."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Tyrant Ship",
+			"source": "AAG",
+			"page": 54,
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"100 ft.",
+				"100 ft."
+			],
+			"terrain": [
+				"space"
+			],
+			"capCrew": 10,
+			"capCrewNote": "({@creature Beholder||beholders})",
+			"capCargo": 20,
+			"pace": {
+				"fly": "4½"
+			},
+			"speed": {
+				"fly": 40
+			},
+			"hull": {
+				"ac": 17,
+				"acFrom": [
+					"stone"
+				],
+				"hp": 300,
+				"dt": 20
+			},
+			"weapon": [
+				{
+					"name": "Eyestalk Cannons",
+					"crew": 1,
+					"count": 3,
+					"costs": [
+						{
+							"note": "included in ship cost"
+						}
+					],
+					"entries": [
+						"Cette arme ressemble à un œil monté sur une tige. Un observateur stationné dans l'une des nacelles de méditation du vaisseau tyran peut voir à travers l'œil par {@status concentration||concentrating} sur celui-ci (comme si {@status concentration||concentrating} sur un sort) et utiliser une action pour effectuer l'attaque suivante."
+					],
+					"action": [
+						{
+							"name": "Destructive Ray",
+							"entries": [
+								"{@atk rs} +8 pour toucher, portée 120/144 m., une cible. {@h}35 ({@dice 10d6}) dégâts de force."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Warship",
+			"source": "GoS",
+			"page": 194,
+			"vehicleType": "SHIP",
+			"size": "G",
+			"dimensions": [
+				"100 ft.",
+				"20 ft."
+			],
+			"terrain": [
+				"sea"
+			],
+			"capCrew": 40,
+			"capPassenger": 60,
+			"capCargo": 200,
+			"pace": 4,
+			"str": 20,
+			"dex": 4,
+			"con": 20,
+			"int": 0,
+			"wis": 0,
+			"cha": 0,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"incapacitated",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"stunned",
+				"unconscious"
+			],
+			"hull": {
+				"ac": 15,
+				"hp": 500,
+				"dt": 20
+			},
+			"control": [
+				{
+					"name": "Helm",
+					"ac": 18,
+					"hp": 50,
+					"entries": [
+						"Se déplacer jusqu'à la vitesse de l'une de ses composantes de mouvement, avec un virage à 90 degrés. Si la barre est détruite, le navire de guerre ne peut pas tourner."
+					]
+				}
+			],
+			"movement": [
+				{
+					"name": "Oars",
+					"ac": 12,
+					"hp": 100,
+					"hpNote": "-5 ft. speed per 25 damage taken",
+					"speed": [
+						{
+							"mode": "water",
+							"entries": [
+								"6 m. (nécessite au moins 20 personnes)"
+							]
+						}
+					]
+				},
+				{
+					"name": "Sails",
+					"ac": 12,
+					"hp": 100,
+					"hpNote": "-10 ft. speed per 25 damage taken",
+					"speed": [
+						{
+							"mode": "water",
+							"entries": [
+								"10,5 m. ; 4,5 m. en naviguant face au vent ; 15 m. en naviguant face au vent."
+							]
+						}
+					]
+				}
+			],
+			"weapon": [
+				{
+					"name": "Ballistas",
+					"count": 2,
+					"ac": 15,
+					"hp": 50,
+					"entries": [
+						"{@atk rw} {@hit 6} pour toucher, portée 120/144 m., une cible. {@h}16 ({@damage 3d10}) dégâts perforants."
+					]
+				},
+				{
+					"name": "Mangonels",
+					"count": 2,
+					"ac": 15,
+					"hp": 100,
+					"entries": [
+						"{@atk rw} {@hit 5} pour toucher, portée 200/24 m. (ne peut toucher les cibles à moins de 18 m.), une cible. {@h}27 ({@damage 5d10}) dégâts contondants."
+					]
+				},
+				{
+					"name": "Naval Ram",
+					"ac": 20,
+					"hp": 100,
+					"dt": 10,
+					"entries": [
+						"Le navire de guerre a l'avantage sur tous les jets de sauvegarde relatifs au crash lorsqu'il s'écrase contre une créature ou un objet. Les dégâts qu'il subit lors de l'écrasement sont appliqués au bélier naval plutôt qu'au navire. Ces avantages ne s'appliquent pas si un autre navire s'écrase sur le navire de guerre."
+					]
+				}
+			],
+			"actionThresholds": {
+				"0": 0,
+				"1": 3,
+				"2": 10,
+				"3": 20
+			},
+			"action": [
+				"On its turn, the warship can take 3 actions, choosing from the options below. It can take only 2 actions if it has fewer than twenty crew and only 1 action if it has fewer than ten. It can't take these actions if it has fewer than three crew.",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Fire Ballistas",
+							"entry": "Le navire de guerre peut tirer ses {@object ballista||ballistas} (DMG, ch. 8)."
+						},
+						{
+							"type": "item",
+							"name": "Fire Mangonels",
+							"entry": "Le navire de guerre peut tirer ses {@object mangonel||mangonels} (DMG, ch. 8)."
+						},
+						{
+							"type": "item",
+							"name": "Move",
+							"entry": "Le navire de guerre peut utiliser sa barre pour se déplacer avec ses rames ou ses voiles. Dans le cadre de ce déplacement, il peut utiliser son bélier naval."
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Warship",
+			"source": "UAOfShipsAndSea",
+			"page": 5,
+			"vehicleType": "SHIP",
+			"size": "G",
+			"dimensions": [
+				"100 ft.",
+				"20 ft."
+			],
+			"terrain": [
+				"sea"
+			],
+			"capCrew": 40,
+			"capPassenger": 60,
+			"capCargo": 200,
+			"pace": 4,
+			"str": 20,
+			"dex": 4,
+			"con": 20,
+			"int": 0,
+			"wis": 0,
+			"cha": 0,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"incapacitated",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"stunned",
+				"unconscious"
+			],
+			"hull": {
+				"ac": 15,
+				"hp": 500,
+				"dt": 20
+			},
+			"control": [
+				{
+					"name": "Helm",
+					"ac": 18,
+					"hp": 50,
+					"entries": [
+						"Se déplacer jusqu'à la vitesse de l'une de ses composantes de mouvement, avec un virage à 90 degrés. Si la barre est détruite, le navire de guerre ne peut pas tourner."
+					]
+				}
+			],
+			"movement": [
+				{
+					"name": "Sails",
+					"ac": 12,
+					"hp": 100,
+					"hpNote": "-10 ft. speed per 25 damage taken",
+					"locomotion": [
+						{
+							"mode": "water",
+							"entries": [
+								"voiles, vitesse 10,5 m. ; 4,5 m. en naviguant contre le vent ; 15 m. en naviguant avec le vent."
+							]
+						}
+					]
+				},
+				{
+					"name": "Oars",
+					"ac": 12,
+					"hp": 100,
+					"hpNote": "-5 ft. speed per 25 damage taken",
+					"locomotion": [
+						{
+							"mode": "water",
+							"entries": [
+								"rames, vitesse 6 m. avec 80 rameurs ou plus, 3 mètres avec 40 rameurs ou plus, 1,5 m. avec 20 rameurs ou plus."
+							]
+						}
+					]
+				}
+			],
+			"weapon": [
+				{
+					"name": "Ballistas",
+					"count": 2,
+					"ac": 15,
+					"hp": 50,
+					"entries": [
+						"{@atk rw} {@hit 6} pour toucher, portée 120/144 m., une cible. {@h}16 ({@damage 3d10}) dégâts perforants."
+					]
+				},
+				{
+					"name": "Mangonels",
+					"count": 2,
+					"ac": 15,
+					"hp": 100,
+					"entries": [
+						"{@atk rw} {@hit 5} pour toucher, portée 200/24 m. (ne peut toucher les cibles à moins de 18 m.), une cible. {@h}27 ({@damage 5d10}) dégâts contondants."
+					]
+				},
+				{
+					"name": "Ram",
+					"ac": 20,
+					"hp": 100,
+					"dt": 10,
+					"entries": [
+						"Le navire de guerre bénéficie d'un avantage sur tous les jets de sauvegarde relatifs au crash lorsqu'il s'écrase contre une créature ou un objet. Les dégâts qu'il subit lors du choc sont appliqués au bélier. Ces avantages ne s'appliquent pas si un autre navire s'écrase sur le navire de guerre."
+					]
+				}
+			],
+			"other": [
+				{
+					"name": "Actions",
+					"entries": [
+						"A son tour, le navire de guerre peut se déplacer en utilisant sa barre. Il peut également tirer avec ses ballistas et ses mangonneaux. S'il a la moitié de son équipage ou moins, il se déplace à la moitié de sa vitesse et ne peut tirer que la moitié de ses armes."
+					]
+				}
+			]
+		},
+		{
+			"name": "Wasp Ship",
+			"source": "AAG",
+			"page": 56,
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"80 ft.",
+				"20 ft."
+			],
+			"terrain": [
+				"space"
+			],
+			"capCrew": 5,
+			"capCargo": 10,
+			"cost": 2000000,
+			"pace": {
+				"fly": "5½"
+			},
+			"speed": {
+				"fly": 50
+			},
+			"hull": {
+				"ac": 15,
+				"acFrom": [
+					"wood"
+				],
+				"hp": 250,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballista",
+					"crew": 3,
+					"ac": 15,
+					"hp": 50,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"Il faut 1 action pour charger la baliste, 1 action pour la viser, et 1 action pour la tirer."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} +6 pour toucher, portée 120/144 m., une cible. {@h}16 ({@dice 3d10}) dégâts perforants."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	],
+	"vehicleUpgrade": [
+		{
+			"name": "Acidic Bile Sprayer",
+			"source": "BGDIA",
+			"page": 221,
+			"upgradeType": [
+				"IWM:W"
+			],
+			"entries": [
+				"Cette arme à tuyau est attachée à des organes démoniaques qui produisent une bile acide qui dissout la chair au contact.",
+				{
+					"type": "entries",
+					"name": "Acidic Bile Sprayer (Requires 1 Crew and Grants Half Cover, {@recharge 5|m})",
+					"entries": [
+						"De la bile acide jaillit d'une buse dans un cône de 9 mètres. Chaque créature située dans le cône doit effectuer un jet de sauvegarde de Dextérité DC 12, subissant 40 ({@damage 9d8}) de dégâts d'acide en cas de sauvegarde ratée, ou moitié moins de dégâts en cas de sauvegarde réussie. Une créature réduite à 0 point de vie par ces dégâts est dissoute, laissant derrière elle les objets qu'elle portait."
+					]
+				}
+			]
+		},
+		{
+			"name": "Arcane Artillery",
+			"source": "GoS",
+			"page": 197,
+			"upgradeType": [
+				"SHP:W"
+			],
+			"entries": [
+				"En utilisant des méthodes similaires à celles utilisées pour produire des armes magiques, un lanceur de sorts compétent imprègne l'arme d'un navire d'une énergie destructrice. Cette arme bénéficie d'un bonus de +2 à ses jets d'attaque et de dégâts, et ses attaques sont considérées comme magiques."
+			]
+		},
+		{
+			"name": "Bones of Endless Toil",
+			"source": "GoS",
+			"page": 198,
+			"upgradeType": [
+				"SHP:O"
+			],
+			"entries": [
+				"Les ossements d'anciennes et mystérieuses créatures ornent le navire. Des runes puissantes rampent sur ces vestiges, émettant un rayonnement vert maladif. Lorsqu'un humanoïde meurt à bord du navire, il doit effectuer un jet de sauvegarde de sagesse DC 12. Si elle réussit son jet, elle meurt normalement. En cas d'échec, elle se relève immédiatement en tant que zombie {@creature zombie} obéissant au capitaine du navire. Le zombie acquiert une connaissance pratique du navire, ce qui lui permet de faire partie de l'équipage. Un nombre de créatures égal à la capacité du navire peut être animé de cette manière à tout moment."
+			]
+		},
+		{
+			"name": "Canian Armor",
+			"source": "BGDIA",
+			"page": 221,
+			"upgradeType": [
+				"IWM:A"
+			],
+			"entries": [
+				"Le fer infernal utilisé pour fabriquer le véhicule a été extrait sur Cania, la couche la plus froide des Neuf Enfers. Une machine de guerre infernale dotée d'une armure canienne a une classe d'armure de 22 + son modificateur de Dextérité. Tant que le véhicule n'est pas en mouvement, les jets d'attaque effectués contre lui bénéficient d'un avantage. La machine de guerre infernale a également une immunité aux dégâts de froid en plus de ses autres immunités aux dégâts, et elle est immunisée contre les effets du froid extrême."
+			]
+		},
+		{
+			"name": "Churning Hull",
+			"source": "GoS",
+			"page": 196,
+			"upgradeType": [
+				"SHP:H"
+			],
+			"entries": [
+				"Une tempête fait rage à l'intérieur de ces chaînes de fer gravées de runes. Les voleurs et les pirates qui opèrent sous la bénédiction d'un dieu de la tempête utilisent parfois cette amélioration.",
+				"En drapant les chaînes sur la coque d'un navire, la fureur de la tempête s'abat sur l'eau qui l'entoure. L'eau dans un rayon de 63 mètres autour du navire est de {@quickref difficult terrain||3} pour tout ce qui n'est pas ce navire."
+			]
+		},
+		{
+			"name": "Clockwork Oars",
+			"source": "GoS",
+			"page": 197,
+			"upgradeType": [
+				"SHP:M"
+			],
+			"entries": [
+				"Utilisant une combinaison de magie et d'horlogerie, les rames de ce navire ne nécessitent qu'un seul membre d'équipage pour les utiliser, en appuyant sur le bouton ou le levier qui les active."
+			]
+		},
+		{
+			"name": "Concussive Rounds",
+			"source": "GoS",
+			"page": 197,
+			"upgradeType": [
+				"SHP:W"
+			],
+			"entries": [
+				"Améliorées par la magie d'abjuration, les attaques de cette arme éclatent en un bruit rauque capable de distraire et de désorienter momentanément les équipages ennemis. Si cette arme touche la coque d'un véhicule, la vitesse de ce dernier diminue de {@dice 2d10} pieds jusqu'au début du prochain tour de l'attaquant."
+			]
+		},
+		{
+			"name": "Death Vessel",
+			"source": "GoS",
+			"page": 196,
+			"upgradeType": [
+				"SHP:H"
+			],
+			"entries": [
+				"Fabriquée avec des matériaux récoltés dans le Shadowfell, cette amélioration confère au vaisseau une aura d'effroi. Au cours d'une action, le navire peut créer une impulsion d'énergie horrifiante. Toute créature ennemie du navire qui se trouve à bord ou à moins de 63 mètres de celui-ci doit effectuer un jet de sauvegarde de sagesse DC 14. En cas d'échec, la créature est {@condition frightened} du navire pendant 1 minute. En cas de sauvegarde réussie, la créature est immunisée contre cette capacité pendant 24 heures. Une fois cette capacité utilisée, elle ne peut être réutilisée avant que {@dice 1d4} heures ne se soient écoulées."
+			]
+		},
+		{
+			"name": "Defiant Sails",
+			"source": "GoS",
+			"page": 197,
+			"upgradeType": [
+				"SHP:M"
+			],
+			"entries": [
+				"Ces voiles brillent d'une fine couche de mithral traitée par la magie d'abjuration. Lorsque les voiles sont déployées, les attaques à l'arme à distance effectuées contre le navire et toute personne à son bord sont effectuées avec un désavantage, en raison de la magie protectrice des voiles. Ce désavantage ne s'applique pas si l'attaquant est à bord du navire."
+			]
+		},
+		{
+			"name": "Dragon Sails",
+			"source": "GoS",
+			"page": 197,
+			"upgradeType": [
+				"SHP:M"
+			],
+			"entries": [
+				"Les écailles de dragon tissées dans ces voiles les rendent plus résistantes. Les voiles bénéficient d'un bonus de +3 à la CA, et elles résistent à un type de dégâts basé sur le type d'écailles utilisées pour les fabriquer, comme indiqué sur la table des voiles de dragon.",
+				{
+					"type": "table",
+					"caption": "Dragon Sails",
+					"colStyles": [
+						"col-6 text-center",
+						"col-6 text-center"
+					],
+					"colLabels": [
+						"Dragon Type",
+						"Damage Type"
+					],
+					"rows": [
+						[
+							"Noir",
+							"Acide"
+						],
+						[
+							"Bleu",
+							"Éclairage"
+						],
+						[
+							"Laiton",
+							"Incendie"
+						],
+						[
+							"Bronze",
+							"Éclairage"
+						],
+						[
+							"Cuivre",
+							"Acide"
+						],
+						[
+							"L'or",
+							"Incendie"
+						],
+						[
+							"Vert",
+							"Acide"
+						],
+						[
+							"Rouge",
+							"Incendie"
+						],
+						[
+							"Argent",
+							"Froid"
+						],
+						[
+							"Blanc",
+							"Froid"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "Ever-Full Sails",
+			"source": "GoS",
+			"page": 197,
+			"upgradeType": [
+				"SHP:M"
+			],
+			"entries": [
+				"Ces voiles flottantes sont tissées à partir d'un tissu nuageux tiré du plan élémentaire de l'air. Le vent souffle et siffle autour d'elles, ce qui permet au navire de se déplacer à une vitesse de 18 mètres, quelle que soit sa direction par rapport au vent."
+			]
+		},
+		{
+			"name": "Explosive Rounds",
+			"source": "GoS",
+			"page": 197,
+			"upgradeType": [
+				"SHP:W"
+			],
+			"entries": [
+				"S'appuyant sur une puissante magie d'évocation, les attaques de cette arme sont imprégnées d'une énergie instable qui explose en un souffle ardent. Lorsque cette arme touche, elle inflige un {@damage 2d6} de dégâts de feu supplémentaires."
+			]
+		},
+		{
+			"name": "Flamethrower",
+			"source": "BGDIA",
+			"page": 221,
+			"upgradeType": [
+				"IWM:W"
+			],
+			"entries": [
+				"Bien qu'inutile contre les démons, cette arme est excellente contre les créatures et objets inflammables.",
+				{
+					"type": "entries",
+					"name": "Flamethrower (Requires 1 Crew and Grants Half Cover)",
+					"entries": [
+						"Le feu jaillit de la buse de l'arme en une ligne de 18 mètres de long et de 1,5 mètre de large. Chaque créature dans la ligne doit faire un jet de sauvegarde de Dextérité DC 15, subissant 18 ({@damage 4d8}) dégâts de feu en cas de sauvegarde ratée, ou moitié moins de dégâts en cas de sauvegarde réussie. Le feu enflamme tous les objets inflammables de la zone qui ne sont pas portés."
+					]
+				}
+			]
+		},
+		{
+			"name": "Frost-Locked Hull",
+			"source": "GoS",
+			"page": 196,
+			"upgradeType": [
+				"SHP:H"
+			],
+			"entries": [
+				"Cette amélioration remplace la coque d'un navire par de la glace surnaturelle tirée des plans élémentaires. La coque et les autres composants du navire sont immunisés contre les dégâts du froid mais vulnérables aux dégâts du feu. Le navire peut également se déplacer à sa vitesse normale sur de la glace de n'importe quelle épaisseur, flottant sur la glace à la même profondeur que dans l'eau."
+			]
+		},
+		{
+			"name": "Gilded Death Armor",
+			"source": "BGDIA",
+			"page": 222,
+			"upgradeType": [
+				"IWM:A"
+			],
+			"entries": [
+				"L'or volé ou troqué auprès de l'archidémon Mammon recouvre l'extérieur du véhicule. Cet or ne peut être enlevé sans détruire le véhicule et se transforme en poussière lorsque la machine de guerre infernale tombe à 0 point de vie. L'armure de mort dorée confère à la machine de guerre infernale une résistance aux dégâts contondants, perforants et tranchants."
+			]
+		},
+		{
+			"name": "Grasping Rounds",
+			"source": "GoS",
+			"page": 197,
+			"upgradeType": [
+				"SHP:W"
+			],
+			"entries": [
+				"Cette arme crée des chaînes spectrales qui suivent ses tirs, retenant les vaisseaux ennemis dans leur emprise. Lorsque cette arme touche un navire, ce dernier doit réussir un jet de sauvegarde de Force DC 14 sous peine de ne pas pouvoir s'éloigner de l'attaquant. Le navire attaquant peut mettre fin à cet effet par une action, et la cible peut y mettre fin en effectuant une action et en réussissant un test de Force DC 14."
+			]
+		},
+		{
+			"name": "Guardian Figurehead",
+			"source": "GoS",
+			"page": 198,
+			"upgradeType": [
+				"SHP:F"
+			],
+			"entries": [
+				"Cette figure de proue représente un chevalier en armure. Au cours d'une action, le navire peut activer cet objet, ce qui lui permet de s'animer comme un golem {@creature iron golem}. Le golem agit au tour du navire lorsque le capitaine utilise l'une des actions du navire. Le golem reste animé pendant 1 minute. À la fin de cette période, il se téléporte à sa position de figure de proue. Une fois qu'un navire a utilisé cette action, il ne peut plus l'utiliser pendant 24 heures."
+			]
+		},
+		{
+			"name": "Infernal Screamer",
+			"source": "BGDIA",
+			"page": 221,
+			"upgradeType": [
+				"IWM:W"
+			],
+			"entries": [
+				"Un torse humanoïde tordu fait de cire en fusion sort de cette station, avec une manivelle barbelée entre ses omoplates. La figure hurle télépathiquement à l'agonie lorsqu'on tourne la manivelle.",
+				{
+					"type": "entries",
+					"name": "Infernal Screamer (Requires 1 Crew and Grants Half Cover)",
+					"entries": [
+						"L'opérateur du Hurleur cible une créature qu'il peut voir dans un rayon de 36 mètres autour du Hurleur. La cible doit effectuer un jet de sauvegarde de Sagesse DC 15, subissant 26 ({@damage 4d12}) points de dégâts psychiques en cas d'échec, ou moitié moins de dégâts en cas de réussite."
+					]
+				}
+			]
+		},
+		{
+			"name": "Living Vessel",
+			"source": "GoS",
+			"page": 196,
+			"upgradeType": [
+				"SHP:H"
+			],
+			"entries": [
+				"La coque de ce navire a été fabriquée dans la Forêt des Fées sous la direction de maîtres charpentiers eladrins. C'est une plante vivante qui tire sa subsistance de l'eau et de la lumière du soleil. Des lianes couvertes d'épaisses feuilles pendent sur ses flancs, et le bois coule de sève fraîche lorsqu'il est endommagé. Le navire bénéficie d'un bonus de +2 à tous les tests de Constitution et aux jets de sauvegarde. Tant que le navire a au moins 1 point de vie, il en regagne 10 toutes les minutes."
+			]
+		},
+		{
+			"name": "Necrotic Smoke Screen",
+			"source": "BGDIA",
+			"page": 222,
+			"upgradeType": [
+				"IWM:G"
+			],
+			"entries": [
+				"Le conducteur du véhicule peut activer ce dispositif magique en tant qu'action bonus, ce qui permet au véhicule d'expulser un cube de 9 mètres de fumée opaque directement devant ou derrière lui. Le nuage est stationnaire et dure 1 minute. La zone qu'il englobe est fortement obscurcie. Toute créature qui entre dans le nuage pour la première fois lors d'un tour ou qui y commence son tour subit 21 ({@damage 6d6}) dégâts nécrotiques. Un vent violent disperse le nuage. Ce dispositif a besoin de 24 heures pour se recharger avant de pouvoir être réutilisé."
+			]
+		},
+		{
+			"name": "Red Dragon Figurehead",
+			"source": "GoS",
+			"page": 198,
+			"upgradeType": [
+				"SHP:F"
+			],
+			"entries": [
+				"Cette figure de proue représente un dragon rouge se dressant pour frapper, la gueule ouverte. Comme action, le navire peut activer cet objet pour créer un cône de flammes de 18 mètres qui part de la figure de proue. Chaque créature et objet dans le cône doit faire un jet de sauvegarde de Dextérité DC 12, subissant 21 ({@damage 6d6}) dégâts de feu en cas de sauvegarde ratée, ou moitié moins de dégâts en cas de sauvegarde réussie. Une fois qu'un navire a utilisé cette action, il ne peut plus l'utiliser pendant 1 minute."
+			]
+		},
+		{
+			"name": "Reinforced Hull",
+			"source": "GoS",
+			"page": 197,
+			"upgradeType": [
+				"SHP:H"
+			],
+			"entries": [
+				"Un maître charpentier peut utiliser des matériaux de qualité supérieure et une conception intelligente pour rendre la coque d'un navire plus résistante. Un tel renforcement double le maximum de points de vie de la coque."
+			]
+		},
+		{
+			"name": "Screaming Sails",
+			"source": "GoS",
+			"page": 197,
+			"upgradeType": [
+				"SHP:M"
+			],
+			"entries": [
+				"Tissées à partir de l'énergie de spectres capturés et liées à l'esprit d'une banshee, ces voiles gémissent douloureusement lorsqu'elles prennent le vent. Comme action, à moins de 1,5 mètre des voiles, le capitaine du navire peut les faire hurler. Toute créature hostile au navire qui se trouve à bord ou à moins de 9 mètres de celui-ci doit réussir un jet de sauvegarde de sagesse DC 14, ou la créature subit {@damage 4d6} de dégâts psychiques et est alors {@condition frightened} pendant 1 minute. Une fois cette capacité utilisée, elle ne peut être réutilisée avant que {@dice 2d6} heures ne se soient écoulées."
+			]
+		},
+		{
+			"name": "Scything Oars",
+			"source": "GoS",
+			"page": 197,
+			"upgradeType": [
+				"SHP:M"
+			],
+			"entries": [
+				"Des rames aiguisées et renforcées par magie rendent le navire dangereux à approcher. Lorsque le navire entreprend une action qui le déplace à l'aide de ces rames, toute créature ou objet dans l'eau à moins de 3 mètres de lui à n'importe quel moment du déplacement doit effectuer un jet de sauvegarde de Dextérité DC 10, subissant {@damage 2d6} de dégâts tranchants en cas de sauvegarde ratée ou la moitié des dégâts en cas de sauvegarde réussie."
+			]
+		},
+		{
+			"name": "Smuggler's Banner",
+			"source": "GoS",
+			"page": 198,
+			"upgradeType": [
+				"SHP:O"
+			],
+			"entries": [
+				"Ce drapeau est destiné à être hissé sur le mât d'un navire. Sa puissante magie lui permet d'apparaître comme un drapeau ou une bannière arborant le symbole d'un groupe, d'un capitaine ou d'un royaume ami de l'observateur. Plusieurs spectateurs peuvent voir des drapeaux ou des emblèmes différents.",
+				"Le véritable pouvoir de la bannière est sa capacité à aider un navire à s'échapper rapidement. En une action, le navire et toutes les créatures amies à son bord se téléportent jusqu'à 4,5 kilomètres vers une destination connue choisie par le capitaine. Les créatures hostiles à bord du navire ne se déplacent pas avec le navire et tombent dans l'eau qu'il occupait. Une fois que cet objet a été utilisé pour se téléporter, il ne peut plus être téléporté de cette manière pendant {@dice 2d6} jours."
+			]
+		},
+		{
+			"name": "Soul Spike Armor",
+			"source": "BGDIA",
+			"page": 222,
+			"upgradeType": [
+				"IWM:W"
+			],
+			"entries": [
+				"Le véhicule est couvert de pointes portant des symboles blasphématoires. Des figures lumineuses et fantomatiques empalées sur ces piques gémissent et se tendent en agonie.",
+				"Si une créature qui n'est pas un démon meurt à moins de 9 mètres de la machine de guerre infernale, son âme (si elle en a une) est arrachée de son corps et rejoint la foule gémissante empalée sur les piques. Tant que son âme reste prisonnière, une créature ne peut être ressuscitée par aucun moyen. Une âme piégée est libérée si le véhicule est détruit, si la pointe qui l'ancre est la cible d'un sort {@spell remove curse} ou d'une magie similaire, ou si la pointe est détruite. Chaque épi est un petit objet doté d'une CA de 19, de 15 points de vie et d'une résistance à tous les dégâts, à l'exception des dégâts radiants."
+			]
+		},
+		{
+			"name": "Storm Giant Figurehead",
+			"source": "GoS",
+			"page": 198,
+			"upgradeType": [
+				"SHP:F"
+			],
+			"entries": [
+				"Cette figure de proue représente un géant de la tempête tenant un foudre. Comme action, le navire peut activer cet objet pour créer un cône de 18 mètres qui part de la figure de proue. Chaque créature située dans le cône doit effectuer un jet de sauvegarde de Constitution DC 12, subissant 14 ({@damage 4d6}) points de dégâts de tonnerre en cas de sauvegarde ratée, ou moitié moins de dégâts en cas de sauvegarde réussie. Une créature qui rate son jet de sauvegarde est également repoussée à 3 mètres de la figure de proue. Une fois qu'un navire a utilisé cette action, il ne peut plus l'utiliser pendant 1 minute."
+			]
+		},
+		{
+			"name": "Styx Sprayer",
+			"source": "BGDIA",
+			"page": 221,
+			"upgradeType": [
+				"IWM:W"
+			],
+			"entries": [
+				"Ce tuyau flexible est relié à un réservoir qui contient 30 gallons d'eau provenant du {@area River Styx|1a3|x}. Chaque utilisation de l'arme épuise 10 gallons de cette eau. Pour remplir le réservoir, il faut accéder au Styx.",
+				{
+					"type": "entries",
+					"name": "Styx Sprayer (Requires 1 Crew and Grants Half Cover; 3 Uses)",
+					"entries": [
+						"{@atk rs} : +5 au toucher, portée 9 m., une créature. {@h}La créature est frappée par l'eau du Styx et ciblée par un sort {@spell feeblemind} (sauvegarde DC 20). Une créature déjà affaiblie est immunisée contre cet effet, de même qu'une créature adaptée au Styx. Si la cible échoue son jet de sauvegarde et que le sort ne cesse pas de l'affecter dans les 30 jours, l'effet devient permanent, après quoi la créature perd tous ses souvenirs et n'est plus qu'une coquille presque insensible. À ce stade, seule une intervention divine peut annuler l'effet."
+					]
+				}
+			]
+		},
+		{
+			"name": "Taskmaster's Drums",
+			"source": "GoS",
+			"page": 198,
+			"upgradeType": [
+				"SHP:O"
+			],
+			"entries": [
+				"Ce tambour en bronze de 1,2 mètre de haut est accompagné d'une paire de mailloches en fer. Une créature peut activer les tambours en tant qu'action, ce qui fait que les marteaux flottent au-dessus du tambour et le frappent pour produire un rythme tonitruant. Pendant la minute qui suit, le navire gagne une action supplémentaire, tant qu'il a au moins une action. Une fois cet objet utilisé, il ne peut plus être activé pendant {@dice 2d10} heures."
+			]
+		},
+		{
+			"name": "Teleporter",
+			"source": "BGDIA",
+			"page": 222,
+			"upgradeType": [
+				"IWM:G"
+			],
+			"entries": [
+				"Le conducteur du véhicule peut activer ce dispositif magique en tant qu'action bonus, ce qui permet au véhicule de se téléporter dans un espace inoccupé que le conducteur peut voir jusqu'à 9 mètres de la position actuelle du véhicule. Toutes les créatures et objets en contact avec le véhicule sont téléportés avec lui. Ce dispositif a besoin de 24 heures pour se recharger avant de pouvoir être réutilisé."
+			]
+		},
+		{
+			"name": "Vigilant Watch",
+			"source": "GoS",
+			"page": 197,
+			"upgradeType": [
+				"SHP:H"
+			],
+			"entries": [
+				"Une rangée d'orbes de cristal, chacune remplie d'un liquide visqueux et d'un globe oculaire, est installée le long de la coque de ce navire. {@condition Invisible} des créatures sont visibles à bord du navire ou dans un rayon de 36 mètres."
+			]
+		}
+	]
+}

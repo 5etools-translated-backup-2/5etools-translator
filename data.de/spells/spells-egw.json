@@ -1,0 +1,840 @@
+{
+	"spell": [
+		{
+			"name": "Dark Star",
+			"source": "EGW",
+			"page": 186,
+			"level": 8,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 150
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ein Onyxsplitter und ein Tropfen des Blutes des Zaubernden, die beide durch den Zauber verbraucht werden",
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Dieser Zauber erschafft eine Sphäre, die auf einen von dir gewählten Punkt in Reichweite zentriert ist. Die Kugel kann einen Radius von bis zu 12 Metern haben. Der Bereich innerhalb dieser Sphäre ist mit magischer Dunkelheit und erdrückender Gravitationskraft erfüllt.",
+				"Für die Dauer des Zaubers beträgt der Bereich des Zaubers {@quickref difficult terrain||3}. Eine Kreatur mit Nachtsicht kann die magische Dunkelheit nicht durchschauen, und nichtmagisches Licht kann sie nicht erhellen. Kein Ton kann innerhalb des Bereichs erzeugt werden oder diesen durchdringen. Jede Kreatur oder jedes Objekt, das sich vollständig innerhalb der Sphäre befindet, ist immun gegen Donnerschaden, und Kreaturen sind {@condition deafened}, solange sie sich vollständig innerhalb der Sphäre befinden. Das Wirken eines Zaubers, der eine verbale Komponente enthält, ist dort unmöglich.",
+				"Jede Kreatur, die den Bereich des Zaubers zum ersten Mal in einem Zug betritt oder ihren Zug dort beginnt, muss einen Rettungswurf auf Konstitution machen. Bei einem misslungenen Schutzwurf erleidet die Kreatur {@damage 8d10} Kraftschaden, bei einem erfolgreichen Schutzwurf halb so viel Schaden. Eine Kreatur, die durch diesen Schaden auf 0 Trefferpunkte reduziert wird, löst sich auf. Eine aufgelöste Kreatur und alles, was sie trägt, außer magischen Gegenständen, wird zu einem Haufen feinen grauen Staubs."
+			],
+			"damageInflict": [
+				"force"
+			],
+			"conditionInflict": [
+				"deafened"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"DFT",
+				"OBJ"
+			],
+			"areaTags": [
+				"S"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Fortune's Favor",
+			"source": "EGW",
+			"page": 186,
+			"level": 2,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "eine weiße Perle im Wert von mindestens 100 gp, die der Zauberspruch verbraucht",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Du verleihst dir selbst oder einer willigen Kreatur, die du in Reichweite sehen kannst, latentes Glück. Wenn die gewählte Kreatur einen Angriffswurf, eine Fähigkeitsprüfung oder einen Rettungswurf macht, bevor der Zauber endet, kann sie diesen Zauber auf sich selbst abwerfen, um einen zusätzlichen {@dice d20} zu würfeln und zu wählen, welche der {@dice d20}s sie verwenden will. Wenn ein Angriffswurf gegen die gewählte Kreatur durchgeführt wird, kann sie diesen Zauber absetzen, um einen {@dice d20} zu würfeln und zu wählen, welche der {@dice d20}s sie verwenden möchte, die gewürfelte oder die vom Angreifer gewürfelte.",
+				"Wenn der ursprüngliche Wurf {@dice d20} einen Vorteil oder Nachteil hat, würfelt die Kreatur den zusätzlichen {@dice d20}, nachdem der Vorteil oder Nachteil auf den ursprünglichen Wurf angewendet wurde."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberslot der Stufe 3 oder höher wirkst, kannst du eine zusätzliche Kreatur für jeden Slot der Stufe 2 oder höher anvisieren."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Gift of Alacrity",
+			"source": "EGW",
+			"page": 186,
+			"level": 1,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"Du berührst eine willige Kreatur. Für die Dauer der Berührung kann das Ziel {@dice 1d8} zu seinen Initiativwürfen addieren."
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Gravity Fissure",
+			"source": "EGW",
+			"page": 187,
+			"level": 6,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "line",
+				"distance": {
+					"type": "feet",
+					"amount": 100
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "eine Handvoll Eisenspäne"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du manifestierst eine Schlucht aus Gravitationsenergie in einer von dir ausgehenden Linie, die 3 Meter lang und 1,5 Meter breit ist. Jede Kreatur in dieser Linie muss einen Rettungswurf für die Konstitution machen und erleidet bei einem misslungenen Rettungswurf {@damage 8d8} Kraftschaden, bei einem erfolgreichen Rettungswurf halb so viel Schaden.",
+				"Jede Kreatur im Umkreis von 3 Metern um die Linie, die sich nicht in ihr befindet, muss einen Rettungswurf auf Konstitution bestehen oder {@damage 8d8} Kraftschaden erleiden und in Richtung der Linie gezogen werden, bis sich die Kreatur in ihrem Bereich befindet."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberslot der Stufe 7 oder höher wirkst, erhöht sich der Schaden um {@scaledamage 8d8|6-9|1d8} für jeden Slot der Stufe 6."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"areaTags": [
+				"L"
+			]
+		},
+		{
+			"name": "Gravity Sinkhole",
+			"source": "EGW",
+			"page": 187,
+			"level": 4,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "ein schwarzer Marmor"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Eine Kugel mit einem Radius von 6 Metern bildet sich an einem Punkt in Sichtweite und zerrt an den dortigen Kreaturen. Jede Kreatur in der Sphäre muss einen Rettungswurf auf Konstitution machen. Bei einem misslungenen Schutzwurf erleidet die Kreatur {@damage 5d10} Kraftschaden und wird in einer geraden Linie in Richtung des Zentrums der Sphäre gezogen, wobei sie in einem unbesetzten Raum so nahe wie möglich am Zentrum endet (selbst wenn dieser Raum in der Luft liegt). Bei einem erfolgreichen Schutz erleidet die Kreatur nur halb so viel Schaden und wird nicht gezogen."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberschlitz der Stufe 5 oder höher wirkst, erhöht sich der Schaden um {@scaledamage 5d10|4-9|1d10} für jede Schlitzstufe über der Stufe 4."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Immovable Object",
+			"source": "EGW",
+			"page": 187,
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Goldstaub im Wert von mindestens 25 Gp, den der Zauberspruch verbraucht",
+					"cost": 2500,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Du berührst einen Gegenstand, der nicht mehr als 5 Kilogramm wiegt, und lässt ihn auf magische Weise an seinem Platz verharren. Du und die Kreaturen, die du beim Aussprechen dieses Zaubers bestimmst, können den Gegenstand normal bewegen. Du kannst auch ein Passwort festlegen, das, wenn es in einem Umkreis von 1,5 Metern um den Gegenstand gesprochen wird, diesen Zauber für 1 Minute unterdrückt.",
+				"Wenn das Objekt in der Luft befestigt ist, kann es bis zu 4 Kilogramm Gewicht tragen. Bei mehr Gewicht fällt das Objekt. Andernfalls kann eine Kreatur eine Aktion nutzen, um einen Stärke-Test gegen den Schutz-DC des Zaubers zu machen. Bei einem Erfolg kann die Kreatur den Gegenstand bis zu 3 Meter weit bewegen."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberslot der Stufe 4 oder 5 wirkst, erhöht sich der DC zum Bewegen des Objekts um 5, es kann bis zu 8 Kilogramm Gewicht tragen und die Dauer erhöht sich auf 24 Stunden. Wenn du diesen Zauber mit einem Zauberspruch der Stufe 6 oder höher wirkst, erhöht sich der DC zum Bewegen des Objekts um 10, es kann bis zu 20 Kilogramm Gewicht tragen und der Effekt ist dauerhaft, bis er gebannt wird."
+					]
+				}
+			],
+			"abilityCheck": [
+				"strength"
+			],
+			"miscTags": [
+				"OBJ"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Magnify Gravity",
+			"source": "EGW",
+			"page": 188,
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Die Schwerkraft in einer Kugel mit einem Radius von 3 Metern, die auf einen Punkt in Sichtweite zentriert ist, erhöht sich für einen Moment. Jede Kreatur in der Sphäre muss in der Runde, in der du den Zauber sprichst, einen Rettungswurf auf Konstitution machen. Bei einem misslungenen Schutzwurf erleidet die Kreatur {@damage 2d8} Kraftschaden und ihre Geschwindigkeit wird bis zum Ende ihrer nächsten Runde halbiert. Bei einem erfolgreichen Schutzwurf erleidet die Kreatur nur halb so viel Schaden und ihre Geschwindigkeit wird nicht reduziert.",
+				"Bis zum Beginn deines nächsten Zuges erfordert jeder Gegenstand, der nicht in der Sphäre getragen wird, eine erfolgreiche Stärkeprüfung gegen deinen Zauberschutz-DC, um ihn aufheben oder bewegen zu können."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberslot der Stufe 2 oder höher wirkst, erhöht sich der Schaden um {@scaledamage 2d8|1-9|1d8} für jeden Slot der Stufe 1."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"OBJ",
+				"SGT"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Pulse Wave",
+			"source": "EGW",
+			"page": 188,
+			"level": 3,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Sie erzeugen einen starken Druck, setzen ihn in einem 9 Meter hohen Kegel frei und entscheiden, ob der Druck Lebewesen und Objekte zieht oder schiebt. Jede Kreatur in diesem Kegel muss einen Rettungswurf auf Konstitution machen. Bei einem misslungenen Schutzwurf erleidet die Kreatur {@damage 6d6} Kraftschaden, bei einem erfolgreichen Schutzwurf halb so viel Schaden. Und jede Kreatur, die den Schutzwurf nicht besteht, wird entweder 4,5 Meter zu dir gezogen oder 4,5 Meter von dir weggestoßen, je nachdem, welche Wahl du für den Zauber getroffen hast.",
+				"Außerdem werden ungesicherte Gegenstände, die sich vollständig innerhalb des Kegels befinden, ebenfalls 4,5 Meter gezogen oder geschoben."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberschlitz der Stufe 4 oder höher wirkst, erhöht sich der Schaden um {@scaledamage 6d6|3-9|1d6} und die Entfernung, die gezogen oder geschoben wird, um 1,5 Meter für jeden Schlitz der Stufe 3 oder höher."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"FMV",
+				"OBJ"
+			],
+			"areaTags": [
+				"N"
+			]
+		},
+		{
+			"name": "Ravenous Void",
+			"source": "EGW",
+			"page": 188,
+			"level": 9,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 1000
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "ein kleiner, neunzackiger Stern aus Eisen"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du erschaffst eine Sphäre zerstörerischer Gravitationskraft mit einem Radius von 6 Metern, die auf einen Punkt zentriert ist, den du in Reichweite sehen kannst. Während der Dauer des Zaubers werden die Sphäre und jeder Raum im Umkreis von 3 Metern um sie herum {@quickref difficult terrain||3} und nichtmagische Gegenstände, die sich vollständig innerhalb der Sphäre befinden, zerstört, wenn sie nicht getragen werden.",
+				"Wenn die Sphäre erscheint und zu Beginn jedes deiner Züge, bis der Zauber endet, werden ungesicherte Gegenstände im Umkreis von 3 Metern um die Sphäre zum Zentrum der Sphäre gezogen und enden in einem unbesetzten Raum so nah wie möglich am Zentrum.",
+				"Eine Kreatur, die sich zu Beginn ihres Zuges innerhalb von 3 Metern um die Kugel befindet, muss einen Rettungswurf in Stärke bestehen oder wird geradewegs in das Zentrum der Kugel gezogen und endet in einem unbesetzten Raum so nahe wie möglich am Zentrum. Eine Kreatur, die die Sphäre zum ersten Mal in einem Zug betritt oder ihren Zug dort beginnt, erleidet {@damage 5d10} Kraftschaden und ist {@condition restrained}, bis sie sich nicht mehr in der Sphäre befindet. Befindet sich die Kugel in der Luft, schwebt die Kreatur {@condition restrained} innerhalb der Kugel. Eine Kreatur kann ihre Aktion nutzen, um eine Stärkeüberprüfung gegen den Schutz-DC deines Zaubers zu machen, um diesen {@condition restrained} Zustand bei sich selbst oder einer anderen Kreatur in der Sphäre, die sie erreichen kann, zu beenden. Eine Kreatur, die durch diesen Zauber auf 0 Trefferpunkte reduziert wird, wird zusammen mit allen nichtmagischen Gegenständen, die sie trägt oder bei sich hat, ausgelöscht."
+			],
+			"damageInflict": [
+				"force"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrow": [
+				"strength"
+			],
+			"abilityCheck": [
+				"strength"
+			],
+			"miscTags": [
+				"OBJ",
+				"SGT"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Reality Break",
+			"source": "EGW",
+			"page": 189,
+			"level": 8,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "ein Kristallprisma"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du zerbrichst die Barrieren zwischen Realitäten und Zeitlinien und stürzt eine Kreatur in Aufruhr und Wahnsinn. Das Ziel muss einen Rettungswurf in Weisheit bestehen, sonst kann es bis zum Ende des Zaubers keine Reaktionen zeigen. Das betroffene Ziel muss außerdem zu Beginn jeder seiner Runden einen {@dice d10} würfeln; die gewürfelte Zahl bestimmt, was mit dem Ziel geschieht, wie in der Tabelle Effekte des Realitätsbruchs angegeben.",
+				"Am Ende jeder seiner Runden kann das betroffene Ziel den Rettungswurf in Weisheit wiederholen und bei einem Erfolg den Zauber für sich selbst beenden.",
+				{
+					"type": "table",
+					"caption": "Reality Break Effects",
+					"colLabels": [
+						"d10",
+						"Effect"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1-2",
+							"{@b Vision des fernen Reiches.} Das Ziel erleidet {@damage 6d12} psychischen Schaden und ist {@condition stunned} bis zum Ende des Zuges."
+						],
+						[
+							"3-5",
+							"{@b Ringender Spalt.} Das Ziel muss einen Rettungswurf in Geschicklichkeit machen und erleidet bei einem misslungenen Rettungswurf {@damage 8d12} Kraftschaden, bei einem erfolgreichen Rettungswurf halb so viel Schaden."
+						],
+						[
+							"6-8",
+							"{@b Wurmloch.} Das Ziel wird zusammen mit allem, was es trägt, bis zu 9 Meter weit in einen unbesetzten Raum deiner Wahl teleportiert, den du sehen kannst. Das Ziel erleidet außerdem {@damage 10d12} Kraftschaden und wird {@condition prone} umgestoßen."
+						],
+						[
+							"9-10",
+							"{@b Die Kälte der dunklen Leere.} Das Ziel erleidet {@damage 10d12} Kälteschaden und ist {@condition blinded} bis zum Ende der Runde."
+						]
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic",
+				"force",
+				"cold"
+			],
+			"conditionInflict": [
+				"stunned",
+				"prone",
+				"blinded"
+			],
+			"savingThrow": [
+				"wisdom",
+				"dexterity"
+			],
+			"miscTags": [
+				"RO",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sapping Sting",
+			"source": "EGW",
+			"page": 189,
+			"level": 0,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du entziehst einer Kreatur, die du in Reichweite siehst, die Lebenskraft. Das Ziel muss einen Rettungswurf auf die Konstitution bestehen oder erleidet {@damage 1d4} nekrotischen Schaden und fällt {@condition prone}.",
+				"Der Schaden dieses Zaubers erhöht sich um {@dice 1d4}, wenn du die 5. Stufe ({@dice 2d4}), die 11. Stufe ({@dice 3d4}) und die 17. Stufe ({@dice 4d4}) erreichst."
+			],
+			"scalingLevelDice": {
+				"label": "necrotic damage",
+				"scaling": {
+					"1": "1d4",
+					"5": "2d4",
+					"11": "3d4",
+					"17": "4d4"
+				}
+			},
+			"damageInflict": [
+				"necrotic"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Temporal Shunt",
+			"source": "EGW",
+			"page": 189,
+			"level": 5,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "taken when a creature you can see makes an attack roll or starts to cast a spell"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Du zielst auf die auslösende Kreatur, die einen Rettungswurf in Weisheit bestehen muss, oder sie verschwindet, wird an einen anderen Punkt in der Zeit geschleudert und der Angriff geht daneben oder der Zauber ist umsonst. Zu Beginn seines nächsten Zuges erscheint das Ziel wieder an der Stelle, an der es sich befand, oder im nächstgelegenen unbesetzten Raum. Das Ziel kann sich nicht daran erinnern, dass du den Zauber gewirkt hast oder dass es von ihm betroffen war."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberslot der Stufe 6 oder höher wirkst, kannst du für jeden Slot über der Stufe 5 eine zusätzliche Kreatur als Ziel wählen. Alle Ziele müssen sich innerhalb von 9 Metern voneinander befinden."
+					]
+				}
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Tether Essence",
+			"source": "EGW",
+			"page": 189,
+			"level": 7,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "eine Spule mit Platinkordel im Wert von mindestens 250 gp, die der Zauber verbraucht",
+					"cost": 25000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Zwei Kreaturen, die du in Reichweite sehen kannst, müssen einen Rettungswurf auf Konstitution machen, mit Nachteil, wenn sie weniger als 9 Meter voneinander entfernt sind. Jede der beiden Kreaturen kann den Schutzwurf freiwillig verwerfen. Wenn einer der beiden Schutzwürfe gelingt, hat der Zauber keine Wirkung. Scheitern beide Schutzwürfe, sind die Kreaturen für die Dauer des Zaubers magisch miteinander verbunden, unabhängig von der Entfernung zwischen ihnen. Wenn einer der beiden Kreaturen Schaden zugefügt wird, wird derselbe Schaden auch der anderen zugefügt. Wenn einer der beiden Kreaturen Trefferpunkte zugefügt werden, erhält die andere Kreatur die gleiche Anzahl an Trefferpunkten zurück. Wenn eine der gefesselten Kreaturen auf 0 Trefferpunkte reduziert wird, endet der Zauber für beide. Wenn der Zauber bei einer Kreatur endet, endet er bei beiden."
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Time Ravage",
+			"source": "EGW",
+			"page": 189,
+			"level": 9,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "eine mit Diamantenstaub gefüllte Sanduhr im Wert von mindestens 5.000 Gp, die der Zauberspruch verbraucht",
+					"cost": 500000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du zielst auf eine Kreatur, die du in Reichweite siehst, und unterziehst ihre physische Form der Verwüstung durch schnelle Alterung. Das Ziel muss einen Rettungswurf auf seine Konstitution machen und erleidet bei einem misslungenen Rettungswurf {@damage 10d12} nekrotischen Schaden, bei einem erfolgreichen Rettungswurf halb so viel Schaden. Wenn der Schutzwurf misslingt, altert das Ziel ebenfalls bis zu dem Punkt, an dem es nur noch 30 Tage hat, bevor es an Altersschwäche stirbt. In diesem gealterten Zustand hat das Ziel einen Nachteil bei Angriffswürfen, Fähigkeitsprüfungen und Rettungswürfen, und seine Gehgeschwindigkeit ist halbiert. Nur der {@spell wish}-Zauber oder der {@spell greater restoration}-Zauber, der mit einem Zauberslot der Stufe 9 gewirkt wird, kann diese Effekte beenden und das Ziel in sein früheres Alter zurückversetzen."
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Wristpocket",
+			"source": "EGW",
+			"page": 190,
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"Sie schnipsen mit dem Handgelenk, wodurch ein Gegenstand in Ihrer Hand verschwindet. Der Gegenstand, den nur Sie in der Hand halten können und der nicht mehr als 2,5 Kilogramm wiegen darf, wird in einen extradimensionalen Raum transportiert, wo er für die Dauer der Aktion bleibt.",
+				"Bis der Zauber endet, kannst du deine Aktion nutzen, um den Gegenstand in deine freie Hand zu beschwören, und du kannst deine Aktion nutzen, um den Gegenstand in den extradimensionalen Raum zurückzubringen. Ein Gegenstand, der sich noch in der Dimension der Tasche befindet, wenn der Zauber endet, erscheint in deinem Raum, zu deinen Füßen."
+			],
+			"areaTags": [
+				"ST"
+			]
+		}
+	]
+}

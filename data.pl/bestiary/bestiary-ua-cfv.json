@@ -1,0 +1,190 @@
+{
+	"monster": [
+		{
+			"name": "Beast of the Air",
+			"source": "UAClassFeatureVariants",
+			"page": 8,
+			"summonedByClass": "Ranger|PHB",
+			"size": [
+				"S"
+			],
+			"type": "beast",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"special": "equal the beast's Constitution modifier + your Wisdom modifier + five times your ranger level (the beast has a number of Hit Dice [d6s] equal to your ranger level)"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": 60
+			},
+			"str": 6,
+			"dex": 16,
+			"con": 13,
+			"int": 8,
+			"wis": 14,
+			"cha": 11,
+			"save": {
+				"dex": "+5",
+				"con": "+3",
+				"wis": "+4"
+			},
+			"skill": {
+				"perception": "+4",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"understands the languages you speak"
+			],
+			"trait": [
+				{
+					"name": "Flyby",
+					"entries": [
+						"Bestia nie prowokuje ataku, gdy wylatuje poza zasięg wroga."
+					]
+				},
+				{
+					"name": "Primal Rebirth",
+					"entries": [
+						"Jeśli bestia zginęła w ciągu ostatniej godziny, możesz użyć swojej akcji, aby ją dotknąć i wydać slot zaklęcia 1. poziomu lub wyższy. Bestia wraca do życia po 1 minucie z przywróconymi wszystkimi punktami trafień."
+					]
+				},
+				{
+					"name": "Ready Companion",
+					"entries": [
+						"Jako dodatkową akcję możesz rozkazać bestii, by wykonała atak Rozdrobnienie lub Ukrycie."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Shred",
+					"entries": [
+						"{@atk mw} {@hit 5} do trafienia, zasięg 1,5 m., jeden cel. {@h}{@damage 1d6 + 3} obrażeń kłutych."
+					]
+				}
+			],
+			"traitTags": [
+				"Flyby"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Beast of the Earth",
+			"source": "UAClassFeatureVariants",
+			"page": 9,
+			"summonedByClass": "Ranger|PHB",
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"special": "equal the beast's Constitution modifier + your Wisdom modifier + five times your ranger level (the beast has a number of Hit Dice [d8s] equal to your ranger level)"
+			},
+			"speed": {
+				"walk": 40,
+				"choose": {
+					"from": [
+						"climb",
+						"swim"
+					],
+					"amount": 40,
+					"note": "(your choice when you bond with the beast)"
+				}
+			},
+			"str": 14,
+			"dex": 14,
+			"con": 15,
+			"int": 8,
+			"wis": 14,
+			"cha": 11,
+			"save": {
+				"dex": "+4",
+				"con": "+4",
+				"wis": "+4"
+			},
+			"skill": {
+				"perception": "+4",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"understands the languages you speak"
+			],
+			"trait": [
+				{
+					"name": "Charge",
+					"entries": [
+						"Jeśli bestia przemieści się co najmniej 6 metrów prosto w kierunku celu, a następnie trafi go atakiem maula w tej samej turze, cel otrzyma dodatkowe {@dice 1d6} obrażeń kłutych. DC jest równe DC ochrony przed zaklęciem. Jeśli celem jest istota, musi ona wykonać rzut obronny na Siłę przeciwko współczynnikowi DC ochrony przed zaklęciami lub zostać powalona {@condition prone}."
+					]
+				},
+				{
+					"name": "Primal Rebirth",
+					"entries": [
+						"Jeśli bestia zginęła w ciągu ostatniej godziny, możesz użyć swojej akcji, aby ją dotknąć i wydać slot zaklęcia 1. poziomu lub wyższy. Bestia wraca do życia po 1 minucie z przywróconymi wszystkimi punktami trafień."
+					]
+				},
+				{
+					"name": "Ready Companion",
+					"entries": [
+						"Jako dodatkową akcję możesz rozkazać bestii, by wykonała atak maczugą lub ukryła się."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Maul",
+					"entries": [
+						"{@atk mw} {@hit 4} do trafienia, zasięg 1,5 m., jeden cel. {@h}{@damage 1d6 + 2} obrażeń kłutych."
+					]
+				}
+			],
+			"attachedItems": [
+				"maul|phb"
+			],
+			"traitTags": [
+				"Charge"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"hasToken": true
+		}
+	]
+}

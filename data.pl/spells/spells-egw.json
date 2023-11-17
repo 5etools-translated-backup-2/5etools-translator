@@ -1,0 +1,840 @@
+{
+	"spell": [
+		{
+			"name": "Dark Star",
+			"source": "EGW",
+			"page": 186,
+			"level": 8,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 150
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "odłamek onyksu i kropla krwi rzucającego zaklęcie, z których oba są zużywane.",
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Zaklęcie to tworzy kulę skupioną na wybranym punkcie w zasięgu. Kula może mieć promień do 12 metrów. Obszar wewnątrz tej kuli wypełnia magiczna ciemność i miażdżąca siła grawitacji.",
+				"Przez cały czas trwania obszar działania zaklęcia wynosi {@quickref difficult terrain||3}. Istota widząca w ciemnościach nie może widzieć przez magiczną ciemność, a niemagiczne światło nie może jej oświetlić. W obszarze tym nie może powstać żaden dźwięk ani przez niego przejść. Stworzenie lub przedmiot znajdujący się całkowicie wewnątrz kuli jest odporny na obrażenia od piorunów, a stworzenia znajdujące się całkowicie wewnątrz kuli są odporne na obrażenia od piorunów {@condition deafened}. Rzucenie zaklęcia zawierającego komponent słowny jest tam niemożliwe.",
+				"Każde stworzenie, które wejdzie na obszar działania zaklęcia po raz pierwszy w turze lub rozpocznie tam swoją turę, musi wykonać rzut na uratowanie Konstytucji. W przypadku nieudanego testu otrzymuje {@damage 8d10} obrażeń od siły, a w przypadku udanego testu - połowę tych obrażeń. Stworzenie zredukowane do 0 punktów życia przez te obrażenia ulega dezintegracji. Zdezintegrowana istota i wszystko, co ma na sobie i co nosi, z wyjątkiem magicznych przedmiotów, zamienia się w kupkę szarego pyłu."
+			],
+			"damageInflict": [
+				"force"
+			],
+			"conditionInflict": [
+				"deafened"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"DFT",
+				"OBJ"
+			],
+			"areaTags": [
+				"S"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Fortune's Favor",
+			"source": "EGW",
+			"page": 186,
+			"level": 2,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "biała perła o wartości co najmniej 100 gp, którą zaklęcie zużywa",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Przekazujesz ukryte szczęście sobie lub jednemu chętnemu stworzeniu, które widzisz w zasięgu. Kiedy wybrana istota wykona atak, test umiejętności lub rzut ratunkowy przed końcem działania zaklęcia, może rzucić to zaklęcie na siebie, aby rzucić dodatkowe {@dice d20} i wybrać, którego z {@dice d20} użyć. Alternatywnie, kiedy przeciwko wybranemu stworzeniu zostanie wykonany atak, może ono rzucić to zaklęcie, aby rzucić {@dice d20} i wybrać, którego z {@dice d20} użyć - swojego czy atakującego.",
+				"Jeśli oryginalny {@dice d20} rzut ma przewagę lub niekorzyść, stwór wykonuje dodatkowy {@dice d20} rzut po zastosowaniu przewagi lub niekorzyści do pierwotnego rzutu."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Kiedy rzucasz to zaklęcie, używając gniazda zaklęć na poziomie 3. lub wyższym, możesz obrać za cel jedno dodatkowe stworzenie za każdy poziom gniazda powyżej 2."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Gift of Alacrity",
+			"source": "EGW",
+			"page": 186,
+			"level": 1,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"Dotykasz chętną istotę. Na czas trwania ataku cel może dodać {@dice 1d8} do swoich ruchów inicjatywy."
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Gravity Fissure",
+			"source": "EGW",
+			"page": 187,
+			"level": 6,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "line",
+				"distance": {
+					"type": "feet",
+					"amount": 100
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "garść opiłków żelaza"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Manifestujesz wąwóz energii grawitacyjnej w linii wychodzącej od ciebie o długości 3 metrów i szerokości 1,5 metra. Każda istota w tej linii musi wykonać rzut obronny na Konstytucję, otrzymując {@damage 8d8} obrażeń od siły w przypadku nieudanego rzutu obronnego lub połowę obrażeń w przypadku udanego rzutu obronnego.",
+				"Każda istota w promieniu 3 metrów od linii, ale nie znajdująca się na niej, musi wykonać udany rzut obronny na Konstytucję lub otrzymać {@damage 8d8} obrażeń od siły i zostać przyciągnięta do linii, dopóki nie znajdzie się w jej obszarze."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Kiedy rzucasz to zaklęcie, używając gniazda zaklęć 7. lub wyższego poziomu, obrażenia zwiększają się o {@scaledamage 8d8|6-9|1d8} za każdy poziom gniazda powyżej 6."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"areaTags": [
+				"L"
+			]
+		},
+		{
+			"name": "Gravity Sinkhole",
+			"source": "EGW",
+			"page": 187,
+			"level": 4,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "czarny marmur"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Kula miażdżącej siły o promieniu 6 metrów tworzy się w widocznym punkcie w zasięgu i szarpie znajdujące się tam istoty. Każda istota w kuli musi wykonać rzut obronny na Konstytucję. W przypadku nieudanego rzutu obronnego, istota otrzymuje {@damage 5d10} obrażeń od siły i jest ciągnięta w linii prostej w kierunku środka kuli, kończąc w niezajętej przestrzeni jak najbliżej środka (nawet jeśli ta przestrzeń znajduje się w powietrzu). Po udanym rzucie obronnym, istota otrzymuje o połowę mniej obrażeń i nie jest ciągnięta."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Kiedy rzucasz to zaklęcie, używając gniazda zaklęć 5. poziomu lub wyższego, obrażenia zwiększają się o {@scaledamage 5d10|4-9|1d10} za każdy poziom gniazda powyżej 4. poziomu."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Immovable Object",
+			"source": "EGW",
+			"page": 187,
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "złoty pył o wartości co najmniej 25 gp, który jest zużywany przez zaklęcie",
+					"cost": 2500,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Dotykasz przedmiotu ważącego nie więcej niż 5 kilogramów i sprawiasz, że zostaje on magicznie unieruchomiony. Ty i istoty, które wskażesz podczas rzucania tego zaklęcia, możecie poruszać obiektem w normalny sposób. Możesz także ustawić hasło, które wypowiedziane w promieniu 1,5 metra od przedmiotu, wyłączy to zaklęcie na 1 minutę.",
+				"Jeśli obiekt jest nieruchomy w powietrzu, może utrzymać ciężar do 4 kilogramów. Większy ciężar powoduje upadek obiektu. W przeciwnym razie istota może użyć akcji, aby wykonać test Siły przeciwko DC ochrony przed zaklęciem. W przypadku powodzenia, istota może przesunąć obiekt na odległość do 3 metrów."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Jeśli rzucisz to zaklęcie, używając slotu na zaklęcie 4. lub 5. poziomu, współczynnik DC przenoszenia przedmiotu wzrasta o 5, może on udźwignąć do 8 kilogramów wagi, a czas trwania efektu wzrasta do 24 godzin. Jeśli rzucisz to zaklęcie używając slotu zaklęć 6. poziomu lub wyższego, współczynnik DC do przeniesienia przedmiotu wzrasta o 10, może on unieść do 20 kilogramów wagi, a efekt jest trwały do momentu rozproszenia."
+					]
+				}
+			],
+			"abilityCheck": [
+				"strength"
+			],
+			"miscTags": [
+				"OBJ"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Magnify Gravity",
+			"source": "EGW",
+			"page": 188,
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Grawitacja w kuli o promieniu 3 metrów, skupionej na punkcie widocznym w zasięgu, wzrasta na chwilę. Każda istota znajdująca się w kuli w turze, w której rzucono zaklęcie, musi wykonać rzut obronny na Konstytucję. W przypadku nieudanego rzutu, istota otrzymuje {@damage 2d8} obrażeń od siły, a jej prędkość zostaje zmniejszona o połowę do końca następnej tury. W przypadku udanego rzutu obronnego, istota otrzymuje o połowę mniej obrażeń i nie zmniejsza się jej prędkość.",
+				"Do początku twojej następnej tury każdy przedmiot, który nie jest noszony lub niesiony w kuli, wymaga udanego testu Wytrzymałości przeciwko twojemu DC obrony przed zaklęciem, aby go podnieść lub przenieść."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Kiedy rzucasz to zaklęcie, używając gniazda zaklęć 2. poziomu lub wyższego, obrażenia zwiększają się o {@scaledamage 2d8|1-9|1d8} za każdy poziom gniazda powyżej 1. poziomu."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"OBJ",
+				"SGT"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Pulse Wave",
+			"source": "EGW",
+			"page": 188,
+			"level": 3,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Tworzysz intensywne ciśnienie, uwalniasz je w 9-metrowym stożku i decydujesz, czy ciśnienie ciągnie, czy pcha stworzenia i przedmioty. Każda istota w tym stożku musi wykonać rzut obronny na Konstytucję. Istota otrzymuje {@damage 6d6} obrażeń od siły w przypadku nieudanego rzutu obronnego lub o połowę mniej obrażeń w przypadku udanego rzutu obronnego. Każda istota, która nie wykona rzutu obronnego, zostanie przyciągnięta na odległość 4,5 metra w twoją stronę lub odepchnięta na odległość 4,5 metra od ciebie, w zależności od wyboru dokonanego podczas rzucania zaklęcia.",
+				"Ponadto niezabezpieczone obiekty, które znajdują się całkowicie wewnątrz stożka, są również ciągnięte lub popychane na odległość 4,5 metra."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Kiedy rzucasz to zaklęcie używając slotu zaklęć 4. poziomu lub wyższego, obrażenia wzrastają o {@scaledamage 6d6|3-9|1d6}, a odległość ciągnięcia lub pchania wzrasta o 1,5 metra za każdy poziom slotu powyżej 3. poziomu."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"FMV",
+				"OBJ"
+			],
+			"areaTags": [
+				"N"
+			]
+		},
+		{
+			"name": "Ravenous Void",
+			"source": "EGW",
+			"page": 188,
+			"level": 9,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 1000
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "mała, dziewięcioramienna gwiazda wykonana z żelaza"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Tworzysz sferę niszczycielskiej siły grawitacyjnej o promieniu 6 metrów skupioną na widocznym punkcie w zasięgu zaklęcia. Przez cały czas trwania zaklęcia kula i przestrzeń w promieniu 3 metrów od niej ulegają {@quickref difficult terrain||3} zniszczeniu, a przedmioty niemagiczne znajdujące się wewnątrz kuli ulegają zniszczeniu, jeśli nie są noszone lub przenoszone.",
+				"W momencie pojawienia się kuli i na początku każdej tury aż do zakończenia działania zaklęcia, niezabezpieczone obiekty w promieniu 3 metrów od kuli są przyciągane w kierunku jej środka, kończąc w niezajętym miejscu jak najbliżej środka.",
+				"Istota, która rozpocznie swoją turę w odległości do 3 metrów od kuli, musi wykonać rzut obronny na Siłę lub zostanie przyciągnięta prosto w kierunku środka kuli, kończąc w niezajętej przestrzeni jak najbliżej środka. Istota, która wejdzie do sfery po raz pierwszy w swojej turze lub rozpocznie w niej swoją turę, otrzymuje {@damage 5d10} obrażeń od siły i {@condition restrained} do momentu opuszczenia sfery. Jeśli sfera znajduje się w powietrzu, {@condition restrained} istota unosi się wewnątrz sfery. Istota może użyć swojej akcji, aby wykonać test Wytrzymałości przeciwko DC ochrony przed zaklęciem, kończąc ten {@condition restrained} stan na sobie lub innej istocie w sferze, do której jest w stanie dosięgnąć. Istota, której to zaklęcie zmniejszyło liczbę punktów życia do 0, zostaje unicestwiona wraz z wszelkimi niemagicznymi przedmiotami, które nosi."
+			],
+			"damageInflict": [
+				"force"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrow": [
+				"strength"
+			],
+			"abilityCheck": [
+				"strength"
+			],
+			"miscTags": [
+				"OBJ",
+				"SGT"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Reality Break",
+			"source": "EGW",
+			"page": 189,
+			"level": 8,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "kryształowy pryzmat"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Rozbijasz bariery pomiędzy rzeczywistościami i liniami czasowymi, wprawiając istotę w zamęt i szaleństwo. Cel musi odnieść sukces w rzucie ratunkowym na Mądrość, w przeciwnym razie nie może podejmować reakcji do końca działania zaklęcia. Na początku każdej swojej tury dotknięty cel musi także rzucić {@dice d10}; wyrzucona liczba określa, co się z nim stanie, jak pokazano w tabeli Efekty Złamania Rzeczywistości.",
+				"Na koniec każdej swojej tury dotknięty czarami cel może powtórzyć rzut ratunkowy na Mądrość, kończąc działanie czaru na sobie w przypadku sukcesu.",
+				{
+					"type": "table",
+					"caption": "Reality Break Effects",
+					"colLabels": [
+						"d10",
+						"Effect"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1-2",
+							"{@b Wizja Dalekiego Królestwa.} Cel otrzymuje {@damage 6d12} obrażeń psychicznych i do końca tury wynosi ono {@condition stunned}."
+						],
+						[
+							"3-5",
+							"{@b Rending Rift.} Cel musi wykonać rzut na Zręczność, otrzymując {@damage 8d12} obrażeń od siły w przypadku nieudanego ataku lub połowę tych obrażeń w przypadku udanego ataku."
+						],
+						[
+							"6-8",
+							"{@b Wormhole.} Cel zostaje teleportowany wraz ze wszystkim, co ma na sobie i co niesie, na odległość do 9 metrów do wybranego przez ciebie niezajętego i widocznego miejsca. Cel otrzymuje również {@damage 10d12} obrażeń od siły i zostaje powalony {@condition prone}."
+						],
+						[
+							"9-10",
+							"{@b Chłód Mrocznych Pustkowi.} Cel otrzymuje {@damage 10d12} obrażeń od zimna i jest {@condition blinded} do końca tury."
+						]
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic",
+				"force",
+				"cold"
+			],
+			"conditionInflict": [
+				"stunned",
+				"prone",
+				"blinded"
+			],
+			"savingThrow": [
+				"wisdom",
+				"dexterity"
+			],
+			"miscTags": [
+				"RO",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sapping Sting",
+			"source": "EGW",
+			"page": 189,
+			"level": 0,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Pozbawiasz witalności jedną istotę, którą widzisz w zasięgu. Celowi musi się udać rzut ratunkowy na Konstytucję albo otrzyma {@damage 1d4} obrażeń nekrotycznych i upadnie {@condition prone}.",
+				"Obrażenia od tego zaklęcia wzrastają o {@dice 1d4} po osiągnięciu 5. poziomu ({@dice 2d4}), 11. poziomu ({@dice 3d4}) i 17. poziomu ({@dice 4d4})."
+			],
+			"scalingLevelDice": {
+				"label": "necrotic damage",
+				"scaling": {
+					"1": "1d4",
+					"5": "2d4",
+					"11": "3d4",
+					"17": "4d4"
+				}
+			},
+			"damageInflict": [
+				"necrotic"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Temporal Shunt",
+			"source": "EGW",
+			"page": 189,
+			"level": 5,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "taken when a creature you can see makes an attack roll or starts to cast a spell"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Celujesz w wyzwalającą istotę, której musi się udać rzut ratunkowy na mądrość, albo zniknie - zostanie wyrzucona do innego punktu w czasie i spowoduje, że atak nie powiedzie się lub zaklęcie zostanie zmarnowane. Na początku swojej następnej tury cel pojawia się tam, gdzie był, lub w najbliższym niezajętym miejscu. Cel nie pamięta, że rzuciłeś zaklęcie lub że ono na niego wpłynęło."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Kiedy rzucasz to zaklęcie używając slotu zaklęć 6. poziomu lub wyższego, możesz obrać za cel jedną dodatkową istotę za każdy slot na poziomie wyższym niż 5. Wszystkie cele muszą znajdować się w odległości 9 metrów od siebie."
+					]
+				}
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Tether Essence",
+			"source": "EGW",
+			"page": 189,
+			"level": 7,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "szpulę platynowego sznura o wartości co najmniej 250 gp, którą zużywa zaklęcie",
+					"cost": 25000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Dwie istoty, które widzisz w zasięgu, muszą wykonać rzut obronny na Konstytucję, z wadą, jeśli znajdują się w odległości 9 metrów od siebie. Każda z istot może dobrowolnie nie wykonać rzutu obronnego. Jeśli test się powiedzie, zaklęcie nie wywoła żadnego efektu. Jeśli oba rzuty się nie powiodą, istoty zostają magicznie połączone na czas trwania zaklęcia, niezależnie od dzielącej je odległości. Jeśli jedno z nich otrzyma obrażenia, takie same obrażenia otrzyma drugie. Jeśli punkty wytrzymałości zostaną przywrócone jednemu z nich, taka sama liczba punktów wytrzymałości zostanie przywrócona drugiemu. Jeśli jedno z uwięzionych stworzeń zostanie zredukowane do 0 punktów wytrzymałości, zaklęcie kończy się na obu. Jeśli zaklęcie zakończy się na jednej istocie, zakończy się na obu."
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Time Ravage",
+			"source": "EGW",
+			"page": 189,
+			"level": 9,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "klepsydra wypełniona diamentowym pyłem o wartości co najmniej 5000 gp, którą zaklęcie zużywa",
+					"cost": 500000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Celujesz w istotę, którą widzisz w zasięgu, poddając jej fizyczną formę wyniszczającemu działaniu szybkiego starzenia się. Cel musi wykonać rzut obronny na Konstytucję i otrzymuje {@damage 10d12} obrażeń nekrotycznych w przypadku nieudanego ataku lub połowę tych obrażeń w przypadku udanego ataku. Jeśli nie powiedzie się, cel starzeje się do tego stopnia, że zostało mu tylko 30 dni, zanim umrze ze starości. W tym stanie cel ma minusy przy atakach, sprawdzaniu umiejętności i rzutach ratunkowych, a jego prędkość chodzenia zmniejsza się o połowę. Tylko zaklęcie {@spell wish} lub {@spell greater restoration} rzucone ze slotu na zaklęcie 9. poziomu może zakończyć te efekty i przywrócić cel do poprzedniego wieku."
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Wristpocket",
+			"source": "EGW",
+			"page": 190,
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"Pstrykasz nadgarstkiem, powodując zniknięcie jednego z przedmiotów w dłoni. Przedmiot, który możesz trzymać tylko ty i który nie może ważyć więcej niż 2,5 kilograma, zostaje przeniesiony do przestrzeni pozawymiarowej, gdzie pozostaje przez cały czas.",
+				"Do momentu zakończenia zaklęcia możesz użyć swojej akcji, aby przywołać przedmiot do wolnej ręki, oraz możesz użyć swojej akcji, aby przywrócić przedmiot do przestrzeni pozawymiarowej. Przedmiot wciąż znajdujący się w płaszczyźnie kieszonkowej w momencie zakończenia zaklęcia pojawia się w twojej przestrzeni, u twoich stóp."
+			],
+			"areaTags": [
+				"ST"
+			]
+		}
+	]
+}

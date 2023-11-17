@@ -1,0 +1,160 @@
+{
+	"spell": [
+		{
+			"name": "Antagonize",
+			"source": "BMT",
+			"page": 50,
+			"level": 3,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "una carta da gioco raffigurante una canaglia"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Si sussurrano parole magiche che inimicano una creatura a scelta nel raggio d'azione. Il bersaglio deve effettuare un tiro salvezza di Saggezza. Se il tiro salvezza fallisce, il bersaglio subisce {@damage 4d4} danni psichici e deve usare immediatamente la sua reazione per effettuare un attacco in mischia contro un'altra creatura a sua scelta che può vedere. Se il bersaglio non può effettuare questo attacco (ad esempio, perché non ha nessuno a portata di mano o perché la sua reazione non è disponibile), ha svantaggio al prossimo tiro per colpire che effettuerà prima dell'inizio del suo prossimo turno. Se il tiro salvezza riesce, il bersaglio subisce solo la metà dei danni."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando si lancia questo incantesimo utilizzando uno slot di 4° livello o superiore, i danni aumentano del {@dice 1d4} per ogni livello di slot superiore al 3°."
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Spirit of Death",
+			"source": "BMT",
+			"page": 50,
+			"level": 4,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "una carta da gioco dorata del valore di almeno 400 gp e raffigurante un avatar della morte",
+					"cost": 40000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Richiami uno spirito che incarna la morte. Lo spirito si manifesta in uno spazio non occupato visibile nel raggio d'azione e utilizza il blocco di statistiche {@creature reaper spirit|BMT}. Lo spirito scompare quando viene ridotto a 0 punti ferita o quando l'incantesimo termina.",
+				"Lo spirito è un alleato di voi e dei vostri compagni. In combattimento, lo spirito condivide il vostro conteggio dell'iniziativa e prende il suo turno immediatamente dopo il vostro. Obbedisce ai vostri comandi verbali (non è richiesta alcuna azione da parte vostra). Se lo spirito non impartisce alcun comando, compie l'azione {@action Dodge} e usa il suo movimento per evitare il pericolo."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando si lancia questo incantesimo utilizzando uno slot incantesimo di 5° livello o superiore, si utilizza il livello più alto ovunque il livello dell'incantesimo compaia nel blocco delle statistiche dello Spirito Mietitore."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Spray of Cards",
+			"source": "BMT",
+			"page": 50,
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 15
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "un mazzo di carte"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Si spruzza un cono di 4,5 metri di carte spettrali. Ogni creatura in quell'area deve effettuare un tiro salvezza di Destrezza. Se il tiro salvezza fallisce, la creatura subisce {@damage 2d10} danni da forza e subisce la condizione {@condition blinded} fino alla fine del suo prossimo turno. Con un tiro salvezza riuscito, la creatura subisce solo la metà dei danni."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando si lancia questo incantesimo utilizzando uno slot di 3° livello o superiore, i danni aumentano del {@dice 1d10} per ogni livello di slot superiore al 2°."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrow": [
+				"dexterity"
+			]
+		}
+	]
+}

@@ -1,0 +1,1671 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM",
+				"CoS"
+			]
+		}
+	},
+	"monster": [
+		{
+			"name": "Avacyn",
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Solar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Solar",
+						"with": "Avacyn",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Moonsilver Spear",
+							"entries": [
+								"月银飞行天使挥舞着一把由地狱熔炉碎片制成的长矛。因该武器的伤害而损失的命中点数只能通过短暂或长时间的休息来恢复，而不能通过再生、魔法或其他方式恢复。每回合一次，当天使使用该武器攻击一个生物时，可以使目标受伤。在受伤生物的每个回合开始时，天使每次伤害它，它都会受到（%0%）坏死性伤害，然后它可以进行（%1%）体质蓄力，如果成功，则终止所有此类伤害对自身的影响。或者，受伤的生物或其 1.5 米范围内的生物可以使用一个动作来进行 {@dc 15} 智慧（{@skill Medicine}）检定，成功后将终止这些伤口对其造成的影响。"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Bruna",
+			"alias": [
+				"Light of Alabaster"
+			],
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Planetar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "planetar",
+						"with": "Bruna",
+						"flags": "i"
+					},
+					"_": {
+						"mode": "addSpells",
+						"will": [
+							"{@spell protection from evil and good}"
+						],
+						"daily": {
+							"1e": [
+								"{@spell dispel evil and good}"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Creepy Doll",
+			"source": "PSI",
+			"page": 25,
+			"size": [
+				"T"
+			],
+			"type": "construct",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 21,
+				"formula": "6d4 + 6"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 6,
+			"dex": 14,
+			"con": 13,
+			"int": 12,
+			"wis": 11,
+			"cha": 10,
+			"skill": {
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed"
+			],
+			"languages": [
+				"speaks and understands the languages known by its creator"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "False Appearance",
+					"entries": [
+						"虽然这个令人毛骨悚然的娃娃保持不动，但它与一个普通的无生命的娃娃没有区别。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"令人毛骨悚然的娃娃用它的剪刀进行一次攻击，并使用精神攻击。"
+					]
+				},
+				{
+					"name": "Scissors",
+					"entries": [
+						"{@atk mw} {@hit 4} 命中，距离 1.5 米，一个目标。{@h}7 ({@damage 2d4 + 2}) 砍伤。"
+					]
+				},
+				{
+					"name": "Psychic Assault",
+					"entries": [
+						"令人毛骨悚然的玩偶会以它能看到的 3 米范围内有大脑的生物为目标。目标必须在 {@dc 12} 智力蓄力中成功，否则会受到 11 ({@damage 2d10}) 精神伤害。如果失败，也要掷 {@dice 3d6}。如果总和等于或超过目标的智力值，智力值就会降为 0。目标会受到 {@condition stunned} 的伤害，直到它从 {@spell greater restoration} 法术或类似魔法中恢复至少一点智力。"
+					]
+				},
+				{
+					"name": "Body Exchange",
+					"entries": [
+						"令人毛骨悚然的玩偶会与它周围 1.5 米内的（%0%）类人生物展开智力竞赛。如果它赢得了比赛，令人毛骨悚然的玩偶的灵魂就会栖息在目标的身体里，而目标的灵魂则会进入令人毛骨悚然的玩偶的身体。令人毛骨悚然的玩偶会完全控制目标的身体。它保留自己的排列、智力、智慧、魅力以及对（%1%）和（%2%）的免疫力。此外，它还会使用附身目标的统计数据，但不会获得目标的知识、类别特征或精通。目标栖息在令人毛骨悚然的玩偶身体中时，会保留其排列、智力、智慧和魅力。",
+						"身体交换会一直持续到娃娃的灵魂被魔法逼出。(%0%）咒语可以实现这一效果，尽管玩偶不属于该咒语通常会结束附身的生物类型）。身体和玩偶必须相距在 1.5 米以内才能生效。在赢得智力竞赛或交换结束后的 24 小时内，目标对该玩偶的身体交换免疫。"
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"S",
+				"Y"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"savingThrowForced": [
+				"intelligence"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Demonlord of Ashmouth",
+			"source": "PSI",
+			"page": 37,
+			"_copy": {
+				"name": "Horned Devil",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "devil",
+						"with": "demon"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"恶魔会进行三次近战攻击：两次用战斧，一次用尾巴。它可以使用 \"火焰喷射 \"来代替任何近战攻击。"
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Fork",
+							"items": {
+								"name": "Battleaxe",
+								"entries": [
+									"{@atk mw} {@hit 10} 命中，距离 3 米，一个目标。{@h}15 ({@damage 2d8 + 6}) 次砍击伤害，如果双手使用，则为 17 ({@damage 2d10 + 6}) 次砍击伤害。"
+								]
+							}
+						}
+					]
+				}
+			},
+			"damageTags": [
+				"F",
+				"P",
+				"S"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Flight Alabaster Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"_": {
+						"mode": "addSpells",
+						"will": [
+							"{@spell protection from evil and good}"
+						],
+						"daily": {
+							"1e": [
+								"{@spell dispel evil and good}"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flight Goldnight Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Goldnight Menace",
+							"entries": [
+								"作为一个动作，飞天金夜天使可以让敌人感到恐惧。天使所选择的每一个在其 36 米范围内并意识到它的生物都必须在智慧蓄力中成功，否则会在 1 分钟内变成（%0%）。该蓄力的DC与天使的天生法术特质相同。生物可以在每一回合结束时重复该蓄力攻击，如果成功则结束对自身的影响。如果生物的蓄力成功或效果结束，该生物在接下来的 24 小时内对该天使的 \"黄金夜威胁 \"免疫。"
+							]
+						}
+					}
+				}
+			},
+			"cr": "11",
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flight of Moonsilver Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Moonsilver Spear",
+							"entries": [
+								"月银飞行天使挥舞着一把由地狱熔炉碎片制成的长矛。因该武器的伤害而损失的命中点数只能通过短暂或长时间的休息来恢复，而不能通过再生、魔法或其他方式恢复。每回合一次，当天使使用该武器攻击一个生物时，可以使目标受伤。在受伤生物的每个回合开始时，天使每次伤害它，它都会受到（%0%）坏死性伤害，然后它可以进行（%1%）体质蓄力，如果成功，则终止所有此类伤害对自身的影响。或者，受伤的生物或其 1.5 米范围内的生物可以使用一个动作来进行 {@dc 15} 智慧（{@skill Medicine}）检定，成功后将终止这些伤口对其造成的影响。"
+							]
+						}
+					}
+				}
+			},
+			"damageTags": [
+				"B",
+				"N",
+				"R"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Geist",
+			"source": "PSI",
+			"page": 19,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 45,
+				"formula": "10d8"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": 40
+			},
+			"str": 7,
+			"dex": 13,
+			"con": 10,
+			"int": 10,
+			"wis": 12,
+			"cha": 17,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"acid",
+				"fire",
+				"lightning",
+				"thunder",
+				"bludgeoning"
+			],
+			"immune": [
+				"cold",
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"grappled"
+			],
+			"languages": [
+				"any languages it knew in life"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Ethereal Sight",
+					"entries": [
+						"地精在物质界时可以看到 18 米外的虚无界，反之亦然。"
+					]
+				},
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"地师可以在其他生物和物体中移动，就像他们是（%0%）一样。如果它在一个物体内结束它的回合，它会受到5（（%1%））的力量伤害。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Withering Touch",
+					"entries": [
+						"{@atk mw} {@hit 5} 命中，距离 1.5 米，对一个目标造成 {@h}17 ({@damage 4d6 + 3}) 坏死伤害。"
+					]
+				},
+				{
+					"name": "Etherealness",
+					"entries": [
+						"地师从物质位面进入虚空位面，或反之亦然。当它在边界虚无界时，它在物质界是可见的，反之亦然，但它不能影响或被另一界的任何东西所影响。"
+					]
+				},
+				{
+					"name": "Possession {@recharge}",
+					"entries": [
+						"地精能看到的 1.5 米范围内的生物必须在{@dc 13}魅力蓄力中成功，否则会被地精附身；然后地精消失，目标会{@condition incapacitated}并失去对身体的控制。地精现在控制身体，但不会剥夺目标的意识。地精无法成为任何攻击、咒语或其他效果的目标，除了那些能让人变成亡灵的效果，而且它保留了自己的排列、智力、智慧、魅力，以及对（%2%）和（%3%）的免疫力。此外，它还会使用被附身目标的统计数据，但不会获得目标的知识、类别特征或精通。附身会持续到身体的命中点数降为 0、地精以额外行动结束附身，或者地精被 {@spell dispel evil and good} 法术之类的效果转化或强制驱离。附身结束后，地精将重新出现在尸体周围 1.5 米内的空地上。在蓄力攻击成功后或附身结束后的 24 小时内，目标对该地精的附身免疫。该地精可以以生物的尸体为目标，有效地利用自身的生命力将尸体活化为僵尸。如果地灵结束附魔，被附魔的尸体会使用僵尸的统计数据并恢复死亡状态。"
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Geist Powers",
+					"entries": [
+						"地精就像他们生前的人类一样多种多样。除了所有地精都具有的特征和行为外，每个地精还可能具有以下任何一种特殊特征。",
+						{
+							"name": "Intangible Virtue",
+							"type": "entries",
+							"entries": [
+								"被白衣天使附身的生物会获得对{@condition charmed}和{@condition frightened}条件的免疫，以及对来自非魔法攻击的重击、穿刺和切割伤害的抵抗。当生物被附身时，地质学家可以让它控制自己的身体，但地质学家可以在任何时候重新获得控制权（不需要行动）。"
+							]
+						},
+						{
+							"name": "Horrifying Visage",
+							"type": "entries",
+							"entries": [
+								"黑色结盟的地精即使附身在活人身上，也能让自己变得可怕。在地精周围 18 米内能看到它的每个非亡灵生物都必须在 {@dc 13} 智慧蓄力中成功，否则会 {@condition frightened} 1 分钟。如果失败 5 次或更多，目标也会衰老 {@dice 1d4 × 10} 年。一个 {@condition frightened} 目标可以在其每个回合结束时重复施法，一旦成功就会终止对自身的 {@condition frightened} 条件。如果目标的蓄力成功或效果结束，该目标在接下来的 24 小时内将对该地精的恐怖面容免疫。衰老效果可以用 {@spell greater restoration} 法术逆转，但只能在发生后的 24 小时内逆转。"
+							]
+						}
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"N"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Geist: Horrifying Visage",
+					"source": "PSI",
+					"_mod": {
+						"action": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Horrifying Visage",
+								"entries": [
+									"黑色结盟的地精即使附身在活人身上，也能让自己变得可怕。在地精周围 18 米内能看到它的每个非亡灵生物都必须在 {@dc 13} 智慧蓄力中成功，否则会 {@condition frightened} 1 分钟。如果失败 5 次或更多，目标也会衰老 {@dice 1d4 × 10} 年。一个 {@condition frightened} 目标可以在其每个回合结束时重复施法，一旦成功就会终止对自身的 {@condition frightened} 条件。如果目标的蓄力成功或效果结束，该目标在接下来的 24 小时内将对该地精的恐怖面容免疫。衰老效果可以用 {@spell greater restoration} 法术逆转，但只能在发生后的 24 小时内逆转。"
+								]
+							}
+						}
+					},
+					"variant": null,
+					"conditionInflict": [
+						"frightened",
+						"incapacitated"
+					]
+				},
+				{
+					"name": "Geist: Intangible Virtue",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Intangible Virtue",
+								"entries": [
+									"被白衣天使附身的生物会获得对{@condition charmed}和{@condition frightened}条件的免疫，以及对来自非魔法攻击的重击、穿刺和切割伤害的抵抗。当生物被附身时，地质学家可以让它控制自己的身体，但地质学家可以在任何时候重新获得控制权（不需要行动）。"
+								]
+							}
+						}
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Gisela",
+			"alias": [
+				"Blade of Goldnight",
+				"Blade of the Church"
+			],
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Planetar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Planetar",
+						"with": "Gisela",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Goldnight Menace",
+							"entries": [
+								"作为一个动作，飞天金夜天使可以让敌人感到恐惧。天使所选择的每一个在其 36 米范围内并意识到它的生物都必须在智慧蓄力中成功，否则会在 1 分钟内变成（%0%）。该蓄力的DC与天使的天生法术特质相同。生物可以在每一回合结束时重复该蓄力攻击，如果成功则结束对自身的影响。如果生物的蓄力成功或效果结束，该生物在接下来的 24 小时内对该天使的 \"黄金夜威胁 \"免疫。"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Host of Herons Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Heron Protection",
+							"entries": [
+								"每当苍鹭之主的天使或其 3 米范围内的友方生物进行一次蓄力攻击时，该生物都会获得相当于天使魅力修正值的蓄力攻击加成。天使必须有意识才能获得或给予该加成。"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Keeper of the Feather",
+			"group": null,
+			"source": "PSI",
+			"page": 40,
+			"_copy": {
+				"name": "Wereraven",
+				"source": "VRGR",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "wereraven",
+						"with": "keeper"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Beak (Raven or Hybrid Form Only)",
+							"items": {
+								"name": "Beak (Raven or Hybrid Form Only)",
+								"entries": [
+									"{@atk mw} {@hit 4} 命中，距离 1.5 米，一个目标。{@h}1 乌鸦形态下的穿刺伤害，或 4 ({@damage 1d4 + 2})混合形态下的穿刺伤害。"
+								]
+							}
+						}
+					]
+				}
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"守护者是一个4级的施法者。它的法术能力是智慧（法术救赎（%0%），用法术攻击击中（%1%））。它有以下德鲁伊法术的准备。"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft}",
+								"{@spell produce flame}",
+								"{@spell shillelagh}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell entangle}",
+								"{@spell longstrider}",
+								"{@spell speak with animals}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell animal messenger}",
+								"{@spell barkskin}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"damageTagsSpell": [
+				"F",
+				"T"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Necro-Alchemist",
+			"alias": [
+				"Geistmage"
+			],
+			"source": "PSI",
+			"page": 20,
+			"_copy": {
+				"name": "Mage",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "mage",
+						"with": "Necro-Alchemist",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sigarda",
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Planetar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Planetar",
+						"with": "Sigarda",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Heron Protection",
+							"entries": [
+								"每当苍鹭之主的天使或其 3 米范围内的友方生物进行一次蓄力攻击时，该生物都会获得相当于天使魅力修正值的蓄力攻击加成。天使必须有意识才能获得或给予该加成。"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Skaab",
+			"source": "PSI",
+			"page": 20,
+			"_copy": {
+				"name": "Flesh Golem",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "golem",
+						"with": "skaab",
+						"flags": "i"
+					}
+				}
+			},
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Skaabs",
+					"entries": [
+						"正如《怪物手册》中所描述的那样，最基本的斯卡布只是 {@creature flesh golem|MM|flesh golems}。但每个斯卡伯伦的愿望都是制作出真正独一无二的杰作，一个缝制者可能会制作出具有以下特殊特征之一的高仑。",
+						{
+							"type": "entries",
+							"name": "Armor Plating",
+							"page": 20,
+							"entries": [
+								"将Skaab的装甲等级提高到14，并将其挑战等级提高到6（2,300XP）。"
+							]
+						},
+						{
+							"name": "Six Arms",
+							"type": "entries",
+							"entries": [
+								"斯卡布的多重攻击动作允许它进行三次猛烈攻击。将其挑战等级提高到6（2,300 XP）。"
+							]
+						},
+						{
+							"name": "Three Heads",
+							"type": "entries",
+							"entries": [
+								"在智慧（（%0%））检查和对被（%1%）、（%2%）、（%3%）和被击倒（%4%）的拯救动作上，Skaab有优势。(它的挑战等级不会改变。)"
+							]
+						},
+						{
+							"name": "Skaab Goliath",
+							"type": "entries",
+							"entries": [
+								"这个Skaab有三个头，六条胳膊，还有装甲。将其挑战等级提高到7级（2,900 XP）。"
+							]
+						},
+						{
+							"name": "Winged Skaab",
+							"type": "entries",
+							"entries": [
+								"Skaab 的飞行速度为 9 米。"
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"_versions": [
+				{
+					"name": "Skaab: Armor Plating",
+					"source": "PSI",
+					"ac": [
+						{
+							"ac": 14,
+							"from": [
+								"armor plating"
+							]
+						}
+					],
+					"cr": "6",
+					"variant": null
+				},
+				{
+					"name": "Skaab: Goliath",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Three Heads",
+								"entries": [
+									"斯卡布在智慧（{@skill Perception}）检查和抗击 {@condition blinded}、{@condition deafened}、{@condition stunned} 和击倒 {@condition unconscious} 的蓄力投掷中占有优势。"
+								]
+							}
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"Skaab 发起三次猛击。"
+								]
+							}
+						}
+					},
+					"ac": [
+						{
+							"ac": 14,
+							"from": [
+								"armor plating"
+							]
+						}
+					],
+					"cr": "7",
+					"variant": null
+				},
+				{
+					"name": "Skaab: Six Arms",
+					"source": "PSI",
+					"_mod": {
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"Skaab 发起三次猛击。"
+								]
+							}
+						}
+					},
+					"cr": "6",
+					"variant": null
+				},
+				{
+					"name": "Skaab: Three Heads",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Three Heads",
+								"entries": [
+									"斯卡布在智慧（{@skill Perception}）检查和抗击 {@condition blinded}、{@condition deafened}、{@condition stunned} 和击倒 {@condition unconscious} 的蓄力投掷中占有优势。"
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Skaab: Winged",
+					"source": "PSI",
+					"speed": {
+						"walk": 30,
+						"fly": 30
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Strefan Maurer",
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 33,
+			"_copy": {
+				"name": "Strahd von Zarovich",
+				"source": "CoS",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Strahd",
+						"with": "Strefan",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "replaceArr",
+						"replace": "Vampire Weaknesses",
+						"items": {
+							"type": "entries",
+							"name": "Vampire Vulnerabilities",
+							"source": "PSI",
+							"page": 16,
+							"entries": [
+								"用活木砍成的武器对吸血鬼特别有效，但任何武器都能伤害或杀死他们。吸血鬼无法越过有月亮倒影的流水，被阿瓦辛（（%0%））祝福过的水会像酸一样灼伤吸血鬼的肉体。吸血鬼在银镜（包括银背玻璃镜）中的倒影会呈现出吸血鬼没有吸血鬼状态时的样子--既不是吸血鬼的真实面貌，也不是吸血鬼的光彩，而是一个正常的人类，瑕不掩瑜。因此，吸血鬼千方百计地躲避镜子，任何形式的银都会让他们感到不安。"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Vampire Neonate",
+			"source": "PSI",
+			"page": 17,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 82,
+				"formula": "11d8 + 33"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 16,
+			"int": 11,
+			"wis": 10,
+			"cha": 12,
+			"save": {
+				"dex": "+6",
+				"wis": "+3"
+			},
+			"skill": {
+				"perception": "+3",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks not made with living wood weapons",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Common"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Regeneration",
+					"entries": [
+						"如果吸血鬼至少有1个命中率，则在其回合开始时重新获得10个命中率。如果吸血鬼受到辐射伤害或圣水伤害，这个特性在吸血鬼的下一个回合开始时不会发挥作用。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"吸血鬼进行两次攻击，其中只有一次可以是咬人攻击。"
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 6} 命中，距离 1.5 米，一个生物。{@h}8 ({@damage 2d4 + 3}) 砍伤。吸血鬼可以抓住目标（逃脱 {@dc 13}），而不是造成伤害。"
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw}{@hit 6}命中，距离 1.5 米，一个愿意的生物，或吸血鬼{@condition grappled}、{@condition incapacitated}或{@condition restrained}的生物。{@h}6 ({@damage 1d6 + 3}) 穿透伤害外加 7 ({@damage 2d6}) 坏死伤害。目标的最大命中点数会减少，减少的数值等于受到的坏死伤害，吸血鬼会恢复等于该数值的命中点数。减免效果持续到目标完成长时间休息。如果该效果将目标的最大命中点数降至 0，则目标死亡。"
+					]
+				},
+				{
+					"name": "Vampiric Glamer",
+					"entries": [
+						"吸血鬼用影响心智的魔法掩盖自己的形态，使他人认为它是一个同样大小和形状的美丽人类。如果吸血鬼采取额外的行动来结束它，或者吸血鬼死亡，那么这个幻觉就会结束。一个能看到吸血鬼的生物可以采取行动对它进行视觉检查，结束对自己的精神影响，并通过成功的（%0%）智慧（感知）检查看到吸血鬼的真实形态。"
+					]
+				},
+				{
+					"name": "Aura of Silence",
+					"entries": [
+						"吸血鬼在半径 0.6 米的范围内披上沉默斗篷。在半径范围内，效果与 {@spell silence} 法术相同。"
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Elder Vampires",
+					"entries": [
+						"基本的吸血鬼统计资料代表了一个 \"新生儿\"--一个新产生的吸血鬼。年长的吸血鬼可以学习许多不同种类的强大魔法，并可能具有以下任何特征和能力。",
+						{
+							"type": "entries",
+							"name": "Shapechanger",
+							"entries": [
+								"吸血鬼拥有《怪物手册》中（%0%）的变身者特质，以及变身者标签。有些吸血鬼可以变成蝙蝠形态，有些可以变成雾状，还有少数可以选择两种形态。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Charm",
+							"entries": [
+								"吸血鬼拥有《怪物手册》中的（%0%）的魅惑动作。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Flight",
+							"entries": [
+								"吸血鬼的飞行速度为 9 米。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Gorger",
+							"entries": [
+								"吸血鬼在近战攻击卷上有优势，但对它的攻击卷有优势。"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Spellcasting",
+							"entries": [
+								"吸血鬼拥有巫师或牧师的法术能力。"
+							]
+						}
+					]
+				}
+			],
+			"traitTags": [
+				"Regeneration"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"HPR",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Elder Vampire: All Abilities",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Shapechanger",
+									"entries": [
+										"If the vampire isn't in sunlight or running water, it can use its action to polymorph into a Tiny bat or a Medium cloud of mist, or back into its true form.",
+										"While in bat form, the vampire can't speak, its walking speed is 5 feet, and it has a flying speed of 30 feet. Its statistics, other than its size and speed, are unchanged. Anything it is wearing transforms with it, but nothing it is carrying does. It reverts to its true form if it dies.",
+										"While in mist form, the vampire can't take any actions, speak, or manipulate objects. It is weightless, has a flying speed of 20 feet, can hover, and can enter a hostile creature's space and stop there. In addition, if air can pass through a space, the mist can do so without squeezing, and it can't pass through water. It has advantage on Strength, Dexterity, and Constitution saving throws, and it is immune to all nonmagical damage, except the damage it takes from sunlight."
+									]
+								},
+								{
+									"name": "Gorger",
+									"entries": [
+										"The vampire has advantage on melee attack rolls, but attack rolls against it have advantage."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Charm",
+								"entries": [
+									"吸血鬼的目标是它能看到的 9 米范围内的一个人形生物。如果目标能看到吸血鬼，目标必须在（%0%）智慧蓄力中成功抵御该魔法，否则就会被吸血鬼（%1%）。目标（%2%）会将吸血鬼视为值得信赖的朋友，并受到关注和保护。虽然目标不受吸血鬼的控制，但它会以最有利的方式接受吸血鬼的要求或行动，并自愿成为吸血鬼咬伤的攻击目标。",
+									"每次吸血鬼或吸血鬼的同伴对目标造成伤害时，它都可以重复进行蓄力一击，如果成功则结束对自身的效果。否则，效果会持续 24 小时，或直到吸血鬼被消灭、处于与目标不同的位面、或采取额外行动结束效果。"
+								]
+							}
+						}
+					},
+					"type": {
+						"type": "undead",
+						"tags": [
+							"shapechanger"
+						]
+					},
+					"speed": {
+						"walk": 30,
+						"fly": 30
+					},
+					"spellcasting": [
+						{
+							"name": "Cleric Spellcasting",
+							"headerEntries": [
+								"{@note {@creature Priest|MM} 被用作教士的示例。}",
+								"吸血鬼是五级施法者。它的施法能力是智慧（法术救赎 {@dc 13}，法术攻击命中率 {@hit 5}）。吸血鬼准备了以下牧师法术："
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell light}",
+										"{@spell sacred flame}",
+										"{@spell thaumaturgy}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell cure wounds}",
+										"{@spell guiding bolt}",
+										"{@spell sanctuary}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell lesser restoration}",
+										"{@spell spiritual weapon}"
+									]
+								},
+								"3": {
+									"slots": 2,
+									"spells": [
+										"{@spell dispel magic}",
+										"{@spell spirit guardians}"
+									]
+								}
+							},
+							"ability": "wis"
+						},
+						{
+							"name": "Wizard Spellcasting",
+							"headerEntries": [
+								"{@note {@creature Mage|MM} 被用作向导的示例。}",
+								"吸血鬼是九级施法者。它的施法能力是智力（法术救赎 {@dc 14}，法术攻击命中率 {@hit 6}）。吸血鬼准备了以下巫师法术："
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell fire bolt}",
+										"{@spell light}",
+										"{@spell mage hand}",
+										"{@spell prestidigitation}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell detect magic}",
+										"{@spell mage armor}",
+										"{@spell magic missile}",
+										"{@spell shield}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell misty step}",
+										"{@spell suggestion}"
+									]
+								},
+								"3": {
+									"slots": 3,
+									"spells": [
+										"{@spell counterspell}",
+										"{@spell fireball}",
+										"{@spell fly}"
+									]
+								},
+								"4": {
+									"slots": 3,
+									"spells": [
+										"{@spell greater invisibility}",
+										"{@spell ice storm}"
+									]
+								},
+								"5": {
+									"slots": 1,
+									"spells": [
+										"{@spell cone of cold}"
+									]
+								}
+							},
+							"ability": "int"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Charm",
+					"source": "PSI",
+					"_mod": {
+						"action": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Charm",
+								"entries": [
+									"吸血鬼的目标是它能看到的 9 米范围内的一个人形生物。如果目标能看到吸血鬼，目标必须在（%0%）智慧蓄力中成功抵御该魔法，否则就会被吸血鬼（%1%）。目标（%2%）会将吸血鬼视为值得信赖的朋友，并受到关注和保护。虽然目标不受吸血鬼的控制，但它会以最有利的方式接受吸血鬼的要求或行动，并自愿成为吸血鬼咬伤的攻击目标。",
+									"每次吸血鬼或吸血鬼的同伴对目标造成伤害时，它都可以重复进行蓄力一击，如果成功则结束对自身的效果。否则，效果会持续 24 小时，或直到吸血鬼被消灭、处于与目标不同的位面、或采取额外行动结束效果。"
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Flight",
+					"source": "PSI",
+					"speed": {
+						"walk": 30,
+						"fly": 30
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Gorger",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Gorger",
+								"entries": [
+									"吸血鬼在近战攻击卷上有优势，但对它的攻击卷有优势。"
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Shapechanger",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Shapechanger",
+								"entries": [
+									"如果吸血鬼不在阳光下或流水中，它可以用行动变形成一只小蝙蝠或一团中等大小的雾气，或者变回原形。",
+									"在蝙蝠形态下，吸血鬼不会说话，行走速度为 1.5 米，飞行速度为 9 米。除了体型和速度外，它的其他数据不变。它身上的任何物品都会随之变形，但它携带的任何物品都不会。如果它死了，就会恢复原样。",
+									"在迷雾形态下，吸血鬼不能采取任何行动，不能说话，也不能操纵物体。它没有重量，飞行速度为 6 米，可以悬停，可以进入敌对生物的空间并停在那里。此外，如果空气可以穿过空间，雾气也可以不经挤压穿过空间，但它不能穿过水。它在力量、灵巧和体质蓄力方面都有优势，并且免疫所有非魔法伤害，但阳光伤害除外。"
+								]
+							}
+						}
+					},
+					"type": {
+						"type": "undead",
+						"tags": [
+							"shapechanger"
+						]
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Spellcasting—Cleric",
+					"source": "PSI",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"{@note {@creature Priest|MM} 被用作教士的示例。}",
+								"吸血鬼是五级施法者。它的施法能力是智慧（法术救赎 {@dc 13}，法术攻击命中率 {@hit 5}）。吸血鬼准备了以下牧师法术："
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell light}",
+										"{@spell sacred flame}",
+										"{@spell thaumaturgy}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell cure wounds}",
+										"{@spell guiding bolt}",
+										"{@spell sanctuary}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell lesser restoration}",
+										"{@spell spiritual weapon}"
+									]
+								},
+								"3": {
+									"slots": 2,
+									"spells": [
+										"{@spell dispel magic}",
+										"{@spell spirit guardians}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Spellcasting—Wizard",
+					"source": "PSI",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"{@note {@creature Mage|MM} 被用作向导的示例。}",
+								"吸血鬼是九级施法者。它的施法能力是智力（法术救赎 {@dc 14}，法术攻击命中率 {@hit 6}）。吸血鬼准备了以下巫师法术："
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell fire bolt}",
+										"{@spell light}",
+										"{@spell mage hand}",
+										"{@spell prestidigitation}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell detect magic}",
+										"{@spell mage armor}",
+										"{@spell magic missile}",
+										"{@spell shield}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell misty step}",
+										"{@spell suggestion}"
+									]
+								},
+								"3": {
+									"slots": 3,
+									"spells": [
+										"{@spell counterspell}",
+										"{@spell fireball}",
+										"{@spell fly}"
+									]
+								},
+								"4": {
+									"slots": 3,
+									"spells": [
+										"{@spell greater invisibility}",
+										"{@spell ice storm}"
+									]
+								},
+								"5": {
+									"slots": 1,
+									"spells": [
+										"{@spell cone of cold}"
+									]
+								}
+							},
+							"ability": "int"
+						}
+					],
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Werewolf (Krallenhorde)",
+			"source": "PSI",
+			"page": 15,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human",
+					"shapechanger"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"condition": "in humanoid form"
+				},
+				{
+					"ac": 12,
+					"from": [
+						"natural armor"
+					],
+					"condition": "in canid form"
+				}
+			],
+			"hp": {
+				"average": 58,
+				"formula": "9d8 + 18"
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "(40 ft. in canid form)"
+				}
+			},
+			"str": 15,
+			"dex": 13,
+			"con": 14,
+			"int": 10,
+			"wis": 11,
+			"cha": 10,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+3"
+			},
+			"passive": 14,
+			"immune": [
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks not made with silvered weapons",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Common (can't speak in canid form)"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Shapechanger",
+					"entries": [
+						"狼人可以多态地变成狼类犬科动物的形态，也可以变回其真正的人类形态。这种变化是由月亮决定的，但也可以由创伤或强烈的情绪引起。它的统计资料，除了它的AC之外，在每种形态下都是一样的。它所穿戴或携带的任何装备都不会被转化。如果它死了，它就会恢复到它的真实形态。"
+					]
+				},
+				{
+					"name": "Keen Hearing and Smell",
+					"entries": [
+						"狼人在依靠听觉或嗅觉的智慧（（%0%））检查中具有优势。"
+					]
+				},
+				{
+					"name": "Howlpack: Vildin",
+					"entries": [
+						"维尔丁狂暴（仅犬类形态）。当狼人在自己的回合中用近战攻击将一个生物的命中率降低到0时，它可以采取一个额外的行动，移动到其速度的一半，并进行一次咬人攻击。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack (Canid Form Only)",
+					"entries": [
+						"狼人可以进行两次攻击：一次是咬人，一次是用爪子或长矛。"
+					]
+				},
+				{
+					"name": "Bite (Canid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 4} 命中，距离 1.5 米，一个目标。{@h}6 ({@damage 1d8 + 2}) 穿透伤害。"
+					]
+				},
+				{
+					"name": "Claws (Canid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 4} 命中，距离 1.5 米，一个目标。{@h}7 ({@damage 2d4 + 2}) 砍伤。"
+					]
+				},
+				{
+					"name": "Spear (Human Form Only)",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} 命中，距离 1.5 米或范围 20/18 米，一个目标。{@h}5 ({@damage 1d6 + 2}) 次穿刺伤害，或 6 ({@damage 1d8 + 2} 次穿刺伤害（如果使用双手进行近战攻击）。"
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Howlpack Traits",
+					"entries": [
+						"狼人的基本统计资料代表了Krallenhorde的成员，Innistrad最大的狼人群体。其他族群的狼人可能会有额外的能力，如以下。",
+						{
+							"name": "Vildin Rampage (Canid Form Only)",
+							"type": "entries",
+							"entries": [
+								"当狼人在自己的回合中用近战攻击将一个生物的命中点数降低到 0 时，它可以采取一个额外行动，移动速度达到自己速度的一半，并进行一次撕咬攻击。"
+							]
+						},
+						{
+							"name": "Mondronen Wounded Fury",
+							"type": "entries",
+							"entries": [
+								"当狼人的命中点数为 10 或更少时，它在攻击卷轴上拥有优势。此外，它还能对任何被近战攻击击中的目标造成额外 7 ({@damage 2d6}) 的伤害。"
+							]
+						},
+						{
+							"name": "Leeraug Blood Frenzy",
+							"type": "entries",
+							"entries": [
+								"狼人在近战攻击卷轴上对任何没有全部命中点数的生物都有优势。"
+							]
+						}
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Shapechanger"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Werewolf (Leeraug)",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Leeraug Blood Frenzy",
+								"entries": [
+									"狼人在近战攻击卷轴上对任何没有全部命中点数的生物都有优势。"
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Werewolf (Mondronen)",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Mondronen Wounded Fury",
+								"entries": [
+									"当狼人的命中点数为 10 或更少时，它在攻击卷轴上拥有优势。此外，它还能对任何被近战攻击击中的目标造成额外 7 ({@damage 2d6}) 的伤害。"
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Werewolf (Vildin)",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Vildin Rampage (Canid Form Only)",
+								"entries": [
+									"当狼人在自己的回合中用近战攻击将一个生物的命中点数降低到 0 时，它可以采取一个额外行动，移动速度达到自己速度的一半，并进行一次撕咬攻击。"
+								]
+							}
+						}
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Zombie Cat",
+			"source": "PSI",
+			"page": 17,
+			"_copy": {
+				"name": "Cat",
+				"source": "MM"
+			},
+			"type": "undead",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"如果伤害使猫的命中率降至0，它必须做一个宪法救赎，DC为5+所受伤害，除非伤害是辐射或来自关键打击。如果成功，猫会下降到1点生命值。"
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Zombie Rat",
+			"source": "PSI",
+			"page": 17,
+			"_copy": {
+				"name": "Rat",
+				"source": "MM"
+			},
+			"type": "undead",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"如果伤害使老鼠的命中率降至0，它必须做一个宪法救赎动作，DC为5+所受伤害，除非伤害是辐射或来自关键打击。如果成功，老鼠会下降到1点生命值。"
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Zombie Snake",
+			"source": "PSI",
+			"page": 17,
+			"_copy": {
+				"name": "Poisonous Snake",
+				"source": "MM"
+			},
+			"type": "undead",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"如果伤害使蛇的命中率降至0，它必须做一个宪法救赎动作，DC为5+所受伤害，除非伤害是辐射或来自关键打击。如果成功，蛇会下降到1点生命值。"
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

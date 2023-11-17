@@ -1,0 +1,622 @@
+{
+	"spell": [
+		{
+			"name": "Acid Stream",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 2,
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "line",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "lite rutten mat"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"En ström av syra utgår från dig i en 9 meter lång och 1,5 meter bred linje i den riktning du väljer. Varje varelse i linjen måste lyckas med ett räddningsslag i Dexterity eller täckas av syra under besvärjelsens varaktighet eller tills en varelse använder sin handling för att skrapa eller tvätta bort syran från sig själv eller en annan varelse. En varelse som är täckt av syra tar {@damage 3d4} syraskada i början av var och en av sina varv."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 2:a nivån eller högre, ökar skadan med {@scaledamage 3d4|1-9|1d4} för varje besvärjelseplatsnivå över 1:a."
+					]
+				}
+			],
+			"damageInflict": [
+				"acid"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"areaTags": [
+				"L"
+			]
+		},
+		{
+			"name": "Otherworldly Form",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 2,
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ett föremål graverat med en symbol från de Yttre planen, värt minst 500 gp",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Genom att säga en besvärjelse använder du magi från de lägre eller högre planerna (du väljer själv) för att förvandla dig själv. Du får följande fördelar tills förtrollningen upphör:",
+				{
+					"type": "list",
+					"items": [
+						"Du är immun mot brand- och giftskador (lägre plan) eller strålningsskador och nekrotiska skador (övre plan).",
+						"Du är immun mot {@condition poisoned} tillstånd (lägre plan) eller {@condition charmed} tillstånd (övre plan).",
+						"Spektrala vingar dyker upp på din rygg och ger dig en flyghastighet på 12 meter.",
+						"Du har en +2 bonus på AC.",
+						"Alla dina vapenattacker är magiska, och när du gör en vapenattack kan du använda din modifikation av trollkonstförmåga, istället för styrka eller smidighet, för attack- och skaderullar.",
+						"Du kan attackera två gånger, istället för en, när du gör attacken på din tur. Du ignorerar den här fördelen om du redan har en egenskap, som Extra Attack, som ger dig extra attacker."
+					]
+				}
+			],
+			"damageImmune": [
+				"fire",
+				"poison",
+				"radiant",
+				"necrotic"
+			],
+			"conditionImmune": [
+				"poisoned",
+				"charmed"
+			],
+			"miscTags": [
+				"MAC"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Spirit Shroud",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 2,
+			"level": 3,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du kallar på de dödas andar som fladdrar runt omkring dig under trollformelns varaktighet. Andarna är ogripbara och osårbara, och de är goda eller onda (ditt val).",
+				"Tills besvärjelsen upphör ger varje attack du gör {@damage 1d8} extra skada när du träffar en varelse inom 3 meter från dig. Denna skada är strålande om andarna är goda och nekrotisk om de är onda. En varelse som tar denna skada kan inte återfå träffpunkter förrän i början av din nästa tur.",
+				"Dessutom får varje valfri varelse som du kan se och som börjar sin tur inom 3 meter från dig sin hastighet reducerad med 3 meter tills början av din nästa tur."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 4:e nivån eller högre, ökar den extra skadan med {@scaledamage 1d8|3-9|1d8} för varje platsnivå över 3:e."
+					]
+				}
+			],
+			"damageInflict": [
+				"radiant",
+				"necrotic",
+				"cold"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Summon Aberrant Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 3,
+			"level": 4,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "en inlagd tentakel och en ögonglob i en kristallampull värd minst 400 gp",
+					"cost": 40000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du kallar fram en ande från Fjärranriket eller ett annat främmande vansinnesrike. Anden manifesterar sig fysiskt i ett ledigt utrymme som du kan se inom räckhåll. Denna kroppsliga form använder {@creature Aberrant Spirit|UA2020SpellsAndMagicTattoos} statsblock. När du kastar besvärjelsen, välj Beholderkin, Slaadi eller Star Spawn. Varelsen liknar fysiskt ditt val, vilket också bestämmer några av egenskaperna i dess statistikblock. Varelsen försvinner när den sjunker till 0 träffpunkter eller när besvärjelsen avslutas.",
+				"Varelsen är vänligt inställd till dig och dina följeslagare under trollformelns varaktighet. I strid delar varelsen din initiativräkning, men den tar sin tur omedelbart efter din. Den lyder verbala kommandon som du ger den (ingen åtgärd krävs av dig). Om du inte ger några, försvarar den sig men gör i övrigt ingen handling."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med en spell slot på 5:e nivån eller högre, antar varelsen den högre nivån för den besvärjelsen när den använder besvärjelsens nivå i sitt stat block."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Summon Bestial Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 3,
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "en fjäder, en pälstuss och en fiskstjärt inuti ett förgyllt ekollon värt minst 200 gp",
+					"cost": 20000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du kallar fram anden hos ett odjur. Anden manifesterar sig fysiskt i ett ledigt utrymme som du kan se inom räckhåll. Denna kroppsliga form använder {@creature Bestial Spirit|UA2020SpellsAndMagicTattoos} statblock. När du kastar besvärjelsen väljer du en miljö: Luft, Land eller Vatten. Varelsen liknar fysiskt ett valfritt djur som hör hemma i den valda miljön, vilket också bestämmer ett av förflyttningssätten i varelsens statsblock. Varelsen försvinner när den sjunker till 0 träffpunkter eller när besvärjelsen avslutas.",
+				"Varelsen är vänligt inställd till dig och dina följeslagare under trollformelns varaktighet. I strid delar varelsen din initiativräkning, men den tar sin tur omedelbart efter din. Den lyder verbala kommandon som du ger den (ingen åtgärd krävs av dig). Om du inte ger några, försvarar den sig men gör i övrigt ingen handling."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med en spell slot på 3:e nivån eller högre, antar varelsen den högre nivån för den besvärjelsen närhelst den använder besvärjelsens nivå i sitt stat block."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Summon Celestial Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 4,
+			"level": 5,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ett gyllene relikskrin värt minst 500 gp",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du kallar fram en ande från de övre planen. Anden manifesterar sig fysiskt i en änglalik form i ett ledigt utrymme som du kan se inom räckhåll. Denna kroppsliga form använder {@creature Celestial Spirit|UA2020SpellsAndMagicTattoos} statsblockering. När du kastar besvärjelsen väljer du Hämnare eller Försvarare. Ditt val avgör varelsens attack i dess statistikblock. Varelsen försvinner när den sjunker till 0 träffpunkter eller när besvärjelsen avslutas.",
+				"Varelsen är vänligt inställd till dig och dina följeslagare under trollformelns varaktighet. I strid delar varelsen din initiativräkning, men den tar sin tur omedelbart efter din. Den lyder verbala kommandon som du ger den (ingen åtgärd krävs av dig). Om du inte ger några, försvarar den sig men gör i övrigt ingen handling."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med hjälp av en spell slot på 6:e nivån eller högre, antar varelsen den högre nivån för den besvärjelsen närhelst den använder besvärjelsens nivå i sitt stat block."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Summon Elemental Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 4,
+			"level": 4,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "luft, en sten, aska och vatten i en kristallampull värd minst 400 gp",
+					"cost": 40000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du kallar fram en ande från de elementära planen. Anden manifesterar sig fysiskt i ett ledigt utrymme som du kan se inom räckhåll. Denna kroppsliga form använder {@creature Elemental Spirit|UA2020SpellsAndMagicTattoos} statsblock. När du kastar besvärjelsen väljer du ett element: Luft, Jord, Eld eller Vatten. Varelsen liknar fysiskt en vagt humanoid form insvept i det valda elementet, vilket också bestämmer några av egenskaperna i dess statistikblock. Varelsen försvinner när den sjunker till 0 träffpunkter eller när besvärjelsen avslutas.",
+				"Varelsen är vänligt inställd till dig och dina följeslagare under trollformelns varaktighet. I strid delar varelsen din initiativräkning, men den tar sin tur omedelbart efter din. Den lyder verbala kommandon som du ger den (ingen åtgärd krävs av dig). Om du inte ger några, försvarar den sig men gör i övrigt ingen handling."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med en spell slot på 5:e nivån eller högre, antar varelsen den högre nivån för den besvärjelsen när den använder besvärjelsens nivå i sitt stat block."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Summon Fey Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 5,
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "en förgylld blomma värd minst 300 gp",
+					"cost": 30000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du kallar fram en ande från Feywild. Anden manifesterar sig fysiskt i ett ledigt utrymme som du kan se inom räckhåll. Denna kroppsliga form använder {@creature Fey Spirit|UA2020SpellsAndMagicTattoos} statsblockering. När du kastar besvärjelsen väljer du en sinnesstämning: Bedräglig, Rasande eller Glädjefull. Varelsen liknar fysiskt en satyr, en dryad eller en alv (ditt val) som präglas av den valda sinnesstämningen, som också bestämmer en av egenskaperna i dess statblock. Varelsen försvinner när den sjunker till 0 träffpunkter eller när besvärjelsen avslutas.",
+				"Varelsen är vänligt inställd till dig och dina följeslagare under trollformelns varaktighet. I strid delar varelsen din initiativräkning, men den tar sin tur omedelbart efter din. Den lyder verbala kommandon som du ger den (ingen åtgärd krävs av dig). Om du inte ger några, försvarar den sig men gör i övrigt ingen handling."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med en spell slot på 4:e nivån eller högre, antar varelsen den högre nivån för den besvärjelsen när den använder besvärjelsens nivå i sitt stat block."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Summon Fiendish Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 6,
+			"level": 6,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "humanoidblod i en rubinflaska värd minst 600 gp",
+					"cost": 60000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du kallar fram en djävulsk ande från de lägre planen. Anden manifesterar sig fysiskt i ett ledigt utrymme som du kan se inom räckhåll. Denna kroppsliga form använder statblockeringen {@creature Fiendish Spirit|UA2020SpellsAndMagicTattoos}. När du kastar besvärjelsen, välj Demon, Djävul eller Yugoloth. Varelsen liknar fysiskt en djävul av den valda typen, vilket också bestämmer några av egenskaperna i dess statblock. Varelsen försvinner när den sjunker till 0 träffpunkter eller när besvärjelsen avslutas.",
+				"Varelsen är vänligt inställd till dig och dina följeslagare under trollformelns varaktighet. I strid delar varelsen din initiativräkning, men den tar sin tur omedelbart efter din. Den lyder verbala kommandon som du ger den (ingen åtgärd krävs av dig). Om du inte ger några, försvarar den sig men gör i övrigt ingen handling."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med en spell slot på 7:e nivån eller högre, antar varelsen den högre nivån för den besvärjelsen närhelst den använder besvärjelsens nivå i sitt stat block."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Summon Shadow Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 7,
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "tårar inuti en kristallampull värd minst 300 gp",
+					"cost": 30000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du kallar fram en skuggliknande ande från Skuggfell. Anden manifesterar sig fysiskt i ett ledigt utrymme som du kan se inom räckhåll. Denna kroppsliga form använder {@creature Shadow Spirit|UA2020SpellsAndMagicTattoos} statsblockering. När du kastar besvärjelsen väljer du en känsla: Vrede, Förtvivlan eller Rädsla. Varelsen liknar fysiskt en missformad humanoid som är märkt av den valda känslan, som också bestämmer några av egenskaperna i dess statistikblock. Varelsen försvinner när den sjunker till 0 träffpunkter eller när besvärjelsen avslutas.",
+				"Varelsen är vänligt inställd till dig och dina följeslagare under trollformelns varaktighet. I strid delar varelsen din initiativräkning, men den tar sin tur omedelbart efter din. Den lyder verbala kommandon som du ger den (ingen åtgärd krävs av dig). Om du inte ger några, försvarar den sig men gör i övrigt ingen handling."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med en spell slot på 4:e nivån eller högre, antar varelsen den högre nivån för den besvärjelsen när den använder besvärjelsens nivå i sitt stat block."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Summon Undead Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 7,
+			"level": 3,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "en förgylld humanoid skalle värd minst 300 gp",
+					"cost": 30000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du kallar fram en rastlös ande från bortom graven. Anden manifesterar sig fysiskt i ett ledigt utrymme som du kan se inom räckhåll. Denna kroppsliga form använder {@creature Undead Spirit|UA2020SpellsAndMagicTattoos} statsblockering. När du kastar besvärjelsen väljer du varelsens form: Spöklik, Förruttnad eller Skelettlik. Varelsen liknar fysiskt en humanoid med den valda formen, som också bestämmer några av egenskaperna i dess statblock. Varelsen försvinner när den sjunker till 0 träffpunkter eller när besvärjelsen avslutas.",
+				"Varelsen är vänligt inställd till dig och dina följeslagare under trollformelns varaktighet. I strid delar varelsen din initiativräkning, men den tar sin tur omedelbart efter din. Den lyder verbala kommandon som du ger den (ingen åtgärd krävs av dig). Om du inte ger några, försvarar den sig men gör i övrigt ingen handling."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med en spell slot på 4:e nivån eller högre, antar varelsen den högre nivån för den besvärjelsen när den använder besvärjelsens nivå i sitt stat block."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		}
+	]
+}

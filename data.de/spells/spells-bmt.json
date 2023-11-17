@@ -1,0 +1,160 @@
+{
+	"spell": [
+		{
+			"name": "Antagonize",
+			"source": "BMT",
+			"page": 50,
+			"level": 3,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "eine Spielkarte, die einen Schurken darstellt"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du flüsterst magische Worte, die eine Kreatur deiner Wahl in Reichweite zum Feind machen. Das Ziel muss einen Rettungswurf in Weisheit ablegen. Bei einem misslungenen Schutzwurf erleidet das Ziel {@damage 4d4} psychischen Schaden und muss sofort seine Reaktion nutzen, um einen Nahkampfangriff gegen eine andere Kreatur deiner Wahl durchzuführen, die du sehen kannst. Wenn das Ziel diesen Angriff nicht ausführen kann (z.B. weil sich niemand in seiner Reichweite befindet oder weil seine Reaktion nicht verfügbar ist), hat das Ziel stattdessen einen Nachteil beim nächsten Angriffswurf, den es vor Beginn deines nächsten Zuges macht. Bei einem erfolgreichen Schutzwurf erleidet das Ziel nur halb so viel Schaden."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberslot der Stufe 4 oder höher wirkst, erhöht sich der Schaden um {@dice 1d4} für jeden Slot der Stufe 3 oder höher."
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Spirit of Death",
+			"source": "BMT",
+			"page": 50,
+			"level": 4,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "eine vergoldete Spielkarte im Wert von mindestens 400 Gp, auf der ein Avatar des Todes abgebildet ist",
+					"cost": 40000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du rufst einen Geist herbei, der den Tod verkörpert. Der Geist manifestiert sich in einem unbesetzten Raum, den du in Reichweite sehen kannst, und verwendet den {@creature reaper spirit|BMT} Stat-Block. Der Geist verschwindet, wenn er auf 0 Trefferpunkte reduziert wird oder wenn der Zauber endet.",
+				"Der Geist ist ein Verbündeter für dich und deine Gefährten. Im Kampf teilt der Geist die Anzahl deiner Initiative und ist sofort nach dir am Zug. Er gehorcht deinen verbalen Befehlen (keine Aktion von dir erforderlich). Wenn du dem Geist keine Befehle erteilst, führt er die Aktion {@action Dodge} aus und nutzt seine Bewegung, um Gefahren zu vermeiden."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberslot der Stufe 5 oder höher wirkst, verwende die höhere Stufe, wo immer die Stufe des Zaubers im Statutenblock des Schnittergeistes erscheint."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Spray of Cards",
+			"source": "BMT",
+			"page": 50,
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 15
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "ein Kartenspiel"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du versprühst einen 4,5 Meter großen Kegel aus Spektralkarten. Jede Kreatur in diesem Bereich muss einen Rettungswurf in Geschicklichkeit machen. Bei einem misslungenen Schutzwurf erleidet die Kreatur {@damage 2d10} Kraftschaden und hat bis zum Ende ihres nächsten Zuges den Zustand {@condition blinded}. Bei einem erfolgreichen Schutzwurf erleidet die Kreatur nur halb so viel Schaden."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberslot der Stufe 3 oder höher wirkst, erhöht sich der Schaden um {@dice 1d10} für jeden Slot der Stufe 2 oder höher."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrow": [
+				"dexterity"
+			]
+		}
+	]
+}

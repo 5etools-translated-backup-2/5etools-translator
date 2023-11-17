@@ -1,0 +1,378 @@
+{
+	"spell": [
+		{
+			"name": "Distort Value",
+			"source": "AI",
+			"page": 75,
+			"level": 1,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"Wenn Sie aus einem Händler ein paar Goldstücke mehr herausquetschen wollen, wenn Sie versuchen, die seltsame Krakenstatue zu verkaufen, die Sie aus dem Chaos-Tempel befreit haben, oder wenn Sie den Wert einiger magischer Güter herunterspielen wollen, wenn der Steuereintreiber vorbeikommt, dann ist Wert verzerren genau das Richtige für Sie.",
+				"Du legst diesen Zauber auf einen Gegenstand, der nicht länger als 0,3 Meter ist, und verdoppelst seinen wahrgenommenen Wert, indem du ihm illusorische Verzierungen oder Polituren hinzufügst, oder reduzierst seinen wahrgenommenen Wert um die Hälfte mit Hilfe von illusorischen Kratzern, Dellen und anderen unansehnlichen Merkmalen. Jeder, der den Gegenstand untersucht, kann seinen wahren Wert mit einer erfolgreichen Intelligenzprüfung ({@skill Investigation}) gegen den Schutz-DC deines Zaubers feststellen."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberslot der Stufe 2 oder höher wirkst, vergrößert sich die maximale Größe des Objekts um 0,3 Meter für jeden Slot über der Stufe 1."
+					]
+				}
+			]
+		},
+		{
+			"name": "Fast Friends",
+			"source": "AI",
+			"page": 75,
+			"level": 3,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Wenn Sie sicherstellen müssen, dass etwas erledigt wird, können Sie sich nicht auf vage Versprechen, Eide oder verbindliche Arbeitsverträge verlassen. Wenn du diesen Zauber sprichst, wähle einen Humanoiden in Reichweite, der dich sehen und hören kann und der dich versteht. Die Kreatur muss einen Rettungswurf in Weisheit bestehen oder wird für die Dauer des Zaubers {@condition charmed} von dir beeinflusst. Solange die Kreatur auf diese Weise {@condition charmed} ist, verpflichtet sie sich, alle Dienste oder Aktivitäten, die du von ihr verlangst, auf freundliche Weise und nach bestem Wissen und Gewissen auszuführen.",
+				"Sie können der Kreatur neue Aufgaben stellen, wenn eine vorherige Aufgabe abgeschlossen ist oder wenn Sie beschließen, ihre aktuelle Aufgabe zu beenden. Wenn der Dienst oder die Aktivität der Kreatur Schaden zufügen könnte oder wenn sie mit den normalen Aktivitäten und Wünschen der Kreatur in Konflikt steht, kann die Kreatur einen weiteren Rettungswurf in Weisheit machen, um zu versuchen, den Effekt zu beenden. Dieser Rettungswurf ist von Vorteil, wenn du oder deine Gefährten gegen die Kreatur kämpfen. Wenn die Aktivität den sicheren Tod für die Kreatur bedeuten würde, endet der Zauber.",
+				"Wenn der Zauber endet, weiß die Kreatur, dass sie {@condition charmed} von dir war."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberslot der Stufe 4 oder höher wirkst, kannst du für jeden Slot über der Stufe 3 eine zusätzliche Kreatur anvisieren."
+					]
+				}
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"affectsCreatureType": [
+				"humanoid"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST",
+				"MT"
+			]
+		},
+		{
+			"name": "Gift of Gab",
+			"source": "AI",
+			"page": 76,
+			"level": 2,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "which you take when you speak to another creature"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"r": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				{
+					"type": "quote",
+					"entries": [
+						"Als ich Jim Darkmagic kennenlernte, fragte ich mich, wie er in diesem Outfit überhaupt etwas zustande bringt. Inzwischen habe ich gelernt, dass die meisten seiner Talente darin bestehen, zu stehen und zu reden. Sein Outfit ist dafür perfekt geeignet."
+					],
+					"by": "Môrgæn"
+				},
+				"Jim Darkmagic soll diesen Zauberspruch erfunden haben und nannte ihn ursprünglich {@i Was habe ich gesagt?!} Haben Sie sich schon einmal mit dem örtlichen Monarchen unterhalten und versehentlich erwähnt, dass sein Sohn aussieht wie Ihr Lieblingsschwein aus der Zeit, als Sie auf der Familienfarm aufwuchsen? Das haben wir alle schon erlebt! Aber anstatt für einen ehrlichen Versprecher geköpft zu werden, kannst du so tun, als wäre es nie passiert - indem du sicherstellst, dass niemand weiß, dass es passiert ist.",
+				"Wenn du diesen Zauber sprichst, formst du geschickt die Erinnerungen der Zuhörer in deiner unmittelbaren Umgebung um, so dass jedes Wesen deiner Wahl im Umkreis von 1,5 Metern alles vergisst, was du in den letzten 6 Sekunden gesagt hast. Diese Kreaturen erinnern sich dann daran, dass du die Worte, die du als verbale Komponente des Zaubers sprichst, tatsächlich gesagt hast."
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Incite Greed",
+			"source": "AI",
+			"page": 76,
+			"level": 3,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ein Edelstein im Wert von mindestens 50 gp",
+					"cost": 5000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Wenn du diesen Zauber sprichst, präsentierst du den als materielle Komponente verwendeten Edelstein und wählst eine beliebige Anzahl von Kreaturen in Reichweite, die dich sehen können. Jedes Ziel muss einen Rettungswurf in Weisheit bestehen oder {@condition charmed} von dir angegriffen werden, bis der Zauber endet oder bis du oder deine Gefährten ihm etwas antun. Solange die Kreatur auf diese Weise {@condition charmed} ist, kann sie nichts anderes tun, als ihre Bewegung zu nutzen, um sich dir auf sichere Weise zu nähern. Solange sich eine betroffene Kreatur in einem Umkreis von 1,5 Metern von dir befindet, kann sie sich nicht bewegen, sondern starrt nur gierig auf den von dir präsentierten Edelstein.",
+				"Am Ende jeder seiner Runden kann ein betroffenes Ziel einen Rettungswurf in Weisheit machen. Wenn er gelingt, endet der Effekt für dieses Ziel."
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Jim's Glowing Coin",
+			"source": "AI",
+			"page": 76,
+			"level": 2,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "eine Münze",
+				"r": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Von den vielen Taktiken, die der Meistermagier und bekannte Abenteurer Jim Darkmagic anwendet, ist der alte Trick mit der glühenden Münze ein altehrwürdiger Klassiker. Wenn du den Zauber sprichst, schleuderst du die Münze, die die materielle Komponente des Zaubers ist, an einen beliebigen Ort in Reichweite. Die Münze leuchtet auf, als stünde sie unter der Wirkung eines {@spell light} Zaubers. Jede Kreatur deiner Wahl, die du im Umkreis von 9 Metern um die Münze sehen kannst, muss einen Rettungswurf in Weisheit bestehen oder wird für die Dauer des Zaubers abgelenkt. Solange eine Kreatur abgelenkt ist, hat sie einen Nachteil bei Weisheitswürfen ({@skill Perception}) und Initiativwürfen."
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Jim's Magic Missile",
+			"source": "AI",
+			"page": 76,
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"r": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				{
+					"type": "quote",
+					"entries": [
+						"Jims magische Rakete ist ein alter und mächtiger Zauberspruch und außerdem der Name meiner Band in der Wizard Academy."
+					],
+					"by": "Jim Darkmagic"
+				},
+				"Jeder Zauberlehrling kann eine langweilige, alte magische Rakete zaubern. Klar, sie trifft immer ihr Ziel - gähn. Mit dieser verbesserten Version des Zaubers, wie ihn Jim Darkmagic benutzt, ist Schluss mit der lästigen Magie deines Großvaters!",
+				"Sie erzeugen drei sich drehende, pfeifende, hypoallergene, glutenfreie Pfeile von magischer Kraft. Jeder Pfeil zielt auf eine Kreatur deiner Wahl, die du in Reichweite sehen kannst. Führe für jedes Geschoss einen Fernkampf-Zauberangriff aus. Bei einem Treffer fügt ein Geschoss {@damage 2d4} Kraftschaden an seinem Ziel zu.",
+				"Wenn der Angriffswurf einen kritischen Treffer erzielt, erleidet das Ziel dieses Geschosses {@damage 5d4} Kraftschaden, anstatt dass du für einen kritischen Treffer zweimal Schaden würfelst. Wenn der Angriffswurf für eine beliebige Rakete eine 1 ergibt, verfehlen alle Raketen ihr Ziel und explodieren vor deiner Nase, was dir 1 Kraftschaden pro Rakete zufügt."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberschlitz der Stufe 2 oder höher wirkst, erzeugt der Zauber einen weiteren Pfeil, und die Honorarkomponente erhöht sich um 1 Gulden für jeden Schlitz der Stufe 1 oder höher."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST",
+				"MT"
+			]
+		},
+		{
+			"name": "Motivational Speech",
+			"source": "AI",
+			"page": 77,
+			"level": 3,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				{
+					"type": "quote",
+					"entries": [
+						"Ich habe einmal eine Motivationsrede von Jim gehört und das waren die schlimmsten neunzig Sekunden meines Lebens. Was sieht Omin überhaupt in ihm?"
+					],
+					"by": "Walnut Dankgrass"
+				},
+				"Du wendest dich an Verbündete, Mitarbeiter oder unbeteiligte Zuschauer, um sie zu Großem zu ermuntern und zu inspirieren, egal ob sie etwas haben, worüber sie sich aufregen können oder nicht. Wähle bis zu fünf Kreaturen in Reichweite, die dich hören können. Für die Dauer des Zaubers erhält jede betroffene Kreatur vorübergehend 5 Trefferpunkte und hat einen Vorteil bei Rettungswürfen in Weisheit. Wenn eine betroffene Kreatur von einem Angriff getroffen wird, hat sie beim nächsten Angriffswurf einen Vorteil. Sobald eine betroffene Kreatur die durch diesen Zauber gewährten temporären Trefferpunkte verliert, endet der Zauber für diese Kreatur."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberslot der Stufe 4 oder höher wirkst, erhöhen sich die temporären Trefferpunkte um 5 für jede Slotstufe über der Stufe 3."
+					]
+				}
+			],
+			"miscTags": [
+				"ADV",
+				"SGT",
+				"THP"
+			],
+			"areaTags": [
+				"MT"
+			]
+		}
+	]
+}

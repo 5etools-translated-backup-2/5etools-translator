@@ -1,0 +1,160 @@
+{
+	"spell": [
+		{
+			"name": "Antagonize",
+			"source": "BMT",
+			"page": 50,
+			"level": 3,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "ett spelkort som föreställer en skurk"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du viskar magiska ord som retar upp en valfri varelse inom räckhåll. Målet måste göra ett räddningsslag i visdom. Vid ett misslyckat räddningsslag tar målet {@damage 4d4} psykisk skada och måste omedelbart använda sin reaktion för att göra en närstridsattack mot en annan valfri varelse som du kan se. Om målet inte kan utföra denna attack (till exempel för att det inte finns någon inom räckhåll eller för att dess reaktion inte är tillgänglig), har målet istället nackdel på nästa attackroll det gör innan början av din nästa tur. Vid ett lyckat räddningsslag tar målet bara hälften så mycket skada."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med en besvärjelseplats på 4:e nivån eller högre, ökar skadan med {@dice 1d4} för varje platsnivå över 3:e."
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Spirit of Death",
+			"source": "BMT",
+			"page": 50,
+			"level": 4,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ett förgyllt spelkort värt minst 400 gp och föreställande en avatar av döden",
+					"cost": 40000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du kallar fram en ande som förkroppsligar döden. Anden manifesterar sig i ett ledigt utrymme som du kan se inom räckhåll och använder {@creature reaper spirit|BMT} statsblock. Anden försvinner när den reduceras till 0 träffpunkter eller när besvärjelsen avslutas.",
+				"Anden är en allierad till dig och dina följeslagare. I strid delar anden ditt initiativ och tar sin tur omedelbart efter din. Den lyder dina verbala kommandon (ingen åtgärd krävs av dig). Om du inte ger anden några kommandon utför den handlingen {@action Dodge} och använder sin rörelseförmåga för att undvika fara."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 5:e nivån eller högre, använd den högre nivån varhelst besvärjelsens nivå visas i statblocket för reaperandan."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Spray of Cards",
+			"source": "BMT",
+			"page": 50,
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 15
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "en kortlek"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du sprejar en 4,5 meter lång kon av spektralkort. Varje varelse i det området måste göra ett räddningsslag i Dexterity. Om räddningsslaget misslyckas tar varelsen {@damage 2d10} kraftskada och har {@condition blinded} tillståndet till slutet av sin nästa tur. Vid ett lyckat räddningsslag tar varelsen bara hälften så mycket skada."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 3:e nivån eller högre, ökar skadan med {@dice 1d10} för varje besvärjelseplatsnivå över 2:a."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrow": [
+				"dexterity"
+			]
+		}
+	]
+}

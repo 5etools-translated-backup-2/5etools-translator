@@ -1,0 +1,924 @@
+{
+	"monster": [
+		{
+			"name": "Aberrant Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 3,
+			"summonedBySpell": "Summon Aberrant Spirit|UA2020SpellsAndMagicTattoos",
+			"summonedBySpellLevel": 4,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"special": "11 + the level of the spell (natural armor)"
+				}
+			],
+			"hp": {
+				"special": "equal the aberration's Constitution modifier + your spellcasting ability modifier + ten times the spell's level"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(beholderkin only; hover)"
+				},
+				"canHover": true
+			},
+			"str": 16,
+			"dex": 10,
+			"con": 15,
+			"int": 16,
+			"wis": 10,
+			"cha": 6,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"psychic"
+			],
+			"languages": [
+				"Deep Speech",
+				"understands the languages you speak"
+			],
+			"trait": [
+				{
+					"name": "Regeneration (Slaadi Only)",
+					"entries": [
+						"如果反常者至少有1个命中点，在其回合开始时可恢复10个命中点。"
+					]
+				},
+				{
+					"name": "Whispering Aura (Star Spawn Only)",
+					"entries": [
+						"在畸变体的每个回合开始时，其 1.5 米范围内的每个生物都必须成功进行一次智慧蓄力，以对抗你的法术蓄力 DC，否则就会受到 {@damage 3d6} 精神伤害，前提是畸变体不是 {@condition incapacitated}。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"畸变者的攻击次数等于该法术等级的一半（向下取整）。"
+					]
+				},
+				{
+					"name": "Eye Ray (Beholderkin Only)",
+					"entries": [
+						"{@atk rs} {@hit 3 + summonSpellLevel} 命中，范围 9 米，一个生物。{@h}{@damage 1d8 + 3 + summonSpellLevel} 精神伤害。"
+					]
+				},
+				{
+					"name": "Claws (Slaadi Only)",
+					"entries": [
+						"{@atk mw} {@hit 3 + summonSpellLevel} 命中，距离 1.5 米，一个目标。{@h}{@damage 1d10 + 3 + summonSpellLevel} 砍伤。如果目标是生物，则在畸变者的下一回合开始前无法恢复命中点数。"
+					]
+				},
+				{
+					"name": "Psychic Slam (Star Spawn Only)",
+					"entries": [
+						"{@atk ms} {@hit 3 + summonSpellLevel} 命中，距离 1.5 米，一个生物。{@h}{@damage 1d6 + 3 + summonSpellLevel} 精神伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"Regeneration"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DS"
+			],
+			"damageTags": [
+				"S",
+				"Y"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Bestial Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 4,
+			"summonedBySpell": "Summon Bestial Spirit|UA2020SpellsAndMagicTattoos",
+			"summonedBySpellLevel": 2,
+			"size": [
+				"S"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"special": "11 + the level of the spell (natural armor)"
+				}
+			],
+			"hp": {
+				"special": "equal the beast's Constitution modifier + your spellcasting ability modifier + ten times the spell's level"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": {
+					"number": 30,
+					"condition": "(land only)"
+				},
+				"fly": {
+					"number": 60,
+					"condition": "(air only)"
+				},
+				"swim": {
+					"number": 30,
+					"condition": "(water only)"
+				}
+			},
+			"str": 18,
+			"dex": 11,
+			"con": 16,
+			"int": 4,
+			"wis": 14,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"languages": [
+				"understands the languages you speak"
+			],
+			"trait": [
+				{
+					"name": "Amphibious (Water Only)",
+					"entries": [
+						"这只野兽可以呼吸空气和水。"
+					]
+				},
+				{
+					"name": "Flyby (Air Only)",
+					"entries": [
+						"当野兽飞出敌人的范围时，不会引发机会攻击。"
+					]
+				},
+				{
+					"name": "Pack Tactics (Land and Water Only)",
+					"entries": [
+						"如果至少有一个野兽的盟友在该生物的 1.5 米范围内，而该盟友不在 1.5 米范围内，则该野兽对该生物的攻击翻滚有优势（%0%）。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"野兽的攻击次数等于此法术等级的一半（向下取整）。"
+					]
+				},
+				{
+					"name": "Maul",
+					"entries": [
+						"{@atk mw} {@hit 4 + summonSpellLevel} 命中，距离 1.5 米，一个目标。{@h}{@damage 1d8 + 4 + summonSpellLevel} 穿透伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"maul|phb"
+			],
+			"traitTags": [
+				"Amphibious",
+				"Flyby",
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Celestial Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 4,
+			"summonedBySpell": "Summon Celestial Spirit|UA2020SpellsAndMagicTattoos",
+			"summonedBySpellLevel": 5,
+			"size": [
+				"L"
+			],
+			"type": "celestial",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"special": "11 + the level of the spell (natural armor)"
+				}
+			],
+			"hp": {
+				"special": "equal the celestial's Constitution modifier + your spellcasting ability modifier + ten times the spell's level"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 40
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 16,
+			"int": 10,
+			"wis": 14,
+			"cha": 16,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"radiant"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Celestial",
+				"understands the languages you speak"
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"天人的攻击次数等于此法术等级的一半（向下取整）。"
+					]
+				},
+				{
+					"name": "Radiant Bow (Avenger Only)",
+					"entries": [
+						"{@atk rw} {@hit 2 + summonSpellLevel} 命中，范围 150/18 米，一个目标。{@h}{@damage 2d6 + 2 + summonSpellLevel} 辐射伤害。"
+					]
+				},
+				{
+					"name": "Radiant Mace (Defender Only)",
+					"entries": [
+						"{@atk mw} {@hit 3 + summonSpellLevel} 命中，距离 1.5 米，一个目标。{@h}{@damage 1d10 + 3 + summonSpellLevel}辐射伤害，天人可以选择自己或目标周围 3 米内它能看到的其他生物。被选中的生物会获得等同于所受伤害的临时命中点数，前提是它还没有临时命中点数。"
+					]
+				},
+				{
+					"name": "Healing Touch (1/Day)",
+					"entries": [
+						"天人接触到另一个生物。目标神奇地恢复相当于{@dice 2d8 + summonSpellLevel}的打击点数。"
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CE"
+			],
+			"damageTags": [
+				"R"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Elemental Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 5,
+			"summonedBySpell": "Summon Elemental Spirit|UA2020SpellsAndMagicTattoos",
+			"summonedBySpellLevel": 4,
+			"size": [
+				"M"
+			],
+			"type": "elemental",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"special": "11 + the level of the spell (natural armor)"
+				}
+			],
+			"hp": {
+				"special": "equal the elemental's Constitution modifier + your spellcasting ability modifier + ten times the spell's level"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": {
+					"number": 40,
+					"condition": "(air only hover)"
+				},
+				"burrow": {
+					"number": 40,
+					"condition": "(earth only)"
+				},
+				"swim": {
+					"number": 40,
+					"condition": "(water only)"
+				},
+				"canHover": true
+			},
+			"str": 18,
+			"dex": 15,
+			"con": 17,
+			"int": 4,
+			"wis": 10,
+			"cha": 16,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"lightning",
+				{
+					"resist": [
+						"thunder"
+					],
+					"note": "(air only)"
+				},
+				"piercing",
+				{
+					"resist": [
+						"slashing"
+					],
+					"note": "(earth only)"
+				},
+				{
+					"resist": [
+						"acid"
+					],
+					"note": "(water only)"
+				}
+			],
+			"immune": [
+				"poison",
+				{
+					"immune": [
+						"fire"
+					],
+					"note": "(fire only)"
+				}
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"unconscious"
+			],
+			"languages": [
+				"Primordial",
+				"understands the languages you speak"
+			],
+			"trait": [
+				{
+					"name": "Amorphous Form (Air, Fire, and Water Only)",
+					"entries": [
+						"元素可以在1英寸宽的狭窄空间内移动而不被挤压。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"元素的攻击次数等于此法术等级的一半（向下取整）。"
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 4 + summonSpellLevel} 命中，距离 1.5 米，一个目标。{@h}{@damage 1d10 + 4 + summonSpellLevel} 暴击伤害（仅限空气、土和水）或火焰伤害（仅限火）。"
+					]
+				}
+			],
+			"traitTags": [
+				"Amorphous"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"P"
+			],
+			"damageTags": [
+				"B",
+				"F"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Fey Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 5,
+			"summonedBySpell": "Summon Fey Spirit|UA2020SpellsAndMagicTattoos",
+			"summonedBySpellLevel": 3,
+			"size": [
+				"S"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"special": "11 + the level of the spell (natural armor)"
+				}
+			],
+			"hp": {
+				"special": "equal the fey's Constitution modifier + your spellcasting ability modifier + ten times the spell's level"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 13,
+			"dex": 16,
+			"con": 14,
+			"int": 14,
+			"wis": 11,
+			"cha": 16,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"conditionImmune": [
+				"charmed"
+			],
+			"languages": [
+				"Sylvan",
+				"understands the languages you speak"
+			],
+			"trait": [
+				{
+					"name": "Fey Step",
+					"entries": [
+						"作为一个附加动作，翡冷翠可以用魔法传送到它能看到的 9 米远的无人空间。"
+					]
+				},
+				{
+					"name": "Darkening Step (Deceitful Only)",
+					"entries": [
+						"使用 \"翡冷翠步法 \"后，翡冷翠可以立即用魔法黑暗填充周围 1.5 米范围内的一个 1.5 米立方体，直到翡冷翠的下一个回合结束。"
+					]
+				},
+				{
+					"name": "Ecstatic Step (Joyful Only)",
+					"entries": [
+						"在使用 \"媚惑之步 \"后，媚者可以立即选择一个它能看到的 3 米范围内的生物，并迫使其在智慧值与你的法术救赎DC相抵的情况下成功，否则就会在 1 分钟内被媚者魅惑（%0%）。如果媚灵或它的同伴对目标造成任何伤害，魅惑就会结束。"
+					]
+				},
+				{
+					"name": "Impassioned Step (Furious Only)",
+					"entries": [
+						"在使用它的费伊步法后，费伊人在其回合结束前所做的下一次攻击卷中具有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"妖怪的攻击次数等于此法术等级的一半（向下取整）。"
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 3 + summonSpellLevel} 命中，距离 1.5 米，一个目标。{@h}{@damage 1d6 + 3 + summonSpellLevel} 穿透伤害 {@damage + 1d6} 力量伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"shortsword|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"S"
+			],
+			"damageTags": [
+				"O",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Fiendish Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 6,
+			"summonedBySpell": "Summon Fiendish Spirit|UA2020SpellsAndMagicTattoos",
+			"summonedBySpellLevel": 6,
+			"size": [
+				"L"
+			],
+			"type": "fiend",
+			"alignment": [
+				{
+					"alignment": [
+						"C",
+						"E"
+					],
+					"note": "Demon only"
+				},
+				{
+					"alignment": [
+						"L",
+						"E"
+					],
+					"note": "Devil only"
+				},
+				{
+					"alignment": [
+						"N",
+						"E"
+					],
+					"note": "Yugoloth only"
+				}
+			],
+			"ac": [
+				{
+					"special": "11 + the level of the spell (natural armor)"
+				}
+			],
+			"hp": {
+				"special": "equal the fiend's Constitution modifier + your spellcasting ability modifier + ten times the spell's level"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": {
+					"number": 40,
+					"condition": "(demon only)"
+				},
+				"fly": {
+					"number": 60,
+					"condition": "(devil only)"
+				}
+			},
+			"str": 13,
+			"dex": 16,
+			"con": 15,
+			"int": 10,
+			"wis": 10,
+			"cha": 16,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"fire"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"Infernal",
+				"telepathy 60 ft."
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"魔鬼对法术和其他魔法效果的救赎有优势。"
+					]
+				},
+				{
+					"name": "Death Throes (Demon Only)",
+					"entries": [
+						"当魔物的命中率降为 0 或咒语结束时，魔物会爆炸，它周围 3 米内的每个生物都必须根据你的咒语救命直流值进行一次灵巧施法。救赎失败时，生物会受到 {@damage 2d10 + summonSpellLevel} 火焰伤害；救赎成功时，生物会受到一半的火焰伤害。"
+					]
+				},
+				{
+					"name": "Devil's Sight (Devil Only)",
+					"entries": [
+						"神奇的黑暗并不妨碍魔族的暗视。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"魔鬼的攻击次数等于该法术等级的一半（向下取整）。"
+					]
+				},
+				{
+					"name": "Bite (Demon Only)",
+					"entries": [
+						"{@atk mw} {@hit 3 + summonSpellLevel} 命中，距离 1.5 米，一个目标。{@h}{@damage 1d12 + 3 + summonSpellLevel} 坏死伤害。"
+					]
+				},
+				{
+					"name": "Claws (Yugoloth Only)",
+					"entries": [
+						"{@atk mw} {@hit 3 + summonSpellLevel} 命中，距离 1.5 米，一个目标。{@h}{@damage 1d8 + 3 + summonSpellLevel} 砍伤。在攻击命中或未命中后，恶魔可以立即魔法传送到它能看到的 9 米远的空地上。"
+					]
+				},
+				{
+					"name": "Hurl Flame (Devil Only)",
+					"entries": [
+						"{@atk rs} {@hit 3 + summonSpellLevel} 命中，射程 45 米，一个目标。{@h}{@damage 2d6 + 3 + summonSpellLevel} 火伤害。如果目标是未穿戴或携带的易燃物品，它也会着火。"
+					]
+				}
+			],
+			"traitTags": [
+				"Death Burst",
+				"Devil's Sight",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"I",
+				"TP"
+			],
+			"damageTags": [
+				"F",
+				"N",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Shadow Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 7,
+			"summonedBySpell": "Summon Shadow Spirit|UA2020SpellsAndMagicTattoos",
+			"summonedBySpellLevel": 3,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"special": "11 + the level of the spell (natural armor)"
+				}
+			],
+			"hp": {
+				"special": "equal the shadow's Constitution modifier + your spellcasting ability modifier + ten times the spell's level"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 13,
+			"dex": 16,
+			"con": 15,
+			"int": 4,
+			"wis": 10,
+			"cha": 16,
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"necrotic"
+			],
+			"conditionImmune": [
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"understands the languages you speak"
+			],
+			"trait": [
+				{
+					"name": "Bloodthirsty Frenzy (Fury Only)",
+					"entries": [
+						"灵魂对{@condition frightened}生物的攻击卷有优势。"
+					]
+				},
+				{
+					"name": "Shadow Stealth (Fear Only)",
+					"entries": [
+						"在昏暗的光线或黑暗中，灵魂可以采取隐藏行动作为额外行动。"
+					]
+				},
+				{
+					"name": "Weight of Ages (Despair Only)",
+					"entries": [
+						"除你之外，任何在该灵魂 1.5 米范围内开始回合的野兽或类人生物的速度都会降低 6 米，直到该野兽或类人生物的下一个回合开始。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"灵魂进行的攻击次数等于该法术等级的一半（向下取整）。"
+					]
+				},
+				{
+					"name": "Chilling Rend",
+					"entries": [
+						"{@atk mw} {@hit 3 + summonSpellLevel} 命中，距离 1.5 米，一个目标。{@h}{@damage 2d8 + 3 + summonSpellLevel} 冷伤害。"
+					]
+				},
+				{
+					"name": "Dreadful Scream (1/Day)",
+					"entries": [
+						"灵魂尖叫。它周围 9 米内的每个生物都必须成功进行一次智慧蓄力，以对抗你的法术蓄力 DC，否则就会在 1 分钟内受到灵魂 {@condition frightened} 的影响。该（%1%）生物可以在其每一回合结束时重复该蓄力，如果成功则终止对其自身的影响。"
+					]
+				}
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"C"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Undead Spirit",
+			"source": "UA2020SpellsAndMagicTattoos",
+			"page": 8,
+			"summonedBySpell": "Summon Undead Spirit|UA2020SpellsAndMagicTattoos",
+			"summonedBySpellLevel": 3,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"special": "11 + the level of the spell (natural armor)"
+				}
+			],
+			"hp": {
+				"special": "equal the undead's Constitution modifier + your spellcasting ability modifier + ten times the spell's level"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 40,
+					"condition": "(ghostly only; hover)"
+				},
+				"canHover": true
+			},
+			"str": 12,
+			"dex": 16,
+			"con": 15,
+			"int": 4,
+			"wis": 10,
+			"cha": 9,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"understands the languages you speak"
+			],
+			"trait": [
+				{
+					"name": "Incorporeal Movement (Ghostly Only)",
+					"entries": [
+						"亡灵在移动时可以变得没有实体，并像穿过其他生物和物体一样穿过它们（%0%）。如果亡灵在物体内结束回合，它会被转移到最近的空地，每移动 1.5 米会受到 {@damage 1d10} 力的伤害。"
+					]
+				},
+				{
+					"name": "Festering Aura (Putrid Only)",
+					"entries": [
+						"除你之外，任何在亡灵 1.5 米范围内开始回合的生物都必须在体质救赎中成功对抗你的法术救赎 DC，否则就会 {@condition poisoned} 直到下一回合开始。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"灵魂进行的攻击次数等于该法术等级的一半（向下取整）。"
+					]
+				},
+				{
+					"name": "Deathly Touch (Ghostly Only)",
+					"entries": [
+						"{@atk mw} {@hit 3 + summonSpellLevel} 命中，距离 1.5 米，一个生物。{@h}{@damage 1d8 + 3 + summonSpellLevel}次坏死伤害，该生物必须在智慧值与你的法术救赎DC相抵消的情况下救赎成功，否则会被亡灵 {@condition frightened} 直到目标的下一回合结束。"
+					]
+				},
+				{
+					"name": "Grave Bolt (Skeletal Only)",
+					"entries": [
+						"{@atk rs} {@hit 3 + summonSpellLevel} 命中，范围 45 米，一个目标。{@h}{@damage 2d8 + 3 + summonSpellLevel} 坏死伤害。"
+					]
+				},
+				{
+					"name": "Rotting Claw (Putrid Only)",
+					"entries": [
+						"{@atk mw} {@hit 3 + summonSpellLevel} 命中，距离 1.5 米，一个目标。{@h}{@damage 1d6 + 3 + summonSpellLevel} 砍伤。如果目标是 {@condition poisoned}，则必须对着你的法术救赎DC进行一次体质救赎成功，否则会 {@condition paralyzed} 直到下一回合结束。"
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"O",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"hasToken": true
+		}
+	]
+}

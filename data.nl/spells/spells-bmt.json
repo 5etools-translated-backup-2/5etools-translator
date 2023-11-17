@@ -1,0 +1,160 @@
+{
+	"spell": [
+		{
+			"name": "Antagonize",
+			"source": "BMT",
+			"page": 50,
+			"level": 3,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "een speelkaart met een afbeelding van een schurk"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Je fluistert magische woorden die een wezen naar keuze binnen bereik tegen je in het harnas jagen. Het doelwit moet een Wisdom saving throw doen. Als de save mislukt, krijgt het doelwit {@damage 4d4} psychische schade en moet het onmiddellijk zijn reactie gebruiken om een melee aanval uit te voeren op een ander wezen van jouw keuze dat je kunt zien. Als het doelwit deze aanval niet kan uitvoeren (bijvoorbeeld omdat er niemand binnen zijn bereik is of omdat zijn reactie niet beschikbaar is), heeft het doelwit nadeel bij de volgende aanvalsrol die het maakt voor het begin van je volgende beurt. Als de save slaagt, krijgt het doelwit slechts half zoveel schade."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Als je deze spreuk uitspreekt met een spell slot van 4e niveau of hoger, verhoogt de schade met {@dice 1d4} voor elk slot level boven 3e."
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Spirit of Death",
+			"source": "BMT",
+			"page": 50,
+			"level": 4,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "een vergulde speelkaart met een waarde van minstens 400 gp waarop een avatar van de dood staat afgebeeld",
+					"cost": 40000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Je roept een geest op die de dood belichaamt. De geest manifesteert zich in een onbezette ruimte die je kunt zien binnen bereik en gebruikt de {@creature reaper spirit|BMT} stat block. De geest verdwijnt wanneer hij gereduceerd wordt tot 0 hitpoints of wanneer de spreuk eindigt.",
+				"De geest is een bondgenoot van jou en je metgezellen. In gevechten deelt de geest jouw initiatief en is hij direct na jou aan de beurt. Hij gehoorzaamt je verbale commando's (jij hoeft geen actie te ondernemen). Als je de geest geen commando's geeft, neemt hij de {@action Dodge} actie en gebruikt hij zijn beweging om gevaar te vermijden."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Als je deze spreuk uitspreekt met een spreukslot van 5e niveau of hoger, gebruik je het hogere niveau overal waar het niveau van de spreuk staat in het reaper spirit stat block."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Spray of Cards",
+			"source": "BMT",
+			"page": 50,
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 15
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "een kaartspel"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Je spuit een kegel van 4,5 meter van spectrale kaarten. Elk wezen in dat gebied moet een vaardigheidsreddende worp doen. Als je niet slaagt, krijgt het wezen {@damage 2d10} krachtschade en heeft het de {@condition blinded} conditie tot het einde van zijn volgende beurt. Als de save slaagt, krijgt het wezen slechts half zoveel schade."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Als je deze spreuk uitvoert met een spell slot van 3de niveau of hoger, verhoogt de schade met {@dice 1d10} voor elk slot level boven het 2de."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrow": [
+				"dexterity"
+			]
+		}
+	]
+}

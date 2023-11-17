@@ -1,0 +1,7465 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		}
+	},
+	"monster": [
+		{
+			"name": "Adranach",
+			"group": [
+				"Adranachs"
+			],
+			"source": "TDCSR",
+			"page": 224,
+			"size": [
+				"H"
+			],
+			"type": "construct",
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 170,
+				"formula": "20d12 + 40"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 60
+			},
+			"str": 23,
+			"dex": 16,
+			"con": 14,
+			"int": 8,
+			"wis": 14,
+			"cha": 11,
+			"save": {
+				"str": "+11",
+				"dex": "+8"
+			},
+			"skill": {
+				"athletics": "+11",
+				"perception": "+7"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 17,
+			"resist": [
+				{
+					"special": "damage from spells"
+				}
+			],
+			"immune": [
+				"poison",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from non-magical attacks"
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages spoken by its creator but can't speak"
+			],
+			"cr": "12",
+			"pbNote": "+5",
+			"trait": [
+				{
+					"name": "Arcane Leak",
+					"entries": [
+						"Cuando el adranach queda reducido a la mitad de sus puntos de golpe máximos (85 puntos de golpe), su máscara de mithral se resquebraja y su forma arcana comienza a vacilar, creando un campo de magia inestable a su alrededor. Cualquier criatura que comience su turno a menos de 3 metros del adranach o entre en esa zona por primera vez en un turno recibe 10 ({@damage 3d6}) de daño radiante. Además, si una criatura lanza un hechizo dentro de esta área, debe realizar un chequeo de habilidad {@dc 14} utilizando su habilidad de lanzamiento de hechizos. En caso de fallo, el hechizo resulta contraproducente, consumiendo la casilla de hechizo e infligiendo 3 ({@damage 1d6}) puntos de daño de fuerza al lanzador por cada nivel de la casilla de hechizo consumida."
+					]
+				},
+				{
+					"name": "Immutable Form",
+					"entries": [
+						"El adranach es inmune a cualquier hechizo o efecto que pueda alterar su forma."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"El adranach tiene {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} sobre {@quickref saving throws|PHB|2|1} contra hechizos y otros efectos mágicos."
+					]
+				},
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"Los ataques con armas del adranach son mágicos."
+					]
+				},
+				{
+					"name": "Powerful Build",
+					"entries": [
+						"El adranach cuenta como una talla mayor a la hora de determinar su capacidad de carga y el peso que puede empujar, arrastrar o levantar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El adranach realiza dos ataques con sus garras."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 11} para golpear, un objetivo, alcance 1,5 m. {@h}32 ({@damage 4d12 + 6}) de daño cortante."
+					]
+				},
+				{
+					"name": "Force Bolts {@recharge 5}",
+					"entries": [
+						"El adranach tiene como objetivo hasta cuatro criaturas que pueda ver en un radio de 18 metros. Cada objetivo debe tener éxito en un {@dc 18} de Destreza {@quickref saving throws|PHB|2|1|tiro de salvación} o recibir 28 ({@damage 8d6}) de daño de fuerza."
+					]
+				}
+			],
+			"variant": [
+				{
+					"name": "Adranach Customization",
+					"type": "variant",
+					"source": "TDCSR",
+					"page": 224,
+					"_version": {
+						"name": "Adranach (Customised)",
+						"addHeadersAs": "action"
+					},
+					"entries": [
+						"Los adranach son construcciones personalizadas para sus creadores. Uno de los rasgos que hacen a un candidato a hechicero atractivo para el {@book League of Miracles|TDCSR|2|League of Miracles} es el interés por la invención, y se anima a los hechiceros a personalizar cualquier adranach que creen. A continuación se muestran algunas características opcionales con las que los hechiceros han equipado a sus creaciones. La mayoría de los adranach tienen una característica extra, y la mayoría de los maestros adranach tienen tres.",
+						{
+							"type": "entries",
+							"name": "Advanced Tracking ({@i Recharges after a {@quickref resting|PHB|2|0|Long Rest}})",
+							"page": 224,
+							"entries": [
+								"Cuando una criatura falla su {@quickref saving throws|PHB|2|1|tiro de salvación} contra los Proyectiles de Fuerza del adranach, éste puede marcar a esa criatura durante las siguientes 24 horas. El adranach conoce la dirección de la ubicación de una criatura siempre que estén en el mismo plano. Si la criatura se está moviendo, el adranach conoce la dirección de este movimiento."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Arcane Bond",
+							"page": 224,
+							"entries": [
+								"El creador del adranach puede comunicarse telepáticamente con él mientras ambos se encuentren en un radio de 1,5 kilómetros. Como acción, el creador puede ver a través de los ojos del adranach y oír lo que oye hasta el comienzo del siguiente turno del creador, obteniendo los beneficios de cualquier sentido especial que tenga el adranach. Durante este tiempo, el creador es {@condition deafened} y {@condition blinded} con respecto a sus propios sentidos."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Slipstream",
+							"page": 224,
+							"entries": [
+								"El adranach puede lanzarse {@spell invisibility} sobre sí mismo a voluntad. Mientras está {@condition invisible}, su velocidad se duplica."
+							]
+						}
+					]
+				}
+			],
+			"traitTags": [
+				"Immutable Form",
+				"Magic Resistance",
+				"Magic Weapons"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"O",
+				"R",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ashari Firetamer",
+			"group": [
+				"Ashari"
+			],
+			"source": "TDCSR",
+			"page": 226,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any"
+				]
+			},
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item red dragon scale mail}"
+					]
+				}
+			],
+			"hp": {
+				"average": 92,
+				"formula": "16d8 + 20"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 15,
+			"con": 14,
+			"int": 12,
+			"wis": 18,
+			"cha": 11,
+			"skill": {
+				"arcana": "+4",
+				"nature": "+7"
+			},
+			"passive": 14,
+			"resist": [
+				"fire"
+			],
+			"languages": [
+				"Common",
+				"Druidic",
+				"Ignan"
+			],
+			"cr": "7",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"El domador de fuego es un hechicero de 9º nivel. Su habilidad de conjuro es Sabiduría (salvación de conjuro {@dc 15}, {@hit 7} para golpear con ataques de conjuro). Tiene preparados los siguientes conjuros de druida:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft}",
+								"{@spell mending}",
+								"{@spell produce flame} ({@dice 2d8})"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell cure wounds}",
+								"{@spell faerie fire}",
+								"{@spell jump}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell flame blade}",
+								"{@spell heat metal}",
+								"{@spell lesser restoration}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell daylight}",
+								"{@spell dispel magic}",
+								"{@spell protection from energy}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell freedom of movement}",
+								"{@spell wall of fire}"
+							]
+						},
+						"5": {
+							"slots": 1,
+							"spells": [
+								"{@spell conjure elemental}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"action": [
+				{
+					"name": "Scimitar",
+					"entries": [
+						"{@atk mw} {@hit 5} para golpear, alcance 1,5 m., un objetivo. {@h}5 ({@damage 1d6 + 2}) de daño cortante más 14 ({@damage 4d6}) de daño de fuego."
+					]
+				},
+				{
+					"name": "Flamecharm (Recharges after a {@quickref resting|PHB|2|0|Short or Long Rest})",
+					"entries": [
+						"El domador del fuego puede lanzar el hechizo {@spell dominate monster} (salva {@dc 15}) sobre un {@creature fire elemental} u otra criatura elemental de fuego. Si la criatura tiene 150 o más puntos de golpe, tiene {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} sobre el {@quickref saving throws|PHB|2|1|tiro de salvación}."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Flameform (Recharges after a {@quickref resting|PHB|2|0|Short or Long Rest})",
+					"entries": [
+						"El domador de fuego puede transformarse en un {@creature fire elemental}. Sus estadísticas de juego se sustituyen por las estadísticas del elemental, pero el lanzallamas conserva su alineamiento, personalidad y puntuaciones de Inteligencia, Sabiduría y Carisma, así como todas sus habilidades y {@quickref saving throws|PHB|2|1|tiro de salvación} competencias. Mientras esté en esta forma, el domador de fuego no puede lanzar hechizos. Cuando el lanzallamas queda reducido a 0 puntos de vida, cae {@condition unconscious} o muere en esta forma, vuelve a su forma humanoide. Puede permanecer en forma de llama hasta 5 horas o hasta que vuelva a su forma humanoide como acción adicional."
+					]
+				},
+				{
+					"name": "Druidic Recovery",
+					"entries": [
+						"Si el domador de fuego está en forma {@creature fire elemental} usando Forma de Llama, puede gastar una ranura de hechizo para recuperar {@dice 1d8} puntos de golpe por nivel de la ranura de hechizo gastada."
+					]
+				}
+			],
+			"attachedItems": [
+				"scimitar|phb"
+			],
+			"languageTags": [
+				"C",
+				"DU",
+				"IG"
+			],
+			"damageTags": [
+				"F",
+				"S"
+			],
+			"damageTagsSpell": [
+				"F"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ashari Skydancer",
+			"group": [
+				"Ashari"
+			],
+			"source": "TDCSR",
+			"page": 227,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any"
+				]
+			},
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 63,
+				"formula": "14d8"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 60,
+					"condition": "(with {@item skysail|TDCSR})"
+				}
+			},
+			"str": 10,
+			"dex": 18,
+			"con": 10,
+			"int": 12,
+			"wis": 16,
+			"cha": 11,
+			"save": {
+				"dex": "+7"
+			},
+			"skill": {
+				"acrobatics": "+7",
+				"perception": "+6"
+			},
+			"passive": 16,
+			"languages": [
+				"Auran",
+				"Common",
+				"Druidic"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"El bailarín del cielo es un hechicero de 3er nivel. Su habilidad de conjuro es Sabiduría (salvación de conjuro {@dc 14}, {@hit 6} para golpear con ataques de conjuro). Tiene preparados los siguientes conjuros de druida:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell guidance}",
+								"{@spell shillelagh}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell entangle}",
+								"{@spell fog cloud}",
+								"{@spell jump}"
+							]
+						},
+						"2": {
+							"slots": 2,
+							"spells": [
+								"{@spell gust of wind}",
+								"{@spell pass without trace}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Evasion",
+					"entries": [
+						"Si el skydancer está sujeto a un efecto que le permite hacer un {@quickref saving throws|PHB|2|1|tiro de salvación} de Destreza para recibir sólo la mitad de daño, el skydancer no recibe daño si tiene éxito en el {@quickref saving throws|PHB|2|1|tiro de salvación}, y sólo la mitad de daño si falla."
+					]
+				},
+				{
+					"name": "Flyby",
+					"entries": [
+						"El skydancer no provoca un {@action opportunity attack|PHB} cuando vuela fuera del alcance de un enemigo."
+					]
+				},
+				{
+					"name": "Skysail",
+					"entries": [
+						"El skydancer vuela con un objeto mágico Ashari especial llamado {@item skysail|TDCSR}. Mientras las alas del {@item skysail|TDCSR|skysail's} están extendidas, el skydancer puede planear por el aire a una velocidad de 18 metros, pero debe descender al menos 3 metros al final de su turno y no puede ganar altitud."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El skydancer realiza dos ataques de bastón {@item skysail|TDCSR}."
+					]
+				},
+				{
+					"name": "Skysail Staff",
+					"entries": [
+						"{@atk mw} {@hit 7} para golpear, alcance 1,5 m., un objetivo. {@h}7 ({@damage 1d6 + 4}) de daño contundente. Si el bailarín del cielo hace este ataque mientras vuela, el objetivo debe hacer un {@dc 14} de Destreza {@quickref saving throws|PHB|2|1|tiro de salvación}, recibiendo 21 ({@damage 6d6}) puntos de daño de rayo si falla la salvación, o la mitad de daño si tiene éxito."
+					]
+				},
+				{
+					"name": "Fly (1/Day)",
+					"entries": [
+						"El skydancer utiliza su {@item skysail|TDCSR} para lanzarse {@spell fly} a sí mismo durante un máximo de 1 minuto (no requiere {@condition concentration})."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Slow Fall",
+					"entries": [
+						"Cuando el skydancer recibe {@quickref falling|XGE|2|0|daños por caída}, puede reducir el daño a la mitad."
+					]
+				}
+			],
+			"traitTags": [
+				"Flyby"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AU",
+				"C",
+				"DU"
+			],
+			"damageTags": [
+				"B",
+				"L"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"restrained"
+			],
+			"savingThrowForcedSpell": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ashari Stoneguard",
+			"group": [
+				"Ashari"
+			],
+			"source": "TDCSR",
+			"page": 229,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any"
+				]
+			},
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"granite half plate"
+					]
+				}
+			],
+			"hp": {
+				"average": 152,
+				"formula": "16d8 + 80"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 10,
+			"con": 20,
+			"int": 10,
+			"wis": 14,
+			"cha": 9,
+			"save": {
+				"str": "+7",
+				"con": "+8",
+				"wis": "+5"
+			},
+			"skill": {
+				"athletics": "+7",
+				"intimidation": "+2"
+			},
+			"senses": [
+				"tremorsense 30 ft."
+			],
+			"passive": 12,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"cond": true,
+					"note": "from non-magical attacks, when using skin-to-stone"
+				}
+			],
+			"conditionImmune": [
+				"petrified"
+			],
+			"languages": [
+				"Common",
+				"Druidic",
+				"Terran"
+			],
+			"cr": "7",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"El stoneguard es un hechicero de 3er nivel. Su habilidad de conjuro es Sabiduría (salvación de conjuro {@dc 13}, {@hit 5} para golpear con ataques de conjuro). Tiene preparados los siguientes conjuros de druida:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft}",
+								"{@spell resistance}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell goodberry}",
+								"{@spell speak with animals}",
+								"{@spell thunderwave}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell hold person}",
+								"{@spell spike growth}"
+							],
+							"slots": 2
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El stoneguard hace tres ataques de maul de granito."
+					]
+				},
+				{
+					"name": "Granite Maul",
+					"entries": [
+						"{@atk mw} {@hit 7} para golpear, alcance 1,5 m., un objetivo. {@h}11 ({@damage 2d6 + 4}) de daño contundente. Si el ataque impacta, el stoneguard también puede lanzar inmediatamente {@spell thunderwave} como acción adicional. Este lanzamiento utiliza una casilla de conjuro, pero no requiere componentes."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Sentinel",
+					"entries": [
+						"Cuando una criatura en un radio de 1,5 metros del stoneguard ataca a un objetivo que no sea el stoneguard, el stoneguard puede realizar un ataque contra esa criatura."
+					]
+				}
+			],
+			"senseTags": [
+				"T"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DU",
+				"T"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"P",
+				"T"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"paralyzed"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ashari Waverider",
+			"group": [
+				"Ashari"
+			],
+			"source": "TDCSR",
+			"page": 230,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any"
+				]
+			},
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item hide armor of cold resistance}"
+					]
+				}
+			],
+			"hp": {
+				"average": 77,
+				"formula": "14d8 + 14"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 14,
+			"con": 12,
+			"int": 10,
+			"wis": 16,
+			"cha": 13,
+			"save": {
+				"con": "+4",
+				"wis": "+6"
+			},
+			"skill": {
+				"athletics": "+8",
+				"nature": "+3"
+			},
+			"passive": 13,
+			"resist": [
+				"cold"
+			],
+			"languages": [
+				"Aquan",
+				"Common",
+				"Druidic"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"El waverider es un hechicero de 7º nivel. Su habilidad de conjuro es Sabiduría (salvación de conjuro {@dc 14}, {@hit 6} para golpear con ataques de conjuro). Tiene preparados los siguientes conjuros de druida:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft}",
+								"{@spell poison spray} ({@dice 2d12})",
+								"{@spell resistance}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell create or destroy water}",
+								"{@spell cure wounds}",
+								"{@spell healing word}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell animal messenger}",
+								"{@spell lesser restoration}",
+								"{@spell moonbeam}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell conjure animals} (aquatic beasts only)",
+								"{@spell water breathing}",
+								"{@spell water walk}"
+							]
+						},
+						"4": {
+							"slots": 1,
+							"spells": [
+								"{@spell control water}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Healing Tides",
+					"entries": [
+						"Siempre que el Jinete Errante lance un hechizo de 1er nivel o superior que afecte a una criatura no hostil, esa criatura recupera 3 puntos de golpe (además de cualquier curación que pueda proporcionar el hechizo)."
+					]
+				},
+				{
+					"name": "Marine Empathy",
+					"entries": [
+						"El waverider puede hablar con plantas y animales acuáticos y entenderlos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Harpoon",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} para golpear, alcance 1,5 m., alcance 20/18 m., un objetivo. {@h}7 ({@damage 1d10 + 2}) de daño perforante. Si el objetivo es una criatura Grande o menor, debe tener éxito en un combate de Fuerza contra el waverider o ser arrastrado hasta 6 metros hacia el waverider. Los ataques con esta arma realizados mientras {@quickref Underwater Combat|PHB|3|0|bajo el agua} no tienen {@quickref Advantage and Disadvantage|PHB|2|0|desventaja}."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Fishform (Recharges after a {@quickref resting|PHB|2|0|Short or Long Rest})",
+					"entries": [
+						"El waverider puede transformarse en un {@creature hunter shark} o en un {@creature giant octopus}. Sus estadísticas de juego son reemplazadas por las de la criatura elegida, pero el waverider conserva su alineamiento, personalidad y puntuaciones de Inteligencia, Sabiduría y Carisma. También conserva sus habilidades, además de las de la criatura en la que se transforma. Cuando el waverider se reduce a 0 puntos de golpe, cae {@condition unconscious} o muere en esta forma, vuelve a su forma humanoide. Puede permanecer en forma de pez hasta 3 horas o hasta que vuelva a su forma humanoide como acción adicional."
+					]
+				}
+			],
+			"languageTags": [
+				"AQ",
+				"C",
+				"DU"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"B",
+				"I",
+				"R"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Black King",
+			"isNpc": true,
+			"source": "TDCSR",
+			"page": 92,
+			"_copy": {
+				"name": "Stone Golem",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "The golem",
+						"with": "The Black King",
+						"flags": "i"
+					}
+				}
+			},
+			"speed": {
+				"walk": 60
+			},
+			"int": 18,
+			"cha": 18,
+			"languages": [
+				"Common"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Blighted Sapling",
+			"source": "TDCSR",
+			"page": 172,
+			"summonedByClass": "Druid|PHB",
+			"size": [
+				"M"
+			],
+			"type": "plant",
+			"ac": [
+				{
+					"special": "10 + PB (natural armor)"
+				}
+			],
+			"hp": {
+				"special": "twice your druid level"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 13,
+			"con": 12,
+			"int": 4,
+			"wis": 8,
+			"cha": 3,
+			"senses": [
+				"blindsight 60 ft. (blind beyond this radius)"
+			],
+			"passive": 9,
+			"resist": [
+				"necrotic",
+				"poison"
+			],
+			"vulnerable": [
+				"fire"
+			],
+			"conditionImmune": [
+				"blinded",
+				"deafened",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages you speak"
+			],
+			"pbNote": "equals your bonus",
+			"trait": [
+				{
+					"name": "Blighted Resilience (10th level or higher)",
+					"entries": [
+						"La criatura tiene inmunidad al daño necrótico y venenoso y a la condición {@condition poisoned}."
+					]
+				},
+				{
+					"name": "Toxic Demise (10th level or higher)",
+					"entries": [
+						"Cuando la criatura queda reducida a 0 puntos de vida, explota en una explosión de mantillo tóxico o vísceras fétidas. Cada criatura en un radio de 1,5 metros de la criatura que explota debe tener éxito en una prueba de Constitución {@quickref saving throws|PHB|2|1|tiro de salvación} contra tu DC de salvación de hechizo o recibir daño necrótico basado en el índice de desafío de la criatura (ver la tabla a continuación). Como acción, también puedes hacer explotar a una criatura invocada, matándola inmediatamente.",
+						{
+							"type": "table",
+							"caption": "Toxic Demise Damage",
+							"colLabels": [
+								"Creature CR",
+								"Damage"
+							],
+							"colStyles": [
+								"col-4 text-center",
+								"col-8"
+							],
+							"rows": [
+								[
+									"1/4 o inferior",
+									"{@damage 1d4} daño necrótico"
+								],
+								[
+									"1/2",
+									"{@damage 1d6} daño necrótico"
+								],
+								[
+									"1 o superior",
+									"{@damage (#$prompt_number:min=1,title=Enter the creature's CR!,default=1$#)d8|Un número de d8 de daño necrótico igual al índice de desafío de la criatura}"
+								],
+								[
+									"Sin calificación de desafío",
+									"{@damage (PB)d6|Un número de d6s de daño necrótico igual a tu bono de competencia}"
+								]
+							]
+						}
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Al alcanzar el 14º nivel en esta clase, el arbolito asolado realiza dos ataques de garra."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hitYourSpellAttack} para golpear, alcance 1,5 m., un objetivo. {@h} {@damage 2d4 + PB} daño perforante."
+					]
+				}
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Centaur Skeleton",
+			"shortName": "centaur",
+			"group": [
+				"Skeletons"
+			],
+			"source": "TDCSR",
+			"page": 256,
+			"size": [
+				"L"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 45,
+				"formula": "6d10 + 12"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 17,
+			"dex": 14,
+			"con": 14,
+			"int": 6,
+			"wis": 9,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"immune": [
+				"poison"
+			],
+			"vulnerable": [
+				"bludgeoning"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"understands Common but can't speak"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Charge",
+					"entries": [
+						"Si el centauro se mueve al menos 9 metros en línea recta hacia un objetivo y luego lo golpea con un ataque de pica en el mismo turno, el objetivo recibe 10 ({@damage 3d6}) de daño perforante adicional."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El esqueleto centauro realiza dos ataques: uno con su pica y otro con sus pezuñas, o dos con su arco largo."
+					]
+				},
+				{
+					"name": "Pike",
+					"entries": [
+						"{@atk mw} {@hit 5} para golpear, alcance 3 m., un objetivo. {@h}8 ({@damage 1d10 + 3}) de daño perforante."
+					]
+				},
+				{
+					"name": "Hooves",
+					"entries": [
+						"{@atk mw} {@hit 5} para golpear, alcance 1,5 m., un objetivo. {@h}10 ({@damage 2d6 + 3}) de daño contundente."
+					]
+				},
+				{
+					"name": "Longbow",
+					"entries": [
+						"{@atk rw} {@hit 4} para golpear, alcance 150/18 m., un objetivo. {@h}6 ({@damage 1d8 + 2}) de daño perforante."
+					]
+				}
+			],
+			"variant": [
+				{
+					"name": "Centaur Skeleton Customization",
+					"type": "variant",
+					"source": "TDCSR",
+					"page": 256,
+					"_version": {
+						"name": "Centaur Skeleton (Spirit Away)",
+						"addHeadersAs": "action"
+					},
+					"entries": [
+						"Algunos esqueletos de centauro tienen la siguiente característica adicional a discreción del GM.",
+						{
+							"type": "entries",
+							"name": "Spirit Away",
+							"page": 256,
+							"entries": [
+								"El esqueleto de centauro y hasta tres criaturas en un radio de 1,5 m entran mágicamente en el Plano Etéreo desde el Plano Material, o viceversa. Una criatura reacia que tenga éxito en un {@dc 13} de Carisma {@quickref saving throws|PHB|2|1|tiro de salvación} puede resistirse a este efecto."
+							]
+						}
+					]
+				}
+			],
+			"environment": [
+				"forest"
+			],
+			"attachedItems": [
+				"longbow|phb",
+				"pike|phb"
+			],
+			"traitTags": [
+				"Charge"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Champion of Ravens",
+			"shortName": "The Champion",
+			"alias": [
+				"Vax'ildan"
+			],
+			"group": [
+				"Vox Machina"
+			],
+			"source": "TDCSR",
+			"page": 275,
+			"size": [
+				"M"
+			],
+			"type": "celestial",
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"{@item deathwalker's ward (Exalted)|TDCSR|deathwalker's ward}"
+					]
+				}
+			],
+			"hp": {
+				"average": 150,
+				"formula": "20d10 + 40"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 60
+			},
+			"str": 14,
+			"dex": 20,
+			"con": 14,
+			"int": 16,
+			"wis": 14,
+			"cha": 17,
+			"save": {
+				"str": "+5",
+				"dex": "+15",
+				"con": "+5",
+				"int": "+13",
+				"wis": "+5",
+				"cha": "+6"
+			},
+			"skill": {
+				"acrobatics": "+19",
+				"intimidation": "+10",
+				"investigation": "+10",
+				"perception": "+16",
+				"persuasion": "+10",
+				"sleight of hand": "+12",
+				"stealth": "+19"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 26,
+			"resist": [
+				"radiant",
+				"necrotic",
+				"poison",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"unconscious"
+			],
+			"languages": [
+				"Abyssal",
+				"Celestial",
+				"Common",
+				"Druidic",
+				"Elvish",
+				"Thieves' cant"
+			],
+			"cr": "21",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"La habilidad innata de lanzamiento de hechizos del Campeón es Carisma ({@hit 10} para golpear con ataques de hechizos, salvación {@dc 18}). Puede lanzar de forma innata los siguientes hechizos, que no requieren componentes materiales:"
+					],
+					"will": [
+						"{@spell bane}",
+						"{@spell bless}",
+						"{@spell druidcraft}"
+					],
+					"daily": {
+						"1": [
+							"{@spell greater invisibility}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Assassinate",
+					"entries": [
+						"Durante su primer turno, el Campeón tiene {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} en las tiradas de ataque contra cualquier criatura que no haya tomado turno. Cualquier impacto del Campeón contra una criatura sorprendida es un impacto crítico."
+					]
+				},
+				{
+					"name": "Aura of Protection",
+					"entries": [
+						"Mientras el Campeón está consciente, él y las criaturas amistosas en un radio de 3 metros tienen un bonificador +3 a {@quickref saving throws|PHB|2|1} (incluido arriba)."
+					]
+				},
+				{
+					"name": "Eternal Champion",
+					"entries": [
+						"Cuando el Campeón queda reducido a 0 puntos de golpe o muere, su cuerpo se destruye pero su espíritu regresa al lado del {@deity The Matron of Ravens|Exandria|TDCSR|Raven Queen's}, y obtiene un nuevo cuerpo al cabo de {@dice 1d4} días."
+					]
+				},
+				{
+					"name": "Evasion",
+					"entries": [
+						"Si el Campeón sufre un efecto que le permite hacer un {@quickref saving throws|PHB|2|1|tiro de salvación} de Destreza para recibir sólo la mitad de daño, no recibe daño si tiene éxito en el {@quickref saving throws|PHB|2|1|tiro de salvación}, y sólo recibe la mitad de daño si falla."
+					]
+				},
+				{
+					"name": "Fate-Touched (4/Day)",
+					"entries": [
+						"Cuando el Campeón hace una tirada de ataque, un chequeo de habilidad o un {@quickref saving throws|PHB|2|1|tiro de salvación}, puede repetir la tirada del {@dice d20} y usar cualquiera de las dos tiradas. Alternativamente, cuando una criatura que el Campeón pueda ver haga una tirada de ataque contra él, o un {@quickref saving throws|PHB|2|1|tiro de salvación} contra uno de sus hechizos o rasgos, puede obligar a esa criatura a repetir el ataque o la salvación y usar la nueva tirada."
+					]
+				},
+				{
+					"name": "Shadow Smite (1/Turn)",
+					"entries": [
+						"El Campeón inflige 49 ({@damage 14d6}) de daño radiante o necrótico adicional (a su elección) cuando golpea a un objetivo con un ataque de arma y no tiene {@quickref Advantage and Disadvantage|PHB|2|0|desventaja} en la tirada de ataque."
+					]
+				},
+				{
+					"name": "Unerring Sight",
+					"entries": [
+						"Los ataques con armas a distancia del campeón ignoran {@quickref cover|PHB|3|0|media tapa} y {@quickref cover|PHB|3|0|tres cuartos de cubierta} y no tienen penalización por alcance."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"El Campeón lleva {@item boots of haste|TDCSR} y el {@item deathwalker's ward (Exalted)|TDCSR|Deathwalker's Ward}, y blande {@item Whisper (Exalted)|TDCSR|Whisper}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El campeón realiza tres ataques con {@item Whisper (Exalted)|TDCSR|Whisper}."
+					]
+				},
+				{
+					"name": "Whisper",
+					"entries": [
+						"{@atk mw,rw} {@hit 15} para golpear, alcance 1,5 m. o alcance 18 m., un objetivo. {@h}10 ({@damage 1d4 + 8}) de daño perforante más 4 ({@damage 1d8}) de daño psíquico. En un impacto crítico, el objetivo debe tener éxito en un {@dc 18} de Sabiduría ({@quickref saving throws|PHB|2|1|tiro de salvación}) o estar {@condition frightened} del Campeón durante 1 minuto. En un ataque a distancia, el Campeón puede teletransportarse con un {@item Whisper (Exalted)|TDCSR|Whisper}, apareciendo a 1,5 m del objetivo si acierta, o en un espacio aleatorio a 9 m del objetivo si falla."
+					]
+				},
+				{
+					"name": "Touch of Life and Death (Recharges after a {@quickref resting|PHB|2|0|Short or Long Rest})",
+					"entries": [
+						"El Campeón toca a una criatura en un radio de 1,5 metros y elige entre curarla o dañarla, restaurando 55 ({@dice 10d10}) puntos de vida o infligiéndole 55 ({@damage 10d10}) puntos de daño necrótico. Si la criatura es un objetivo involuntario, puede evitar cualquiera de los dos efectos con un éxito de {@dc 20} Destreza {@quickref saving throws|PHB|2|1|tiro de salvación}."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"El Campeón realiza la acción {@action Dash}, {@action Disengage} o {@action Hide}."
+					]
+				},
+				{
+					"name": "Boots of Haste (1/Day)",
+					"entries": [
+						"El campeón chasquea los talones y lanza {@spell haste} sobre sí mismo. No sufre letargo cuando termina el hechizo."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"El Campeón reduce a la mitad el daño que recibe de un ataque que le alcanza. Debe poder ver al atacante."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"CE",
+				"DU",
+				"E",
+				"TC"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"R",
+				"Y"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"conditionInflictSpell": [
+				"invisible"
+			],
+			"savingThrowForcedSpell": [
+				"charisma"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Cinderslag Elemental",
+			"source": "TDCSR",
+			"page": 231,
+			"size": [
+				"L"
+			],
+			"type": "elemental",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 102,
+				"formula": "12d10 + 36"
+			},
+			"speed": {
+				"walk": 20,
+				"burrow": 40
+			},
+			"str": 15,
+			"dex": 12,
+			"con": 17,
+			"int": 1,
+			"wis": 10,
+			"cha": 3,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from non-magical attacks"
+				}
+			],
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained",
+				"unconscious"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Searing Presence",
+					"entries": [
+						"Cualquier criatura que comience su turno a menos de 1,5 metros del elemental recibe 5 ({@damage 1d10}) de daño de fuego."
+					]
+				},
+				{
+					"name": "Molten Form",
+					"entries": [
+						"El elemental puede moverse por un espacio tan estrecho como de 2,5 cm de ancho sin apretarse. Además, el elemental puede entrar en el espacio de una criatura hostil y detenerse allí. La primera vez que entra en el espacio de una criatura en un turno, esa criatura recibe 5 ({@damage 1d10}) de daño por fuego y debe tener éxito en un {@dc 14} de Fuerza {@quickref saving throws|PHB|2|1|tiro de salvación} o ser {@condition restrained}. Una criatura que comienza su turno {@condition restrained} de esta manera recibe 5 ({@damage 1d10}) puntos de daño por fuego. Puede repetir el {@quickref saving throws|PHB|2|1|tiro de salvación} al final de cada uno de sus turnos, liberándose con un éxito."
+					]
+				},
+				{
+					"name": "Water Susceptibility",
+					"entries": [
+						"Por cada metro y medio que el elemental se mueva en el agua, o por cada litro de agua que le salpique, recibe 1 de daño por frío."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El elemental hace dos ataques de golpe."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 5} para golpear, alcance 1,5 m., un objetivo. {@h}12 ({@damage 3d6 + 2}) de daño por apaleamiento más 5 ({@damage 1d10}) de daño por fuego. Si el objetivo es una criatura o un objeto inflamable, se incendia. Hasta que una criatura realice una acción para apagar el fuego, el objetivo recibe 5 ({@damage 1d10}) puntos de daño de fuego al inicio de cada uno de sus turnos."
+					]
+				},
+				{
+					"name": "Molten Gaze",
+					"entries": [
+						"{@atk rs} {@hit 8} para golpear, alcance 9 m., un objetivo. {@h}21 ({@damage 6d6}) de daño de fuego, y el objetivo debe tener éxito en un {@dc 14} de Constitución {@quickref saving throws|PHB|2|1|tiro de salvación} o un objeto no mágico a elección del elemental que el objetivo lleve se derrite o se hace cenizas instantáneamente."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"C",
+				"F"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Clasp Cutthroat",
+			"group": [
+				"Clasp"
+			],
+			"source": "TDCSR",
+			"page": 232,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any"
+				]
+			},
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item leather armor|PHB|leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 44,
+				"formula": "8d8 + 8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 18,
+			"con": 12,
+			"int": 8,
+			"wis": 14,
+			"cha": 9,
+			"save": {
+				"dex": "+6"
+			},
+			"skill": {
+				"deception": "+3",
+				"stealth": "+8"
+			},
+			"passive": 12,
+			"languages": [
+				"Common",
+				"Thieves' cant"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Sneak Attack (1/Turn)",
+					"entries": [
+						"El degollador inflige 14 ({@damage 4d6}) de daño extra cuando golpea a un objetivo con un ataque de arma y tiene {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} en la tirada de ataque, o cuando el objetivo está a menos de 1,5 metros de un aliado del degollador que no es {@condition incapacitated} y el degollador no tiene {@quickref Advantage and Disadvantage|PHB|2|0|desventaja} en la tirada de ataque."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El degollador hace dos ataques de espada corta o daga."
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 6} para golpear, alcance 1,5 m., un objetivo. {@h}7 ({@damage 1d6 + 4}) de daño perforante."
+					]
+				},
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 6} para golpear, alcance 1,5 m., alcance 20/18 m., un objetivo. {@h}6 ({@damage 1d4 + 4}) de daño perforante."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"El degollador puede realizar la acción {@action Dash}, {@action Disengage} o {@action Hide}."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"El degollador reduce a la mitad el daño que recibe de un ataque que le alcance. El degollador debe poder ver al atacante."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb",
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Sneak Attack"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"TC"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Clasp Enforcer",
+			"group": [
+				"Clasp"
+			],
+			"source": "TDCSR",
+			"page": 233,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any"
+				]
+			},
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item half plate armor|PHB|half plate}"
+					]
+				}
+			],
+			"hp": {
+				"average": 102,
+				"formula": "12d8 + 48"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 18,
+			"int": 8,
+			"wis": 11,
+			"cha": 14,
+			"skill": {
+				"athletics": "+6",
+				"intimidation": "+8"
+			},
+			"passive": 10,
+			"languages": [
+				"Common",
+				"Thieves' cant"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Intimidating Presence",
+					"entries": [
+						"Siempre que el ejecutor golpee a una criatura con un ataque cuerpo a cuerpo, el objetivo debe tener éxito en una tirada de Sabiduría {@dc 15} {@quickref saving throws|PHB|2|1|tiro de salvación} o ser {@condition frightened} del ejecutor hasta el final del siguiente turno del objetivo. El ejecutor y sus aliados tienen {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} en las tiradas de ataque contra cualquier criatura {@condition frightened} de este modo. Si el {@quickref saving throws|PHB|2|1|tiro de salvación} de una criatura tiene éxito o el efecto termina para ella, la criatura es inmune a la Presencia Intimidadora del ejecutor durante las siguientes 24 horas."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El ejecutor hace tres ataques de martillo de guerra."
+					]
+				},
+				{
+					"name": "Warhammer",
+					"entries": [
+						"{@atk mw} {@hit 6} para golpear, alcance 1,5 m., un objetivo. {@h}8 ({@damage 1d10 + 3}) de daño contundente."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Second Wind (Recharges after a {@quickref resting|PHB|2|0|Short or Long Rest})",
+					"entries": [
+						"El ejecutor recupera 12 puntos de golpe"
+					]
+				}
+			],
+			"attachedItems": [
+				"warhammer|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"TC"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Cobalt Golem",
+			"group": [
+				"Golem"
+			],
+			"source": "TDCSR",
+			"page": 240,
+			"size": [
+				"H"
+			],
+			"type": "construct",
+			"ac": [
+				{
+					"ac": 21,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 300,
+				"formula": "24d12 + 144"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 28,
+			"dex": 9,
+			"con": 22,
+			"int": 3,
+			"wis": 11,
+			"cha": 1,
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"fire",
+				"lightning",
+				"poison",
+				"psychic",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical weapons that aren't adamantine",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "18",
+			"trait": [
+				{
+					"name": "Conductive Body",
+					"entries": [
+						"Siempre que el gólem reciba daño de rayo, no recibe daño. En su lugar, sus ataques con armas infligen 11 ({@dice 2d10}) de daño de rayo adicional hasta el final de su siguiente turno. También hasta el final del siguiente turno del gólem, cualquier criatura que lo toque o golpee con un ataque cuerpo a cuerpo mientras se encuentre a 1,5 metros de él recibe 11 ({@damage 2d10}) puntos de daño de rayos."
+					]
+				},
+				{
+					"name": "Immutable Form",
+					"entries": [
+						"El gólem es inmune a cualquier hechizo o efecto que pudiera alterar su forma."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"El gólem tiene {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} sobre {@quickref saving throws|PHB|2|1} contra hechizos y otros efectos mágicos."
+					]
+				},
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"Los ataques con armas del gólem son mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El gólem realiza dos ataques: uno con su golpe y otro con su espada, o bien utiliza su Pulso magnético y luego su Estocada giratoria."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 15} para golpear, alcance 1,5 m., un objetivo. {@h}25 ({@damage 3d10 + 9}) de daño contundente."
+					]
+				},
+				{
+					"name": "Sword",
+					"entries": [
+						"{@atk mw} {@hit 15} para golpear, alcance 3 m., un objetivo. {@h}28 ({@damage 3d12 + 9}) de daño cortante."
+					]
+				},
+				{
+					"name": "Spinning Cleave",
+					"entries": [
+						"El gólem realiza un ataque de espada contra cada criatura en un radio de 3 metros."
+					]
+				},
+				{
+					"name": "Magnetic Pulse {@recharge}",
+					"entries": [
+						"El gólem levanta los brazos y desata un pulso magnético. Todos los objetos metálicos desatendidos en un radio de 9 metros son arrastrados a un espacio desocupado en un radio de 1,5 metros del gólem. Toda criatura que lleve armadura metálica o esté hecha de metal en un radio de 9 metros del gólem debe tener éxito en un {@dc 20} de Fuerza {@quickref saving throws|PHB|2|1|tiro de salvación} o ser arrastrada a un espacio desocupado en un radio de 1,5 metros del gólem, y luego caer {@condition prone}."
+					]
+				}
+			],
+			"traitTags": [
+				"Immutable Form",
+				"Magic Resistance",
+				"Magic Weapons"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"L",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Cold Snap Spirit",
+			"source": "TDCSR",
+			"page": 234,
+			"size": [
+				"M"
+			],
+			"type": "elemental",
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 78,
+				"formula": "12d8 + 24"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 30
+			},
+			"str": 10,
+			"dex": 20,
+			"con": 14,
+			"int": 2,
+			"wis": 7,
+			"cha": 3,
+			"save": {
+				"dex": "+8",
+				"wis": "+1"
+			},
+			"skill": {
+				"perception": "+1",
+				"stealth": "+8"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 11,
+			"resist": [
+				{
+					"resist": [
+						"slashing",
+						"piercing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"cold",
+				"poison"
+			],
+			"vulnerable": [
+				"fire"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"poisoned",
+				"paralyzed",
+				"stunned"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Sense Heat",
+					"entries": [
+						"El espíritu de la ola de frío puede sentir el calor en un radio de 18 metros."
+					]
+				},
+				{
+					"name": "Frozen Aura",
+					"entries": [
+						"Cualquier criatura que comience su turno en un radio de 1,5 metros de un espíritu de ola de frío recibe 5 ({@damage 1d10}) puntos de daño por frío."
+					]
+				},
+				{
+					"name": "Jealous Spirit",
+					"entries": [
+						"Si el espíritu ataca a una criatura que se encuentra a menos de 1,5 metros de otro espíritu de ola de frío, el ataque inflige un 10 ({@damage 3d6}) de daño de frío adicional al impactar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Consume Warmth",
+					"entries": [
+						"{@atk ms} {@hit 8} para golpear, alcance 1,5 m., un objetivo. {@h}21 ({@damage 6d6}) de daño de frío, y la velocidad del objetivo se reduce a la mitad hasta el final del siguiente turno del espíritu."
+					]
+				},
+				{
+					"name": "Subzero Wave (1/Day)",
+					"entries": [
+						"Cada criatura en un radio de 9 metros del espíritu de la ola de frío debe realizar un {@dc 15} de Constitución {@quickref saving throws|PHB|2|1|tiro de salvación}, recibiendo 18 ({@damage 4d8}) de daño por frío si falla la salvación, o la mitad de daño si tiene éxito."
+					]
+				}
+			],
+			"environment": [
+				"arctic",
+				"forest",
+				"mountain"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"damageTags": [
+				"C"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Cyclops Stormcaller",
+			"group": [
+				"Cyclops"
+			],
+			"source": "TDCSR",
+			"page": 235,
+			"size": [
+				"L"
+			],
+			"type": "giant",
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item chain mail|PHB}",
+						"{@item cloak of protection}",
+						"{@item ring of protection}"
+					]
+				}
+			],
+			"hp": {
+				"average": 114,
+				"formula": "12d10 + 48"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 60,
+					"condition": "(stormy conditions only)"
+				}
+			},
+			"str": 16,
+			"dex": 10,
+			"con": 18,
+			"int": 15,
+			"wis": 8,
+			"cha": 20,
+			"save": {
+				"str": "+5",
+				"dex": "+2",
+				"con": "+6",
+				"int": "+4",
+				"wis": "+5",
+				"cha": "+11"
+			},
+			"skill": {
+				"arcana": "+6"
+			},
+			"passive": 9,
+			"languages": [
+				"Common",
+				"Elvish",
+				"Giant"
+			],
+			"cr": "10",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"La habilidad innata de lanzamiento de conjuros del cíclope es Carisma (salvación de conjuro {@dc 17}, {@hit 9} para golpear con ataques de conjuro). El cíclope puede lanzar de forma innata los siguientes hechizos, que no requieren componentes materiales:"
+					],
+					"will": [
+						"{@spell ray of frost} ({@dice 3d8})",
+						"{@spell water walk}"
+					],
+					"daily": {
+						"3e": [
+							"{@spell ice storm}",
+							"{@spell sleet storm}",
+							"{@spell wind wall}"
+						],
+						"1e": [
+							"{@spell control weather}",
+							"{@spell storm of vengeance}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "One-Eyed",
+					"entries": [
+						"El cíclope tiene {@quickref Advantage and Disadvantage|PHB|2|0|desventaja} en cualquier tirada de ataque contra un objetivo a más de 9 metros de distancia."
+					]
+				},
+				{
+					"name": "Storm Wings",
+					"entries": [
+						"Cuando está al aire libre en condiciones de tormenta, el cíclope tiene una velocidad de vuelo de 18 metros."
+					]
+				},
+				{
+					"name": "Supernatural Focus",
+					"entries": [
+						"El cíclope tiene {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} en Constitución {@quickref saving throws|PHB|2|1} hecho para mantener {@condition concentration} en hechizos, y no puede perder {@condition concentration} a causa del clima turbulento."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El cíclope hace dos ataques de garra de hielo."
+					]
+				},
+				{
+					"name": "Ice Claw",
+					"entries": [
+						"{@atk mw} {@hit 7} para golpear, alcance 1,5 m., un objetivo. {@h}13 ({@damage 3d6 + 3}) de daño cortante más 3 ({@damage 1d6}) de daño de frío."
+					]
+				}
+			],
+			"environment": [
+				"mountain"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"E",
+				"GI"
+			],
+			"damageTags": [
+				"C",
+				"S"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"L",
+				"T"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"deafened",
+				"prone"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Demonfeed Spider",
+			"source": "TDCSR",
+			"page": 237,
+			"size": [
+				"L"
+			],
+			"type": "fiend",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 75,
+				"formula": "10d10 + 20"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40
+			},
+			"str": 16,
+			"dex": 18,
+			"con": 15,
+			"int": 6,
+			"wis": 10,
+			"cha": 6,
+			"save": {
+				"dex": "+7"
+			},
+			"skill": {
+				"perception": "+3",
+				"stealth": "+7"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"cold",
+				"fire",
+				"lightning"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"La araña puede trepar por superficies difíciles, incluso por techos boca abajo, sin necesidad de hacer un chequeo de habilidad."
+					]
+				},
+				{
+					"name": "Web Walker",
+					"entries": [
+						"La araña ignora las restricciones de movimiento causadas por las telarañas."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"La araña realiza dos ataques cuerpo a cuerpo: uno con su mordedura y otro con su aguijón; o la araña puede realizar un ataque con su telaraña seguido de un ataque cuerpo a cuerpo."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} para golpear, alcance 1,5 m., un objetivo. {@h}8 ({@damage 1d10 + 3}) de daño perforante, y el objetivo debe hacer un {@dc 14} de Constitución {@quickref saving throws|PHB|2|1|tiro de salvación}. Con una salvación fallida, el objetivo recibe 27 ({@damage 6d8}) puntos de daño por veneno y queda {@condition poisoned} durante 1 minuto. Con una salvación exitosa, el objetivo recibe la mitad de daño y no es {@condition poisoned}. Si este daño de veneno reduce al objetivo a 0 puntos de golpe, el objetivo está estable pero {@condition poisoned} durante 1 hora, incluso después de recuperar puntos de golpe, y es {@condition paralyzed} mientras {@condition poisoned} de esta manera."
+					]
+				},
+				{
+					"name": "Stinger",
+					"entries": [
+						"{@atk mw} {@hit 7} para golpear, alcance 1,5 m., un objetivo. {@h}9 ({@damage 1d12 + 3}) de daño perforante, y el objetivo debe tener éxito en un {@dc 14} de Constitución {@quickref saving throws|PHB|2|1|tiro de salvación} o ser {@condition paralyzed} durante 1 minuto. El objetivo puede repetir el {@quickref saving throws|PHB|2|1|tiro de salvación} al final de cada uno de sus turnos, terminando el efecto sobre sí mismo con un éxito."
+					]
+				},
+				{
+					"name": "Web Spinner",
+					"entries": [
+						"{@atk rw} {@hit 7} golpear, alcanzar 12 m., un objetivo. {@h} El objetivo es arrastrado 12 m hacia la araña y es {@condition grappled} (escapar {@dc 14}). La araña puede {@action grapple} sólo una criatura a la vez de esta manera. Como acción, la araña puede envolver en telaraña a una criatura a la que haya {@condition grappled} atrapado, haciendo que quede {@condition restrained} y acabando con la condición {@condition grappled}."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Arterial Spray",
+					"entries": [
+						"Cuando la araña recibe daño mientras está por debajo de la mitad de su punto de golpe máximo, puede rociar sangre venenosa en un cono de 4,5 metros. Cada criatura en el área debe hacer un {@dc 14} de Constitución {@quickref saving throws|PHB|2|1|tiro de salvación}. Con una salvación fallida, la criatura recibe 13 ({@damage 3d8}) puntos de daño por veneno y queda {@condition poisoned} durante 1 minuto. Con una salvación exitosa, la criatura recibe la mitad de daño y no es {@condition poisoned}. Si este daño de veneno reduce a una criatura a 0 puntos de golpe, la criatura está estable pero {@condition poisoned} durante 1 hora, incluso después de recuperar puntos de golpe, y es {@condition paralyzed} mientras {@condition poisoned} de esta manera."
+					]
+				}
+			],
+			"environment": [
+				"forest",
+				"underdark"
+			],
+			"traitTags": [
+				"Spider Climb",
+				"Web Walker"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"conditionInflict": [
+				"grappled",
+				"paralyzed",
+				"poisoned"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Demonfeed Spiderling",
+			"source": "TDCSR",
+			"page": 237,
+			"size": [
+				"M"
+			],
+			"type": "fiend",
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 16,
+				"formula": "3d8 + 3"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 10,
+			"dex": 12,
+			"con": 12,
+			"int": 2,
+			"wis": 7,
+			"cha": 3,
+			"save": {
+				"dex": "+3"
+			},
+			"skill": {
+				"stealth": "+5",
+				"perception": "+0"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"cold",
+				"fire",
+				"lightning"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"El spiderling puede trepar por superficies difíciles, incluso por techos boca abajo, sin necesidad de hacer un chequeo de habilidad."
+					]
+				},
+				{
+					"name": "Web Walker",
+					"entries": [
+						"El spiderling ignora las restricciones de movimiento causadas por las telarañas."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 3} para golpear, alcance 1,5 m., un objetivo. {@h}5 ({@damage 1d8 + 1}) de daño perforante, y el objetivo debe hacer un {@dc 13} de Constitución {@quickref saving throws|PHB|2|1|tiro de salvación}, recibiendo 10 ({@damage 3d6}) de daño de veneno en una salvación fallida, o la mitad de daño en una exitosa."
+					]
+				}
+			],
+			"environment": [
+				"forest",
+				"underdark"
+			],
+			"traitTags": [
+				"Spider Climb",
+				"Web Walker"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Diseased Grick",
+			"source": "TDCSR",
+			"page": 122,
+			"_copy": {
+				"name": "Grick",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "grick",
+						"with": "diseased grick"
+					}
+				}
+			},
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"La habilidad de conjuro del grick es Sabiduría (salvación de conjuro {@dc 12} {@hit 4} para golpear con ataques de conjuro). Puede lanzar de forma innata los siguientes hechizos, que no requieren componentes materiales:"
+					],
+					"daily": {
+						"1": [
+							"{@spell contagion}"
+						]
+					},
+					"ability": "wis"
+				}
+			],
+			"savingThrowForcedSpell": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Doty X",
+			"shortName": "Doty",
+			"group": [
+				"Vox Machina"
+			],
+			"isNamedCreature": true,
+			"source": "TDCSR",
+			"page": 272,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 78,
+				"formula": "9d8 + 18 + 20"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 14,
+			"dex": 12,
+			"con": 14,
+			"int": 4,
+			"wis": 10,
+			"cha": 6,
+			"save": {
+				"dex": "+4",
+				"con": "+5"
+			},
+			"skill": {
+				"athletics": "+7",
+				"perception": "+8"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 18,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages that {@creature Taryon Darrington|TDCSR|Tary} speaks"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Arcane Surge (4/Day)",
+					"entries": [
+						"Cuando Doty golpea a un objetivo, {@creature Taryon Darrington|TDCSR|Tary} puede canalizar energía mágica para infligir 14 ({@damage 4d6}) de daño de fuerza adicionales al objetivo siempre que {@creature Taryon Darrington|TDCSR|Tary} no sea {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Dedicated Servant",
+					"entries": [
+						"Doty tiene 20 puntos de golpe adicionales, y tiene un modificador de +2 a {@quickref saving throws|PHB|2|1}, {@quickref ability checks|PHB|2|0} usando proficiencias de habilidades y tiradas de ataque."
+					]
+				},
+				{
+					"name": "Limited Vocabulary",
+					"entries": [
+						"Doty puede decir las siguientes palabras en Común: \"Tary\", \"Sí\", \"Correcto\", \"Absolutamente\", \"Pronto\" y \"Guapo\"."
+					]
+				},
+				{
+					"name": "Vigilant",
+					"entries": [
+						"Doty no puede sorprenderse."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Empowered Fist",
+					"entries": [
+						"{@atk mw} {@hit 7} para golpear, alcance 1,5 m., un objetivo. {@h}8 ({@damage 1d8 + 4}) daño de fuerza."
+					]
+				},
+				{
+					"name": "Repair (3/Day)",
+					"entries": [
+						"Doty recupera 15 ({@dice 2d8 + 6}) puntos de golpe."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Deflect",
+					"entries": [
+						"Si una criatura a menos de 1,5 metros de Doty que él pueda ver realiza un ataque contra una criatura que no sea Doty, puede imponer {@quickref Advantage and Disadvantage|PHB|2|0|desventaja} a la tirada de ataque. El atacante recibe entonces 6 ({@damage 1d4 + 4}) de daño de fuerza."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Drynna Hydra",
+			"isNpc": true,
+			"source": "TDCSR",
+			"page": 66,
+			"_copy": {
+				"name": "Hydra",
+				"source": "MM"
+			},
+			"int": 12,
+			"languages": [
+				"Common"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ember Roc",
+			"source": "TDCSR",
+			"page": 238,
+			"size": [
+				"G"
+			],
+			"type": "monstrosity",
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 232,
+				"formula": "16d20 + 64"
+			},
+			"speed": {
+				"walk": 20,
+				"fly": 120
+			},
+			"str": 26,
+			"dex": 10,
+			"con": 18,
+			"int": 4,
+			"wis": 11,
+			"cha": 9,
+			"save": {
+				"dex": "+5",
+				"con": "+9",
+				"wis": "+5",
+				"cha": "+4"
+			},
+			"skill": {
+				"perception": "+5"
+			},
+			"passive": 15,
+			"immune": [
+				"fire"
+			],
+			"languages": [
+				"understands Ignan but can't speak"
+			],
+			"cr": "14",
+			"trait": [
+				{
+					"name": "Keen Sight",
+					"entries": [
+						"El roc tiene un {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} en los chequeos de Sabiduría ({@skill Perception}) que dependen de la vista."
+					]
+				},
+				{
+					"name": "Searing Presence",
+					"entries": [
+						"Cualquier criatura que comience su turno a menos de 1,5 metros del roc recibe 7 ({@damage 2d6}) puntos de daño por fuego."
+					]
+				},
+				{
+					"name": "Illumination",
+					"entries": [
+						"El roc emite luz brillante en un radio de 12 metros y luz tenue en otros 12 metros."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El roc realiza dos ataques: uno con el pico y otro con las garras."
+					]
+				},
+				{
+					"name": "Beak",
+					"entries": [
+						"{@atk mw} {@hit 13} para golpear, alcance 3 m., un objetivo. {@h}26 ({@damage 4d8 + 8}) de daño perforante y 7 ({@damage 2d6}) de daño de fuego."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 13} para golpear, alcance 1,5 m., un objetivo. {@h}22 ({@damage 4d6 + 8}) de daño cortante y 7 ({@damage 2d6}) de daño de fuego."
+					]
+				},
+				{
+					"name": "Inferno {@recharge 5}",
+					"entries": [
+						"El roc bate sus alas, creando una conflagración arremolinada. Cada criatura en un radio de 9 metros del roc debe tener éxito en una prueba de {@dc 18} Destreza {@quickref saving throws|PHB|2|1|tiro de salvación} o recibe 21 ({@damage 6d6}) puntos de daño por fuego."
+					]
+				}
+			],
+			"environment": [
+				"mountain"
+			],
+			"traitTags": [
+				"Illumination",
+				"Keen Senses"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS",
+				"IG"
+			],
+			"damageTags": [
+				"F",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flaming Skeleton",
+			"shortName": "skeleton",
+			"group": [
+				"Skeletons"
+			],
+			"source": "TDCSR",
+			"page": 256,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 19,
+				"formula": "3d8 + 6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 15,
+			"int": 6,
+			"wis": 8,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"vulnerable": [
+				"bludgeoning"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"understands all languages it knew in life but can't speak"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Heated Weapons",
+					"entries": [
+						"Cuando el esqueleto golpea con un arma de metal cuerpo a cuerpo, el arma inflige un 3 ({@damage 1d6}) de daño de fuego adicional (incluido en el ataque)."
+					]
+				},
+				{
+					"name": "Illumination",
+					"entries": [
+						"El esqueleto emite luz brillante en un radio de 3 metros y luz tenue en otros 3 metros."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 4} para golpear, alcance 1,5 m., un objetivo. {@h}5 ({@damage 1d6 + 2}) de daño perforante y 3 ({@damage 1d6}) de daño de fuego."
+					]
+				},
+				{
+					"name": "Ignite",
+					"entries": [
+						"El esqueleto se lanza contra una criatura Grande o más pequeña que se encuentre a 1,5 metros de él. El objetivo debe tener éxito en un {@dc 12} de Destreza {@quickref saving throws|PHB|2|1|tiro de salvación} o ser {@condition grappled} (escapar {@dc 12}). En una salvación fallida, el objetivo también recibe 3 ({@damage 1d6}) de daño por fuego al comienzo de cada uno de sus turnos, incluso después de que el {@action grapple} termine. Si el objetivo o una criatura en un radio de 1,5 metros utiliza una acción para apagar las llamas, o si algún otro efecto apaga las llamas (como que el objetivo se sumerja en agua), el efecto termina."
+					]
+				}
+			],
+			"environment": [
+				"mountain"
+			],
+			"attachedItems": [
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Illumination"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"CS",
+				"LF"
+			],
+			"damageTags": [
+				"F",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Forge Guardian",
+			"group": [
+				"Golem"
+			],
+			"source": "TDCSR",
+			"page": 241,
+			"size": [
+				"G"
+			],
+			"type": "construct",
+			"ac": [
+				{
+					"ac": 24,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 420,
+				"formula": "24d20 + 168"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 30,
+			"dex": 10,
+			"con": 24,
+			"int": 3,
+			"wis": 11,
+			"cha": 1,
+			"save": {
+				"str": "+18",
+				"con": "+15"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"fire",
+				"poison",
+				"psychic",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical weapons that aren't adamantine",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"cr": "27",
+			"trait": [
+				{
+					"name": "Fire Absorption",
+					"entries": [
+						"Cada vez que el guardián recibe daño de fuego, no recibe daño y recupera un número de puntos de golpe igual al daño de fuego infligido."
+					]
+				},
+				{
+					"name": "Immutable Form",
+					"entries": [
+						"El guardián es inmune a cualquier hechizo o efecto que pudiera alterar su forma."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"El guardián tiene {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} sobre {@quickref saving throws|PHB|2|1} contra hechizos y otros efectos mágicos."
+					]
+				},
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"Los ataques con armas del guardián son mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El guardián hace dos ataques cuerpo a cuerpo."
+					]
+				},
+				{
+					"name": "Runeblade",
+					"entries": [
+						"{@atk mw} {@hit 18} para golpear, alcance 4,5 m., un objetivo. {@h}36 ({@damage 4d12 + 10}) de daño cortante, y el objetivo debe tener éxito en un {@dc 23} de Constitución {@quickref saving throws|PHB|2|1|tiro de salvación} o ser {@condition blinded} hasta que inflige daño al guardián."
+					]
+				},
+				{
+					"name": "Kick",
+					"entries": [
+						"{@atk mw} {@hit 18} para golpear, alcance 3 m., un objetivo. {@h}23 ({@damage 2d12 + 10}) de daño contundente, y el objetivo es empujado hasta 4,5 m lejos del guardián y derribado {@condition prone}."
+					]
+				},
+				{
+					"name": "Bladestorm {@recharge 5}",
+					"entries": [
+						"El guardián realiza un ataque de Hoja rúnica contra todas las criaturas que se encuentren a 4,5 metros de él. Si acierta, el objetivo se aleja hasta 4,5 metros del guardián y es derribado {@condition prone}."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Runeblade",
+					"entries": [
+						"El guardián hace un ataque Runeblade."
+					]
+				},
+				{
+					"name": "Kick",
+					"entries": [
+						"El guardián hace un ataque de Patada."
+					]
+				},
+				{
+					"name": "Trample (Costs 2 Actions)",
+					"entries": [
+						"El guardián se mueve hasta 15 metros sin disparar {@action opportunity attack|PHB|opportunity attacks}, y puede atravesar espacios de otras criaturas. Cada criatura cuyo espacio atraviese el guardián debe realizar un {@dc 23} de Destreza {@quickref saving throws|PHB|2|1|tiro de salvación}. Si falla, la criatura recibe 23 ({@damage 2d12 + 10}) puntos de daño contundente y es derribada {@condition prone}. Si tiene éxito, la criatura recibe la mitad de daño y no es derribada {@condition prone}. Cualquier criatura que comparta el espacio del guardián cuando detiene este movimiento es empujada fuera de su espacio al espacio desocupado más cercano."
+					]
+				}
+			],
+			"traitTags": [
+				"Damage Absorption",
+				"Immutable Form",
+				"Magic Resistance",
+				"Magic Weapons"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"blinded",
+				"prone"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Goat-Knight Steed",
+			"source": "TDCSR",
+			"page": 246,
+			"_copy": {
+				"name": "Giant Goat",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "goat[^-]",
+						"with": "goat-knight steed ",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "prependArr",
+						"items": [
+							{
+								"name": "Shared Spells",
+								"entries": [
+									"Any spell the {@creature Kraghammer Goat-Knight|TDCSR|goat-knight} casts with a range of self also targets the goat ."
+								]
+							},
+							{
+								"name": "Summoned Nature",
+								"entries": [
+									"When a goat-knight steed drops to 0 hit points, it disappears, leaving behind no physical form. The {@creature Kraghammer Goat-Knight|TDCSR|goat-knight} can also dismiss the steed at any time as an action, causing it to disappear. In either case, the same steed is summoned when the {@creature Kraghammer Goat-Knight|TDCSR|goat-knight} casts {@spell find steed}."
+								]
+							}
+						]
+					}
+				},
+				"_preserve": {
+					"environment": true
+				}
+			},
+			"type": "celestial",
+			"int": 6,
+			"languages": [
+				"understands Dwarvish but can't speak it"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Grog Strongjaw",
+			"shortName": "Grog",
+			"group": [
+				"Vox Machina"
+			],
+			"isNamedCreature": true,
+			"source": "TDCSR",
+			"page": 261,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"half-giant"
+				]
+			},
+			"ac": [
+				19
+			],
+			"hp": {
+				"average": 290,
+				"formula": "20d12 + 120 + 40"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 26,
+			"dex": 15,
+			"con": 22,
+			"int": 8,
+			"wis": 10,
+			"cha": 13,
+			"save": {
+				"str": "+14",
+				"con": "+12"
+			},
+			"skill": {
+				"animal handling": "+6",
+				"athletics": "+14",
+				"intimidation": "+7",
+				"survival": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"cold",
+						"fire",
+						"lightning",
+						"thunder"
+					],
+					"note": "while enlarged"
+				},
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "while raging"
+				}
+			],
+			"conditionImmune": [
+				{
+					"conditionImmune": [
+						"charmed",
+						"frightened"
+					],
+					"note": "while raging"
+				}
+			],
+			"languages": [
+				"Common",
+				"Dwarvish",
+				"Giant",
+				"with limited reading and writing"
+			],
+			"cr": "18",
+			"trait": [
+				{
+					"name": "Brutal Critical",
+					"entries": [
+						"Cuando Grog consigue un golpe crítico, tira el doble de dados de daño de arma como de costumbre, y luego tira 3 dados de daño de arma adicionales."
+					]
+				},
+				{
+					"name": "Feral Instinct",
+					"entries": [
+						"Grog tiene {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} en las tiradas de iniciativa."
+					]
+				},
+				{
+					"name": "Melee Master",
+					"entries": [
+						"Grog puede aplicar un penalizador de -5 a cualquier tirada de ataque cuerpo a cuerpo para obtener un bonificador de +10 a la tirada de daño."
+					]
+				},
+				{
+					"name": "Reckless",
+					"entries": [
+						"Al inicio de su turno, Grog puede ganar {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} en todas las tiradas de ataque con armas cuerpo a cuerpo durante ese turno, pero las tiradas de ataque contra él tienen {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} hasta el inicio de su siguiente turno."
+					]
+				},
+				{
+					"name": "Relentless Rage",
+					"entries": [
+						"Si Grog queda reducido a 0 puntos de golpe mientras está furioso, baja a 1 punto de golpe en su lugar si tiene éxito en un {@dc 10} de Constitución {@quickref saving throws|PHB|2|1|tiro de salvación}."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Grog lleva un {@item belt of dwarvenkind}. Blande el {@item Bloodaxe|EGW} (un arma mágica +2), un {@item dwarven thrower} y el {@item Titanstone Knuckles (Exalted)|TDCSR|Titanstone Knuckles}."
+					]
+				},
+				{
+					"name": "Spellbreaker",
+					"entries": [
+						"Cuando Grog daña a una criatura que se está concentrando en un hechizo, esa criatura tiene {@quickref Advantage and Disadvantage|PHB|2|0|desventaja} sobre el {@quickref saving throws|PHB|2|1|tiro de salvación} para mantener su {@condition concentration}. Además, Grog tiene {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} sobre {@quickref saving throws|PHB|2|1} contra hechizos lanzados por criaturas en un radio de 1,5 metros de él."
+					]
+				},
+				{
+					"name": "Toughness",
+					"entries": [
+						"Grog tiene 40 puntos de golpe adicionales."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Grog realiza dos ataques (tres cuando está furioso) con su {@item Bloodaxe|EGW}, {@item dwarven thrower} o {@item Titanstone Knuckles (Exalted)|TDCSR|Titanstone Knuckles}."
+					]
+				},
+				{
+					"name": "{@item Bloodaxe|EGW}",
+					"entries": [
+						"{@atk mw} {@hit 16} para golpear, alcance 1,5 m., un objetivo. {@h}20 ({@damage 1d12 + 14}) de daño cortante y 3 ({@damage 1d6}) de daño necrótico. Si el objetivo queda reducido a 0 puntos de golpe, Grog gana 10 puntos de golpe temporales."
+					]
+				},
+				{
+					"name": "{@item Dwarven Thrower}",
+					"entries": [
+						"{@atk mw,rw} {@hit 17} para golpear, alcance 1,5 m. o alcance 20/60, un objetivo. {@h}24 ({@damage 2d8 + 15}) de daño contundente."
+					]
+				},
+				{
+					"name": "Titanstone Knuckles",
+					"entries": [
+						"{@atk mw} {@hit 14} para golpear, alcance 1,5 m., un objetivo. {@h}14 ({@damage 1d4 + 12}) de daño contundente."
+					]
+				},
+				{
+					"name": "Enlarge (Recharges after a {@quickref resting|PHB|2|0|Long Rest})",
+					"entries": [
+						"Grog se lanza {@spell enlarge/reduce} a sí mismo para aumentar de tamaño durante 10 minutos. Mientras crece de este modo, tiene resistencia al daño por frío, fuego, relámpagos y truenos."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Rage (Recharges after a {@quickref resting|PHB|2|0|Short or Long Rest})",
+					"entries": [
+						"Grog entra en una furia que dura hasta que cae {@condition unconscious} o elige ponerle fin (no requiere ninguna acción). Mientras está furioso, Grog obtiene los siguientes beneficios:",
+						{
+							"type": "list",
+							"items": [
+								"Tiene {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} en los chequeos de Fuerza y Fuerza {@quickref saving throws|PHB|2|1}.",
+								"Inflige 4 puntos de daño extra cuando golpea a un objetivo con un ataque de arma cuerpo a cuerpo (incluido en los ataques).",
+								"Tiene resistencia al daño contundente, perforante y cortante.",
+								"No puede ser {@condition charmed} o {@condition frightened}",
+								"Puede realizar un ataque con arma cuerpo a cuerpo adicional (incluido en la acción Multiataque)"
+							]
+						},
+						"Cuando la furia de Grog termina, gana un nivel de {@condition exhaustion}."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Opportunist",
+					"entries": [
+						"Cuando una criatura en un radio de 1,5 metros de Grog lanza un hechizo o le inflige daño, Grog puede realizar un ataque de arma cuerpo a cuerpo contra esa criatura."
+					]
+				}
+			],
+			"traitTags": [
+				"Reckless"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"GI"
+			],
+			"damageTags": [
+				"B",
+				"N",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Jourrael, the Caedogeist",
+			"shortName": "Jourrael",
+			"alias": [
+				"The Inevitable End",
+				"Caedogeist"
+			],
+			"isNamedCreature": true,
+			"source": "TDCSR",
+			"page": 245,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"drow"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"{@item studded leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 152,
+				"formula": "16d8 + 80"
+			},
+			"speed": {
+				"walk": 80,
+				"fly": 40
+			},
+			"str": 13,
+			"dex": 24,
+			"con": 20,
+			"int": 14,
+			"wis": 17,
+			"cha": 15,
+			"save": {
+				"dex": "+12",
+				"con": "+10",
+				"wis": "+8"
+			},
+			"skill": {
+				"acrobatics": "+12",
+				"perception": "+13",
+				"stealth": "+17"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 23,
+			"resist": [
+				"acid",
+				"fire",
+				"lightning",
+				"cold",
+				"thunder",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Infernal",
+				"Undercommon"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"La habilidad de conjuro de Jourrael es Carisma (salvación de conjuro {@dc 15}). Puede lanzar de forma innata los siguientes hechizos, que no requieren componentes materiales:"
+					],
+					"will": [
+						"{@spell dancing lights}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell darkness}",
+							"{@spell faerie fire}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"Jourrael puede moverse a través de otras criaturas y objetos como si fueran ({@quickref difficult terrain||3}). Recibe 5 ({@damage 1d10}) de daño de fuerza si termina su turno dentro de un objeto."
+					]
+				},
+				{
+					"name": "Sneak Attack (1/Turn)",
+					"entries": [
+						"Jourrael inflige 35 ({@damage 10d6}) de daño extra cuando golpea a un objetivo con un ataque de arma y tiene {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} en la tirada de ataque, o cuando el objetivo está a menos de 1,5 metros de un aliado de Jourrael que no es {@condition incapacitated} y Jourrael no tiene {@quickref Advantage and Disadvantage|PHB|2|0|desventaja} en la tirada de ataque."
+					]
+				},
+				{
+					"name": "Inevitable",
+					"entries": [
+						"Si Jourrael queda reducido a 0 puntos de golpe, no cae {@condition unconscious}, sino que se convierte en un espíritu incorpóreo durante 24 horas. Durante este tiempo, Jourrael no puede volver a su forma original hasta que recupere todos sus puntos de vida. En esta forma, son {@condition invisible}, no pueden atacar ni interactuar con criaturas u objetos corpóreos, y no pueden ser objetivo de hechizos. Transcurridas 24 horas, Jourrael recupera 1 punto de golpe y vuelve a su forma original con cuatro niveles de {@condition exhaustion}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Jourrael realiza dos ataques cuerpo a cuerpo o dos ataques a distancia."
+					]
+				},
+				{
+					"name": "Spectral Blade",
+					"entries": [
+						"{@atk mw} {@hit 12} para golpear, alcance 1,5 m., un objetivo. {@h}10 ({@damage 1d6 + 7}) de daño cortante, y el objetivo debe tener éxito en un {@dc 14} de Constitución {@quickref saving throws|PHB|2|1|tiro de salvación} o quedar {@condition poisoned} durante 1 hora. Si el {@quickref saving throws|PHB|2|1|tiro de salvación} falla por 5 o más, el objetivo también queda {@condition unconscious} mientras {@condition poisoned} de esta forma. El objetivo despierta si recibe daño o si otra criatura realiza una acción para despertarlo."
+					]
+				},
+				{
+					"name": "Void Dagger",
+					"entries": [
+						"{@atk rw} {@hit 12} para golpear, alcance 60/36 m., un objetivo. {@h}9 ({@damage 1d4 + 7}) de daño perforante."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"Jourrael puede realizar la acción {@action Dash}, {@action Disengage} o {@action Hide}."
+					]
+				},
+				{
+					"name": "Mirrored Form (Recharges after a {@quickref resting|PHB|2|0|Short Rest})",
+					"entries": [
+						"Jourrael manifiesta tres duplicados ilusorios que revolotean en su espacio. Cada vez que una criatura ataca a Jourrael, tira un {@dice d20} para ver si acierta a uno de los duplicados. Si hay tres duplicados, el objetivo es un duplicado con una tirada de 6 o más. Con dos duplicados, el objetivo es un duplicado con una tirada de 8 o superior. Un solo duplicado se convierte en objetivo con una tirada de 11 o superior. La CA de un duplicado es 17, y es destruido si es alcanzado. Jourrael puede ocultar los duplicados como acción adicional."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"Jourrael suma 5 a su CA contra un ataque cuerpo a cuerpo que la golpearía. Para ello, debe ver al atacante"
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement",
+				"Sneak Attack"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"I",
+				"U"
+			],
+			"damageTags": [
+				"O",
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"poisoned",
+				"unconscious"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Keyleth, Voice of the Tempest",
+			"shortName": "Keyleth",
+			"group": [
+				"Vox Machina"
+			],
+			"isNamedCreature": true,
+			"source": "TDCSR",
+			"page": 263,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"half-elf"
+				]
+			},
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item +2 leather armor}",
+						"{@item +2 ring of protection|TDCSR}"
+					]
+				}
+			],
+			"hp": {
+				"average": 150,
+				"formula": "20d8 + 60"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 15,
+			"con": 16,
+			"int": 15,
+			"wis": 22,
+			"cha": 15,
+			"save": {
+				"str": "+4",
+				"dex": "+4",
+				"con": "+5",
+				"int": "+10",
+				"wis": "+14",
+				"cha": "+4"
+			},
+			"skill": {
+				"athletics": "+8",
+				"insight": "+12",
+				"intimidation": "+8",
+				"nature": "+12",
+				"perception": "+12",
+				"persuasion": "+8",
+				"stealth": "+8",
+				"survival": "+12"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 22,
+			"languages": [
+				"Auran",
+				"Common",
+				"Druidic",
+				"Elvish"
+			],
+			"cr": "18",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Keyleth es una hechicera de nivel 20. Su habilidad de hechizo es Sabiduría. Su habilidad de conjuro es Sabiduría (salvación de conjuro {@dc 22}, {@hit 14} para golpear con ataques de conjuro). Tiene preparados los siguientes hechizos de druida:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft}",
+								"{@spell guidance}",
+								"{@spell mending}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell cure wounds}",
+								"{@spell faerie fire}",
+								"{@spell fog cloud}",
+								"{@spell healing word}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell alter self} (at will)",
+								"{@spell flaming sphere}",
+								"{@spell gust of wind}",
+								"{@spell pass without trace}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell call lightning}",
+								"{@spell wind wall}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell blight}",
+								"{@spell control water}",
+								"{@spell grasping vine}",
+								"{@spell polymorph}",
+								"{@spell stone shape}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell conjure elemental}",
+								"{@spell greater restoration}",
+								"{@spell scrying}",
+								"{@spell wall of stone}"
+							]
+						},
+						"6": {
+							"slots": 2,
+							"spells": [
+								"{@spell heroes' feast}",
+								"{@spell move earth}",
+								"{@spell transport via plants}"
+							]
+						},
+						"7": {
+							"slots": 2,
+							"spells": [
+								"{@spell fire storm}",
+								"{@spell plane shift}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell control weather}"
+							]
+						},
+						"9": {
+							"slots": 1,
+							"spells": [
+								"{@spell foresight}",
+								"{@spell shapechange}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Fey Ancestry",
+					"entries": [
+						"Keyleth tiene {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} en {@quickref saving throws|PHB|2|1} contra ser {@condition charmed}, y la magia no puede dormirla."
+					]
+				},
+				{
+					"name": "Focused",
+					"entries": [
+						"Keyleth tiene {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} en Constitución {@quickref saving throws|PHB|2|1} hecho para mantener {@condition concentration} en hechizos."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Keyleth lleva un {@item circlet of wisdom|TDCSR} (que aumenta su puntuación de Sabiduría en 2), un {@item +2 leather armor} y un {@item +2 Ring of Protection|TDCSR|ring of protection with a +2 bonus}. Empuña el {@item Spire of Conflux (Exalted)|TDCSR|Spire of Conflux}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Shapechange",
+					"entries": [
+						"Keyleth lanza {@spell shapechange} para transformarse en un {@creature planetar}, un {@creature adult bronze dragon} o un {@filter otra criatura de CR 20 o inferior que no sea un constructo o un no-muerto|bestiary|Challenge Rating=[0;&20]|type=!construct;!undead|source=null}."
+					]
+				},
+				{
+					"name": "Meteor ({@creature Earth Elemental} Form Only)",
+					"entries": [
+						"Cuando Keyleth cae al menos 6 metros, lo hace con fuerza meteórica. Cada criatura en un radio de 6 metros debe superar un {@dc 19} de Destreza {@quickref saving throws|PHB|2|1|tiro de salvación} o recibir {@damage 1d6} de Daño contundente por cada 3 metros que Keyleth haya caído. Keyleth sigue sufriendo {@quickref falling|XGE|2|0|daños por caída} mientras está en forma {@creature earth elemental}."
+					]
+				},
+				{
+					"name": "Chain Lightning",
+					"entries": [
+						"Keyleth lanza {@spell chain lightning} (salvación de hechizo {@dc 22}) del {@item Spire of Conflux (Exalted)|TDCSR|Spire of Conflux} a una criatura que pueda ver a menos de 45 metros de ella."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Wild Shape",
+					"entries": [
+						"Keyleth se convierte mágicamente {@spell polymorph|phb|polymorphs} en una bestia o elemental de CR 6 o inferior. Sus estadísticas de juego se sustituyen por las de la nueva forma, pero conserva su alineamiento, personalidad y puntuaciones de Inteligencia, Sabiduría y Carisma. También conserva todas sus aptitudes de habilidad y {@quickref saving throws|PHB|2|1|tiro de salvación}, además de las de la nueva forma. Asume los puntos de golpe y los Dados de Golpe de la nueva forma y recupera el número de puntos de golpe que tenía cuando volvió a su forma normal. El equipo que lleve puesto es absorbido o llevado por su nueva forma (a su elección). Vuelve a su forma humanoide como acción adicional o cuando cae {@condition unconscious}. Sus ataques en forma salvaje son mágicos y puede lanzar hechizos mientras está transformada."
+					]
+				},
+				{
+					"name": "Healing Word (4th Level)",
+					"entries": [
+						"Keyleth lanza {@spell healing word}, restaurando 16 ({@dice 4d4 + 6}) puntos de golpe a sí misma o a otra criatura que pueda ver en un radio de 18 metros."
+					]
+				}
+			],
+			"traitTags": [
+				"Fey Ancestry"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AU",
+				"C",
+				"DU",
+				"E"
+			],
+			"damageTagsSpell": [
+				"B",
+				"F",
+				"L",
+				"N",
+				"P",
+				"S",
+				"T"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"strength",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Kraghammer Goat-Knight",
+			"shortName": "Goat-knight",
+			"source": "TDCSR",
+			"page": 246,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"dwarf"
+				]
+			},
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"{@item plate armor|PHB|plate}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "8d8 + 16"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 17,
+			"dex": 8,
+			"con": 14,
+			"int": 10,
+			"wis": 11,
+			"cha": 16,
+			"save": {
+				"str": "+5",
+				"dex": "+1",
+				"con": "+4",
+				"int": "+2",
+				"wis": "+2",
+				"cha": "+5"
+			},
+			"skill": {
+				"nature": "+2",
+				"religion": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"poison"
+			],
+			"languages": [
+				"Common",
+				"Dwarvish"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"El caballero-cabra es un hechicero de 6º nivel. Su habilidad de conjuro es Carisma (salvación de conjuro {@dc 13}, {@hit 5} para golpear con ataques de conjuro). Tiene preparados los siguientes conjuros de paladín:"
+					],
+					"spells": {
+						"1": {
+							"spells": [
+								"{@spell bless}",
+								"{@spell cure wounds}",
+								"{@spell protection from evil and good}",
+								"{@spell sanctuary}",
+								"{@spell shield of faith}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell branding smite}",
+								"{@spell find steed} ({@creature Goat-Knight Steed|TDCSR} only)",
+								"{@spell lesser restoration}",
+								"{@spell zone of truth}"
+							],
+							"slots": 2
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Aura of Protection",
+					"entries": [
+						"Siempre que el caballero-cabra o una criatura amiga a menos de 3 metros de él haga un {@quickref saving throws|PHB|2|1|tiro de salvación}, esa criatura gana un bonificador +2 (incluido en el {@quickref saving throws|PHB|2|1} del caballero-cabra anterior). El caballero-cabra debe estar consciente para conceder y obtener esta bonificación."
+					]
+				},
+				{
+					"name": "Divine Health",
+					"entries": [
+						"El caballero-cabra es inmune a las enfermedades."
+					]
+				},
+				{
+					"name": "Dwarven Resilience",
+					"entries": [
+						"El caballero cabra tiene resistencia al daño de veneno y {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} sobre {@quickref saving throws|PHB|2|1} contra veneno."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El caballero cabra hace dos ataques de martillo de guerra."
+					]
+				},
+				{
+					"name": "Warhammer",
+					"entries": [
+						"{@atk mw} {@hit 5} para golpear, alcance 1,5 m., un objetivo. {@h}7 ({@damage 1d8 + 3}) de daño contundente, u 8 ({@damage 1d10 + 3}) de daño contundente si se usa a dos manos."
+					]
+				}
+			],
+			"attachedItems": [
+				"warhammer|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"D"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"R"
+			],
+			"spellcastingTags": [
+				"CP"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Mage Hunter Golem",
+			"group": [
+				"Golem"
+			],
+			"source": "TDCSR",
+			"page": 242,
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 243,
+				"formula": "18d10 + 144"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 20
+			},
+			"str": 24,
+			"dex": 9,
+			"con": 26,
+			"int": 3,
+			"wis": 11,
+			"cha": 1,
+			"save": {
+				"wis": "+5",
+				"cha": "+0"
+			},
+			"skill": {
+				"perception": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft.",
+				"truesight 30 ft."
+			],
+			"passive": 15,
+			"immune": [
+				"poison",
+				"psychic",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical weapons that aren't adamantine",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "15",
+			"trait": [
+				{
+					"name": "Antimagic Cone",
+					"entries": [
+						"El gólem crea un área antimágica, como en el hechizo {@spell antimagic field}, en un cono de 18 metros que parte de él. Al inicio de cada uno de sus turnos, el gólem decide hacia dónde mira el cono y si éste está activo."
+					]
+				},
+				{
+					"name": "Immutable Form",
+					"entries": [
+						"El gólem es inmune a cualquier hechizo o efecto que pudiera alterar su forma."
+					]
+				},
+				{
+					"name": "Magic Absorption",
+					"entries": [
+						"Cada vez que el gólem es objeto de un hechizo de daño de 4º nivel o inferior, no recibe daño y, en su lugar, recupera un número de puntos de golpe igual al daño infligido."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"El gólem tiene {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} sobre {@quickref saving throws|PHB|2|1} contra hechizos y otros efectos mágicos."
+					]
+				},
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"Los ataques con armas del gólem son mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El gólem utiliza su Sacudida Antimágica y realiza dos ataques cuerpo a cuerpo, o realiza tres ataques cuerpo a cuerpo."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 12} para golpear, alcance 1,5 m., un objetivo. {@h}20 ({@damage 3d8 + 7}) de daño contundente."
+					]
+				},
+				{
+					"name": "Claw {@recharge 5}",
+					"entries": [
+						"{@atk mw} {@hit 12} para golpear, alcance 1,5 m., un objetivo. {@h}11 ({@damage 1d8 + 7}) de daño contundente, y el objetivo debe tener éxito en una prueba de {@dc 16} Destreza {@quickref saving throws|PHB|2|1|tiro de salvación} o se le coloca un collar mágico en el cuello. Mientras el objetivo lleve el collar, no podrá hablar ni lanzar hechizos por arte de magia. Un chequeo de Destreza con éxito {@dc 25} usando {@item thieves' tools|PHB} elimina el collar."
+					]
+				},
+				{
+					"name": "Antimagic Jolt",
+					"entries": [
+						"Cada criatura dentro del Cono Antimágico del gólem que tenga la capacidad de lanzar un hechizo de 1er nivel o superior debe hacer un {@dc 18} de Sabiduría {@quickref saving throws|PHB|2|1|tiro de salvación}, recibiendo 21 ({@damage 6d6}) de daño psíquico en una salvación fallida, o la mitad de daño en una exitosa."
+					]
+				}
+			],
+			"traitTags": [
+				"Damage Absorption",
+				"Immutable Form",
+				"Magic Resistance",
+				"Magic Weapons"
+			],
+			"senseTags": [
+				"SD",
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"Y"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Magma Landshark",
+			"source": "TDCSR",
+			"page": 247,
+			"size": [
+				"H"
+			],
+			"type": "elemental",
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 150,
+				"formula": "12d12 + 72"
+			},
+			"speed": {
+				"walk": 50,
+				"burrow": 50,
+				"swim": {
+					"number": 50,
+					"condition": "(lava only)"
+				}
+			},
+			"str": 22,
+			"dex": 11,
+			"con": 22,
+			"int": 2,
+			"wis": 14,
+			"cha": 5,
+			"skill": {
+				"perception": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft.",
+				"tremorsense 120 ft."
+			],
+			"passive": 17,
+			"immune": [
+				"fire"
+			],
+			"cr": "14",
+			"trait": [
+				{
+					"name": "Searing Presence",
+					"entries": [
+						"Cualquier criatura que comience su turno a menos de 3 metros del tiburón terrestre recibe 11 ({@damage 2d10}) puntos de daño por fuego."
+					]
+				},
+				{
+					"name": "Standing Leap",
+					"entries": [
+						"El {@quickref jumping|PHB|4|0|salto de longitud} del tiburón terrestre es de hasta 12 metros y su {@quickref jumping|PHB|4|0|salto de altura} es de hasta 6 metros, con o sin salida en carrera."
+					]
+				},
+				{
+					"name": "Illumination",
+					"entries": [
+						"El landshark emite luz brillante en un radio de 4,5 metros y luz tenue en otros 4,5 metros."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 11} para golpear, alcance 1,5 m., un objetivo. {@h}45 ({@damage 6d12 + 6}) de daño perforante, y 14 ({@damage 4d6}) de daño de fuego. Si el objetivo es una criatura Grande o menor, debe tener éxito en un {@dc 18} de Destreza {@quickref saving throws|PHB|2|1|tiro de salvación} o ser tragado por el tiburón terrestre. Una criatura engullida sufre {@condition blinded} y {@condition restrained}, tiene {@quickref cover|PHB|3|0|cobertura total} contra ataques y otros efectos ajenos al tiburón terrestre, y recibe 42 ({@damage 12d6}) puntos de daño por fuego al inicio de cada turno del tiburón terrestre.",
+						"Si el tiburón terrestre recibe 30 puntos de daño o más en un solo turno de una criatura en su interior, el tiburón terrestre debe tener éxito en un {@dc 23} de Constitución {@quickref saving throws|PHB|2|1|tiro de salvación} al final de ese turno o regurgitar a todas las criaturas tragadas, que caen {@condition prone} en un espacio a 3 metros del tiburón terrestre. Si el landshark muere, una criatura engullida deja de ser {@condition restrained} por él y puede escapar del cadáver utilizando 4,5 metros de movimiento, saliendo {@condition prone}."
+					]
+				},
+				{
+					"name": "Deadly Leap",
+					"entries": [
+						"Si el tiburón terrestre {@quickref jumping|PHB|4|0|salta} recorre al menos 4,5 metros como parte de su movimiento, puede utilizar esta acción para caer de pie en un espacio que contenga una o más criaturas. Cada una de esas criaturas debe tener éxito en una prueba de {@dc 18} Fuerza o Destreza {@quickref saving throws|PHB|2|1|tiro de salvación} (a elección del objetivo) o ser derribada {@condition prone} y recibir 27 ({@damage 6d6 + 6}) puntos de daño por apaleamiento más 21 ({@damage 6d6}) puntos de daño por fuego. Si la salvación tiene éxito, la criatura recibe sólo la mitad del daño, no es derribada {@condition prone} y es empujada 1,5 metros fuera del espacio del tiburón terrestre a un espacio desocupado a elección de la criatura. Si no hay ningún espacio desocupado a su alcance, la criatura cae {@condition prone} en el espacio del tiburón."
+					]
+				},
+				{
+					"name": "Lava Pool {@recharge}",
+					"entries": [
+						"Si el tiburón terrestre está en tierra firme, derrite la zona a su alrededor, creando un charco de lava en un radio de 3 metros. Cualquier criatura que comience su turno en la zona o entre en ella por primera vez en un turno recibe 44 ({@damage 8d10}) de daño por fuego."
+					]
+				}
+			],
+			"environment": [
+				"mountain",
+				"underdark"
+			],
+			"traitTags": [
+				"Illumination"
+			],
+			"senseTags": [
+				"D",
+				"T"
+			],
+			"actionTags": [
+				"Swallow"
+			],
+			"damageTags": [
+				"B",
+				"F",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded",
+				"prone",
+				"restrained"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Master Adranach",
+			"group": [
+				"Adranachs"
+			],
+			"source": "TDCSR",
+			"page": 245,
+			"size": [
+				"G"
+			],
+			"type": "construct",
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 290,
+				"formula": "20d20 + 80"
+			},
+			"speed": {
+				"walk": 60,
+				"fly": 120
+			},
+			"str": 25,
+			"dex": 16,
+			"con": 19,
+			"int": 10,
+			"wis": 14,
+			"cha": 11,
+			"save": {
+				"str": "+14",
+				"dex": "+10",
+				"wis": "+9"
+			},
+			"skill": {
+				"athletics": "+14",
+				"perception": "+16"
+			},
+			"senses": [
+				"darkvision 360 ft."
+			],
+			"passive": 26,
+			"resist": [
+				{
+					"special": "damage from spells"
+				}
+			],
+			"immune": [
+				"poison",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from non-magical attacks"
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"the languages spoken by its creator"
+			],
+			"cr": "21",
+			"trait": [
+				{
+					"name": "Arcane Leak",
+					"entries": [
+						"Cuando el adranach queda reducido a la mitad de sus puntos de golpe máximos (145 puntos de golpe), su máscara de mithral se resquebraja y su forma arcana comienza a vacilar, creando un campo de magia inestable a su alrededor. Cualquier criatura que comience su turno a menos de 6 metros del adranach o entre en esa zona por primera vez en un turno recibe 21 ({@damage 6d6}) de daño radiante. Además, si una criatura lanza un hechizo dentro de esta área, debe realizar un chequeo de habilidad {@dc 18} utilizando su habilidad de lanzamiento de hechizos. En caso de fallo, el hechizo resulta contraproducente, consumiendo la casilla de hechizo e infligiendo 7 ({@damage 2d6}) puntos de daño de fuerza al lanzador por cada nivel de la casilla de hechizo consumida."
+					]
+				},
+				{
+					"name": "Immutable Form",
+					"entries": [
+						"El adranach es inmune a cualquier hechizo o efecto que pueda alterar su forma."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"El adranach tiene {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} sobre {@quickref saving throws|PHB|2|1} contra hechizos y otros efectos mágicos."
+					]
+				},
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"Los ataques con armas del adranach son mágicos."
+					]
+				},
+				{
+					"name": "Colossal Build",
+					"entries": [
+						"La capacidad de carga del adranach se duplica, al igual que el peso que puede empujar, arrastrar o levantar."
+					]
+				},
+				{
+					"name": "Slipstream",
+					"entries": [
+						"El adranach puede lanzarse {@spell invisibility} sobre sí mismo a voluntad. Mientras está {@condition invisible}, su velocidad se duplica."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si el adranach falla un {@quickref saving throws|PHB|2|1|tiro de salvación}, puede elegir tener éxito en su lugar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El adranach realiza tres ataques: dos con las garras y uno con la cola."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 14} para golpear, un objetivo, alcance 1,5 m. {@h}33 ({@damage 4d12 + 7}) de daño cortante."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 14} para golpear, un objetivo, alcance 4,5 m. {@h}20 ({@damage 2d12 + 7}) de daño contundente."
+					]
+				},
+				{
+					"name": "Force Bolts {@recharge 5}",
+					"entries": [
+						"El adranach tiene como objetivo hasta seis criaturas que pueda ver en un radio de 36 metros. Cada objetivo debe tener éxito en un {@dc 22} de Destreza {@quickref saving throws|PHB|2|1|tiro de salvación} o recibir 35 ({@damage 10d6}) de daño de fuerza."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Claw Attack",
+					"entries": [
+						"El adranach hace un ataque de garra."
+					]
+				},
+				{
+					"name": "Vanish (Costs 2 Actions)",
+					"entries": [
+						"El adranach lanza {@spell invisibility} y se mueve hasta su velocidad de caminar o volar. (Este movimiento no se beneficia de su rasgo Torbellino)."
+					]
+				},
+				{
+					"name": "Starry Burst (Costs 3 Actions)",
+					"entries": [
+						"Una ráfaga de energía astral brota del cuerpo del adranach. Cada criatura en un radio de 18 metros debe hacer un {@dc 22} de Constitución {@quickref saving throws|PHB|2|1|tiro de salvación}. En una salvación fallida, la criatura recibe 27 ({@damage 5d10}) de daño de fuerza y queda {@condition blinded} hasta el final de su siguiente turno. Si la salvación tiene éxito, la criatura recibe la mitad de daño y no {@condition blinded}. A continuación, el adranach se vuelve {@condition invisible} hasta el inicio de su siguiente turno o hasta que realice un ataque."
+					]
+				}
+			],
+			"variant": [
+				{
+					"name": "Adranach Customization",
+					"type": "variant",
+					"source": "TDCSR",
+					"page": 224,
+					"_version": {
+						"name": "Master Adranach (Customised)",
+						"addHeadersAs": "action"
+					},
+					"entries": [
+						"Los adranach son construcciones personalizadas para sus creadores. Uno de los rasgos que hacen a un candidato a hechicero atractivo para el {@book League of Miracles|TDCSR|2|League of Miracles} es el interés por la invención, y se anima a los hechiceros a personalizar cualquier adranach que creen. A continuación se muestran algunas características opcionales con las que los hechiceros han equipado a sus creaciones. La mayoría de los adranach tienen una característica extra, y la mayoría de los maestros adranach tienen tres.",
+						{
+							"type": "entries",
+							"name": "Advanced Tracking ({@i Recharges after a {@quickref resting|PHB|2|0|Long Rest}})",
+							"page": 224,
+							"entries": [
+								"Cuando una criatura falla su {@quickref saving throws|PHB|2|1|tiro de salvación} contra los Proyectiles de Fuerza del adranach, éste puede marcar a esa criatura durante las siguientes 24 horas. El adranach conoce la dirección de la ubicación de una criatura siempre que estén en el mismo plano. Si la criatura se está moviendo, el adranach conoce la dirección de este movimiento."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Arcane Bond",
+							"page": 224,
+							"entries": [
+								"El creador del adranach puede comunicarse telepáticamente con él mientras ambos se encuentren en un radio de 1,5 kilómetros. Como acción, el creador puede ver a través de los ojos del adranach y oír lo que oye hasta el comienzo del siguiente turno del creador, obteniendo los beneficios de cualquier sentido especial que tenga el adranach. Durante este tiempo, el creador es {@condition deafened} y {@condition blinded} con respecto a sus propios sentidos."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Astral Form ({@i Master Adranach Only; Recharges after a {@quickref resting|PHB|2|0|Long Rest}})",
+							"page": 224,
+							"entries": [
+								"El maestro adranach puede lanzar {@spell astral projection} sobre sí mismo."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Slipstream",
+							"page": 224,
+							"entries": [
+								"El adranach puede lanzarse {@spell invisibility} sobre sí mismo a voluntad. Mientras está {@condition invisible}, su velocidad se duplica."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Truesight ({@i Master Adranach Only})",
+							"page": 224,
+							"entries": [
+								"El adranach tiene {@sense truesight} hasta un alcance de 9 metros. Como acción, puede aumentar el alcance de su {@sense truesight} a 36 metros hasta el final de su próximo turno."
+							]
+						}
+					]
+				}
+			],
+			"traitTags": [
+				"Immutable Form",
+				"Legendary Resistances",
+				"Magic Resistance",
+				"Magic Weapons"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"O",
+				"R",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Percival de Rolo",
+			"shortName": "Percy",
+			"alias": [
+				"Lord Percival Fredrickstein von Musel Klossowski de Rolo III"
+			],
+			"group": [
+				"Vox Machina"
+			],
+			"source": "TDCSR",
+			"page": 266,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item studded leather armor|PHB|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 190,
+				"formula": "20d10 + 40 + 40"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 22,
+			"con": 14,
+			"int": 20,
+			"wis": 16,
+			"cha": 14,
+			"save": {
+				"str": "+7",
+				"con": "+8"
+			},
+			"skill": {
+				"acrobatics": "+12",
+				"history": "+11",
+				"perception": "+9",
+				"persuasion": "+8"
+			},
+			"passive": 19,
+			"resist": [
+				"lightning"
+			],
+			"languages": [
+				"Celestial",
+				"Common",
+				"Elvish"
+			],
+			"cr": "18",
+			"trait": [
+				{
+					"name": "Action Surge (2/{@quickref resting|PHB|2|0|Short Rest})",
+					"entries": [
+						"Una vez en su turno, Percy puede realizar una acción adicional."
+					]
+				},
+				{
+					"name": "Cabal's Ruin",
+					"entries": [
+						"{@item Cabal's Ruin (Exalted)|TDCSR|Cabal's Ruin} otorga a Percy {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} sobre {@quickref saving throws|PHB|2|1} contra hechizos o efectos mágicos. Además, {@item Cabal's Ruin (Exalted)|TDCSR|Cabal's Ruin} tiene 10 cargas. Cuando Percy golpea con un ataque de arma, puede gastar hasta 10 cargas para que el ataque inflija {@dice 1d6} de daño de rayo adicional por carga gastada."
+					]
+				},
+				{
+					"name": "Indomitable (3/{@quickref resting|PHB|2|0|Long Rest})",
+					"entries": [
+						"Percy puede repetir una tirada fallida {@quickref saving throws|PHB|2|1|tiro de salvación}."
+					]
+				},
+				{
+					"name": "Misfire",
+					"entries": [
+						"Cuando Percy saca un 2 o menos en el {@dice d20} al realizar un ataque con Animus o Malas Noticias, el ataque falla y no puede volver a utilizar el arma hasta que gaste una acción para repararla. Al fallar un ataque con Animus, recibe 7 ({@damage 2d6}) de daño psíquico."
+					]
+				},
+				{
+					"name": "No Mercy",
+					"entries": [
+						"Los ataques con armas de Percy consiguen un golpe crítico con una tirada de 19-20."
+					]
+				},
+				{
+					"name": "Ranged Master",
+					"entries": [
+						"Los ataques con armas a distancia de Percy tienen un bonificador +2 al golpe (incluido en los ataques), ignoran el {@quickref cover|PHB|3|0|media tapa} y el {@quickref cover|PHB|3|0|tres cuartos de cubierta}, y no tienen penalización por alcance. Además, Percy puede recibir un penalizador de -5 a cualquier tirada de ataque a distancia para obtener un bonificador de +10 a la tirada de daño."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Percy lleva un {@item ring of lightning resistance} y un {@item Cabal's Ruin (Exalted)|TDCSR|Cabal's Ruin}. Empuña Animus y Malas noticias, ambas armas +1."
+					]
+				},
+				{
+					"name": "Quick Draw",
+					"entries": [
+						"Percy añade su bonificador de competencia a las tiradas de iniciativa, lo que le da un +12 a las tiradas de iniciativa."
+					]
+				},
+				{
+					"name": "Toughness",
+					"entries": [
+						"Percy tiene 40 puntos de golpe adicionales."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Percy realiza cuatro ataques a distancia con Animus, o dos ataques a distancia con Malas noticias. Cuando Percy impacta con un ataque con cualquiera de las dos armas, puede elegir uno de los siguientes efectos adicionales:",
+						{
+							"type": "list",
+							"items": [
+								{
+									"type": "item",
+									"name": "Deadeye",
+									"entries": [
+										"Percy gana {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} en su siguiente tirada de ataque de este turno realizada contra el mismo objetivo."
+									]
+								},
+								{
+									"type": "item",
+									"name": "Disarm",
+									"entries": [
+										"El objetivo debe hacer un {@dc 20} de Fuerza {@quickref saving throws|PHB|2|1|tiro de salvación}. Si falla, el objetivo suelta un objeto a elección de Percy."
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Animus",
+					"entries": [
+						"{@atk rw} {@hit 15} para golpear, alcance 96 m., un objetivo. {@h}11 ({@damage 1d10 + 6}) de daño perforante y 3 ({@damage 1d6}) de daño psíquico."
+					]
+				},
+				{
+					"name": "Bad News",
+					"entries": [
+						"{@atk rw} {@hit 15} para golpear, alcance 24 m., un objetivo. {@h}19 ({@damage 2d12 + 6}) de daño perforante."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Absorb Magic (Recharges after a {@quickref resting|PHB|2|0|Short or Long Rest})",
+					"entries": [
+						"Cuando Percy es objetivo de un hechizo enemigo, puede absorber una parte de la energía del hechizo en {@item Cabal's Ruin (Exalted)|TDCSR|Cabal's Ruin}. El hechizo le afecta normalmente, pero la capa gana un número de cargas igual al nivel del hechizo. Al hacerlo, también obtiene resistencia a un tipo de daño infligido por el hechizo hasta el final de su siguiente turno."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CE",
+				"E"
+			],
+			"damageTags": [
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Pike Trickfoot",
+			"shortName": "Pike",
+			"alias": [
+				"Champion of Sarenrae"
+			],
+			"group": [
+				"Vox Machina"
+			],
+			"isNamedCreature": true,
+			"source": "TDCSR",
+			"page": 269,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"gnome"
+				]
+			},
+			"ac": [
+				{
+					"ac": 23,
+					"from": [
+						"{@item plate of the dawnmartyr (exalted)|TDCSR|plate of the dawnmartyr}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 170,
+				"formula": "20d8 + 80"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 19,
+			"dex": 12,
+			"con": 18,
+			"int": 14,
+			"wis": 20,
+			"cha": 14,
+			"save": {
+				"wis": "+11",
+				"cha": "+8"
+			},
+			"skill": {
+				"athletics": "+10",
+				"perception": "+11",
+				"persuasion": "+8",
+				"religion": "+8",
+				"stealth": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 21,
+			"resist": [
+				"fire",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"Dwarvish",
+				"Gnomish",
+				"Undercommon"
+			],
+			"cr": "17",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Pike es un hechicero de nivel 20. Su habilidad de hechizo es Sabiduría. Su habilidad de conjuro es Sabiduría (salvación de conjuro {@dc 19}, {@hit 11} para golpear con ataques de conjuro). Tiene preparados los siguientes hechizos de clérigo:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell light}",
+								"{@spell sacred flame} ({@dice 4d8})",
+								"{@spell spare the dying}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell command}",
+								"{@spell cure wounds}",
+								"{@spell guiding bolt}",
+								"{@spell healing word}",
+								"{@spell sanctuary}",
+								"{@spell shield of faith}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell aid}",
+								"{@spell lesser restoration}",
+								"{@spell spiritual weapon}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell glyph of warding}",
+								"{@spell mass healing word}",
+								"{@spell protection from energy}",
+								"{@spell revivify}",
+								"{@spell speak with dead}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell death ward}",
+								"{@spell freedom of movement}",
+								"{@spell guardian of faith}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell flame strike}",
+								"{@spell greater restoration}",
+								"{@spell hallow}",
+								"{@spell mass cure wounds}",
+								"{@spell scrying}"
+							]
+						},
+						"6": {
+							"slots": 2,
+							"spells": [
+								"{@spell heal}",
+								"{@spell heroes' feast}",
+								"{@spell planar ally}"
+							]
+						},
+						"7": {
+							"slots": 2,
+							"spells": [
+								"{@spell resurrection}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell holy aura}"
+							]
+						},
+						"9": {
+							"slots": 1,
+							"spells": [
+								"{@spell mass heal}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Gnome Cunning",
+					"entries": [
+						"Pike tiene {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} en Inteligencia, Sabiduría y Carisma {@quickref saving throws|PHB|2|1} contra la magia."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Pike blande un {@item mace of disruption} y lleva {@item gauntlets of ogre power}, {@item boots of speed} y el {@item plate of the dawnmartyr (exalted)|TDCSR|Plate of the Dawnmartyr}."
+					]
+				},
+				{
+					"name": "Dawnmartyr's Grace (1/{@quickref resting|PHB|2|0|Long Rest})",
+					"entries": [
+						"Cuando Pike queda reducida a 0 puntos de golpe mientras lleva el {@item plate of the dawnmartyr (exalted)|TDCSR|Plate of the Dawnmartyr}, puede elegir que la rodee una ráfaga de llamas curativas. Recupera 1 punto de vida y se pone en pie. Cada enemigo en un radio de 3 metros recibe 7 ({@damage 2d6}) de daño de fuego o daño radiante (a su elección)."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Mace of Disruption",
+					"entries": [
+						"{@atk mw} {@hit 10} para golpear, alcance 1,5 m., un objetivo. {@h}17 ({@damage 3d8 + 4}) puntos de daño contundente, más 7 ({@damage 2d6}) puntos de daño radiante adicionales si el objetivo es un demonio o un no muerto. Si el objetivo tiene 25 puntos de vida o menos tras recibir este daño, debe tener éxito en una tirada de Sabiduría {@dc 15} {@quickref saving throws|PHB|2|1|tiro de salvación} o ser destruido. En una salvación con éxito, la criatura se convierte en {@condition frightened} de Pike hasta el final de su siguiente turno."
+					]
+				},
+				{
+					"name": "Guiding Bolt (5th Level)",
+					"entries": [
+						"{@atk rs} {@hit 11} para golpear, alcance 36 m., un objetivo. {@h}28 ({@damage 8d6}) de daño radiante, y la siguiente tirada de ataque realizada contra el objetivo antes del final del siguiente turno de Pike tiene {@quickref Advantage and Disadvantage|PHB|2|0|ventaja}."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Battle Priest (5/{@quickref resting|PHB|2|0|Long Rest})",
+					"entries": [
+						"Si Pike utiliza la acción {@action Attack}, puede realizar un ataque con arma como acción adicional."
+					]
+				},
+				{
+					"name": "{@spell Healing Word} (4th Level)",
+					"entries": [
+						"Pike lanza {@spell healing word}, restaurando 16 ({@dice 4d4 + 6}) puntos de golpe a sí misma o a otra criatura que pueda ver en un radio de 18 metros."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Dawnmartyr's Rebuke",
+					"entries": [
+						"Cuando una criatura en un radio de 1,5 metros de Pike la golpea con un ataque cuerpo a cuerpo, puede infligirle 7 ({@damage 2d6}) de daño de fuego o radiante (a su elección)."
+					]
+				},
+				{
+					"name": "Everlight's Guidance (3/{@quickref resting|PHB|2|0|Short Rest})",
+					"entries": [
+						"Cuando Pike o una criatura que pueda ver en un radio de 9 metros haga una tirada de ataque, puede conceder un bonificador +10 a la tirada. Puede conceder esta bonificación después de realizar la tirada, pero antes de que impacte o falle."
+					]
+				}
+			],
+			"attachedItems": [
+				"mace of disruption|dmg"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"G",
+				"U"
+			],
+			"damageTags": [
+				"B",
+				"F",
+				"R"
+			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"F",
+				"L",
+				"O",
+				"R",
+				"T"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"prone"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Plainscow",
+			"source": "TDCSR",
+			"page": 248,
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 42,
+				"formula": "5d10 + 15"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 18,
+			"dex": 8,
+			"con": 16,
+			"int": 2,
+			"wis": 10,
+			"cha": 6,
+			"skill": {
+				"insight": "+2"
+			},
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Trampling Charge",
+					"entries": [
+						"Si el plainscow se mueve al menos 6 metros en línea recta hacia una criatura y luego la golpea con un ataque de pezuñas en el mismo turno, ese objetivo debe tener éxito en un {@dc 14} de Fuerza {@quickref saving throws|PHB|2|1|tiro de salvación} o ser derribado {@condition prone}. Si el objetivo es {@condition prone}, la vaca llanera puede realizar otro ataque con sus pezuñas como acción adicional."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Hooves",
+					"entries": [
+						"{@atk mw} {@hit 6} para golpear, alcance 1,5 m., un objetivo. {@h}11 ({@damage 2d6 + 4}) de daño contundente."
+					]
+				}
+			],
+			"environment": [
+				"grassland",
+				"hill",
+				"urban"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Platinum Golem",
+			"group": [
+				"Golem"
+			],
+			"source": "TDCSR",
+			"page": 243,
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"ac": [
+				{
+					"ac": 21,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 189,
+				"formula": "18d10 + 90"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 22,
+			"dex": 10,
+			"con": 21,
+			"int": 3,
+			"wis": 12,
+			"cha": 1,
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 11,
+			"immune": [
+				"acid",
+				"cold",
+				"fire",
+				"poison",
+				"psychic",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "16",
+			"trait": [
+				{
+					"name": "Divine Custodian",
+					"entries": [
+						"Cuando el gólem golpea a una criatura con un {@action opportunity attack}, la velocidad de esa criatura pasa a ser 0 durante el resto del turno."
+					]
+				},
+				{
+					"name": "Immutable Form",
+					"entries": [
+						"El gólem es inmune a cualquier hechizo o efecto que pudiera alterar su forma."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"El gólem tiene {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} sobre {@quickref saving throws|PHB|2|1} contra hechizos y otros efectos mágicos."
+					]
+				},
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"Los ataques con armas del gólem son mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El golem hace dos ataques cuerpo a cuerpo."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 11} para golpear, alcance 1,5 m., un objetivo. {@h}19 ({@damage 3d8 + 6}) de daño perforante."
+					]
+				},
+				{
+					"name": "Mace",
+					"entries": [
+						"{@atk mw} {@hit 11} para golpear, alcance 3 m., un objetivo. {@h}22 ({@damage 3d10 + 6}) de daño contundente."
+					]
+				},
+				{
+					"name": "Radiant Blast {@recharge}",
+					"entries": [
+						"El gólem emite una ráfaga de luz radiante en un radio de 6 metros. Cada criatura en el área debe hacer un {@dc 18} de Constitución {@quickref saving throws|PHB|2|1|tiro de salvación}. Si falla la salvación, la criatura sufre 18 ({@damage 4d8}) de daño radiante y queda {@condition blinded} incapacitada hasta el final de su siguiente turno. Si tiene éxito, la criatura recibe la mitad de daño y no queda {@condition blinded}."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Divine Judgment",
+					"entries": [
+						"Cuando una criatura en un radio de 3 metros del gólem realiza un ataque contra un objetivo que no sea el gólem, éste puede realizar un ataque de maza contra dicha criatura."
+					]
+				}
+			],
+			"attachedItems": [
+				"mace|phb"
+			],
+			"traitTags": [
+				"Immutable Form",
+				"Magic Resistance",
+				"Magic Weapons"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"P",
+				"R"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ravager Slaughter Lord",
+			"group": [
+				"Ravagers"
+			],
+			"source": "TDCSR",
+			"page": 250,
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"unarmored defense"
+					]
+				}
+			],
+			"hp": {
+				"average": 157,
+				"formula": "15d10 + 75"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 22,
+			"dex": 14,
+			"con": 20,
+			"int": 12,
+			"wis": 16,
+			"cha": 16,
+			"save": {
+				"str": "+10",
+				"con": "+9",
+				"wis": "+7"
+			},
+			"skill": {
+				"intimidation": "+11",
+				"religion": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"languages": [
+				"Abyssal",
+				"Common",
+				"one other language"
+			],
+			"cr": "9",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"La habilidad innata de conjuro del Señor de la Matanza es Sabiduría (salvación de conjuro {@dc 15}, {@hit 7} para golpear con ataques de conjuro). Puede lanzar de forma innata los siguientes hechizos, que no requieren componentes materiales:"
+					],
+					"will": [
+						"{@spell thaumaturgy}"
+					],
+					"daily": {
+						"3e": [
+							"{@spell flame strike}",
+							"{@spell spirit guardians}"
+						],
+						"1e": [
+							"{@spell control weather}",
+							"{@spell divine word}",
+							"{@spell fire storm}"
+						]
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"Si el Señor de la Matanza falla un {@quickref saving throws|PHB|2|1|tiro de salvación}, puede elegir tener éxito en su lugar."
+					]
+				},
+				{
+					"name": "Unarmored Defense",
+					"entries": [
+						"Mientras el Señor de la Matanza no lleve armadura y no empuñe un {@item shield|PHB}, su CA incluye su modificador de Constitución."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El Señor de la Matanza realiza cuatro ataques con sus espadas duales o tres ataques con su lanza."
+					]
+				},
+				{
+					"name": "Dual Greatswords",
+					"entries": [
+						"{@atk mw} {@hit 10} para golpear, alcance 1,5 m., un objetivo. {@h}13 ({@damage 2d6 + 6}) de daño perforante más 3 ({@damage 1d6}) de daño de fuego."
+					]
+				},
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 10} para golpear, alcance 20/18 m., un objetivo. {@h}13 ({@damage 2d6 + 6}) de daño perforante más 3 ({@damage 1d6}) de daño de fuego, o 15 ({@damage 2d8 + 6}) de daño perforante más 3 ({@damage 1d6}) de daño de fuego si se usa con ambas manos para hacer un ataque cuerpo a cuerpo."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Aggressive",
+					"entries": [
+						"El Señor de la Matanza puede moverse hasta su velocidad hacia una criatura hostil que pueda ver."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attack",
+					"entries": [
+						"El Señor de la Matanza hace un ataque con lanza o con dos grandes espadas."
+					]
+				},
+				{
+					"name": "Move",
+					"entries": [
+						"El Señor de la Matanza se mueve hasta la mitad de su velocidad."
+					]
+				},
+				{
+					"name": "Cast a Spell (Costs 3 Actions)",
+					"entries": [
+						"El Señor de la Matanza {@action cast a spell|PHB|casts an innate spell}."
+					]
+				}
+			],
+			"environment": [
+				"grassland"
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"F",
+				"P"
+			],
+			"damageTagsSpell": [
+				"F",
+				"N",
+				"R"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened",
+				"stunned"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ravager Stabby-Stabber",
+			"group": [
+				"Ravagers"
+			],
+			"source": "TDCSR",
+			"page": 250,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|PHB|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 36,
+				"formula": "8d6 + 8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 16,
+			"con": 12,
+			"int": 10,
+			"wis": 8,
+			"cha": 7,
+			"save": {
+				"wis": "+1"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"conditionImmune": [
+				"charmed"
+			],
+			"languages": [
+				"Common",
+				"one other language"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Stabby Frenzy",
+					"entries": [
+						"Cuando el apuñalador-apuñalador impacta con un ataque cuerpo a cuerpo, puede atacar de nuevo y seguir realizando ataques adicionales hasta que falle. El apuñalador no puede moverse entre los ataques realizados con este rasgo."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 5} para golpear, alcance 1,5 m., un objetivo. {@h}6 ({@damage 1d6 + 3}) de daño perforante."
+					]
+				},
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} para golpear, alcance 1,5 m., alcance 20/18 m., un objetivo. {@h}5 ({@damage 1d4 + 3}) de daño perforante."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Nimble Escape",
+					"entries": [
+						"El apuñalador puede usar la acción {@action Disengage} o {@action Hide}."
+					]
+				}
+			],
+			"environment": [
+				"grassland"
+			],
+			"attachedItems": [
+				"dagger|phb",
+				"shortsword|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Remnant Chosen",
+			"shortName": "chosen",
+			"group": [
+				"Remnants"
+			],
+			"source": "TDCSR",
+			"page": 251,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any"
+				]
+			},
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 117,
+				"formula": "18d8 + 36"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 14,
+			"int": 15,
+			"wis": 16,
+			"cha": 20,
+			"save": {
+				"cha": "+9",
+				"wis": "+7"
+			},
+			"skill": {
+				"arcana": "+10",
+				"deception": "+9"
+			},
+			"senses": [
+				"truesight 60 ft."
+			],
+			"passive": 13,
+			"resist": [
+				{
+					"special": "damage from spells"
+				}
+			],
+			"immune": [
+				"necrotic"
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Infernal"
+			],
+			"cr": "12",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"El elegido es un hechicero de nivel 18º. Su habilidad de conjuro es Carisma (salvación de conjuro {@dc 17}, {@hit 9} para golpear con ataques de conjuro). Tiene preparados los siguientes conjuros de hechicero:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch} ({@dice 4d8})",
+								"{@spell dancing lights}",
+								"{@spell mage hand}",
+								"{@spell message}",
+								"{@spell shocking grasp} ({@dice 4d8})"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell charm person}",
+								"{@spell mage armor}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell blindness/deafness}",
+								"{@spell detect thoughts}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell fly}",
+								"{@spell hypnotic pattern}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell greater invisibility}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell dominate person}",
+								"{@spell seeming}"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell eyebite}"
+							]
+						},
+						"7": {
+							"slots": 1,
+							"spells": [
+								"{@spell finger of death}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell power word stun}"
+							]
+						},
+						"9": {
+							"slots": 1,
+							"spells": [
+								"{@spell power word kill}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"El elegido tiene {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} sobre {@quickref saving throws|PHB|2|1} contra hechizos y otros efectos mágicos."
+					]
+				},
+				{
+					"name": "Withering Spells",
+					"entries": [
+						"Cuando el elegido lanza un hechizo de 1er nivel o superior, el siguiente ataque de Mano Marchita que realice antes del final de su siguiente turno inflige un daño extra igual a {@dice 1d6} por nivel del hechizo lanzado."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Withering Touch",
+					"entries": [
+						"{@atk ms} {@hit 9} para golpear, alcance 1,5 m., un objetivo. {@h}17 ({@damage 5d6}) de daño de fuerza más el daño adicional del rasgo Toque fulminante. Si este daño reduce a una criatura a 0 puntos de golpe, la criatura y todo lo que lleva puesto o encima, excepto objetos mágicos, se reducen a un montón de fino polvo gris. La criatura sólo puede volver a la vida mediante un hechizo de {@spell true resurrection} o {@spell wish}."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Inescapable Sight",
+					"entries": [
+						"El Elegido elige una criatura u objeto bajo el efecto de {@filter un hechizo de ilusión de 4º nivel o inferior|spells|school=I|level=0;1;2;3;4}. Se disipa una ilusión a elección del Elegido que afecte al objetivo."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"I"
+			],
+			"damageTags": [
+				"O"
+			],
+			"damageTagsSpell": [
+				"L",
+				"N"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"frightened",
+				"incapacitated",
+				"invisible",
+				"stunned",
+				"unconscious"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Remnant Cultist",
+			"shortName": "cultist",
+			"group": [
+				"Remnants"
+			],
+			"source": "TDCSR",
+			"page": 252,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any"
+				]
+			},
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 60,
+				"formula": "11d8 + 11"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 16,
+			"con": 12,
+			"int": 18,
+			"wis": 8,
+			"cha": 8,
+			"save": {
+				"wis": "+2"
+			},
+			"skill": {
+				"deception": "+5",
+				"stealth": "+6"
+			},
+			"passive": 9,
+			"resist": [
+				"necrotic",
+				"psychic"
+			],
+			"languages": [
+				"Common",
+				"Infernal"
+			],
+			"cr": "7",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"El cultista remanente es un hechicero de nivel 11º. Su habilidad de conjuro es Inteligencia (salvación de conjuro {@dc 15}, {@hit 7} para golpear con ataques de conjuro). El cultista tiene preparados los siguientes hechizos de mago:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch} ({@dice 3d8})",
+								"{@spell message}",
+								"{@spell minor illusion}",
+								"{@spell prestidigitation}",
+								"{@spell ray of frost} ({@dice 3d8})"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell detect magic}",
+								"{@spell Tasha's hideous laughter}",
+								"{@spell mage armor}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell detect thoughts}",
+								"{@spell suggestion}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell fear}",
+								"{@spell vampiric touch}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell greater invisibility}",
+								"{@spell phantasmal killer}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell dream}",
+								"{@spell mislead}"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell circle of death}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Unknowable Secrets",
+					"entries": [
+						"Cualquier intento de formar un vínculo mental con el cultista, lanzar {@spell scrying} sobre el cultista o lanzar {@spell speak with dead} sobre el cultista falla automáticamente, y la criatura que inició el intento recibe 21 ({@damage 6d6}) de daño psíquico."
+					]
+				},
+				{
+					"name": "One-Eyed",
+					"entries": [
+						"El cultista tiene {@quickref Advantage and Disadvantage|PHB|2|0|desventaja} en cualquier tirada de ataque realizada contra un objetivo a más de 9 metros de distancia."
+					]
+				},
+				{
+					"name": "Spellsteal",
+					"entries": [
+						"Si el cultista utiliza con éxito {@spell counterspell} para negar el hechizo de otra criatura, puede lanzar el hechizo contrarrestado una vez antes del final de su siguiente turno utilizando una de sus ranuras de hechizo del mismo nivel o superior, y sin necesidad de componentes materiales."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Dagger of Wounding",
+					"entries": [
+						"{@atk mw,rw} {@hit 6} para golpear, alcance 1,5 m., alcance 20/18 m., un objetivo. {@h}5 ({@damage 1d4 + 3}) de daño perforante. Los puntos de golpe perdidos por {@item sword of wounding|DMG|this weapon's} de daño sólo pueden recuperarse mediante un {@quickref resting|PHB|2|0|descanso corto o largo}, y no por regeneración, magia o cualquier otro medio.",
+						"Una vez por turno, cuando el cultista golpea a una criatura con un ataque con esta arma, puede herir a su objetivo. Al comienzo de cada turno de la criatura herida, recibe 2 ({@damage 1d4}) de daño necrótico por cada vez que haya sido herida por esta arma. A continuación, puede realizar un {@dc 15} de Constitución {@quickref saving throws|PHB|2|1|tiro de salvación}, poniendo fin al efecto de todas esas heridas sobre sí misma con un éxito. Alternativamente, la criatura herida, o una criatura en un radio de 1,5 metros de ella, puede usar una acción para hacer un chequeo de Sabiduría ({@skill Medicine}) {@dc 15}, acabando con el efecto de dichas heridas sobre ella si tiene éxito."
+					]
+				}
+			],
+			"languageTags": [
+				"C",
+				"I"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"C",
+				"N",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened",
+				"frightened",
+				"incapacitated",
+				"invisible",
+				"prone"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Rivermaw Brawler",
+			"shortName": "brawler",
+			"group": [
+				"Rivermaw Herd"
+			],
+			"source": "TDCSR",
+			"page": 254,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any"
+				]
+			},
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"unarmored defense"
+					]
+				}
+			],
+			"hp": {
+				"average": 65,
+				"formula": "10d8 + 20"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 17,
+			"dex": 14,
+			"con": 15,
+			"int": 14,
+			"wis": 16,
+			"cha": 8,
+			"save": {
+				"str": "+5",
+				"wis": "+5"
+			},
+			"skill": {
+				"acrobatics": "+4",
+				"athletics": "+5",
+				"perception": "+5"
+			},
+			"passive": 15,
+			"languages": [
+				"Common",
+				"Giant"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Unarmored Defense",
+					"entries": [
+						"Mientras el brawler no lleve armadura ni empuñe {@item shield|PHB}, su CA incluye su modificador de Sabiduría."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El pendenciero da tres golpes desarmado."
+					]
+				},
+				{
+					"name": "Unarmed Strike",
+					"entries": [
+						"{@atk mw} {@hit 5} para golpear, alcance 1,5 m., un objetivo. {@h}7 ({@damage 1d8 + 3}) de daño contundente. Si el objetivo es una criatura Grande o menor, el brawler puede elegir uno de los siguientes efectos adicionales:",
+						{
+							"type": "list",
+							"items": [
+								{
+									"name": "Bruise",
+									"type": "item",
+									"entries": [
+										"El objetivo debe tener éxito en un {@dc 13} de Constitución {@quickref saving throws|PHB|2|1|tiro de salvación}. Si falla, su velocidad se reduce en 1,5 metros hasta que reciba al menos 1 punto de curación mágica. Una criatura puede usar su acción para hacer un chequeo de {@dc 15} Sabiduría ({@skill Medicine}) para curar a una criatura afectada en un radio de 1,5 metros (incluyéndose a sí misma), restaurando la velocidad perdida si tiene éxito."
+									]
+								},
+								{
+									"name": "Disarm",
+									"type": "item",
+									"entries": [
+										"El objetivo debe tener éxito en un {@dc 13} de Fuerza {@quickref saving throws|PHB|2|1|tiro de salvación} o soltar uno de los objetos que sostiene. El luchador puede elegir qué objeto suelta y recogerlo."
+									]
+								},
+								{
+									"name": "Suplex",
+									"type": "item",
+									"entries": [
+										"El objetivo debe tener éxito en un {@dc 13} de Fuerza {@quickref saving throws|PHB|2|1|tiro de salvación} o ser derribado {@condition prone}."
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Clever Fighter",
+					"entries": [
+						"Cuando el pendenciero impacta con un ataque o es objetivo de un ataque, puede sumar su modificador de Inteligencia (+2) a sus tiradas de daño o CA hasta el final de su turno."
+					]
+				},
+				{
+					"name": "Endurance (Recharges after a {@quickref resting|PHB|2|0|Short or Long Rest})",
+					"entries": [
+						"Cuando el brawler recibe daño, puede reducir el daño en un 8 ({@dice 1d12 + 2})."
+					]
+				}
+			],
+			"environment": [
+				"grassland"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GI"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Rivermaw Stormborn",
+			"shortName": "stormborn",
+			"group": [
+				"Rivermaw Herd"
+			],
+			"source": "TDCSR",
+			"page": 254,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any"
+				]
+			},
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item hide armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 102,
+				"formula": "12d8 + 48"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 12,
+			"con": 18,
+			"int": 11,
+			"wis": 10,
+			"cha": 12,
+			"save": {
+				"con": "+7",
+				"cha": "+4"
+			},
+			"skill": {
+				"athletics": "+7",
+				"intimidation": "+4"
+			},
+			"passive": 10,
+			"resist": [
+				"lightning"
+			],
+			"languages": [
+				"Common",
+				"Giant"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"La habilidad innata de lanzamiento de conjuros del nacido de tormenta es Carisma (salvación de conjuro {@dc 12}). El stormborn puede lanzar los siguientes hechizos de forma innata, sin necesidad de componentes materiales:"
+					],
+					"daily": {
+						"1": [
+							"{@spell call lightning}"
+						],
+						"3": [
+							"{@spell lightning bolt}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Reckless",
+					"entries": [
+						"Al inicio de su turno, el stormborn puede ganar {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} en todas las tiradas de ataque con arma cuerpo a cuerpo durante ese turno, pero las tiradas de ataque contra él tienen {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} hasta el inicio de su siguiente turno."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El stormborn realiza dos ataques con greataxe. Si se concentra en {@spell call lightning}, también puede lanzar un rayo."
+					]
+				},
+				{
+					"name": "Greataxe",
+					"entries": [
+						"{@atk mw} {@hit 7} para golpear, alcance 1,5 m., un objetivo. {@h}10 ({@damage 1d12 + 4}) de daño cortante más 3 ({@damage 1d6}) de daño de rayo."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Endurance (Recharges after a {@quickref resting|PHB|2|0|Short or Long rest})",
+					"entries": [
+						"Cuando el stormborn recibe daño, puede reducir el daño en 10 ({@dice 1d12 + 4})."
+					]
+				}
+			],
+			"environment": [
+				"grassland"
+			],
+			"attachedItems": [
+				"greataxe|phb"
+			],
+			"traitTags": [
+				"Reckless"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GI"
+			],
+			"damageTags": [
+				"L",
+				"S"
+			],
+			"damageTagsSpell": [
+				"L"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sagacitous Erusaire",
+			"isNpc": true,
+			"source": "TDCSR",
+			"page": 122,
+			"_copy": {
+				"name": "Guardian Naga",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the naga",
+						"with": "Sagacitous Erusaire",
+						"flags": "i"
+					},
+					"spellcasting": {
+						"mode": "prependArr",
+						"items": {
+							"name": "Innate Spellcasting",
+							"headerEntries": [
+								"La habilidad de lanzamiento de conjuros de Sagacitous Erusaire es Sabiduría (salvación de conjuro {@dc 16} {@hit 8} para golpear con ataques de conjuro). Puede lanzar de forma innata los siguientes hechizos, que no requieren componentes materiales:"
+							],
+							"will": [
+								"{@spell contagion}"
+							],
+							"ability": "wis"
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Scanlan Shorthalt",
+			"shortName": "Scanlan",
+			"group": [
+				"Vox Machina"
+			],
+			"isNamedCreature": true,
+			"source": "TDCSR",
+			"page": 271,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"gnome"
+				]
+			},
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item +2 Studded Leather Armor of Acid Resistance|TDCSR}",
+						"{@item +2 ring of protection|TDCSR}"
+					]
+				}
+			],
+			"hp": {
+				"average": 190,
+				"formula": "20d8 + 60 + 40"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 13,
+			"dex": 11,
+			"con": 16,
+			"int": 16,
+			"wis": 7,
+			"cha": 22,
+			"save": {
+				"str": "+3",
+				"dex": "+7",
+				"con": "+5",
+				"int": "+5",
+				"wis": "+0",
+				"cha": "+13"
+			},
+			"skill": {
+				"acrobatics": "+5",
+				"arcana": "+8",
+				"athletics": "+6",
+				"deception": "+16",
+				"intimidation": "+11",
+				"investigation": "+13",
+				"performance": "+16",
+				"persuasion": "+16"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 8,
+			"resist": [
+				"acid"
+			],
+			"languages": [
+				"Common",
+				"Gnomish",
+				"Marquesian"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Scanlan es un hechicero de nivel 20. Su habilidad de hechizo es Carisma. Su habilidad de conjuro es Carisma (salvación de conjuro {@dc 19}, {@hit 11} para golpear con ataques de conjuro). Tiene preparados los siguientes hechizos de bardo:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell mage hand}",
+								"{@spell message}",
+								"{@spell minor illusion}",
+								"{@spell vicious mockery}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell healing word}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell blindness/deafness}",
+								"{@spell hold person}",
+								"{@spell invisibility}",
+								"{@spell suggestion}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell lightning bolt}",
+								"{@spell stinking cloud}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell dimension door}",
+								"{@spell polymorph}",
+								"{@spell Otiluke's Resilient Sphere||resilient sphere}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell bigby's hand||arcane hand}",
+								"{@spell dominate person}",
+								"{@spell modify memory}",
+								"{@spell seeming}"
+							]
+						},
+						"6": {
+							"slots": 2,
+							"spells": [
+								"{@spell eyebite}"
+							]
+						},
+						"7": {
+							"slots": 2,
+							"spells": [
+								"{@spell Mordenkainen's Magnificent Mansion||magnificent mansion}",
+								"{@spell reverse gravity}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell dominate monster}"
+							]
+						},
+						"9": {
+							"slots": 1,
+							"spells": [
+								"{@spell true polymorph}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Gnome Cunning",
+					"entries": [
+						"Scanlan tiene {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} en Inteligencia, Sabiduría y Carisma {@quickref saving throws|PHB|2|1} contra la magia."
+					]
+				},
+				{
+					"name": "Focused",
+					"entries": [
+						"Scanlan tiene {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} en Constitución {@quickref saving throws|PHB|2|1} hecho para mantener {@condition concentration} en hechizos."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Scanlan empuña un {@item Mythcarver (Exalted)|TDCSR|Mythcarver}, viste un {@item +2 Studded Leather Armor of Acid Resistance|TDCSR} y un {@item +2 ring of protection|TDCSR|ring of protection with a +2 bonus}, y lleva un {@item hat of disguise} y un {@item wand of magic missiles}."
+					]
+				},
+				{
+					"name": "Toughness",
+					"entries": [
+						"Scanlan tiene 40 puntos de golpe adicionales."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Mythcarver",
+					"entries": [
+						"{@atk mw} {@hit 9} para golpear, alcance 1,5 m., un objetivo. {@h}7 ({@damage 1d8 + 3}) de daño perforante y 3 ({@damage 1d6}) de daño de fuerza."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Arcane Fist (8th Level)",
+					"entries": [
+						"{@atk ms} {@hit 11} para golpear, alcance 1,5 m., un objetivo. {@h}45 ({@damage 10d8}) de daño de fuerza. Scanlan puede usar esta acción adicional sólo mientras se concentra en el hechizo {@spell Bigby's Hand||arcane hand}."
+					]
+				},
+				{
+					"name": "Bardic Inspiration (6/{@quickref resting|PHB|2|0|Short Rest})",
+					"entries": [
+						"Scanlan concede un dado de Inspiración Bárdica a una criatura que no sea él y que esté en un radio de 18 metros que pueda oírle. Una vez en los siguientes 10 minutos, la criatura puede tirar un {@dice d12} y sumar el número obtenido a un chequeo de habilidad, tirada de ataque o {@quickref saving throws|PHB|2|1|tiro de salvación} que haga.  Cuando Scanlan usa esta habilidad, gana {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} en las tiradas de ataque con {@item Mythcarver (Exalted)|TDCSR|Mythcarver} hasta el final de su turno."
+					]
+				},
+				{
+					"name": "{@spell Healing Word} (5th Level)",
+					"entries": [
+						"Scanlan lanza {@spell healing word}, restaurando 18 ({@dice 5d4 + 6}) puntos de golpe a sí mismo o a otra criatura que pueda ver en un radio de 18 metros."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Cutting Words",
+					"entries": [
+						"Cuando una criatura que Scanlan pueda ver en un radio de 18 metros haga una tirada de ataque, un chequeo de habilidad o una tirada de daño, puede gastar un uso de Inspiración Bardica para sacar un {@dice d12} y restar el número obtenido de la tirada de la criatura. La criatura también tiene un {@quickref Advantage and Disadvantage|PHB|2|0|desventaja} en su siguiente {@quickref saving throws|PHB|2|1|tiro de salvación}."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"G"
+			],
+			"damageTags": [
+				"O",
+				"P"
+			],
+			"damageTagsSpell": [
+				"B",
+				"L",
+				"O",
+				"T",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CB"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"frightened",
+				"incapacitated",
+				"invisible",
+				"paralyzed",
+				"unconscious"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Taryon Darrington",
+			"shortName": "Tary",
+			"group": [
+				"Vox Machina"
+			],
+			"source": "TDCSR",
+			"page": 273,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item +1 breastplate}"
+					]
+				}
+			],
+			"hp": {
+				"average": 127,
+				"formula": "15d8 + 30 + 30"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": {
+					"number": 50,
+					"condition": "(with {@item broom of flying})"
+				}
+			},
+			"str": 12,
+			"dex": 11,
+			"con": 14,
+			"int": 18,
+			"wis": 8,
+			"cha": 15,
+			"save": {
+				"con": "+7",
+				"int": "+9"
+			},
+			"skill": {
+				"arcana": "+9",
+				"history": "+9",
+				"perception": "+4",
+				"survival": "+4"
+			},
+			"passive": 9,
+			"resist": [
+				"acid",
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"Gnomish",
+				"Sylvan",
+				"Undercommon"
+			],
+			"cr": "9",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Tary es un hechicero de nivel 15. Su habilidad de hechizo es Inteligencia. Su habilidad de conjuro es Inteligencia (salvación de conjuro {@dc 16}, {@hit 8} para golpear con ataques de conjuro). Tiene preparados los siguientes hechizos:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell mending}",
+								"{@spell prestidigitation}",
+								"{@spell ray of frost} ({@dice 3d8})"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell detect magic}",
+								"{@spell heroism}",
+								"{@spell identify}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell alter self}",
+								"{@spell branding smite}",
+								"{@spell see invisibility}",
+								"{@spell warding bond}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell dispel magic}",
+								"{@spell fly}",
+								"{@spell haste}",
+								"{@spell magic circle}",
+								"{@spell revivify}"
+							]
+						},
+						"4": {
+							"slots": 2,
+							"spells": [
+								"{@spell banishment}",
+								"{@spell fabricate}",
+								"{@spell fire shield}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Alchemical Defense",
+					"entries": [
+						"Los brebajes experimentales de Tary le han otorgado resistencia al daño por ácido y veneno, e inmunidad a la condición {@condition poisoned}."
+					]
+				},
+				{
+					"name": "Doty",
+					"entries": [
+						"{@creature Doty X|TDCSR|Doty} se mueve y actúa en el turno de Tary, y Tary puede usar una acción adicional para ordenarle que use la acción {@action Dash}, {@action Dodge}, {@action Disengage}, o {@action Attack}. También puede ordenarle {@action Attack} como parte de su acción Multitarea (ver más abajo). Doty sólo puede realizar una acción en cada turno de Tary."
+					]
+				},
+				{
+					"name": "Focused",
+					"entries": [
+						"Tary tiene {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} en Constitución {@quickref saving throws|PHB|2|1} hecho para mantener {@condition concentration} en hechizos."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Tary lleva un {@item helm of brilliance}, un {@item robe of useful items} y un {@item ring of the ram}. Lleva un {@item rod of mercurial form|TDCSR}, así como un {@item bag of holding}, un {@dice 1d4 + 4} {@item bead of force||beads of force}, un {@item broom of flying} y un {@item chime of opening}."
+					]
+				},
+				{
+					"name": "Toughness",
+					"entries": [
+						"Tary tiene 30 puntos de golpe adicionales."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multitask",
+					"entries": [
+						"Tary realiza dos ataques de arma o lanza un hechizo con un tiempo de lanzamiento de 1 acción, y también puede ordenar {@creature Doty X|TDCSR|Doty} usar su puño potenciado o su acción de reparación."
+					]
+				},
+				{
+					"name": "Mercurial Longsword",
+					"entries": [
+						"{@atk mw} {@hit 5} para golpear, alcance 1,5 m., un objetivo. {@h}6 ({@damage 1d10 + 1}) de daño cortante."
+					]
+				},
+				{
+					"name": "{@item Bead of Force}",
+					"entries": [
+						"Tary lanza un {@item bead of force} hasta 18 metros. Cada criatura en un radio de 3 metros desde donde cayó la cuenta debe tener éxito en una prueba de {@dc 15} Destreza {@quickref saving throws|PHB|2|1|tiro de salvación} o recibir 12 ({@damage 5d4}) de daño de fuerza. Una esfera de fuerza transparente rodea el área durante 1 minuto. Una criatura que falle la salvación y se encuentre completamente dentro del área queda atrapada dentro de la esfera."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Brilliant Intellect",
+					"entries": [
+						"Cuando Tary u otra criatura que pueda ver a menos de 9 metros de él haga un chequeo de habilidad o un {@quickref saving throws|PHB|2|1|tiro de salvación}, puede usar su reacción para añadir +4 a la tirada."
+					]
+				}
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"G",
+				"S",
+				"U"
+			],
+			"damageTags": [
+				"O",
+				"S"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"F",
+				"P",
+				"R",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"incapacitated"
+			],
+			"savingThrowForcedSpell": [
+				"charisma"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Trinket",
+			"group": [
+				"Vox Machina"
+			],
+			"isNamedCreature": true,
+			"source": "TDCSR",
+			"page": 266,
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "beast",
+				"tags": [
+					"brown bear"
+				]
+			},
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item plate barding|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 61,
+				"formula": "6d10 + 18 + 10"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 30
+			},
+			"str": 19,
+			"dex": 10,
+			"con": 16,
+			"int": 5,
+			"wis": 13,
+			"cha": 7,
+			"skill": {
+				"perception": "+10"
+			},
+			"passive": 20,
+			"languages": [
+				"understands Common but can't speak it"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Chosen Companion",
+					"entries": [
+						"Baratija tiene 10 puntos de golpe adicionales, y tiene un bonificador +6 a las tiradas de ataque y daño y a los chequeos de Sabiduría ({@skill Perception})."
+					]
+				},
+				{
+					"name": "Empowered Attacks",
+					"entries": [
+						"Los ataques de Baratija se tratan como mágicos a efectos de superar la resistencia y la inmunidad al daño de ataques no mágicos."
+					]
+				},
+				{
+					"name": "Keen Smell",
+					"entries": [
+						"Baratija tiene {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} en los chequeos de Sabiduría ({@skill Perception}) que dependen del olfato."
+					]
+				},
+				{
+					"name": "Raven's Slumber",
+					"entries": [
+						"Si Trinket queda reducido a 0 puntos de golpe y se encuentra a menos de 3 metros de Vex, es atraído inmediatamente al semiplano dentro de {@creature Vex'ahlia|TDCSR|Vex's} {@item raven's slumber|TDCSR} y estabilizado."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Trinket realiza dos ataques: uno con su mordisco y otro con sus garras."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 13} para golpear, alcance 1,5 m., un objetivo. {@h}14 ({@damage 1d8 + 10}) de daño perforante."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 13} para golpear, alcance 1,5 m., un objetivo. {@h}17 ({@damage 2d6 + 10}) de daño cortante."
+					]
+				}
+			],
+			"traitTags": [
+				"Keen Senses"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Vex'ahlia",
+			"shortName": "Vex",
+			"alias": [
+				"Baroness of the First House of Whitestone",
+				"Grand Mistress of the Grey Hunt",
+				"Champion of Pelor",
+				"Coinmistress of the Tal'Dorei Council",
+				"Stubby",
+				"Vex'ahlia Vessar",
+				"Vex'ahlia de Rolo"
+			],
+			"group": [
+				"Vox Machina"
+			],
+			"source": "TDCSR",
+			"page": 267,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"half-elf"
+				]
+			},
+			"ac": [
+				{
+					"ac": 21,
+					"from": [
+						"{@item +2 Studded White Dragon Leather Armor of Cold Resistance|TDCSR}",
+						"{@item +2 ring of protection|TDCSR}"
+					]
+				}
+			],
+			"hp": {
+				"average": 130,
+				"formula": "20d10 + 20"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 50,
+					"condition": "(with {@item broom of flying})"
+				}
+			},
+			"str": 7,
+			"dex": 20,
+			"con": 12,
+			"int": 14,
+			"wis": 16,
+			"cha": 17,
+			"save": {
+				"str": "+6",
+				"dex": "+13",
+				"con": "+3",
+				"int": "+4",
+				"wis": "+5",
+				"cha": "+5"
+			},
+			"skill": {
+				"acrobatics": "+17",
+				"athletics": "+4",
+				"deception": "+9",
+				"insight": "+9",
+				"investigation": "+8",
+				"perception": "+15",
+				"persuasion": "+9",
+				"stealth": "+17",
+				"survival": "+9"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 25,
+			"resist": [
+				"cold"
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Draconic",
+				"Elvish",
+				"Thieves' Cant",
+				"Undercommon"
+			],
+			"cr": "18",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Vex es una hechicera de nivel 13º. Su habilidad de conjuro es Sabiduría (salvación de conjuro {@dc 17}, {@hit 9} para golpear con ataques de conjuro). Tiene preparados los siguientes hechizos de guardabosques:"
+					],
+					"spells": {
+						"1": {
+							"spells": [
+								"{@spell cure wounds}",
+								"{@spell hunter's mark}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell pass without trace}",
+								"{@spell protection from poison}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell lightning arrow}",
+								"{@spell nondetection}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell freedom of movement}",
+								"{@spell grasping vine}"
+							],
+							"slots": 1
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Assassinate",
+					"entries": [
+						"Durante su primer turno, Vex tiene {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} en las tiradas de ataque contra cualquier criatura que no haya tomado turno. Cualquier golpe de Vex contra una criatura sorprendida es un golpe crítico."
+					]
+				},
+				{
+					"name": "Evasion",
+					"entries": [
+						"Si Vex sufre un efecto que le permite hacer un {@quickref saving throws|PHB|2|1|tiro de salvación} de Destreza para recibir sólo la mitad de daño, en su lugar no recibe daño si tiene éxito en el {@quickref saving throws|PHB|2|1|tiro de salvación}, y sólo la mitad de daño si falla."
+					]
+				},
+				{
+					"name": "Fey Ancestry",
+					"entries": [
+						"Vex tiene {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} en {@quickref saving throws|PHB|2|1} contra ser {@condition charmed}, y la magia no puede dormirla."
+					]
+				},
+				{
+					"name": "Ranged Master",
+					"entries": [
+						"Los ataques con armas a distancia de Vex tienen un bonificador +2 al impacto (incluido en los ataques), e ignoran el {@quickref cover|PHB|3|0|media tapa} y el {@quickref cover|PHB|3|0|tres cuartos de cubierta}, y no tienen penalización por alcance. Además, Vex puede sufrir un penalizador de -5 a cualquier tirada de ataque a distancia para obtener un bonificador de +10 a la tirada de daño."
+					]
+				},
+				{
+					"name": "Sneak Attack (1/Turn)",
+					"entries": [
+						"Vex inflige 14 ({@damage 4d6}) de daño adicional cuando golpea a un objetivo con un ataque de arma y tiene {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} en la tirada de ataque, o cuando el objetivo está a menos de 1,5 metros de un aliado de Vex que no es {@condition incapacitated} y ella no tiene {@quickref Advantage and Disadvantage|PHB|2|0|desventaja} en la tirada de ataque."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Vex lleva un {@item +2 Studded White Dragon Leather Armor of Cold Resistance|TDCSR} y un {@item +2 ring of protection|TDCSR|ring of protection with a +2 bonus}. Lleva un {@item broom of flying} y un {@item raven's slumber|TDCSR}, y empuña un {@item Fenthras (Exalted)|TDCSR|Fenthras}."
+					]
+				},
+				{
+					"name": "Trinket",
+					"entries": [
+						"{@creature Trinket|TDCSR} se mueve y actúa en el turno de Vex, y Vex puede usar una acción adicional para ordenarle que realice la acción {@action Dash}, {@action Dodge}, {@action Disengage} o {@action Attack}. También puede ordenarle {@action Attack} como parte de su acción Multiataque (ver más abajo). {@creature Trinket|TDCSR} sólo puede realizar una acción en cada turno de Vex."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Vex realiza dos ataques a distancia, y puede ordenar {@creature Trinket|TDCSR} moverse a su velocidad y usar su acción Multiataque."
+					]
+				},
+				{
+					"name": "Fenthras",
+					"entries": [
+						"{@atk rw} {@hit 16} para golpear, alcance 18 m., un objetivo. {@h}22 ({@damage 1d8 + 18}) de daño perforante y 3 ({@damage 1d6}) de daño de rayo, y Vex puede usar la siguiente habilidad:"
+					]
+				},
+				{
+					"name": "Bramble Shot (2/{@quickref resting|PHB|2|0|Short Rest})",
+					"entries": [
+						"El ataque inflige 18 ({@damage 4d8}) de daño perforante adicional, y el objetivo debe tener éxito en un {@dc 17} de Fuerza {@quickref saving throws|PHB|2|1|tiro de salvación} o ser {@condition restrained}. El objetivo puede repetir el {@quickref saving throws|PHB|2|1|tiro de salvación} al final de cada uno de sus turnos, terminando el efecto sobre sí mismo con un éxito."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"Vex realiza la acción {@action Dash}, {@action Disengage}, o {@action Hide}."
+					]
+				},
+				{
+					"name": "Hunter's Mark",
+					"entries": [
+						"Vex lanza {@spell hunter's mark} para marcar a una criatura que pueda ver en un radio de 27 metros. Durante 1 hora, los ataques con armas de Vex infligen un {@damage 1d6} de daño adicional a la criatura marcada, y tiene un {@quickref Advantage and Disadvantage|PHB|2|0|ventaja} en los chequeos de Sabiduría ({@skill Perception}) y Sabiduría ({@skill Survival}) realizados para encontrarla."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"Cuando un atacante que Vex puede ver la golpea con un ataque, recibe la mitad del daño del ataque."
+					]
+				}
+			],
+			"traitTags": [
+				"Fey Ancestry",
+				"Sneak Attack"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"DR",
+				"E",
+				"U"
+			],
+			"damageTags": [
+				"L",
+				"P"
+			],
+			"damageTagsSpell": [
+				"L"
+			],
+			"spellcastingTags": [
+				"CR"
+			],
+			"miscTags": [
+				"RW"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Vos'skyriss Serpentfolk",
+			"shortName": "serpentfolk",
+			"group": [
+				"Serpentfolk"
+			],
+			"source": "TDCSR",
+			"page": 258,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 60,
+				"formula": "8d10 + 16"
+			},
+			"speed": {
+				"walk": 40,
+				"swim": 40
+			},
+			"str": 16,
+			"dex": 15,
+			"con": 15,
+			"int": 12,
+			"wis": 10,
+			"cha": 14,
+			"skill": {
+				"perception": "+2",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"La habilidad innata de conjuro del serpentfolk es Carisma (salvación de conjuro {@dc 12}). Puede lanzar de forma innata los siguientes hechizos, que no requieren componentes materiales:"
+					],
+					"will": [
+						"{@spell animal friendship}",
+						"{@spell speak with animals} (snakes only)"
+					],
+					"daily": {
+						"1": [
+							"{@spell pass without trace}"
+						],
+						"2e": [
+							"{@spell sleep}",
+							"{@spell suggestion}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Hold Breath",
+					"entries": [
+						"El serpentfolk puede contener la respiración durante 30 minutos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El serpentfolk hace dos ataques de cimitarra."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} para golpear, alcance 1,5 m., una criatura. {@h}6 ({@damage 1d6 + 3}) de daño perforante más 7 ({@damage 2d6}) de daño de veneno."
+					]
+				},
+				{
+					"name": "Scimitar",
+					"entries": [
+						"{@atk mw} {@hit 5} para golpear, alcance 1,5 m., un objetivo. {@h}6 ({@damage 1d6 + 3}) de daño cortante."
+					]
+				},
+				{
+					"name": "Constrict",
+					"entries": [
+						"{@atk mw} {@hit 5} para golpear, alcance 1,5 m., una criatura. {@h}7 ({@damage 1d8 + 3}) de daño contundente, y el objetivo queda {@condition grappled} (escapar {@dc 13}). Hasta que este {@action grapple} termina, la criatura queda {@condition restrained}, y el serpentfolk no puede constreñir a otro objetivo."
+					]
+				}
+			],
+			"environment": [
+				"coastal",
+				"desert",
+				"forest",
+				"swamp"
+			],
+			"attachedItems": [
+				"scimitar|phb"
+			],
+			"traitTags": [
+				"Hold Breath"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"B",
+				"I",
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"unconscious"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Vos'skyriss Serpentfolk Ghost",
+			"shortName": "ghost",
+			"group": [
+				"Serpentfolk"
+			],
+			"source": "TDCSR",
+			"page": 258,
+			"size": [
+				"L"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 55,
+				"formula": "10d10"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 40,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 7,
+			"dex": 16,
+			"con": 10,
+			"int": 12,
+			"wis": 10,
+			"cha": 16,
+			"skill": {
+				"perception": "+2",
+				"stealth": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"acid",
+				"fire",
+				"lightning",
+				"thunder",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"cold",
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Ethereal Sight",
+					"entries": [
+						"El fantasma puede ver 18 metros en el Plano Etéreo cuando está en el Plano Material, y viceversa."
+					]
+				},
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"El fantasma puede moverse a través de otras criaturas y objetos como si fueran ({@quickref difficult terrain||3}). Recibe 5 ({@damage 1d10}) de daño de fuerza si termina su turno dentro de un objeto."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El fantasma hace dos ataques con lanza."
+					]
+				},
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} para golpear, alcance 1,5 m. o alcance 20/18 m., un objetivo. {@h}6 ({@damage 1d6 + 3}) de daño perforante más 7 ({@damage 2d6}) de daño necrótico. Si el fantasma realiza un ataque a distancia, su lanza se rematerializa en sus manos tras resolverse el ataque."
+					]
+				},
+				{
+					"name": "Etherealness",
+					"entries": [
+						"El fantasma entra en el Plano Etéreo desde el Plano Material, o viceversa. Es visible en el Plano Material mientras está en el Etéreo Fronterizo, y viceversa, pero no puede afectar ni ser afectado por nada en el otro plano."
+					]
+				},
+				{
+					"name": "Terrifying Hiss",
+					"entries": [
+						"El fantasma emite un silbido extraño y áspero. Cada criatura no muerta en un radio de 9 metros del fantasma que pueda oírlo debe tener éxito en un {@dc 13} de Sabiduría {@quickref saving throws|PHB|2|1|tiro de salvación} o quedar {@condition frightened} durante 1 minuto. Un {@condition frightened} objetivo puede repetir el {@quickref saving throws|PHB|2|1|tiro de salvación} al final de cada uno de sus turnos, terminando la condición sobre sí mismo con un éxito. Si el {@quickref saving throws|PHB|2|1|tiro de salvación} de un objetivo tiene éxito o el efecto termina para él, el objetivo es inmune al Silbido Aterrador de este fantasma durante las siguientes 24 horas."
+					]
+				}
+			],
+			"environment": [
+				"coastal",
+				"desert",
+				"forest",
+				"swamp"
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"traitTags": [
+				"Incorporeal Movement"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"N",
+				"O",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Wraithroot Tree",
+			"source": "TDCSR",
+			"page": 259,
+			"size": [
+				"H"
+			],
+			"type": "plant",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 270,
+				"formula": "20d12 + 140"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 23,
+			"dex": 8,
+			"con": 24,
+			"int": 12,
+			"wis": 16,
+			"cha": 12,
+			"skill": {
+				"perception": "+8"
+			},
+			"passive": 18,
+			"resist": [
+				"bludgeoning",
+				"piercing"
+			],
+			"vulnerable": [
+				"fire"
+			],
+			"conditionImmune": [
+				"stunned",
+				"frightened",
+				"charmed",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Druidic",
+				"Elvish",
+				"Sylvan"
+			],
+			"cr": "14",
+			"trait": [
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Mientras el árbol Wraithroot permanece inmóvil, es indistinguible de un árbol normal."
+					]
+				},
+				{
+					"name": "Wraith Shift",
+					"entries": [
+						"En su turno, el árbol Wraithroot puede moverse a través de otras criaturas y objetos como si fueran {@quickref difficult terrain||3}. El árbol no provoca {@action opportunity attack|PHB|opportunity attacks} mientras se mueve, y debe terminar su movimiento en un espacio desocupado por cualquier objeto o criatura Grande o mayor. Cualquier criatura Mediana o más pequeña en el espacio del árbol cuando termina de moverse es empujada al espacio desocupado más cercano a elección de la criatura. Los objetos medianos o pequeños en el espacio del árbol son empujados a los espacios desocupados más cercanos a elección del árbol."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El árbol Wraithroot hace dos ataques de golpe."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 11} para golpear, alcance 3 m., un objetivo. {@h}16 ({@damage 3d6 + 6}) de daño contundente."
+					]
+				},
+				{
+					"name": "Rock",
+					"entries": [
+						"{@atk rw} {@hit 11} para golpear, alcance 60/54 m., un objetivo. {@h}28 ({@damage 4d10 + 6}) de daño contundente."
+					]
+				},
+				{
+					"name": "Wraithstorm {@recharge 5}",
+					"entries": [
+						"El árbol de la raíz espectral extrae energía vital del área que lo rodea, dejando a las criaturas temporalmente frágiles. Cada criatura que no sea un constructo o un no muerto en un radio de 9 metros del árbol debe tener éxito en un {@dc 16} de Constitución {@quickref saving throws|PHB|2|1|tiro de salvación} o su velocidad se reduce a la mitad y gana vulnerabilidad al daño contundente hasta el final del siguiente turno del árbol."
+					]
+				}
+			],
+			"environment": [
+				"forest",
+				"mountain"
+			],
+			"traitTags": [
+				"False Appearance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DU",
+				"E",
+				"S"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Young Magma Landshark",
+			"source": "TDCSR",
+			"page": 248,
+			"size": [
+				"L"
+			],
+			"type": "elemental",
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 105,
+				"formula": "10d10 + 50"
+			},
+			"speed": {
+				"walk": 40,
+				"burrow": 40,
+				"swim": {
+					"number": 40,
+					"condition": "(lava only)"
+				}
+			},
+			"str": 20,
+			"dex": 11,
+			"con": 21,
+			"int": 2,
+			"wis": 10,
+			"cha": 5,
+			"skill": {
+				"perception": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft.",
+				"tremorsense 120 ft."
+			],
+			"passive": 14,
+			"immune": [
+				"fire"
+			],
+			"cr": "9",
+			"trait": [
+				{
+					"name": "Searing Presence",
+					"entries": [
+						"Cualquier criatura que comience su turno a menos de 3 metros del tiburón terrestre recibe 11 ({@damage 2d10}) puntos de daño por fuego."
+					]
+				},
+				{
+					"name": "Standing Leap",
+					"entries": [
+						"El {@quickref jumping|PHB|4|0|salto de longitud} del tiburón terrestre es de hasta 12 metros y su {@quickref jumping|PHB|4|0|salto de altura} es de hasta 6 metros, con o sin salida en carrera."
+					]
+				},
+				{
+					"name": "Illumination",
+					"entries": [
+						"El landshark emite luz brillante en un radio de 4,5 metros y luz tenue en otros 4,5 metros."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 9} para golpear, alcance 1,5 m., un objetivo. {@h}31 ({@damage 4d12 + 5}) de daño perforante, y 14 ({@damage 4d6}) de daño de fuego."
+					]
+				},
+				{
+					"name": "Deadly Leap",
+					"entries": [
+						"Si el tiburón terrestre {@quickref jumping|PHB|4|0|salta} recorre al menos 4,5 metros como parte de su movimiento, puede utilizar esta acción para caer de pie en un espacio que contenga una o más criaturas. Cada una de esas criaturas debe tener éxito en una prueba de {@dc 16} Fuerza o Destreza {@quickref saving throws|PHB|2|1|tiro de salvación} (a elección del objetivo) o ser derribada {@condition prone} y recibir 19 ({@damage 4d6 + 5}) puntos de daño por apaleamiento más 14 ({@damage 4d6}) puntos de daño por fuego. Si la salvación tiene éxito, la criatura recibe sólo la mitad del daño, no es derribada {@condition prone} y es empujada 1,5 metros fuera del espacio del tiburón a un espacio desocupado a elección de la criatura. Si no hay ningún espacio desocupado a su alcance, la criatura cae {@condition prone} en el espacio del tiburón terrestre."
+					]
+				}
+			],
+			"environment": [
+				"mountain",
+				"underdark"
+			],
+			"traitTags": [
+				"Illumination"
+			],
+			"senseTags": [
+				"D",
+				"T"
+			],
+			"damageTags": [
+				"B",
+				"F",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

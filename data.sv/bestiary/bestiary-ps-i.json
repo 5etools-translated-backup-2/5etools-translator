@@ -1,0 +1,1671 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM",
+				"CoS"
+			]
+		}
+	},
+	"monster": [
+		{
+			"name": "Avacyn",
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Solar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Solar",
+						"with": "Avacyn",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Moonsilver Spear",
+							"entries": [
+								"En ängel från Månsilverflykten svingar ett spjut gjort av en skärva från Helvalvetet. Hitpoäng som förlorats på grund av detta vapens skada kan endast återvinnas genom en kort eller lång vila, snarare än genom regenerering, magi eller något annat sätt. En gång per tur, när ängeln träffar en varelse med en attack som använder detta vapen, kan den såra målet. I början av varje varelses tur tar den skadade varelsen {@damage 1d4} nekrotisk skada för varje gång ängeln har skadat den, och den kan sedan göra ett {@dc 15} konstitutionellt räddningsslag, som avslutar effekten av alla sådana sår på den själv om den lyckas. Alternativt kan den skadade varelsen, eller en varelse inom 1,5 meter från den, använda en handling för att göra en {@dc 15} Visdom ({@skill Medicine}) kontroll, vilket avslutar effekten av sådana sår på den om den lyckas."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Bruna",
+			"alias": [
+				"Light of Alabaster"
+			],
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Planetar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "planetar",
+						"with": "Bruna",
+						"flags": "i"
+					},
+					"_": {
+						"mode": "addSpells",
+						"will": [
+							"{@spell protection from evil and good}"
+						],
+						"daily": {
+							"1e": [
+								"{@spell dispel evil and good}"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Creepy Doll",
+			"source": "PSI",
+			"page": 25,
+			"size": [
+				"T"
+			],
+			"type": "construct",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 21,
+				"formula": "6d4 + 6"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 6,
+			"dex": 14,
+			"con": 13,
+			"int": 12,
+			"wis": 11,
+			"cha": 10,
+			"skill": {
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed"
+			],
+			"languages": [
+				"speaks and understands the languages known by its creator"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Även om den läskiga dockan förblir orörlig är den omöjlig att skilja från en vanlig, livlös docka."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Den läskiga dockan gör en attack med sin sax och använder Psychic Assault."
+					]
+				},
+				{
+					"name": "Scissors",
+					"entries": [
+						"{@atk mw} {@hit 4} att träffa, räckvidd 1,5 m., ett mål. {@h}7 ({@damage 2d4 + 2}) skärande skada."
+					]
+				},
+				{
+					"name": "Psychic Assault",
+					"entries": [
+						"Den läskiga dockan riktar in sig på en varelse som den kan se inom 3 meter från den och som har en hjärna. Målet måste lyckas med ett {@dc 12} intelligensräddningsslag eller ta 11 ({@damage 2d10}) psykisk skada. Även vid ett misslyckande, slå {@dice 3d6}. Om summan är lika med eller överstiger målets intelligenspoäng, reduceras denna poäng till 0. Målet är {@condition stunned} tills det återfår minst en poäng intelligens, som från {@spell greater restoration} besvärjelsen eller liknande magi."
+					]
+				},
+				{
+					"name": "Body Exchange",
+					"entries": [
+						"Den läskiga dockan inleder en intelligenstävling med en {@condition incapacitated} humanoid inom 1,5 meter från den. Om den vinner tävlingen tar den läskiga dockans ande över målets kropp medan målets ande placeras i den läskiga dockans kropp. Den läskiga dockan kontrollerar målets kropp helt och hållet. Den behåller sin anpassning, intelligens, visdom, karisma och immunitet mot att vara {@condition charmed} och {@condition frightened}. I övrigt använder den det besatta målets statistik, men får inte tillgång till målets kunskap, klassfunktioner eller färdigheter. Målet behåller sin anpassning, intelligens, visdom och karisma medan den bebor den läskiga dockans kropp.",
+						"Kroppsbytet varar tills dockans ande tvingas ut genom magi. (Besvärjelsen {@spell dispel evil and good} kommer att åstadkomma detta, även om dockan inte är en av de varelsetyper vars besittning den besvärjelsen normalt avslutar). Kroppen och dockan måste befinna sig inom 1,5 meter från varandra för att en sådan effekt skall fungera. Målet är immunt mot denna dockas kroppsbyte i 24 timmar efter att ha vunnit intelligenstävlingen eller efter att utbytet avslutats."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"S",
+				"Y"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"savingThrowForced": [
+				"intelligence"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Demonlord of Ashmouth",
+			"source": "PSI",
+			"page": 37,
+			"_copy": {
+				"name": "Horned Devil",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "devil",
+						"with": "demon"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"Demonen gör tre närstridsattacker: två med sin stridsyxa och en med sin svans. Den kan använda Hurl Flame i stället för en närkampsattack."
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Fork",
+							"items": {
+								"name": "Battleaxe",
+								"entries": [
+									"{@atk mw} {@hit 10} att träffa, räckvidd 3 m., ett mål. {@h}15 ({@damage 2d8 + 6}) slashingskador, eller 17 ({@damage 2d10 + 6}) slashingskador om det används med två händer."
+								]
+							}
+						}
+					]
+				}
+			},
+			"damageTags": [
+				"F",
+				"P",
+				"S"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Flight Alabaster Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"_": {
+						"mode": "addSpells",
+						"will": [
+							"{@spell protection from evil and good}"
+						],
+						"daily": {
+							"1e": [
+								"{@spell dispel evil and good}"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flight Goldnight Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Goldnight Menace",
+							"entries": [
+								"Som en handling kan en ängel från Flight Goldnight sätta skräck i sina fienders hjärtan. Varje varelse som ängeln väljer och som befinner sig inom 36 meter från den och är medveten om den måste lyckas med ett visdomsräddningsslag eller bli {@condition frightened} i 1 minut. DC för detta räddningsslag är detsamma som för ängelns egenskap medfödd trollkonst. En varelse kan upprepa räddningskastet i slutet av var och en av sina vändor och avsluta effekten på sig själv vid en framgång. Om en varelses räddningskast lyckas eller effekten upphör för den, är varelsen immun mot ängelns Goldnight Menace under de kommande 24 timmarna."
+							]
+						}
+					}
+				}
+			},
+			"cr": "11",
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flight of Moonsilver Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Moonsilver Spear",
+							"entries": [
+								"En ängel från Månsilverflykten svingar ett spjut gjort av en skärva från Helvalvetet. Hitpoäng som förlorats på grund av detta vapens skada kan endast återvinnas genom en kort eller lång vila, snarare än genom regenerering, magi eller något annat sätt. En gång per tur, när ängeln träffar en varelse med en attack som använder detta vapen, kan den såra målet. I början av varje varelses tur tar den skadade varelsen {@damage 1d4} nekrotisk skada för varje gång ängeln har skadat den, och den kan sedan göra ett {@dc 15} konstitutionellt räddningsslag, som avslutar effekten av alla sådana sår på den själv om den lyckas. Alternativt kan den skadade varelsen, eller en varelse inom 1,5 meter från den, använda en handling för att göra en {@dc 15} Visdom ({@skill Medicine}) kontroll, vilket avslutar effekten av sådana sår på den om den lyckas."
+							]
+						}
+					}
+				}
+			},
+			"damageTags": [
+				"B",
+				"N",
+				"R"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Geist",
+			"source": "PSI",
+			"page": 19,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 45,
+				"formula": "10d8"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": 40
+			},
+			"str": 7,
+			"dex": 13,
+			"con": 10,
+			"int": 10,
+			"wis": 12,
+			"cha": 17,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"acid",
+				"fire",
+				"lightning",
+				"thunder",
+				"bludgeoning"
+			],
+			"immune": [
+				"cold",
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"grappled"
+			],
+			"languages": [
+				"any languages it knew in life"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Ethereal Sight",
+					"entries": [
+						"Geisten kan se 18 meter in i det eteriska planet när den befinner sig på det materiella planet, och vice versa."
+					]
+				},
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"Geisten kan röra sig genom andra varelser och föremål som om de vore {@quickref difficult terrain||3}. Den tar 5 ({@dice 1d10}) kraftskador om den avslutar sin tur inuti ett föremål."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Withering Touch",
+					"entries": [
+						"{@atk mw} {@hit 5} att träffa, räckvidd 1,5 m., ett mål {@h}17 ({@damage 4d6 + 3}) nekrotisk skada."
+					]
+				},
+				{
+					"name": "Etherealness",
+					"entries": [
+						"Geisten går in i det eteriska planet från det materiella planet, eller vice versa. Den är synlig på det materiella planet medan den befinner sig i Border Ethereal, och vice versa, men den kan inte påverka eller påverkas av något på det andra planet."
+					]
+				},
+				{
+					"name": "Possession {@recharge}",
+					"entries": [
+						"En varelse som geisten kan se inom 1,5 meter från den måste lyckas med ett {@dc 13} karismasparkast eller bli besatt av geisten; geisten försvinner sedan, och målet är {@condition incapacitated} och förlorar kontrollen över sin kropp. Geisten kontrollerar nu kroppen men berövar inte målet medvetandet. Geisten kan inte bli måltavla för någon attack, besvärjelse eller annan effekt, förutom de som gör odöda, och den behåller sin anpassning, intelligens, visdom, karisma och immunitet mot att bli {@condition charmed} och {@condition frightened}. Den använder i övrigt det besatta målets statistik, men får inte tillgång till målets kunskap, klassegenskaper eller färdigheter. Besattheten varar tills kroppen sjunker till 0 träffpunkter, geisten avslutar den som en bonushandling, eller geisten vänds eller tvingas ut av en effekt som {@spell dispel evil and good}-besvärjelsen. När besattheten upphör dyker geisten upp igen i ett ledigt utrymme inom 1,5 meter från kroppen. Målet är immunt mot denna geists besatthet i 24 timmar efter att ha lyckats med räddningskastet eller efter att besattheten upphör. Geisten kan istället rikta in sig på liket av en varelse och använda sin egen livskraft för att animera liket som en zombie. Det animerade liket använder zombiestatistik och återgår till döden om geisten avslutar besattheten."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Geist Powers",
+					"entries": [
+						"Geister är lika varierande som de människor de var i livet. Förutom de egenskaper och handlingar som alla geister har, kan en enskild geist ha någon av följande särskilda egenskaper.",
+						{
+							"name": "Intangible Virtue",
+							"type": "entries",
+							"entries": [
+								"En levande varelse som är besatt av en vitorienterad geist får immunitet mot tillstånden {@condition charmed} och {@condition frightened}, och motståndskraft mot knytnävsslag, genomborrande och slående skada från icke-magiska attacker. Medan varelsen är besatt kan geisten låta den ta kontroll över sin kropp, men geisten kan återta kontrollen när som helst (ingen åtgärd krävs)."
+							]
+						},
+						{
+							"name": "Horrifying Visage",
+							"type": "entries",
+							"entries": [
+								"Svartalignerade geister kan göra sig själva hemska att skåda, även när de besitter levande. Varje icke odöd varelse inom 18 meter från geisten som kan se den måste lyckas med ett {@dc 13} visdomsräddningsslag eller bli {@condition frightened} i 1 minut. Om räddningsslaget misslyckas med 5 eller mer, åldras målet också med {@dice 1d4 × 10} år. Ett {@condition frightened} mål kan upprepa räddningskastet i slutet av var och en av sina vändor och avsluta {@condition frightened} villkoret för sig själv om det lyckas. Om ett måls räddningskast lyckas eller effekten upphör för det, är målet immunt mot denna geists skräckinjagande syn under de kommande 24 timmarna. Åldrandeeffekten kan upphävas med en {@spell greater restoration} besvärjelse, men bara inom 24 timmar efter att den inträffade."
+							]
+						}
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"N"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Geist: Horrifying Visage",
+					"source": "PSI",
+					"_mod": {
+						"action": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Horrifying Visage",
+								"entries": [
+									"Svartalignerade geister kan göra sig själva hemska att skåda, även när de besitter levande. Varje icke odöd varelse inom 18 meter från geisten som kan se den måste lyckas med ett {@dc 13} visdomsräddningsslag eller bli {@condition frightened} i 1 minut. Om räddningsslaget misslyckas med 5 eller mer, åldras målet också med {@dice 1d4 × 10} år. Ett {@condition frightened} mål kan upprepa räddningskastet i slutet av var och en av sina vändor och avsluta {@condition frightened} villkoret för sig själv om det lyckas. Om ett måls räddningskast lyckas eller effekten upphör för det, är målet immunt mot denna geists skräckinjagande syn under de kommande 24 timmarna. Åldrandeeffekten kan upphävas med en {@spell greater restoration} besvärjelse, men bara inom 24 timmar efter att den inträffade."
+								]
+							}
+						}
+					},
+					"variant": null,
+					"conditionInflict": [
+						"frightened",
+						"incapacitated"
+					]
+				},
+				{
+					"name": "Geist: Intangible Virtue",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Intangible Virtue",
+								"entries": [
+									"En levande varelse som är besatt av en vitorienterad geist får immunitet mot tillstånden {@condition charmed} och {@condition frightened}, och motståndskraft mot knytnävsslag, genomborrande och slående skada från icke-magiska attacker. Medan varelsen är besatt kan geisten låta den ta kontroll över sin kropp, men geisten kan återta kontrollen när som helst (ingen åtgärd krävs)."
+								]
+							}
+						}
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Gisela",
+			"alias": [
+				"Blade of Goldnight",
+				"Blade of the Church"
+			],
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Planetar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Planetar",
+						"with": "Gisela",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Goldnight Menace",
+							"entries": [
+								"Som en handling kan en ängel från Flight Goldnight sätta skräck i sina fienders hjärtan. Varje varelse som ängeln väljer och som befinner sig inom 36 meter från den och är medveten om den måste lyckas med ett visdomsräddningsslag eller bli {@condition frightened} i 1 minut. DC för detta räddningsslag är detsamma som för ängelns egenskap medfödd trollkonst. En varelse kan upprepa räddningskastet i slutet av var och en av sina vändor och avsluta effekten på sig själv vid en framgång. Om en varelses räddningskast lyckas eller effekten upphör för den, är varelsen immun mot ängelns Goldnight Menace under de kommande 24 timmarna."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Host of Herons Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Heron Protection",
+							"entries": [
+								"Närhelst en ängel från Heronernas värd eller en vänskaplig varelse inom 3 meter från den gör ett räddningsslag, får varelsen en bonus på räddningsslaget som är lika med ängelns karisma-modifierare. Ängeln måste vara vid medvetande för att få eller ge denna bonus."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Keeper of the Feather",
+			"group": null,
+			"source": "PSI",
+			"page": 40,
+			"_copy": {
+				"name": "Wereraven",
+				"source": "VRGR",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "wereraven",
+						"with": "keeper"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Beak (Raven or Hybrid Form Only)",
+							"items": {
+								"name": "Beak (Raven or Hybrid Form Only)",
+								"entries": [
+									"{@atk mw} {@hit 4} att träffa, räckvidd 1,5 m., ett mål. {@h}1 genomträngande skada i korpform, eller 4 ({@damage 1d4 + 2}) genomträngande skada i hybridform."
+								]
+							}
+						}
+					]
+				}
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Väktaren är en besvärjare på 4:e nivån. Dess besvärjelseförmåga är Visdom (besvärjelseräddning {@dc 12}, {@hit 4} att träffa med besvärjelseattacker). Den har följande druidbesvärjelser förberedda:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft}",
+								"{@spell produce flame}",
+								"{@spell shillelagh}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell entangle}",
+								"{@spell longstrider}",
+								"{@spell speak with animals}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell animal messenger}",
+								"{@spell barkskin}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"damageTagsSpell": [
+				"F",
+				"T"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Necro-Alchemist",
+			"alias": [
+				"Geistmage"
+			],
+			"source": "PSI",
+			"page": 20,
+			"_copy": {
+				"name": "Mage",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "mage",
+						"with": "Necro-Alchemist",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sigarda",
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Planetar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Planetar",
+						"with": "Sigarda",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Heron Protection",
+							"entries": [
+								"Närhelst en ängel från Heronernas värd eller en vänskaplig varelse inom 3 meter från den gör ett räddningsslag, får varelsen en bonus på räddningsslaget som är lika med ängelns karisma-modifierare. Ängeln måste vara vid medvetande för att få eller ge denna bonus."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Skaab",
+			"source": "PSI",
+			"page": 20,
+			"_copy": {
+				"name": "Flesh Golem",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "golem",
+						"with": "skaab",
+						"flags": "i"
+					}
+				}
+			},
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Skaabs",
+					"entries": [
+						"De mest grundläggande skaaberna är helt enkelt {@creature flesh golem|MM|flesh golems}, som beskrivs i Monsterhandboken. Men varje skaberen strävar efter att skapa ett verkligt unikt mästerverk, ett mål som kan få en skapare att skapa golems med någon av följande speciella egenskaper.",
+						{
+							"type": "entries",
+							"name": "Armor Plating",
+							"page": 20,
+							"entries": [
+								"Öka skaabs rustningsklass till 14 och öka dess utmaningsklass till 6 (2 300 XP)."
+							]
+						},
+						{
+							"name": "Six Arms",
+							"type": "entries",
+							"entries": [
+								"Skaabens multiattackhandling gör att den kan göra tre slamattacker. Öka dess utmaningsklass till 6 (2 300 XP)."
+							]
+						},
+						{
+							"name": "Three Heads",
+							"type": "entries",
+							"entries": [
+								"Skaab har fördel på visdomskontroller ({@skill Perception}) och på räddningsslag mot att bli {@condition blinded}, {@condition deafened}, {@condition stunned} och knockad {@condition unconscious}. (Dess utmaningsvärde ändras inte.)"
+							]
+						},
+						{
+							"name": "Skaab Goliath",
+							"type": "entries",
+							"entries": [
+								"Den här skaaben har tre huvuden, sex armar och pansarplåt. Öka dess utmaningsklass till 7 (2 900 XP)."
+							]
+						},
+						{
+							"name": "Winged Skaab",
+							"type": "entries",
+							"entries": [
+								"Skaab har en flyghastighet på 9 meter."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"_versions": [
+				{
+					"name": "Skaab: Armor Plating",
+					"source": "PSI",
+					"ac": [
+						{
+							"ac": 14,
+							"from": [
+								"armor plating"
+							]
+						}
+					],
+					"cr": "6",
+					"variant": null
+				},
+				{
+					"name": "Skaab: Goliath",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Three Heads",
+								"entries": [
+									"Skaab har fördel på visdomskontroller ({@skill Perception}) och på räddningsslag mot att bli {@condition blinded}, {@condition deafened}, {@condition stunned} och knockad {@condition unconscious}."
+								]
+							}
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"Skaab gör tre slamattacker."
+								]
+							}
+						}
+					},
+					"ac": [
+						{
+							"ac": 14,
+							"from": [
+								"armor plating"
+							]
+						}
+					],
+					"cr": "7",
+					"variant": null
+				},
+				{
+					"name": "Skaab: Six Arms",
+					"source": "PSI",
+					"_mod": {
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"Skaab gör tre slamattacker."
+								]
+							}
+						}
+					},
+					"cr": "6",
+					"variant": null
+				},
+				{
+					"name": "Skaab: Three Heads",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Three Heads",
+								"entries": [
+									"Skaab har fördel på visdomskontroller ({@skill Perception}) och på räddningsslag mot att bli {@condition blinded}, {@condition deafened}, {@condition stunned} och knockad {@condition unconscious}."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Skaab: Winged",
+					"source": "PSI",
+					"speed": {
+						"walk": 30,
+						"fly": 30
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Strefan Maurer",
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 33,
+			"_copy": {
+				"name": "Strahd von Zarovich",
+				"source": "CoS",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Strahd",
+						"with": "Strefan",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "replaceArr",
+						"replace": "Vampire Weaknesses",
+						"items": {
+							"type": "entries",
+							"name": "Vampire Vulnerabilities",
+							"source": "PSI",
+							"page": 16,
+							"entries": [
+								"Vapen av levande trä är särskilt effektiva mot vampyrer, men alla vapen kan skada eller döda dem. En vampyr kan inte korsa rinnande vatten som visar månens reflektion, och vatten välsignat av Avacyn ({@item Holy Water (flask)|PHB|holy water}) bränner vampyrkött som syra. En vampyrs spegelbild i silver (inklusive en silverspegel) ser ut som vampyren skulle ha sett ut utan det vampyriska tillståndet - varken dess sanna utseende eller dess glamour, utan en normal människa, med alla skavanker. Av den anledningen gör vampyrer allt för att undvika speglar, och närvaron av silver i någon form är oroande för dem."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Vampire Neonate",
+			"source": "PSI",
+			"page": 17,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 82,
+				"formula": "11d8 + 33"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 16,
+			"int": 11,
+			"wis": 10,
+			"cha": 12,
+			"save": {
+				"dex": "+6",
+				"wis": "+3"
+			},
+			"skill": {
+				"perception": "+3",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks not made with living wood weapons",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Common"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Regeneration",
+					"entries": [
+						"Vampyren återfår 10 träffpunkter i början av sin tur om den har minst 1 träffpunkt. Om vampyren tar strålningsskada eller skada från heligt vatten fungerar inte denna egenskap i början av vampyrens nästa tur."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Vampyren gör två attacker, varav endast en kan vara en bettattack."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 6} att träffa, räckvidd 1,5 m., en varelse. {@h}8 ({@damage 2d4 + 3}) huggen skada. Istället för att utdela skada kan vampyren gripa tag i målet (flykt {@dc 13})."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 6} för att träffa, nå 1,5 m., en villig varelse, eller en varelse som är {@condition grappled} av vampyren, {@condition incapacitated}, eller {@condition restrained}. {@h}6 ({@damage 1d6 + 3}) genomträngande skada plus 7 ({@damage 2d6}) nekrotisk skada. Målets maximala antal träffpunkter minskas med ett belopp som motsvarar den nekrotiska skadan, och vampyren återfår träffpunkter motsvarande detta belopp. Minskningen varar tills målet avslutar en lång vila. Målet dör om denna effekt reducerar dess maximala antal träffpoäng till 0."
+					]
+				},
+				{
+					"name": "Vampiric Glamer",
+					"entries": [
+						"Vampyren döljer sin form med sinnespåverkande magi som får andra att uppfatta den som en vacker människa av samma storlek och form. Illusionen upphör om vampyren utför en bonusåtgärd för att avsluta den eller om vampyren dör. En varelse som kan se vampyren kan vidta en åtgärd för att visuellt inspektera den, avsluta den mentala effekten på sig själv och se vampyrens sanna form med en lyckad {@dc 20} visdomskontroll (uppfattningsförmåga)."
+					]
+				},
+				{
+					"name": "Aura of Silence",
+					"entries": [
+						"Vampyren höljer sig i en mantel av tystnad i en radie av 0,6 meter. Inom den radien är effekten densamma som {@spell silence} besvärjelsen."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Elder Vampires",
+					"entries": [
+						"Den grundläggande vampyrstatistiken representerar en \"neonat\" - en nyfödd vampyr. Äldre vampyrer kan lära sig kraftfull magi av många olika slag och kan ha någon av följande egenskaper och förmågor.",
+						{
+							"type": "entries",
+							"name": "Shapechanger",
+							"entries": [
+								"Vampyren har egenskapen Formbytare {@creature vampire} i Monsterhandboken, samt taggen Formbytare. Vissa vampyrer kan förvandlas till fladdermöss, vissa kan anta dimform och några kan välja båda formerna."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Charm",
+							"entries": [
+								"Vampyren har charmfunktionen {@creature vampire} i Monsterhandboken."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Flight",
+							"entries": [
+								"Vampyren har en flyghastighet på 9 meter."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Gorger",
+							"entries": [
+								"Vampyren har fördel på närkampsattacker, men attacker mot den har fördel."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Spellcasting",
+							"entries": [
+								"Vampyren har samma trollkonstförmåga som en trollkarl eller präst."
+							]
+						}
+					]
+				}
+			],
+			"traitTags": [
+				"Regeneration"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"HPR",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Elder Vampire: All Abilities",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Shapechanger",
+									"entries": [
+										"If the vampire isn't in sunlight or running water, it can use its action to polymorph into a Tiny bat or a Medium cloud of mist, or back into its true form.",
+										"While in bat form, the vampire can't speak, its walking speed is 5 feet, and it has a flying speed of 30 feet. Its statistics, other than its size and speed, are unchanged. Anything it is wearing transforms with it, but nothing it is carrying does. It reverts to its true form if it dies.",
+										"While in mist form, the vampire can't take any actions, speak, or manipulate objects. It is weightless, has a flying speed of 20 feet, can hover, and can enter a hostile creature's space and stop there. In addition, if air can pass through a space, the mist can do so without squeezing, and it can't pass through water. It has advantage on Strength, Dexterity, and Constitution saving throws, and it is immune to all nonmagical damage, except the damage it takes from sunlight."
+									]
+								},
+								{
+									"name": "Gorger",
+									"entries": [
+										"The vampire has advantage on melee attack rolls, but attack rolls against it have advantage."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Charm",
+								"entries": [
+									"Vampyren riktar in sig på en människa som den kan se inom 9 meter från den. Om målet kan se vampyren måste målet lyckas med ett {@dc 17} visdomsräddningsprov mot denna magi eller bli {@condition charmed} av vampyren. Målet {@condition charmed} betraktar vampyren som en pålitlig vän som man måste lyssna på och skydda. Även om målet inte är under vampyrens kontroll, tar det vampyrens önskemål eller handlingar på det mest gynnsamma sätt det kan, och det är ett villigt mål för vampyrens bitattack.",
+									"Varje gång vampyren eller vampyrens följeslagare gör något skadligt mot målet kan den upprepa räddningsslaget och avsluta effekten på sig själv om den lyckas. Annars varar effekten i 24 timmar eller tills vampyren förgörs, befinner sig på ett annat existensplan än målet eller tar en bonushandling för att avsluta effekten."
+								]
+							}
+						}
+					},
+					"type": {
+						"type": "undead",
+						"tags": [
+							"shapechanger"
+						]
+					},
+					"speed": {
+						"walk": 30,
+						"fly": 30
+					},
+					"spellcasting": [
+						{
+							"name": "Cleric Spellcasting",
+							"headerEntries": [
+								"{@note {@creature Priest|MM} har använts som exempel för Cleric.}",
+								"Vampyren är en besvärjare på 5:e nivån. Dess besvärjelseförmåga är Visdom (besvärjelseräddning {@dc 13}, {@hit 5} att träffa med besvärjelseattacker). Vampyren har följande prästbesvärjelser förberedda:"
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell light}",
+										"{@spell sacred flame}",
+										"{@spell thaumaturgy}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell cure wounds}",
+										"{@spell guiding bolt}",
+										"{@spell sanctuary}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell lesser restoration}",
+										"{@spell spiritual weapon}"
+									]
+								},
+								"3": {
+									"slots": 2,
+									"spells": [
+										"{@spell dispel magic}",
+										"{@spell spirit guardians}"
+									]
+								}
+							},
+							"ability": "wis"
+						},
+						{
+							"name": "Wizard Spellcasting",
+							"headerEntries": [
+								"{@note {@creature Mage|MM} har använts som ett exempel Wizard.}",
+								"Vampyren är en besvärjare på 9:e nivån. Dess besvärjelseförmåga är Intelligens (besvärjelseräddning {@dc 14}, {@hit 6} att träffa med besvärjelseattacker). Vampyren har följande trollformler förberedda:"
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell fire bolt}",
+										"{@spell light}",
+										"{@spell mage hand}",
+										"{@spell prestidigitation}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell detect magic}",
+										"{@spell mage armor}",
+										"{@spell magic missile}",
+										"{@spell shield}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell misty step}",
+										"{@spell suggestion}"
+									]
+								},
+								"3": {
+									"slots": 3,
+									"spells": [
+										"{@spell counterspell}",
+										"{@spell fireball}",
+										"{@spell fly}"
+									]
+								},
+								"4": {
+									"slots": 3,
+									"spells": [
+										"{@spell greater invisibility}",
+										"{@spell ice storm}"
+									]
+								},
+								"5": {
+									"slots": 1,
+									"spells": [
+										"{@spell cone of cold}"
+									]
+								}
+							},
+							"ability": "int"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Charm",
+					"source": "PSI",
+					"_mod": {
+						"action": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Charm",
+								"entries": [
+									"Vampyren riktar in sig på en människa som den kan se inom 9 meter från den. Om målet kan se vampyren måste målet lyckas med ett {@dc 17} visdomsräddningsprov mot denna magi eller bli {@condition charmed} av vampyren. Målet {@condition charmed} betraktar vampyren som en pålitlig vän som man måste lyssna på och skydda. Även om målet inte är under vampyrens kontroll, tar det vampyrens önskemål eller handlingar på det mest gynnsamma sätt det kan, och det är ett villigt mål för vampyrens bitattack.",
+									"Varje gång vampyren eller vampyrens följeslagare gör något skadligt mot målet kan den upprepa räddningsslaget och avsluta effekten på sig själv om den lyckas. Annars varar effekten i 24 timmar eller tills vampyren förgörs, befinner sig på ett annat existensplan än målet eller tar en bonushandling för att avsluta effekten."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Flight",
+					"source": "PSI",
+					"speed": {
+						"walk": 30,
+						"fly": 30
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Gorger",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Gorger",
+								"entries": [
+									"Vampyren har fördel på närkampsattacker, men attacker mot den har fördel."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Shapechanger",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Shapechanger",
+								"entries": [
+									"Om vampyren inte befinner sig i solljus eller rinnande vatten, kan den använda sin handling för att polymorfa till en liten fladdermus eller ett medelstort moln av dimma, eller tillbaka till sin sanna form.",
+									"I fladdermusform kan vampyren inte tala, dess gånghastighet är 1,5 meter och dess flyghastighet är 9 meter. Dess statistik, förutom storlek och hastighet, är oförändrad. Allt den bär på sig förvandlas med den, men inget den bär på sig gör det. Den återgår till sin sanna form om den dör.",
+									"I dimform kan vampyren inte utföra några handlingar, tala eller manipulera föremål. Den är viktlös, har en flyghastighet på 6 meter, kan sväva och kan gå in i en fientlig varelses utrymme och stanna där. Dessutom, om luft kan passera genom ett utrymme, kan dimman göra det utan att klämma, och den kan inte passera genom vatten. Den har fördel vid räddningsslag för styrka, fingerfärdighet och konstitution, och den är immun mot all icke-magisk skada, förutom den skada den tar från solljus."
+								]
+							}
+						}
+					},
+					"type": {
+						"type": "undead",
+						"tags": [
+							"shapechanger"
+						]
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Spellcasting—Cleric",
+					"source": "PSI",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"{@note {@creature Priest|MM} har använts som exempel för Cleric.}",
+								"Vampyren är en besvärjare på 5:e nivån. Dess besvärjelseförmåga är Visdom (besvärjelseräddning {@dc 13}, {@hit 5} att träffa med besvärjelseattacker). Vampyren har följande prästbesvärjelser förberedda:"
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell light}",
+										"{@spell sacred flame}",
+										"{@spell thaumaturgy}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell cure wounds}",
+										"{@spell guiding bolt}",
+										"{@spell sanctuary}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell lesser restoration}",
+										"{@spell spiritual weapon}"
+									]
+								},
+								"3": {
+									"slots": 2,
+									"spells": [
+										"{@spell dispel magic}",
+										"{@spell spirit guardians}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Spellcasting—Wizard",
+					"source": "PSI",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"{@note {@creature Mage|MM} har använts som ett exempel Wizard.}",
+								"Vampyren är en besvärjare på 9:e nivån. Dess besvärjelseförmåga är Intelligens (besvärjelseräddning {@dc 14}, {@hit 6} att träffa med besvärjelseattacker). Vampyren har följande trollformler förberedda:"
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell fire bolt}",
+										"{@spell light}",
+										"{@spell mage hand}",
+										"{@spell prestidigitation}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell detect magic}",
+										"{@spell mage armor}",
+										"{@spell magic missile}",
+										"{@spell shield}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell misty step}",
+										"{@spell suggestion}"
+									]
+								},
+								"3": {
+									"slots": 3,
+									"spells": [
+										"{@spell counterspell}",
+										"{@spell fireball}",
+										"{@spell fly}"
+									]
+								},
+								"4": {
+									"slots": 3,
+									"spells": [
+										"{@spell greater invisibility}",
+										"{@spell ice storm}"
+									]
+								},
+								"5": {
+									"slots": 1,
+									"spells": [
+										"{@spell cone of cold}"
+									]
+								}
+							},
+							"ability": "int"
+						}
+					],
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Werewolf (Krallenhorde)",
+			"source": "PSI",
+			"page": 15,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human",
+					"shapechanger"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"condition": "in humanoid form"
+				},
+				{
+					"ac": 12,
+					"from": [
+						"natural armor"
+					],
+					"condition": "in canid form"
+				}
+			],
+			"hp": {
+				"average": 58,
+				"formula": "9d8 + 18"
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "(40 ft. in canid form)"
+				}
+			},
+			"str": 15,
+			"dex": 13,
+			"con": 14,
+			"int": 10,
+			"wis": 11,
+			"cha": 10,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+3"
+			},
+			"passive": 14,
+			"immune": [
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks not made with silvered weapons",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Common (can't speak in canid form)"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Shapechanger",
+					"entries": [
+						"Varulven förvandlas till en varg-humanoid canidform eller tillbaka till sin sanna mänskliga form. Denna förändring dikteras av månen, men kan också framkallas av trauma eller starka känslor. Dess statistik, förutom dess AC, är densamma i båda formerna. Eventuell utrustning som den bär eller har med sig förvandlas inte. Den återgår till sin sanna form om den dör."
+					]
+				},
+				{
+					"name": "Keen Hearing and Smell",
+					"entries": [
+						"Varulven har fördel på visdomskontroller ({@skill Perception}) som förlitar sig på hörsel eller lukt."
+					]
+				},
+				{
+					"name": "Howlpack: Vildin",
+					"entries": [
+						"Vildin Rampage (endast i canidform). När varulven reducerar en varelse till 0 träffpoäng med en närstridsattack på sin tur kan den ta en bonusaktion för att röra sig upp till halva sin hastighet och göra en bettattack."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack (Canid Form Only)",
+					"entries": [
+						"Varulven gör två attacker: en med bettet och en med klorna eller spjutet."
+					]
+				},
+				{
+					"name": "Bite (Canid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 4} att träffa, räckvidd 1,5 m., ett mål. {@h}6 ({@damage 1d8 + 2}) genomträngande skada."
+					]
+				},
+				{
+					"name": "Claws (Canid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 4} att träffa, räckvidd 1,5 m., ett mål. {@h}7 ({@damage 2d4 + 2}) skärande skada."
+					]
+				},
+				{
+					"name": "Spear (Human Form Only)",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} att träffa, räckvidd 1,5 m. eller räckvidd 20/18 m., ett mål. {@h}5 ({@damage 1d6 + 2}) genomborrande skada, eller 6 ({@damage 1d8 + 2}) genomborrande skada om den används med två händer för att göra en närstridsattack."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Howlpack Traits",
+					"entries": [
+						"Den grundläggande varulvsstatistiken representerar en medlem av Krallenhorde, Innistrads största varulvsgrupp. Varulvar i andra flockar kan ha ytterligare förmågor som till exempel följande.",
+						{
+							"name": "Vildin Rampage (Canid Form Only)",
+							"type": "entries",
+							"entries": [
+								"När varulven reducerar en varelse till 0 träffpunkter med en närstridsattack på sin tur, kan den ta en bonusaktion för att röra sig upp till halva sin hastighet och göra en bettattack."
+							]
+						},
+						{
+							"name": "Mondronen Wounded Fury",
+							"type": "entries",
+							"entries": [
+								"När varulven har 10 träffpunkter eller färre har den fördel vid attackkast. Dessutom utdelar den 7 ({@damage 2d6}) extra skada på alla mål som den träffar med en närstridsattack."
+							]
+						},
+						{
+							"name": "Leeraug Blood Frenzy",
+							"type": "entries",
+							"entries": [
+								"Varulven har fördel vid närstridsanfall mot varelser som inte har alla sina träffpunkter."
+							]
+						}
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Shapechanger"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Werewolf (Leeraug)",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Leeraug Blood Frenzy",
+								"entries": [
+									"Varulven har fördel vid närstridsanfall mot varelser som inte har alla sina träffpunkter."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Werewolf (Mondronen)",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Mondronen Wounded Fury",
+								"entries": [
+									"När varulven har 10 träffpunkter eller färre har den fördel vid attackkast. Dessutom utdelar den 7 ({@damage 2d6}) extra skada på alla mål som den träffar med en närstridsattack."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Werewolf (Vildin)",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Vildin Rampage (Canid Form Only)",
+								"entries": [
+									"När varulven reducerar en varelse till 0 träffpunkter med en närstridsattack på sin tur, kan den ta en bonusaktion för att röra sig upp till halva sin hastighet och göra en bettattack."
+								]
+							}
+						}
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Zombie Cat",
+			"source": "PSI",
+			"page": 17,
+			"_copy": {
+				"name": "Cat",
+				"source": "MM"
+			},
+			"type": "undead",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Om skadan reducerar katten till 0 träffpunkter måste den göra ett räddningskast med en DC på 5 + skadan, såvida inte skadan är strålande eller från en kritisk träff. Vid ett lyckat resultat sjunker katten till 1 träffpunkt i stället."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Zombie Rat",
+			"source": "PSI",
+			"page": 17,
+			"_copy": {
+				"name": "Rat",
+				"source": "MM"
+			},
+			"type": "undead",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Om skadan reducerar råttan till 0 träffpunkter måste den göra ett räddningskast med en DC på 5 + skadan, såvida inte skadan är strålande eller från en kritisk träff. Vid ett lyckat resultat sjunker råttan till 1 träffpunkt i stället."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Zombie Snake",
+			"source": "PSI",
+			"page": 17,
+			"_copy": {
+				"name": "Poisonous Snake",
+				"source": "MM"
+			},
+			"type": "undead",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Om skadan reducerar ormen till 0 träffpunkter måste den göra ett räddningskast med en DC på 5 + skadan, såvida inte skadan är strålande eller från en kritisk träff. Vid ett lyckat resultat sjunker ormen till 1 träffpunkt istället."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

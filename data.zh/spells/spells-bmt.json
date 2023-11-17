@@ -1,0 +1,160 @@
+{
+	"spell": [
+		{
+			"name": "Antagonize",
+			"source": "BMT",
+			"page": 50,
+			"level": 3,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "无赖牌"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"你用魔语低声训斥范围内你选择的一名生物。目标必须进行一次智慧蓄力。如果蓄力失败，目标会受到 {@damage 4d4} 精神伤害，并且必须立即使用反应对你选择的另一个你能看到的生物发动近战攻击。如果目标无法发动这次攻击（例如，因为它的攻击范围内没有人，或者因为它的反应无法使用），那么在你的下一回合开始前，目标在下一次攻击翻滚时会处于劣势。如果成功获救，目标只会受到一半的伤害。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"使用 4 级或更高的法术槽施放此法术时，法术槽等级每超过 3 级，伤害就会增加 {@dice 1d4}。"
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Spirit of Death",
+			"source": "BMT",
+			"page": 50,
+			"level": 4,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "一张至少价值 400 金便士的镀金扑克牌，上面有一个死亡化身的图案",
+					"cost": 40000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"你召唤出一个体现死亡的灵魂。该灵魂会在你能看到的范围内的空地上显形，并使用 {@creature reaper spirit|BMT} 状态块。当它的命中率降为 0 或咒语结束时，它就会消失。",
+				"灵魂是你和同伴的盟友。在战斗中，亡灵会分享你的主动权，并紧接着你的回合。它服从你的口头命令（不需要你做任何动作）。如果您没有向精灵发出任何命令，它就会采取 {@action Dodge} 行动，并利用移动躲避危险。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"当你使用 5 级或更高的法术槽施放此法术时，在收割者之魂状态块中法术等级出现的地方使用更高的等级。"
+					]
+				}
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Spray of Cards",
+			"source": "BMT",
+			"page": 50,
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 15
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "纸牌"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"你喷射出一个 4.5 米锥形的幽灵卡片。该区域内的每个生物都必须进行一次灵巧蓄力。如果蓄力失败，生物会受到 {@damage 2d10} 力的伤害，并在下一回合结束前受到 {@condition blinded} 的伤害。如果蓄力成功，生物只会受到一半的伤害。"
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"使用 3 级或更高的法术槽施放此法术时，法术槽等级每超过 2 级，伤害就会增加 {@dice 1d10}。"
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrow": [
+				"dexterity"
+			]
+		}
+	]
+}

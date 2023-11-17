@@ -1,0 +1,443 @@
+{
+	"spell": [
+		{
+			"name": "Ashardalon's Stride",
+			"source": "FTD",
+			"page": 19,
+			"level": 3,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"De golvende vlammen van een draak schieten uit je voeten en geven je explosieve snelheid. Voor de duur dat je beweegt, neemt je snelheid met 6 meter toe en lok je geen gelegenheidsaanvallen uit.",
+				"Als je je binnen 1,5 meter van een wezen of voorwerp beweegt dat niet gedragen wordt, krijgt het {@damage 1d6} vuurschade van je spoor van hitte. Een wezen of voorwerp kan deze schade maar één keer oplopen tijdens een beurt."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wanneer je deze spreuk uitspreekt met een spell slot van 4e niveau of hoger, verhoog je je snelheid met 1,5 meter voor elk spell slot niveau boven 3e. De spreuk geeft een extra {@scaledamage 1d6|3-9|1d6} vuurschade voor elk slot level boven het 3e."
+					]
+				}
+			],
+			"damageInflict": [
+				"fire"
+			],
+			"miscTags": [
+				"OBJ"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Draconic Transformation",
+			"source": "FTD",
+			"page": 19,
+			"level": 7,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "een beeldje van een draak, minstens 500 gp waard",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Met een brul gebruik je de magie van draken om jezelf te transformeren en draconische trekken aan te nemen. Je krijgt de volgende voordelen totdat de spreuk eindigt:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Blindsight",
+							"entries": [
+								"Je hebt {@sense blindsight} met een bereik van 9 meter. Binnen dat bereik kun je effectief alles zien dat zich niet achter totale dekking bevindt, zelfs als je {@condition blinded} of in het donker bent. Bovendien kun je een {@condition invisible} wezen zien, tenzij het wezen zich met succes voor je verbergt."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Breath Weapon",
+							"entries": [
+								"Wanneer je deze spreuk uitspreekt, en als bonusactie op volgende beurten voor de duur van de spreuk, kun je glinsterende energie uitademen in een kegel van 18 meter. Elk wezen in dat gebied moet een vaardigheidsreddende worp doen en krijgt {@damage 6d8} krachtschade als hij niet slaagt, of half zoveel schade als hij wel slaagt."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Wings",
+							"entries": [
+								"Onstoffelijke vleugels ontspringen uit je rug en geven je een vliegsnelheid van 18 meter."
+							]
+						}
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"SGT",
+				"UBA"
+			]
+		},
+		{
+			"name": "Fizban's Platinum Shield",
+			"source": "FTD",
+			"page": 20,
+			"level": 6,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "een platina drakenschub, minstens 500 gp waard",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Je creëert een veld van zilverachtig licht dat een wezen naar keuze binnen bereik omringt (je kunt jezelf kiezen). Het veld werpt een zwak licht uit tot 1,5 meter. Terwijl het wezen omringd wordt door het veld, krijgt het de volgende voordelen:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Cover",
+							"entries": [
+								"Het schepsel heeft halve dekking."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Damage Resistance",
+							"entries": [
+								"Het wezen heeft weerstand tegen zuur, koude, vuur, bliksem en gifschade."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Evasion",
+							"entries": [
+								"Als het wezen wordt onderworpen aan een effect dat het toestaat om een Dexterity saving throw te doen om slechts de helft van de schade op te nemen, neemt het wezen in plaats daarvan geen schade op als het slaagt op de saving throw, en slechts de helft van de schade als het niet slaagt."
+							]
+						}
+					]
+				},
+				"Als bonusactie tijdens volgende beurten kun je het veld verplaatsen naar een ander wezen binnen 18 meter van het veld."
+			],
+			"miscTags": [
+				"UBA"
+			]
+		},
+		{
+			"name": "Nathair's Mischief",
+			"source": "FTD",
+			"page": 20,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "een stuk korst van een appeltaart"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Je vult een kubus van 6 meter binnen je gezichtsveld met fey en draconische magie. Rol op de Mischievous Surge tabel om het magische effect te bepalen en rol opnieuw aan het begin van elke beurt totdat de spreuk eindigt. Je kunt de kubus maximaal 3 meter verplaatsen voordat je rolt.",
+				{
+					"type": "table",
+					"caption": "Mischievous Surge",
+					"colLabels": [
+						"d4",
+						"Effect"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1",
+							"De geur van appeltaart vult de lucht, en elk wezen in de kubus moet slagen op een Wisdom saving throw of {@condition charmed} door jou worden tot het begin van je volgende beurt."
+						],
+						[
+							"2",
+							"Rondom verschijnen boeketten bloemen, en elk wezen in de kubus moet slagen op een Dexterity saving throw of {@condition blinded} tot het begin van je volgende beurt als de bloemen water in hun gezichten spuiten."
+						],
+						[
+							"3",
+							"Elk wezen in de kubus moet slagen op een Wisdom saving throw of beginnen te giechelen tot het begin van je volgende beurt. Een giechelend wezen is {@condition incapacitated} en gebruikt al zijn beweging om in een willekeurige richting te bewegen."
+						],
+						[
+							"4",
+							"Druppels melasse zweven in de kubus, waardoor het {@quickref difficult terrain||3} tot het begin van je volgende beurt."
+						]
+					]
+				}
+			],
+			"savingThrow": [
+				"dexterity",
+				"wisdom"
+			],
+			"miscTags": [
+				"RO",
+				"SGT"
+			]
+		},
+		{
+			"name": "Raulothim's Psychic Lance",
+			"source": "FTD",
+			"page": 21,
+			"level": 4,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Je ontketent een glinsterende lans van psychische kracht vanaf je voorhoofd op een wezen dat je binnen bereik kunt zien. Als alternatief kun je ook de naam van een wezen uitspreken. Als het genoemde doelwit binnen bereik is, wordt het het doelwit van de spreuk, zelfs als je het niet kunt zien. Als het genoemde doelwit niet binnen bereik is, verdwijnt de lans zonder effect.",
+				"Het doelwit moet een intelligentieworp doen. Als je niet slaagt, loopt het {@damage 7d6} psychische schade op en is het {@condition incapacitated} tot het begin van je volgende beurt. Bij een succesvolle save, neemt het schepsel de helft van de schade en is niet {@condition incapacitated}."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Als je deze spreuk uitspreekt met een slot van 5e niveau of hoger, neemt de schade toe met {@scaledamage 7d6|4-9|1d6} voor elk slotniveau boven 4e."
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrow": [
+				"intelligence"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Rime's Binding Ice",
+			"source": "FTD",
+			"page": 21,
+			"level": 2,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "een flesje smeltwater"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Een uitbarsting van koude energie straalt van je uit in een kegel van 9 meter. Elk wezen in dat gebied moet een reddingsslag uitvoeren. Als de reddingsslag mislukt, loopt het wezen {@damage 3d8} koude schade op en wordt het gehinderd door ijsformaties gedurende 1 minuut, of totdat het wezen of een ander wezen binnen zijn bereik een actie uitvoert om het ijs te breken. Als een wezen wordt gehinderd door ijs, wordt zijn snelheid verminderd tot 0. Als de reddingsactie slaagt, loopt het wezen half zoveel schade op en wordt het niet gehinderd door ijs."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Wanneer je deze spreuk uitspreekt met een spreukgleuf van het 3e niveau of hoger, verhoog je de koude schade met {@scaledamage 3d8|2-9|1d8} voor elke sleufleuf boven het 2e niveau."
+					]
+				}
+			],
+			"damageInflict": [
+				"cold"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"areaTags": [
+				"N"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Summon Draconic Spirit",
+			"source": "FTD",
+			"page": 21,
+			"level": 5,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "een voorwerp met de afbeelding van een draak erin gegraveerd, minstens 500 gp waard",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Je roept een {@creature draconic spirit|FTD} op. Het manifesteert zich in een onbezette ruimte die je binnen bereik kunt zien. Deze stoffelijke vorm gebruikt de Draconische Geest stat block. Als je deze spreuk uitspreekt, kies dan een drakenfamilie: chromatisch, edelsteen of metaal. Het wezen lijkt op een draak van de gekozen familie, wat bepaalde eigenschappen in zijn stat block bepaalt. Het wezen verdwijnt wanneer het tot 0 hit points zakt of wanneer de spreuk eindigt.",
+				"Het wezen is een bondgenoot van jou en je metgezellen. In een gevecht deelt het wezen jouw initiatief, maar het komt direct na jou aan de beurt. Het gehoorzaamt je verbale commando's (geen actie van jou vereist). Als je geen bevelen geeft, neemt het de {@action Dodge} actie en gebruikt zijn beweging om gevaar te vermijden."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Als je deze spreuk uitspreekt met een spreukgleuf van 6e niveau of hoger, gebruik je het hogere niveau overal waar het niveau van de spreuk in het statblok staat."
+					]
+				}
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		}
+	]
+}

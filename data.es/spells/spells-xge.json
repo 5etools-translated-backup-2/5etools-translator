@@ -1,0 +1,5732 @@
+{
+	"spell": [
+		{
+			"name": "Abi-Dalzim's Horrid Wilting",
+			"source": "XGE",
+			"page": 150,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 15
+				}
+			],
+			"level": 8,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 150
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "un poco de esponja"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Extraes la humedad de todas las criaturas en un cubo de 9 metros centrado en un punto que elijas dentro del alcance. Cada criatura de esa zona debe realizar una tirada de salvación de Constitución. Los constructos y los muertos vivientes no se ven afectados, y las plantas y los elementales de agua realizan esta tirada de salvación con desventaja. Una criatura recibe {@damage 12d8} de daño necrótico si falla la tirada de salvación, o la mitad de daño si tiene éxito.",
+				"Las plantas no mágicas de la zona que no sean criaturas, como árboles y arbustos, se marchitan y mueren al instante."
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"areaTags": [
+				"C"
+			]
+		},
+		{
+			"name": "Absorb Elements",
+			"source": "XGE",
+			"page": 150,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 15
+				}
+			],
+			"level": 1,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "which you take when you take acid, cold, fire, lightning, or thunder damage"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"El hechizo captura parte de la energía entrante, disminuyendo su efecto sobre ti y almacenándola para tu siguiente ataque cuerpo a cuerpo. Tienes resistencia al tipo de daño desencadenante hasta el inicio de tu siguiente turno. Además, la primera vez que golpeas con un ataque cuerpo a cuerpo en tu siguiente turno, el objetivo recibe un {@damage 1d6} de daño adicional del tipo desencadenante, y el hechizo termina."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 2º nivel o superior, el daño extra aumenta un {@scaledamage 1d6|1-9|1d6} por cada nivel de ranura superior al 1º."
+					]
+				}
+			],
+			"damageResist": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"thunder"
+			]
+		},
+		{
+			"name": "Aganazzar's Scorcher",
+			"source": "XGE",
+			"page": 150,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 15
+				}
+			],
+			"level": 2,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "la escama de un dragón rojo"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Una línea de llamas rugientes de 9 metros de largo y 1,5 metros de ancho emana de ti en la dirección que elijas. Cada criatura en la línea debe hacer una tirada de salvación de Destreza. Una criatura recibe {@damage 3d8} de daño de fuego si falla la tirada de salvación, o la mitad de daño si tiene éxito."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 3er nivel o superior, el daño aumenta un {@scaledamage 3d8|2-9|1d8} por cada nivel de ranura superior al 2º."
+					]
+				}
+			],
+			"damageInflict": [
+				"fire"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"areaTags": [
+				"L"
+			]
+		},
+		{
+			"name": "Beast Bond",
+			"source": "XGE",
+			"page": 150,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 15
+				}
+			],
+			"level": 1,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "un trozo de piel envuelto en un paño"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Estableces un vínculo telepático con una bestia que toques y que sea amiga tuya o {@condition charmed} tuya. El hechizo falla si la puntuación de Inteligencia de la bestia es 4 o superior. Hasta que el hechizo termine, el vínculo está activo mientras tú y la bestia estéis en la línea de visión el uno del otro. A través del vínculo, la bestia puede entender tus mensajes telepáticos, y puede comunicarte telepáticamente emociones y conceptos simples. Mientras el vínculo esté activo, la bestia obtiene ventaja en las tiradas de ataque contra cualquier criatura que esté a 1,5 metros de ti y que tú puedas ver."
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"affectsCreatureType": [
+				"beast"
+			],
+			"miscTags": [
+				"ADV",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Bones of the Earth",
+			"source": "XGE",
+			"page": 150,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 15
+				}
+			],
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Haces estallar hasta seis pilares de piedra desde lugares del suelo que puedas ver dentro de tu alcance. Cada pilar es un cilindro de 1,5 metros de diámetro y hasta 9 metros de altura. El suelo donde aparece un pilar debe ser lo suficientemente ancho para su diámetro, y puedes apuntar al suelo bajo una criatura si ésta es Mediana o más pequeña. Cada pilar tiene CA 5 y 30 puntos de vida. Cuando se reduce a 0 puntos de vida, un pilar se desmorona y se convierte en escombros, lo que crea un área de {@quickref difficult terrain||3} con un radio de 3 metros que dura hasta que se retiran los escombros. Cada porción de 1,5 metros de diámetro del área requiere al menos 1 minuto para limpiarla a mano.",
+				"Si se crea un pilar bajo una criatura, ésta debe tener éxito en una tirada de salvación de Destreza o ser levantada por el pilar. Una criatura puede elegir fallar la salvación.",
+				"Si un pilar no puede alcanzar su altura máxima debido a un techo u otro obstáculo, la criatura que se encuentre sobre el pilar recibe {@damage 6d6} de daño contundente y queda {@condition restrained} atrapada entre el pilar y el obstáculo. La criatura {@condition restrained} puede usar una acción para hacer un chequeo de Fuerza o Destreza (a elección de la criatura) contra la DC de salvación del hechizo. Si tiene éxito, la criatura deja de ser {@condition restrained} y debe moverse del pilar o caer."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 7º nivel o superior, puedes crear dos pilares adicionales por cada nivel de ranura superior al 6º."
+					]
+				}
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"abilityCheck": [
+				"strength",
+				"dexterity"
+			],
+			"miscTags": [
+				"DFT",
+				"SGT"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Catapult",
+			"source": "XGE",
+			"page": 150,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 15
+				}
+			],
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Elige un objeto de entre 1 y 2,5 kilogramos de peso que esté a tu alcance y que no lleves encima. El objeto vuela en línea recta hasta 27 metros en la dirección que elijas antes de caer al suelo, deteniéndose antes si impacta contra una superficie sólida. Si el objeto golpea a una criatura, ésta debe realizar una tirada de salvación de Destreza. Si falla, el objeto golpea al objetivo y deja de moverse. Cuando el objeto golpea algo, tanto el objeto como lo que golpea reciben {@damage 3d8} de daño contundente."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 2º nivel o superior, el peso máximo de los objetos a los que puedes dirigir este hechizo aumenta en 2,5 kilogramos, y el daño aumenta en {@scaledamage 3d8|1-9|1d8}, por cada nivel de ranura superior al 1º."
+					]
+				}
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"OBJ"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Catnap",
+			"source": "XGE",
+			"page": 151,
+			"level": 3,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "una pizca de arena"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					}
+				}
+			],
+			"entries": [
+				"Haces un gesto tranquilizador, y hasta tres criaturas voluntarias de tu elección que puedas ver dentro del alcance caen {@condition unconscious} durante la duración del hechizo. El hechizo termina en un objetivo antes de tiempo si recibe daño o alguien utiliza una acción para sacudirlo o abofetearlo para despertarlo. Si un objetivo permanece {@condition unconscious} durante toda la duración, ese objetivo obtiene el beneficio de un breve descanso, y no puede ser afectado por este hechizo de nuevo hasta que termine un descanso largo."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo usando una ranura de hechizo de 4º nivel o superior, puedes hacer objetivo a una criatura dispuesta adicional por cada nivel de ranura superior al 3º."
+					]
+				}
+			],
+			"conditionInflict": [
+				"unconscious"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Cause Fear",
+			"source": "XGE",
+			"page": 151,
+			"level": 1,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Despiertas el sentido de la mortalidad en una criatura que puedas ver dentro de tu alcance. Un constructo o un no muerto son inmunes a este efecto. El objetivo debe tener éxito en una tirada de salvación de Sabiduría o convertirse en {@condition frightened} de ti hasta que el hechizo termine. El {@condition frightened} objetivo puede repetir la tirada de salvación al final de cada uno de sus turnos, terminando el efecto sobre sí mismo si tiene éxito."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 2º nivel o superior, puedes hacer objetivo a una criatura adicional por cada nivel de ranura superior al 1º. Las criaturas deben estar a menos de 9 metros de distancia entre sí."
+					]
+				}
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"affectsCreatureType": [
+				"aberration",
+				"beast",
+				"celestial",
+				"dragon",
+				"elemental",
+				"fey",
+				"fiend",
+				"giant",
+				"humanoid",
+				"monstrosity",
+				"ooze",
+				"plant"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Ceremony",
+			"source": "XGE",
+			"page": 151,
+			"level": 1,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "25 gp de plata en polvo, que el hechizo consume",
+					"cost": 2500,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"Celebras una ceremonia religiosa especial impregnada de magia. Cuando lances el hechizo, elige uno de los siguientes ritos, cuyo objetivo debe estar a menos de 3 metros de ti durante todo el lanzamiento.",
+				{
+					"type": "entries",
+					"name": "Atonement",
+					"entries": [
+						"Tocas a una criatura dispuesta cuyo alineamiento ha cambiado y realizas un chequeo de Sabiduría ({@skill Insight}) DC 20. Si tienes éxito, devuelves al objetivo su alineamiento original."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Bless Water",
+					"entries": [
+						"Tocas un {@item vial|phb} de agua y haces que se convierta en {@item Holy Water (flask)|phb|holy water}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Coming of Age",
+					"entries": [
+						"Tocas a un humanoide que es un adulto joven. Durante las siguientes 24 horas, siempre que el objetivo realice un chequeo de habilidad, puede tirar un {@dice d4} y sumar el número obtenido al chequeo de habilidad. Una criatura sólo puede beneficiarse de este rito una vez."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Dedication",
+					"entries": [
+						"Tocas a un humanoide que desea dedicarse al servicio de tu dios. Durante las siguientes 24 horas, cada vez que el objetivo haga una tirada de salvación, puede sacar un {@dice d4} y sumar el número obtenido a la salvación. Una criatura sólo puede beneficiarse de este rito una vez."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Funeral Rite",
+					"entries": [
+						"Tocas un cadáver y, durante los 7 días siguientes, el objetivo no puede convertirse en no muerto por ningún medio que no sea un hechizo {@spell wish}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Wedding",
+					"entries": [
+						"Tocas a humanoides adultos dispuestos a unirse en matrimonio. Durante los siguientes 7 días, cada objetivo obtiene un bonificador +2 a la CA mientras se encuentren a menos de 9 metros el uno del otro. Una criatura puede volver a beneficiarse de este rito sólo si enviuda."
+					]
+				}
+			],
+			"affectsCreatureType": [
+				"humanoid"
+			],
+			"miscTags": [
+				"MAC"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Chaos Bolt",
+			"source": "XGE",
+			"page": 151,
+			"otherSources": [
+				{
+					"source": "GGR"
+				}
+			],
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Lanzas una masa ondulante de energía caótica a una criatura a tu alcance. Realiza un ataque de conjuro a distancia contra el objetivo. Si aciertas, el objetivo recibe {@damage 2d8 + 1d6} de daño. Elige uno de los {@dice d8}s. El número obtenido en ese dado determina el tipo de daño del ataque, como se muestra a continuación.",
+				{
+					"type": "table",
+					"caption": "Chaos Bolt",
+					"colLabels": [
+						"{@dice d8}",
+						"Damage Type"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 1
+								}
+							},
+							"Ácido"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 2
+								}
+							},
+							"Frío"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 3
+								}
+							},
+							"Fuego"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 4
+								}
+							},
+							"Fuerza"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 5
+								}
+							},
+							"Relámpago"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 6
+								}
+							},
+							"Veneno"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 7
+								}
+							},
+							"Psíquico"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 8
+								}
+							},
+							"Trueno"
+						]
+					]
+				},
+				"Si sacas el mismo número en ambas {@dice d8}s, la energía caótica salta del objetivo a otra criatura de tu elección en un radio de 9 metros. Haz una nueva tirada de ataque contra el nuevo objetivo, y haz una nueva tirada de daño, lo que podría provocar que la energía caótica salte de nuevo.",
+				"Una criatura sólo puede ser objetivo de cada lanzamiento de este hechizo una vez."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 2º nivel o superior, cada objetivo recibe {@scaledamage 2d8 + 1d6|1-9|1d6} de daño extra del tipo obtenido por cada nivel de ranura superior al 1º."
+					]
+				}
+			],
+			"damageInflict": [
+				"acid",
+				"cold",
+				"fire",
+				"force",
+				"lightning",
+				"poison",
+				"psychic",
+				"thunder"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"miscTags": [
+				"RO"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Charm Monster",
+			"source": "XGE",
+			"page": 151,
+			"level": 4,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Intentas encantar a una criatura que puedas ver dentro de tu alcance. Debe realizar una tirada de salvación de Sabiduría, y lo hace con ventaja si tú o tus compañeros estáis luchando contra ella. Si falla la tirada de salvación, queda {@condition charmed} a tu merced hasta que finalice el hechizo o hasta que tú o tus compañeros le hagáis algún daño. La criatura {@condition charmed} es amistosa contigo. Cuando el hechizo termina, la criatura sabe que fue {@condition charmed} tuya."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 5º nivel o superior, puedes hacer objetivo a una criatura adicional por cada nivel de ranura superior al 4º. Las criaturas deben estar a menos de 9 metros de distancia entre sí."
+					]
+				}
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Control Flames",
+			"source": "XGE",
+			"page": 152,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 16
+				}
+			],
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				},
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Eliges una llama no mágica que puedas ver dentro del alcance y que quepa en un cubo de 1,5 metros. La afectas de una de las siguientes maneras:",
+				{
+					"type": "list",
+					"items": [
+						"La llama se expande instantáneamente 1,5 metros en una dirección, siempre que haya leña u otro combustible en la nueva ubicación.",
+						"Extingues instantáneamente las llamas dentro del cubo.",
+						"Duplicas o reduces a la mitad el área de luz brillante y de luz tenue emitida por la llama, cambias su color o ambos. El cambio dura 1 hora.",
+						"Haces que aparezcan formas simples -como la forma vaga de una criatura, un objeto inanimado o un lugar- dentro de las llamas y que se animen como quieras. Las formas duran 1 hora."
+					]
+				},
+				"Si lanzas este hechizo varias veces, puedes tener hasta tres efectos no instantáneos creados por él activos a la vez, y puedes descartar tal efecto como una acción."
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"C"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Control Winds",
+			"source": "XGE",
+			"page": 152,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 16
+				}
+			],
+			"level": 5,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 300
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Tomas el control del aire en un cubo de 3 metros que puedes ver a tu alcance. Elige uno de los siguientes efectos cuando lances el hechizo. El efecto dura lo que dura el hechizo, a menos que uses tu acción en un turno posterior para cambiar a un efecto diferente. También puedes usar tu acción para detener temporalmente el efecto o para reiniciar uno que hayas detenido.",
+				{
+					"type": "entries",
+					"name": "Gusts",
+					"entries": [
+						"En el interior del cubo se levanta un viento que sopla continuamente en la dirección horizontal que designes. Tú eliges la intensidad del viento: tranquilo, moderado o fuerte. Si el viento es moderado o fuerte, los ataques con armas a distancia que lo atraviesen o que se realicen contra objetivos dentro del cubo tienen desventaja en sus tiradas de ataque. Si el viento es fuerte, cualquier criatura que se mueva contra el viento debe gastar 1 pie extra de movimiento por cada pie movido."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Downdraft",
+					"entries": [
+						"Provocas una ráfaga sostenida de viento fuerte que sopla hacia abajo desde la parte superior del cubo. Los ataques con armas a distancia que atraviesen el cubo o que se realicen contra objetivos que se encuentren en su interior tienen desventaja en sus tiradas de ataque. Una criatura debe realizar una tirada de salvación de Fuerza si vuela dentro del cubo por primera vez en un turno o comienza su turno allí volando. Si falla la tirada de salvación, la criatura es derribada {@condition prone}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Updraft",
+					"entries": [
+						"Provocas una corriente ascendente sostenida dentro del cubo, que se eleva desde la parte inferior del cubo. Las criaturas que terminan una caída dentro del cubo sólo sufren la mitad del daño de la caída. Cuando una criatura del cubo realiza un salto vertical, puede saltar hasta 3 metros más alto de lo normal."
+					]
+				}
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrow": [
+				"strength"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"C"
+			]
+		},
+		{
+			"name": "Create Bonfire",
+			"source": "XGE",
+			"page": 152,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 16
+				}
+			],
+			"level": 0,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Creas una hoguera en el suelo que puedas ver dentro del alcance. Hasta que el hechizo termine, la hoguera mágica llena un cubo de 1,5 metros. Cualquier criatura en el espacio de la hoguera cuando lanzas el conjuro debe tener éxito en una tirada de salvación de Destreza o recibir {@damage 1d8} de daño por fuego. Una criatura también debe hacer la tirada de salvación cuando se mueve al espacio de la hoguera por primera vez en un turno o termina su turno allí.",
+				"La hoguera enciende los objetos inflamables que se encuentran en su área y que no están siendo llevados o transportados.",
+				"El daño del hechizo aumenta un {@dice 1d8} cuando alcanzas el 5º nivel ({@damage 2d8}), el 11º nivel ({@damage 3d8}) y el 17º nivel ({@damage 4d8})."
+			],
+			"scalingLevelDice": {
+				"label": "fire damage",
+				"scaling": {
+					"1": "1d8",
+					"5": "2d8",
+					"11": "3d8",
+					"17": "4d8"
+				}
+			},
+			"damageInflict": [
+				"fire"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"OBJ",
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"C"
+			]
+		},
+		{
+			"name": "Create Homunculus",
+			"source": "XGE",
+			"page": 152,
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "arcilla, ceniza y raíz de mandrágora, que el hechizo consume, y una daga con joyas incrustadas por valor de al menos 1.000 gp.",
+					"cost": 100000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Mientras pronuncias un intrincado conjuro, te cortas con una daga incrustada de joyas, recibiendo {@damage 2d4} de daño perforante que no puede reducirse de ninguna forma. A continuación, derramas tu sangre sobre los demás componentes del hechizo y los tocas, transformándolos en un constructo especial llamado {@creature homunculus}.",
+				"Las estadísticas del {@creature homunculus} están en el Manual de Monstruos. Es tu fiel compañero, y muere si tú mueres. Siempre que termines un descanso largo, puedes gastar hasta la mitad de tus Dados de Golpe si el homúnculo está en el mismo plano de existencia que tú. Cuando lo hagas, tira cada dado y súmale tu modificador de Constitución. Tu máximo de puntos de golpe se reduce en el total, y el máximo de puntos de golpe del homúnculo y sus puntos de golpe actuales se incrementan en él. Este proceso no puede reducirte a menos de 1 punto de golpe, y el cambio en tus puntos de golpe y en los del homúnculo finaliza cuando terminas tu siguiente descanso largo. La reducción de tus puntos de golpe máximos no puede ser eliminada por ningún medio antes de ese momento, excepto por la muerte del homúnculo.",
+				"Sólo puedes tener un homúnculo a la vez. Si lanzas este hechizo mientras tu homúnculo vive, el hechizo falla."
+			],
+			"miscTags": [
+				"PRM"
+			]
+		},
+		{
+			"name": "Crown of Stars",
+			"source": "XGE",
+			"page": 152,
+			"level": 7,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Aparecen siete motas de luz en forma de estrella que orbitan alrededor de tu cabeza hasta que termina el hechizo. Puedes utilizar una acción adicional para enviar una de las motas hacia una criatura u objeto en un radio de 36 metros. Cuando lo hagas, realiza un ataque de hechizo a distancia. Si aciertas, el objetivo recibe {@damage 4d12} de daño radiante. Tanto si aciertas como si fallas, la mota se gasta. El hechizo termina antes si gastas la última mota.",
+				"Si te quedan cuatro o más motas, emiten luz brillante en un radio de 9 metros y luz tenue en 9 metros adicionales. Si te quedan de una a tres motas, emiten luz tenue en un radio de 9 metros."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 8º nivel o superior, el número de motas creadas aumenta en dos por cada nivel de ranura superior al 7º."
+					]
+				}
+			],
+			"damageInflict": [
+				"radiant"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"miscTags": [
+				"LGT",
+				"OBJ",
+				"UBA"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Danse Macabre",
+			"source": "XGE",
+			"page": 153,
+			"level": 5,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Hilos de poder oscuro saltan de tus dedos para atravesar hasta cinco cadáveres pequeños o medianos que veas dentro del alcance. Cada cadáver se levanta inmediatamente y se convierte en no muerto. Tú decides si es un {@creature zombie} o un {@creature skeleton} (las estadísticas para {@creature zombie||zombies} y {@creature skeleton||skeletons} están en el Manual de Monstruos), y gana un bonificador a sus tiradas de ataque y daño igual a tu modificador de habilidad de lanzamiento de conjuros.",
+				"Puedes utilizar una acción de bonificación para ordenar mentalmente a las criaturas que crees con este hechizo, emitiendo la misma orden a todas ellas. Para recibir la orden, una criatura debe estar a menos de 18 metros de ti. Tú decides qué acción realizarán las criaturas y a dónde se moverán durante su siguiente turno, o puedes dar una orden general, como proteger una cámara o pasadizo de tus enemigos. Si no das ninguna orden, las criaturas no hacen nada, excepto defenderse de las criaturas hostiles. Una vez dada una orden, las criaturas siguen cumpliéndola hasta completar su tarea.",
+				"Las criaturas están bajo tu control hasta que el hechizo termine, tras lo cual vuelven a ser inanimadas."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo usando una ranura de hechizo de 6º nivel o superior, animas hasta dos cadáveres adicionales por cada nivel de ranura superior al 5º."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN",
+				"UBA"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dawn",
+			"source": "XGE",
+			"page": 153,
+			"level": 5,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un colgante de sol que valga al menos 100 gp",
+					"cost": 10000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"La luz del amanecer ilumina un lugar que especifiques dentro del alcance. Hasta que el hechizo termine, un cilindro de luz brillante de 9 metros de radio y 12 metros de altura brilla allí. Esta luz es la luz del sol.",
+				"Cuando aparece el cilindro, cada criatura que se encuentre en su interior debe realizar una tirada de salvación de Constitución, recibiendo {@damage 4d10} de daño radiante si falla la tirada de salvación, o la mitad de daño si tiene éxito. Una criatura también debe realizar esta tirada de salvación cada vez que termine su turno en el cilindro.",
+				"Si estás a menos de 18 metros del cilindro, puedes moverlo hasta 18 metros como acción adicional en tu turno."
+			],
+			"damageInflict": [
+				"radiant"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"LGTS",
+				"UBA"
+			],
+			"areaTags": [
+				"Y"
+			]
+		},
+		{
+			"name": "Dragon's Breath",
+			"source": "XGE",
+			"page": 154,
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "un pimiento picante"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Tocas a una criatura dispuesta y la imbuyes con el poder de escupir energía mágica por la boca, siempre que tenga una. Elige ácido, frío, fuego, rayo o veneno. Hasta que el hechizo termine, la criatura puede usar una acción para exhalar energía del tipo elegido en un cono de 4,5 metros. Cada criatura en esa área debe hacer una tirada de salvación de Destreza, recibiendo {@damage 3d6} de daño del tipo elegido en una salvación fallida, o la mitad de daño en una exitosa."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 3er nivel o superior, el daño aumenta un {@scaledamage 3d6|2-9|1d6} por cada nivel de ranura superior al 2º."
+					]
+				}
+			],
+			"damageInflict": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"poison"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"areaTags": [
+				"ST",
+				"N"
+			]
+		},
+		{
+			"name": "Druid Grove",
+			"source": "XGE",
+			"page": 154,
+			"level": 6,
+			"school": "A",
+			"time": [
+				{
+					"number": 10,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "muérdago, que el hechizo consume, que fue cosechado con una hoz de oro bajo la luz de la luna llena",
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"entries": [
+				"Invocas a los espíritus de la naturaleza para proteger una zona al aire libre o bajo tierra. El área puede ser tan pequeña como un cubo de 9 metros o tan grande como un cubo de 27 metros. Los edificios y otras estructuras quedan excluidos del área afectada. Si lanzas este hechizo en la misma zona todos los días durante un año, el hechizo dura hasta que se disipa.",
+				"El hechizo crea los siguientes efectos dentro del área. Cuando lanzas este hechizo, puedes especificar criaturas como amigos que son inmunes a los efectos. También puedes especificar una contraseña que, al ser pronunciada en voz alta, hace que el hablante sea inmune a estos efectos.",
+				"Toda la zona protegida irradia magia. Un lanzamiento {@spell dispel magic} sobre el área, si tiene éxito, elimina sólo uno de los siguientes efectos, no toda el área. El lanzador de ese hechizo elige qué efecto eliminar. Este hechizo sólo se disipa cuando desaparecen todos sus efectos.",
+				{
+					"type": "entries",
+					"name": "Solid Fog",
+					"entries": [
+						"Puedes llenar cualquier número de cuadrados de 1,5 metros en el suelo con niebla espesa, haciéndolos muy oscurecidos. La niebla alcanza los 3 metros de altura. Además, cada pie de movimiento a través de la niebla cuesta 2 pies adicionales. Para una criatura inmune a este efecto, la niebla no oscurece nada y parece una niebla suave, con motas de luz verde flotando en el aire."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Grasping Undergrowth",
+					"entries": [
+						"Puedes llenar cualquier número de cuadrados de 1,5 metros en el suelo que no estén llenos de niebla con maleza y enredaderas agarradoras, como si estuvieran afectados por un hechizo {@spell entangle}. Para una criatura inmune a este efecto, los hierbajos y enredaderas se sienten blandos y se remodelan para servir de asientos o camas temporales."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Grove Guardians",
+					"entries": [
+						"Puedes animar hasta cuatro árboles de la zona, haciendo que se arranquen del suelo. Estos árboles tienen las mismas estadísticas que un {@creature awakened tree}, que aparece en el Manual de Monstruos, excepto que no pueden hablar y su corteza está cubierta de símbolos druídicos. Si alguna criatura no inmune a este efecto entra en la zona protegida, los guardianes del bosque luchan hasta que ahuyentan o matan a los intrusos. Los guardianes de la arboleda también obedecen las órdenes verbales (no requieren ninguna acción por tu parte) que les des mientras estén en la zona. Si no les das órdenes y no hay intrusos, los guardianes del bosque no hacen nada. Los guardianes del bosquecillo no pueden abandonar la zona protegida. Cuando el hechizo termina, la magia que los anima desaparece y los árboles vuelven a echar raíces, si es posible."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Additional Spell Effect",
+					"entries": [
+						"Puedes colocar uno de los siguientes efectos mágicos dentro del área protegida:"
+					]
+				},
+				{
+					"type": "list",
+					"items": [
+						"Una constante {@spell gust of wind} en dos lugares de su elección",
+						"{@spell Spike growth} en un lugar de su elección",
+						"{@spell Wind wall} en dos lugares de su elección"
+					]
+				},
+				"Para una criatura inmune a este efecto, los vientos son una brisa fragante y suave, y el área de {@spell spike growth} es inofensiva."
+			],
+			"miscTags": [
+				"OBS",
+				"PRM",
+				"SMN"
+			],
+			"areaTags": [
+				"C",
+				"Q"
+			]
+		},
+		{
+			"name": "Dust Devil",
+			"source": "XGE",
+			"page": 154,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 17
+				}
+			],
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "una pizca de polvo"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Elige un cubo de aire desocupado de 1,5 metros que puedas ver dentro del alcance. Una fuerza elemental parecida a un demonio de polvo aparece en el cubo y dura lo que dura el hechizo.",
+				"Cualquier criatura que termine su turno a menos de 1,5 metros del demonio de polvo debe realizar una tirada de salvación de Fuerza. Si falla, la criatura recibe {@damage 1d8} de daño contundente y se aleja 3 metros del demonio de polvo. Si la salvación tiene éxito, la criatura recibe la mitad de daño y no es empujada.",
+				"Como acción adicional, puedes mover el demonio de polvo hasta 9 metros en cualquier dirección. Si el demonio del polvo se mueve sobre arena, polvo, tierra suelta o gravilla ligera, aspira el material y forma una nube de escombros de 3 metros de radio a su alrededor que dura hasta el inicio de tu siguiente turno. La nube oscurece mucho su área."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 3er nivel o superior, el daño aumenta un {@scaledamage 1d8|2-9|1d8} por cada nivel de ranura superior al 2º."
+					]
+				}
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"savingThrow": [
+				"strength"
+			],
+			"miscTags": [
+				"FMV",
+				"SGT",
+				"UBA"
+			]
+		},
+		{
+			"name": "Earth Tremor",
+			"source": "XGE",
+			"page": 155,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 17
+				}
+			],
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Causas un temblor en el suelo dentro de tu alcance. Cada criatura que no seas tú en esa zona debe realizar una tirada de salvación de Destreza. Si falla la tirada de salvación, la criatura recibe {@damage 1d6} de daño contundente y es derribada {@condition prone}. Si el suelo de esa zona es tierra suelta o piedra, se convierte en {@quickref difficult terrain||3} hasta que se despeja, y cada porción de 1,5 metros de diámetro requiere al menos 1 minuto para despejarse a mano."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 2º nivel o superior, el daño aumenta un {@scaledamage 1d6|1-9|1d6} por cada nivel de ranura superior al 1º."
+					]
+				}
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"DFT"
+			],
+			"areaTags": [
+				"R"
+			]
+		},
+		{
+			"name": "Earthbind",
+			"source": "XGE",
+			"page": 154,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 17
+				}
+			],
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 300
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Elige una criatura que puedas ver dentro del alcance. Tiras amarillas de energía mágica rodean a la criatura. El objetivo debe tener éxito en una tirada de salvación de Fuerza, o su velocidad de vuelo (si la tiene) se reduce a un metro mientras dure el hechizo. Una criatura en el aire afectada por este hechizo desciende con seguridad a 18 metros por asalto hasta que llega al suelo o el hechizo termina."
+			],
+			"savingThrow": [
+				"strength"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Elemental Bane",
+			"source": "XGE",
+			"page": 155,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 17
+				}
+			],
+			"level": 4,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Elige una criatura que puedas ver dentro del alcance y elige uno de los siguientes tipos de daño: ácido, frío, fuego, relámpago o trueno. El objetivo debe tener éxito en una tirada de salvación de Constitución o se verá afectado por el hechizo durante toda su duración. La primera vez en cada turno que el objetivo afectado reciba daño del tipo elegido, el objetivo recibe un {@damage 2d6} de daño adicional de ese tipo. Además, el objetivo pierde cualquier resistencia a ese tipo de daño hasta que finalice el hechizo."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 5º nivel o superior, puedes hacer objetivo a una criatura adicional por cada nivel de ranura superior al 4º. Las criaturas deben estar a menos de 9 metros de distancia entre sí."
+					]
+				}
+			],
+			"damageInflict": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"thunder"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Enemies Abound",
+			"source": "XGE",
+			"page": 155,
+			"level": 3,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Entras en la mente de una criatura que puedas ver y la obligas a hacer una tirada de salvación de Inteligencia. La criatura tiene éxito automáticamente si es inmune a ser {@condition frightened}. Si falla la tirada de salvación, el objetivo pierde la capacidad de distinguir entre amigos y enemigos, considerando a todas las criaturas que pueda ver como enemigos hasta que el hechizo termine. Cada vez que el objetivo reciba daño, puede repetir la tirada de salvación, terminando el efecto sobre sí mismo en caso de éxito.",
+				"Siempre que la criatura afectada elija a otra criatura como objetivo, debe elegir el objetivo al azar entre las criaturas que pueda ver dentro del alcance del ataque, hechizo u otra habilidad que esté utilizando. Si un enemigo provoca un ataque de oportunidad de la criatura afectada, ésta debe realizar ese ataque si puede hacerlo."
+			],
+			"savingThrow": [
+				"intelligence"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Enervation",
+			"source": "XGE",
+			"page": 155,
+			"level": 5,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Un zarcillo de oscuridad tenebrosa sale de ti y toca a una criatura que puedas ver a tu alcance para drenarle la vida. El objetivo debe realizar una tirada de salvación de Destreza. Si tiene éxito, el objetivo recibe {@damage 2d8} de daño necrótico y el hechizo termina. Con una salvación fallida, el objetivo recibe {@damage 4d8} de daño necrótico y, hasta que el hechizo termine, puedes usar tu acción en cada uno de tus turnos para infligir automáticamente {@damage 4d8} de daño necrótico al objetivo. El hechizo termina si utilizas tu acción para hacer cualquier otra cosa, si el objetivo se encuentra fuera del alcance del hechizo o si el objetivo está totalmente a cubierto de ti.",
+				"Cada vez que el hechizo inflige daño a un objetivo, recuperas puntos de golpe iguales a la mitad de la cantidad de daño necrótico que recibe el objetivo."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 6º nivel o superior, el daño aumenta un {@scaledamage 4d8;2d8|5-9|1d8} por cada nivel de ranura superior al 5º."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"HL",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Erupting Earth",
+			"source": "XGE",
+			"page": 155,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 17
+				}
+			],
+			"level": 3,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "un trozo de obsidiana"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Elige un punto que puedas ver en el suelo dentro del alcance. Una fuente de tierra y piedra removida estalla en un cubo de 6 metros centrado en ese punto. Cada criatura en esa área debe hacer una tirada de salvación de Destreza. Una criatura recibe {@damage 3d12} de daño contundente si falla la tirada de salvación, o la mitad de daño si tiene éxito. Además, el suelo de esa zona se vuelve {@quickref difficult terrain||3} hasta que se despeja. Cada porción de 1,5 metros cuadrados del área requiere al menos 1 minuto para limpiarla a mano."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 4º nivel o superior, el daño aumenta un {@scaledamage 3d12|3-9|1d12} por cada nivel de ranura superior al 3º."
+					]
+				}
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"DFT",
+				"SGT"
+			],
+			"areaTags": [
+				"C"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Far Step",
+			"source": "XGE",
+			"page": 155,
+			"level": 5,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Te teletransportas hasta 18 metros a un espacio desocupado que puedas ver. En cada uno de tus turnos antes de que termine el hechizo, puedes usar una acción adicional para volver a teletransportarte de este modo."
+			],
+			"miscTags": [
+				"SGT",
+				"TP",
+				"UBA"
+			]
+		},
+		{
+			"name": "Find Greater Steed",
+			"source": "XGE",
+			"page": 156,
+			"additionalSources": [
+				{
+					"source": "FTD",
+					"page": 190
+				}
+			],
+			"level": 4,
+			"school": "C",
+			"time": [
+				{
+					"number": 10,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Invocas a un espíritu que adopta la forma de una montura leal y majestuosa. Aparece en un espacio desocupado dentro del alcance, el espíritu adopta la forma que elijas: un {@creature griffon}, un {@creature pegasus}, un {@creature peryton}, un {@creature dire wolf}, un {@creature rhinoceros} o un {@creature saber-toothed tiger}. La criatura tiene las estadísticas proporcionadas en el Manual de Monstruos para la forma elegida, aunque es un celestial, un fey o un fiend (a tu elección) en lugar de su tipo de criatura normal. Además, si tiene una puntuación de Inteligencia de 5 o menos, su Inteligencia se convierte en 6, y gana la habilidad de entender un idioma de tu elección que tú hables.",
+				"Controlas la montura en combate. Mientras la montura esté a menos de 1,5 km de ti, puedes comunicarte con ella telepáticamente. Mientras estés montado en ella, puedes hacer que cualquier hechizo que lances que sólo te apunte a ti también apunte a la montura.",
+				"La montura desaparece temporalmente cuando baja a 0 puntos de vida o cuando la descartas como acción. Si vuelves a lanzar este hechizo, la montura recupera todos sus puntos de vida y se eliminan las condiciones.",
+				"No puedes tener más de una montura unida por este hechizo o {@spell find steed} al mismo tiempo. Como acción, puedes liberar a una montura de su vínculo, haciendo que desaparezca permanentemente.",
+				"Cada vez que la montura desaparece, deja atrás los objetos que llevaba puestos o que transportaba.",
+				{
+					"type": "inset",
+					"source": "FTD",
+					"page": 190,
+					"name": "Dragonnel Steeds",
+					"entries": [
+						"Con el permiso del DM, un paladín puede invocar un espíritu en forma de {@creature dragonnel|ftd} usando el hechizo encontrar corcel mayor, que aparece en {@i Guía de Xanathar para todo}."
+					]
+				}
+			],
+			"miscTags": [
+				"PRM",
+				"SMN"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flame Arrows",
+			"source": "XGE",
+			"page": 156,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 18
+				}
+			],
+			"level": 3,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Tocas un carcaj que contiene flechas o virotes. Cuando un objetivo es alcanzado por un ataque con un arma a distancia que utiliza munición extraída del carcaj, el objetivo recibe un {@damage 1d6} de daño de fuego adicional. La magia del hechizo termina en una munición cuando impacta o falla, y el hechizo termina cuando se han extraído doce municiones del carcaj."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 4º nivel o superior, el número de piezas de munición que puedes afectar con este hechizo aumenta en dos por cada nivel de ranura superior al 3º."
+					]
+				}
+			],
+			"damageInflict": [
+				"fire"
+			],
+			"miscTags": [
+				"AAD"
+			]
+		},
+		{
+			"name": "Frostbite",
+			"source": "XGE",
+			"page": 156,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 18
+				}
+			],
+			"level": 0,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Haces que se forme escarcha adormecedora en una criatura que puedas ver dentro de tu alcance. El objetivo debe realizar una tirada de salvación de Constitución. Si falla la tirada de salvación, el objetivo sufre {@damage 1d6} de daño por frío y tiene desventaja en la siguiente tirada de ataque con arma que haga antes del final de su siguiente turno.",
+				"El daño del hechizo aumenta un {@dice 1d6} cuando alcanzas el 5º nivel ({@damage 2d6}), el 11º nivel ({@damage 3d6}) y el 17º nivel ({@damage 4d6})."
+			],
+			"scalingLevelDice": {
+				"label": "cold damage",
+				"scaling": {
+					"1": "1d6",
+					"5": "2d6",
+					"11": "3d6",
+					"17": "4d6"
+				}
+			},
+			"damageInflict": [
+				"cold"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Guardian of Nature",
+			"source": "XGE",
+			"page": 157,
+			"level": 4,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Un espíritu de la naturaleza responde a tu llamada y te transforma en un poderoso guardián. La transformación dura hasta que el hechizo termina. Eliges una de las siguientes formas para asumir: Bestia Primigenia o Gran Árbol.",
+				{
+					"type": "entries",
+					"name": "Primal Beast",
+					"entries": [
+						"Un pelaje bestial cubre tu cuerpo, tus rasgos faciales se vuelven feroces y obtienes los siguientes beneficios:"
+					]
+				},
+				{
+					"type": "list",
+					"items": [
+						"Tu velocidad de marcha aumenta en 3 metros.",
+						"Ganas {@sense darkvision} con un alcance de 36 metros.",
+						"Haces tiradas de ataque basadas en la fuerza con ventaja.",
+						"Tus ataques con armas cuerpo a cuerpo infligen un {@damage 1d6} de daño de fuerza adicional al impactar."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Great Tree",
+					"entries": [
+						"Su piel aparece con barniz, le brotan hojas del pelo y obtiene los siguientes beneficios:"
+					]
+				},
+				{
+					"type": "list",
+					"items": [
+						"Ganas 10 puntos de golpe temporales.",
+						"Haces tiradas de salvación de Constitución con ventaja.",
+						"Haces tiradas de ataque basadas en la Destreza y la Sabiduría con ventaja.",
+						"Mientras estás en el suelo, el suelo en un radio de 4,5 metros es {@quickref difficult terrain||3} para tus enemigos."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"miscTags": [
+				"AAD",
+				"ADV",
+				"DFT",
+				"THP"
+			]
+		},
+		{
+			"name": "Gust",
+			"source": "XGE",
+			"page": 157,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 19
+				},
+				{
+					"source": "UAWGE",
+					"page": 107
+				},
+				{
+					"source": "ERLW",
+					"page": 50
+				},
+				{
+					"source": "TCE",
+					"page": 50
+				}
+			],
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Te apoderas del aire y lo obligas a crear uno de los siguientes efectos en un punto que puedas ver dentro del alcance:",
+				{
+					"type": "list",
+					"items": [
+						"Una criatura mediana o más pequeña que elijas debe tener éxito en una tirada de salvación de Fuerza o ser empujada hasta 1,5 metros lejos de ti.",
+						"Se crea una pequeña ráfaga de aire capaz de mover un objeto que no se sostiene ni se transporta y que no pesa más de 2,5 kilogramos. El objeto es empujado hasta 3 metros de distancia de ti. No es empujado con fuerza suficiente para causar daños.",
+						"Creas un efecto sensorial inofensivo utilizando el aire, como hacer que las hojas crujan, que el viento cierre las persianas o que tu ropa se ondule con la brisa."
+					]
+				}
+			],
+			"savingThrow": [
+				"strength"
+			],
+			"miscTags": [
+				"FMV",
+				"OBJ",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Healing Spirit",
+			"source": "XGE",
+			"page": 157,
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Llamas a un espíritu de la naturaleza para aliviar a los heridos. El espíritu intangible aparece en un espacio que es un cubo de 1,5 metros que puedes ver dentro del alcance. El espíritu parece una bestia transparente o un fey (a tu elección).",
+				"Hasta que el hechizo termine, siempre que tú o una criatura que puedas ver se mueva al espacio del espíritu por primera vez en un turno o comience su turno allí, puedes hacer que el espíritu restaure {@dice 1d6} puntos de golpe a esa criatura (no requiere acción). El espíritu no puede curar constructos o muertos vivientes. El espíritu puede curar un número de veces igual a 1 + tu modificador de habilidad de lanzamiento de conjuros (mínimo dos veces). Tras curar ese número de veces, el espíritu desaparece.",
+				"Como acción adicional en tu turno, puedes mover el espíritu hasta 9 metros a un espacio que puedas ver."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 3er nivel o superior, la curación aumenta un {@scaledice 1d6|2-9|1d6} por cada nivel de ranura superior al 2º."
+					]
+				}
+			],
+			"affectsCreatureType": [
+				"aberration",
+				"beast",
+				"celestial",
+				"dragon",
+				"elemental",
+				"fey",
+				"fiend",
+				"giant",
+				"humanoid",
+				"monstrosity",
+				"ooze",
+				"plant"
+			],
+			"miscTags": [
+				"HL",
+				"SGT",
+				"UBA"
+			],
+			"areaTags": [
+				"C"
+			]
+		},
+		{
+			"name": "Holy Weapon",
+			"source": "XGE",
+			"page": 157,
+			"level": 5,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Imbuyes un arma que tocas con poder sagrado. Hasta que el hechizo termine, el arma emite luz brillante en un radio de 9 metros y luz tenue en 9 metros adicionales. Además, los ataques de arma realizados con ella infligen un {@damage 2d8} de daño radiante adicional al impactar. Si el arma no es ya un arma mágica, se convierte en una mientras dure el hechizo.",
+				"Como acción adicional en tu turno, puedes descartar este hechizo y hacer que el arma emita una ráfaga de resplandor. Cada criatura a tu elección que puedas ver en un radio de 9 metros del arma debe realizar una tirada de salvación de Constitución. En una salvación fallida, la criatura recibe {@damage 4d8} de daño radiante, y queda {@condition blinded} durante 1 minuto. Con una salvación exitosa, la criatura recibe la mitad de daño y no está {@condition blinded}. Al final de cada uno de sus turnos, una criatura {@condition blinded} puede hacer una tirada de salvación de Constitución, terminando el efecto sobre sí misma si tiene éxito."
+			],
+			"damageInflict": [
+				"radiant"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"AAD",
+				"LGT",
+				"SGT",
+				"UBA"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Ice Knife",
+			"source": "XGE",
+			"page": 157,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 19
+				}
+			],
+			"level": 1,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "una gota de agua o un trozo de hielo"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Creas un fragmento de hielo y lo lanzas contra una criatura a tu alcance. Realiza un ataque de hechizo a distancia contra el objetivo. Si aciertas, el objetivo recibe {@damage 1d10} de daño perforante. Tanto si aciertas como si fallas, el fragmento explota. El objetivo y cada criatura en un radio de 1,5 metros deben superar una tirada de salvación de Destreza o recibirán {@damage 2d6} de daño por frío."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 2º nivel o superior, el daño de frío aumenta un {@scaledamage 2d6|1-9|1d6} por cada nivel de ranura superior al 1º."
+					]
+				}
+			],
+			"damageInflict": [
+				"cold",
+				"piercing"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Illusory Dragon",
+			"source": "XGE",
+			"page": 157,
+			"level": 8,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Recogiendo hilos de material de sombra del Suelo Sombrío, creas un enorme dragón sombrío en un espacio desocupado que puedas ver a tu alcance. La ilusión dura lo que dura el hechizo y ocupa su espacio, como si fuera una criatura.",
+				"Cuando aparece la ilusión, cualquiera de tus enemigos que pueda verla debe tener éxito en una tirada de salvación de Sabiduría o convertirse en {@condition frightened} de ella durante 1 minuto. Si una criatura {@condition frightened} termina su turno en un lugar donde no tiene línea de visión con la ilusión, puede repetir la tirada de salvación, terminando el efecto sobre sí misma si tiene éxito.",
+				"Como acción adicional en tu turno, puedes mover la ilusión hasta 18 metros. En cualquier momento de su movimiento, puedes hacer que exhale una ráfaga de energía en un cono de 18 metros que se origina en su espacio. Cuando crees el dragón, elige un tipo de daño: ácido, frío, fuego, rayo, necrótico o veneno. Cada criatura en el cono debe hacer una tirada de salvación de Inteligencia, recibiendo {@damage 7d6} de daño del tipo de daño elegido en una salvación fallida, o la mitad de daño en una exitosa.",
+				"La ilusión es tangible debido al material de sombra utilizado para crearla, pero los ataques la fallan automáticamente, tiene éxito en todas las tiradas de salvación y es inmune a todos los daños y condiciones. Una criatura que use una acción para examinar al dragón puede determinar que es una ilusión teniendo éxito en un chequeo de Inteligencia ({@skill Investigation}) contra su DC de salvación de conjuro. Si una criatura discierne la ilusión por lo que es, la criatura puede ver a través de ella y tiene ventaja en las tiradas de salvación contra su aliento."
+			],
+			"damageInflict": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"necrotic",
+				"poison"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrow": [
+				"wisdom",
+				"intelligence"
+			],
+			"abilityCheck": [
+				"intelligence"
+			],
+			"miscTags": [
+				"SGT",
+				"UBA"
+			],
+			"areaTags": [
+				"N"
+			]
+		},
+		{
+			"name": "Immolation",
+			"source": "XGE",
+			"page": 158,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 19
+				}
+			],
+			"level": 5,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Las llamas envuelven a una criatura que puedas ver dentro del alcance. El objetivo debe realizar una tirada de salvación de Destreza. Recibe {@damage 8d6} de daño de fuego si falla la tirada de salvación, o la mitad de daño si tiene éxito. Si falla la tirada de salvación, el objetivo también arde durante la duración del hechizo. El objetivo en llamas emite luz brillante en un radio de 9 metros y luz tenue en 9 metros adicionales. Al final de cada turno, el objetivo repite la tirada de salvación. Si falla la tirada de salvación, sufre un {@damage 4d6} de daño por fuego, y el hechizo finaliza si tiene éxito. Estas llamas mágicas no pueden extinguirse por medios no mágicos.",
+				"Si el daño de este hechizo mata a un objetivo, éste se convierte en cenizas."
+			],
+			"damageInflict": [
+				"fire"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"LGT",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Infernal Calling",
+			"source": "XGE",
+			"page": 158,
+			"level": 5,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un rubí que valga al menos 999 gp",
+					"cost": 99900
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Pronuncias un conjuro oscuro e invocas a un demonio de los Nueve Infiernos. Eliges el tipo del demonio, que debe ser uno de {@filter nivel de desafío 6 o inferior|bestiary|challenge rating=[&0;&6]|tag=devil|miscellaneous=!swarm}, como un {@creature barbed devil} o un {@creature bearded devil}. El demonio aparece en un espacio desocupado que puedas ver dentro de su alcance. El demonio desaparece cuando baja a 0 puntos de golpe o cuando termina el hechizo.",
+				"El diablo es poco amistoso con usted y sus compañeros. Tira la iniciativa por el diablo, que tiene sus propios turnos. Está bajo el control del Dungeon Master y actúa de acuerdo con su naturaleza en cada uno de sus turnos, lo que puede resultar en que te ataque si cree que puede imponerse, o que intente tentarte para que realices un acto malvado a cambio de un servicio limitado. El DM tiene las estadísticas de la criatura.",
+				"En cada uno de tus turnos, puedes intentar dar una orden verbal al demonio (no se requiere ninguna acción por tu parte). Obedece la orden si el resultado probable está de acuerdo con sus deseos, especialmente si el resultado te atraería hacia el mal. De lo contrario, debes hacer un chequeo de Carisma ({@skill Deception}, {@skill Intimidation}, o {@skill Persuasion}) impugnado por su chequeo de Sabiduría ({@skill Insight}). Haces el chequeo con ventaja si dices el verdadero nombre del demonio. Si fallas el chequeo, el demonio se vuelve inmune a tus órdenes verbales mientras dure el conjuro, aunque aún puede ejecutar tus órdenes si lo desea. Si el chequeo tiene éxito, el demonio ejecuta tus órdenes -como \"ataca a mis enemigos\", \"explora la habitación de delante\" o \"lleva este mensaje a la reina\"- hasta que completa la actividad, momento en el que vuelve a ti para informarte de que lo ha hecho.",
+				"Si tu {@status concentration} termina antes de que el hechizo alcance su duración completa, el demonio no desaparece si se ha vuelto inmune a tus órdenes verbales. En su lugar, actúa de la forma que desee durante {@dice 3d6} minutos y, a continuación, desaparece.",
+				"Si posees un talismán de demonio individual, puedes invocar a ese demonio si tiene el índice de desafío apropiado más 1, y obedece todas tus órdenes, sin necesidad de realizar chequeos de Carisma."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 6º nivel o superior, el índice de desafío aumenta en 1 por cada nivel de ranura superior al 5º."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Infestation",
+			"source": "XGE",
+			"page": 158,
+			"level": 0,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "una pulga viva"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Provocas la aparición momentánea de una nube de ácaros, pulgas y otros parásitos en una criatura que puedas ver dentro de tu alcance. El objetivo debe tener éxito en una tirada de salvación de Constitución, o recibe {@damage 1d6} de daño de veneno y se mueve 1,5 metros en una dirección aleatoria si puede moverse y su velocidad es de al menos 1,5 metros. Tira un {@dice d4} para la dirección: 1, norte; 2, sur; 3, este; o 4, oeste. Este movimiento no provoca ataques de oportunidad, y si la dirección tirada está bloqueada, el objetivo no se mueve.",
+				"El daño del hechizo aumenta un {@dice 1d6} cuando alcanzas el 5º nivel ({@damage 2d6}), el 11º nivel ({@damage 3d6}) y el 17º nivel ({@damage 4d6})."
+			],
+			"scalingLevelDice": {
+				"label": "poison damage",
+				"scaling": {
+					"1": "1d6",
+					"5": "2d6",
+					"11": "3d6",
+					"17": "4d6"
+				}
+			},
+			"damageInflict": [
+				"poison"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Investiture of Flame",
+			"source": "XGE",
+			"page": 159,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 19
+				}
+			],
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Las llamas recorren tu cuerpo, arrojando luz brillante en un radio de 9 metros y luz tenue en 9 metros adicionales durante la duración del hechizo. Las llamas no te dañan. Hasta que el hechizo termine, obtienes los siguientes beneficios:",
+				{
+					"type": "list",
+					"items": [
+						"Eres inmune al daño por fuego y tienes resistencia al daño por frío.",
+						"Cualquier criatura que se mueva a menos de 1,5 metros de ti por primera vez en un turno o termine su turno allí recibe {@damage 1d10} de daño de fuego.",
+						"Puedes usar tu acción para crear una línea de fuego de 4,5 metros de largo y 1,5 metros de ancho que se extienda desde ti en la dirección que elijas. Cada criatura en la línea debe hacer una tirada de salvación de Destreza. Una criatura recibe {@damage 4d8} de daño de fuego si falla la tirada de salvación, o la mitad de daño si tiene éxito."
+					]
+				}
+			],
+			"damageResist": [
+				"cold"
+			],
+			"damageImmune": [
+				"fire"
+			],
+			"damageInflict": [
+				"fire"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"LGT"
+			],
+			"areaTags": [
+				"L"
+			]
+		},
+		{
+			"name": "Investiture of Ice",
+			"source": "XGE",
+			"page": 159,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 19
+				}
+			],
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Hasta que el hechizo termine, el hielo rima con tu cuerpo y obtienes los siguientes beneficios:",
+				{
+					"type": "list",
+					"items": [
+						"Eres inmune al daño por frío y tienes resistencia al daño por fuego.",
+						"Puedes moverte a través del {@quickref difficult terrain||3} creado por el hielo o la nieve sin gastar movimiento extra.",
+						"El suelo en un radio de 3 metros a tu alrededor está helado y es {@quickref difficult terrain||3} para las criaturas que no seas tú. El radio se mueve contigo.",
+						"Puedes usar tu acción para crear un cono de viento helado de 4,5 metros que se extiende desde tu mano extendida en la dirección que elijas. Cada criatura en el cono debe hacer una tirada de salvación de Constitución. Una criatura recibe {@damage 4d6} de daño por frío si falla la tirada de salvación, o la mitad de daño si tiene éxito. Una criatura que falle su salvación contra este efecto ve su velocidad reducida a la mitad hasta el inicio de tu siguiente turno."
+					]
+				}
+			],
+			"damageResist": [
+				"fire"
+			],
+			"damageImmune": [
+				"cold"
+			],
+			"damageInflict": [
+				"cold"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"DFT"
+			],
+			"areaTags": [
+				"N",
+				"S"
+			]
+		},
+		{
+			"name": "Investiture of Stone",
+			"source": "XGE",
+			"page": 159,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 19
+				}
+			],
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Hasta que el hechizo termine, los trozos de roca se extienden por tu cuerpo y obtienes los siguientes beneficios:",
+				{
+					"type": "list",
+					"items": [
+						"Tienes resistencia al daño contundente, perforante y cortante de los ataques no mágicos.",
+						"Puedes usar tu acción para crear un pequeño terremoto en el suelo en un radio de 4,5 metros centrado en ti. Las demás criaturas que se encuentren en ese terreno deben tener éxito en una tirada de salvación de Destreza o ser derribadas {@condition prone}.",
+						"Puedes moverte a través de {@quickref difficult terrain||3} de tierra o piedra sin gastar movimiento extra. Puedes moverte a través de tierra o piedra sólida como si fuera aire y sin desestabilizarla, pero no puedes terminar tu movimiento allí. Si lo haces, eres expulsado al espacio desocupado más cercano, este hechizo termina y quedas {@condition stunned} hasta el final de tu siguiente turno."
+					]
+				}
+			],
+			"damageResist": [
+				"bludgeoning",
+				"piercing",
+				"slashing"
+			],
+			"conditionInflict": [
+				"prone",
+				"stunned"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Investiture of Wind",
+			"source": "XGE",
+			"page": 160,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 20
+				}
+			],
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Hasta que el hechizo termine, el viento se arremolina a tu alrededor y obtienes los siguientes beneficios:",
+				{
+					"type": "list",
+					"items": [
+						"Los ataques con armas a distancia realizados contra ti tienen desventaja en la tirada de ataque.",
+						"Ganas una velocidad de vuelo de 18 metros. Si sigues volando cuando termina el hechizo, caes, a menos que puedas evitarlo de algún modo.",
+						"Puedes usar tu acción para crear un cubo de viento arremolinado de 4,5 metros centrado en un punto que puedas ver a 18 metros de ti. Cada criatura en esa área debe hacer una tirada de salvación de Constitución. Una criatura recibe {@damage 2d10} de daño contundente si falla la tirada de salvación, o la mitad de daño si tiene éxito. Si una criatura Grande o más pequeña falla la tirada de salvación, esa criatura también se aleja hasta 3 metros del centro del cubo."
+					]
+				}
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"FMV",
+				"SGT"
+			],
+			"areaTags": [
+				"C"
+			]
+		},
+		{
+			"name": "Invulnerability",
+			"source": "XGE",
+			"page": 160,
+			"level": 9,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "una pequeña pieza de adamantina de al menos 500 gp, que el hechizo consume",
+					"cost": 50000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Eres inmune a todo el daño hasta que el hechizo termine."
+			]
+		},
+		{
+			"name": "Life Transference",
+			"source": "XGE",
+			"page": 160,
+			"level": 3,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Sacrificas parte de tu salud para curar las heridas de otra criatura. Recibes {@damage 4d8} de daño necrótico, que no puede reducirse de ninguna forma, y una criatura de tu elección que puedas ver dentro del alcance recupera un número de puntos de golpe igual al doble del daño necrótico que recibes."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 4º nivel o superior, el daño aumenta un {@scaledamage 4d8|3-9|1d8} por cada nivel de ranura superior al 3º."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"miscTags": [
+				"HL",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Maddening Darkness",
+			"source": "XGE",
+			"page": 160,
+			"level": 8,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 150
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "una gota de brea mezclada con una gota de mercurio"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"La oscuridad mágica se extiende desde un punto que elijas dentro del alcance hasta llenar una esfera de 18 metros de radio hasta que el hechizo termina. La oscuridad se extiende por las esquinas. Una criatura con {@sense darkvision} no puede ver a través de esta oscuridad. La luz no mágica, así como la luz creada por conjuros de 8º nivel o inferior, no puede iluminar el área.",
+				"Dentro de la esfera se oyen gritos, balbuceos y risas enloquecidas. Cada vez que una criatura comienza su turno en la esfera, debe realizar una tirada de salvación de Sabiduría, recibiendo {@damage 8d8} de daño psíquico si falla la tirada de salvación, o la mitad de daño si tiene éxito."
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Maelstrom",
+			"source": "XGE",
+			"page": 160,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 20
+				}
+			],
+			"level": 5,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "papel u hoja en forma de embudo"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Aparece una masa arremolinada de agua de 1,5 metros de profundidad en un radio de 9 metros centrado en un punto que puedes ver dentro del alcance. El punto debe estar en el suelo o en una masa de agua. Hasta que el hechizo termine, esa área es {@quickref difficult terrain||3}, y cualquier criatura que comience su turno allí debe tener éxito en una tirada de salvación de Fuerza o recibir {@damage 6d6} de daño por apaleamiento y ser arrastrada 3 metros hacia el centro."
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"savingThrow": [
+				"strength"
+			],
+			"miscTags": [
+				"DFT",
+				"FMV",
+				"SGT"
+			],
+			"areaTags": [
+				"R"
+			]
+		},
+		{
+			"name": "Magic Stone",
+			"source": "XGE",
+			"page": 160,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 20
+				}
+			],
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Tocas de uno a tres guijarros y los imbuyes de magia. Tú u otra persona podéis realizar un ataque de hechizo a distancia con uno de los guijarros lanzándolo o arrojándolo con un {@item sling|phb}. Si se lanza, el guijarro tiene un alcance de 18 metros. Si otra persona ataca con un guijarro, ese atacante añade tu modificador de habilidad de lanzamiento de conjuros, no el del atacante, a la tirada de ataque. En caso de impacto, el objetivo recibe un daño por apaleamiento igual a {@damage 1d6} + tu modificador de habilidad de lanzamiento de conjuros. Tanto si el ataque impacta como si falla, el hechizo termina sobre la piedra.",
+				"Si vuelves a lanzar este hechizo, el hechizo termina en los guijarros que aún estén afectados por tu anterior lanzamiento."
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Mass Polymorph",
+			"source": "XGE",
+			"page": 160,
+			"level": 9,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "un capullo de oruga"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Transformas hasta diez criaturas de tu elección que puedas ver dentro de tu alcance. Un objetivo no dispuesto debe tener éxito en una tirada de salvación de Sabiduría para resistir la transformación. Un cambiador de forma que no esté dispuesto a ello tiene éxito automáticamente en la salvación.",
+				"Cada objetivo adopta una forma de bestia de tu elección, y puedes elegir la misma forma o diferentes para cada objetivo. La nueva forma puede ser {@filter cualquier bestia|bestiary|type=beast|miscellaneous=!swarm} que hayas visto cuyo índice de desafío sea igual o inferior al del objetivo (o la mitad del nivel del objetivo, si éste no tiene índice de desafío). Las estadísticas de juego del objetivo, incluidas las puntuaciones de habilidad mental, se sustituyen por las estadísticas de la bestia elegida, pero el objetivo conserva sus puntos de golpe, alineamiento y personalidad.",
+				"Cada objetivo gana un número de puntos de golpe temporales igual a los puntos de golpe de su nueva forma. Estos puntos de golpe temporales no pueden ser reemplazados por puntos de golpe temporales de otra fuente. Un objetivo vuelve a su forma normal cuando no tiene más puntos de vida temporales o muere. Si el hechizo termina antes, la criatura pierde todos sus puntos de vida temporales y vuelve a su forma normal.",
+				"La criatura está limitada en las acciones que puede realizar por la naturaleza de su nueva forma. No puede hablar, lanzar hechizos ni hacer nada que requiera las manos o el habla.",
+				"El equipo del objetivo se funde con la nueva forma. El objetivo no puede activar, utilizar, blandir ni beneficiarse de ninguna manera de su equipo."
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SGT",
+				"THP"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Maximilian's Earthen Grasp",
+			"source": "XGE",
+			"page": 161,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 20
+				}
+			],
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "una miniatura esculpida a mano en arcilla"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Eliges un espacio desocupado de 1,5 metros cuadrados en el suelo que puedas ver dentro del alcance. Una mano mediana hecha de tierra compactada se eleva allí y alcanza a una criatura que puedas ver en un radio de 1,5 metros. El objetivo debe realizar una tirada de salvación de Fuerza. Si falla, el objetivo recibe {@damage 2d6} de daño contundente y queda {@condition restrained} incapacitado durante la duración del hechizo.",
+				"Como acción, puedes hacer que la mano aplaste al {@condition restrained} objetivo, que debe realizar una tirada de salvación de Fuerza. El objetivo recibe {@damage 2d6} de daño contundente si falla la tirada de salvación, o la mitad de daño si tiene éxito.",
+				"Para escapar, el {@condition restrained} objetivo puede usar su acción para hacer un chequeo de Fuerza contra tu DC de salvación del hechizo. Si tiene éxito, el objetivo escapa y deja de estar {@condition restrained} cogido por la mano.",
+				"Como acción, puedes hacer que la mano alcance a una criatura diferente o que se mueva a un espacio desocupado diferente dentro del alcance. La mano libera un objetivo {@condition restrained} si haces cualquiera de las dos cosas."
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrow": [
+				"strength"
+			],
+			"abilityCheck": [
+				"strength"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Melf's Minute Meteors",
+			"source": "XGE",
+			"page": 161,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 20
+				}
+			],
+			"level": 3,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "niter, azufre y alquitrán de pino formando una perla"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Creas seis pequeños meteoritos en tu espacio. Flotan en el aire y te orbitan durante la duración del hechizo. Cuando lanzas el hechizo -y como acción adicional en cada uno de tus turnos posteriores- puedes gastar uno o dos de los meteoritos, enviándolos a toda velocidad hacia un punto o puntos que elijas en un radio de 36 metros de ti. Cuando un meteoro llega a su destino o impacta contra una superficie sólida, explota. Cada criatura en un radio de 1,5 metros del punto donde explota el meteoro debe realizar una tirada de salvación de Destreza. Una criatura recibe {@damage 2d6} de daño de fuego si falla la tirada de salvación, o la mitad de daño si tiene éxito."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 4º nivel o superior, el número de meteoros creados aumenta en dos por cada nivel de ranura superior al 3º."
+					]
+				}
+			],
+			"damageInflict": [
+				"fire"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"UBA"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Mental Prison",
+			"source": "XGE",
+			"page": 161,
+			"level": 6,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Intentas atar a una criatura dentro de una célula ilusoria que sólo ella percibe. Una criatura que puedas ver dentro del alcance debe hacer una tirada de salvación de Inteligencia. El objetivo tiene éxito automáticamente si es inmune al ser {@condition charmed}. Si la tirada de salvación tiene éxito, el objetivo recibe {@damage 5d10} de daño psíquico y el hechizo termina. En una salvación fallida, el objetivo recibe {@damage 5d10} de daño psíquico, y haces que el área inmediatamente alrededor del espacio del objetivo parezca peligrosa para él de alguna manera. Puedes hacer que el objetivo se vea rodeado de fuego, navajas flotantes o fauces horribles llenas de dientes chorreantes. Sea cual sea la forma que adopte la ilusión, el objetivo no puede ver ni oír nada más allá de ella y está {@condition restrained} durante la duración del hechizo. Si el objetivo sale de la ilusión, realiza un ataque cuerpo a cuerpo a través de ella o alcanza cualquier parte de su cuerpo a través de ella, el objetivo recibe {@damage 10d10} de daño psíquico y el hechizo termina."
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"savingThrow": [
+				"intelligence"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Mighty Fortress",
+			"source": "XGE",
+			"page": 161,
+			"otherSources": [
+				{
+					"source": "AitFR-AVT",
+					"page": 10
+				},
+				{
+					"source": "AitFR-FCD",
+					"page": 12
+				}
+			],
+			"level": 8,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "miles",
+					"amount": 1
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un diamante de al menos 500 gp, que el hechizo consume",
+					"cost": 50000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Una fortaleza de piedra surge de un área cuadrada de terreno a tu elección que puedas ver dentro de tu alcance. El área tiene 36 metros de lado y no debe tener edificios ni otras estructuras. Las criaturas que se encuentren en la zona son elevadas inofensivamente a medida que la fortaleza se eleva.",
+				"La fortaleza tiene cuatro torretas con bases cuadradas, cada una de 6 metros de lado y 9 metros de altura, con una torreta en cada esquina. Los torreones están unidos entre sí por muros de piedra de 24 metros de largo cada uno, creando un recinto cerrado. Cada muro tiene 0,3 m de grosor y está compuesto por paneles de 3 m de ancho y 6 m de alto. Cada panel es contiguo a otros dos paneles o a un panel y una torreta. Puedes colocar hasta cuatro puertas de piedra en la muralla exterior de la fortaleza.",
+				"En el interior del recinto cerrado hay un pequeño torreón. El torreón tiene una base cuadrada de 15 metros de lado y tres pisos con techos de 3 metros de altura. Cada uno de los pisos se puede dividir en tantas habitaciones como se desee, siempre que cada habitación tenga al menos 1,5 metros de lado. Las plantas de la torre del homenaje están conectadas por escaleras de piedra, sus paredes tienen 15 cm de grosor y las habitaciones interiores pueden tener puertas de piedra o arcos abiertos, a elección. La torre del homenaje puede amueblarse y decorarse a tu gusto, y contiene comida suficiente para servir un banquete de nueve platos para un máximo de 100 personas cada día. El mobiliario, la comida y otros objetos creados con este hechizo se convierten en polvo si se sacan de la fortaleza.",
+				"Un plantel de cien sirvientes invisibles obedece cualquier orden que les den las criaturas que designes al lanzar el hechizo. Cada sirviente funciona como si fuera creado por el hechizo de sirviente invisible.",
+				"Las murallas, las torretas y la torre del homenaje son de piedra y pueden sufrir daños. Cada sección de piedra de 3 metros por 3 metros tiene CA 15 y 30 puntos de vida por pulgada de grosor. Es inmune al veneno y al daño psíquico. Reducir una sección de piedra a 0 puntos de vida la destruye y puede causar que las secciones conectadas se doblen y colapsen a discreción del DM.",
+				"Después de 7 días o cuando lances este hechizo en otro lugar, la fortaleza se desmorona inofensivamente y se hunde en el suelo, dejando a cualquier criatura que estuviera dentro a salvo en el suelo.",
+				"Lanzar este hechizo en el mismo lugar una vez cada 7 días durante un año hace que la fortaleza sea permanente."
+			],
+			"damageImmune": [
+				"poison",
+				"psychic"
+			],
+			"miscTags": [
+				"PRM",
+				"SGT"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Mind Spike",
+			"source": "XGE",
+			"page": 162,
+			"level": 2,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Alcanzas la mente de una criatura que puedas ver dentro de tu alcance. El objetivo debe realizar una tirada de salvación de Sabiduría, recibiendo {@damage 3d8} de daño psíquico si falla la tirada de salvación, o la mitad de daño si tiene éxito. Si fallas la tirada de salvación, siempre sabrás la localización del objetivo hasta que el conjuro termine, pero sólo mientras los dos estéis en el mismo plano de existencia. Mientras tengas este conocimiento, el objetivo no puede ocultarse de ti, y si está {@condition invisible}, no obtiene ningún beneficio de esa condición contra ti."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 3er nivel o superior, el daño aumenta un {@scaledamage 3d8|2-9|1d8} por cada nivel de ranura superior al 2º."
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Mold Earth",
+			"source": "XGE",
+			"page": 162,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 21
+				}
+			],
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				},
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Eliges una porción de tierra o piedra que puedas ver dentro del alcance y que quepa en un cubo de 1,5 metros. La manipulas de una de las siguientes maneras:",
+				{
+					"type": "list",
+					"items": [
+						"Si apunta a una zona de tierra suelta, puede excavarla instantáneamente, desplazarla por el suelo y depositarla hasta 1,5 metros de distancia. Este movimiento no implica fuerza suficiente para causar daños.",
+						"Haces que aparezcan formas, colores o ambos en la tierra o la piedra, deletreando palabras, creando imágenes o dando forma a patrones. Los cambios duran 1 hora.",
+						"Si la tierra o piedra a la que apuntas está en el suelo, haces que se convierta en {@quickref difficult terrain||3}. Alternativamente, puedes hacer que el suelo se convierta en terreno normal si ya es {@quickref difficult terrain||3}. Este cambio dura 1 hora."
+					]
+				},
+				"Si lanzas este hechizo varias veces, no puedes tener más de dos de sus efectos no instantáneos activos a la vez, y puedes descartar tal efecto como una acción."
+			],
+			"miscTags": [
+				"DFT",
+				"SGT"
+			],
+			"areaTags": [
+				"C"
+			]
+		},
+		{
+			"name": "Negative Energy Flood",
+			"source": "XGE",
+			"page": 163,
+			"level": 5,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "un hueso roto y un cuadrado de seda negra"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Envías cintas de energía negativa a una criatura que puedas ver dentro del alcance. A menos que el objetivo sea un no-muerto, debe realizar una tirada de salvación de Constitución, recibiendo {@damage 5d12} de daño necrótico si falla la tirada de salvación, o la mitad de daño si tiene éxito. Un objetivo muerto por este daño se levanta como un {@creature zombie} al inicio de tu siguiente turno. El zombi persigue a cualquier criatura que pueda ver y que esté más cerca de él. Las estadísticas del {@creature zombie} se encuentran en el Manual del Monstruo.",
+				"Si apuntas a un no muerto con este hechizo, el objetivo no hace tirada de salvación. En su lugar, tira {@dice 5d12}. El objetivo gana la mitad del total como puntos de golpe temporales."
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT",
+				"SMN",
+				"THP"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Power Word Pain",
+			"source": "XGE",
+			"page": 163,
+			"level": 7,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Pronuncias una palabra de poder que provoca oleadas de intenso dolor que asaltan a una criatura que puedas ver dentro de su alcance. Si el objetivo tiene 100 puntos de golpe o menos, sufre un dolor incapacitante. De lo contrario, el hechizo no tiene efecto sobre él. El objetivo tampoco se ve afectado si es inmune al ser {@condition charmed}.",
+				"Mientras el objetivo está afectado por el dolor paralizante, su velocidad no puede superar los 3 metros. El objetivo también tiene desventaja en las tiradas de ataque, los chequeos de habilidad y las tiradas de salvación, excepto las tiradas de salvación de Constitución. Por último, si el objetivo intenta lanzar un hechizo, primero debe tener éxito en una tirada de salvación de Constitución, o el lanzamiento falla y el hechizo se desperdicia.",
+				"Un objetivo que sufra este dolor puede realizar una tirada de salvación de Constitución al final de cada uno de sus turnos. Si la tirada de salvación tiene éxito, el dolor termina."
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Primal Savagery",
+			"source": "XGE",
+			"page": 163,
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Canalizas magia primigenia para que tus dientes o uñas se afilen, listos para lanzar un ataque corrosivo. Realiza un ataque de hechizo cuerpo a cuerpo contra una criatura en un radio de 1,5 metros de ti. Si aciertas, el objetivo recibe {@damage 1d10} de daño ácido. Después de realizar el ataque, tus dientes o uñas vuelven a su estado normal.",
+				"El daño del hechizo aumenta un {@dice 1d10} cuando alcanzas el 5º nivel ({@damage 2d10}), el 11º nivel ({@damage 3d10}) y el 17º nivel ({@damage 4d10})."
+			],
+			"scalingLevelDice": {
+				"label": "acid damage",
+				"scaling": {
+					"1": "1d10",
+					"5": "2d10",
+					"11": "3d10",
+					"17": "4d10"
+				}
+			},
+			"damageInflict": [
+				"acid"
+			],
+			"spellAttack": [
+				"M"
+			],
+			"miscTags": [
+				"SCL"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Primordial Ward",
+			"source": "XGE",
+			"page": 163,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 21
+				}
+			],
+			"level": 6,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Tienes resistencia al daño por ácido, frío, fuego, rayo y trueno durante la duración del hechizo.",
+				"Cuando recibes daño de uno de esos tipos, puedes usar tu reacción para ganar inmunidad a ese tipo de daño, incluso contra el daño desencadenante. Si lo haces, las resistencias terminan, y tienes la inmunidad hasta el final de tu siguiente turno, momento en el que el hechizo termina."
+			],
+			"damageResist": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"thunder"
+			],
+			"damageImmune": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"thunder"
+			]
+		},
+		{
+			"name": "Psychic Scream",
+			"source": "XGE",
+			"page": 163,
+			"level": 9,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Desatas el poder de tu mente para hacer estallar el intelecto de hasta diez criaturas de tu elección que puedas ver dentro del alcance. Las criaturas que tengan una puntuación de Inteligencia de 2 o menos no se ven afectadas.",
+				"Cada objetivo debe hacer una tirada de salvación de Inteligencia. Si falla la salvación, el objetivo recibe {@damage 14d6} de daño psíquico y queda {@condition stunned}. Con una salvación exitosa, el objetivo recibe la mitad de daño y no es {@condition stunned}. Si un objetivo muere por este daño, su cabeza explota, suponiendo que tenga una.",
+				"Un objetivo {@condition stunned} puede realizar una tirada de salvación de Inteligencia al final de cada uno de sus turnos. Si tiene éxito, el efecto de aturdimiento termina."
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"savingThrow": [
+				"intelligence"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Pyrotechnics",
+			"source": "XGE",
+			"page": 163,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 21
+				}
+			],
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Elige un área de llamas no mágicas que puedas ver y que quepa dentro de un cubo de 1,5 metros dentro del alcance. Puedes extinguir el fuego en esa zona, y creas fuegos artificiales o humo al hacerlo.",
+				{
+					"type": "entries",
+					"name": "Fireworks",
+					"entries": [
+						"El objetivo explota con un deslumbrante despliegue de colores. Cada criatura en un radio de 3 metros del objetivo debe tener éxito en una tirada de salvación de Constitución o se vuelve {@condition blinded} hasta el final de tu siguiente turno."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Smoke",
+					"entries": [
+						"Un espeso humo negro se extiende desde el objetivo en un radio de 6 metros, moviéndose por las esquinas. La zona del humo está muy oscurecida. El humo persiste durante 1 minuto o hasta que un viento fuerte lo dispersa."
+					]
+				}
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"OBS",
+				"SGT"
+			],
+			"areaTags": [
+				"C",
+				"S"
+			]
+		},
+		{
+			"name": "Scatter",
+			"source": "XGE",
+			"page": 164,
+			"level": 6,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"El aire tiembla alrededor de hasta cinco criaturas de tu elección que puedas ver dentro de tu alcance. Una criatura que no quiera resistirse a este hechizo debe tener éxito en una tirada de salvación de Sabiduría. Teletransportas a cada objetivo afectado a un espacio desocupado que puedas ver en un radio de 36 metros. Ese espacio debe estar en el suelo o en una planta."
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SGT",
+				"TP"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Shadow Blade",
+			"source": "XGE",
+			"page": 164,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Entrelazas hilos de sombra para crear una espada de oscuridad solidificada en tu mano. Esta espada mágica dura hasta que termina el hechizo. Cuenta como un arma cuerpo a cuerpo simple que dominas. Inflige {@damage 2d8} de daño psíquico al impactar y tiene las propiedades de delicadeza, luz y lanzada (alcance 20/60). Además, cuando usas la espada para atacar a un objetivo que está en penumbra u oscuridad, haces la tirada de ataque con ventaja.",
+				"Si dejas caer el arma o la lanzas, se disipa al final del turno. A partir de entonces, mientras el hechizo persiste, puedes utilizar una acción adicional para hacer que la espada reaparezca en tu mano."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 3er o 4to nivel, el daño aumenta a {@dice 3d8}. Cuando lo lanzas utilizando una casilla de 5º o 6º nivel, el daño aumenta a {@dice 4d8}. Cuando lo lanzas utilizando una casilla de hechizo de 7º nivel o superior, el daño aumenta a {@dice 5d8}."
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"miscTags": [
+				"UBA"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Shadow of Moil",
+			"source": "XGE",
+			"page": 164,
+			"level": 4,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un globo ocular no muerto encerrado en una gema por valor de al menos 150 gp",
+					"cost": 15000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Unas sombras llameantes envuelven tu cuerpo hasta que finaliza el hechizo, lo que hace que quedes muy oculto para los demás. Las sombras convierten en oscuridad la luz tenue en un radio de 3 metros, y en tenue la luz brillante en la misma zona.",
+				"Hasta que el hechizo termine, tienes resistencia al daño radiante. Además, cada vez que una criatura a menos de 3 metros de ti te golpea con un ataque, las sombras arremeten contra esa criatura, infligiéndole {@damage 2d8} de daño necrótico."
+			],
+			"damageResist": [
+				"radiant"
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"miscTags": [
+				"OBS"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Shape Water",
+			"source": "XGE",
+			"page": 164,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 21
+				},
+				{
+					"source": "EGW"
+				}
+			],
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				},
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Eliges una zona de agua que puedas ver dentro de tu alcance y que quepa en un cubo de 1,5 metros. La manipulas de una de las siguientes maneras:",
+				{
+					"type": "list",
+					"items": [
+						"Puede mover o modificar instantáneamente el flujo de agua según sus instrucciones, hasta 1,5 metros en cualquier dirección. Este movimiento no tiene fuerza suficiente para causar daño.",
+						"Haces que el agua se forme en formas simples y se anime a tu dirección. Este cambio dura 1 hora.",
+						"Se cambia el color o la opacidad del agua. El agua debe cambiarse de la misma manera en todo momento. Este cambio dura 1 hora.",
+						"Congela el agua, siempre que no haya criaturas en ella. El agua se descongela en 1 hora."
+					]
+				},
+				"Si lanzas este hechizo varias veces, no puedes tener más de dos de sus efectos no instantáneos activos a la vez, y puedes descartar tal efecto como una acción."
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"C"
+			]
+		},
+		{
+			"name": "Sickening Radiance",
+			"source": "XGE",
+			"page": 164,
+			"level": 4,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Una luz tenue y verdosa se propaga dentro de una esfera de 9 metros de radio centrada en un punto que elijas dentro del alcance. La luz se extiende por las esquinas y dura hasta que termina el hechizo.",
+				"Cuando una criatura se mueve al área del hechizo por primera vez en un turno o comienza su turno allí, esa criatura debe tener éxito en una tirada de salvación de Constitución o recibe {@damage 4d10} de daño radiante, y sufre un nivel de {@condition exhaustion} y emite una luz tenue y verdosa en un radio de 1,5 metros. Esta luz hace que la criatura no pueda beneficiarse de ser {@condition invisible}. La luz y los niveles de {@condition exhaustion} causados por este hechizo desaparecen cuando el hechizo termina."
+			],
+			"damageInflict": [
+				"radiant"
+			],
+			"conditionInflict": [
+				"exhaustion"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Skill Empowerment",
+			"source": "XGE",
+			"page": 165,
+			"level": 5,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Tu magia profundiza la comprensión de una criatura de su propio talento. Tocas a una criatura dispuesta y le otorgas pericia en una habilidad de tu elección; hasta que el hechizo termine, la criatura duplica su bonificación de competencia para los chequeos de habilidad que haga que usen la habilidad elegida.",
+				"Debes elegir una habilidad en la que el objetivo sea competente y que no se esté beneficiando ya de un efecto, como Pericia, que duplique su bonificación de competencia."
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Skywrite",
+			"source": "XGE",
+			"page": 165,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 22
+				}
+			],
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "sight"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"Haces que se formen hasta diez palabras en una parte del cielo que puedas ver. Las palabras parecen estar hechas de nubes y permanecen en el lugar durante la duración del hechizo. Las palabras se disipan cuando el hechizo termina. Un viento fuerte puede dispersar las nubes y terminar el hechizo antes de tiempo."
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Snare",
+			"source": "XGE",
+			"page": 165,
+			"level": 1,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"s": true,
+				"m": {
+					"text": "7,5 metros de cuerda, que el hechizo consume",
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"Cuando lanzas este hechizo, utilizas la cuerda para crear un círculo de 1,5 metros de radio en el suelo o en el suelo. Cuando terminas de lanzarlo, la cuerda desaparece y el círculo se convierte en una trampa mágica.",
+				"Esta trampa es casi invisible y requiere un chequeo de Inteligencia ({@skill Investigation}) exitoso contra tu DC de salvación de hechizo para ser discernida.",
+				"La trampa se activa cuando una criatura Pequeña, Mediana o Grande se desplaza por el suelo o el suelo en el radio del hechizo. Esa criatura debe tener éxito en una tirada de salvación de Destreza o ser elevada mágicamente en el aire, dejándola colgando boca abajo a 0,9 metros sobre el suelo o el piso. La criatura permanece {@condition restrained} allí hasta que finaliza el hechizo.",
+				"Una criatura {@condition restrained} puede realizar una tirada de salvación de Destreza al final de cada uno de sus turnos, terminando el efecto sobre sí misma si tiene éxito. Alternativamente, la criatura u otra persona que pueda alcanzarla puede usar una acción para hacer un chequeo de Inteligencia ({@skill Arcana}) contra tu DC de salvación del hechizo. Si tiene éxito, el efecto {@condition restrained} termina.",
+				"Una vez activada la trampa, el hechizo termina cuando ninguna criatura es {@condition restrained} alcanzada por ella."
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"abilityCheck": [
+				"intelligence"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Snilloc's Snowball Swarm",
+			"source": "XGE",
+			"page": 165,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 22
+				}
+			],
+			"level": 2,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "un trozo de hielo o un trocito de roca blanca"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Una ráfaga de bolas de nieve mágicas estalla desde un punto que elijas dentro del alcance. Cada criatura en una esfera de 1,5 m de radio centrada en ese punto debe realizar una tirada de salvación de Destreza. Una criatura recibe {@damage 3d6} de daño por frío si falla la tirada de salvación, o la mitad de daño si tiene éxito."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 3er nivel o superior, el daño aumenta un {@scaledamage 3d6|2-9|1d6} por cada nivel de ranura superior al 2º."
+					]
+				}
+			],
+			"damageInflict": [
+				"cold"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Soul Cage",
+			"source": "XGE",
+			"page": 165,
+			"level": 6,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "which you take when a humanoid you can see within 60 feet of you dies"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "una pequeña jaula de plata por valor de 100 gp",
+					"cost": 10000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"Este hechizo arrebata el alma de un humanoide al morir y la atrapa dentro de la pequeña jaula que utilizas para el componente material. Un alma robada permanece dentro de la jaula hasta que el hechizo termina o hasta que destruyes la jaula, lo que termina el hechizo. Mientras tengas un alma dentro de la jaula, puedes explotarla de cualquiera de las formas descritas a continuación. Puedes utilizar un alma atrapada hasta seis veces. Una vez que explotas un alma por sexta vez, se libera, y el hechizo termina. Mientras un alma está atrapada, el humanoide muerto del que procede no puede ser revivido.",
+				{
+					"type": "entries",
+					"name": "Steal Life",
+					"entries": [
+						"Puedes utilizar una acción adicional para drenar el vigor del alma y recuperar {@dice 2d8} puntos de golpe."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Query Soul",
+					"entries": [
+						"Le haces una pregunta al alma (no se requiere ninguna acción) y recibes una breve respuesta telepática, que puedes entender independientemente del idioma utilizado. El alma sólo sabe lo que sabía en vida, pero debe responderte con la verdad y lo mejor que pueda. La respuesta no es más que una o dos frases y puede ser críptica."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Borrow Experience",
+					"entries": [
+						"Puedes utilizar una acción de bonificación para reforzarte con la experiencia vital del alma, haciendo que tu próxima tirada de ataque, chequeo de habilidad o tirada de salvación tenga ventaja. Si no utilizas este beneficio antes del inicio de tu siguiente turno, lo pierdes."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Eyes of the Dead",
+					"entries": [
+						"Puedes usar una acción para nombrar un lugar que el humanoide vio en vida, lo que crea un sensor invisible en algún lugar de ese lugar si se encuentra en el plano de existencia en el que estás actualmente. El sensor permanece mientras te concentras, hasta 10 minutos (como si estuvieras {@status concentration||concentrating} en un hechizo). Recibes información visual y auditiva del sensor como si estuvieras en su espacio usando tus sentidos."
+					]
+				},
+				"Una criatura que pueda ver el sensor (como una que use {@spell see invisibility} o {@sense truesight}) ve una imagen translúcida del humanoide atormentado cuya alma enjaulaste."
+			],
+			"affectsCreatureType": [
+				"humanoid"
+			],
+			"miscTags": [
+				"HL",
+				"UBA",
+				"ADV"
+			]
+		},
+		{
+			"name": "Steel Wind Strike",
+			"source": "XGE",
+			"page": 166,
+			"level": 5,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true,
+				"m": {
+					"text": "un arma cuerpo a cuerpo que valga al menos 1 sp",
+					"cost": 10
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Haces florecer el arma utilizada en el lanzamiento y luego te desvaneces para golpear como el viento. Elige hasta cinco criaturas que puedas ver dentro del alcance. Haz un ataque de hechizo cuerpo a cuerpo contra cada objetivo. Si aciertas, el objetivo recibe {@damage 6d10} de daño de fuerza.",
+				"A continuación, puedes teletransportarte a un espacio desocupado que puedas ver en un radio de 1,5 metros de uno de los objetivos que hayas alcanzado o fallado."
+			],
+			"damageInflict": [
+				"force"
+			],
+			"spellAttack": [
+				"M"
+			],
+			"miscTags": [
+				"SGT",
+				"TP"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Storm Sphere",
+			"source": "XGE",
+			"page": 166,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 22
+				}
+			],
+			"level": 4,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 150
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Surge una esfera de aire arremolinado de 6 metros de radio, centrada en el punto que elijas dentro de su alcance. La esfera permanece mientras dura el hechizo. Cada criatura que se encuentre en la esfera cuando aparece o que termine su turno allí debe tener éxito en una tirada de salvación de Fuerza o recibir {@damage 2d6} de daño contundente. El espacio de la esfera es {@quickref difficult terrain||3}.",
+				"Hasta que el hechizo termine, puedes usar una acción de bonificación en cada uno de tus turnos para hacer que un rayo salte desde el centro de la esfera hacia una criatura que elijas en un radio de 18 metros del centro. Realiza un ataque de hechizo a distancia. Tienes ventaja en la tirada de ataque si el objetivo está dentro de la esfera. Si aciertas, el objetivo recibe {@damage 4d6} de daño por rayo.",
+				"Las criaturas situadas a menos de 9 metros de la esfera tienen desventaja en los chequeos de Sabiduría ({@skill Perception}) realizados para escuchar."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 5º nivel o superior, el daño de cada uno de sus efectos aumenta un {@scaledamage 2d6;4d6|4-9|1d6} por cada nivel de ranura superior al 4º."
+					]
+				}
+			],
+			"damageInflict": [
+				"bludgeoning",
+				"lightning"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"strength"
+			],
+			"miscTags": [
+				"DFT",
+				"UBA"
+			],
+			"areaTags": [
+				"ST",
+				"S"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Summon Greater Demon",
+			"source": "XGE",
+			"page": 166,
+			"level": 4,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un vial de sangre de un humanoide asesinado en las últimas 24 horas",
+					"consume": "optional"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Pronuncias palabras soeces, invocando a un demonio del caos del Abismo. Eliges el tipo del demonio, que debe ser {@filter uno de calificación de desafío 5 o inferior|bestiary|challenge rating=[&0;&5]|tag=demon|miscellaneous=!swarm}, como un {@creature shadow demon} o un {@creature barlgura}. El demonio aparece en un espacio desocupado que puedas ver dentro del alcance, y el demonio desaparece cuando cae a 0 puntos de golpe o cuando el hechizo termina.",
+				"Tira la iniciativa para el demonio, que tiene sus propios turnos. Cuando lo invocas y en cada uno de tus turnos posteriores, puedes darle una orden verbal (que no requiere ninguna acción por tu parte), indicándole lo que debe hacer en su próximo turno. Si no le das ninguna orden, pasa su turno atacando a cualquier criatura a su alcance que le haya atacado.",
+				"Al final de cada turno, el demonio realiza una tirada de salvación de Carisma. El demonio tiene desventaja en esta tirada de salvación si dices su verdadero nombre. Si falla, el demonio sigue obedeciéndote. Si la tirada de salvación tiene éxito, el demonio deja de estar bajo tu control durante el resto del turno y pasa sus turnos persiguiendo y atacando a los no demonios más cercanos lo mejor que puede. Si detienes {@status concentration||concentrating} el hechizo antes de que alcance su duración completa, un demonio incontrolado no desaparece durante {@dice 1d6} asaltos si aún tiene puntos de golpe.",
+				"Como parte del lanzamiento del hechizo, puedes formar un círculo en el suelo con la sangre utilizada como componente material. El círculo es lo suficientemente grande como para abarcar tu espacio. Mientras dure el hechizo, el demonio invocado no puede cruzar el círculo ni dañarlo, y no puede apuntar a nadie dentro de él. El uso del componente material de esta manera lo consume cuando el hechizo termina."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 5º nivel o superior, el índice de desafío aumenta en 1 por cada nivel de ranura superior al 4º."
+					]
+				}
+			],
+			"savingThrow": [
+				"charisma"
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Summon Lesser Demons",
+			"source": "XGE",
+			"page": 167,
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un vial de sangre de un humanoide asesinado en las últimas 24 horas",
+					"consume": "optional"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Pronuncias palabras soeces, invocando a los demonios del caos del Abismo. Tira en la siguiente tabla para determinar qué aparece.",
+				{
+					"type": "table",
+					"colLabels": [
+						"{@dice d6}",
+						"Demons Summoned"
+					],
+					"colStyles": [
+						"col-1 text-center",
+						"col-11"
+					],
+					"rows": [
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"min": 1,
+									"max": 2
+								}
+							},
+							"Dos {@filter demonios de grado de desafío 1 o inferior|bestiary|challenge rating=[&0;&1]|tag=demon|miscellaneous=!swarm}"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"min": 3,
+									"max": 4
+								}
+							},
+							"Cuatro {@filter demonios de desafío calificación 1/2 o inferior|bestiary|challenge rating=[&0;&1/2]|tag=demon|miscellaneous=!swarm}"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"min": 5,
+									"max": 6
+								}
+							},
+							"Ocho {@filter demonios de desafío de clasificación 1/4 o inferior|bestiary|challenge rating=[&0;&1/4]|tag=demon|miscellaneous=!swarm}"
+						]
+					]
+				},
+				"El DM elige los demonios, como {@creature manes} o {@creature dretch||dretches}, y tú eliges los espacios desocupados que puedes ver dentro del alcance donde aparecen. Un demonio invocado desaparece cuando baja a 0 puntos de golpe o cuando termina el hechizo.",
+				"Los demonios son hostiles a todas las criaturas, incluido tú. Tira la iniciativa para los demonios invocados como grupo, que tiene sus propios turnos. Los demonios persiguen y atacan a los no demonios más cercanos en la medida de sus posibilidades.",
+				"Como parte del lanzamiento del hechizo, puedes formar un círculo en el suelo con la sangre utilizada como componente material. El círculo es lo suficientemente grande como para abarcar tu espacio. Mientras dure el hechizo, los demonios invocados no pueden cruzar el círculo ni dañarlo, y no pueden apuntar a nadie dentro de él. El uso del componente material de esta manera lo consume cuando el hechizo termina."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo usando una ranura de hechizo de 6º o 7º nivel, invocas el doble de demonios. Si lo lanzas usando una ranura de hechizo de 8º o 9º nivel, invocas el triple de demonios."
+					]
+				}
+			],
+			"miscTags": [
+				"RO",
+				"SGT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Synaptic Static",
+			"source": "XGE",
+			"page": 167,
+			"level": 5,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Eliges un punto dentro del alcance y haces que la energía psíquica explote allí. Cada criatura en una esfera de 6 metros de radio centrada en ese punto debe hacer una tirada de salvación de Inteligencia. Una criatura con una puntuación de Inteligencia de 2 o inferior no puede verse afectada por este hechizo. Un objetivo recibe {@damage 8d6} de daño psíquico si falla la tirada de salvación, o la mitad de daño si tiene éxito.",
+				"Tras una salvación fallida, el objetivo tiene pensamientos confusos durante 1 minuto. Durante ese tiempo, saca un {@dice d6} y resta el número obtenido de todas sus tiradas de ataque y chequeos de habilidad, así como de sus tiradas de salvación por Constitución para mantener el {@status concentration}. El objetivo puede realizar una tirada de salvación de Inteligencia al final de cada uno de sus turnos, terminando el efecto sobre sí mismo en caso de éxito."
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"savingThrow": [
+				"intelligence",
+				"constitution"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Temple of the Gods",
+			"source": "XGE",
+			"page": 167,
+			"level": 7,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un símbolo sagrado por valor de al menos 5 gp",
+					"cost": 500
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"entries": [
+				"Haces que un templo resplandezca en el suelo que puedes ver dentro de tu alcance. El templo debe encajar en un cubo de espacio desocupado de hasta 36 metros de lado. El templo permanece hasta que finaliza el hechizo. Está dedicado a cualquier dios, panteón o filosofía representado por el símbolo sagrado utilizado en la invocación.",
+				"Tú tomas todas las decisiones sobre la apariencia del templo. El interior está delimitado por un suelo, paredes y un techo, con una puerta que da acceso al interior y tantas ventanas como desees. Sólo tú y las criaturas que designes al lanzar el hechizo podéis abrir o cerrar la puerta.",
+				"El interior del templo es un espacio abierto con un ídolo o altar en un extremo. Tú decides si el templo está iluminado y si esa iluminación es una luz brillante o una luz tenue. El olor a incienso quemado llena el aire del interior y la temperatura es suave.",
+				"El templo se opone a los tipos de criaturas que elijas cuando lances este hechizo. Elige uno o más de los siguientes: celestiales, elementales, fey, fiends o no muertos. Si una criatura del tipo elegido intenta entrar en el templo, debe hacer una tirada de salvación de Carisma. Si falla, no podrá entrar en el templo durante 24 horas. Incluso si la criatura puede entrar en el templo, la magia del lugar se lo impide; siempre que haga una tirada de ataque, un chequeo de habilidad o una tirada de salvación dentro del templo, debe sacar un {@dice d4} y restar el número obtenido de la tirada de {@dice d20}.",
+				"Además, los sensores creados por los hechizos de adivinación no pueden aparecer dentro del templo, y las criaturas que se encuentran dentro no pueden ser objetivo de los hechizos de adivinación.",
+				"Por último, siempre que cualquier criatura del templo recupere puntos de golpe por un hechizo de 1er nivel o superior, la criatura recupera puntos de golpe adicionales iguales a tu modificador de Sabiduría (mínimo 1 punto de golpe).",
+				"El templo está hecho de una fuerza mágica opaca que se extiende hasta el Plano Etéreo, bloqueando así los viajes etéreos al interior del templo. Nada puede atravesar físicamente el exterior del templo. No puede ser disipado por {@spell dispel magic}, y {@spell antimagic field} no tiene efecto sobre él. Un hechizo {@spell disintegrate} destruye el templo al instante.",
+				"Lanzar este hechizo en el mismo lugar todos los días durante un año hace que este efecto sea permanente."
+			],
+			"savingThrow": [
+				"charisma"
+			],
+			"affectsCreatureType": [
+				"celestial",
+				"elemental",
+				"fey",
+				"fiend",
+				"undead"
+			],
+			"miscTags": [
+				"HL",
+				"PRM",
+				"SGT"
+			]
+		},
+		{
+			"name": "Tenser's Transformation",
+			"source": "XGE",
+			"page": 168,
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "unos pelos de toro"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Te dota de resistencia y destreza marcial alimentada por la magia. Hasta que el hechizo termine, no puedes lanzar hechizos y obtienes los siguientes beneficios:",
+				{
+					"type": "list",
+					"items": [
+						"Ganas 50 puntos de golpe temporales. Si queda alguno cuando el hechizo termina, se pierde.",
+						"Tienes ventaja en las tiradas de ataque que realices con armas simples y marciales.",
+						"Cuando golpeas a un objetivo con un ataque de arma, ese objetivo recibe un {@damage 2d12} de daño de fuerza adicional.",
+						"Tienes competencia con todas las armaduras, escudos, armas simples y armas marciales.",
+						"Tienes competencia en las tiradas de salvación de Fuerza y Constitución.",
+						"Puedes atacar dos veces, en lugar de una, cuando realizas la acción {@action Attack} en tu turno. Ignoras este beneficio si ya tienes un rasgo, como Ataque Extra, que te proporciona ataques adicionales."
+					]
+				},
+				"Inmediatamente después de que termine el hechizo, debes tener éxito en una tirada de salvación de Constitución DC 15 o sufrir un nivel de {@condition exhaustion}."
+			],
+			"damageInflict": [
+				"force"
+			],
+			"conditionInflict": [
+				"exhaustion"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"AAD",
+				"ADV",
+				"THP"
+			]
+		},
+		{
+			"name": "Thunder Step",
+			"source": "XGE",
+			"page": 168,
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Te teletransportas a un espacio desocupado que puedas ver dentro del alcance. Inmediatamente después de que desaparezcas, suena un estruendo y cada criatura en un radio de 3 metros del espacio que has dejado debe hacer una tirada de salvación de Constitución, recibiendo {@damage 3d10} de daño por trueno en caso de fallar la tirada de salvación, o la mitad de daño en caso de tener éxito. El trueno puede oírse hasta a 9 metros de distancia.",
+				"Puedes llevar objetos siempre que su peso no supere lo que puedes transportar. También puedes teletransportar a una criatura dispuesta de tu tamaño o menor que lleve equipo hasta su capacidad de carga. La criatura debe estar a menos de 1,5 metros de ti cuando lances este hechizo, y debe haber un espacio desocupado a menos de 1,5 metros de tu espacio de destino para que la criatura aparezca en él; de lo contrario, la criatura se queda atrás."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 4º nivel o superior, el daño aumenta un {@scaledamage 3d10|3-9|1d10} por cada nivel de ranura superior al 3º."
+					]
+				}
+			],
+			"damageInflict": [
+				"thunder"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT",
+				"TP"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Thunderclap",
+			"source": "XGE",
+			"page": 168,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 22
+				}
+			],
+			"level": 0,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 5
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Creas un estallido de sonido atronador que puede oírse hasta a 3 metros de distancia. Todas las criaturas que se encuentren dentro del alcance, excepto tú, deben realizar una tirada de salvación de Constitución o recibirán {@damage 1d6} de daño por trueno.",
+				"El daño del hechizo aumenta un {@dice 1d6} cuando alcanzas el 5º nivel ({@damage 2d6}), el 11º nivel ({@damage 3d6}) y el 17º nivel ({@damage 4d6})."
+			],
+			"scalingLevelDice": {
+				"label": "thunder damage",
+				"scaling": {
+					"1": "1d6",
+					"5": "2d6",
+					"11": "3d6",
+					"17": "4d6"
+				}
+			},
+			"damageInflict": [
+				"thunder"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SCL"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Tidal Wave",
+			"source": "XGE",
+			"page": 168,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 22
+				}
+			],
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "una gota de agua"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Conjuras una ola de agua que cae sobre una zona dentro de tu alcance. El área puede medir hasta 9 metros de largo, 3 metros de ancho y 3 metros de alto. Cada criatura en esa área debe hacer una tirada de salvación de Destreza. Si falla la tirada de salvación, la criatura recibe {@damage 4d8} de daño contundente y es derribada {@condition prone}. Si la salvación tiene éxito, la criatura recibe la mitad de daño y no es derribada {@condition prone}. A continuación, el agua se esparce por el suelo en todas direcciones, extinguiendo las llamas desprotegidas en su área y en un radio de 9 metros, y luego se desvanece."
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"areaTags": [
+				"W"
+			]
+		},
+		{
+			"name": "Tiny Servant",
+			"source": "XGE",
+			"page": 168,
+			"level": 3,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"Tocas un objeto diminuto, no mágico, que no esté unido a otro objeto o a una superficie y que no esté siendo transportado por otra criatura. El objetivo se anima y le brotan pequeños brazos y piernas, convirtiéndose en una criatura bajo tu control hasta que el hechizo termina o la criatura cae a 0 puntos de golpe. Consulta sus estadísticas en {@creature tiny servant|xge|stat block}.",
+				"Como acción adicional, puedes ordenar mentalmente a la criatura si se encuentra a menos de 36 metros de ti. (Si controlas varias criaturas con este hechizo, puedes ordenar a cualquiera de ellas o a todas al mismo tiempo, emitiendo la misma orden a cada una). Tú decides qué acción realizará la criatura y adónde se moverá durante su próximo turno, o puedes dar una orden simple y general, como ir a buscar una llave, montar guardia o apilar algunos libros. Si no das ninguna orden, el siervo no hace nada más que defenderse de las criaturas hostiles. Una vez dada una orden, el siervo sigue cumpliéndola hasta completar su tarea.",
+				"Cuando la criatura baja a 0 puntos de vida, vuelve a su forma original, y cualquier daño restante se traslada a esa forma."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 4º nivel o superior, puedes animar dos objetos adicionales por cada nivel de ranura superior al 3º."
+					]
+				}
+			],
+			"miscTags": [
+				"OBJ",
+				"SMN",
+				"UBA"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Toll the Dead",
+			"source": "XGE",
+			"page": 169,
+			"level": 0,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Apuntas a una criatura que puedes ver a tu alcance, y el sonido de una campana dolorosa llena el aire a su alrededor durante un momento. El objetivo debe tener éxito en una tirada de salvación de Sabiduría o recibir {@damage 1d8} de daño necrótico. Si al objetivo le falta alguno de sus puntos de golpe, recibe {@damage 1d12} de daño necrótico.",
+				"El daño del hechizo aumenta en un dado cuando alcanzas el 5º nivel ({@damage 2d8} o {@damage 2d12}), el 11º nivel ({@damage 3d8} o {@damage 3d12}) y el 17º nivel ({@damage 4d8} o {@damage 4d12})."
+			],
+			"scalingLevelDice": [
+				{
+					"label": "necrotic damage",
+					"scaling": {
+						"1": "1d8",
+						"5": "2d8",
+						"11": "3d8",
+						"17": "4d8"
+					}
+				},
+				{
+					"label": "necrotic damage to wounded creature",
+					"scaling": {
+						"1": "1d12",
+						"5": "2d12",
+						"11": "3d12",
+						"17": "4d12"
+					}
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"miscTags": [
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Transmute Rock",
+			"source": "XGE",
+			"page": 169,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 22
+				}
+			],
+			"level": 5,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "arcilla y agua"
+			},
+			"duration": [
+				{
+					"type": "permanent",
+					"ends": [
+						"dispel"
+					]
+				}
+			],
+			"entries": [
+				"Eliges un área de piedra o barro que puedas ver que quepa dentro de un cubo de 12 metros y que esté dentro del alcance, y eliges uno de los siguientes efectos.",
+				{
+					"type": "entries",
+					"name": "Transmute Rock to Mud",
+					"entries": [
+						"La roca no mágica de cualquier tipo en el área se convierte en un volumen igual de lodo espeso y fluido que permanece durante la duración del hechizo."
+					]
+				},
+				"El suelo en el área del hechizo se vuelve lo suficientemente fangoso como para que las criaturas puedan hundirse en él. Cada pie que una criatura se mueve a través del barro le cuesta 1,2 metros de movimiento, y cualquier criatura que se encuentre en el suelo cuando lanzas el hechizo debe hacer una tirada de salvación de Fuerza. Una criatura también debe hacer la tirada de salvación cuando se mueve en el área por primera vez en un turno o termina su turno allí. Si falla la tirada de salvación, la criatura se hunde en el barro y queda {@condition restrained}, aunque puede usar una acción para poner fin a la condición de {@condition restrained} sobre sí misma tirando de sí misma para liberarse del barro.",
+				"Si lanzas el hechizo sobre un techo, el barro cae. Cualquier criatura bajo el barro cuando caiga debe hacer una tirada de salvación de Destreza. La criatura recibe {@damage 4d8} de daño contundente si falla la tirada de salvación, o la mitad de daño si tiene éxito.",
+				{
+					"type": "entries",
+					"name": "Transmute Mud to Rock",
+					"entries": [
+						"El barro o las arenas movedizas no mágicas de la zona de no más de 3 metros de profundidad se transforman en piedra blanda durante la duración del hechizo. Cualquier criatura en el barro cuando se transforma debe hacer una tirada de salvación de Destreza. Si la tirada de salvación tiene éxito, la criatura es empujada a salvo a la superficie en un espacio desocupado. Con una salvación fallida, la criatura se convierte en {@condition restrained} por la roca. Una criatura {@condition restrained}, u otra criatura a su alcance, puede utilizar una acción para intentar romper la roca teniendo éxito en un chequeo de Fuerza DC 20 o infligiéndole daño. La roca tiene CA 15 y 25 puntos de golpe, y es inmune al veneno y al daño psíquico."
+					]
+				}
+			],
+			"damageImmune": [
+				"poison",
+				"psychic"
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrow": [
+				"strength",
+				"dexterity"
+			],
+			"abilityCheck": [
+				"strength"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"C"
+			]
+		},
+		{
+			"name": "Vitriolic Sphere",
+			"source": "XGE",
+			"page": 170,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 23
+				}
+			],
+			"level": 4,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 150
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "una gota de bilis de babosa gigante"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Apuntas a un lugar dentro del alcance y una bola brillante de ácido esmeralda de 0,3 metros de diámetro se desplaza hasta allí y explota en una esfera de 6 metros de radio. Cada criatura en esa área debe hacer una tirada de salvación de Destreza. Si falla la tirada de salvación, la criatura sufre {@damage 10d4} de daño por ácido y otro {@damage 5d4} de daño por ácido al final de su siguiente turno. Si la salvación tiene éxito, la criatura sufre la mitad del daño inicial y ningún daño al final de su siguiente turno."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 5º nivel o superior, el daño inicial aumenta un {@scaledamage 10d4|4-9|2d4} por cada nivel de ranura superior al 4º."
+					]
+				}
+			],
+			"damageInflict": [
+				"acid"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Wall of Light",
+			"source": "XGE",
+			"page": 170,
+			"level": 5,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "un espejo de mano"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Un muro resplandeciente de luz brillante aparece en el punto que elijas dentro del alcance. El muro aparece en la orientación que elijas: horizontal, vertical o diagonal. Puede flotar libremente o apoyarse en una superficie sólida. El muro puede medir hasta 18 metros de largo, 3 metros de alto y 1,5 metros de grosor. El muro bloquea la línea de visión, pero las criaturas y los objetos pueden atravesarlo. Emite luz brillante hasta 36 metros y luz tenue hasta 36 metros más.",
+				"Cuando aparece el muro, cada criatura en su área debe hacer una tirada de salvación de Constitución. Si falla la tirada de salvación, la criatura recibe {@damage 4d8} de daño radiante y queda {@condition blinded} durante 1 minuto. Con una salvación exitosa, recibe la mitad de daño y no queda {@condition blinded}. Una criatura {@condition blinded} puede hacer una tirada de salvación de Constitución al final de cada uno de sus turnos, terminando el efecto sobre sí misma si tiene éxito.",
+				"Una criatura que termina su turno en el área del muro recibe {@damage 4d8} de daño radiante.",
+				"Hasta que el hechizo termine, puedes usar una acción para lanzar un rayo de resplandor desde el muro a una criatura que puedas ver en un radio de 18 metros. Haz un ataque de hechizo a distancia. Si aciertas, el objetivo recibe {@damage 4d8} de daño radiante. Tanto si aciertas como si fallas, reduces la longitud del muro en 3 metros. Si la longitud del muro se reduce a un metro, el hechizo termina."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Cuando lanzas este hechizo utilizando una ranura de hechizo de 6º nivel o superior, el daño aumenta un {@scaledamage 4d8|5-9|1d8} por cada nivel de ranura superior al 5º."
+					]
+				}
+			],
+			"damageInflict": [
+				"radiant"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST",
+				"W"
+			]
+		},
+		{
+			"name": "Wall of Sand",
+			"source": "XGE",
+			"page": 170,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 23
+				}
+			],
+			"level": 3,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "un puñado de arena"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Creas un muro de arena arremolinada en el suelo en un punto que puedes ver a tu alcance. Puedes crear un muro de hasta 9 metros de largo, 3 metros de alto y 3 metros de grosor, que desaparece al terminar el hechizo. Bloquea la línea de visión, pero no el movimiento. Una criatura es {@condition blinded} mientras esté en el espacio del muro y debe gastar 0,9 metros de movimiento por cada 0,3 metros que se mueva allí."
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"W"
+			]
+		},
+		{
+			"name": "Wall of Water",
+			"source": "XGE",
+			"page": 170,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 23
+				},
+				{
+					"source": "VGM",
+					"page": 116
+				},
+				{
+					"source": "MOT",
+					"page": 0
+				}
+			],
+			"level": 3,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "una gota de agua"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Creas un muro de agua en el suelo en un punto que puedas ver dentro del alcance. Puedes crear un muro de hasta 9 metros de largo, 3 metros de alto y 0,3 metros de grosor, o un muro anillado de hasta 6 metros de diámetro, 6 metros de alto y 0,3 metros de grosor. El muro desaparece cuando termina el hechizo. El espacio del muro es {@quickref difficult terrain||3}.",
+				"Cualquier ataque con arma a distancia que entre en el espacio del muro tiene desventaja en la tirada de ataque, y el daño por fuego se reduce a la mitad si el efecto del fuego atraviesa el muro para alcanzar a su objetivo. Los hechizos que infligen daño de frío y atraviesan el muro provocan que la zona del muro que atraviesan se congele (se congela al menos una sección de 1,5 metros cuadrados). Cada sección congelada de 1,5 metros cuadrados tiene CA 5 y 15 puntos de vida. Reducir una sección congelada a 0 puntos de vida la destruye. Cuando se destruye una sección, el agua del muro no la llena."
+			],
+			"miscTags": [
+				"DFT",
+				"SGT"
+			],
+			"areaTags": [
+				"W"
+			]
+		},
+		{
+			"name": "Warding Wind",
+			"source": "XGE",
+			"page": 170,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 23
+				}
+			],
+			"level": 2,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Un fuerte viento (3 kilómetros por hora) sopla a tu alrededor en un radio de 3 metros y se mueve contigo, permaneciendo centrado en ti. El viento dura lo que dura el hechizo.",
+				"El viento tiene los siguientes efectos:",
+				{
+					"type": "list",
+					"items": [
+						"Te {@condition deafened||deafens} a ti y a otras criaturas en su área.",
+						"Extingue las llamas no protegidas en su área que son del tamaño de una antorcha o más pequeñas.",
+						"Cubre el vapor, el gas y la niebla que pueden ser dispersados por el viento fuerte.",
+						"El área es {@quickref difficult terrain||3} para criaturas distintas a ti.",
+						"Las tiradas de ataque de los ataques con armas a distancia tienen desventaja si los ataques pasan dentro o fuera del viento."
+					]
+				}
+			],
+			"conditionInflict": [
+				"deafened"
+			],
+			"miscTags": [
+				"DFT"
+			]
+		},
+		{
+			"name": "Watery Sphere",
+			"source": "XGE",
+			"page": 170,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 23
+				}
+			],
+			"level": 4,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "una gota de agua"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Conjuras una esfera de agua con un radio de 1,5 metros en un punto que puedas ver dentro del alcance. La esfera puede flotar pero a no más de 3 metros del suelo. La esfera permanece mientras dura el hechizo.",
+				"Cualquier criatura en el espacio de la esfera debe hacer una tirada de salvación de Fuerza. Si la tirada de salvación tiene éxito, la criatura es expulsada de ese espacio al espacio desocupado más cercano a su elección fuera de la esfera. Una criatura Enorme o más grande tiene éxito en la tirada de salvación automáticamente, y una criatura Grande o más pequeña puede elegir fallarla. Si falla la tirada de salvación, la criatura es {@condition restrained} alcanzada por la esfera y es engullida por el agua. Al final de cada uno de sus turnos, un {@condition restrained} objetivo puede repetir la tirada de salvación, terminando el efecto sobre sí mismo en caso de éxito.",
+				"La esfera puede contener hasta cuatro criaturas Medianas o más pequeñas o una Criatura Grande. Si la esfera retiene a una criatura que hace que supere esta capacidad, una criatura aleatoria que ya estaba {@condition restrained} junto a la esfera cae fuera de ella y aterriza {@condition prone} en un espacio a 1,5 metros de ella.",
+				"Como acción, puedes mover la esfera hasta 9 metros en línea recta. Si se desplaza sobre un foso, un acantilado u otro desnivel, desciende con seguridad hasta quedar suspendida a 3 metros del suelo. Cualquier criatura {@condition restrained} junto a la esfera se mueve con ella. Puedes embestir a las criaturas con la esfera, obligándolas a realizar la tirada de salvación.",
+				"Cuando el hechizo termina, la esfera cae al suelo y apaga todas las llamas normales en un radio de 9 metros. Cualquier criatura {@condition restrained} por la esfera es derribada {@condition prone} en el espacio donde cae. A continuación, el agua se desvanece."
+			],
+			"conditionInflict": [
+				"prone",
+				"restrained"
+			],
+			"savingThrow": [
+				"strength"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Whirlwind",
+			"source": "XGE",
+			"page": 171,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 24
+				}
+			],
+			"level": 7,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 300
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "un trozo de paja"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Un torbellino aúlla hasta un punto que puedes ver en el suelo dentro de su alcance. El torbellino es un cilindro de 3 metros de radio y 9 metros de altura centrado en ese punto. Hasta que el hechizo termine, puedes usar tu acción para mover el torbellino hasta 9 metros en cualquier dirección a lo largo del suelo. El torbellino absorbe cualquier objeto mediano o más pequeño que no esté sujeto a nada y que no lleve puesto o cargue nadie.",
+				"Una criatura debe realizar una tirada de salvación de Destreza la primera vez en un turno que entre en el torbellino o que el torbellino entre en su espacio, incluyendo cuando el torbellino aparece por primera vez. Una criatura recibe {@damage 10d6} de daño contundente si falla la tirada de salvación, o la mitad de daño si tiene éxito. Además, una criatura Grande o más pequeña que falle la salvación debe tener éxito en una tirada de salvación de Fuerza o convertirse en {@condition restrained} en el torbellino hasta que el conjuro termine. Cuando una criatura comienza su turno {@condition restrained} por el torbellino, la criatura es arrastrada 1,5 metros más arriba dentro de él, a menos que la criatura esté en la parte superior. Una criatura {@condition restrained} se mueve con el torbellino y cae cuando el hechizo termina, a menos que la criatura tenga algún medio para mantenerse en el aire.",
+				"Una criatura {@condition restrained} puede usar una acción para hacer un chequeo de Fuerza o Destreza contra tu DC de salvación del hechizo. Si tiene éxito, la criatura deja de estar {@condition restrained} bajo el torbellino y es lanzada {@dice 3d6 × 10} pies lejos de él en una dirección aleatoria."
+			],
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrow": [
+				"dexterity",
+				"strength"
+			],
+			"abilityCheck": [
+				"strength",
+				"dexterity"
+			],
+			"miscTags": [
+				"FMV",
+				"SGT"
+			],
+			"areaTags": [
+				"Y"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Word of Radiance",
+			"source": "XGE",
+			"page": 171,
+			"level": 0,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 5
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "un símbolo sagrado"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Pronuncias una palabra divina y surge de ti un resplandor ardiente. Cada criatura a tu elección que puedas ver dentro de tu alcance debe tener éxito en una tirada de salvación de Constitución o recibe {@damage 1d6} de daño radiante.",
+				"El daño del hechizo aumenta un {@dice 1d6} cuando alcanzas el 5º nivel ({@damage 2d6}), el 11º nivel ({@damage 3d6}) y el 17º nivel ({@damage 4d6})."
+			],
+			"scalingLevelDice": {
+				"label": "radiant damage",
+				"scaling": {
+					"1": "1d6",
+					"5": "2d6",
+					"11": "3d6",
+					"17": "4d6"
+				}
+			},
+			"damageInflict": [
+				"radiant"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Wrath of Nature",
+			"source": "XGE",
+			"page": 171,
+			"level": 5,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Llamas a los espíritus de la naturaleza para despertarlos contra tus enemigos. Elige un punto que puedas ver dentro del alcance. Los espíritus hacen que los árboles, las rocas y la hierba de un cubo de 18 metros centrado en ese punto se animen hasta que finaliza el hechizo.",
+				{
+					"type": "entries",
+					"name": "Grasses and Undergrowth",
+					"entries": [
+						"Cualquier área de terreno en el cubo que esté cubierta por hierba o maleza es {@quickref difficult terrain||3} para tus enemigos."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Trees",
+					"entries": [
+						"Al inicio de cada turno, cada uno de tus enemigos que se encuentre a menos de 3 metros de cualquier árbol del cubo debe superar una tirada de salvación de Destreza o recibirá {@damage 4d6} de daño cortante de las ramas que lo azotan."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Roots and Vines",
+					"entries": [
+						"Al final de cada uno de tus turnos, una criatura de tu elección que esté en el suelo del cubo debe tener éxito en una tirada de salvación de Fuerza o convertirse en {@condition restrained} hasta que el hechizo termine. Una criatura {@condition restrained} puede usar una acción para hacer un chequeo de Fuerza ({@skill Athletics}) contra tu DC de salvación del hechizo, terminando el efecto sobre sí misma si tiene éxito."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Rocks",
+					"entries": [
+						"Como acción adicional en tu turno, puedes hacer que una roca suelta del cubo se lance contra una criatura que puedas ver en el cubo. Haz un ataque de hechizo a distancia contra el objetivo. Si aciertas, el objetivo recibe {@damage 3d8} de daño contundente no mágico y debe tener éxito en una tirada de salvación de Fuerza o caer {@condition prone}."
+					]
+				}
+			],
+			"damageInflict": [
+				"bludgeoning",
+				"slashing"
+			],
+			"conditionInflict": [
+				"prone",
+				"restrained"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"dexterity",
+				"strength"
+			],
+			"abilityCheck": [
+				"strength"
+			],
+			"miscTags": [
+				"DFT",
+				"SGT",
+				"UBA"
+			],
+			"areaTags": [
+				"ST",
+				"C"
+			]
+		},
+		{
+			"name": "Zephyr Strike",
+			"source": "XGE",
+			"page": 171,
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Te mueves como el viento. Hasta que el hechizo termine, tu movimiento no provoca ataques de oportunidad.",
+				"Una vez antes de que termine el hechizo, puedes darte ventaja en una tirada de ataque con arma en tu turno. Ese ataque inflige un {@damage 1d8} extra de daño de fuerza al impactar. Tanto si aciertas como si fallas, tu velocidad al caminar aumenta en 9 metros hasta el final de ese turno."
+			],
+			"damageInflict": [
+				"force"
+			],
+			"miscTags": [
+				"AAD",
+				"ADV"
+			]
+		}
+	]
+}

@@ -1,0 +1,2089 @@
+{
+	"monster": [
+		{
+			"name": "Assassin Bug",
+			"source": "MFF",
+			"page": 4,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 55,
+				"formula": "10d8 + 10"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": 50
+			},
+			"str": 13,
+			"dex": 14,
+			"con": 13,
+			"int": 4,
+			"wis": 12,
+			"cha": 6,
+			"skill": {
+				"perception": "+3",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"poison"
+			],
+			"conditionImmune": [
+				"paralyzed"
+			],
+			"languages": [
+				"understands Druidic but can't speak"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Keen Smell",
+					"entries": [
+						"刺客虫在依靠嗅觉的智慧（感知）检查中具有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"刺客虫进行两次咬人攻击。"
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} 命中，距离 1.5 米，一个生物。{@h}7 ({@damage 1d10 + 2}) 穿刺伤害，目标必须在{@dc 11} 体质蓄力中成功，否则会{@condition poisoned} 持续 1 分钟。在 {@condition poisoned} 过程中，目标会 {@condition paralyzed}。目标可以在每个回合结束时重复该蓄力攻击，如果成功则结束对自身的影响。"
+					]
+				},
+				{
+					"name": "Ovipositor",
+					"entries": [
+						"{@atk mw}{@hit 4}命中，距离 1.5 米，一个目标。{@h}目标受到{@dice 1d3}刺客虫卵的侵扰，这些虫卵会立即孵化成刺客虫蛆。在目标的每个回合开始时，目标受到每条蛆虫 {@dice 1d6} 的穿刺伤害。在目标的下一个回合结束前对咬伤处施放火焰会对目标造成 1 点火焰伤害，并杀死这些刺客虫蛆。之后，蛆虫会深入皮下，无法被烧死。",
+						"如果一个被刺客虫蛆侵扰的目标在其回合结束时命中率为0，那么它就会因为虫蛆钻入其心脏而死亡。任何治疗疾病的效果都会杀死侵扰目标的所有刺客虫蛆。"
+					]
+				}
+			],
+			"traitTags": [
+				"Keen Senses"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS",
+				"DU"
+			],
+			"damageTags": [
+				"F",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"paralyzed",
+				"poisoned"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Blindheim",
+			"source": "MFF",
+			"page": 5,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"blindheim"
+				]
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 26,
+				"formula": "4d8 + 8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 16,
+			"con": 15,
+			"int": 8,
+			"wis": 10,
+			"cha": 9,
+			"skill": {
+				"athletics": "+3",
+				"perception": "+2"
+			},
+			"passive": 12,
+			"languages": [
+				"Undercommon"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Radiant Eyes",
+					"entries": [
+						"当盲海姆睁开眼睛时，它会在 18 米的锥形范围内投射亮光，并在另外 18 米的范围内投射暗光。它在每个回合结束时都会设定这个锥形区域的方向。所有能够看到盲眼海姆的生物在强光区域内和距离盲眼海姆 4.5 米范围内都会在攻击卷轴上处于劣势。具有阳光敏感特性的生物如果能够看到盲海姆，则在强光区域内的任何地方都会在攻击翻滚时处于劣势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} 命中，距离 1.5 米，一个目标。命中：5（{@damage 1d6 + 2}）次穿刺伤害。"
+					]
+				},
+				{
+					"name": "Radiant Blast",
+					"entries": [
+						"辐射能量从盲眼海姆的眼睛中喷发出来，形成一个 4.5 米长的锥形。该区域内的每个生物都必须在{@dc 12}体质蓄力中成功，否则就会受到 7（{@damage 2d6}）点辐射伤害并{@condition blinded}直到盲眼海姆的下一回合结束。具有阳光敏感特质的生物在此蓄力攻击中处于劣势。"
+					]
+				}
+			],
+			"languageTags": [
+				"U"
+			],
+			"damageTags": [
+				"P",
+				"R"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Crab Folk",
+			"source": "MFF",
+			"page": 6,
+			"size": [
+				"L"
+			],
+			"type": "giant",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 68,
+				"formula": "8d10 + 24"
+			},
+			"speed": {
+				"walk": 40,
+				"swim": 40
+			},
+			"str": 19,
+			"dex": 10,
+			"con": 17,
+			"int": 7,
+			"wis": 9,
+			"cha": 9,
+			"passive": 9,
+			"languages": [
+				"Common",
+				"Giant"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Limited Amphibiousness",
+					"entries": [
+						"蟹民可以呼吸空气和水，但它需要每24小时淹没一次，以避免窒息。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"蟹民可进行两次爪击攻击。"
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 6} 命中，距离 3 米，一个目标。{@h}7 ({@damage 1d6 + 4}) 暴击伤害，目标受到 {@condition grappled} （逃脱 {@dc 14}）。在这次抓取结束之前，蟹民可以自动用爪子攻击目标，并且蟹民不能用该爪子攻击其他目标。蟹民有两只爪子，每只爪子只能抓取一个目标。"
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GI"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dire Corby",
+			"source": "MFF",
+			"page": 7,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"dire corby"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 16,
+				"formula": "3d8 + 3"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40
+			},
+			"str": 13,
+			"dex": 14,
+			"con": 13,
+			"int": 6,
+			"wis": 8,
+			"cha": 7,
+			"skill": {
+				"acrobatics": "+4",
+				"perception": "+3"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"vulnerable": [
+				"thunder"
+			],
+			"conditionImmune": [
+				"frightened"
+			],
+			"languages": [
+				"Undercommon"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Dire Cacophony",
+					"entries": [
+						"在距离地底柯比 18 米范围内开始回合并能听到地底柯比声音的任何生物（地底柯比除外）必须进行 {@dc 11} 智慧蓄力。如果失败，该生物在下一回合开始前无法使用冲刺动作，无法攀爬，也无法施放除咒语以外的法术。"
+					]
+				},
+				{
+					"name": "Keen Hearing",
+					"entries": [
+						"在依靠听觉的智慧（感知）检查中，可怕的科比有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"地狱科比发出两次爪子攻击。"
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 4} 命中，距离 1.5 米，一个目标。{@h}6 ({@damage 1d8 + 2}) 砍伤。"
+					]
+				}
+			],
+			"traitTags": [
+				"Keen Senses"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"U"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Eye of Fear and Flame",
+			"source": "MFF",
+			"page": 8,
+			"otherSources": [
+				{
+					"source": "IMR"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 136,
+				"formula": "16d8 + 64"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 18,
+			"int": 18,
+			"wis": 17,
+			"cha": 18,
+			"save": {
+				"str": "+7",
+				"con": "+8",
+				"wis": "+7",
+				"cha": "+8"
+			},
+			"skill": {
+				"perception": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 17,
+			"resist": [
+				"necrotic",
+				"psychic"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned",
+				"stunned"
+			],
+			"languages": [
+				"Common",
+				"all languages known by any creature within 30 feet of it"
+			],
+			"cr": "9",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"恐惧与火焰之眼的先天法术能力是智力（法术保全（%0%））。它可以天生施展以下法术，不需要任何组件。"
+					],
+					"will": [
+						"{@spell detect evil and good}",
+						"{@spell detect thoughts}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell etherealness}",
+							"{@spell true seeing}"
+						]
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Turn Immunity",
+					"entries": [
+						"恐惧与火焰之眼对变成亡灵的效果免疫。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"恐惧与火焰之眼进行两次爪击，并使用其宝石之眼。"
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 7} 命中，距离 1.5 米，一个目标。{@h}9 ({@damage 1d12 + 3}) 砍伤。"
+					]
+				},
+				{
+					"name": "Gemstone Eyes",
+					"entries": [
+						"恐惧与火焰之眼会射出以下一种魔法眼球射线，选择它能看到的 27 米范围内的一个目标。",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "Eye of Fear",
+									"entry": "目标以及目标周围 3 米内最多 4 个恐惧之眼和火焰之眼选择的其他生物必须分别在 {@dc 16} 智慧蓄力中成功，否则会 {@condition frightened} 1 分钟。受影响的生物可以在每一回合结束时重复一次蓄力，成功后结束对自身的影响。"
+								},
+								{
+									"type": "item",
+									"name": "Eye of Flame",
+									"entry": "目标必须做一个{@dc 16}灵巧的蓄力动作。如果救赎失败，目标会受到44({@damage 8d10})的火焰伤害，如果是生物或易燃物，会被点燃。救赎成功时，目标会受到一半的伤害并且不会被点燃。被点燃的目标在其每个回合开始时都会受到5({@damage 1d10})的火力伤害，直到有生物采取行动将火浇灭。"
+								}
+							]
+						}
+					]
+				}
+			],
+			"traitTags": [
+				"Turn Immunity"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"XX"
+			],
+			"damageTags": [
+				"F",
+				"S"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Fog Giant",
+			"source": "MFF",
+			"page": 10,
+			"size": [
+				"H"
+			],
+			"type": "giant",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item chain mail|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 200,
+				"formula": "16d12 + 96"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 27,
+			"dex": 10,
+			"con": 22,
+			"int": 12,
+			"wis": 16,
+			"cha": 16,
+			"save": {
+				"con": "+10",
+				"wis": "+7",
+				"cha": "+7"
+			},
+			"skill": {
+				"insight": "+7",
+				"perception": "+7",
+				"persuasion": "+7"
+			},
+			"passive": 17,
+			"languages": [
+				"Common",
+				"Giant"
+			],
+			"cr": "11",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"巨人的先天法术能力是魅力。它可以天生施展以下法术，不需要任何材料成分。"
+					],
+					"will": [
+						"{@spell detect magic}",
+						"{@spell fog cloud}",
+						"{@spell light}"
+					],
+					"daily": {
+						"3e": [
+							"{@spell feather fall}",
+							"{@spell misty step}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Denizen of the Mist",
+					"entries": [
+						"在它的回合中，雾巨人无视它或其他盟友的雾巨人所施放的（%0%）法术效果。"
+					]
+				},
+				{
+					"name": "Keen Smell",
+					"entries": [
+						"巨人在依靠嗅觉的智慧（感知）检查中具有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"巨人进行两次大剑攻击并施放（%0%）。"
+					]
+				},
+				{
+					"name": "Greatsword",
+					"entries": [
+						"{@atk mw} {@hit 12} 命中，距离 3 米，一个目标。{@h}29 ({@damage 6d6 + 8}) 砍伤。"
+					]
+				},
+				{
+					"name": "Rock",
+					"entries": [
+						"{@atk rw} {@hit 12} 命中，范围 60/72 米，一个目标。{@h}30 ({@damage 4d10 + 8}) 暴击伤害。"
+					]
+				},
+				{
+					"name": "Petty Tyrant {@recharge}",
+					"entries": [
+						"雾巨人对为其服务的生物发出令人毛骨悚然的威胁。巨人 36 米范围内能看到或听到它的每个中型或小型盟友都可以利用它的反应进行近战攻击。"
+					]
+				}
+			],
+			"attachedItems": [
+				"greatsword|phb"
+			],
+			"traitTags": [
+				"Keen Senses"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GI"
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Forlarren",
+			"source": "MFF",
+			"page": 9,
+			"size": [
+				"M"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 45,
+				"formula": "6d8 + 18"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 14,
+			"dex": 16,
+			"con": 17,
+			"int": 12,
+			"wis": 11,
+			"cha": 18,
+			"skill": {
+				"acrobatics": "+5",
+				"deception": "+8",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 30 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Common",
+				"Sylvan"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"福拉伦的先天法术能力是魅力（法术保存（%0%））。它可以天生施展以下法术，不需要任何材料成分。"
+					],
+					"will": [
+						"{@spell expeditious retreat}",
+						"{@spell false life}",
+						"{@spell minor illusion}",
+						"{@spell prestidigitation}"
+					],
+					"daily": {
+						"3e": [
+							"{@spell aid}",
+							"{@spell misty step}",
+							"{@spell Tasha's hideous laughter}"
+						],
+						"1e": [
+							"{@spell heal}",
+							"{@spell heat metal}",
+							"{@spell mirror image}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Forlarren在面对法术和其他魔法效果时，有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"福拉伦会进行两次爪击和一次血肉攻击，或者进行三次色光攻击。"
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 5} 命中，距离 1.5 米，一个目标。{@h}6 ({@damage 1d6 + 3}) 砍伤。"
+					]
+				},
+				{
+					"name": "Gore",
+					"entries": [
+						"{@atk mw} {@hit 5} 命中，距离 1.5 米，一个目标。{@h}7 ({@damage 1d8 + 3}) 穿透伤害。"
+					]
+				},
+				{
+					"name": "Chromatic Ray",
+					"entries": [
+						"{@atk rs} {@hit 6} 命中，范围 18 米，一个目标。{@h}3 ({@damage 1d6}) 雷电伤害加 3 ({@damage 1d6}) 火伤害加 3 ({@damage 1d6}) 寒冷伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"C",
+				"F",
+				"L",
+				"P",
+				"S"
+			],
+			"damageTagsSpell": [
+				"F"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Jermlaine",
+			"source": "MFF",
+			"page": 11,
+			"size": [
+				"T"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"jermlaine"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 3,
+				"formula": "1d4 + 1"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 4,
+			"dex": 12,
+			"con": 13,
+			"int": 10,
+			"wis": 11,
+			"cha": 7,
+			"skill": {
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 30 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Undercommon"
+			],
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Lurkers in Shadow",
+					"entries": [
+						"杰姆莱恩是（%0%）的暗视。"
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"杰姆莱恩在面对法术和其他魔法效果时，在蓄力攻击方面具有优势。"
+					]
+				},
+				{
+					"name": "Vermin Friend",
+					"entries": [
+						"杰姆莱恩能与老鼠和巨鼠对话并理解它们。"
+					]
+				},
+				{
+					"name": "Swarming Rush",
+					"entries": [
+						"在距离另一个有意识的 Jermlaine 1.5 米范围内，Jermlaine 的武器伤害卷轴会增加 {@dice 1d4}。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Club",
+					"entries": [
+						"{@atk mw} {@hit -1} 命中，距离 1.5 米，一个目标。{@h}1 ({@damage 1d4 - 3}) 暴击伤害。"
+					]
+				},
+				{
+					"name": "Dart",
+					"entries": [
+						"{@atk rw} {@hit 3} 命中，范围 20/18 米，一个目标。{@h}3 ({@damage 1d4 + 1}) 穿透伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"club|phb",
+				"dart|phb"
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"U"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Khargra",
+			"source": "MFF",
+			"page": 12,
+			"size": [
+				"S"
+			],
+			"type": "elemental",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 11,
+				"formula": "2d6 + 4"
+			},
+			"speed": {
+				"walk": 5,
+				"fly": 30
+			},
+			"str": 13,
+			"dex": 10,
+			"con": 14,
+			"int": 5,
+			"wis": 11,
+			"cha": 6,
+			"skill": {
+				"perception": "+2",
+				"stealth": "+2"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"languages": [
+				"Terran"
+			],
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Iron Scent",
+					"entries": [
+						"卡格拉可以嗅到周围 9 米内黑色金属的位置。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 3} 命中，距离 1.5 米，一个目标。{@h}3 ({@damage 1d4 + 1})穿透伤害，如果目标穿着金属盔甲或携带金属盾牌，卡格拉会附着在该盔甲或盾牌上。附着时，卡格拉不会攻击。相反，在卡格拉的每个回合开始时，掷一次 {@dice d20}。掷出 10 或更高时，盔甲或盾牌的 AC 值将受到永久性的累积-1 惩罚。AC 值降至 10 的盔甲或降至 +0 加成的盾牌会被摧毁。",
+						"卡格拉可以通过消耗 1.5 米的移动距离来脱离自己。包括目标在内的生物可以使用行动脱离卡格拉。"
+					]
+				},
+				{
+					"name": "Earth Phasing",
+					"entries": [
+						"直到下一回合结束，卡格拉可以飞过非魔法的土和石头。在这样做的时候，它不会干扰它所移动的材料。它可以在土或石中结束其移动，但如果它在此能力结束时仍在土或石中，它将受到14（（%0%））力的伤害并立即移动到最近的无人空间。"
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Opportunistic Hunger",
+					"entries": [
+						"当卡格拉能看到的 1.5 米范围内的生物用金属武器击中它时，卡格拉可以对该生物发动咬合攻击。"
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"T"
+			],
+			"damageTags": [
+				"O",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Killmoulis",
+			"source": "MFF",
+			"page": 13,
+			"size": [
+				"T"
+			],
+			"type": "fey",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 7,
+				"formula": "2d4 + 2"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 4,
+			"dex": 19,
+			"con": 13,
+			"int": 12,
+			"wis": 14,
+			"cha": 13,
+			"skill": {
+				"history": "+3",
+				"perception": "+4",
+				"stealth": "+8"
+			},
+			"senses": [
+				"darkvision 30 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"Common",
+				"Sylvan",
+				"telepathy 60 ft."
+			],
+			"cr": "0",
+			"action": [
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit -1} 命中，距离 1.5 米，一个目标。{@h}1 暴击伤害。"
+					]
+				},
+				{
+					"name": "Blessing of Bountiful Generosity (1/Day)",
+					"entries": [
+						"Killmoulis 的目标是周围 3 米内它能看到的最多 8 个生物。下一次目标完成长时间休息时，它将恢复所有已消耗的命中率，并获得 10 点临时命中率。"
+					]
+				},
+				{
+					"name": "Curse of Poor Hospitality (1/Day)",
+					"entries": [
+						"Killmoulis 的目标是它能看到的 3 米范围内最多 8 个生物。目标下次完成长时间休息时，不会恢复已消耗的命中率。"
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"S",
+				"TP"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Mite",
+			"source": "MFF",
+			"page": 14,
+			"size": [
+				"S"
+			],
+			"type": "fey",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 7,
+				"formula": "2d6"
+			},
+			"speed": {
+				"walk": 30,
+				"burrow": 10,
+				"climb": 30
+			},
+			"str": 7,
+			"dex": 14,
+			"con": 11,
+			"int": 10,
+			"wis": 8,
+			"cha": 13,
+			"skill": {
+				"deception": "+3",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"languages": [
+				"Sylvan",
+				"Undercommon"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Vexing Presence",
+					"entries": [
+						"当距离螨虫 9 米以内时，非惧怕生物在灵巧检定和灵巧蓄力时处于劣势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} 命中，距离 1.5 米或范围 20/18 米，一个目标。{@h}4 ({@damage 1d4 + 2}) 穿透伤害。"
+					]
+				},
+				{
+					"name": "Blood Boiling Hex {@recharge}",
+					"entries": [
+						"螨虫会在它能看到的 18 米范围内的生物身上放置一个六芒星，持续 1 分钟。如果螨虫是隐藏的，使用此能力不会暴露它的位置。当生物受此六芒星影响时，每当它进行攻击掷骰、能力检定或蓄力掷骰时，都必须掷一个（%0%），然后从（%1%）掷骰中减去掷出的数字。在受到六芒星影响的任何一个回合中，目标都可以攻击一名盟友作为反应，攻击时忽略六芒星的影响。然后它可以忽略六芒星的效果，直到其回合结束。"
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"S",
+				"U"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Needle Lord",
+			"source": "MFF",
+			"page": 16,
+			"size": [
+				"L"
+			],
+			"type": "plant",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 45,
+				"formula": "6d10 + 12"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 18,
+			"dex": 11,
+			"con": 14,
+			"int": 11,
+			"wis": 15,
+			"cha": 12,
+			"skill": {
+				"athletics": "+6",
+				"perception": "+4",
+				"stealth": "+2"
+			},
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 14,
+			"conditionImmune": [
+				"blinded",
+				"deafened",
+				"exhaustion"
+			],
+			"languages": [
+				"Sylvan"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Needle Defense",
+					"entries": [
+						"每次生物对针王进行近战攻击时，都会受到2个穿刺伤害。生物可以选择以劣势进行攻击来避免这种伤害。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"荨麻领主进行了2次耙藤式攻击。"
+					]
+				},
+				{
+					"name": "Needle Volley",
+					"entries": [
+						"针王最多可以进行{@dice 1d6}次针刺攻击，但它在其回合内不能攻击同一目标两次以上。"
+					]
+				},
+				{
+					"name": "Raking Vine",
+					"entries": [
+						"{@atk mw} {@hit 6} 命中，距离 3 米，一个目标。{@h}11 ({@damage 2d6 + 4}) 穿透伤害，目标受到 {@condition grappled} （逃脱 {@dc 14}）。直到该抓取结束，目标在其每个回合开始时都会受到 11 点穿刺伤害。针刺领主有两个耙藤，每个只能抓取一个目标。"
+					]
+				},
+				{
+					"name": "Needle",
+					"entries": [
+						"{@atk rw} {@hit 2} 命中，范围 18 米，一个目标。{@h}2 ({@damage 1d4}) 穿透伤害。"
+					]
+				}
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"S"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Needle Spawn",
+			"source": "MFF",
+			"page": 16,
+			"size": [
+				"M"
+			],
+			"type": "plant",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 16,
+				"formula": "3d8 + 3"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 20
+			},
+			"str": 13,
+			"dex": 17,
+			"con": 12,
+			"int": 6,
+			"wis": 13,
+			"cha": 6,
+			"skill": {
+				"stealth": "+5"
+			},
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 11,
+			"conditionImmune": [
+				"blinded",
+				"deafened",
+				"exhaustion"
+			],
+			"languages": [
+				"Sylvan"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Close Quarters Shooting",
+					"entries": [
+						"如果攻击目标也在针刺卵 1.5 米范围内，则针刺卵在距离能看到它的敌对生物 1.5 米范围内时不会受到范围攻击的不利影响（%0%）。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Needle Volley",
+					"entries": [
+						"针状物最多可以进行{@dice 1d6}次针状物攻击，但它在其回合内不能攻击同一目标两次以上。"
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 5} 命中，距离 1.5 米，一个目标。{@h}6 ({@damage 1d6 + 3}) 砍伤。"
+					]
+				},
+				{
+					"name": "Needle",
+					"entries": [
+						"{@atk rw} {@hit 5} 命中，范围 18 米，一个目标。{@h}5 ({@damage 1d4 + 3}) 穿透伤害。"
+					]
+				}
+			],
+			"senseTags": [
+				"B"
+			],
+			"languageTags": [
+				"S"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Norker",
+			"source": "MFF",
+			"page": 17,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"goblinoid"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 16,
+				"formula": "3d8 + 3"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 10,
+			"con": 13,
+			"int": 8,
+			"wis": 8,
+			"cha": 7,
+			"skill": {
+				"athletics": "+3"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"languages": [
+				"Common",
+				"Goblin"
+			],
+			"cr": "1/2",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"诺克人进行一次狼牙棒和一次咬人的攻击。"
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 3} 命中，距离 1.5 米，一个目标。{@h}4 ({@damage 1d6 + 1}) 穿透伤害。"
+					]
+				},
+				{
+					"name": "Mace",
+					"entries": [
+						"{@atk mw} {@hit 3} 命中，距离 1.5 米，一个目标。{@h}4 ({@damage 1d6 + 1}) 暴击伤害。"
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Defensive Rebuke",
+					"entries": [
+						"如果诺克人周围 1.5 米内的生物对其发动近战攻击，诺克人可以利用反应对其造成 4 点穿刺伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"mace|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GO"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Norker War Leader",
+			"source": "MFF",
+			"page": 17,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"goblinoid"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 39,
+				"formula": "6d8 + 12"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 10,
+			"con": 15,
+			"int": 12,
+			"wis": 11,
+			"cha": 13,
+			"skill": {
+				"athletics": "+5",
+				"intimidation": "+3",
+				"perception": "+2"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"languages": [
+				"Common",
+				"Goblin"
+			],
+			"cr": "3",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"诺克人的战争领袖进行了一次大斧头和一次咬人的攻击，还使用了 \"继续战斗，你们这些蛞蝓\"。"
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} 命中，距离 1.5 米，一个目标。{@h}6 ({@damage 1d6 + 3}) 穿透伤害。"
+					]
+				},
+				{
+					"name": "Greataxe",
+					"entries": [
+						"{@atk mw} {@hit 5} 命中，距离 1.5 米，一个目标。{@h}9 ({@damage 1d12 + 3}) 砍伤。"
+					]
+				},
+				{
+					"name": "Fight On, You Slugs",
+					"entries": [
+						"诺克战争首领最多可以选中三个 18 米内能看到它的地精盟友。被选中的怪物可以利用它们的反应发动一次近战攻击。"
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Defensive Rebuke",
+					"entries": [
+						"如果诺克人周围 1.5 米内的生物对其发动近战攻击，诺克人可以利用反应对其造成 6 点穿刺伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"greataxe|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GO"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Screaming Devilkin",
+			"source": "MFF",
+			"page": 19,
+			"size": [
+				"S"
+			],
+			"type": "fey",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 18,
+				"formula": "4d6 + 4"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": 40
+			},
+			"str": 4,
+			"dex": 16,
+			"con": 13,
+			"int": 5,
+			"wis": 8,
+			"cha": 11,
+			"senses": [
+				"darkvision 30 ft."
+			],
+			"passive": 9,
+			"languages": [
+				"Sylvan"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Agile Flier",
+					"entries": [
+						"当尖叫恶魔金在飞行时，对它的机会攻击是不利的。"
+					]
+				},
+				{
+					"name": "Ceaseless Screaming",
+					"entries": [
+						"除了尖叫魔鬼金之外，任何在一个或多个尖叫魔鬼金 9 米范围内开始回合并能听到它的生物都必须做出 {@dc 10} 动作。",
+						"智慧救赎。失败时，该生物会受到{@condition incapacitated}的影响，直到其下一回合开始。成功时，该生物不会受到影响。"
+					]
+				},
+				{
+					"name": "Stunted Legs",
+					"entries": [
+						"尖叫的恶魔人在攻击卷上有劣势，当恶魔人没有飞行时，所有针对它的攻击卷都获得优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Barbed Tail",
+					"entries": [
+						"{@atk mw} {@hit 5} 命中，距离 1.5 米，一个目标。{@h}5 ({@damage 1d4 + 3}) 穿透伤害。"
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"S"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Xill",
+			"source": "MFF",
+			"page": 21,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 33,
+				"formula": "6d8 + 6"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 14,
+			"dex": 18,
+			"con": 13,
+			"int": 11,
+			"wis": 14,
+			"cha": 9,
+			"skill": {
+				"acrobatics": "+6",
+				"athletics": "+4",
+				"perception": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"Common"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Ethereal Jaunt",
+					"entries": [
+						"作为一个额外的动作，希尔可以用魔法从物质界转移到虚空界，或反之亦然。"
+					]
+				},
+				{
+					"name": "Poison Stinger",
+					"entries": [
+						"本回合xill将毒药注入它用爪子击中的一个生物体内。被选中的生物必须做一个{@dc 11}宪法救赎，如果xill在本回合击中它超过一次，则为劣势，救赎失败会受到14({@damage 4d6})的毒药伤害，成功则为一半。如果毒药伤害使目标的命中率降至0，则目标在1小时内稳定但{@condition poisoned}，即使在重新获得命中率后也是{@condition paralyzed}，而{@condition poisoned}这种方式。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"希尔会进行四次爪击。"
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 6} 命中，距离 1.5 米，一个目标。{@h}6 ({@damage 1d4 + 4}) 穿透伤害。"
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"paralyzed",
+				"poisoned"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ygorl, Lord of Entropy",
+			"isNamedCreature": true,
+			"source": "MFF",
+			"page": 20,
+			"size": [
+				"L"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 325,
+				"formula": "26d10 + 182"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40,
+				"swim": 40
+			},
+			"str": 24,
+			"dex": 18,
+			"con": 24,
+			"int": 20,
+			"wis": 16,
+			"cha": 26,
+			"save": {
+				"str": "+14",
+				"con": "+14",
+				"cha": "+15"
+			},
+			"skill": {
+				"arcana": "+12",
+				"deception": "+15",
+				"intimidation": "+15",
+				"persuasion": "+15"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"thunder"
+			],
+			"immune": [
+				"necrotic",
+				"poison",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"all",
+				"telepathy 120 ft."
+			],
+			"cr": "23",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"伊戈尔与生俱来的法术能力是 \"魅力\"（法术救赎（%0%），法术攻击命中率（%1%））。它可以先天性地施展以下法术，不需要任何材料成分。"
+					],
+					"will": [
+						"{@spell blight}",
+						"{@spell blink}",
+						"{@spell chaos bolt|XGE}*",
+						"{@spell detect magic}",
+						"{@spell fly}",
+						"{@spell shield}"
+					],
+					"daily": {
+						"3e": [
+							"{@spell circle of death}",
+							"{@spell enervation|XGE}*",
+							"{@spell symbol} (discord only)"
+						],
+						"2e": [
+							"{@spell finger of death}",
+							"{@spell harm}",
+							"{@spell mental prison|XGE}*"
+						],
+						"1e": [
+							"{@spell power word kill}",
+							"{@spell power word stun}",
+							"{@spell symbol} (death only)",
+							"{@spell weird}"
+						]
+					},
+					"footerEntries": [
+						"* Spell from Xanathar's Guide to Everything"
+					],
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Entropic Aura",
+					"entries": [
+						"每个在伊戈尔周围 4.5 米内结束回合的非构装生物或亡灵生物都会受到 14 ({@damage 4d6}) 次坏死伤害。"
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"如果Ygorl的拯救动作失败，它可以选择成功。"
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Ygorl在面对法术和其他魔法效果时，在蓄力攻击方面具有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"伊戈尔进行了三次攻击：两次用镰刀，一次用 \"熵触\"。"
+					]
+				},
+				{
+					"name": "Scythe",
+					"entries": [
+						"{@atk mw} {@hit 14} 命中，距离 3 米，一个生物。{@h}18 ({@damage 2d10 + 7}) 砍伤伤害外加 19 ({@damage 3d12}) 坏死伤害。任何被该攻击减至 0 命中点的生物都会死亡，其身体和身上穿戴的所有物品（魔法物品除外）都会爆炸成一团灰烬。该生物只能通过 {@spell wish} 法术恢复生命。"
+					]
+				},
+				{
+					"name": "Entropic Touch",
+					"entries": [
+						"{@atk mw} {@hit 14} 命中，距离 1.5 米，一个目标。{@h}16 ({@damage 2d8 + 7}) 坏死伤害，目标必须在{@dc 22}宪法蓄力中成功，否则会获得一级{@condition exhaustion}伤害。"
+					]
+				},
+				{
+					"name": "Summon Slaadi (1/Day)",
+					"entries": [
+						"伊戈尔召唤 {@dice 1d4 + 1} {@creature death slaad||death slaadi}。被召唤的斯拉德会出现在伊戈尔 18 米范围内的空地上，作为伊戈尔的盟友，但不能召唤其他斯拉德。它的存在时间为 1 分钟，直到它或伊戈尔死亡，或伊戈尔将其作为行动解除。"
+					]
+				},
+				{
+					"name": "Teleport",
+					"entries": [
+						"伊戈尔会将自己连同身上穿戴或携带的任何装备传送到 36 米以外的空旷地带。"
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Scythe",
+					"entries": [
+						"伊戈尔用它的镰刀进行一次攻击。"
+					]
+				},
+				{
+					"name": "Teleport",
+					"entries": [
+						"伊戈尔使用它的传送行动。"
+					]
+				},
+				{
+					"name": "Call the Void (Costs 3 Actions)",
+					"entries": [
+						"在伊戈尔 9 米范围内的每个非构装生物或亡灵生物都必须进行 {@dc 22} 体质蓄力，以抵御熵之王试图解除生命的攻击，蓄力失败会受到 42 ({@damage 12d6}) 新陈代谢伤害，蓄力成功则会受到一半的伤害。然后伊戈尔会恢复相当于所有受影响生物受到的总伤害一半的命中点数。"
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Teleport"
+			],
+			"languageTags": [
+				"TP",
+				"XX"
+			],
+			"damageTags": [
+				"N",
+				"S"
+			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"F",
+				"I",
+				"L",
+				"N",
+				"O",
+				"T",
+				"Y"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"exhaustion"
+			],
+			"conditionInflictSpell": [
+				"frightened",
+				"incapacitated",
+				"stunned",
+				"unconscious"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"intelligence",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

@@ -1,0 +1,840 @@
+{
+	"spell": [
+		{
+			"name": "Dark Star",
+			"source": "EGW",
+			"page": 186,
+			"level": 8,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 150
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "en skärva av onyx och en droppe av besvärjarens blod, som båda förbrukas av besvärjelsen",
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Den här besvärjelsen skapar en sfär med centrum på en punkt du väljer inom räckhåll. Sfären kan ha en radie på upp till 12 meter. Området inom denna sfär fylls av magiskt mörker och förkrossande gravitationskraft.",
+				"Under besvärjelsens varaktighet är dess område {@quickref difficult terrain||3}. En varelse med mörkerseende kan inte se genom det magiska mörkret, och icke-magiskt ljus kan inte belysa det. Inget ljud kan skapas inom eller passera genom området. Varelser eller föremål som befinner sig helt och hållet inom sfären är immuna mot åskskador, och varelser är {@condition deafened} när de befinner sig helt och hållet inom sfären. Att kasta en besvärjelse som innehåller en verbal komponent är omöjligt där.",
+				"Varje varelse som kommer in i besvärjelsens område för första gången under en tur eller börjar sin tur där måste göra ett räddningsslag för konstitution. Varelsen tar {@damage 8d10} kraftskada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat. En varelse som reduceras till 0 träffpunkter av denna skada sönderdelas. En upplöst varelse och allt den bär på sig, utom magiska föremål, reduceras till en hög av fint grått damm."
+			],
+			"damageInflict": [
+				"force"
+			],
+			"conditionInflict": [
+				"deafened"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"DFT",
+				"OBJ"
+			],
+			"areaTags": [
+				"S"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Fortune's Favor",
+			"source": "EGW",
+			"page": 186,
+			"level": 2,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "en vit pärla värd minst 100 gp, som besvärjelsen förbrukar",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Du ger latent tur till dig själv eller till en villig varelse som du kan se inom räckhåll. När den utvalda varelsen gör ett attackkast, en förmågekontroll eller ett räddningsslag innan besvärjelsen upphör, kan den avbryta besvärjelsen på sig själv för att kasta ytterligare {@dice d20} och välja vilken av {@dice d20}erna som ska användas. Alternativt, när ett attackkast görs mot den valda varelsen, kan den förkasta denna besvärjelse på sig själv för att kasta ett {@dice d20} och välja vilken av {@dice d20}s som ska användas, den som den kastade eller den som angriparen kastade.",
+				"Om det ursprungliga kastet {@dice d20} har fördel eller nackdel, kastar varelsen det ytterligare kastet {@dice d20} efter att fördelen eller nackdelen har tillämpats på det ursprungliga kastet."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med en spell slot på 3:e nivå eller högre kan du rikta en ytterligare varelse för varje slot-nivå över 2:a nivån."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Gift of Alacrity",
+			"source": "EGW",
+			"page": 186,
+			"level": 1,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"Du rör vid en villig varelse. Under varaktigheten kan målet lägga till {@dice 1d8} till sina initiativkast."
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Gravity Fissure",
+			"source": "EGW",
+			"page": 187,
+			"level": 6,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "line",
+				"distance": {
+					"type": "feet",
+					"amount": 100
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "en näve järnfilspån"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du manifesterar en ravin av gravitationsenergi i en linje som utgår från dig och som är 3 meter lång och 1,5 meter bred. Varje varelse i linjen måste göra ett Konstitutionsräddningsslag, och tar {@damage 8d8} kraftskada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat.",
+				"Varje varelse inom 3 meter från linjen men inte i den måste lyckas med ett konstitutionssparande eller ta {@damage 8d8} kraftskada och dras mot linjen tills varelsen är i dess område."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med en besvärjelseplats på 7:e nivån eller högre, ökar skadan med {@scaledamage 8d8|6-9|1d8} för varje platsnivå över 6:e."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"areaTags": [
+				"L"
+			]
+		},
+		{
+			"name": "Gravity Sinkhole",
+			"source": "EGW",
+			"page": 187,
+			"level": 4,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "en svart marmor"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"En sfär med 6 meters radie av krossande kraft bildas vid en punkt du kan se inom räckhåll och drar i varelserna där. Varje varelse i sfären måste göra ett Konstitutionsräddningsslag. Vid ett misslyckat räddningsslag tar varelsen {@damage 5d10} kraftskada och dras i en rak linje mot sfärens centrum och slutar i ett ledigt utrymme så nära centrum som möjligt (även om det utrymmet är i luften). Vid ett lyckat räddningsslag tar varelsen hälften så mycket skada och dras inte."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 5:e nivån eller högre, ökar skadan med {@scaledamage 5d10|4-9|1d10} för varje platsnivå över 4:e."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Immovable Object",
+			"source": "EGW",
+			"page": 187,
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "guldstoft värt minst 25 gp, som besvärjelsen förbrukar",
+					"cost": 2500,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Du rör vid ett föremål som inte väger mer än 5 kilogram och får det att magiskt fixeras på plats. Du och de varelser du utser när du kastar denna besvärjelse kan flytta föremålet normalt. Du kan också ange ett lösenord som, när det uttalas inom 1,5 meter från föremålet, undertrycker denna besvärjelse i 1 minut.",
+				"Om föremålet är fixerat i luften kan det hålla upp till 4, kilogramm vikt. Mer vikt får föremålet att falla. I annat fall kan en varelse använda en handling för att göra en styrkekontroll mot din trollformels räddning DC. Om den lyckas kan varelsen flytta föremålet upp till 3 meter."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Om du använder en besvärjelseplats på 4:e eller 5:e nivån ökar DC för att flytta föremålet med 5, det kan bära upp till 8 kilograms vikt och varaktigheten ökar till 24 timmar. Om du använder en besvärjelseplats på 6:e nivån eller högre, ökar DC för att flytta föremålet med 10, det kan bära upp till 20 kilogram vikt, och effekten är permanent tills den upphävs."
+					]
+				}
+			],
+			"abilityCheck": [
+				"strength"
+			],
+			"miscTags": [
+				"OBJ"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Magnify Gravity",
+			"source": "EGW",
+			"page": 188,
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Gravitationen i en sfär med 3 meters radie centrerad på en punkt som du kan se inom räckhåll ökar för ett ögonblick. Varje varelse i sfären under den tur då du kastar besvärjelsen måste göra ett räddningsslag i konstitution. Vid ett misslyckat räddningsslag tar varelsen {@damage 2d8} kraftskada, och dess hastighet halveras till slutet av nästa tur. Vid ett lyckat räddningsslag tar varelsen hälften så mycket skada och drabbas inte av någon minskning av sin hastighet.",
+				"Fram till början av din nästa vändning kräver alla föremål som inte bärs eller bärs i sfären en lyckad styrkasprov mot din spellednings räddnings-DC för att tas upp eller förflyttas."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 2:a nivån eller högre, ökar skadan med {@scaledamage 2d8|1-9|1d8} för varje besvärjelseplatsnivå över 1:a."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"OBJ",
+				"SGT"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Pulse Wave",
+			"source": "EGW",
+			"page": 188,
+			"level": 3,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du skapar ett intensivt tryck, släpper ut det i en 9-meters kon och bestämmer om trycket ska dra eller skjuta varelser och föremål. Varje varelse i konen måste göra ett Konstitutionsräddningsslag. En varelse tar {@damage 6d6} kraftskada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat. Och varje varelse som misslyckas med räddningsslaget dras antingen 4,5 meter mot dig eller knuffas 4,5 meter bort från dig, beroende på vilket val du gjorde för besvärjelsen.",
+				"Dessutom dras eller skjuts osäkrade föremål som befinner sig helt inom konen 4,5 meter."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 4:e nivån eller högre, ökar skadan med {@scaledamage 6d6|3-9|1d6} och avståndet som dras eller knuffas ökar med 1,5 meter för varje besvärjelseplatsnivå över 3:e nivån."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"FMV",
+				"OBJ"
+			],
+			"areaTags": [
+				"N"
+			]
+		},
+		{
+			"name": "Ravenous Void",
+			"source": "EGW",
+			"page": 188,
+			"level": 9,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 1000
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "en liten, niouddig stjärna av järn"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du skapar en sfär med 6 meters radie av destruktiv gravitationskraft centrerad på en punkt som du kan se inom räckhåll. Under besvärjelsens varaktighet är sfären och allt utrymme inom 3 meter från den {@quickref difficult terrain||3}, och icke-magiska föremål helt inne i sfären förstörs om de inte bärs eller bärs.",
+				"När sfären visas och i början av varje tur tills besvärjelsen upphör, dras oskyddade föremål inom 3 meter från sfären mot sfärens centrum och hamnar i ett ledigt utrymme så nära centrum som möjligt.",
+				"En varelse som börjar sin tur inom 3 meter från sfären måste lyckas med ett styrkebesparande kast eller dras rakt mot sfärens centrum och slutar i ett ledigt utrymme så nära centrum som möjligt. En varelse som kommer in i sfären för första gången under en tur eller börjar sin tur där tar {@damage 5d10} kraftskada och är {@condition restrained} tills den inte längre är i sfären. Om sfären är i luften svävar {@condition restrained} varelsen inuti sfären. En varelse kan använda sin handling för att göra en styrkekontroll mot din trollformels räddning DC och avsluta detta {@condition restrained} tillstånd på sig själv eller en annan varelse i sfären som den kan nå. En varelse som reducerats till 0 träffpunkter av denna besvärjelse förintas, tillsammans med alla icke-magiska föremål som den bär på sig eller bär med sig."
+			],
+			"damageInflict": [
+				"force"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrow": [
+				"strength"
+			],
+			"abilityCheck": [
+				"strength"
+			],
+			"miscTags": [
+				"OBJ",
+				"SGT"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Reality Break",
+			"source": "EGW",
+			"page": 189,
+			"level": 8,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "ett kristallprisma"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du krossar barriärerna mellan verkligheter och tidslinjer och kastar en varelse in i kaos och galenskap. Målet måste lyckas med ett räddningsslag för visdom, annars kan det inte reagera förrän besvärjelsen är slut. Det drabbade målet måste också slå ett {@dice d10} i början av varje tur; det slagna talet avgör vad som händer med målet, som visas i tabellen Verklighetsbrottseffekter.",
+				"I slutet av varje vändning kan det drabbade målet upprepa sitt räddningskast för visdom och avsluta besvärjelsen på sig själv om det lyckas.",
+				{
+					"type": "table",
+					"caption": "Reality Break Effects",
+					"colLabels": [
+						"d10",
+						"Effect"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1-2",
+							"{@b Vision av det avlägsna riket.} Målet tar {@damage 6d12} psykisk skada, och det är {@condition stunned} till slutet av turen."
+						],
+						[
+							"3-5",
+							"{@b Rending Rift.} Målet måste göra ett räddningsslag i Dexterity och tar {@damage 8d12} kraftskada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat."
+						],
+						[
+							"6-8",
+							"{@b Maskhål.} Målet teleporteras, tillsammans med allt det har på sig och bär, upp till 9 meter till ett ledigt utrymme som du väljer och som du kan se. Målet tar också {@damage 10d12} kraftskada och knockas {@condition prone}."
+						],
+						[
+							"9-10",
+							"{@b Chill of the Dark Void.} Målet tar {@damage 10d12} kall skada, och det är {@condition blinded} till slutet av turen."
+						]
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic",
+				"force",
+				"cold"
+			],
+			"conditionInflict": [
+				"stunned",
+				"prone",
+				"blinded"
+			],
+			"savingThrow": [
+				"wisdom",
+				"dexterity"
+			],
+			"miscTags": [
+				"RO",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sapping Sting",
+			"source": "EGW",
+			"page": 189,
+			"level": 0,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du tär på livskraften hos en varelse som du kan se inom räckhåll. Målet måste lyckas med ett Konstitutionsräddningsslag eller ta {@damage 1d4} nekrotisk skada och falla {@condition prone}.",
+				"Denna besvärjelses skada ökar med {@dice 1d4} när du når 5:e nivån ({@dice 2d4}), 11:e nivån ({@dice 3d4}) och 17:e nivån ({@dice 4d4})."
+			],
+			"scalingLevelDice": {
+				"label": "necrotic damage",
+				"scaling": {
+					"1": "1d4",
+					"5": "2d4",
+					"11": "3d4",
+					"17": "4d4"
+				}
+			},
+			"damageInflict": [
+				"necrotic"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Temporal Shunt",
+			"source": "EGW",
+			"page": 189,
+			"level": 5,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "taken when a creature you can see makes an attack roll or starts to cast a spell"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Du riktar dig mot den utlösande varelsen, som måste lyckas med ett räddningskast i Visdom eller försvinna, och kastas till en annan tidpunkt i tiden, vilket gör att attacken missar eller att trollformeln är bortkastad. I början av sin nästa vändning dyker målet upp igen där det var eller i det närmaste obefolkade utrymmet. Målet minns inte att du kastade besvärjelsen eller att du påverkades av den."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 6:e nivån eller högre, kan du rikta besvärjelsen mot ytterligare en varelse för varje besvärjelseplatsnivå över 5:e nivån. Alla mål måste vara inom 9 meter från varandra."
+					]
+				}
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Tether Essence",
+			"source": "EGW",
+			"page": 189,
+			"level": 7,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "en spole platinasnöre värd minst 250 gp, som besvärjelsen förbrukar",
+					"cost": 25000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Två varelser som du kan se inom räckhåll måste göra ett Konstitutionssparande, med nackdel om de är inom 9 meter från varandra. Var och en av varelserna kan frivilligt misslyckas med räddningsslaget. Om någon av dem lyckas, har besvärjelsen ingen effekt. Om båda räddningsslagen misslyckas, är varelserna magiskt sammanlänkade under varaktigheten, oavsett avståndet mellan dem. När skada tillfogas den ena av dem, tillfogas samma skada den andra. Om träffpunkter återställs till en av dem, återställs samma antal träffpunkter till den andra. Om någon av de bundna varelserna reduceras till 0 träffpunkter, upphör besvärjelsen för båda. Om besvärjelsen upphör på en varelse, upphör den på båda."
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Time Ravage",
+			"source": "EGW",
+			"page": 189,
+			"level": 9,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ett timglas fyllt med diamantstoft värt minst 5 000 gp, som besvärjelsen förbrukar",
+					"cost": 500000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du riktar dig mot en varelse du kan se inom räckhåll och utsätter dess fysiska form för förödelsen av snabbt åldrande. Målet måste göra ett konstitutionellt räddningsslag och tar {@damage 10d12} nekrotisk skada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat. Om räddningsslaget misslyckas åldras målet också till den punkt där det bara har 30 dagar kvar innan det dör av ålderdom. I detta åldrade tillstånd har målet nackdel vid attackkast, förmågekontroller och räddningskast, och dess gånghastighet är halverad. Endast besvärjelsen {@spell wish} eller besvärjelsen {@spell greater restoration} med en besvärjelseplats på 9:e nivån kan häva dessa effekter och återställa målet till dess tidigare ålder."
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Wristpocket",
+			"source": "EGW",
+			"page": 190,
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"Du knäpper med handleden och ett föremål i din hand försvinner. Föremålet, som bara du kan hålla i och som inte får väga mer än 2,5 kilogram, transporteras till en extradimensionell rymd, där det stannar under tiden.",
+				"Tills förtrollningen upphör kan du använda din handling för att kalla föremålet till din fria hand, och du kan använda din handling för att återföra föremålet till det extradimensionella rummet. Ett föremål som fortfarande befinner sig i fickplanet när förtrollningen upphör visas i ditt utrymme, vid dina fötter."
+			],
+			"areaTags": [
+				"ST"
+			]
+		}
+	]
+}

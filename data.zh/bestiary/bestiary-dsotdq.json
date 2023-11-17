@@ -1,0 +1,8977 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		},
+		"internalCopies": [
+			"monster"
+		],
+		"otherSources": {
+			"monster": {
+				"MM": "DSotDQ"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Amelia Ghallen",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 180,
+			"_copy": {
+				"name": "Veteran",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the veteran",
+						"with": "Amelia",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Andir Valmakos",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 210,
+			"level": 1,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				],
+				"sidekickType": "spellcaster",
+				"sidekickTags": [
+					"mage"
+				]
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"{@item leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 11,
+				"formula": "2d8 + 2"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 12,
+			"con": 12,
+			"int": 14,
+			"wis": 11,
+			"cha": 10,
+			"save": {
+				"wis": "+2"
+			},
+			"skill": {
+				"arcana": "+4",
+				"history": "+4",
+				"investigation": "+4",
+				"religion": "+4"
+			},
+			"passive": 10,
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"pbNote": "+2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"安迪尔的法术能力是智力（法术保存（%0%），用法术攻击命中率（%1%））。他准备了以下巫师法术。"
+					],
+					"will": [
+						"{@spell light}",
+						"{@spell ray of frost}"
+					],
+					"spells": {
+						"1": {
+							"slots": 2,
+							"spells": [
+								"{@spell thunderwave}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Bonus Proficiencies",
+					"entries": [
+						"安迪尔精通简单的武器和轻便的盔甲。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Arcane Burst",
+					"entries": [
+						"{@atk ms,rs} {@hit 4} 命中，距离 1.5 米或范围 36 米，一个目标。{@h}7 ({@damage 1d10 + 2}) 力量伤害。"
+					]
+				},
+				{
+					"name": "Quarterstaff",
+					"entries": [
+						"{@atk mw} {@hit 2} 命中，距离 1.5 米，一个目标。{@h}3 ({@damage 1d6}) 暴击伤害，如果双手使用则为 4 ({@damage 1d8}) 暴击伤害。"
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "inset",
+					"name": "Andir beyond 1st Level",
+					"entries": [
+						{
+							"type": "table",
+							"colLabels": [
+								"Level",
+								"Hit Points",
+								"New Features"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-2",
+								"col-8"
+							],
+							"rows": [
+								[
+									"第 2",
+									"16 ({@dice 3d8 + 3})",
+									"咒语。安迪尔又学会了一个一级法术：（%0%）。"
+								],
+								[
+									"第 3 次",
+									"22 ({@dice 4d8 + 4})",
+									"咒语。安迪尔获得一个一级法术槽。他也学会了另一个一级法术：（%0%）。"
+								],
+								[
+									"第四届",
+									"27 ({@dice 5d8 + 5})",
+									"能力得分的提高。安迪尔的智力分数增加了2分，提高了1分的修正值，因此以下数字增加了1分：他的法术救赎DC，他的法术攻击的命中奖励，以及他的技能条目中的奖励。施法。安迪尔学会了另一个咒语：（%0%）。"
+								],
+								[
+									"第 5 次",
+									"33 ({@dice 6d8 + 6})",
+									"熟练度奖励。安迪尔的熟练度奖励增加了1，所以以下数字都增加了1：他的法术保全DC，他的四角杖和法术攻击的命中率奖励，以及保全投掷和技能项目中的奖励。法术攻击。安迪尔获得一个一级法术槽和两个二级法术槽。他还学会了一个二级法术：（%0%）。"
+								],
+								[
+									"第六届",
+									"38 ({@dice 7d8 + 7})",
+									"强力咒语。安迪尔在使用任何咒语所造成的伤害上加上他的智力修正值。他还学会了一个二级法术：（%0%）。"
+								],
+								[
+									"第七届",
+									"44 ({@dice 8d8 + 8})",
+									"咒语。安迪尔获得一个二阶法术槽。他还学会了另一个2级法术：（%0%）。"
+								],
+								[
+									"第八届",
+									"49 ({@dice 9d8 + 9})",
+									"能力得分的提高。安迪尔的智力分值增加2，提高了1的修正值，因此将以下数字增加1：他的法术救赎DC，他的法术攻击的命中奖励，以及他的技能条目中的奖励。"
+								],
+								[
+									"第 9 次",
+									"55 ({@dice 10d8 + 10})",
+									"熟练度奖励。安迪尔的熟练度奖励增加了1，所以以下数字都增加了1：他的法术保全DC，他的四角杖和法术攻击的命中率奖励，以及保全投掷和技能项目中的奖励。咒语。安迪尔获得两个三级法术槽。他还学会了一个三级法术：（%0%）。"
+								],
+								[
+									"第 10 次",
+									"60 ({@dice 11d8 + 11})",
+									"咒语。安迪尔学会了另一个咒语：{@spell minor illusion}.级法术：(%1%)。"
+								],
+								[
+									"第十一届",
+									"66 ({@dice 12d8 + 12})",
+									"咒语。安迪尔获得一个3级法术槽。他还学会了另一个三级法术：（%0%）。"
+								]
+							]
+						}
+					]
+				}
+			],
+			"attachedItems": [
+				"quarterstaff|phb"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"B",
+				"O"
+			],
+			"damageTagsSpell": [
+				"C",
+				"T"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Andir Valmakos (10th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Potent Cantrips",
+								"entries": [
+									"安迪尔在使用任何咒语所造成的伤害上加上他的智力修正值。"
+								]
+							}
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Quarterstaff",
+							"items": {
+								"name": "Quarterstaff",
+								"entries": [
+									"{@atk mw} {@hit 4} 命中，距离 1.5 米，一个目标。{@h}3 ({@damage 1d6}) 暴击伤害，如果双手使用则为 4 ({@damage 1d8}) 暴击伤害。"
+								]
+							}
+						}
+					},
+					"level": 10,
+					"hp": {
+						"average": 60,
+						"formula": "11d8 + 11"
+					},
+					"int": 18,
+					"save": {
+						"wis": "+4"
+					},
+					"skill": {
+						"arcana": "+8",
+						"history": "+8",
+						"investigation": "+8",
+						"religion": "+8"
+					},
+					"pbNote": "+4",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"安迪尔的法术能力是智力（法术保存（%0%），用法术攻击命中率（%1%））。他准备了以下巫师法术。"
+							],
+							"will": [
+								"{@spell light}",
+								"{@spell ray of frost}",
+								"{@spell mage hand}",
+								"{@spell minor illusion}"
+							],
+							"spells": {
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell thunderwave}",
+										"{@spell longstrider}",
+										"{@spell Tenser's floating disk}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell knock}",
+										"{@spell invisibility}"
+									]
+								},
+								"3": {
+									"slots": 2,
+									"spells": [
+										"{@spell haste}"
+									]
+								}
+							},
+							"ability": "int"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Andir Valmakos (11th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Potent Cantrips",
+								"entries": [
+									"安迪尔在使用任何咒语所造成的伤害上加上他的智力修正值。"
+								]
+							}
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Quarterstaff",
+							"items": {
+								"name": "Quarterstaff",
+								"entries": [
+									"{@atk mw} {@hit 4} 命中，距离 1.5 米，一个目标。{@h}3 ({@damage 1d6}) 暴击伤害，如果双手使用则为 4 ({@damage 1d8}) 暴击伤害。"
+								]
+							}
+						}
+					},
+					"level": 11,
+					"hp": {
+						"average": 66,
+						"formula": "12d8 + 12"
+					},
+					"int": 18,
+					"save": {
+						"wis": "+4"
+					},
+					"skill": {
+						"arcana": "+8",
+						"history": "+8",
+						"investigation": "+8",
+						"religion": "+8"
+					},
+					"pbNote": "+4",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"安迪尔的法术能力是智力（法术保存（%0%），用法术攻击命中率（%1%））。他准备了以下巫师法术。"
+							],
+							"will": [
+								"{@spell light}",
+								"{@spell ray of frost}",
+								"{@spell mage hand}",
+								"{@spell minor illusion}"
+							],
+							"spells": {
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell thunderwave}",
+										"{@spell longstrider}",
+										"{@spell Tenser's floating disk}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell knock}",
+										"{@spell invisibility}"
+									]
+								},
+								"3": {
+									"slots": 3,
+									"spells": [
+										"{@spell haste}",
+										"{@spell sending}"
+									]
+								}
+							},
+							"ability": "int"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Andir Valmakos (2nd Level)",
+					"source": "DSotDQ",
+					"level": 2,
+					"hp": {
+						"average": 16,
+						"formula": "3d8 + 3"
+					},
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"安迪尔的法术能力是智力（法术保存（%0%），用法术攻击命中率（%1%））。他准备了以下巫师法术。"
+							],
+							"will": [
+								"{@spell light}",
+								"{@spell ray of frost}"
+							],
+							"spells": {
+								"1": {
+									"slots": 2,
+									"spells": [
+										"{@spell thunderwave}",
+										"{@spell longstrider}"
+									]
+								}
+							},
+							"ability": "int"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Andir Valmakos (3rd Level)",
+					"source": "DSotDQ",
+					"level": 3,
+					"hp": {
+						"average": 22,
+						"formula": "4d8 + 4"
+					},
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"安迪尔的法术能力是智力（法术保存（%0%），用法术攻击命中率（%1%））。他准备了以下巫师法术。"
+							],
+							"will": [
+								"{@spell light}",
+								"{@spell ray of frost}"
+							],
+							"spells": {
+								"1": {
+									"slots": 3,
+									"spells": [
+										"{@spell thunderwave}",
+										"{@spell longstrider}",
+										"{@spell Tenser's floating disk}"
+									]
+								}
+							},
+							"ability": "int"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Andir Valmakos (4th Level)",
+					"source": "DSotDQ",
+					"level": 4,
+					"hp": {
+						"average": 27,
+						"formula": "5d8 + 5"
+					},
+					"int": 16,
+					"skill": {
+						"arcana": "+5",
+						"history": "+5",
+						"investigation": "+5",
+						"religion": "+5"
+					},
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"安迪尔的法术能力是智力（法术保存（%0%），用法术攻击命中率（%1%））。他准备了以下巫师法术。"
+							],
+							"will": [
+								"{@spell light}",
+								"{@spell ray of frost}",
+								"{@spell mage hand}"
+							],
+							"spells": {
+								"1": {
+									"slots": 3,
+									"spells": [
+										"{@spell thunderwave}",
+										"{@spell longstrider}",
+										"{@spell Tenser's floating disk}"
+									]
+								}
+							},
+							"ability": "int"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Andir Valmakos (5th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Quarterstaff",
+							"items": {
+								"name": "Quarterstaff",
+								"entries": [
+									"{@atk mw} {@hit 3} 命中，距离 1.5 米，一个目标。{@h}3 ({@damage 1d6}) 暴击伤害，如果双手使用则为 4 ({@damage 1d8}) 暴击伤害。"
+								]
+							}
+						}
+					},
+					"level": 5,
+					"hp": {
+						"average": 33,
+						"formula": "6d8 + 6"
+					},
+					"int": 16,
+					"save": {
+						"wis": "+3"
+					},
+					"skill": {
+						"arcana": "+6",
+						"history": "+6",
+						"investigation": "+6",
+						"religion": "+6"
+					},
+					"pbNote": "+3",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"安迪尔的法术能力是智力（法术保存（%0%），用法术攻击命中率（%1%））。他准备了以下巫师法术。"
+							],
+							"will": [
+								"{@spell light}",
+								"{@spell ray of frost}",
+								"{@spell mage hand}"
+							],
+							"spells": {
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell thunderwave}",
+										"{@spell longstrider}",
+										"{@spell Tenser's floating disk}"
+									]
+								},
+								"2": {
+									"slots": 2,
+									"spells": [
+										"{@spell knock}"
+									]
+								}
+							},
+							"ability": "int"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Andir Valmakos (6th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Potent Cantrips",
+								"entries": [
+									"安迪尔在使用任何咒语所造成的伤害上加上他的智力修正值。"
+								]
+							}
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Quarterstaff",
+							"items": {
+								"name": "Quarterstaff",
+								"entries": [
+									"{@atk mw} {@hit 3} 命中，距离 1.5 米，一个目标。{@h}3 ({@damage 1d6}) 暴击伤害，如果双手使用则为 4 ({@damage 1d8}) 暴击伤害。"
+								]
+							}
+						}
+					},
+					"level": 6,
+					"hp": {
+						"average": 38,
+						"formula": "7d8 + 7"
+					},
+					"int": 16,
+					"save": {
+						"wis": "+3"
+					},
+					"skill": {
+						"arcana": "+6",
+						"history": "+6",
+						"investigation": "+6",
+						"religion": "+6"
+					},
+					"pbNote": "+3",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"安迪尔的法术能力是智力（法术保存（%0%），用法术攻击命中率（%1%））。他准备了以下巫师法术。"
+							],
+							"will": [
+								"{@spell light}",
+								"{@spell ray of frost}",
+								"{@spell mage hand}"
+							],
+							"spells": {
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell thunderwave}",
+										"{@spell longstrider}",
+										"{@spell Tenser's floating disk}"
+									]
+								},
+								"2": {
+									"slots": 2,
+									"spells": [
+										"{@spell knock}"
+									]
+								}
+							},
+							"ability": "int"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Andir Valmakos (7th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Potent Cantrips",
+								"entries": [
+									"安迪尔在使用任何咒语所造成的伤害上加上他的智力修正值。"
+								]
+							}
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Quarterstaff",
+							"items": {
+								"name": "Quarterstaff",
+								"entries": [
+									"{@atk mw} {@hit 3} 命中，距离 1.5 米，一个目标。{@h}3 ({@damage 1d6}) 暴击伤害，如果双手使用则为 4 ({@damage 1d8}) 暴击伤害。"
+								]
+							}
+						}
+					},
+					"level": 7,
+					"hp": {
+						"average": 44,
+						"formula": "8d8 + 8"
+					},
+					"int": 16,
+					"save": {
+						"wis": "+3"
+					},
+					"skill": {
+						"arcana": "+6",
+						"history": "+6",
+						"investigation": "+6",
+						"religion": "+6"
+					},
+					"pbNote": "+3",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"安迪尔的法术能力是智力（法术保存（%0%），用法术攻击命中率（%1%））。他准备了以下巫师法术。"
+							],
+							"will": [
+								"{@spell light}",
+								"{@spell ray of frost}",
+								"{@spell mage hand}"
+							],
+							"spells": {
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell thunderwave}",
+										"{@spell longstrider}",
+										"{@spell Tenser's floating disk}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell knock}",
+										"{@spell invisibility}"
+									]
+								}
+							},
+							"ability": "int"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Andir Valmakos (8th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Potent Cantrips",
+								"entries": [
+									"安迪尔在使用任何咒语所造成的伤害上加上他的智力修正值。"
+								]
+							}
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Quarterstaff",
+							"items": {
+								"name": "Quarterstaff",
+								"entries": [
+									"{@atk mw} {@hit 3} 命中，距离 1.5 米，一个目标。{@h}3 ({@damage 1d6}) 暴击伤害，如果双手使用则为 4 ({@damage 1d8}) 暴击伤害。"
+								]
+							}
+						}
+					},
+					"level": 8,
+					"hp": {
+						"average": 49,
+						"formula": "9d8 + 9"
+					},
+					"int": 18,
+					"save": {
+						"wis": "+3"
+					},
+					"skill": {
+						"arcana": "+7",
+						"history": "+7",
+						"investigation": "+7",
+						"religion": "+7"
+					},
+					"pbNote": "+3",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"安迪尔的法术能力是智力（法术保存（%0%），用法术攻击命中率（%1%））。他准备了以下巫师法术。"
+							],
+							"will": [
+								"{@spell light}",
+								"{@spell ray of frost}",
+								"{@spell mage hand}"
+							],
+							"spells": {
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell thunderwave}",
+										"{@spell longstrider}",
+										"{@spell Tenser's floating disk}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell knock}",
+										"{@spell invisibility}"
+									]
+								}
+							},
+							"ability": "int"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Andir Valmakos (9th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Potent Cantrips",
+								"entries": [
+									"安迪尔在使用任何咒语所造成的伤害上加上他的智力修正值。"
+								]
+							}
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Quarterstaff",
+							"items": {
+								"name": "Quarterstaff",
+								"entries": [
+									"{@atk mw} {@hit 4} 命中，距离 1.5 米，一个目标。{@h}3 ({@damage 1d6}) 暴击伤害，如果双手使用则为 4 ({@damage 1d8}) 暴击伤害。"
+								]
+							}
+						}
+					},
+					"level": 9,
+					"hp": {
+						"average": 55,
+						"formula": "10d8 + 10"
+					},
+					"int": 18,
+					"save": {
+						"wis": "+4"
+					},
+					"skill": {
+						"arcana": "+8",
+						"history": "+8",
+						"investigation": "+8",
+						"religion": "+8"
+					},
+					"pbNote": "+4",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"安迪尔的法术能力是智力（法术保存（%0%），用法术攻击命中率（%1%））。他准备了以下巫师法术。"
+							],
+							"will": [
+								"{@spell light}",
+								"{@spell ray of frost}",
+								"{@spell mage hand}"
+							],
+							"spells": {
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell thunderwave}",
+										"{@spell longstrider}",
+										"{@spell Tenser's floating disk}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell knock}",
+										"{@spell invisibility}"
+									]
+								},
+								"3": {
+									"slots": 2,
+									"spells": [
+										"{@spell haste}"
+									]
+								}
+							},
+							"ability": "int"
+						}
+					],
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Anhkolox",
+			"source": "DSotDQ",
+			"page": 192,
+			"size": [
+				"H"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 157,
+				"formula": "15d12 + 60"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 22,
+			"dex": 11,
+			"con": 18,
+			"int": 4,
+			"wis": 14,
+			"cha": 2,
+			"save": {
+				"wis": "+6"
+			},
+			"skill": {
+				"perception": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 16,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"poisoned"
+			],
+			"cr": "9",
+			"trait": [
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"anhkolox不需要空气、食物、饮料或睡眠。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"安科洛克斯进行两次爪击和一次诱捕攻击。"
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 10} 命中，距离 1.5 米，一个目标。{@h}17 ({@damage 2d10 + 6}) 穿刺伤害。如果目标是大型或更小的生物，则必须在{@dc 18}力量蓄力中成功，否则会被推向安科洛丝选择的水平方向最多 6 米。"
+					]
+				},
+				{
+					"name": "Entrapping Rend",
+					"entries": [
+						"{@atk mw} {@hit 10} 命中，距离 1.5 米，一个目标。{@h}23（{@damage 5d6 + 6}）穿透伤害，如果目标是大型或更小的生物，目标必须在{@dc 18}力量蓄力中成功，否则会被困在anhkolox的肋骨笼中并{@condition grappled}（逃脱{@dc 18}）。在此抓取结束之前，目标会被 {@condition restrained}，而且安科洛克斯无法对其他目标使用禁锢撕裂。"
+					]
+				}
+			],
+			"traitTags": [
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Aurak Draconian",
+			"source": "DSotDQ",
+			"page": 196,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "monstrosity",
+				"tags": [
+					"sorcerer"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 67,
+				"formula": "9d8 + 27"
+			},
+			"speed": {
+				"walk": 35
+			},
+			"str": 13,
+			"dex": 14,
+			"con": 16,
+			"int": 16,
+			"wis": 11,
+			"cha": 17,
+			"save": {
+				"int": "+6",
+				"wis": "+3",
+				"cha": "+6"
+			},
+			"skill": {
+				"perception": "+3"
+			},
+			"senses": [
+				"truesight 60 ft."
+			],
+			"passive": 13,
+			"conditionImmune": [
+				"charmed"
+			],
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"龙人施展以下一种法术，不需要任何材料成分，并使用魅力作为施法能力（法术保存（%0%））。"
+					],
+					"will": [
+						"{@spell invisibility}",
+						"{@spell mage hand}"
+					],
+					"daily": {
+						"1": [
+							"{@spell dominate person}"
+						],
+						"2e": [
+							"{@spell dimension door}",
+							"{@spell disguise self}",
+							"{@spell sending}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Aura of Command",
+					"entries": [
+						"龙人以自身为中心，在半径 6 米的范围内散发出命令般的气场。光环中的龙人如果能看到或听到奥拉克的声音，就不会受到 {@condition charmed} 的伤害，并且在避免或结束自身受到 {@condition frightened} 伤害的情况下有优势。"
+					]
+				},
+				{
+					"name": "Death Throes",
+					"entries": [
+						"当龙人的命中率降至 0 时，它的魔法精华会以闪电球的形式射向距离它 9 米内最近的生物，然后再向距离第一个生物 4.5 米内的另外两个生物射出弧线。每个生物都必须进行 {@dc 14} 灵巧蓄力。如果蓄力失败，该生物会受到 9（{@damage 2d8}）次闪电伤害并 {@condition stunned} 直到下一回合结束。如果蓄力成功，该生物会受到一半的伤害，并且不会 {@condition stunned}。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"龙人进行三次Rend或Energy Ray攻击。"
+					]
+				},
+				{
+					"name": "Rend",
+					"entries": [
+						"{@atk mw} {@hit 5} 命中，距离 1.5 米，一个目标。{@h}8 ({@damage 1d12 + 2}) 砍伤。"
+					]
+				},
+				{
+					"name": "Energy Ray",
+					"entries": [
+						"{@atk rs} {@hit 6} 命中，射程 18 米，一个目标。{@h}8 ({@damage 1d10 + 3}) 力量伤害。"
+					]
+				},
+				{
+					"name": "Noxious Breath {@recharge 5}",
+					"entries": [
+						"龙人会呼出一个 4.5 米长的有毒气体圆锥体。该区域内的每个生物都必须进行一次 {@dc 14} 体质蓄力。如果蓄力失败，该生物会受到 21 ({@damage 6d6}) 的中毒伤害，并获得 1 级 {@condition exhaustion} 的伤害。如果蓄力成功，该生物会受到一半的伤害，不会获得 {@condition exhaustion} 的伤害，并在 24 小时内免疫所有龙人的毒气。"
+					]
+				}
+			],
+			"traitTags": [
+				"Death Burst"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"I",
+				"L",
+				"O",
+				"S"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"exhaustion",
+				"stunned"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"invisible"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ayik Ur",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 211,
+			"level": 1,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				],
+				"sidekickType": "warrior",
+				"sidekickTags": [
+					"attacker"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|PHB|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 11,
+				"formula": "2d8 + 2"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 16,
+			"con": 12,
+			"int": 11,
+			"wis": 13,
+			"cha": 11,
+			"save": {
+				"dex": "+5"
+			},
+			"skill": {
+				"athletics": "+2",
+				"nature": "+2",
+				"perception": "+5",
+				"stealth": "+5",
+				"survival": "+3"
+			},
+			"passive": 15,
+			"languages": [
+				"Common"
+			],
+			"pbNote": "+2",
+			"trait": [
+				{
+					"name": "Attacker",
+					"entries": [
+						"阿伊克在所有的攻击卷中获得+2的奖励（包括以下）。"
+					]
+				},
+				{
+					"name": "Bonus Proficiencies",
+					"entries": [
+						"阿伊克精通简单和武术武器、盾牌和所有盔甲。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 7} 命中，距离 1.5 米，一个目标。{@h}6 ({@damage 1d6 + 3}) 穿透伤害。"
+					]
+				},
+				{
+					"name": "Longbow",
+					"entries": [
+						"{@atk rw} {@hit 7} 命中，范围 150/18 米，一个目标。{@h}7 ({@damage 1d8 + 3}) 穿透伤害。"
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "inset",
+					"name": "Ayik beyond 1st Level",
+					"entries": [
+						{
+							"type": "table",
+							"colLabels": [
+								"Level",
+								"Hit Points",
+								"New Features"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-2",
+								"col-8"
+							],
+							"rows": [
+								[
+									"第 2",
+									"16 ({@dice 3d8 + 3})",
+									"第二个风。阿伊克可以在他的回合中使用一个额外的行动来恢复相当于{@dice 1d10}+他等级的命中率。一旦他使用这个功能，他就不能再使用它，直到他完成一个短期或长期的休息。"
+								],
+								[
+									"第 3 次",
+									"22 ({@dice 4d8 + 4})",
+									"改进的关键。阿伊克的攻击卷轴现在在19或20的卷轴上（%0%）取得关键命中。"
+								],
+								[
+									"第四届",
+									"27 ({@dice 5d8 + 5})",
+									"能力得分的提高。阿伊克的灵巧得分增加2，提高1的修饰值，所以将以下数字增加1：他的护甲等级，他的灵巧救赎奖励，他的（%0%）和（%1%）奖励，以及他的武器攻击的命中和伤害的奖励。"
+								],
+								[
+									"第 5 次",
+									"33 ({@dice 6d8 + 6})",
+									"熟练度奖励。阿伊克的熟练度奖励增加了1，所以以下数字增加了1：蓄力和技能项的奖励（增加2为{@skill Perception}），以及他的武器攻击的命中奖励。他的被动感知得分增加2。"
+								],
+								[
+									"第六届",
+									"38 ({@dice 7d8 + 7})",
+									"额外攻击。每当阿依克在他的回合中采取{@action Attack}行动时，他可以攻击两次，而不是一次。"
+								],
+								[
+									"第七届",
+									"44 ({@dice 8d8 + 8})",
+									"战斗准备。阿伊克在主动权卷上有优势。"
+								],
+								[
+									"第八届",
+									"49 ({@dice 9d8 + 9})",
+									"能力得分的提高。阿伊克的灵巧得分增加2，提高1的修饰值，所以将以下数字增加1：他的护甲等级，他的灵巧救赎奖励，他的（%0%）和（%1%）奖励，以及他的武器攻击的命中和伤害的奖励。"
+								],
+								[
+									"第 9 次",
+									"55 ({@dice 10d8 + 10})",
+									"熟练度奖励。阿伊克的熟练度奖励增加了1，所以以下数字增加了1：蓄力和技能项的奖励（增加2为{@skill Perception}），以及他的武器攻击的命中奖励。他的被动感知得分增加2。"
+								],
+								[
+									"第 10 次",
+									"60 ({@dice 11d8 + 11})",
+									"改进防御。阿伊克的装甲等级增加1。"
+								],
+								[
+									"第十一届",
+									"66 ({@dice 12d8 + 12})",
+									"不屈不挠。阿伊克可以重做一次失败的蓄力投掷，但他必须使用新的投掷。一旦他使用了这个功能，他就不能再使用它，直到他完成一个长时间的休息。"
+								]
+							]
+						}
+					]
+				}
+			],
+			"attachedItems": [
+				"longbow|phb",
+				"shortsword|phb"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Ayik Ur (10th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Second Wind",
+									"entries": [
+										"Ayik can use a bonus action on his turn to regain hit points equal to {@dice 1d10} + his level. Once he uses this feature, he can't use it again until he finishes a short or long rest."
+									]
+								},
+								{
+									"name": "Improved Critical",
+									"entries": [
+										"Ayik's attack rolls now score a critical hit on a roll of 19 or 20 on the {@dice d20}."
+									]
+								},
+								{
+									"name": "Extra Attack",
+									"entries": [
+										"Ayik can attack twice, instead of once, whenever he takes the {@action Attack} action on his turn."
+									]
+								},
+								{
+									"name": "Battle Readiness",
+									"entries": [
+										"Ayik has advantage on initiative rolls."
+									]
+								},
+								{
+									"name": "Improved Defense",
+									"entries": [
+										"Ayik's Armor Class increases by 1."
+									]
+								}
+							]
+						}
+					},
+					"level": 10,
+					"ac": [
+						{
+							"ac": 18,
+							"from": [
+								"{@item studded leather armor|PHB|studded leather}",
+								"improved defense"
+							]
+						}
+					],
+					"hp": {
+						"average": 60,
+						"formula": "11d8 + 11"
+					},
+					"dex": 20,
+					"save": {
+						"dex": "+9"
+					},
+					"skill": {
+						"athletics": "+4",
+						"nature": "+4",
+						"perception": "+9",
+						"stealth": "+9",
+						"survival": "+5"
+					},
+					"passive": 19,
+					"pbNote": "+4",
+					"action": [
+						{
+							"name": "Shortsword",
+							"entries": [
+								"{@atk mw} {@hit 11} 命中，距离 1.5 米，一个目标。{@h}8 ({@damage 1d6 + 5}) 穿透伤害。"
+							]
+						},
+						{
+							"name": "Longbow",
+							"entries": [
+								"{@atk rw} {@hit 11} 命中，范围 150/18 米，一个目标。{@h}9 ({@damage 1d8 + 5}) 穿透伤害。"
+							]
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Ayik Ur (11th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Second Wind",
+									"entries": [
+										"Ayik can use a bonus action on his turn to regain hit points equal to {@dice 1d10} + his level. Once he uses this feature, he can't use it again until he finishes a short or long rest."
+									]
+								},
+								{
+									"name": "Improved Critical",
+									"entries": [
+										"Ayik's attack rolls now score a critical hit on a roll of 19 or 20 on the {@dice d20}."
+									]
+								},
+								{
+									"name": "Extra Attack",
+									"entries": [
+										"Ayik can attack twice, instead of once, whenever he takes the {@action Attack} action on his turn."
+									]
+								},
+								{
+									"name": "Battle Readiness",
+									"entries": [
+										"Ayik has advantage on initiative rolls."
+									]
+								},
+								{
+									"name": "Improved Defense",
+									"entries": [
+										"Ayik's Armor Class increases by 1."
+									]
+								},
+								{
+									"name": "Indomitable",
+									"entries": [
+										"Ayik can reroll a saving throw that he fails, but he must use the new roll. Once he uses this feature, he can't use it again until he finishes a long rest."
+									]
+								}
+							]
+						}
+					},
+					"level": 11,
+					"ac": [
+						{
+							"ac": 18,
+							"from": [
+								"{@item studded leather armor|PHB|studded leather}",
+								"improved defense"
+							]
+						}
+					],
+					"hp": {
+						"average": 66,
+						"formula": "12d8 + 12"
+					},
+					"dex": 20,
+					"save": {
+						"dex": "+9"
+					},
+					"skill": {
+						"athletics": "+4",
+						"nature": "+4",
+						"perception": "+9",
+						"stealth": "+9",
+						"survival": "+5"
+					},
+					"passive": 19,
+					"pbNote": "+4",
+					"action": [
+						{
+							"name": "Shortsword",
+							"entries": [
+								"{@atk mw} {@hit 11} 命中，距离 1.5 米，一个目标。{@h}8 ({@damage 1d6 + 5}) 穿透伤害。"
+							]
+						},
+						{
+							"name": "Longbow",
+							"entries": [
+								"{@atk rw} {@hit 11} 命中，范围 150/18 米，一个目标。{@h}9 ({@damage 1d8 + 5}) 穿透伤害。"
+							]
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Ayik Ur (2nd Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Second Wind",
+								"entries": [
+									"阿依克可以在他的回合中使用一个额外的行动来恢复相当于{@dice 1d10}+他的等级的打击点数。一旦他使用这个功能，他就不能再使用它，直到他完成一个短期或长期休息。"
+								]
+							}
+						}
+					},
+					"level": 2,
+					"hp": {
+						"average": 16,
+						"formula": "3d8 + 3"
+					},
+					"variant": null
+				},
+				{
+					"name": "Ayik Ur (3rd Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Second Wind",
+									"entries": [
+										"Ayik can use a bonus action on his turn to regain hit points equal to {@dice 1d10} + his level. Once he uses this feature, he can't use it again until he finishes a short or long rest."
+									]
+								},
+								{
+									"name": "Improved Critical",
+									"entries": [
+										"Ayik's attack rolls now score a critical hit on a roll of 19 or 20 on the {@dice d20}."
+									]
+								}
+							]
+						}
+					},
+					"level": 3,
+					"hp": {
+						"average": 22,
+						"formula": "4d8 + 4"
+					},
+					"variant": null
+				},
+				{
+					"name": "Ayik Ur (4th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Second Wind",
+									"entries": [
+										"Ayik can use a bonus action on his turn to regain hit points equal to {@dice 1d10} + his level. Once he uses this feature, he can't use it again until he finishes a short or long rest."
+									]
+								},
+								{
+									"name": "Improved Critical",
+									"entries": [
+										"Ayik's attack rolls now score a critical hit on a roll of 19 or 20 on the {@dice d20}."
+									]
+								}
+							]
+						}
+					},
+					"level": 4,
+					"ac": [
+						{
+							"ac": 16,
+							"from": [
+								"{@item studded leather armor|PHB|studded leather}"
+							]
+						}
+					],
+					"hp": {
+						"average": 27,
+						"formula": "5d8 + 5"
+					},
+					"dex": 18,
+					"save": {
+						"dex": "+6"
+					},
+					"skill": {
+						"athletics": "+2",
+						"nature": "+2",
+						"perception": "+5",
+						"stealth": "+6",
+						"survival": "+3"
+					},
+					"action": [
+						{
+							"name": "Shortsword",
+							"entries": [
+								"{@atk mw} {@hit 8} 命中，距离 1.5 米，一个目标。{@h}7 ({@damage 1d6 + 4}) 穿透伤害。"
+							]
+						},
+						{
+							"name": "Longbow",
+							"entries": [
+								"{@atk rw} {@hit 8} 命中，范围 150/18 米，一个目标。{@h}8 ({@damage 1d8 + 4}) 穿透伤害。"
+							]
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Ayik Ur (5th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Second Wind",
+									"entries": [
+										"Ayik can use a bonus action on his turn to regain hit points equal to {@dice 1d10} + his level. Once he uses this feature, he can't use it again until he finishes a short or long rest."
+									]
+								},
+								{
+									"name": "Improved Critical",
+									"entries": [
+										"Ayik's attack rolls now score a critical hit on a roll of 19 or 20 on the {@dice d20}."
+									]
+								}
+							]
+						}
+					},
+					"level": 5,
+					"ac": [
+						{
+							"ac": 16,
+							"from": [
+								"{@item studded leather armor|PHB|studded leather}"
+							]
+						}
+					],
+					"hp": {
+						"average": 33,
+						"formula": "6d8 + 6"
+					},
+					"dex": 18,
+					"save": {
+						"dex": "+7"
+					},
+					"skill": {
+						"athletics": "+3",
+						"nature": "+3",
+						"perception": "+7",
+						"stealth": "+7",
+						"survival": "+4"
+					},
+					"passive": 17,
+					"pbNote": "+3",
+					"action": [
+						{
+							"name": "Shortsword",
+							"entries": [
+								"{@atk mw} {@hit 9} 命中，距离 1.5 米，一个目标。{@h}7 ({@damage 1d6 + 4}) 穿透伤害。"
+							]
+						},
+						{
+							"name": "Longbow",
+							"entries": [
+								"{@atk rw} {@hit 9} 命中，范围 150/18 米，一个目标。{@h}8 ({@damage 1d8 + 4}) 穿透伤害。"
+							]
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Ayik Ur (6th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Second Wind",
+									"entries": [
+										"Ayik can use a bonus action on his turn to regain hit points equal to {@dice 1d10} + his level. Once he uses this feature, he can't use it again until he finishes a short or long rest."
+									]
+								},
+								{
+									"name": "Improved Critical",
+									"entries": [
+										"Ayik's attack rolls now score a critical hit on a roll of 19 or 20 on the {@dice d20}."
+									]
+								},
+								{
+									"name": "Extra Attack",
+									"entries": [
+										"Ayik can attack twice, instead of once, whenever he takes the {@action Attack} action on his turn."
+									]
+								}
+							]
+						}
+					},
+					"level": 6,
+					"ac": [
+						{
+							"ac": 16,
+							"from": [
+								"{@item studded leather armor|PHB|studded leather}"
+							]
+						}
+					],
+					"hp": {
+						"average": 38,
+						"formula": "7d8 + 7"
+					},
+					"dex": 18,
+					"save": {
+						"dex": "+7"
+					},
+					"skill": {
+						"athletics": "+3",
+						"nature": "+3",
+						"perception": "+7",
+						"stealth": "+7",
+						"survival": "+4"
+					},
+					"passive": 17,
+					"pbNote": "+3",
+					"action": [
+						{
+							"name": "Shortsword",
+							"entries": [
+								"{@atk mw} {@hit 9} 命中，距离 1.5 米，一个目标。{@h}7 ({@damage 1d6 + 4}) 穿透伤害。"
+							]
+						},
+						{
+							"name": "Longbow",
+							"entries": [
+								"{@atk rw} {@hit 9} 命中，范围 150/18 米，一个目标。{@h}8 ({@damage 1d8 + 4}) 穿透伤害。"
+							]
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Ayik Ur (7th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Second Wind",
+									"entries": [
+										"Ayik can use a bonus action on his turn to regain hit points equal to {@dice 1d10} + his level. Once he uses this feature, he can't use it again until he finishes a short or long rest."
+									]
+								},
+								{
+									"name": "Improved Critical",
+									"entries": [
+										"Ayik's attack rolls now score a critical hit on a roll of 19 or 20 on the {@dice d20}."
+									]
+								},
+								{
+									"name": "Extra Attack",
+									"entries": [
+										"Ayik can attack twice, instead of once, whenever he takes the {@action Attack} action on his turn."
+									]
+								},
+								{
+									"name": "Battle Readiness",
+									"entries": [
+										"Ayik has advantage on initiative rolls."
+									]
+								}
+							]
+						}
+					},
+					"level": 7,
+					"ac": [
+						{
+							"ac": 16,
+							"from": [
+								"{@item studded leather armor|PHB|studded leather}"
+							]
+						}
+					],
+					"hp": {
+						"average": 44,
+						"formula": "8d8 + 8"
+					},
+					"dex": 18,
+					"save": {
+						"dex": "+7"
+					},
+					"skill": {
+						"athletics": "+3",
+						"nature": "+3",
+						"perception": "+7",
+						"stealth": "+7",
+						"survival": "+4"
+					},
+					"passive": 17,
+					"pbNote": "+3",
+					"action": [
+						{
+							"name": "Shortsword",
+							"entries": [
+								"{@atk mw} {@hit 9} 命中，距离 1.5 米，一个目标。{@h}7 ({@damage 1d6 + 4}) 穿透伤害。"
+							]
+						},
+						{
+							"name": "Longbow",
+							"entries": [
+								"{@atk rw} {@hit 9} 命中，范围 150/18 米，一个目标。{@h}8 ({@damage 1d8 + 4}) 穿透伤害。"
+							]
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Ayik Ur (8th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Second Wind",
+									"entries": [
+										"Ayik can use a bonus action on his turn to regain hit points equal to {@dice 1d10} + his level. Once he uses this feature, he can't use it again until he finishes a short or long rest."
+									]
+								},
+								{
+									"name": "Improved Critical",
+									"entries": [
+										"Ayik's attack rolls now score a critical hit on a roll of 19 or 20 on the {@dice d20}."
+									]
+								},
+								{
+									"name": "Extra Attack",
+									"entries": [
+										"Ayik can attack twice, instead of once, whenever he takes the {@action Attack} action on his turn."
+									]
+								},
+								{
+									"name": "Battle Readiness",
+									"entries": [
+										"Ayik has advantage on initiative rolls."
+									]
+								}
+							]
+						}
+					},
+					"level": 8,
+					"ac": [
+						{
+							"ac": 17,
+							"from": [
+								"{@item studded leather armor|PHB|studded leather}"
+							]
+						}
+					],
+					"hp": {
+						"average": 49,
+						"formula": "9d8 + 9"
+					},
+					"dex": 20,
+					"save": {
+						"dex": "+8"
+					},
+					"skill": {
+						"athletics": "+3",
+						"nature": "+3",
+						"perception": "+7",
+						"stealth": "+8",
+						"survival": "+4"
+					},
+					"passive": 17,
+					"pbNote": "+3",
+					"action": [
+						{
+							"name": "Shortsword",
+							"entries": [
+								"{@atk mw} {@hit 10} 命中，距离 1.5 米，一个目标。{@h}8 ({@damage 1d6 + 5}) 穿透伤害。"
+							]
+						},
+						{
+							"name": "Longbow",
+							"entries": [
+								"{@atk rw} {@hit 10} 命中，范围 150/18 米，一个目标。{@h}9 ({@damage 1d8 + 5}) 穿透伤害。"
+							]
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Ayik Ur (9th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Second Wind",
+									"entries": [
+										"Ayik can use a bonus action on his turn to regain hit points equal to {@dice 1d10} + his level. Once he uses this feature, he can't use it again until he finishes a short or long rest."
+									]
+								},
+								{
+									"name": "Improved Critical",
+									"entries": [
+										"Ayik's attack rolls now score a critical hit on a roll of 19 or 20 on the {@dice d20}."
+									]
+								},
+								{
+									"name": "Extra Attack",
+									"entries": [
+										"Ayik can attack twice, instead of once, whenever he takes the {@action Attack} action on his turn."
+									]
+								},
+								{
+									"name": "Battle Readiness",
+									"entries": [
+										"Ayik has advantage on initiative rolls."
+									]
+								}
+							]
+						}
+					},
+					"level": 9,
+					"ac": [
+						{
+							"ac": 17,
+							"from": [
+								"{@item studded leather armor|PHB|studded leather}"
+							]
+						}
+					],
+					"hp": {
+						"average": 55,
+						"formula": "10d8 + 10"
+					},
+					"dex": 20,
+					"save": {
+						"dex": "+9"
+					},
+					"skill": {
+						"athletics": "+4",
+						"nature": "+4",
+						"perception": "+9",
+						"stealth": "+9",
+						"survival": "+5"
+					},
+					"passive": 19,
+					"pbNote": "+4",
+					"action": [
+						{
+							"name": "Shortsword",
+							"entries": [
+								"{@atk mw} {@hit 11} 命中，距离 1.5 米，一个目标。{@h}8 ({@damage 1d6 + 5}) 穿透伤害。"
+							]
+						},
+						{
+							"name": "Longbow",
+							"entries": [
+								"{@atk rw} {@hit 11} 命中，范围 150/18 米，一个目标。{@h}9 ({@damage 1d8 + 5}) 穿透伤害。"
+							]
+						}
+					],
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Baaz Draconian",
+			"source": "DSotDQ",
+			"page": 197,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 22,
+				"formula": "4d8 + 4"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 11,
+			"con": 13,
+			"int": 8,
+			"wis": 8,
+			"cha": 10,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Controlled Fall",
+					"entries": [
+						"当龙人坠落时，如果没有 {@condition incapacitated}，则在计算坠落伤害时最多减去 3 米。"
+					]
+				},
+				{
+					"name": "Death Throes",
+					"entries": [
+						"当龙人的命中率降至 0 时，它的身体会变成石头并释放石化气体。龙人周围 1.5 米内的每个生物都必须在{@dc 11}体质蓄力中成功，否则就会{@condition restrained}开始变成石头。该 {@condition restrained} 生物必须在下一回合结束时重复该蓄力一击。如果成功，效果结束；否则，该生物会 {@condition petrified} 1 分钟。1 分钟后，龙人的身体会碎裂成尘埃。"
+					]
+				},
+				{
+					"name": "Draconic Devotion",
+					"entries": [
+						"当龙人可以看到对它没有敌意的龙时，龙人在攻击卷上有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"龙人进行两次短剑攻击。"
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 3} 命中，距离 1.5 米，一个目标。{@h}4 ({@damage 1d6 + 1}) 穿透伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Death Burst"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"petrified",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Bakaris the Younger",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 57,
+			"_copy": {
+				"name": "Noble",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the noble",
+						"with": "Bakaris",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Bakaris Uth Estide",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 54,
+			"_copy": {
+				"name": "Noble",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the noble",
+						"with": "Bakaris",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Becklin Uth Viharin",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 55,
+			"_copy": {
+				"name": "Knight",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the knight",
+						"with": "Becklin",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Belephaion",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 157,
+			"_copy": {
+				"name": "Young Blue Dragon",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the dragon",
+						"with": "Belephaion",
+						"flags": "i"
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Alter Shape",
+							"entries": [
+								"Belephaion神奇地变成一个{@creature eagle}或一个{@creature priest}，同时保留他的排列组合、伤害豁免、命中率、命中点数、智力、智慧和魅力值。如果他的命中率降至0或使用额外的行动来结束，这个转变就会结束。"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Bozak Draconian",
+			"source": "DSotDQ",
+			"page": 198,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "monstrosity",
+				"tags": [
+					"sorcerer"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 40,
+				"formula": "9d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 10,
+			"con": 11,
+			"int": 11,
+			"wis": 10,
+			"cha": 14,
+			"save": {
+				"int": "+2",
+				"wis": "+2",
+				"cha": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"龙人施展以下一种法术，不需要任何材料成分，并使用魅力作为施法能力（法术保存（%0%））。"
+					],
+					"daily": {
+						"1e": [
+							"{@spell enlarge/reduce}",
+							"{@spell invisibility}",
+							"{@spell stinking cloud}",
+							"{@spell web}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Death Throes",
+					"entries": [
+						"当龙人的命中率降低到 0 时，它的鳞片和血肉会立即萎缩，然后它的骨头会爆炸。距离它 3 米内的每个生物都必须在 {@dc 10} 灵巧蓄力中成功，否则会受到 9 ({@damage 2d8}) 力的伤害。"
+					]
+				},
+				{
+					"name": "Glide",
+					"entries": [
+						"当龙人坠落时，如果没有（%0%），在计算坠落伤害时最多可减去 3 米，并且每下降 0.3 米，最多可水平移动 0.6 米。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"龙人进行两次三叉戟近战攻击或两次闪电放电攻击。"
+					]
+				},
+				{
+					"name": "Trident",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} 命中，距离 1.5 米或范围 20/18 米，一个目标。{@h}5 ({@damage 1d6 + 2}) 次穿刺伤害，或 6 ({@damage 1d8 + 2} 次穿刺伤害（如果使用双手进行近战攻击）。"
+					]
+				},
+				{
+					"name": "Lightning Discharge",
+					"entries": [
+						"{@atk rs} {@hit 4} 命中，范围 18 米，一个目标。{@h}10 ({@damage 3d6}) 闪电伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"trident|phb"
+			],
+			"traitTags": [
+				"Death Burst"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"L",
+				"O",
+				"P"
+			],
+			"damageTagsSpell": [
+				"F"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"invisible",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Captain Hask",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 148,
+			"_copy": {
+				"name": "Aurak Draconian",
+				"source": "DSotDQ",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the draconian",
+						"with": "Hask",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Caradoc",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 193,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 110,
+				"formula": "20d8 + 20"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 40,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 1,
+			"dex": 18,
+			"con": 12,
+			"int": 15,
+			"wis": 13,
+			"cha": 19,
+			"save": {
+				"int": "+5",
+				"wis": "+4"
+			},
+			"skill": {
+				"deception": "+7",
+				"insight": "+4",
+				"perception": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"resist": [
+				"acid",
+				"fire",
+				"lightning",
+				"thunder",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"cold",
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"Common",
+				"Solamnic"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Bound Haunting",
+					"entries": [
+						"卡拉多克的灵魂被束缚在达尔加德堡。在他的回合开始时，如果他在堡垒的墙外，并且没有使用他的附身行动附身于一个生物，他必须在一个{@dc 15}的魅力救赎上成功，或者消失并重新出现在堡垒内一个无人的空间。"
+					]
+				},
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"卡拉多克可以在其他生物和物体中移动，就像它们是困难的地形一样。如果他在一个物体内结束他的回合，他会受到5({@damage 1d10})武力伤害。"
+					]
+				},
+				{
+					"name": "Rejuvenation",
+					"entries": [
+						"如果卡拉多克死了，他将在{@dice 2d6}天后在达尔加德堡内改革。"
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"卡拉多克不需要空气、食物、饮料或睡眠。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"卡拉多克进行两次枯萎之触的攻击。"
+					]
+				},
+				{
+					"name": "Withering Touch",
+					"entries": [
+						"{@atk mw} {@hit 7} 命中，距离 1.5 米，一个目标。{@h}15 ({@damage 2d10 + 4}) 坏死伤害。"
+					]
+				},
+				{
+					"name": "Possession {@recharge 5}",
+					"entries": [
+						"卡拉多克能看到的距离自己 1.5 米内的一个类人生物必须在{@dc 15}魅力蓄力中成功，否则就会被他附身；然后他就会消失，目标会{@condition incapacitated}并失去对身体的控制。卡拉多克现在可以控制身体，但不会剥夺目标的意识。卡拉多克无法成为任何攻击、咒语或其他效果的目标，除了那些可以变成亡灵的效果，而且他保留了自己的排列、智力、智慧和魅力，对（%2%）和（%3%）的免疫力，以及他的分裂低语奖励行动。除此之外，他还会使用被附身目标的统计数据，但不会获得目标的知识、类特性或熟练度。",
+						"附魔会持续到尸体的命中点数降为 0、卡拉多克以额外行动结束附魔、或者他被 {@spell dispel evil and good} 法术之类的效果反噬或强制离开为止。附身结束后，卡拉多克会重新出现在尸体周围 1.5 米内的空地上。在救赎成功后或附身结束后的 24 小时内，目标对卡拉多克的附身免疫。"
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Divisive Whispers",
+					"entries": [
+						"卡拉多克用魔法向自己周围 18 米内的一个生物低语。目标必须在{@dc 15}智慧蓄力中成功，否则目标必须立即使用反应对卡拉多克选择的其他生物发动近战攻击（如果范围内没有其他生物，则浪费反应）。"
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement",
+				"Rejuvenation",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Clystran",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 126,
+			"_copy": {
+				"name": "Scout",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the scout",
+						"with": "Clystran",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Cudgel Ironsmile",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 58,
+			"_copy": {
+				"name": "Veteran",
+				"source": "MM",
+				"_trait": {
+					"name": "Hill Dwarf",
+					"source": "PHB"
+				},
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the veteran",
+						"with": "Cudgel",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"N"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dalamar",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 111,
+			"_copy": {
+				"name": "Mage",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the mage",
+						"with": "Dalamar",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"elf"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Darrett Highwater",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 59,
+			"_copy": {
+				"name": "Knight",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the knight",
+						"with": "Darrett",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Demelin",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 139,
+			"_copy": {
+				"name": "Archmage",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the archmage",
+						"with": "Demelin",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"elf"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dracophage Subject",
+			"source": "DSotDQ",
+			"page": 118,
+			"_copy": {
+				"name": "Kapak Draconian",
+				"source": "DSotDQ",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "draconian",
+						"with": "subject"
+					}
+				}
+			},
+			"action": [
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 5} 命中，距离 1.5 米，一个目标。{@h}5 ({@damage 1d4 + 3}) 穿透伤害外加 7 ({@damage 2d6}) 毒药伤害。如果目标是人形生物，则必须在{@dc 12}宪法蓄力中成功，否则就会感染疾病--一颗微不足道的斯拉德卵。",
+						"一个类人动物宿主一次只能携带一个Slaad卵。在三个月的时间里，卵会移动到胸腔中，进行孕育，并形成一个Slaad蝌蚪。在蝌蚪出生前的24小时内，宿主会感到不适；其速度减半；在攻击卷、能力检查和蓄力方面处于劣势。在出生时，蝌蚪会在一回合内咬碎重要的器官并从宿主的胸腔里出来，在这个过程中杀死宿主。",
+						"如果在蝌蚪出现之前治愈了疾病，那么蝌蚪就会解体。"
+					]
+				}
+			],
+			"damageTags": [
+				"A",
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Dragon Army Dragonnel",
+			"source": "DSotDQ",
+			"page": 201,
+			"size": [
+				"L"
+			],
+			"type": "dragon",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item breastplate barding|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 58,
+				"formula": "9d10 + 9"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 60
+			},
+			"str": 16,
+			"dex": 15,
+			"con": 12,
+			"int": 8,
+			"wis": 13,
+			"cha": 10,
+			"skill": {
+				"perception": "+3"
+			},
+			"senses": [
+				"blindsight 30 ft.",
+				"darkvision 120 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"fire"
+			],
+			"languages": [
+				"understands Common and Draconic but can't speak"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Flyby",
+					"entries": [
+						"当龙卷风飞出敌人的范围时，不会引发机会攻击。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"小龙女进行了两次Rend攻击。"
+					]
+				},
+				{
+					"name": "Rend",
+					"entries": [
+						"{@atk mw} {@hit 5} 命中，距离 1.5 米，一个目标。{@h}10 ({@damage 2d6 + 3}) 次砍击伤害外加 3 ({@damage 1d6}) 次火焰伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"Flyby"
+			],
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS",
+				"DR"
+			],
+			"damageTags": [
+				"F",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dragon Army Officer",
+			"source": "DSotDQ",
+			"page": 200,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"{@item splint armor|PHB|splint}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 65,
+				"formula": "10d8 + 20"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 15,
+			"int": 12,
+			"wis": 14,
+			"cha": 12,
+			"save": {
+				"dex": "+4",
+				"wis": "+4"
+			},
+			"skill": {
+				"athletics": "+5",
+				"perception": "+4"
+			},
+			"passive": 14,
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Draconic Devotion",
+					"entries": [
+						"当军官能看到对它没有敌意的龙时，军官在攻击卷上有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"该军官进行两次恶性长矛攻击，如果有的话，还可以使用突击命令。"
+					]
+				},
+				{
+					"name": "Vicious Lance",
+					"entries": [
+						"{@atk mw} {@hit 5} 命中，距离 3 米，一个目标。{@h}8 ({@damage 1d10 + 3}) 穿透伤害外加 2 ({@damage 1d4}) 火焰伤害。"
+					]
+				},
+				{
+					"name": "Heavy Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 4} 命中，范围 100/12 米，一个目标。{@h}7 ({@damage 1d10 + 2}) 穿透伤害外加 5 ({@damage 1d10}) 火焰伤害。"
+					]
+				},
+				{
+					"name": "Assault Orders {@recharge 5}",
+					"entries": [
+						"军官喊出命令，并将自己周围 18 米内的最多两个生物作为目标。如果目标具有龙人奉献特质并能听到军官的声音，该目标可以使用其反应发动一次近战攻击。"
+					]
+				}
+			],
+			"attachedItems": [
+				"heavy crossbow|phb",
+				"lance|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"F",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Dragon Army Soldier",
+			"source": "DSotDQ",
+			"page": 200,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item scale mail|PHB}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 22,
+				"formula": "4d8 + 4"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 12,
+			"con": 12,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"skill": {
+				"athletics": "+4",
+				"perception": "+2"
+			},
+			"passive": 12,
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Draconic Devotion",
+					"entries": [
+						"当士兵能看到对它没有敌意的龙时，士兵在攻击卷上有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"该士兵进行两次长剑或标枪攻击。"
+					]
+				},
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 4} 命中，距离 1.5 米，一个目标。{@h}6 ({@damage 1d8 + 2}) 次砍击伤害，如果双手使用，则为 7 ({@damage 1d10 + 2}) 次砍击伤害，外加 2 ({@damage 1d4} 次火焰伤害。"
+					]
+				},
+				{
+					"name": "Javelin",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} 命中，距离 1.5 米或射程 30/36 米，一个目标。{@h}5 ({@damage 1d6 + 2}) 穿透伤害外加 2 ({@damage 1d4}) 火焰伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"javelin|phb",
+				"longsword|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"F",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Durstan Rial",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 97,
+			"_copy": {
+				"name": "Knight",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the knight",
+						"with": "Durstan",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Duskwalker",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 150,
+			"_copy": {
+				"name": "Treant",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the treant",
+						"with": "Duskwalker",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"N"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Fewmaster Gholcag",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 74,
+			"size": [
+				"L"
+			],
+			"type": "giant",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item scale mail|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 59,
+				"formula": "7d10 + 21"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 19,
+			"dex": 8,
+			"con": 16,
+			"int": 5,
+			"wis": 7,
+			"cha": 7,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 8,
+			"languages": [
+				"Common",
+				"Giant"
+			],
+			"cr": "2",
+			"action": [
+				{
+					"name": "Greatclub",
+					"entries": [
+						"{@atk mw} {@hit 6} 命中，距离 1.5 米，一个目标。{@h}13 ({@damage 2d8 + 4}) 暴击伤害。"
+					]
+				},
+				{
+					"name": "Javelin",
+					"entries": [
+						"{@atk mw,rw} {@hit 6} 命中，距离 1.5 米或射程 30/36 米，一个目标。{@h}11 ({@damage 2d6 + 4}) 穿透伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"greatclub|phb",
+				"javelin|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"GI"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Greater Death Dragon",
+			"source": "DSotDQ",
+			"page": 195,
+			"size": [
+				"H"
+			],
+			"type": "undead",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 230,
+				"formula": "20d12 + 100"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 80
+			},
+			"str": 23,
+			"dex": 10,
+			"con": 20,
+			"int": 11,
+			"wis": 14,
+			"cha": 10,
+			"save": {
+				"dex": "+5",
+				"wis": "+7"
+			},
+			"skill": {
+				"perception": "+7",
+				"stealth": "+5"
+			},
+			"senses": [
+				"blindsight 60 ft.",
+				"darkvision 120 ft."
+			],
+			"passive": 17,
+			"resist": [
+				"piercing"
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"cr": "14",
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"如果龙的拯救动作失败，它可以选择成功。"
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"龙不需要空气、食物、饮料或睡眠。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"龙进行一次咬人攻击和两次爪子攻击。"
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 11} 命中，距离 3 米，一个目标。{@h}17 ({@damage 2d10 + 6}) 穿透伤害外加 4 ({@damage 1d8}) 坏死伤害。如果目标是大型或更小的生物，则为 {@condition grappled} （逃脱 {@dc 19}）。直到擒拿结束，目标都是 {@condition restrained}，并且龙无法咬伤其他目标。"
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 11} 命中，距离一个目标 1.5 米。{@h}10 ({@damage 1d8 + 6}) 砍伤。"
+					]
+				},
+				{
+					"name": "Cataclysmic Breath {@recharge 5}",
+					"entries": [
+						"巨龙在 18 米锥形范围内吐出一波幽紫色火焰。该区域内的每个生物都必须进行 {@dc 18} 灵巧蓄力，蓄力失败会受到 45 ({@damage 10d8}) 坏死伤害，蓄力成功则会受到一半的伤害。如果呼吸将生物的命中率降至 0，生物就会死亡。此外，在龙的控制下，任何被龙息伤害致死的中型或小型类人生物，以及锥形范围内所有此类生物的尸体都会变成僵尸（请参阅《怪物手册》）。僵尸在龙的主动权下行动，但在龙的回合后立即行动。如果没有其他命令，僵尸会尝试杀死它遇到的任何非亡灵生物。"
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Claw",
+					"entries": [
+						"龙进行一次爪子攻击。"
+					]
+				},
+				{
+					"name": "Cataclysmic Rush (Costs 2 Actions)",
+					"entries": [
+						"龙的移动速度达到其飞行速度的一半，而不会引起机会攻击，并带着它正在抓捕的任何生物。在这个移动过程中，如果它进入一个中型或小型生物的空间，该生物会受到4({@damage 1d8})坏死伤害。一个生物每回合只能受到一次这种伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hrigg Roundrook",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 211,
+			"level": 1,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"dwarf"
+				],
+				"sidekickType": "spellcaster",
+				"sidekickTags": [
+					"healer"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item half plate armor|PHB|half plate}"
+					]
+				}
+			],
+			"hp": {
+				"average": 11,
+				"formula": "2d8 + 2"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 12,
+			"con": 12,
+			"int": 10,
+			"wis": 14,
+			"cha": 11,
+			"save": {
+				"wis": "+4"
+			},
+			"skill": {
+				"athletics": "+4",
+				"history": "+2",
+				"medicine": "+4",
+				"perception": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"resist": [
+				"poison"
+			],
+			"languages": [
+				"Common",
+				"Dwarvish"
+			],
+			"pbNote": "+2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"赫里格的法术能力是智慧（法术拯救（%0%），用法术攻击命中率（%1%））。他准备了以下的牧师法术。"
+					],
+					"will": [
+						"{@spell guidance}",
+						"{@spell sacred flame}"
+					],
+					"spells": {
+						"1": {
+							"slots": 2,
+							"spells": [
+								"{@spell cure wounds}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Bonus Proficiencies",
+					"entries": [
+						"赫里格精通简单和武术武器以及轻型和中型盔甲。"
+					]
+				},
+				{
+					"name": "Dwarven Resilience",
+					"entries": [
+						"Hrigg在为避免或结束自己身上的{@condition poisoned}状况而进行的拯救动作上有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Maul",
+					"entries": [
+						"{@atk mw} {@hit 4} 命中，距离 1.5 米，一个目标。{@h}9 ({@damage 2d6 + 2}) 暴击伤害。"
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "inset",
+					"name": "Hrigg beyond 1st Level",
+					"entries": [
+						{
+							"type": "table",
+							"colLabels": [
+								"Level",
+								"Hit Points",
+								"New Features"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-2",
+								"col-8"
+							],
+							"rows": [
+								[
+									"第 2",
+									"16 ({@dice 3d8 + 3})",
+									"咒语。赫里格又学会了一个一级法术：（%0%）。"
+								],
+								[
+									"第 3 次",
+									"22 ({@dice 4d8 + 4})",
+									"咒语。赫里格获得一个1阶法术槽。他还学会了另一个一级法术：（%0%）。"
+								],
+								[
+									"第四届",
+									"27 ({@dice 5d8 + 5})",
+									"能力得分的提高。赫里格的智慧分数增加2，提高1的修正值，因此以下数字增加1：他的法术救赎DC和法术攻击的命中奖励，他的智慧救赎奖励，他的（%0%）和（%1%）奖励，以及他的被动感知分数。法术攻击。赫里格又学会了一个咒语：{@skill Medicine}。"
+								],
+								[
+									"第 5 次",
+									"33 ({@dice 6d8 + 6})",
+									"熟练程度奖励。Hrigg的熟练度奖励增加了1，所以以下数字都增加了1：他的法术保全DC和他的法术攻击的命中奖励，保全投掷和技能项目的奖励，以及他的武器攻击的命中奖励。法术攻击。赫里格获得一个一级法术槽和两个二级法术槽。他还学会了一个二级法术：{@spell spiritual weapon}.ng。赫里格又学会了一个咒语：(%2%)。"
+								],
+								[
+									"第六届",
+									"38 ({@dice 7d8 + 7})",
+									"强力咒语。Hrigg在使用任何cantrip.el法术槽和两个2级法术槽所造成的伤害上加上他的智慧修正值。他还学会了一个二级法术：(%0%).ng。赫里格又学会了一个咒语：(%2%)。"
+								],
+								[
+									"第七届",
+									"44 ({@dice 8d8 + 8})",
+									"咒语。赫里格获得一个二阶法术槽。他还学会了另一个2级法术：（%0%）。"
+								],
+								[
+									"第八届",
+									"49 ({@dice 9d8 + 9})",
+									"能力得分的提高。赫里格的智慧分数增加了2，提高了1的修正值，因此以下数字增加了1：他的法术救赎DC和法术攻击的命中奖励，他的智慧救赎奖励，他的（%0%）和（%1%）奖励，以及他的被动感知分数。"
+								],
+								[
+									"第 9 次",
+									"55 ({@dice 10d8 + 10})",
+									"熟练度奖励。Hrigg的熟练度奖励增加了1，所以以下数字都增加了1：他的法术防御DC和他的法术攻击的命中奖励，蓄力和技能项目的奖励，以及他的武器攻击的命中奖励。法术攻击。赫里格获得了两个3阶的法术槽。他还学会了一个三级法术：（%0%）。"
+								],
+								[
+									"第 10 次",
+									"60 ({@dice 11d8 + 11})",
+									"咒语。赫里格又学会了一个咒语：{@spell thaumaturgy}.el法术槽。他还学会了一个三级法术：（%0%）。"
+								],
+								[
+									"第十一届",
+									"66 ({@dice 12d8 + 12})",
+									"咒语。赫里格获得一个三阶法术槽。他还学会了另一个三级法术：（%0%）。"
+								]
+							]
+						}
+					]
+				}
+			],
+			"attachedItems": [
+				"maul|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"D"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"R"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Hrigg Roundrook (10th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Potent Cantrips",
+								"entries": [
+									"赫里格在使用任何咒语造成的伤害上加上他的智慧修正值。"
+								]
+							}
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Maul",
+							"items": {
+								"name": "Maul",
+								"entries": [
+									"{@atk mw} {@hit 6} 命中，距离 1.5 米，一个目标。{@h}9 ({@damage 2d6 + 2}) 暴击伤害。"
+								]
+							}
+						}
+					},
+					"level": 10,
+					"hp": {
+						"average": 60,
+						"formula": "11d8 + 11"
+					},
+					"wis": 17,
+					"save": {
+						"wis": "+8"
+					},
+					"skill": {
+						"athletics": "+6",
+						"history": "+4",
+						"medicine": "+8",
+						"perception": "+8"
+					},
+					"passive": 16,
+					"pbNote": "+4",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"赫里格的法术能力是智慧（法术拯救（%0%），用法术攻击命中率（%1%））。他准备了以下的牧师法术。"
+							],
+							"will": [
+								"{@spell guidance}",
+								"{@spell sacred flame}",
+								"{@spell spare the dying}",
+								"{@spell thaumaturgy}"
+							],
+							"spells": {
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell cure wounds}",
+										"{@spell bless}",
+										"{@spell detect evil and good}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell spiritual weapon}",
+										"{@spell lesser restoration}"
+									]
+								},
+								"3": {
+									"slots": 2,
+									"spells": [
+										"{@spell beacon of hope}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Hrigg Roundrook (11th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Potent Cantrips",
+								"entries": [
+									"赫里格在使用任何咒语造成的伤害上加上他的智慧修正值。"
+								]
+							}
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Maul",
+							"items": {
+								"name": "Maul",
+								"entries": [
+									"{@atk mw} {@hit 6} 命中，距离 1.5 米，一个目标。{@h}9 ({@damage 2d6 + 2}) 暴击伤害。"
+								]
+							}
+						}
+					},
+					"level": 11,
+					"hp": {
+						"average": 66,
+						"formula": "12d8 + 12"
+					},
+					"wis": 17,
+					"save": {
+						"wis": "+8"
+					},
+					"skill": {
+						"athletics": "+6",
+						"history": "+4",
+						"medicine": "+8",
+						"perception": "+8"
+					},
+					"passive": 16,
+					"pbNote": "+4",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"赫里格的法术能力是智慧（法术拯救（%0%），用法术攻击命中率（%1%））。他准备了以下的牧师法术。"
+							],
+							"will": [
+								"{@spell guidance}",
+								"{@spell sacred flame}",
+								"{@spell spare the dying}",
+								"{@spell thaumaturgy}"
+							],
+							"spells": {
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell cure wounds}",
+										"{@spell bless}",
+										"{@spell detect evil and good}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell spiritual weapon}",
+										"{@spell lesser restoration}"
+									]
+								},
+								"3": {
+									"slots": 3,
+									"spells": [
+										"{@spell beacon of hope}",
+										"{@spell spirit guardians}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Hrigg Roundrook (2nd Level)",
+					"source": "DSotDQ",
+					"level": 2,
+					"hp": {
+						"average": 16,
+						"formula": "3d8 + 3"
+					},
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"赫里格的法术能力是智慧（法术拯救（%0%），用法术攻击命中率（%1%））。他准备了以下的牧师法术。"
+							],
+							"will": [
+								"{@spell guidance}",
+								"{@spell sacred flame}"
+							],
+							"spells": {
+								"1": {
+									"slots": 2,
+									"spells": [
+										"{@spell cure wounds}",
+										"{@spell bless}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Hrigg Roundrook (3rd Level)",
+					"source": "DSotDQ",
+					"level": 3,
+					"hp": {
+						"average": 22,
+						"formula": "4d8 + 4"
+					},
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"赫里格的法术能力是智慧（法术拯救（%0%），用法术攻击命中率（%1%））。他准备了以下的牧师法术。"
+							],
+							"will": [
+								"{@spell guidance}",
+								"{@spell sacred flame}"
+							],
+							"spells": {
+								"1": {
+									"slots": 3,
+									"spells": [
+										"{@spell cure wounds}",
+										"{@spell bless}",
+										"{@spell detect evil and good}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Hrigg Roundrook (4th Level)",
+					"source": "DSotDQ",
+					"level": 4,
+					"hp": {
+						"average": 27,
+						"formula": "5d8 + 5"
+					},
+					"wis": 15,
+					"save": {
+						"wis": "+5"
+					},
+					"skill": {
+						"athletics": "+4",
+						"history": "+2",
+						"medicine": "+5",
+						"perception": "+5"
+					},
+					"passive": 15,
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"赫里格的法术能力是智慧（法术拯救（%0%），用法术攻击命中率（%1%））。他准备了以下的牧师法术。"
+							],
+							"will": [
+								"{@spell guidance}",
+								"{@spell sacred flame}",
+								"{@spell spare the dying}"
+							],
+							"spells": {
+								"1": {
+									"slots": 3,
+									"spells": [
+										"{@spell cure wounds}",
+										"{@spell bless}",
+										"{@spell detect evil and good}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Hrigg Roundrook (5th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Maul",
+							"items": {
+								"name": "Maul",
+								"entries": [
+									"{@atk mw} {@hit 5} 命中，距离 1.5 米，一个目标。{@h}9 ({@damage 2d6 + 2}) 暴击伤害。"
+								]
+							}
+						}
+					},
+					"level": 5,
+					"hp": {
+						"average": 33,
+						"formula": "6d8 + 6"
+					},
+					"wis": 15,
+					"save": {
+						"wis": "+6"
+					},
+					"skill": {
+						"athletics": "+5",
+						"history": "+3",
+						"medicine": "+6",
+						"perception": "+6"
+					},
+					"passive": 15,
+					"pbNote": "+3",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"赫里格的法术能力是智慧（法术拯救（%0%），用法术攻击命中率（%1%））。他准备了以下的牧师法术。"
+							],
+							"will": [
+								"{@spell guidance}",
+								"{@spell sacred flame}",
+								"{@spell spare the dying}"
+							],
+							"spells": {
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell cure wounds}",
+										"{@spell bless}",
+										"{@spell detect evil and good}"
+									]
+								},
+								"2": {
+									"slots": 2,
+									"spells": [
+										"{@spell spiritual weapon}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Hrigg Roundrook (6th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Potent Cantrips",
+								"entries": [
+									"赫里格在使用任何咒语造成的伤害上加上他的智慧修正值。"
+								]
+							}
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Maul",
+							"items": {
+								"name": "Maul",
+								"entries": [
+									"{@atk mw} {@hit 5} 命中，距离 1.5 米，一个目标。{@h}9 ({@damage 2d6 + 2}) 暴击伤害。"
+								]
+							}
+						}
+					},
+					"level": 6,
+					"hp": {
+						"average": 38,
+						"formula": "7d8 + 7"
+					},
+					"wis": 15,
+					"save": {
+						"wis": "+6"
+					},
+					"skill": {
+						"athletics": "+5",
+						"history": "+3",
+						"medicine": "+6",
+						"perception": "+6"
+					},
+					"passive": 15,
+					"pbNote": "+3",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"赫里格的法术能力是智慧（法术拯救（%0%），用法术攻击命中率（%1%））。他准备了以下的牧师法术。"
+							],
+							"will": [
+								"{@spell guidance}",
+								"{@spell sacred flame}",
+								"{@spell spare the dying}"
+							],
+							"spells": {
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell cure wounds}",
+										"{@spell bless}",
+										"{@spell detect evil and good}"
+									]
+								},
+								"2": {
+									"slots": 2,
+									"spells": [
+										"{@spell spiritual weapon}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Hrigg Roundrook (7th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Potent Cantrips",
+								"entries": [
+									"赫里格在使用任何咒语造成的伤害上加上他的智慧修正值。"
+								]
+							}
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Maul",
+							"items": {
+								"name": "Maul",
+								"entries": [
+									"{@atk mw} {@hit 5} 命中，距离 1.5 米，一个目标。{@h}9 ({@damage 2d6 + 2}) 暴击伤害。"
+								]
+							}
+						}
+					},
+					"level": 7,
+					"hp": {
+						"average": 44,
+						"formula": "8d8 + 8"
+					},
+					"wis": 15,
+					"save": {
+						"wis": "+6"
+					},
+					"skill": {
+						"athletics": "+5",
+						"history": "+3",
+						"medicine": "+6",
+						"perception": "+6"
+					},
+					"passive": 15,
+					"pbNote": "+3",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"赫里格的法术能力是智慧（法术拯救（%0%），用法术攻击命中率（%1%））。他准备了以下的牧师法术。"
+							],
+							"will": [
+								"{@spell guidance}",
+								"{@spell sacred flame}",
+								"{@spell spare the dying}"
+							],
+							"spells": {
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell cure wounds}",
+										"{@spell bless}",
+										"{@spell detect evil and good}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell spiritual weapon}",
+										"{@spell lesser restoration}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Hrigg Roundrook (8th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Potent Cantrips",
+								"entries": [
+									"赫里格在使用任何咒语造成的伤害上加上他的智慧修正值。"
+								]
+							}
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Maul",
+							"items": {
+								"name": "Maul",
+								"entries": [
+									"{@atk mw} {@hit 5} 命中，距离 1.5 米，一个目标。{@h}9 ({@damage 2d6 + 2}) 暴击伤害。"
+								]
+							}
+						}
+					},
+					"level": 8,
+					"hp": {
+						"average": 49,
+						"formula": "9d8 + 9"
+					},
+					"wis": 17,
+					"save": {
+						"wis": "+7"
+					},
+					"skill": {
+						"athletics": "+5",
+						"history": "+3",
+						"medicine": "+7",
+						"perception": "+7"
+					},
+					"passive": 16,
+					"pbNote": "+3",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"赫里格的法术能力是智慧（法术拯救（%0%），用法术攻击命中率（%1%））。他准备了以下的牧师法术。"
+							],
+							"will": [
+								"{@spell guidance}",
+								"{@spell sacred flame}",
+								"{@spell spare the dying}"
+							],
+							"spells": {
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell cure wounds}",
+										"{@spell bless}",
+										"{@spell detect evil and good}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell spiritual weapon}",
+										"{@spell lesser restoration}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Hrigg Roundrook (9th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Potent Cantrips",
+								"entries": [
+									"赫里格在使用任何咒语造成的伤害上加上他的智慧修正值。"
+								]
+							}
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Maul",
+							"items": {
+								"name": "Maul",
+								"entries": [
+									"{@atk mw} {@hit 6} 命中，距离 1.5 米，一个目标。{@h}9 ({@damage 2d6 + 2}) 暴击伤害。"
+								]
+							}
+						}
+					},
+					"level": 9,
+					"hp": {
+						"average": 55,
+						"formula": "10d8 + 10"
+					},
+					"wis": 17,
+					"save": {
+						"wis": "+8"
+					},
+					"skill": {
+						"athletics": "+6",
+						"history": "+4",
+						"medicine": "+8",
+						"perception": "+8"
+					},
+					"passive": 16,
+					"pbNote": "+4",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"赫里格的法术能力是智慧（法术拯救（%0%），用法术攻击命中率（%1%））。他准备了以下的牧师法术。"
+							],
+							"will": [
+								"{@spell guidance}",
+								"{@spell sacred flame}",
+								"{@spell spare the dying}"
+							],
+							"spells": {
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell cure wounds}",
+										"{@spell bless}",
+										"{@spell detect evil and good}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell spiritual weapon}",
+										"{@spell lesser restoration}"
+									]
+								},
+								"3": {
+									"slots": 2,
+									"spells": [
+										"{@spell beacon of hope}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Hulking Shadow",
+			"source": "DSotDQ",
+			"page": 174,
+			"_copy": {
+				"name": "Clay Golem",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "golem",
+						"with": "shadow"
+					}
+				}
+			},
+			"type": "undead",
+			"hasToken": true
+		},
+		{
+			"name": "Ignia",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 184,
+			"_copy": {
+				"name": "Young Red Dragon",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the dragon",
+						"with": "Ignia",
+						"flags": "i"
+					}
+				}
+			},
+			"size": [
+				"H"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Incomplete Dragon Skeleton",
+			"source": "DSotDQ",
+			"page": 138,
+			"_copy": {
+				"name": "Bone Naga (Spirit)",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "naga",
+						"with": "skeleton"
+					}
+				}
+			},
+			"spellcasting": null,
+			"hasToken": true
+		},
+		{
+			"name": "Iriad",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 212,
+			"level": 1,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"elf"
+				],
+				"sidekickType": "expert"
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 11,
+				"formula": "2d8 + 2"
+			},
+			"speed": {
+				"walk": 35
+			},
+			"str": 11,
+			"dex": 16,
+			"con": 12,
+			"int": 11,
+			"wis": 13,
+			"cha": 11,
+			"save": {
+				"dex": "+4"
+			},
+			"skill": {
+				"acrobatics": "+5",
+				"athletics": "+2",
+				"investigation": "+2",
+				"nature": "+2",
+				"perception": "+5",
+				"stealth": "+5",
+				"survival": "+3"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"languages": [
+				"Common",
+				"Elvish"
+			],
+			"pbNote": "+2",
+			"trait": [
+				{
+					"name": "Bonus Proficiencies",
+					"entries": [
+						"Iriad精通简单的武器、轻型盔甲、（%0%）和（%1%）。"
+					]
+				},
+				{
+					"name": "Fey Ancestry",
+					"entries": [
+						"Iriad在为避免或结束自己身上的{@condition charmed}状况而进行的拯救动作上有优势，而且魔法无法使她入睡。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Poison Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} 命中，距离 1.5 米或范围 20/18 米，一个目标。{@h}5 ({@damage 1d4 + 3}) 穿透伤害外加 3 ({@damage 1d6}) 毒药伤害。"
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Helpful",
+					"entries": [
+						"Iriad采取了（%0%）的行动。"
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "inset",
+					"name": "Iriad beyond 1st Level",
+					"entries": [
+						{
+							"type": "table",
+							"colLabels": [
+								"Level",
+								"Hit Points",
+								"New Features"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-2",
+								"col-8"
+							],
+							"rows": [
+								[
+									"第 2",
+									"16 ({@dice 3d8 + 3})",
+									"狡猾的行动。在Iriad的战斗回合中，她可以采取{@action Dash}、{@action Disengage}或{@action Hide}的行动作为额外行动。"
+								],
+								[
+									"第 3 次",
+									"22 ({@dice 4d8 + 4})",
+									"专业知识。对于她所做的任何使用（%0%）或（%1%）的能力检查，Iriad的熟练度奖励都会翻倍。"
+								],
+								[
+									"第四届",
+									"27 ({@dice 5d8 + 5})",
+									"能力得分的提高。伊瑞德的灵巧得分增加2，提高1的修饰，所以将以下数字增加1：她的护甲等级，她的灵巧救赎奖励，她的（%0%）奖励，以及她武器攻击的命中和伤害奖励。"
+								],
+								[
+									"第 5 次",
+									"33 ({@dice 6d8 + 6})",
+									"熟练度奖励。伊利亚德的熟练度奖励增加了1，所以在她的状态块中做了如下改变：将蓄力和技能项的奖励增加1（{@skill Perception}、{@skill Stealth}和{@skill Survival}增加2）；将她的被动感知得分增加2；将她的武器攻击的命中奖励增加1。"
+								],
+								[
+									"第六届",
+									"38 ({@dice 7d8 + 7})",
+									"协同打击。当艾里亚德使用她的 \"帮助 \"特性帮助盟友攻击一个生物时，该目标可以距离她最远 9 米，并且她可以在当前回合结束前的下一次攻击翻滚中对其造成额外 {@dice 2d6} 的伤害。额外伤害与攻击造成的伤害类型相同。"
+								],
+								[
+									"第七届",
+									"44 ({@dice 8d8 + 8})",
+									"躲避。当Iriad受到一个允许她进行灵巧救赎的效果，只受到一半的伤害时，如果她救赎成功，她就不会受到任何伤害，如果她失败，则只受到一半伤害。在受到攻击时，Iriad不会从这个特性中受益。"
+								],
+								[
+									"第八届",
+									"49 ({@dice 9d8 + 9})",
+									"能力得分的提高。伊利亚德的力量和智慧分数都增加了1，使他们的修饰物提高了1，所以使以下数字增加了1：她的（%0%）、（%1%）和（%2%）奖金以及她的被动感知分数。"
+								],
+								[
+									"第 9 次",
+									"55 ({@dice 10d8 + 10})",
+									"熟练度奖励。伊利亚德的熟练度奖励增加了1，所以在她的状态块中做了如下改变：将蓄力和技能项的奖励增加1（{@skill Perception}、{@skill Stealth}和{@skill Survival}增加2）；将她的被动感知得分增加2；将她的武器攻击的命中奖励增加1。"
+								],
+								[
+									"第 10 次",
+									"60 ({@dice 11d8 + 11})",
+									"能力得分的提高。伊瑞德的灵巧得分增加2，提高1的修饰，所以将以下数字增加1：她的护甲等级，她的灵巧救赎奖励，她的（%0%）奖励，以及她武器攻击的命中和伤害奖励。"
+								],
+								[
+									"第十一届",
+									"66 ({@dice 12d8 + 12})",
+									"鼓舞人心的帮助。当Iriad采取{@action Help}行动时，接受帮助的生物也会获得{@dice 1d6}的{@dice d20}卷的奖励。如果该卷是一个攻击卷，该生物可以放弃将该奖励加入其中，然后如果攻击命中，该生物可以将该奖励加入攻击对一个目标的伤害卷。"
+								]
+							]
+						}
+					]
+				}
+			],
+			"traitTags": [
+				"Fey Ancestry"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"E"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Iriad (10th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Expertise",
+									"entries": [
+										"Iriad's proficiency bonus is doubled for any ability check she makes that uses either {@skill Stealth} or {@skill Survival}."
+									]
+								},
+								{
+									"name": "Coordinated Strike",
+									"entries": [
+										"When Iriad uses her Helpful feature to aid an ally in attacking a creature, that target can be up to 30 feet away from her, and she can deal an extra {@damage 2d6} damage to it the next time she hits it with an attack roll before the end of the current turn. The extra damage is the same type of damage dealt by the attack."
+									]
+								},
+								{
+									"name": "Evasion",
+									"entries": [
+										"When Iriad is subjected to an effect that allows her to make a Dexterity saving throw to take only half damage, she instead takes no damage if she succeeds on the saving throw, and only half damage if she fails. Iriad doesn't benefit from this feature while {@condition incapacitated}."
+									]
+								}
+							]
+						},
+						"bonus": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Cunning Action",
+								"entries": [
+									"在Iriad的战斗回合中，她可以采取{@action Dash}、{@action Disengage}或{@action Hide}的行动作为奖励行动。"
+								]
+							}
+						}
+					},
+					"level": 10,
+					"ac": [
+						{
+							"ac": 16,
+							"from": [
+								"{@item leather armor|PHB}"
+							]
+						}
+					],
+					"hp": {
+						"average": 60,
+						"formula": "11d8 + 11"
+					},
+					"str": 12,
+					"dex": 20,
+					"wis": 14,
+					"save": {
+						"dex": "+8"
+					},
+					"skill": {
+						"acrobatics": "+7",
+						"athletics": "+5",
+						"investigation": "+4",
+						"nature": "+4",
+						"perception": "+10",
+						"stealth": "+13",
+						"survival": "+10"
+					},
+					"passive": 18,
+					"pbNote": "+4",
+					"action": [
+						{
+							"name": "Poison Dagger",
+							"entries": [
+								"{@atk mw,rw} {@hit 9} 命中，距离 1.5 米或范围 20/18 米，一个目标。{@h}7 ({@damage 1d4 + 5}) 穿透伤害外加 3 ({@damage 1d6}) 毒药伤害。"
+							]
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Iriad (11th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Expertise",
+									"entries": [
+										"Iriad's proficiency bonus is doubled for any ability check she makes that uses either {@skill Stealth} or {@skill Survival}."
+									]
+								},
+								{
+									"name": "Coordinated Strike",
+									"entries": [
+										"When Iriad uses her Helpful feature to aid an ally in attacking a creature, that target can be up to 30 feet away from her, and she can deal an extra {@damage 2d6} damage to it the next time she hits it with an attack roll before the end of the current turn. The extra damage is the same type of damage dealt by the attack."
+									]
+								},
+								{
+									"name": "Evasion",
+									"entries": [
+										"When Iriad is subjected to an effect that allows her to make a Dexterity saving throw to take only half damage, she instead takes no damage if she succeeds on the saving throw, and only half damage if she fails. Iriad doesn't benefit from this feature while {@condition incapacitated}."
+									]
+								},
+								{
+									"name": "Inspiring Help",
+									"entries": [
+										"When Iriad takes the {@action Help} action, the creature who receives the help also gains a {@dice 1d6} bonus to the {@dice d20} roll. If that roll is an attack roll, the creature can forgo adding the bonus to it, and then if the attack hits, the creature can add the bonus to the attack's damage roll against one target."
+									]
+								}
+							]
+						},
+						"bonus": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Cunning Action",
+								"entries": [
+									"在Iriad的战斗回合中，她可以采取{@action Dash}、{@action Disengage}或{@action Hide}的行动作为奖励行动。"
+								]
+							}
+						}
+					},
+					"level": 11,
+					"ac": [
+						{
+							"ac": 16,
+							"from": [
+								"{@item leather armor|PHB}"
+							]
+						}
+					],
+					"hp": {
+						"average": 66,
+						"formula": "12d8 + 12"
+					},
+					"str": 12,
+					"dex": 20,
+					"wis": 14,
+					"save": {
+						"dex": "+8"
+					},
+					"skill": {
+						"acrobatics": "+7",
+						"athletics": "+5",
+						"investigation": "+4",
+						"nature": "+4",
+						"perception": "+10",
+						"stealth": "+13",
+						"survival": "+10"
+					},
+					"passive": 18,
+					"pbNote": "+4",
+					"action": [
+						{
+							"name": "Poison Dagger",
+							"entries": [
+								"{@atk mw,rw} {@hit 9} 命中，距离 1.5 米或范围 20/18 米，一个目标。{@h}7 ({@damage 1d4 + 5}) 穿透伤害外加 3 ({@damage 1d6}) 毒药伤害。"
+							]
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Iriad (2nd Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"bonus": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Cunning Action",
+								"entries": [
+									"在Iriad的战斗回合中，她可以采取{@action Dash}、{@action Disengage}或{@action Hide}的行动作为奖励行动。"
+								]
+							}
+						}
+					},
+					"level": 2,
+					"hp": {
+						"average": 16,
+						"formula": "3d8 + 3"
+					},
+					"variant": null
+				},
+				{
+					"name": "Iriad (3rd Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Expertise",
+								"entries": [
+									"Iriad的熟练度奖励在她进行任何使用（%0%）或（%1%）的能力检查时都会翻倍。"
+								]
+							}
+						},
+						"bonus": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Cunning Action",
+								"entries": [
+									"在Iriad的战斗回合中，她可以采取{@action Dash}、{@action Disengage}或{@action Hide}的行动作为奖励行动。"
+								]
+							}
+						}
+					},
+					"level": 3,
+					"hp": {
+						"average": 22,
+						"formula": "4d8 + 4"
+					},
+					"skill": {
+						"acrobatics": "+5",
+						"athletics": "+2",
+						"investigation": "+2",
+						"nature": "+2",
+						"perception": "+5",
+						"stealth": "+7",
+						"survival": "+5"
+					},
+					"variant": null
+				},
+				{
+					"name": "Iriad (4th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Expertise",
+								"entries": [
+									"Iriad的熟练度奖励在她进行任何使用（%0%）或（%1%）的能力检查时都会翻倍。"
+								]
+							}
+						},
+						"bonus": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Cunning Action",
+								"entries": [
+									"在Iriad的战斗回合中，她可以采取{@action Dash}、{@action Disengage}或{@action Hide}的行动作为奖励行动。"
+								]
+							}
+						}
+					},
+					"level": 4,
+					"ac": [
+						{
+							"ac": 15,
+							"from": [
+								"{@item leather armor|PHB}"
+							]
+						}
+					],
+					"hp": {
+						"average": 27,
+						"formula": "5d8 + 5"
+					},
+					"dex": 18,
+					"save": {
+						"dex": "+5"
+					},
+					"skill": {
+						"acrobatics": "+5",
+						"athletics": "+2",
+						"investigation": "+2",
+						"nature": "+2",
+						"perception": "+5",
+						"stealth": "+8",
+						"survival": "+5"
+					},
+					"action": [
+						{
+							"name": "Poison Dagger",
+							"entries": [
+								"{@atk mw,rw} {@hit 6} 命中，距离 1.5 米或范围 20/18 米，一个目标。{@h}6 ({@damage 1d4 + 4}) 穿透伤害外加 3 ({@damage 1d6}) 毒药伤害。"
+							]
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Iriad (5th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Expertise",
+								"entries": [
+									"Iriad的熟练度奖励在她进行任何使用（%0%）或（%1%）的能力检查时都会翻倍。"
+								]
+							}
+						},
+						"bonus": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Cunning Action",
+								"entries": [
+									"在Iriad的战斗回合中，她可以采取{@action Dash}、{@action Disengage}或{@action Hide}的行动作为奖励行动。"
+								]
+							}
+						}
+					},
+					"level": 5,
+					"ac": [
+						{
+							"ac": 15,
+							"from": [
+								"{@item leather armor|PHB}"
+							]
+						}
+					],
+					"hp": {
+						"average": 33,
+						"formula": "6d8 + 6"
+					},
+					"dex": 18,
+					"save": {
+						"dex": "+6"
+					},
+					"skill": {
+						"acrobatics": "+6",
+						"athletics": "+3",
+						"investigation": "+3",
+						"nature": "+3",
+						"perception": "+7",
+						"stealth": "+10",
+						"survival": "+7"
+					},
+					"passive": 15,
+					"pbNote": "+3",
+					"action": [
+						{
+							"name": "Poison Dagger",
+							"entries": [
+								"{@atk mw,rw} {@hit 7} 命中，距离 1.5 米或范围 20/18 米，一个目标。{@h}6 ({@damage 1d4 + 4}) 穿透伤害外加 3 ({@damage 1d6}) 毒药伤害。"
+							]
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Iriad (6th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Expertise",
+									"entries": [
+										"Iriad's proficiency bonus is doubled for any ability check she makes that uses either {@skill Stealth} or {@skill Survival}."
+									]
+								},
+								{
+									"name": "Coordinated Strike",
+									"entries": [
+										"When Iriad uses her Helpful feature to aid an ally in attacking a creature, that target can be up to 30 feet away from her, and she can deal an extra {@damage 2d6} damage to it the next time she hits it with an attack roll before the end of the current turn. The extra damage is the same type of damage dealt by the attack."
+									]
+								}
+							]
+						},
+						"bonus": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Cunning Action",
+								"entries": [
+									"在Iriad的战斗回合中，她可以采取{@action Dash}、{@action Disengage}或{@action Hide}的行动作为奖励行动。"
+								]
+							}
+						}
+					},
+					"level": 6,
+					"ac": [
+						{
+							"ac": 15,
+							"from": [
+								"{@item leather armor|PHB}"
+							]
+						}
+					],
+					"hp": {
+						"average": 38,
+						"formula": "7d8 + 7"
+					},
+					"dex": 18,
+					"save": {
+						"dex": "+6"
+					},
+					"skill": {
+						"acrobatics": "+6",
+						"athletics": "+3",
+						"investigation": "+3",
+						"nature": "+3",
+						"perception": "+7",
+						"stealth": "+10",
+						"survival": "+7"
+					},
+					"passive": 15,
+					"pbNote": "+3",
+					"action": [
+						{
+							"name": "Poison Dagger",
+							"entries": [
+								"{@atk mw,rw} {@hit 7} 命中，距离 1.5 米或范围 20/18 米，一个目标。{@h}6 ({@damage 1d4 + 4}) 穿透伤害外加 3 ({@damage 1d6}) 毒药伤害。"
+							]
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Iriad (7th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Expertise",
+									"entries": [
+										"Iriad's proficiency bonus is doubled for any ability check she makes that uses either {@skill Stealth} or {@skill Survival}."
+									]
+								},
+								{
+									"name": "Coordinated Strike",
+									"entries": [
+										"When Iriad uses her Helpful feature to aid an ally in attacking a creature, that target can be up to 30 feet away from her, and she can deal an extra {@damage 2d6} damage to it the next time she hits it with an attack roll before the end of the current turn. The extra damage is the same type of damage dealt by the attack."
+									]
+								},
+								{
+									"name": "Evasion",
+									"entries": [
+										"When Iriad is subjected to an effect that allows her to make a Dexterity saving throw to take only half damage, she instead takes no damage if she succeeds on the saving throw, and only half damage if she fails. Iriad doesn't benefit from this feature while {@condition incapacitated}."
+									]
+								}
+							]
+						},
+						"bonus": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Cunning Action",
+								"entries": [
+									"在Iriad的战斗回合中，她可以采取{@action Dash}、{@action Disengage}或{@action Hide}的行动作为奖励行动。"
+								]
+							}
+						}
+					},
+					"level": 7,
+					"ac": [
+						{
+							"ac": 15,
+							"from": [
+								"{@item leather armor|PHB}"
+							]
+						}
+					],
+					"hp": {
+						"average": 44,
+						"formula": "8d8 + 8"
+					},
+					"dex": 18,
+					"save": {
+						"dex": "+6"
+					},
+					"skill": {
+						"acrobatics": "+6",
+						"athletics": "+3",
+						"investigation": "+3",
+						"nature": "+3",
+						"perception": "+7",
+						"stealth": "+10",
+						"survival": "+7"
+					},
+					"passive": 15,
+					"pbNote": "+3",
+					"action": [
+						{
+							"name": "Poison Dagger",
+							"entries": [
+								"{@atk mw,rw} {@hit 7} 命中，距离 1.5 米或范围 20/18 米，一个目标。{@h}6 ({@damage 1d4 + 4}) 穿透伤害外加 3 ({@damage 1d6}) 毒药伤害。"
+							]
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Iriad (8th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Expertise",
+									"entries": [
+										"Iriad's proficiency bonus is doubled for any ability check she makes that uses either {@skill Stealth} or {@skill Survival}."
+									]
+								},
+								{
+									"name": "Coordinated Strike",
+									"entries": [
+										"When Iriad uses her Helpful feature to aid an ally in attacking a creature, that target can be up to 30 feet away from her, and she can deal an extra {@damage 2d6} damage to it the next time she hits it with an attack roll before the end of the current turn. The extra damage is the same type of damage dealt by the attack."
+									]
+								},
+								{
+									"name": "Evasion",
+									"entries": [
+										"When Iriad is subjected to an effect that allows her to make a Dexterity saving throw to take only half damage, she instead takes no damage if she succeeds on the saving throw, and only half damage if she fails. Iriad doesn't benefit from this feature while {@condition incapacitated}."
+									]
+								}
+							]
+						},
+						"bonus": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Cunning Action",
+								"entries": [
+									"在Iriad的战斗回合中，她可以采取{@action Dash}、{@action Disengage}或{@action Hide}的行动作为奖励行动。"
+								]
+							}
+						}
+					},
+					"level": 8,
+					"ac": [
+						{
+							"ac": 15,
+							"from": [
+								"{@item leather armor|PHB}"
+							]
+						}
+					],
+					"hp": {
+						"average": 49,
+						"formula": "9d8 + 9"
+					},
+					"str": 12,
+					"dex": 18,
+					"wis": 14,
+					"save": {
+						"dex": "+6"
+					},
+					"skill": {
+						"acrobatics": "+6",
+						"athletics": "+4",
+						"investigation": "+3",
+						"nature": "+3",
+						"perception": "+8",
+						"stealth": "+10",
+						"survival": "+8"
+					},
+					"passive": 16,
+					"pbNote": "+3",
+					"action": [
+						{
+							"name": "Poison Dagger",
+							"entries": [
+								"{@atk mw,rw} {@hit 7} 命中，距离 1.5 米或范围 20/18 米，一个目标。{@h}6 ({@damage 1d4 + 4}) 穿透伤害外加 3 ({@damage 1d6}) 毒药伤害。"
+							]
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Iriad (9th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Expertise",
+									"entries": [
+										"Iriad's proficiency bonus is doubled for any ability check she makes that uses either {@skill Stealth} or {@skill Survival}."
+									]
+								},
+								{
+									"name": "Coordinated Strike",
+									"entries": [
+										"When Iriad uses her Helpful feature to aid an ally in attacking a creature, that target can be up to 30 feet away from her, and she can deal an extra {@damage 2d6} damage to it the next time she hits it with an attack roll before the end of the current turn. The extra damage is the same type of damage dealt by the attack."
+									]
+								},
+								{
+									"name": "Evasion",
+									"entries": [
+										"When Iriad is subjected to an effect that allows her to make a Dexterity saving throw to take only half damage, she instead takes no damage if she succeeds on the saving throw, and only half damage if she fails. Iriad doesn't benefit from this feature while {@condition incapacitated}."
+									]
+								}
+							]
+						},
+						"bonus": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Cunning Action",
+								"entries": [
+									"在Iriad的战斗回合中，她可以采取{@action Dash}、{@action Disengage}或{@action Hide}的行动作为奖励行动。"
+								]
+							}
+						}
+					},
+					"level": 9,
+					"ac": [
+						{
+							"ac": 15,
+							"from": [
+								"{@item leather armor|PHB}"
+							]
+						}
+					],
+					"hp": {
+						"average": 55,
+						"formula": "10d8 + 10"
+					},
+					"str": 12,
+					"dex": 18,
+					"wis": 14,
+					"save": {
+						"dex": "+7"
+					},
+					"skill": {
+						"acrobatics": "+7",
+						"athletics": "+5",
+						"investigation": "+4",
+						"nature": "+4",
+						"perception": "+10",
+						"stealth": "+12",
+						"survival": "+10"
+					},
+					"passive": 18,
+					"pbNote": "+4",
+					"action": [
+						{
+							"name": "Poison Dagger",
+							"entries": [
+								"{@atk mw,rw} {@hit 8} 命中，距离 1.5 米或范围 20/18 米，一个目标。{@h}6 ({@damage 1d4 + 4}) 穿透伤害外加 3 ({@damage 1d6}) 毒药伤害。"
+							]
+						}
+					],
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Ishvern",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 114,
+			"_copy": {
+				"name": "Sea Elf Scout",
+				"source": "DSotDQ",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the scout",
+						"with": "Ishvern",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Istarian Drone",
+			"source": "DSotDQ",
+			"page": 202,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 127,
+				"formula": "15d8 + 60"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 20,
+			"dex": 10,
+			"con": 18,
+			"int": 4,
+			"wis": 10,
+			"cha": 4,
+			"senses": [
+				"blindsight 60 ft. (blind beyond this radius)"
+			],
+			"passive": 10,
+			"immune": [
+				"lightning",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages spoken by its creator but can't speak"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"无人机可以爬上困难的表面，包括倒立在天花板上，而不需要进行能力检查。"
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"无人机不需要空气、食物、饮料或睡眠。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"无人机进行两次爪子攻击。"
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 8} 命中，距离 1.5 米，一个目标。{@h}9 ({@damage 1d8 + 5}) 穿透伤害外加 4 ({@damage 1d8}) 闪电伤害。如果目标是中型或更小的生物，则为 {@condition grappled} （逃脱 {@dc 15}）。无人机有两只爪子，每只爪子只能抓取一个目标。"
+					]
+				},
+				{
+					"name": "Crystalline Spit {@recharge 5}",
+					"entries": [
+						"无人机吐出噼啪作响的凝胶，形成一条宽 1.5 米、长 6 米的线。线中的每个生物都必须进行 {@dc 15} 灵巧蓄力。如果蓄力失败，生物会受到 14（{@damage 4d6}）闪电伤害，并被凝胶（%2%），凝胶会硬化成水晶。该生物会受到 {@condition restrained} 的伤害，直到水晶被摧毁。水晶的 AC 值为 15，命中点数为 15，免疫中毒和精神伤害，易受雷电伤害。如果成功获救，该生物会受到一半的伤害，并且不会受到（%4%）的伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"Spider Climb",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"L",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Jeyev Veldrews",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 75,
+			"_copy": {
+				"name": "Bandit Captain",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the captain",
+						"with": "Jeyev",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Kalaman Soldier",
+			"source": "DSotDQ",
+			"page": 202,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item chain mail|PHB}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 16,
+				"formula": "3d8 + 3"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 12,
+			"con": 12,
+			"int": 10,
+			"wis": 11,
+			"cha": 10,
+			"skill": {
+				"athletics": "+3",
+				"perception": "+2"
+			},
+			"passive": 12,
+			"languages": [
+				"Common"
+			],
+			"cr": "1/2",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"该士兵进行两次长剑攻击。"
+					]
+				},
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 3} 命中，距离 1.5 米，一个目标。{@h}6 ({@damage 1d8 + 2}) 次砍击伤害，如果双手使用，则为 7 ({@damage 1d10 + 2}) 次砍击伤害。"
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Hold the Line",
+					"entries": [
+						"如果士兵周围 1.5 米内的盟友必须进行一次蓄力掷骰子，士兵会鼓励盟友，并在掷骰子时获得优势。"
+					]
+				}
+			],
+			"attachedItems": [
+				"longsword|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Kansaldi Fire-Eyes",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 203,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"cleric",
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item plate armor|PHB|plate}"
+					]
+				}
+			],
+			"hp": {
+				"average": 172,
+				"formula": "23d8 + 69"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 11,
+			"con": 17,
+			"int": 16,
+			"wis": 19,
+			"cha": 16,
+			"save": {
+				"wis": "+8",
+				"cha": "+7"
+			},
+			"skill": {
+				"insight": "+12",
+				"perception": "+8",
+				"religion": "+7"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 18,
+			"immune": [
+				"fire"
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Draconic"
+			],
+			"cr": "11",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Kansaldi施展以下一种法术，不需要任何材料成分，并使用智慧作为施法能力（法术保存（%0%））。"
+					],
+					"will": [
+						"{@spell light}",
+						"{@spell spare the dying}",
+						"{@spell thaumaturgy}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell blade barrier}",
+							"{@spell dispel magic}",
+							"{@spell flame strike}",
+							"{@spell lesser restoration}",
+							"{@spell revivify}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"卡萨尔迪的左眼窝里嵌着一颗发光的红宝石。这颗宝石作为她的眼睛发挥作用，并赋予她真实的视力（包括上述）。当Kansaldi活着的时候，这颗宝石不能被移除。当她死亡时，一个生物可以将宝石作为一个动作移除。然后，这颗宝石就可以作为视觉宝石使用。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"坎萨迪进行两次派克攻击，并使用火焰爆发。"
+					]
+				},
+				{
+					"name": "Pike",
+					"entries": [
+						"{@atk mw} {@hit 8} 命中，距离 3 米，一个目标。{@h}9 ({@damage 1d10 + 4}) 穿透伤害外加 16 ({@damage 3d10}) 辐射伤害。"
+					]
+				},
+				{
+					"name": "Flame Burst",
+					"entries": [
+						"坎萨尔迪向她能看到的 18 米范围内的生物投掷魔法火焰。目标必须进行 {@dc 16} 灵巧蓄力。如果蓄力失败，目标会受到 11（{@damage 2d10}）点火焰伤害并着火；在生物采取行动灭火之前，目标在每个回合开始时都会受到 5（{@damage 1d10}）点火焰伤害。如果成功获救，目标受到的伤害减半，并且不会着火。"
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Dragon Queen's Favor",
+					"entries": [
+						"坎萨尔迪或她能看到的 18 米范围内的一个生物会神奇地恢复 17 ({@dice 2d12 + 4}) 点命中率。"
+					]
+				}
+			],
+			"attachedItems": [
+				"pike|phb"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"F",
+				"P",
+				"R"
+			],
+			"damageTagsSpell": [
+				"F",
+				"R",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Kapak Draconian",
+			"source": "DSotDQ",
+			"page": 198,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 39,
+				"formula": "6d8 + 12"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40
+			},
+			"str": 11,
+			"dex": 17,
+			"con": 14,
+			"int": 12,
+			"wis": 13,
+			"cha": 11,
+			"save": {
+				"dex": "+5"
+			},
+			"skill": {
+				"deception": "+4",
+				"perception": "+3",
+				"stealth": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Death Throes",
+					"entries": [
+						"当龙人的命中率降低到 0 时，它会溶解成酸液并溅射到周围的人身上。龙人周围 1.5 米内的每个生物都必须在 {@dc 12} 灵巧蓄力中成功，否则会被酸液覆盖 1 分钟。被酸液覆盖的生物在每个回合开始时都会受到 7（{@damage 2d6}）次酸液伤害。生物可以使用动作将酸液从自身或其他生物身上刮掉或洗掉。"
+					]
+				},
+				{
+					"name": "Glide",
+					"entries": [
+						"当龙人坠落时，如果没有（%0%），在计算坠落伤害时最多可减去 3 米，并且每下降 0.3 米，最多可水平移动 0.6 米。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"龙人进行两次匕首攻击。如果两次攻击都击中了同一个生物，目标必须成功地进行一次{@dc 12}宪法救赎，否则会变成{@condition poisoned}，直到目标的下一个回合结束。当{@condition poisoned}以这种方式攻击时，目标也会被{@condition paralyzed}。"
+					]
+				},
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} 命中，距离 1.5 米或范围 20/18 米，一个目标。{@h}5 ({@damage 1d4 + 3}) 穿透伤害外加 7 ({@damage 2d6}) 毒药伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"traitTags": [
+				"Death Burst"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"A",
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"paralyzed",
+				"poisoned"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Karavarix",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 183,
+			"_copy": {
+				"name": "Greater Death Dragon",
+				"source": "DSotDQ",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the dragon",
+						"with": "Karavarix",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Kender Skirmisher",
+			"source": "DSotDQ",
+			"page": 204,
+			"size": [
+				"S"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 14,
+				"formula": "4d6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 16,
+			"con": 10,
+			"int": 12,
+			"wis": 8,
+			"cha": 14,
+			"skill": {
+				"perception": "+3",
+				"sleight of hand": "+7",
+				"stealth": "+5"
+			},
+			"passive": 13,
+			"conditionImmune": [
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"Kenderspeak"
+			],
+			"cr": "1/4",
+			"action": [
+				{
+					"name": "Hoopak",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} 命中，距离 1.5 米或射程 40/48 米，一个目标。{@h}6（{@damage 1d6 + 3}）次穿刺伤害，或 5（{@damage 1d4 + 3}）次暴击伤害（如果坎德人使用霍巴克的吊索进行远程攻击）。"
+					]
+				},
+				{
+					"name": "Taunt",
+					"entries": [
+						"坎德人向 18 米范围内能看到的生物发出一连串侮辱。如果目标能听到坎德人的声音，目标必须在{@dc 12}智慧蓄力中成功，否则在攻击卷轴上处于劣势，直到下一回合结束。"
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Elusive",
+					"entries": [
+						"该坎德人采取脱离或隐藏的行动。"
+					]
+				}
+			],
+			"attachedItems": [
+				"hoopak|dsotdq"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Leedara",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 58,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "undead",
+				"tags": [
+					"elf"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 45,
+				"formula": "10d8"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": 40
+			},
+			"str": 7,
+			"dex": 13,
+			"con": 10,
+			"int": 10,
+			"wis": 12,
+			"cha": 17,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"acid",
+				"fire",
+				"lightning",
+				"thunder",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"cold",
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"Any languages she knew in life"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Ethereal Sight",
+					"entries": [
+						"利达拉在物质界时可以看到 18 米外的虚无界，反之亦然。"
+					]
+				},
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"利达拉可以在其他生物和物体中移动，就像它们是困难的地形一样。如果她在一个物体内结束她的回合，她会受到5({@damage 1d10})力的伤害。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Withering Touch",
+					"entries": [
+						"{@atk mw} {@hit 5} 命中，距离 1.5 米，一个目标。{@h}17 ({@damage 4d6 + 3}) 坏死伤害。"
+					]
+				},
+				{
+					"name": "Etherealness",
+					"entries": [
+						"Leedara从物质位面进入虚空位面，或者反之亦然。当她在边界空灵界时，她在物质界是可见的，反之亦然，但她不能影响或被另一界的任何东西所影响。"
+					]
+				},
+				{
+					"name": "Horrifying Visage",
+					"entries": [
+						"利达拉 18 米范围内能看到她的每个非亡灵生物都必须在 {@dc 13} 智慧蓄力中成功，否则会 {@condition frightened} 1 分钟。如果失败 5 次或更多，目标也会衰老 {@dice 1d4 × 10} 年。一个 {@condition frightened} 目标可以在其每个回合结束时重复一次蓄力，一旦成功就会终止对自身的 {@condition frightened} 条件。如果目标的蓄力成功或效果结束，则该目标在接下来的 24 小时内免疫利达拉的恐怖面容。衰老效果可以用 {@spell greater restoration} 法术逆转，但只能在发生后的 24 小时内逆转。"
+					]
+				},
+				{
+					"name": "Possession {@recharge}",
+					"entries": [
+						"幽灵在其 1.5 米范围内看到的一个人形生物必须在（%0%）魅力蓄力中成功，否则就会被利达拉附身；然后利达拉会消失，目标会（%1%）并失去对身体的控制。利达拉现在控制身体，但不会剥夺目标的意识。莉达拉无法成为任何攻击、咒语或其他效果的目标，除了那些会变成亡灵的效果，而且她会保留自己的排列、智力、智慧、魅力，以及对（%2%）和（%3%）的免疫力。除此之外，她会使用附身目标的统计数据，但不会获得目标的知识、类别特征或熟练度。",
+						"附身会一直持续到尸体的命中率降为 0、利达拉以额外行动结束附身，或者利达拉被（%0%）咒语之类的效果反噬或逼出。附身结束后，利达拉会重新出现在尸体周围 1.5 米内的空地上。在救赎成功后或附身结束后的 24 小时内，目标对利达拉的附身免疫。"
+					]
+				},
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Leedara神奇地拥有她生前的外表，她的生物类型变为人形，同时保留她的其他游戏数据。如果莉达拉的命中率降至0，或者使用行动来结束它，这个转变就会结束。"
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Shapechanger"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"N",
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened",
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lesser Death Dragon",
+			"source": "DSotDQ",
+			"page": 195,
+			"size": [
+				"L"
+			],
+			"type": "undead",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 199,
+				"formula": "21d10 + 84"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 80
+			},
+			"str": 20,
+			"dex": 10,
+			"con": 18,
+			"int": 5,
+			"wis": 10,
+			"cha": 5,
+			"save": {
+				"dex": "+4",
+				"wis": "+4"
+			},
+			"skill": {
+				"perception": "+4",
+				"stealth": "+4"
+			},
+			"senses": [
+				"blindsight 30 ft.",
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"resist": [
+				"piercing"
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"understands Common and Draconic but can't speak"
+			],
+			"cr": "10",
+			"trait": [
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"龙不需要空气、食物、饮料或睡眠。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"龙进行一次咬人攻击和两次爪子攻击。"
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 9} 命中，距离 3 米，一个目标。{@h}14 ({@damage 2d8 + 5}) 穿透伤害外加 4 ({@damage 1d8}) 坏死伤害。"
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 9} 命中，距离一个目标 1.5 米。{@h}8 ({@damage 1d6 + 5}) 砍伤。如果目标是中型或更小的生物，则为 {@condition grappled} （逃脱 {@dc 15}）。直到抓取结束，目标会受到 {@condition restrained} 的伤害。龙有两只爪子，每只爪子可以抓取一个目标。"
+					]
+				},
+				{
+					"name": "Cataclysmic Breath {@recharge 5}",
+					"entries": [
+						"巨龙在 9 米锥形范围内吐出一波幽紫色火焰。该区域内的每个生物都必须进行 {@dc 16} 灵巧蓄力，蓄力失败会受到 36 ({@damage 8d8}) 坏死伤害，蓄力成功则会受到一半的伤害。如果呼吸将生物的命中率降至 0，生物就会死亡。此外，在龙的控制下，任何被龙息伤害致死的中型或小型类人生物，以及锥形范围内所有此类生物的尸体都会变成僵尸（参见《怪物手册》）。僵尸在龙的倡议下行动，但在龙的回合后立即行动。如果没有其他命令，僵尸会尝试杀死它遇到的任何非亡灵生物。"
+					]
+				}
+			],
+			"traitTags": [
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"B",
+				"D"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS",
+				"DR"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Levna Drakehorn",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 213,
+			"level": 1,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				],
+				"sidekickType": "warrior",
+				"sidekickTags": [
+					"defender"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item plate armor|PHB|plate}"
+					]
+				}
+			],
+			"hp": {
+				"average": 13,
+				"formula": "2d8 + 4"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 10,
+			"con": 14,
+			"int": 10,
+			"wis": 11,
+			"cha": 14,
+			"save": {
+				"con": "+4"
+			},
+			"skill": {
+				"athletics": "+4",
+				"intimidation": "+4",
+				"perception": "+2"
+			},
+			"passive": 12,
+			"languages": [
+				"Common"
+			],
+			"pbNote": "+2",
+			"trait": [
+				{
+					"name": "Bonus Proficiencies",
+					"entries": [
+						"列夫纳精通简单和武术武器、盾牌和所有盔甲。"
+					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"如果至少有一名盟友在该生物 1.5 米范围内，而该盟友不在 1.5 米范围内（%0%），则列夫娜在对该生物进行攻击时具有优势。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Greatsword",
+					"entries": [
+						"{@atk mw} {@hit 4} 命中，距离 1.5 米，一个目标。{@h}9 ({@damage 2d6 + 2}) 砍伤。"
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Protection",
+					"entries": [
+						"当列芙娜能看到的 1.5 米范围内的生物成为攻击目标时，如果她能看到攻击者，并且她挥舞的是近战武器，则她可以在攻击掷卷时施加劣势。"
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "inset",
+					"name": "Levna beyond 1st Level",
+					"entries": [
+						{
+							"type": "table",
+							"colLabels": [
+								"Level",
+								"Hit Points",
+								"New Features"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-2",
+								"col-8"
+							],
+							"rows": [
+								[
+									"第 2",
+									"19 ({@dice 3d8 + 6})",
+									"第二个风。莱芙娜可以在她的回合中使用一个额外的行动来恢复相当于{@dice 1d10}+她的等级的打击点数。一旦她使用这个功能，她就不能再使用，直到她完成一个短期或长期休息。"
+								],
+								[
+									"第 3 次",
+									"26 ({@dice 4d8 + 8})",
+									"改进的关键。Levna的攻击卷轴现在在19或20的卷轴上（%0%）获得关键命中。"
+								],
+								[
+									"第四届",
+									"32 ({@dice 5d8 + 10})",
+									"能力得分的提高。莱芙娜的力量得分增加2，提高1的修正值，因此增加她的（%0%）奖励1，并增加她的武器攻击的命中和伤害的奖励1。"
+								],
+								[
+									"第 5 次",
+									"39 ({@dice 6d8 + 12})",
+									"熟练度奖励。Levna的熟练度奖励增加了1，所以以下数字都增加了1：保存投掷和技能项目的奖励，她的被动感知分数，以及她的武器攻击的命中奖励。"
+								],
+								[
+									"第六届",
+									"45 ({@dice 7d8 + 14})",
+									"额外攻击。每当她在自己的回合中采取{@action Attack}行动时，Levna可以攻击两次，而不是一次。"
+								],
+								[
+									"第七届",
+									"52 ({@dice 8d8 + 16})",
+									"战斗准备。列夫纳在主动权卷上有优势。"
+								],
+								[
+									"第八届",
+									"58 ({@dice 9d8 + 18})",
+									"能力得分的提高。莱芙娜的力量得分增加2，提高1的修正值，因此增加她的（%0%）奖励1，并增加她的武器攻击的命中和伤害的奖励1。"
+								],
+								[
+									"第 9 次",
+									"65 ({@dice 10d8 + 20})",
+									"熟练度奖励。Levna的熟练度奖励增加了1，所以以下数字都增加了1：保存投掷和技能项目的奖励，她的被动感知分数，以及她的武器攻击的命中奖励。"
+								],
+								[
+									"第 10 次",
+									"71 ({@dice 11d8 + 22})",
+									"改进防御。Levna的装甲等级增加1。"
+								],
+								[
+									"第十一届",
+									"78 ({@dice 12d8 + 24})",
+									"不屈不挠。莱芙娜可以重做一次失败的蓄力动作，但她必须使用新的动作。一旦她使用了这个功能，她就不能再使用它，直到她完成一个长时间的休息。"
+								]
+							]
+						}
+					]
+				}
+			],
+			"attachedItems": [
+				"greatsword|phb"
+			],
+			"traitTags": [
+				"Pack Tactics"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Levna Drakehorn (10th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Second Wind",
+									"entries": [
+										"Levna can use a bonus action on her turn to regain hit points equal to {@dice 1d10} + her level. Once she uses this feature, she can't use it again until she finishes a short or long rest."
+									]
+								},
+								{
+									"name": "Improved Critical",
+									"entries": [
+										"Levna's attack rolls now score a critical hit on a roll of 19 or 20 on the {@dice d20}."
+									]
+								},
+								{
+									"name": "Extra Attack",
+									"entries": [
+										"Levna can attack twice, instead of once, whenever she takes the {@action Attack} action on her turn."
+									]
+								},
+								{
+									"name": "Battle Readiness",
+									"entries": [
+										"Levna has advantage on initiative rolls."
+									]
+								},
+								{
+									"name": "Improved Defense",
+									"entries": [
+										"Levna's Armor Class increases by 1."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Greatsword",
+							"items": {
+								"name": "Greatsword",
+								"entries": [
+									"{@atk mw} {@hit 8} 命中，距离 1.5 米，一个目标。{@h}11 ({@damage 2d6 + 4}) 砍伤。"
+								]
+							}
+						}
+					},
+					"level": 10,
+					"ac": [
+						{
+							"ac": 19,
+							"from": [
+								"{@item plate armor|PHB|plate}",
+								"improved defense"
+							]
+						}
+					],
+					"hp": {
+						"average": 71,
+						"formula": "11d8 + 22"
+					},
+					"str": 19,
+					"save": {
+						"con": "+6"
+					},
+					"skill": {
+						"athletics": "+8",
+						"intimidation": "+6",
+						"perception": "+4"
+					},
+					"passive": 14,
+					"pbNote": "+4",
+					"variant": null
+				},
+				{
+					"name": "Levna Drakehorn (11th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Second Wind",
+									"entries": [
+										"Levna can use a bonus action on her turn to regain hit points equal to {@dice 1d10} + her level. Once she uses this feature, she can't use it again until she finishes a short or long rest."
+									]
+								},
+								{
+									"name": "Improved Critical",
+									"entries": [
+										"Levna's attack rolls now score a critical hit on a roll of 19 or 20 on the {@dice d20}."
+									]
+								},
+								{
+									"name": "Extra Attack",
+									"entries": [
+										"Levna can attack twice, instead of once, whenever she takes the {@action Attack} action on her turn."
+									]
+								},
+								{
+									"name": "Battle Readiness",
+									"entries": [
+										"Levna has advantage on initiative rolls."
+									]
+								},
+								{
+									"name": "Improved Defense",
+									"entries": [
+										"Levna's Armor Class increases by 1."
+									]
+								},
+								{
+									"name": "Indomitable",
+									"entries": [
+										"Levna can reroll a saving throw that she fails, but she must use the new roll. Once she uses this feature, she can't use it again until she finishes a long rest."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Greatsword",
+							"items": {
+								"name": "Greatsword",
+								"entries": [
+									"{@atk mw} {@hit 8} 命中，距离 1.5 米，一个目标。{@h}11 ({@damage 2d6 + 4}) 砍伤。"
+								]
+							}
+						}
+					},
+					"level": 11,
+					"ac": [
+						{
+							"ac": 19,
+							"from": [
+								"{@item plate armor|PHB|plate}",
+								"improved defense"
+							]
+						}
+					],
+					"hp": {
+						"average": 78,
+						"formula": "12d8 + 24"
+					},
+					"str": 19,
+					"save": {
+						"con": "+6"
+					},
+					"skill": {
+						"athletics": "+8",
+						"intimidation": "+6",
+						"perception": "+4"
+					},
+					"passive": 14,
+					"pbNote": "+4",
+					"variant": null
+				},
+				{
+					"name": "Levna Drakehorn (2nd Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Second Wind",
+									"entries": [
+										"Levna can use a bonus action on her turn to regain hit points equal to {@dice 1d10} + her level. Once she uses this feature, she can't use it again until she finishes a short or long rest."
+									]
+								}
+							]
+						}
+					},
+					"level": 2,
+					"hp": {
+						"average": 19,
+						"formula": "3d8 + 6"
+					},
+					"variant": null
+				},
+				{
+					"name": "Levna Drakehorn (3rd Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Second Wind",
+									"entries": [
+										"Levna can use a bonus action on her turn to regain hit points equal to {@dice 1d10} + her level. Once she uses this feature, she can't use it again until she finishes a short or long rest."
+									]
+								},
+								{
+									"name": "Improved Critical",
+									"entries": [
+										"Levna's attack rolls now score a critical hit on a roll of 19 or 20 on the {@dice d20}."
+									]
+								}
+							]
+						}
+					},
+					"level": 3,
+					"hp": {
+						"average": 26,
+						"formula": "4d8 + 8"
+					},
+					"variant": null
+				},
+				{
+					"name": "Levna Drakehorn (4th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Second Wind",
+									"entries": [
+										"Levna can use a bonus action on her turn to regain hit points equal to {@dice 1d10} + her level. Once she uses this feature, she can't use it again until she finishes a short or long rest."
+									]
+								},
+								{
+									"name": "Improved Critical",
+									"entries": [
+										"Levna's attack rolls now score a critical hit on a roll of 19 or 20 on the {@dice d20}."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Greatsword",
+							"items": {
+								"name": "Greatsword",
+								"entries": [
+									"{@atk mw} {@hit 5} 命中，距离 1.5 米，一个目标。{@h}10 ({@damage 2d6 + 3}) 砍伤。"
+								]
+							}
+						}
+					},
+					"level": 4,
+					"hp": {
+						"average": 32,
+						"formula": "5d8 + 10"
+					},
+					"str": 17,
+					"skill": {
+						"athletics": "+5",
+						"intimidation": "+4",
+						"perception": "+2"
+					},
+					"variant": null
+				},
+				{
+					"name": "Levna Drakehorn (5th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Second Wind",
+									"entries": [
+										"Levna can use a bonus action on her turn to regain hit points equal to {@dice 1d10} + her level. Once she uses this feature, she can't use it again until she finishes a short or long rest."
+									]
+								},
+								{
+									"name": "Improved Critical",
+									"entries": [
+										"Levna's attack rolls now score a critical hit on a roll of 19 or 20 on the {@dice d20}."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Greatsword",
+							"items": {
+								"name": "Greatsword",
+								"entries": [
+									"{@atk mw} {@hit 6} 命中，距离 1.5 米，一个目标。{@h}10 ({@damage 2d6 + 3}) 砍伤。"
+								]
+							}
+						}
+					},
+					"level": 5,
+					"hp": {
+						"average": 39,
+						"formula": "6d8 + 12"
+					},
+					"str": 17,
+					"save": {
+						"con": "+5"
+					},
+					"skill": {
+						"athletics": "+6",
+						"intimidation": "+5",
+						"perception": "+3"
+					},
+					"passive": 13,
+					"pbNote": "+3",
+					"variant": null
+				},
+				{
+					"name": "Levna Drakehorn (6th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Second Wind",
+									"entries": [
+										"Levna can use a bonus action on her turn to regain hit points equal to {@dice 1d10} + her level. Once she uses this feature, she can't use it again until she finishes a short or long rest."
+									]
+								},
+								{
+									"name": "Improved Critical",
+									"entries": [
+										"Levna's attack rolls now score a critical hit on a roll of 19 or 20 on the {@dice d20}."
+									]
+								},
+								{
+									"name": "Extra Attack",
+									"entries": [
+										"Levna can attack twice, instead of once, whenever she takes the {@action Attack} action on her turn."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Greatsword",
+							"items": {
+								"name": "Greatsword",
+								"entries": [
+									"{@atk mw} {@hit 6} 命中，距离 1.5 米，一个目标。{@h}10 ({@damage 2d6 + 3}) 砍伤。"
+								]
+							}
+						}
+					},
+					"level": 6,
+					"hp": {
+						"average": 45,
+						"formula": "7d8 + 14"
+					},
+					"str": 17,
+					"save": {
+						"con": "+5"
+					},
+					"skill": {
+						"athletics": "+6",
+						"intimidation": "+5",
+						"perception": "+3"
+					},
+					"passive": 13,
+					"pbNote": "+3",
+					"variant": null
+				},
+				{
+					"name": "Levna Drakehorn (7th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Second Wind",
+									"entries": [
+										"Levna can use a bonus action on her turn to regain hit points equal to {@dice 1d10} + her level. Once she uses this feature, she can't use it again until she finishes a short or long rest."
+									]
+								},
+								{
+									"name": "Improved Critical",
+									"entries": [
+										"Levna's attack rolls now score a critical hit on a roll of 19 or 20 on the {@dice d20}."
+									]
+								},
+								{
+									"name": "Extra Attack",
+									"entries": [
+										"Levna can attack twice, instead of once, whenever she takes the {@action Attack} action on her turn."
+									]
+								},
+								{
+									"name": "Battle Readiness",
+									"entries": [
+										"Levna has advantage on initiative rolls."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Greatsword",
+							"items": {
+								"name": "Greatsword",
+								"entries": [
+									"{@atk mw} {@hit 6} 命中，距离 1.5 米，一个目标。{@h}10 ({@damage 2d6 + 3}) 砍伤。"
+								]
+							}
+						}
+					},
+					"level": 7,
+					"hp": {
+						"average": 52,
+						"formula": "8d8 + 16"
+					},
+					"str": 17,
+					"save": {
+						"con": "+5"
+					},
+					"skill": {
+						"athletics": "+6",
+						"intimidation": "+5",
+						"perception": "+3"
+					},
+					"passive": 13,
+					"pbNote": "+3",
+					"variant": null
+				},
+				{
+					"name": "Levna Drakehorn (8th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Second Wind",
+									"entries": [
+										"Levna can use a bonus action on her turn to regain hit points equal to {@dice 1d10} + her level. Once she uses this feature, she can't use it again until she finishes a short or long rest."
+									]
+								},
+								{
+									"name": "Improved Critical",
+									"entries": [
+										"Levna's attack rolls now score a critical hit on a roll of 19 or 20 on the {@dice d20}."
+									]
+								},
+								{
+									"name": "Extra Attack",
+									"entries": [
+										"Levna can attack twice, instead of once, whenever she takes the {@action Attack} action on her turn."
+									]
+								},
+								{
+									"name": "Battle Readiness",
+									"entries": [
+										"Levna has advantage on initiative rolls."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Greatsword",
+							"items": {
+								"name": "Greatsword",
+								"entries": [
+									"{@atk mw} {@hit 7} 命中，距离 1.5 米，一个目标。{@h}11 ({@damage 2d6 + 4}) 砍伤。"
+								]
+							}
+						}
+					},
+					"level": 8,
+					"hp": {
+						"average": 58,
+						"formula": "9d8 + 18"
+					},
+					"str": 19,
+					"save": {
+						"con": "+5"
+					},
+					"skill": {
+						"athletics": "+7",
+						"intimidation": "+5",
+						"perception": "+3"
+					},
+					"passive": 13,
+					"pbNote": "+3",
+					"variant": null
+				},
+				{
+					"name": "Levna Drakehorn (9th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Second Wind",
+									"entries": [
+										"Levna can use a bonus action on her turn to regain hit points equal to {@dice 1d10} + her level. Once she uses this feature, she can't use it again until she finishes a short or long rest."
+									]
+								},
+								{
+									"name": "Improved Critical",
+									"entries": [
+										"Levna's attack rolls now score a critical hit on a roll of 19 or 20 on the {@dice d20}."
+									]
+								},
+								{
+									"name": "Extra Attack",
+									"entries": [
+										"Levna can attack twice, instead of once, whenever she takes the {@action Attack} action on her turn."
+									]
+								},
+								{
+									"name": "Battle Readiness",
+									"entries": [
+										"Levna has advantage on initiative rolls."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Greatsword",
+							"items": {
+								"name": "Greatsword",
+								"entries": [
+									"{@atk mw} {@hit 8} 命中，距离 1.5 米，一个目标。{@h}11 ({@damage 2d6 + 4}) 砍伤。"
+								]
+							}
+						}
+					},
+					"level": 9,
+					"hp": {
+						"average": 65,
+						"formula": "10d8 + 20"
+					},
+					"str": 19,
+					"save": {
+						"con": "+6"
+					},
+					"skill": {
+						"athletics": "+8",
+						"intimidation": "+6",
+						"perception": "+4"
+					},
+					"passive": 14,
+					"pbNote": "+4",
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Lohezet",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 205,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human",
+					"wizard"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 137,
+				"formula": "25d8 + 25"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 14,
+			"con": 12,
+			"int": 20,
+			"wis": 14,
+			"cha": 11,
+			"save": {
+				"con": "+5",
+				"wis": "+6"
+			},
+			"skill": {
+				"arcana": "+9",
+				"history": "+9",
+				"medicine": "+6"
+			},
+			"passive": 12,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Dwarvish",
+				"Elvish",
+				"Infernal"
+			],
+			"cr": "12",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Lohezet施展以下一种法术，不需要任何材料成分，并使用智力作为施法能力（法术保存（%0%））。"
+					],
+					"will": [
+						"{@spell detect magic}",
+						"{@spell light}",
+						"{@spell prestidigitation}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell dimension door}",
+							"{@spell mage armor}"
+						],
+						"1e": [
+							"{@spell arcane eye}",
+							"{@spell dominate person}",
+							"{@spell wall of force}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Toxic Mastery",
+					"entries": [
+						"Lohezet无视生物对毒物伤害的抗性。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Lohezet进行了三次枯萎爆炸攻击，如果有的话就使用瘴气。他可以用咒语来代替其中一次攻击。"
+					]
+				},
+				{
+					"name": "Withering Blast",
+					"entries": [
+						"{@atk ms,rs} {@hit 9} 命中，距离 1.5 米或范围 18 米，一个目标。{@h}18 ({@damage 2d12 + 5}) 坏死伤害。"
+					]
+				},
+				{
+					"name": "Miasma {@recharge 4}",
+					"entries": [
+						"洛赫泽特用魔法在以自身为中心 36 米范围内的一点为圆心、半径 6 米的球形区域内变幻出一团紫色雾气。球体内的区域被严重遮蔽，当生物在球体内开始回合或在回合中首次进入球体内时，必须进行 {@dc 17} 体质蓄力。如果蓄力失败，该生物会受到 39（{@damage 6d12}）中毒伤害，并在（%2%）直到下一回合开始。如果蓄力成功，生物会受到一半的伤害，并且不会受到 {@condition poisoned} 的伤害。云雾持续 1 分钟，直到洛赫泽特提前结束云雾（无需行动），或直到洛赫泽特再次使用此行动。一阵强风吹散乌云。"
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Noxious Rebuke (3/Day)",
+					"entries": [
+						"当洛赫泽特周围 18 米内的生物对他造成伤害时，洛赫泽特会以魔法报复，喷射出污秽的紫色雾气。该生物必须进行{@dc 17}体质蓄力，蓄力失败会受到 16 ({@damage 2d10 + 5})中毒伤害，蓄力成功则会受到一半的伤害。"
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"E",
+				"I"
+			],
+			"damageTags": [
+				"I",
+				"N"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"conditionInflict": [
+				"poisoned"
+			],
+			"conditionInflictSpell": [
+				"charmed"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lord Soth",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 206,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "undead",
+				"tags": [
+					"paladin"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item plate armor|PHB|plate}"
+					]
+				}
+			],
+			"hp": {
+				"average": 228,
+				"formula": "24d8 + 120"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 22,
+			"dex": 11,
+			"con": 20,
+			"int": 12,
+			"wis": 16,
+			"cha": 20,
+			"save": {
+				"dex": "+6",
+				"wis": "+9",
+				"cha": "+11"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 13,
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Infernal",
+				"Solamnic"
+			],
+			"cr": "19",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"索斯施展以下一种法术，不需要任何物质成分，并使用魅力作为施法能力（法术保存（%0%））。"
+					],
+					"will": [
+						"{@spell command} (cast at 3rd level)"
+					],
+					"daily": {
+						"1": [
+							"{@spell banishment} (cast at 6th level)"
+						],
+						"2e": [
+							"{@spell dispel magic}",
+							"{@spell hold person} (cast at 3rd level)"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"如果索斯的拯救动作失败，他可以选择成功。"
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"索斯对法术和其他魔法效果的救赎有优势。"
+					]
+				},
+				{
+					"name": "Marshal Undead",
+					"entries": [
+						"除非索斯是 {@condition incapacitated}，否则他和他选择的亡灵生物在 18 米范围内对变成亡灵的特性免疫。"
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"索斯不需要空气、食物、饮料或睡眠。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"索斯进行了三次 \"被遗忘的烙印 \"攻击。"
+					]
+				},
+				{
+					"name": "Forsaken Brand",
+					"entries": [
+						"{@atk mw} {@hit 12} 命中，距离 1.5 米，一个目标。{@h}10（{@damage 1d8 + 6}）暴击伤害外加 18（{@damage 4d8}）坏死伤害，如果目标是生物，则在索斯的下一回合开始前无法恢复命中点数。"
+					]
+				},
+				{
+					"name": "Cataclysmic Fire (1/Day)",
+					"entries": [
+						"索斯投掷出一个魔法火球，在他能看到的距离自己 36 米内的一点爆炸。以该点为中心半径 6 米范围内的每个生物都必须进行 {@dc 19} 灵巧蓄力。如果失败，生物会受到 35（{@damage 10d6}）点火焰伤害和 35（{@damage 10d6}）点坏死伤害，如果成功，则会受到一半的伤害。",
+						"此外，任何被此伤害杀死的中型或小型人形生物，以及球体内的每具此类生物的尸体，都会成为索斯控制下的骷髅（见怪物手册）。骷髅在索斯的倡议下行动，但在他的回合后立即行动。如果没有其他指令，骷髅会试图杀死它所遇到的任何非亡灵生物。"
+					]
+				},
+				{
+					"name": "Word of Death (1/Day)",
+					"entries": [
+						"索斯指向 18 米内他能看到的生物，用魔法命令它死亡。目标必须进行{@dc 19}体质蓄力，蓄力失败会受到 100 死灵伤害，蓄力成功则会受到一半的伤害。如果这些伤害将目标的命中率降至 0，目标就会死亡。"
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Implacable Maneuver",
+					"entries": [
+						"索斯以自己的速度移动，或命令他所骑的坐骑以自己的速度移动。这个动作的移动不会引发机会攻击。如果他或他的坐骑在移动过程中靠近一个生物 1.5 米内，他可以强迫该生物进行 {@dc 20} 力量蓄力。该生物会被击倒 {@condition prone}，除非它成功完成蓄力攻击。"
+					]
+				},
+				{
+					"name": "Strike (Costs 2 Actions)",
+					"entries": [
+						"索斯进行一次 \"被遗忘的烙印 \"攻击。"
+					]
+				},
+				{
+					"name": "Cast a Spell (Costs 3 Actions)",
+					"entries": [
+						"索斯使用施法术。"
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"I"
+			],
+			"damageTags": [
+				"B",
+				"F",
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"conditionInflictSpell": [
+				"incapacitated",
+				"paralyzed",
+				"prone"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity",
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lorry Wanwillow",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 177,
+			"_copy": {
+				"name": "Vampire",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the vampire",
+						"with": "Lorry",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "replaceArr",
+						"replace": "Shapechanger",
+						"items": {
+							"name": "Shapechanger",
+							"entries": [
+								"如果罗瑞没有在阳光下或流水中，它可以用它的行动来多态化成一只小老鼠或一团中等大小的雾气，或变回它的真实形态。",
+								"在蝙蝠形态下，洛瑞不会说话，行走速度为 1.5 米，飞行速度为 9 米。除了体型和速度外，它的其他数据保持不变。它身上穿的任何东西都会随之变形，但它携带的任何东西都不会。如果它死了，就会恢复原样。",
+								"在迷雾形态下，洛瑞不能采取任何行动，不能说话，也不能操纵物体。它没有重量，飞行速度为 6 米，可以悬停，可以进入敌对生物的空间并停在那里。此外，如果空气可以穿过空间，雾气也可以不经挤压穿过空间，但它不能穿过水。它在力量、灵巧和体质蓄力方面都有优势，并且免疫所有非魔法伤害，但阳光伤害除外。"
+							]
+						}
+					}
+				}
+			},
+			"type": {
+				"type": "undead",
+				"tags": [
+					"shapechanger",
+					"kender"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Raven Uth Vogler",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 53,
+			"_copy": {
+				"name": "Scout",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the scout",
+						"with": "Raven",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Red Ruin",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 208,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"{@item plate armor|PHB|plate}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 150,
+				"formula": "20d8 + 60"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 19,
+			"dex": 12,
+			"con": 17,
+			"int": 13,
+			"wis": 14,
+			"cha": 15,
+			"save": {
+				"str": "+8",
+				"dex": "+5"
+			},
+			"skill": {
+				"athletics": "+8",
+				"perception": "+6"
+			},
+			"passive": 16,
+			"resist": [
+				"fire"
+			],
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"cr": "10",
+			"trait": [
+				{
+					"name": "Draconic Devotion",
+					"entries": [
+						"当红色毁灭可以看到对她没有敌意的龙时，她在攻击卷上有优势。"
+					]
+				},
+				{
+					"name": "Mounted Combat Master",
+					"entries": [
+						"当Red Ruin被骑乘时，如果有生物以她的坐骑为攻击目标，Red Ruin可以使攻击改以她为目标。"
+					]
+				},
+				{
+					"name": "Mounted Evasion",
+					"entries": [
+						"当Red Ruin或她的坐骑做一个灵巧的蓄力动作来承受一个效果的一半伤害时，成功的话他们不会受到伤害，失败的话会受到一半伤害。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"红色毁灭者进行了三次微光枪攻击。"
+					]
+				},
+				{
+					"name": "Ember Lance",
+					"entries": [
+						"{@atk mw} {@hit 8} 命中，距离 3 米，一个目标。{@h}10 ({@damage 1d12 + 4}) 穿透伤害外加 7 ({@damage 2d6}) 火焰伤害。如果目标是中型或更小的生物，则必须在 {@dc 16} 力量蓄力中成功，否则会倒下 {@condition prone}。"
+					]
+				},
+				{
+					"name": "Explosive Hand Crossbow {@recharge 5}",
+					"entries": [
+						"Red Ruin 会向她能看到的距离自己 36 米以内的一个点发射爆炸性弩箭。当弩箭到达该点时，或者如果弩箭提前击中物体，就会在半径 6 米的范围内爆炸。该区域内的每个生物都必须进行 {@dc 15} 灵巧蓄力，蓄力失败会受到 35（{@damage 10d6}）点火焰伤害，蓄力成功则会受到一半的伤害。"
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"F",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW",
+				"RCH",
+				"RNG"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sarlamir",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 102,
+			"_copy": {
+				"name": "Skeletal Knight",
+				"source": "DSotDQ",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the skeletal knight",
+						"with": "Sarlamir",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sea Elf Scout",
+			"source": "DSotDQ",
+			"page": 114,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"elf"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 16,
+				"formula": "3d8 + 3"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 11,
+			"dex": 14,
+			"con": 12,
+			"int": 11,
+			"wis": 13,
+			"cha": 11,
+			"skill": {
+				"nature": "+4",
+				"perception": "+5",
+				"stealth": "+6",
+				"survival": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"languages": [
+				"Any one language (usually Common)"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Keen Hearing and Sight",
+					"entries": [
+						"侦察员在依靠听觉或视觉的智慧（感知）检查中具有优势。"
+					]
+				},
+				{
+					"name": "Fey Ancestry",
+					"entries": [
+						"侦查员在对被攻击者的救赎上有优势（%0%），而且魔法不能使其陷入睡眠。"
+					]
+				},
+				{
+					"name": "Child of the Sea",
+					"entries": [
+						"侦察员可以呼吸空气和水。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"侦察员进行两次近战攻击或两次远程攻击。"
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 4} 命中，距离 1.5 米，一个目标。{@h}5 ({@damage 1d6 + 2}) 穿透伤害。"
+					]
+				},
+				{
+					"name": "Longbow",
+					"entries": [
+						"{@atk rw} {@hit 4} 命中，范围 150/18 米，一个目标。{@h}6 ({@damage 1d8 + 2}) 穿透伤害。"
+					]
+				}
+			],
+			"attachedItems": [
+				"longbow|phb",
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Fey Ancestry",
+				"Keen Senses"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sivak Draconian",
+			"source": "DSotDQ",
+			"page": 199,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 57,
+				"formula": "6d10 + 24"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 60
+			},
+			"str": 18,
+			"dex": 10,
+			"con": 18,
+			"int": 13,
+			"wis": 10,
+			"cha": 10,
+			"save": {
+				"str": "+6",
+				"wis": "+2"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Death Throes",
+					"entries": [
+						"当龙人被大型或更小的生物击倒时，龙人会碎成粉末，然后形成一个幽灵般的、嘶吼着的影像，这就是杀死它的生物。该影像持续 1 分钟。在影像 3 米范围内，每个与龙人敌对的生物都必须在 {@dc 14} 智慧蓄力中成功，否则就会在 1 分钟内受到 {@condition frightened} 幽灵影像的影响。一个 {@condition frightened} 生物可以在其每个回合结束时重复该蓄力攻击，如果成功则结束对自身的影响。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"龙人进行两次锯齿剑攻击和一次尾巴攻击。"
+					]
+				},
+				{
+					"name": "Serrated Sword",
+					"entries": [
+						"{@atk mw} {@hit 6} 命中，距离 1.5 米，一个目标。{@h}13 ({@damage 2d8 + 4}) 砍伤。"
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 6} 命中，距离 1.5 米，一个目标。{@h}8 ({@damage 1d8 + 4}) 暴击伤害。如果目标是大型或更小的生物，则必须在 {@dc 14} 力量蓄力中成功，否则会被击倒 {@condition prone}。"
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Shape Theft",
+					"entries": [
+						"当龙人杀死一个中等或较小的人形生物后，龙人就会神奇地将自己隐身在一个幻象中，看起来和感觉都像那个生物，同时保留龙人的游戏数据（除了它的大小）。这种转变一直持续到龙人死亡或使用奖励动作结束。"
+					]
+				}
+			],
+			"traitTags": [
+				"Death Burst"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened",
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Skeletal Knight",
+			"source": "DSotDQ",
+			"page": 208,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item plate armor|PHB|plate}"
+					]
+				}
+			],
+			"hp": {
+				"average": 112,
+				"formula": "15d8 + 45"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 20,
+			"dex": 10,
+			"con": 16,
+			"int": 13,
+			"wis": 14,
+			"cha": 10,
+			"save": {
+				"con": "+6",
+				"wis": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages it knew in life but can't speak"
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"如果伤害使骷髅骑士的命中率降至0，它必须做一个宪法救赎动作，DC为5+所受伤害，除非伤害是重击或来自关键打击。如果成功，骷髅骑士会下降到1点生命值。"
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"骷髅骑士不需要空气、食物、饮料或睡眠。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"骷髅骑士以任何组合方式进行三次 \"窒息之刃 \"或 \"投掷之斧 \"攻击。"
+					]
+				},
+				{
+					"name": "Enervating Blade",
+					"entries": [
+						"{@atk mw} {@hit 8} 命中，距离 1.5 米，一个目标。{@h}15 ({@damage 3d6 + 5}) 坏死伤害，如果目标是生物，则在骷髅骑士的下一回合开始前无法恢复命中点数。"
+					]
+				},
+				{
+					"name": "Throwing Axe",
+					"entries": [
+						"{@atk mw,rw} {@hit 8} 命中，距离 1.5 米或范围 20/18 米，一个目标。{@h}14 ({@damage 2d8 + 5}) 砍伤。"
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS",
+				"LF"
+			],
+			"damageTags": [
+				"N",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Tatina Rookledust",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 87,
+			"_copy": {
+				"name": "Acolyte",
+				"source": "MM",
+				"_trait": {
+					"name": "Rock Gnome",
+					"source": "PHB"
+				},
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the acolyte",
+						"with": "Tatina",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Tem Temble",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 213,
+			"level": 1,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"kender"
+				],
+				"sidekickType": "spellcaster",
+				"sidekickTags": [
+					"healer"
+				]
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 11,
+				"formula": "2d6 + 4"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 14,
+			"con": 14,
+			"int": 10,
+			"wis": 14,
+			"cha": 14,
+			"save": {
+				"wis": "+4"
+			},
+			"skill": {
+				"insight": "+4",
+				"medicine": "+4",
+				"perception": "+4",
+				"sleight of hand": "+4",
+				"stealth": "+4"
+			},
+			"passive": 14,
+			"conditionImmune": [
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"Kenderspeak"
+			],
+			"pbNote": "+2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"特姆的法术能力是智慧（法术保存（%0%），对法术攻击（%1%））。她准备了以下德鲁伊法术。"
+					],
+					"will": [
+						"{@spell druidcraft}",
+						"{@spell poison spray}"
+					],
+					"spells": {
+						"1": {
+							"slots": 2,
+							"spells": [
+								"{@spell healing word}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Bonus Proficiencies",
+					"entries": [
+						"特姆精通简单的武器和轻型盔甲。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Hoopak",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} 命中，距离 1.5 米或射程 40/48 米，一个目标。{@h}4 ({@damage 1d4 + 2})穿刺伤害，或 4 ({@damage 1d4 + 2})暴击伤害（如果特姆使用霍巴克的吊索进行远程攻击）。"
+					]
+				},
+				{
+					"name": "Taunt",
+					"entries": [
+						"滕向她能看到的 18 米范围内的生物发起一连串令人愤怒的辱骂。如果目标能听到滕的声音，它就必须在{@dc 12}智慧蓄力中成功，否则就会在攻击翻滚中处于劣势，直到下一回合结束。"
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Elusive",
+					"entries": [
+						"特姆采取脱离或隐藏行动。"
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "inset",
+					"name": "Tem beyond 1st Level",
+					"entries": [
+						{
+							"type": "table",
+							"colLabels": [
+								"Level",
+								"Hit Points",
+								"New Features"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-2",
+								"col-8"
+							],
+							"rows": [
+								[
+									"第 2",
+									"16 ({@dice 3d6 + 6})",
+									"咒语。特姆又学会了一个一级法术：（%0%）。"
+								],
+								[
+									"第 3 次",
+									"22 ({@dice 4d6 + 8})",
+									"咒语。特姆获得一个一级法术槽。她也学会了另一个一级法术：（%0%）。"
+								],
+								[
+									"第四届",
+									"27 ({@dice 5d6 + 10})",
+									"能力得分的提高。特姆的智慧分数增加2，提高1的修正值，因此以下数字增加1：她的法术救赎DC和法术攻击的命中奖励；她的智慧救赎奖励；她的（%0%）、（%1%）和（%2%）奖励；她的被动感知分数；以及她的嘲弄行动的DC。施法。特姆学会了另一种咒语：{@skill Insight}。"
+								],
+								[
+									"第 5 次",
+									"33 ({@dice 6d6 + 12})",
+									"熟练度奖励。特姆的熟练度奖励增加了1，所以以下数字增加了1：她的法术救赎DC和她的法术攻击的命中奖励，救赎和技能项目中的奖励，她的武器攻击的命中奖励，以及她的嘲弄动作的DC。施法。特姆学会了另一种咒语：(%3%)。"
+								],
+								[
+									"第六届",
+									"38 ({@dice 7d6 + 14})",
+									"强力咒语。滕在她使用任何咒语所造成的伤害上加上她的智慧修饰，姨妈行动。施法。特姆学会了另一种咒语：(%3%)。"
+								],
+								[
+									"第七届",
+									"44 ({@dice 8d6 + 16})",
+									"咒语。Tem获得一个2级法术槽。她还学会了另一个2级法术：（%0%）。"
+								],
+								[
+									"第八届",
+									"49 ({@dice 9d6 + 18})",
+									"能力得分的提高。特姆的智慧得分增加2，提高了1的修正值，因此将以下数字增加1：她的法术救赎DC和法术攻击的命中奖励；她的智慧救赎奖励；她的（%0%）、（%1%）和（%2%）奖励；她的被动感知得分；以及她的嘲弄行动的DC。"
+								],
+								[
+									"第 9 次",
+									"55 ({@dice 10d6 + 20})",
+									"熟练度奖励。特姆的熟练度奖励增加1，所以将以下数字增加1：她的法术救赎DC和她的法术攻击的命中奖励，救赎和技能项目中的奖励，她的武器攻击的命中奖励，以及她的嘲弄行动的DC。"
+								],
+								[
+									"第 10 次",
+									"60 ({@dice 11d6 + 22})",
+									"施法。Tem学习另一个咒语：{@spell resistance}.t行动。"
+								],
+								[
+									"第十一届",
+									"66 ({@dice 12d6 + 24})",
+									"咒语。特姆获得一个3级法术槽。她还学会了另一个三级法术：（%0%）。"
+								]
+							]
+						}
+					]
+				}
+			],
+			"attachedItems": [
+				"hoopak|dsotdq"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"damageTagsSpell": [
+				"I"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Tem Temble (10th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Potent Cantrips",
+									"entries": [
+										"Tem adds her Wisdom modifier to the damage she deals with any cantrip."
+									]
+								}
+							]
+						}
+					},
+					"level": 10,
+					"hp": {
+						"average": 60,
+						"formula": "11d6 + 22"
+					},
+					"wis": 18,
+					"save": {
+						"wis": "+8"
+					},
+					"skill": {
+						"insight": "+8",
+						"medicine": "+8",
+						"perception": "+8",
+						"sleight of hand": "+6",
+						"stealth": "+6"
+					},
+					"passive": 16,
+					"pbNote": "+4",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"特姆的法术能力是智慧（法术保存（%0%），对法术攻击（%1%））。她准备了以下德鲁伊法术。"
+							],
+							"will": [
+								"{@spell druidcraft}",
+								"{@spell poison spray}",
+								"{@spell mending}",
+								"{@spell resistance}"
+							],
+							"spells": {
+								"1": {
+									"slots": 3,
+									"spells": [
+										"{@spell healing word}",
+										"{@spell faerie fire}",
+										"{@spell goodberry}"
+									]
+								},
+								"2": {
+									"slots": 1,
+									"spells": [
+										"{@spell enhance ability}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"action": [
+						{
+							"name": "Hoopak",
+							"entries": [
+								"{@atk mw,rw} {@hit 6} 命中，距离 1.5 米或射程 40/48 米，一个目标。{@h}4 ({@damage 1d4 + 2})穿刺伤害，或 4 ({@damage 1d4 + 2})暴击伤害（如果特姆使用霍巴克的吊索进行远程攻击）。"
+							]
+						},
+						{
+							"name": "Taunt",
+							"entries": [
+								"滕向她能看到的 18 米范围内的生物发起一连串令人愤怒的辱骂。如果目标能听到滕的声音，它就必须在{@dc 16}智慧蓄力中成功，否则就会在攻击翻滚中处于劣势，直到下一回合结束。"
+							]
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Tem Temble (11th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Potent Cantrips",
+									"entries": [
+										"Tem adds her Wisdom modifier to the damage she deals with any cantrip."
+									]
+								}
+							]
+						}
+					},
+					"level": 11,
+					"hp": {
+						"average": 66,
+						"formula": "12d6 + 24"
+					},
+					"wis": 18,
+					"save": {
+						"wis": "+8"
+					},
+					"skill": {
+						"insight": "+8",
+						"medicine": "+8",
+						"perception": "+8",
+						"sleight of hand": "+6",
+						"stealth": "+6"
+					},
+					"passive": 16,
+					"pbNote": "+4",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"特姆的法术能力是智慧（法术保存（%0%），对法术攻击（%1%））。她准备了以下德鲁伊法术。"
+							],
+							"will": [
+								"{@spell druidcraft}",
+								"{@spell poison spray}",
+								"{@spell mending}",
+								"{@spell resistance}"
+							],
+							"spells": {
+								"1": {
+									"slots": 3,
+									"spells": [
+										"{@spell healing word}",
+										"{@spell faerie fire}",
+										"{@spell goodberry}"
+									]
+								},
+								"2": {
+									"slots": 1,
+									"spells": [
+										"{@spell enhance ability}"
+									]
+								},
+								"3": {
+									"slots": 1,
+									"spells": [
+										"{@spell dispel magic}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"action": [
+						{
+							"name": "Hoopak",
+							"entries": [
+								"{@atk mw,rw} {@hit 6} 命中，距离 1.5 米或射程 40/48 米，一个目标。{@h}4 ({@damage 1d4 + 2})穿刺伤害，或 4 ({@damage 1d4 + 2})暴击伤害（如果特姆使用霍巴克的吊索进行远程攻击）。"
+							]
+						},
+						{
+							"name": "Taunt",
+							"entries": [
+								"滕向她能看到的 18 米范围内的生物发起一连串令人愤怒的辱骂。如果目标能听到滕的声音，它就必须在{@dc 16}智慧蓄力中成功，否则就会在攻击翻滚中处于劣势，直到下一回合结束。"
+							]
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Tem Temble (2nd Level)",
+					"source": "DSotDQ",
+					"level": 2,
+					"hp": {
+						"average": 16,
+						"formula": "3d6 + 6"
+					},
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"特姆的法术能力是智慧（法术保存（%0%），对法术攻击（%1%））。她准备了以下德鲁伊法术。"
+							],
+							"will": [
+								"{@spell druidcraft}",
+								"{@spell poison spray}"
+							],
+							"spells": {
+								"1": {
+									"slots": 2,
+									"spells": [
+										"{@spell healing word}",
+										"{@spell faerie fire}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Tem Temble (3rd Level)",
+					"source": "DSotDQ",
+					"level": 3,
+					"hp": {
+						"average": 22,
+						"formula": "4d6 + 8"
+					},
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"特姆的法术能力是智慧（法术保存（%0%），对法术攻击（%1%））。她准备了以下德鲁伊法术。"
+							],
+							"will": [
+								"{@spell druidcraft}",
+								"{@spell poison spray}"
+							],
+							"spells": {
+								"1": {
+									"slots": 3,
+									"spells": [
+										"{@spell healing word}",
+										"{@spell faerie fire}",
+										"{@spell goodberry}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Tem Temble (4th Level)",
+					"source": "DSotDQ",
+					"level": 4,
+					"hp": {
+						"average": 27,
+						"formula": "5d6 + 10"
+					},
+					"wis": 16,
+					"save": {
+						"wis": "+5"
+					},
+					"skill": {
+						"insight": "+5",
+						"medicine": "+5",
+						"perception": "+5",
+						"sleight of hand": "+4",
+						"stealth": "+4"
+					},
+					"passive": 15,
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"特姆的法术能力是智慧（法术保存（%0%），对法术攻击（%1%））。她准备了以下德鲁伊法术。"
+							],
+							"will": [
+								"{@spell druidcraft}",
+								"{@spell poison spray}",
+								"{@spell mending}"
+							],
+							"spells": {
+								"1": {
+									"slots": 3,
+									"spells": [
+										"{@spell healing word}",
+										"{@spell faerie fire}",
+										"{@spell goodberry}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"action": [
+						{
+							"name": "Hoopak",
+							"entries": [
+								"{@atk mw,rw} {@hit 4} 命中，距离 1.5 米或射程 40/48 米，一个目标。{@h}4 ({@damage 1d4 + 2})穿刺伤害，或 4 ({@damage 1d4 + 2})暴击伤害（如果特姆使用霍巴克的吊索进行远程攻击）。"
+							]
+						},
+						{
+							"name": "Taunt",
+							"entries": [
+								"滕向她能看到的 18 米范围内的生物发起一连串令人愤怒的辱骂。如果目标能听到滕的声音，它就必须在{@dc 13}智慧蓄力中成功，否则就会在攻击翻滚中处于劣势，直到下一回合结束。"
+							]
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Tem Temble (5th Level)",
+					"source": "DSotDQ",
+					"level": 5,
+					"hp": {
+						"average": 33,
+						"formula": "6d6 + 12"
+					},
+					"wis": 16,
+					"save": {
+						"wis": "+6"
+					},
+					"skill": {
+						"insight": "+6",
+						"medicine": "+6",
+						"perception": "+6",
+						"sleight of hand": "+5",
+						"stealth": "+5"
+					},
+					"passive": 15,
+					"pbNote": "+3",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"特姆的法术能力是智慧（法术保存（%0%），对法术攻击（%1%））。她准备了以下德鲁伊法术。"
+							],
+							"will": [
+								"{@spell druidcraft}",
+								"{@spell poison spray}",
+								"{@spell mending}"
+							],
+							"spells": {
+								"1": {
+									"slots": 3,
+									"spells": [
+										"{@spell healing word}",
+										"{@spell faerie fire}",
+										"{@spell goodberry}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"action": [
+						{
+							"name": "Hoopak",
+							"entries": [
+								"{@atk mw,rw} {@hit 5} 命中，距离 1.5 米或射程 40/48 米，一个目标。{@h}4 ({@damage 1d4 + 2})穿刺伤害，或 4 ({@damage 1d4 + 2})暴击伤害（如果特姆使用霍巴克的吊索进行远程攻击）。"
+							]
+						},
+						{
+							"name": "Taunt",
+							"entries": [
+								"滕向她能看到的 18 米范围内的生物发起一连串令人愤怒的辱骂。如果目标能听到滕的声音，它就必须在{@dc 14}智慧蓄力中成功，否则就会在攻击翻滚中处于劣势，直到下一回合结束。"
+							]
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Tem Temble (6th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Potent Cantrips",
+									"entries": [
+										"Tem adds her Wisdom modifier to the damage she deals with any cantrip."
+									]
+								}
+							]
+						}
+					},
+					"level": 6,
+					"hp": {
+						"average": 38,
+						"formula": "7d6 + 14"
+					},
+					"wis": 16,
+					"save": {
+						"wis": "+6"
+					},
+					"skill": {
+						"insight": "+6",
+						"medicine": "+6",
+						"perception": "+6",
+						"sleight of hand": "+5",
+						"stealth": "+5"
+					},
+					"passive": 15,
+					"pbNote": "+3",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"特姆的法术能力是智慧（法术保存（%0%），对法术攻击（%1%））。她准备了以下德鲁伊法术。"
+							],
+							"will": [
+								"{@spell druidcraft}",
+								"{@spell poison spray}",
+								"{@spell mending}"
+							],
+							"spells": {
+								"1": {
+									"slots": 3,
+									"spells": [
+										"{@spell healing word}",
+										"{@spell faerie fire}",
+										"{@spell goodberry}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"action": [
+						{
+							"name": "Hoopak",
+							"entries": [
+								"{@atk mw,rw} {@hit 5} 命中，距离 1.5 米或射程 40/48 米，一个目标。{@h}4 ({@damage 1d4 + 2})穿刺伤害，或 4 ({@damage 1d4 + 2})暴击伤害（如果特姆使用霍巴克的吊索进行远程攻击）。"
+							]
+						},
+						{
+							"name": "Taunt",
+							"entries": [
+								"滕向她能看到的 18 米范围内的生物发起一连串令人愤怒的辱骂。如果目标能听到滕的声音，它就必须在{@dc 14}智慧蓄力中成功，否则就会在攻击翻滚中处于劣势，直到下一回合结束。"
+							]
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Tem Temble (7th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Potent Cantrips",
+									"entries": [
+										"Tem adds her Wisdom modifier to the damage she deals with any cantrip."
+									]
+								}
+							]
+						}
+					},
+					"level": 7,
+					"hp": {
+						"average": 44,
+						"formula": "8d6 + 16"
+					},
+					"wis": 16,
+					"save": {
+						"wis": "+6"
+					},
+					"skill": {
+						"insight": "+6",
+						"medicine": "+6",
+						"perception": "+6",
+						"sleight of hand": "+5",
+						"stealth": "+5"
+					},
+					"passive": 15,
+					"pbNote": "+3",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"特姆的法术能力是智慧（法术保存（%0%），对法术攻击（%1%））。她准备了以下德鲁伊法术。"
+							],
+							"will": [
+								"{@spell druidcraft}",
+								"{@spell poison spray}",
+								"{@spell mending}"
+							],
+							"spells": {
+								"1": {
+									"slots": 3,
+									"spells": [
+										"{@spell healing word}",
+										"{@spell faerie fire}",
+										"{@spell goodberry}"
+									]
+								},
+								"2": {
+									"slots": 1,
+									"spells": [
+										"{@spell enhance ability}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"action": [
+						{
+							"name": "Hoopak",
+							"entries": [
+								"{@atk mw,rw} {@hit 5} 命中，距离 1.5 米或射程 40/48 米，一个目标。{@h}4 ({@damage 1d4 + 2})穿刺伤害，或 4 ({@damage 1d4 + 2})暴击伤害（如果特姆使用霍巴克的吊索进行远程攻击）。"
+							]
+						},
+						{
+							"name": "Taunt",
+							"entries": [
+								"滕向她能看到的 18 米范围内的生物发起一连串令人愤怒的辱骂。如果目标能听到滕的声音，它就必须在{@dc 14}智慧蓄力中成功，否则就会在攻击翻滚中处于劣势，直到下一回合结束。"
+							]
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Tem Temble (8th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Potent Cantrips",
+									"entries": [
+										"Tem adds her Wisdom modifier to the damage she deals with any cantrip."
+									]
+								}
+							]
+						}
+					},
+					"level": 8,
+					"hp": {
+						"average": 49,
+						"formula": "9d6 + 18"
+					},
+					"wis": 18,
+					"save": {
+						"wis": "+7"
+					},
+					"skill": {
+						"insight": "+7",
+						"medicine": "+7",
+						"perception": "+7",
+						"sleight of hand": "+5",
+						"stealth": "+5"
+					},
+					"passive": 16,
+					"pbNote": "+3",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"特姆的法术能力是智慧（法术保存（%0%），对法术攻击（%1%））。她准备了以下德鲁伊法术。"
+							],
+							"will": [
+								"{@spell druidcraft}",
+								"{@spell poison spray}",
+								"{@spell mending}"
+							],
+							"spells": {
+								"1": {
+									"slots": 3,
+									"spells": [
+										"{@spell healing word}",
+										"{@spell faerie fire}",
+										"{@spell goodberry}"
+									]
+								},
+								"2": {
+									"slots": 1,
+									"spells": [
+										"{@spell enhance ability}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"action": [
+						{
+							"name": "Hoopak",
+							"entries": [
+								"{@atk mw,rw} {@hit 5} 命中，距离 1.5 米或射程 40/48 米，一个目标。{@h}4 ({@damage 1d4 + 2})穿刺伤害，或 4 ({@damage 1d4 + 2})暴击伤害（如果特姆使用霍巴克的吊索进行远程攻击）。"
+							]
+						},
+						{
+							"name": "Taunt",
+							"entries": [
+								"滕向她能看到的 18 米范围内的生物发起一连串令人愤怒的辱骂。如果目标能听到滕的声音，它就必须在{@dc 15}智慧蓄力中成功，否则就会在攻击翻滚中处于劣势，直到下一回合结束。"
+							]
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Tem Temble (9th Level)",
+					"source": "DSotDQ",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Potent Cantrips",
+									"entries": [
+										"Tem adds her Wisdom modifier to the damage she deals with any cantrip."
+									]
+								}
+							]
+						}
+					},
+					"level": 9,
+					"hp": {
+						"average": 55,
+						"formula": "10d6 + 20"
+					},
+					"wis": 18,
+					"save": {
+						"wis": "+8"
+					},
+					"skill": {
+						"insight": "+8",
+						"medicine": "+8",
+						"perception": "+8",
+						"sleight of hand": "+6",
+						"stealth": "+6"
+					},
+					"passive": 16,
+					"pbNote": "+4",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"特姆的法术能力是智慧（法术保存（%0%），对法术攻击（%1%））。她准备了以下德鲁伊法术。"
+							],
+							"will": [
+								"{@spell druidcraft}",
+								"{@spell poison spray}",
+								"{@spell mending}"
+							],
+							"spells": {
+								"1": {
+									"slots": 3,
+									"spells": [
+										"{@spell healing word}",
+										"{@spell faerie fire}",
+										"{@spell goodberry}"
+									]
+								},
+								"2": {
+									"slots": 1,
+									"spells": [
+										"{@spell enhance ability}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"action": [
+						{
+							"name": "Hoopak",
+							"entries": [
+								"{@atk mw,rw} {@hit 6} 命中，距离 1.5 米或射程 40/48 米，一个目标。{@h}4 ({@damage 1d4 + 2})穿刺伤害，或 4 ({@damage 1d4 + 2})暴击伤害（如果特姆使用霍巴克的吊索进行远程攻击）。"
+							]
+						},
+						{
+							"name": "Taunt",
+							"entries": [
+								"滕向她能看到的 18 米范围内的生物发起一连串令人愤怒的辱骂。如果目标能听到滕的声音，它就必须在{@dc 16}智慧蓄力中成功，否则就会在攻击翻滚中处于劣势，直到下一回合结束。"
+							]
+						}
+					],
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Undead Soldier",
+			"source": "DSotDQ",
+			"page": 96,
+			"_copy": {
+				"name": "Wight",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "wight",
+						"with": "soldier"
+					}
+				}
+			},
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item plate armor|phb}"
+					]
+				}
+			],
+			"trait": null,
+			"hasToken": true
+		},
+		{
+			"name": "Virruza",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 119,
+			"_copy": {
+				"name": "Green Slaad",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the slaad",
+						"with": "Virruza",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "replaceArr",
+						"replace": "Shapechanger",
+						"items": {
+							"name": "Death Throes",
+							"entries": [
+								"当维鲁扎的命中率降至 0 时，他会变成一滩酸液，并将酸液溅到周围的人身上。他周围 1.5 米内的每个生物都必须成功完成 DC 12 的灵巧蓄力，否则会被酸液覆盖 1 分钟。生物可以使用动作将酸液从自己或其他生物身上刮掉或洗掉。被酸液覆盖的生物在每个回合开始时都会受到 7（{@dice 2d6}）的酸液伤害。"
+							]
+						}
+					}
+				}
+			},
+			"traitTags": [
+				"Death Burst",
+				"Magic Resistance",
+				"Regeneration",
+				"Shapechanger"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Wasteland Dragonnel",
+			"source": "DSotDQ",
+			"page": 201,
+			"size": [
+				"L"
+			],
+			"type": "dragon",
+			"alignment": [
+				"C",
+				"G"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 65,
+				"formula": "10d10 + 10"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 60
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 12,
+			"int": 8,
+			"wis": 13,
+			"cha": 10,
+			"skill": {
+				"perception": "+3"
+			},
+			"senses": [
+				"blindsight 30 ft.",
+				"darkvision 120 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"acid"
+			],
+			"languages": [
+				"understands Common and Draconic but can't speak"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Flyby",
+					"entries": [
+						"当龙卷风飞出敌人的范围时，不会引发机会攻击。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"小龙女进行了两次Rend攻击。"
+					]
+				},
+				{
+					"name": "Rend",
+					"entries": [
+						"{@atk mw} {@hit 5} 命中，距离 1.5 米，一个目标。{@h}10 ({@damage 2d6 + 3}) 砍伤。"
+					]
+				},
+				{
+					"name": "Acid Spit",
+					"entries": [
+						"{@atk rw} {@hit 5} 命中，范围 18 米，一个目标。{@h}20 ({@damage 5d6 + 3}) 酸伤害。"
+					]
+				}
+			],
+			"traitTags": [
+				"Flyby"
+			],
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS",
+				"DR"
+			],
+			"damageTags": [
+				"A",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Wersten Kern",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 209,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item plate armor|PHB|plate}"
+					]
+				}
+			],
+			"hp": {
+				"average": 178,
+				"formula": "21d8 + 84"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 21,
+			"dex": 10,
+			"con": 18,
+			"int": 13,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"con": "+9",
+				"wis": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Infernal",
+				"Solamnic"
+			],
+			"cr": "14",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Wersten施展以下一种法术，不需要任何材料成分，并使用魅力作为施法能力（法术保存（%0%））。"
+					],
+					"daily": {
+						"1e": [
+							"{@spell dispel magic}",
+							"{@spell wall of stone}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"如果伤害将Wersten减少到0点，她必须做一个宪法救赎动作，DC为5+所受伤害，除非伤害是重击或来自关键打击。如果成功，Wersten将下降到1点生命值。"
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"Wersten不需要空气、食物、饮料或睡眠。"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"维斯滕进行了三次 \"旗帜长矛 \"攻击，并在有条件的情况下使用 \"惊恐的礼赞\"。"
+					]
+				},
+				{
+					"name": "Banner Pike",
+					"entries": [
+						"{@atk mw} {@hit 10} 命中，距离 1.5 米，一个目标。{@h}10 ({@damage 1d10 + 5}) 穿透伤害外加 13 ({@damage 3d8}) 坏死伤害。如果目标是人形生物，则必须在{@dc 16}魅力蓄力中成功，否则会受到诅咒。诅咒会持续到被移除诅咒或类似魔法解除为止。被诅咒的生物身上会长出黑色带刺的玫瑰茎，对生物的能力检定和攻击卷轴造成不利影响，并使其速度减半。成功抵御诅咒的生物将在 24 小时内免疫诅咒。"
+					]
+				},
+				{
+					"name": "Terrifying Litany {@recharge 5}",
+					"entries": [
+						"维尔斯滕会念诵被索斯和他的同伴杀死的灵魂的名字，引导他们的死亡恐惧。距离她 9 米内的每个非亡灵生物都必须进行一次 {@dc 16} 智慧蓄力。如果失败，该生物会受到 22（{@damage 4d10}）点精神伤害，并在 1 分钟内受到维尔斯滕 {@condition frightened} 的伤害。如果蓄力成功，该生物会受到一半的伤害，并且不会受到 {@condition frightened} 的伤害。在每个回合结束时，{@condition frightened} 生物都可以重复施法，如果成功则结束对自身的影响。"
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"I"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Wyhan",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DSotDQ",
+			"page": 79,
+			"_copy": {
+				"name": "Mage",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the mage",
+						"with": "Wyhan",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		}
+	]
+}

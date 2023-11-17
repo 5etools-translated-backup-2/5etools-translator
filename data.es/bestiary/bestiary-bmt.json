@@ -1,0 +1,5835 @@
+{
+	"_meta": {
+		"otherSources": {
+			"monster": {
+				"DMG": "BMT",
+				"MM": "BMT",
+				"DoSI": "BMT",
+				"MPMM": "BMT",
+				"WBtW": "BMT",
+				"BAM": "BMT",
+				"MOT": "BMT"
+			}
+		},
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		}
+	},
+	"monster": [
+		{
+			"name": "Advanced Detention Drone",
+			"source": "BMT",
+			"page": 135,
+			"_copy": {
+				"name": "Shield Guardian",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "shield guardian",
+						"with": "drone"
+					},
+					"action": [
+						{
+							"mode": "appendArr",
+							"items": {
+								"name": "Detention Orb",
+								"entries": [
+									"El zángano lanza un pequeño orbe de fuerza mágica a una criatura que vea en un radio de 9 metros. La criatura debe tener éxito en una tirada de salvación de Constitución {@dc 15} o quedar encerrada en el orbe, que se expande hasta un tamaño lo bastante grande como para contenerla. Mientras está encerrada, la criatura no necesita respirar, comer ni beber, y no envejece. Nada puede atravesar el orbe, ni ninguna criatura puede teletransportarse o utilizar el viaje planar para entrar o salir del orbe. Como acción adicional, el zángano puede mover el orbe y su contenido hasta 9 metros en cualquier dirección. Un lanzamiento exitoso del hechizo {@spell Dispel Magic} sobre el orbe ({@dc 15}) lo destruye. Por lo demás, el orbe permanece intacto hasta que el dron gasta una acción para poner fin al efecto o es destruido. Un zángano sólo puede tener un orbe de detención activo a la vez; si el zángano crea un orbe de detención cuando ya tiene uno activo, el primer orbe desaparece, liberando a la criatura de su interior."
+								]
+							}
+						}
+					]
+				}
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"hasFluff": true
+		},
+		{
+			"name": "Ambitious Assassin",
+			"source": "BMT",
+			"page": 45,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item studded leather armor|PHB|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 91,
+				"formula": "14d8 + 28"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40
+			},
+			"str": 10,
+			"dex": 18,
+			"con": 15,
+			"int": 18,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"dex": "+7",
+				"int": "+7"
+			},
+			"skill": {
+				"deception": "+9",
+				"perception": "+5",
+				"stealth": "+10"
+			},
+			"senses": [
+				"blindsight 10 ft."
+			],
+			"passive": 15,
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"thieves' cant",
+				"plus any one language"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"Si el asesino falla una tirada de salvación, puede elegir tener éxito en su lugar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El asesino hace dos ataques de Cuchilla Venenosa."
+					]
+				},
+				{
+					"name": "Poison Blade",
+					"entries": [
+						"{@atk mw,rw} {@hit 7} para golpear, alcance 1,5 m. o alcance 18 m., un objetivo. {@h}6 ({@damage 1d4 + 4}) de daño perforante más 5 ({@damage 1d10}) de daño de veneno."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"Cuando un atacante que el asesino puede ver golpea al asesino con un ataque, el asesino reduce a la mitad el daño del ataque contra él."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Cunning",
+					"entries": [
+						"El asesino escapa de las ataduras no mágicas y acaba con la condición {@condition grappled} sobre sí mismo, luego se mueve a su velocidad sin provocar ataques de oportunidad."
+					]
+				},
+				{
+					"name": "Stab (Costs 2 Actions)",
+					"entries": [
+						"El asesino hace un ataque de Cuchilla Venenosa."
+					]
+				},
+				{
+					"name": "Vanishing Escape (Costs 3 Actions)",
+					"entries": [
+						"El asesino crea una distracción repentina, como una nube de humo desorientadora o un destello de luz deslumbrante, que llena un cubo de 3 metros en un radio de 1,5 metros del asesino. Cada criatura a elección del asesino en esa área recibe 9 ({@damage 2d8}) puntos de daño psíquico, y el asesino sufre la condición {@condition invisible}. Esta invisibilidad dura hasta el final del siguiente turno del asesino."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Villain",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"TC",
+				"X"
+			],
+			"damageTags": [
+				"I",
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"invisible"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Animated Armor Detention Drone",
+			"source": "BMT",
+			"page": 135,
+			"_copy": {
+				"name": "Animated Armor",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "armor",
+						"with": "drone"
+					},
+					"action": [
+						{
+							"mode": "appendArr",
+							"items": {
+								"name": "Detention Orb",
+								"entries": [
+									"El zángano lanza un pequeño orbe de fuerza mágica a una criatura que vea en un radio de 9 metros. La criatura debe tener éxito en una tirada de salvación de Constitución {@dc 15} o quedar encerrada en el orbe, que se expande hasta un tamaño lo bastante grande como para contenerla. Mientras está encerrada, la criatura no necesita respirar, comer ni beber, y no envejece. Nada puede atravesar el orbe, ni ninguna criatura puede teletransportarse o utilizar el viaje planar para entrar o salir del orbe. Como acción adicional, el zángano puede mover el orbe y su contenido hasta 9 metros en cualquier dirección. Un lanzamiento exitoso del hechizo {@spell Dispel Magic} sobre el orbe ({@dc 15}) lo destruye. Por lo demás, el orbe permanece intacto hasta que el dron gasta una acción para poner fin al efecto o es destruido. Un zángano sólo puede tener un orbe de detención activo a la vez; si el zángano crea un orbe de detención cuando ya tiene uno activo, el primer orbe desaparece, liberando a la criatura de su interior."
+								]
+							}
+						}
+					]
+				}
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"hasFluff": true
+		},
+		{
+			"name": "Aspirant of the Comet",
+			"source": "BMT",
+			"page": 91,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 27,
+				"formula": "5d8 + 5"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 12,
+			"con": 12,
+			"int": 11,
+			"wis": 10,
+			"cha": 13,
+			"passive": 10,
+			"languages": [
+				"Common plus any one language"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Hunger of the Void",
+					"entries": [
+						"Cuando el aspirante queda reducido a 0 puntos de golpe, su cuerpo y todo lo que lleve puesto, excepto los objetos mágicos, son absorbidos por el vacío y destruidos. Las criaturas que se encuentren en una esfera de 4,5 m de radio centrada en el aspirante deben realizar una tirada de salvación de Fuerza {@dc 11}. Si falla, la criatura recibe 10 ({@damage 3d6}) puntos de daño necrótico y es arrastrada 3 metros en línea recta hacia el espacio del aspirante. Si la salvación tiene éxito, la criatura sólo recibe la mitad de daño."
+					]
+				},
+				{
+					"name": "Sinister Devotion",
+					"entries": [
+						"El aspirante tiene ventaja en las tiradas de salvación contra las condiciones {@condition charmed} y {@condition frightened}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 3} para golpear, alcance 1,5 m. o alcance 20/18 m., un objetivo. {@h}4 ({@damage 1d6 + 1}) de daño perforante, o 5 ({@damage 1d8 + 1}) de daño perforante si se usa con las dos manos para hacer un ataque cuerpo a cuerpo."
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"N",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Asteria",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 188,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human",
+					"paladin"
+				]
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item breastplate|PHB}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 195,
+				"formula": "26d8 + 78"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(winged boots)"
+				}
+			},
+			"str": 12,
+			"dex": 21,
+			"con": 17,
+			"int": 15,
+			"wis": 11,
+			"cha": 20,
+			"save": {
+				"dex": "+11",
+				"con": "+9",
+				"wis": "+6",
+				"cha": "+11"
+			},
+			"skill": {
+				"acrobatics": "+11",
+				"arcana": "+14",
+				"investigation": "+8",
+				"perception": "+12",
+				"persuasion": "+11",
+				"survival": "+6"
+			},
+			"passive": 22,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Druidic"
+			],
+			"cr": "18",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Asteria lanza uno de los siguientes hechizos, que no requieren componentes materiales y utilizan Carisma como habilidad de conjuro (salvación de hechizo {@dc 19}):"
+					],
+					"will": [
+						"{@spell Guidance}",
+						"{@spell Light}",
+						"{@spell Thaumaturgy}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell Bless}",
+							"{@spell Freedom of Movement}",
+							"{@spell Greater Restoration}",
+							"{@spell Plane Shift} (self only)",
+							"{@spell Protection from Evil and Good}",
+							"{@spell Revivify}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Guardian Aura",
+					"entries": [
+						"Siempre que una criatura elegida por Asteria a menos de 9 metros de ella haga una tirada de salvación, Asteria puede darle ventaja en la tirada de salvación (no requiere acción). Este rasgo no funciona si Asteria tiene la condición {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si Asteria falla una tirada de salvación, puede elegir tener éxito en su lugar."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Asteria lleva Botas Aladas, que le otorgan velocidad de vuelo (incluida en sus estadísticas). También lleva la mitad de un par de Piedras Enviadoras; la otra mitad la tiene Euríale."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Asteria hace dos ataques de Hoja Radiante y usa Bendición Explosiva."
+					]
+				},
+				{
+					"name": "Radiant Blade",
+					"entries": [
+						"{@atk mw} {@hit 11} para golpear, alcance 1,5 m., un objetivo. {@h}9 ({@damage 1d8 + 5}) de daño cortante más 13 ({@damage 3d8}) de daño radiante."
+					]
+				},
+				{
+					"name": "Bursting Benediction",
+					"entries": [
+						"Asteria provoca una explosión de energía mágica que envuelve a una criatura que pueda ver en un radio de 18 metros. El objetivo debe realizar una tirada de salvación de Destreza {@dc 19}, recibiendo 40 ({@damage 9d8}) puntos de daño de fuerza si falla la tirada de salvación, o la mitad de daño si tiene éxito. Asteria u otra criatura que pueda ver en un radio de 18 metros recupera 10 puntos de vida."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Empowering Aegis {@recharge 4}",
+					"entries": [
+						"Asteria invoca una versión espectral de su escudo, que orbita y refuerza a una criatura de su elección que pueda ver en un radio de 18 metros. El escudo espectral dura hasta el inicio del siguiente turno de Asteria. Mientras el escudo orbita alrededor de la criatura, ésta tiene media cobertura, es inmune a la condición {@condition frightened} y realiza tiradas de ataque con arma con ventaja."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Brazen Strike",
+					"entries": [
+						"Asteria hace un ataque de Hoja Radiante."
+					]
+				},
+				{
+					"name": "Nimble Sprint",
+					"entries": [
+						"Asteria se mueve a su velocidad. Este movimiento no provoca ataques de oportunidad."
+					]
+				},
+				{
+					"name": "Cast a Spell (Costs 2 Actions)",
+					"entries": [
+						"Asteria usa Hechicería."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DU"
+			],
+			"damageTags": [
+				"O",
+				"R",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Aurnozci",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 167,
+			"size": [
+				"G"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"demon"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 370,
+				"formula": "20d20 + 160"
+			},
+			"speed": {
+				"walk": 50,
+				"burrow": 30
+			},
+			"str": 27,
+			"dex": 20,
+			"con": 26,
+			"int": 6,
+			"wis": 21,
+			"cha": 19,
+			"save": {
+				"str": "+15",
+				"con": "+15"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 15,
+			"resist": [
+				"cold",
+				"lightning"
+			],
+			"immune": [
+				"acid",
+				"fire",
+				"poison",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"telepathy 120 ft."
+			],
+			"cr": "22",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Aurnozci lanza uno de los siguientes hechizos, que no requieren componentes materiales y utilizan la Sabiduría como habilidad de conjuro (salvación de hechizo {@dc 20}):"
+					],
+					"will": [
+						"{@spell Detect Magic}",
+						"{@spell Heat Metal} (7th-level version)"
+					],
+					"daily": {
+						"2e": [
+							"{@spell Darkness}",
+							"{@spell Dispel Magic}",
+							"{@spell Hold Person}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Heat Regeneration",
+					"entries": [
+						"Si la temperatura a su alrededor es de 100 grados Fahrenheit o superior, Aurnozci recupera 15 puntos de golpe al inicio de su turno. Si recibe daño por frío o radiación, este rasgo no funciona al inicio de su siguiente turno. Aurnozci muere sólo si comienza su turno con 0 puntos de vida y no se regenera."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si Aurnozci falla una tirada de salvación, puede elegir tener éxito en su lugar."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Aurnozci tiene ventaja en las tiradas de salvación contra hechizos y otros efectos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Aurnozci hace un ataque de Mordisco y dos ataques de Cola."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 15} para golpear, alcance 3 m., un objetivo. {@h}21 ({@damage 2d12 + 8}) de daño cortante más 9 ({@damage 2d8}) de daño de fuego."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 15} para golpear, alcance 3 m., un objetivo. {@h}17 ({@damage 2d8 + 8}) de daño contundente."
+					]
+				},
+				{
+					"name": "Mucus Spray {@recharge 5}",
+					"entries": [
+						"Aurnozci rocía mucosidad en un cono de 18 metros. Cada criatura en ese cono debe realizar una tirada de salvación de Destreza {@dc 20}, recibiendo 42 ({@damage 12d6}) de daño ácido si falla la tirada de salvación, o la mitad de daño si tiene éxito."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Move",
+					"entries": [
+						"Aurnozci se mueve a su velocidad."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"Aurnozci hace un ataque de Cola."
+					]
+				},
+				{
+					"name": "Cast a Spell (Costs 2 Actions)",
+					"entries": [
+						"Aurnozci usa Hechicería."
+					]
+				},
+				{
+					"name": "Conflagration (Costs 2 Actions)",
+					"entries": [
+						"Las llamas rodean momentáneamente a Aurnozci. Cada criatura en un radio de 4,5 metros de Aurnozci debe realizar una tirada de salvación de Destreza {@dc 20}, recibiendo 18 ({@damage 4d8}) de daño de fuego si falla la tirada de salvación, o la mitad de daño si tiene éxito."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Aurnozci",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"TP"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"F",
+				"S"
+			],
+			"damageTagsSpell": [
+				"F"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflictSpell": [
+				"paralyzed"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Boss Augustus",
+			"source": "BMT",
+			"page": 82,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 150,
+				"formula": "20d8 + 60"
+			},
+			"speed": {
+				"walk": {
+					"number": 40,
+					"condition": "in wolf or hybrid form"
+				}
+			},
+			"str": 18,
+			"dex": 16,
+			"con": 17,
+			"int": 14,
+			"wis": 15,
+			"cha": 12,
+			"save": {
+				"str": "+8",
+				"dex": "+7"
+			},
+			"skill": {
+				"perception": "+10",
+				"sleight of hand": "+7",
+				"stealth": "+7"
+			},
+			"passive": 20,
+			"languages": [
+				"Common",
+				"Thieves' cant (can't speak in wolf form)"
+			],
+			"cr": "9",
+			"trait": [
+				{
+					"name": "Regeneration",
+					"entries": [
+						"Augustus recupera 10 puntos de golpe al inicio de su turno. Si recibe daño de un arma de plata, este rasgo no funciona al inicio de su siguiente turno. Augustus muere sólo si comienza su turno con 0 puntos de vida y no se regenera."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Augustus blande una Espada Larga +2."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Augustus realiza cualquier combinación de dos ataques de Mordisco, Garra o Espada Larga Mágica."
+					]
+				},
+				{
+					"name": "Bite (Wolf or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 8} para golpear, alcance 1,5 m., un objetivo. {@h}26 ({@damage 5d8 + 4}) de daño perforante. Si el objetivo es un Humanoide, debe tener éxito en una tirada de salvación de Constitución {@dc 15} o ser maldecido con licantropía. Mientras esté maldito de este modo, el objetivo conserva su alineamiento, idiomas y equipo, pero por lo demás utiliza el bloque de estadísticas de hombre lobo, excluyendo las acciones que requieran equipo que el objetivo no posea. Durante cualquier noche en la que haya luna llena en el cielo, el objetivo se convierte en un PNJ bajo el control del DM y permanece así hasta que termina la noche. Un hechizo {@spell Remove Curse} o magia similar acaba con esta maldición."
+					]
+				},
+				{
+					"name": "Claw (Wolf or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 8} para golpear, alcance 1,5 m., un objetivo. {@h}21 ({@damage 5d6 + 4}) de daño perforante. Si el objetivo es una criatura, debe tener éxito en una tirada de salvación de Fuerza {@dc 16} o tener la condición {@condition prone}."
+					]
+				},
+				{
+					"name": "Magic Longsword (Humanoid or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 10} para golpear, alcance 1,5 m., un objetivo. {@h}28 ({@damage 4d10 + 6}) de daño cortante."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Augustus se polimorfa en un híbrido lobo-humanoide, en un lobo o en su forma humanoide. Sus estadísticas, salvo su velocidad, son las mismas en ambas formas. El equipo que lleve no se transforma. Si muere, vuelve a su forma humanoide."
+					]
+				},
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"Augustus realiza la acción de correr, retirarse o esconderse."
+					]
+				}
+			],
+			"traitTags": [
+				"Regeneration"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"CS",
+				"TC"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Boss Delour",
+			"source": "BMT",
+			"page": 83,
+			"size": [
+				"S"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 110,
+				"formula": "20d6 + 40"
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "in rat or hybrid form"
+				}
+			},
+			"str": 12,
+			"dex": 18,
+			"con": 15,
+			"int": 17,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"dex": "+8",
+				"int": "+7"
+			},
+			"skill": {
+				"deception": "+11",
+				"perception": "+10",
+				"sleight of hand": "+8",
+				"stealth": "+8"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 20,
+			"languages": [
+				"Common",
+				"Thieves' cant (can't speak in rat form)"
+			],
+			"cr": "9",
+			"trait": [
+				{
+					"name": "Evasion",
+					"entries": [
+						"Si Delour sufre un efecto que le permite realizar una tirada de salvación de Destreza para recibir sólo la mitad del daño, en su lugar no recibe daño si tiene éxito en la tirada de salvación y sólo la mitad del daño si falla, siempre que no tenga la condición {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Nimbleness",
+					"entries": [
+						"Delour puede moverse por el espacio de una criatura Mediana o mayor."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"Delour recupera 10 puntos de golpe al inicio de su turno. Si recibe daño de un arma de plata, este rasgo no funciona al inicio de su siguiente turno. Delour muere sólo si comienza su turno con 0 puntos de vida y no se regenera."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Delour realiza cualquier combinación de tres ataques de Mordisco, Espada Corta o Ballesta de Mano."
+					]
+				},
+				{
+					"name": "Bite (Rat or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 8} para golpear, alcance 1,5 m., un objetivo. {@h}26 ({@damage 5d8 + 4}) de daño perforante. Si el objetivo es un Humanoide, debe tener éxito en una tirada de salvación de Constitución {@dc 14} o ser maldecido con licantropía. Mientras esté maldito de este modo, el objetivo conserva su alineamiento, idiomas y equipo, pero por lo demás utiliza el bloque de estadísticas wererat, excluyendo las acciones que requieran equipo que el objetivo no posea. Durante cualquier noche en la que haya luna llena en el cielo, el objetivo se convierte en un PNJ bajo el control del DM y permanece así hasta que termina la noche. Un hechizo {@spell Remove Curse} o magia similar acaba con esta maldición."
+					]
+				},
+				{
+					"name": "Shortsword (Humanoid or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 8} para golpear, alcance 1,5 m., un objetivo. {@h}11 ({@damage 2d6 + 4}) de daño perforante más 10 ({@damage 3d6}) de daño de veneno."
+					]
+				},
+				{
+					"name": "Hand Crossbow (Humanoid or Hybrid Form Only)",
+					"entries": [
+						"{@atk rw} {@hit 8} para golpear, alcance 30/36 m., un objetivo. {@h}11 ({@damage 2d6 + 4}) de daño perforante más 10 ({@damage 3d6}) de daño de veneno."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Delour se polimorfa en un híbrido rata-humanoide, en una rata gigante mediana o en su forma humanoide. Sus estadísticas, aparte de su tamaño y velocidad, son las mismas en ambas formas. El equipo que lleve no se transforma. Si muere, vuelve a su forma humanoide."
+					]
+				},
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"Delour realiza la acción de Dash, Disengage o Hide."
+					]
+				}
+			],
+			"attachedItems": [
+				"hand crossbow|phb",
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Regeneration"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"CS",
+				"TC"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Breath Drinker",
+			"source": "BMT",
+			"page": 154,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 157,
+				"formula": "21d8 + 63"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 60,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 5,
+			"dex": 18,
+			"con": 16,
+			"int": 11,
+			"wis": 15,
+			"cha": 20,
+			"save": {
+				"int": "+5",
+				"wis": "+7"
+			},
+			"skill": {
+				"perception": "+7",
+				"stealth": "+9",
+				"survival": "+7"
+			},
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 17,
+			"resist": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"thunder",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison",
+				"radiant"
+			],
+			"vulnerable": [
+				"necrotic"
+			],
+			"conditionImmune": [
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"Deep Speech",
+				"telepathy 120 ft."
+			],
+			"cr": "14",
+			"trait": [
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"El bebedor de aliento puede moverse a través de otras criaturas y objetos como si fueran terreno difícil. Recibe 5 ({@damage 1d10}) de daño de fuerza si termina su turno dentro de un objeto."
+					]
+				},
+				{
+					"name": "Radiant Absorption",
+					"entries": [
+						"Cuando el bebedor de aliento sufre daño radiante, no recibe daño y, en su lugar, recupera un número de puntos de golpe igual al daño radiante infligido."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El bebedor de aliento realiza dos ataques de Garra Enervante. También puede usar Beber aliento."
+					]
+				},
+				{
+					"name": "Enervating Claw",
+					"entries": [
+						"{@atk mw} {@hit 10} para golpear, alcance 1,5 m., una criatura. {@h}12 ({@damage 2d6 + 5}) de daño necrótico, y si el objetivo es Grande o menor, tiene la condición {@condition grappled} (escapar {@dc 18}). El objetivo debe tener éxito en una {@dc 18} tirada de salvación de Constitución o su máximo de puntos de golpe se reduce en una cantidad igual al daño recibido. Esta reducción dura hasta que el objetivo termina un descanso largo. El objetivo muere si este efecto reduce su punto de vida máximo a 0."
+					]
+				},
+				{
+					"name": "Drink Breath",
+					"entries": [
+						"El objetivo del bebedor de aliento es una criatura que tenga la condición {@condition incapacitated} o que el bebedor de aliento esté agarrando y que no sea un constructo o un no muerto. El objetivo debe realizar una tirada de salvación de Carisma {@dc 18}. Si falla la tirada de salvación, el objetivo recibe 36 ({@damage 8d8}) puntos de daño necrótico y su puntuación de Carisma se reduce en un {@dice 1d6}. Esta reducción dura hasta que el objetivo termina un descanso corto o largo. Si esto reduce el Carisma del objetivo a 0, el objetivo muere. Hasta que el bebedor de aliento muera, el objetivo muerto no puede ser devuelto a la vida por ningún medio que no sea una intervención divina. Si la salvación tiene éxito, el objetivo sólo recibe la mitad de daño necrótico. Con una salvación exitosa o fallida, el bebedor de aliento recupera un número de puntos de golpe igual al daño necrótico infligido."
+					]
+				},
+				{
+					"name": "Invisibility",
+					"entries": [
+						"El bebedor de aliento tiene la condición {@condition invisible}. Esta invisibilidad termina inmediatamente después de que el bebedor de aliento acierte o falle con una tirada de ataque o use Beber aliento."
+					]
+				}
+			],
+			"traitTags": [
+				"Damage Absorption",
+				"Incorporeal Movement"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"DS",
+				"TP"
+			],
+			"damageTags": [
+				"N",
+				"O"
+			],
+			"miscTags": [
+				"HPR",
+				"MW"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Brusipha",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 127,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"minotaur",
+					"warlock"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 90,
+				"formula": "12d8 + 36"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 18,
+			"dex": 11,
+			"con": 16,
+			"int": 12,
+			"wis": 16,
+			"cha": 16,
+			"save": {
+				"wis": "+5",
+				"cha": "+5"
+			},
+			"skill": {
+				"deception": "+5",
+				"perception": "+7",
+				"religion": "+3"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 17,
+			"languages": [
+				"Abyssal",
+				"Common"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Brusipha lanza uno de los siguientes hechizos, usando Carisma como habilidad de conjuro (salvación de hechizo {@dc 13}):"
+					],
+					"will": [
+						"{@spell Prestidigitation}",
+						"{@spell Speak with Animals}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Bestow Curse}",
+							"{@spell Command}",
+							"{@spell Crown of Madness}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Demonic Ritual",
+					"entries": [
+						"Brusipha puede pasar 3 horas realizando un ritual que invoca {@dice 1d3 + 1} barlguras o 1 hezrou. Debe sacrificar una criatura viviente mediana o mayor a Baphomet durante este ritual, y el ritual sólo puede realizarse por la noche. Los demonios desaparecen al amanecer."
+					]
+				},
+				{
+					"name": "Labyrinthine Recall",
+					"entries": [
+						"Brusipha puede recordar perfectamente cualquier camino que haya recorrido."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Brusipha hace dos ataques Eldritch Blast."
+					]
+				},
+				{
+					"name": "Eldritch Blast",
+					"entries": [
+						"{@atk rs} {@hit 5} para golpear, alcance 36 m., un objetivo. {@h}8 ({@damage 1d10 + 3}) daño de fuerza."
+					]
+				},
+				{
+					"name": "Gore",
+					"entries": [
+						"{@atk mw} {@hit 6} para golpear, alcance 1,5 m., un objetivo. {@h}8 ({@damage 1d8 + 4}) de daño perforante más 4 ({@damage 1d8}) de daño necrótico. Si Brusipha se movió al menos 3 metros en línea recta hacia el objetivo inmediatamente antes de golpear, el objetivo recibe 4 ({@damage 1d8}) de daño perforante extra, y si el objetivo es una criatura, debe tener éxito en una tirada de salvación de Fuerza {@dc 15} o ser empujada hasta 3 metros de Brusipha y tener la condición {@condition prone}."
+					]
+				},
+				{
+					"name": "Incite the Hunters (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Brusipha permite a cada aliado en un radio de 9 metros de ella que tenga el rasgo Rastreador infalible realizar un ataque con arma como reacción contra el objetivo del Rastreador infalible de ese aliado."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Unerring Tracker",
+					"entries": [
+						"Brusipha crea mágicamente un vínculo psíquico con una criatura que puede ver. Durante la hora siguiente, Brusipha conoce la distancia y la dirección actuales del objetivo si se encuentra en el mismo plano de existencia. El vínculo finaliza si Brusipha tiene la condición {@condition incapacitated} o utiliza esta habilidad con un objetivo diferente."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Baphomet's Blessing",
+					"entries": [
+						"Cuando Brusipha reduce a 0 puntos de golpe a una criatura hostil, gana 8 puntos de golpe temporales."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"O",
+				"P"
+			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			]
+		},
+		{
+			"name": "Deck Defender",
+			"source": "BMT",
+			"page": 72,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"special": "5 + five times your level (the deck defender has a number of Hit Dice [d8s] equal to your level)"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 14,
+			"int": 3,
+			"wis": 10,
+			"cha": 1,
+			"senses": [
+				"blindsight 60 ft. (can't see beyond this radius)"
+			],
+			"passive": 10,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands one of your languages but can't speak"
+			],
+			"pbNote": "equals your",
+			"trait": [
+				{
+					"name": "Allied Knight",
+					"entries": [
+						"Algunas de las estadísticas del defensor del mazo se basan en el personaje que robó la carta Caballero. Cuando el bloque de estadísticas del defensor del mazo se refiere a \"ti\", se refiere a ese personaje."
+					]
+				},
+				{
+					"name": "Folded Versatility",
+					"entries": [
+						"Tras terminar un descanso largo, puedes volver a doblar la forma del defensor de la baraja, cambiándola a forma de acróbata, forma de berserker o forma de guardián."
+					]
+				},
+				{
+					"name": "Fragile",
+					"entries": [
+						"Si el defensor del mazo queda reducido a 0 puntos de golpe, se derrumba en un montón desordenado de naipes no mágicos y no puede ser resucitado ni reconstruido."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El defensor del mazo realiza un número de ataques igual a la mitad de su bonificador de competencia (redondeado hacia abajo)."
+					]
+				},
+				{
+					"name": "Paper Cut",
+					"entries": [
+						"{@atk mw} PB + {@hit 3} para golpear, alcance 1,5 m., un objetivo. {@h}7 ({@damage 1d8 + 3}) de daño cortante."
+					]
+				},
+				{
+					"name": "Reckless Strike (Berserker Form Only)",
+					"entries": [
+						"{@atk mw} PB + {@hit 3} para golpear (con ventaja), alcance 1,5 m., un objetivo. {@h}10 ({@damage 2d6 + 3}) de daño cortante, y los ataques realizados contra el defensor del mazo hasta el inicio de su siguiente turno tienen ventaja."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Swift Step (Acrobat Form Only)",
+					"entries": [
+						"El defensor del mazo realiza la acción de Dash o Disengage."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Protection (Guardian Form Only)",
+					"entries": [
+						"Cuando una criatura que el defensor del mazo puede ver ataca a un objetivo que no es el defensor del mazo y está a menos de 1,5 metros del defensor del mazo, el defensor del mazo impone desventaja en la tirada de ataque."
+					]
+				}
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Enchanting Infiltrator",
+			"source": "BMT",
+			"page": 46,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "fey",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"veiled presence"
+					]
+				}
+			],
+			"hp": {
+				"average": 156,
+				"formula": "24d8 + 48"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 10,
+			"dex": 20,
+			"con": 15,
+			"int": 20,
+			"wis": 16,
+			"cha": 18,
+			"save": {
+				"dex": "+9",
+				"int": "+9"
+			},
+			"skill": {
+				"deception": "+12",
+				"perception": "+7",
+				"stealth": "+13"
+			},
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 17,
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"thieves' cant",
+				"plus any one language"
+			],
+			"cr": "11",
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si el infiltrado falla una tirada de salvación, puede elegir tener éxito en su lugar."
+					]
+				},
+				{
+					"name": "Veiled Presence",
+					"entries": [
+						"La CA del infiltrado incluye su modificador de Sabiduría, y el infiltrado no puede ser objetivo de magia adivinatoria o rasgos que pudieran leer su mente o determinar su tipo de criatura."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El infiltrado realiza dos ataques de Cuchilla envenenada y puede usar Susurro seductor."
+					]
+				},
+				{
+					"name": "Poison Blade",
+					"entries": [
+						"{@atk mw,rw} {@hit 9} para golpear, alcance 1,5 m. o alcance 18 m., un objetivo. {@h}7 ({@damage 1d4 + 5}) de daño perforante más 11 ({@damage 2d10}) de daño de veneno."
+					]
+				},
+				{
+					"name": "Beguiling Whisper",
+					"entries": [
+						"El infiltrado susurra mágicamente a una criatura que pueda ver en un radio de 9 metros. El objetivo debe tener éxito en una tirada de salvación de Sabiduría {@dc 17} o sufrir la condición {@condition stunned} debida al miedo o al deleite (a elección del infiltrado) hasta el final del siguiente turno del objetivo, tras lo cual el objetivo es inmune a este Susurro seductor durante 24 horas."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"Cuando un atacante que el infiltrado puede ver golpea al infiltrado con un ataque, el infiltrado reduce a la mitad el daño del ataque contra él."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Cunning",
+					"entries": [
+						"El infiltrado escapa de las ataduras no mágicas y acaba con la condición {@condition grappled} sobre sí mismo, luego se mueve a su velocidad sin provocar ataques de oportunidad."
+					]
+				},
+				{
+					"name": "Stab (Costs 2 Actions)",
+					"entries": [
+						"El infiltrado hace un ataque de Cuchilla Venenosa."
+					]
+				},
+				{
+					"name": "Misdirecting Escape (Costs 3 Actions)",
+					"entries": [
+						"El infiltrado tiene mágicamente la condición {@condition invisible} y crea un duplicado ilusorio de sí mismo en su espacio, luego se teletransporta, junto con cualquier equipo que lleve o vista, a un espacio desocupado a 4,5 metros de sí mismo. La imagen lanza cuchillas ilusorias a dos criaturas a elección del infiltrado en un radio de 6 metros de la imagen. Cada objetivo debe realizar una tirada de salvación de Sabiduría {@dc 17}, recibiendo 13 ({@damage 3d8}) puntos de daño psíquico si falla la tirada de salvación, o la mitad de daño si tiene éxito. La invisibilidad dura hasta el final del siguiente turno del infiltrado."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Villain",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"TC",
+				"X"
+			],
+			"damageTags": [
+				"I",
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Euryale",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 189,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "monstrosity",
+				"tags": [
+					"druid",
+					"medusa"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 297,
+				"formula": "35d8 + 140"
+			},
+			"speed": {
+				"walk": 30,
+				"alternate": {
+					"walk": [
+						{
+							"number": 50,
+							"condition": "in serpent form"
+						}
+					],
+					"climb": [
+						{
+							"number": 50,
+							"condition": "in serpent form"
+						}
+					]
+				}
+			},
+			"str": 21,
+			"dex": 16,
+			"con": 18,
+			"int": 12,
+			"wis": 20,
+			"cha": 15,
+			"save": {
+				"dex": "+9",
+				"con": "+10",
+				"int": "+7",
+				"wis": "+11"
+			},
+			"skill": {
+				"animal handling": "+11",
+				"insight": "+17",
+				"medicine": "+11",
+				"nature": "+13",
+				"perception": "+11"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 21,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Druidic"
+			],
+			"cr": "18",
+			"spellcasting": [
+				{
+					"name": "Spellcasting (Medusa Form Only)",
+					"headerEntries": [
+						"Euryale lanza uno de los siguientes hechizos, que no requieren componentes materiales y utilizan la Sabiduría como habilidad de conjuro (salvación de hechizo {@dc 19}):"
+					],
+					"will": [
+						"{@spell Druidcraft}",
+						"{@spell Pass without Trace}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell Goodberry}",
+							"{@spell Lesser Restoration}",
+							"{@spell Locate Creature}",
+							"{@spell Move Earth}",
+							"{@spell Transport via Plants}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si Euryale falla una tirada de salvación, puede elegir tener éxito en su lugar."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Euryale lleva una mitad de un par de Piedras Enviadoras; la otra mitad del par la sostiene Asteria."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Euryale realiza tres ataques. Si está en forma de serpiente, solo uno de estos ataques puede ser Restringir."
+					]
+				},
+				{
+					"name": "Constrict (Serpent Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 11} para golpear, alcance 4,5 m., una criatura Grande o menor. {@h}16 ({@damage 2d10 + 5}) de daño contundente, y el objetivo tiene la condición {@condition grappled} (escapar {@dc 19}). Hasta que termine este aprisionamiento, el objetivo recibe 11 ({@damage 2d10}) puntos de daño contundente al inicio de cada uno de sus turnos, y Euryale no puede aprisionar a otro objetivo."
+					]
+				},
+				{
+					"name": "Snake Bite",
+					"entries": [
+						"{@atk mw} {@hit 11} para golpear, alcance 3 m., un objetivo. {@h}12 ({@damage 2d6 + 5}) de daño perforante, y el objetivo debe tener éxito en una tirada de salvación de {@dc 18} Constitución o sufrir la condición {@condition poisoned} hasta el inicio del siguiente turno de Euryale."
+					]
+				},
+				{
+					"name": "Verdant Bolt (Medusa Form Only)",
+					"entries": [
+						"{@atk rs} {@hit 11} para golpear, alcance 36 m., un objetivo. {@h}18 ({@damage 4d8}) de daño ácido."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Euryale cambia a su forma de Serpiente enorme o a su forma de Medusa mediana. Las estadísticas de juego de Euryale son las mismas en ambas formas, salvo que se indique lo contrario en este bloque de estadísticas. El equipo que lleve no se transforma. Euryale vuelve a su forma de medusa si muere."
+					]
+				},
+				{
+					"name": "Petrifying Gaze {@recharge 4}",
+					"entries": [
+						"Euryale desata magia petrificadora de sus ojos en un cono de 9 metros. Cada criatura en esa área debe hacer una tirada de salvación de Constitución {@dc 18} si no tiene la condición {@condition blinded}. Si la tirada de salvación falla por 5 o más, la criatura tiene la condición {@condition petrified}. De lo contrario, si falla la tirada de salvación, la criatura recibe 14 ({@damage 4d6}) puntos de daño de fuerza, comienza a convertirse en piedra y sufre la condición {@condition restrained}. La criatura {@condition restrained} debe repetir la tirada de salvación al final de su siguiente turno. La petrificación dura hasta que la criatura es liberada por el hechizo {@spell Greater Restoration} u otra magia Una criatura puede usar su reacción, si está disponible, para cerrar los ojos y evitar la tirada de salvación. Si la criatura lo hace, tiene la condición {@condition blinded} hasta el final de su siguiente turno."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Move",
+					"entries": [
+						"Euryale aumenta su velocidad."
+					]
+				},
+				{
+					"name": "Venomous Strike (Costs 2 Actions)",
+					"entries": [
+						"Euryale realiza un ataque de Mordedura de serpiente. Si el objetivo tiene la condición {@condition poisoned}, el ataque inflige 16 ({@damage 3d10}) de daño de veneno adicional."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"DU"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"I",
+				"O",
+				"P"
+			],
+			"spellcastingTags": [
+				"F"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"petrified",
+				"poisoned",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Fate Hag",
+			"source": "BMT",
+			"page": 176,
+			"size": [
+				"M"
+			],
+			"type": "fey",
+			"alignment": [
+				"N"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 71,
+				"formula": "13d8 + 13"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 14,
+			"con": 13,
+			"int": 12,
+			"wis": 18,
+			"cha": 15,
+			"save": {
+				"con": "+3",
+				"wis": "+6"
+			},
+			"skill": {
+				"arcana": "+5",
+				"deception": "+6",
+				"history": "+5",
+				"perception": "+6"
+			},
+			"senses": [
+				"truesight 60 ft."
+			],
+			"passive": 16,
+			"conditionImmune": [
+				"charmed"
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Mientras sostiene sus tijeras, la bruja lanza uno de los siguientes hechizos, que no requieren componentes materiales y utilizan la Sabiduría como habilidad de conjuro (salvación de hechizo {@dc 14}):"
+					],
+					"will": [
+						"{@spell Bless}",
+						"{@spell Guidance}",
+						"{@spell Silent Image}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Bane}",
+							"{@spell Bestow Curse}",
+							"{@spell Divination}",
+							"{@spell Scrying} (as an action)"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"Si la bruja falla una tirada de salvación, puede elegir tener éxito en su lugar."
+					]
+				},
+				{
+					"name": "Trace the Threads (1/Day)",
+					"entries": [
+						"La bruja puede lanzar el hechizo {@spell Legend Lore}, que no requiere componentes materiales y utiliza la Sabiduría como habilidad de lanzamiento."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"La bruja realiza dos ataques de Cizalla. Puede reemplazar un ataque con un uso de Hechicería."
+					]
+				},
+				{
+					"name": "Shears",
+					"entries": [
+						"{@atk mw} {@hit 6} para golpear, alcance 1,5 m., un objetivo. {@h}8 ({@damage 1d8 + 4}) de daño de fuerza. Si el objetivo es una criatura, tiene desventaja en las tiradas de ataque hasta el final del siguiente turno de la bruja."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Destined Jaunt",
+					"entries": [
+						"La bruja se teletransporta mágicamente, junto con cualquier equipo que lleve puesto, a un espacio desocupado que pueda ver en un radio de 9 metros."
+					]
+				},
+				{
+					"name": "Tangle Threads",
+					"entries": [
+						"La bruja enreda mágicamente en hilos espectrales de plata a una criatura que vea en un radio de 18 metros. La criatura debe tener éxito en una tirada de salvación de Fuerza {@dc 14} o su velocidad se reduce a 0 hasta el final de su siguiente turno."
+					]
+				},
+				{
+					"name": "Destiny Curse (Costs 2 Actions)",
+					"entries": [
+						"La bruja maldice mágicamente a una criatura que vea en un radio de 18 metros. La criatura debe realizar una tirada de salvación de Sabiduría {@dc 14}, y la criatura tiene desventaja en esta salvación si ha dañado a la bruja en el último minuto. Si falla la salvación, la criatura tiene desventaja en los chequeos de habilidad, tiradas de ataque y tiradas de salvación hasta que termine la maldición. Una vez por turno, cuando la criatura maldecida falla una de esas {@dice d20} tiradas, recibe 7 ({@damage 2d6}) puntos de daño de fuerza. La maldición termina después de 1 minuto; cuando la criatura tiene éxito en un total de tres chequeos de habilidad, tiradas de ataque o tiradas de salvación en cualquier combinación; o cuando la bruja usa esta acción de nuevo."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"O"
+			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"strength",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gremorly's Ghost",
+			"source": "BMT",
+			"page": 122,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 82,
+				"formula": "15d8 + 15"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 40,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 7,
+			"dex": 14,
+			"con": 12,
+			"int": 18,
+			"wis": 12,
+			"cha": 17,
+			"save": {
+				"int": "+8",
+				"wis": "+5"
+			},
+			"skill": {
+				"arcana": "+8",
+				"history": "+8"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"acid",
+				"fire",
+				"lightning",
+				"thunder",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"cold",
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"Dwarvish",
+				"Giant"
+			],
+			"cr": "9",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Gremorly lanza uno de los siguientes hechizos, utilizando Inteligencia como habilidad de conjuro (salvación de hechizo {@dc 16}):"
+					],
+					"will": [
+						"{@spell Dancing Lights}",
+						"{@spell Mage Hand}",
+						"{@spell Prestidigitation}"
+					],
+					"daily": {
+						"1": [
+							"{@spell Slow}"
+						],
+						"2e": [
+							"{@spell Bestow Curse}",
+							"{@spell Dispel Magic}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Ethereal Sight",
+					"entries": [
+						"Gremorly puede ver 18 metros en el Plano Etéreo cuando está en el Plano Material, y viceversa."
+					]
+				},
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"Gremorly puede moverse a través de otras criaturas y objetos como si fueran terreno difícil. Recibe 5 ({@damage 1d10}) de daño de fuerza si termina su turno dentro de un objeto."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si Gremorly falla una tirada de salvación, puede elegir tener éxito en su lugar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Gremorly hace tres ataques de Withering Strike."
+					]
+				},
+				{
+					"name": "Withering Strike",
+					"entries": [
+						"{@atk ms} {@hit 8} para golpear, alcance 1,5 m., un objetivo. {@h}19 ({@damage 3d12}) de daño necrótico."
+					]
+				},
+				{
+					"name": "Fell Necromancy",
+					"entries": [
+						"Gremorly apunta a una criatura que pueda ver en un radio de 18 metros. El objetivo debe realizar una tirada de salvación de Constitución {@dc 16}, y recibe 61 ({@damage 7d8 + 30}) puntos de daño necrótico si falla la tirada de salvación, o la mitad si tiene éxito. Además, Gremorly recupera 9 ({@dice 2d8}) puntos de vida."
+					]
+				},
+				{
+					"name": "Possession {@recharge}",
+					"entries": [
+						"Un Humanoide que Gremorly pueda ver a menos de 1,5 metros de él debe tener éxito en una tirada de salvación de Carisma {@dc 15} o ser poseído por él; Gremorly desaparece, y el objetivo tiene la condición {@condition incapacitated} y pierde el control de su cuerpo. Gremorly no puede ser objetivo de ningún ataque, hechizo u otro efecto, excepto los que convierten en No Muertos, y conserva su alineamiento, Inteligencia, Sabiduría, Carisma e inmunidad a las condiciones {@condition charmed} y {@condition frightened}. Por lo demás, utiliza las estadísticas de juego del objetivo, pero Gremorly no obtiene acceso a los conocimientos, rasgos de clase o aptitudes del objetivo.",
+						"La posesión dura hasta que el objetivo cae a 0 puntos de golpe, Gremorly la termina como acción adicional, o Gremorly es girado o forzado a salir por un efecto como el hechizo {@spell Dispel Evil and Good}. Cuando finaliza la posesión, Gremorly reaparece en un espacio desocupado en un radio de 1,5 metros del objetivo. El objetivo es inmune a esta Posesión durante 24 horas tras tener éxito en la tirada de salvación o tras finalizar la posesión."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Ethereal Step {@recharge 4}",
+					"entries": [
+						"Gremorly se teletransporta hasta 9 metros a un espacio desocupado que pueda ver."
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement",
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"DR",
+				"GI"
+			],
+			"damageTags": [
+				"N",
+				"O"
+			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Grim Champion of Bloodshed",
+			"source": "BMT",
+			"page": 161,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item plate armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 280,
+				"formula": "33d8 + 132"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 23,
+			"dex": 12,
+			"con": 18,
+			"int": 10,
+			"wis": 17,
+			"cha": 21,
+			"save": {
+				"str": "+12",
+				"dex": "+7",
+				"con": "+10"
+			},
+			"skill": {
+				"athletics": "+12",
+				"intimidation": "+11",
+				"perception": "+9"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 19,
+			"resist": [
+				"cold",
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"poisoned",
+				"stunned",
+				"unconscious"
+			],
+			"languages": [
+				"Common"
+			],
+			"cr": "20",
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si el campeón falla una tirada de salvación, puede elegir tener éxito en su lugar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El campeón realiza cuatro ataques Estrella matutina abrasadora. Puede sustituir uno de estos ataques por Tormenta de cuchillas, si está disponible."
+					]
+				},
+				{
+					"name": "Blazing Morningstar",
+					"entries": [
+						"{@atk mw} {@hit 12} para golpear, alcance 1,5 m., un objetivo. {@h}10 ({@damage 1d8 + 6}) de daño perforante más 14 ({@damage 4d6}) de daño de fuego."
+					]
+				},
+				{
+					"name": "Blade Storm {@recharge 5}",
+					"entries": [
+						"El campeón conjura una tormenta agitada de cuchillas espectrales que llena un cubo de 6 metros centrado en un punto que pueda ver en un radio de 36 metros de sí mismo. La tormenta dura hasta el comienzo del siguiente turno del campeón. Mientras la tormenta está activa, la zona de la tormenta es terreno difícil. Siempre que una criatura entre en la tormenta por primera vez en un turno o comience su turno allí, debe realizar una tirada de salvación de Destreza {@dc 19}, recibiendo 27 ({@damage 6d8}) puntos de daño cortante si falla la tirada de salvación, o la mitad de daño si tiene éxito."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Furious Pursuit",
+					"entries": [
+						"El campeón se mueve hasta su velocidad u ordena a su montura que se mueva hasta su velocidad. Este movimiento no provoca ataques de oportunidad."
+					]
+				},
+				{
+					"name": "Induce Violence",
+					"entries": [
+						"El campeón elige como objetivo a una criatura que pueda ver en un radio de 18 metros. El objetivo debe tener éxito en una tirada de salvación de Sabiduría {@dc 19} o realizar inmediatamente un ataque con arma cuerpo a cuerpo contra otra criatura a elección del campeón que esté dentro del alcance del objetivo. Si no hay ninguna criatura al alcance del objetivo o si el objetivo tiene la condición {@condition incapacitated}, el objetivo recibe 11 ({@damage 2d10}) puntos de daño psíquico."
+					]
+				},
+				{
+					"name": "Menace (Costs 2 Actions)",
+					"entries": [
+						"El campeón elige cualquier número de criaturas que pueda ver en un radio de 9 metros. Cada objetivo debe tener éxito en una tirada de salvación de Sabiduría {@dc 19} o sufrir la condición {@condition frightened} hasta el final de su siguiente turno."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"F",
+				"P",
+				"S",
+				"Y"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Grim Champion of Desolation",
+			"source": "BMT",
+			"page": 162,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item studded leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 416,
+				"formula": "49d8 + 196"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 22,
+			"dex": 23,
+			"con": 18,
+			"int": 12,
+			"wis": 20,
+			"cha": 19,
+			"save": {
+				"dex": "+14",
+				"con": "+12",
+				"wis": "+13"
+			},
+			"skill": {
+				"deception": "+12",
+				"insight": "+13",
+				"perception": "+13",
+				"stealth": "+14"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 23,
+			"resist": [
+				"cold",
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"poisoned",
+				"stunned",
+				"unconscious"
+			],
+			"languages": [
+				"Common",
+				"Elvish"
+			],
+			"cr": "25",
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si el campeón falla una tirada de salvación, puede elegir tener éxito en su lugar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El campeón realiza dos ataques de Hoja de sanguijuela y utiliza Vacío hueco."
+					]
+				},
+				{
+					"name": "Leeching Blade",
+					"entries": [
+						"{@atk mw} {@hit 14} para golpear, alcance 1,5 m., un objetivo. {@h}13 ({@damage 2d6 + 6}) de daño cortante más 33 ({@damage 6d10}) de daño de frío, y el campeón recupera 10 puntos de golpe."
+					]
+				},
+				{
+					"name": "Hollow Void",
+					"entries": [
+						"El campeón invoca una grieta hambrienta alrededor de una criatura que pueda ver en un radio de 36 metros. La criatura debe realizar una tirada de salvación de Constitución del {@dc 22}. Si falla, la criatura recibe 49 ({@damage 11d8}) puntos de daño de fuerza y sufre la condición {@condition stunned} hasta el comienzo del siguiente turno del campeón. Si la salvación tiene éxito, la criatura sólo recibe la mitad de daño. Si una criatura queda reducida a 0 puntos de golpe por este efecto, muere y su cuerpo se convierte en polvo."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Step into Nothing {@recharge 4}",
+					"entries": [
+						"El campeón, junto con cualquier equipo que lleve puesto, tiene la condición {@condition invisible} y se teletransporta a un espacio desocupado que pueda ver en un radio de 9 metros. El campeón permanece {@condition invisible} hasta el inicio de su siguiente turno o inmediatamente después de infligir daño."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Crush",
+					"entries": [
+						"El campeón desata una ráfaga de fuerza aplastante sobre una criatura que pueda ver en un radio de 9 metros. La criatura debe tener éxito en una tirada de salvación de Fuerza {@dc 22} o recibir 14 ({@damage 4d6}) puntos de daño de fuerza y sufrir la condición {@condition prone}."
+					]
+				},
+				{
+					"name": "Fearsome Pursuit",
+					"entries": [
+						"El campeón se mueve hasta su velocidad u ordena a su montura que se mueva hasta su velocidad. Este movimiento no provoca ataques de oportunidad."
+					]
+				},
+				{
+					"name": "Nullify (Costs 2 Actions)",
+					"entries": [
+						"El campeón emite una onda mágica en un cono de 18 metros. Todos los hechizos de 5º nivel o inferior terminan sobre criaturas y objetos a elección del campeón en esa área."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"E"
+			],
+			"damageTags": [
+				"C",
+				"O",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"prone",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Grim Champion of Pestilence",
+			"source": "BMT",
+			"page": 163,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				14,
+				{
+					"ac": 17,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 120,
+				"formula": "16d8 + 48"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 10,
+			"dex": 18,
+			"con": 16,
+			"int": 17,
+			"wis": 15,
+			"cha": 21,
+			"save": {
+				"dex": "+9",
+				"cha": "+10"
+			},
+			"skill": {
+				"arcana": "+8",
+				"perception": "+7",
+				"stealth": "+9"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 17,
+			"resist": [
+				"cold",
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"poisoned",
+				"stunned",
+				"unconscious"
+			],
+			"languages": [
+				"Common",
+				"Infernal"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"El campeón lanza uno de los siguientes hechizos, que no requieren componentes materiales y utilizan Carisma como habilidad de conjuro (salvación de hechizo {@dc 18}):"
+					],
+					"will": [
+						"{@spell Detect Magic}",
+						"{@spell Mage Armor} (self only)"
+					],
+					"daily": {
+						"2e": [
+							"{@spell Blight}",
+							"{@spell Blindness/Deafness}"
+						],
+						"1e": [
+							"{@spell Cloudkill}",
+							"{@spell Contagion}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Halo of Pestilence",
+					"entries": [
+						"El campeón está rodeado por un aura de magia mortal que adopta la forma de una hueste de insectos blancos resplandecientes. Cada criatura que comience su turno a menos de 3 metros del campeón debe tener éxito en una tirada de salvación de Constitución {@dc 18} o sufrir la condición {@condition incapacitated} hasta el comienzo de su siguiente turno, mientras los insectos arrasan su cuerpo."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si el campeón falla una tirada de salvación, puede elegir tener éxito en su lugar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El campeón efectúa dos ataques de Báculo del tizón, dos ataques de Proyectil de peste o uno de cada."
+					]
+				},
+				{
+					"name": "Blight Staff",
+					"entries": [
+						"{@atk mw} {@hit 9} para golpear, alcance 1,5 m., un objetivo. {@h}8 ({@damage 1d8 + 4}) de daño contundente más 21 ({@damage 6d6}) de daño necrótico."
+					]
+				},
+				{
+					"name": "Plague Bolt",
+					"entries": [
+						"{@atk rs} {@hit 10} para golpear, alcance 36 m., un objetivo. {@h}23 ({@damage 4d8 + 5}) de daño de veneno, y el objetivo tiene la condición {@condition poisoned} hasta el inicio del siguiente turno del campeón."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attack",
+					"entries": [
+						"El campeón efectúa un ataque de Báculo del tizón o Proyectil de peste."
+					]
+				},
+				{
+					"name": "Furious Pursuit",
+					"entries": [
+						"El campeón se mueve hasta su velocidad u ordena a su montura que se mueva hasta su velocidad. Este movimiento no provoca ataques de oportunidad."
+					]
+				},
+				{
+					"name": "Cast a Spell (Costs 2 Actions)",
+					"entries": [
+						"El campeón usa Hechicería."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"I"
+			],
+			"damageTags": [
+				"B",
+				"I",
+				"N"
+			],
+			"damageTagsSpell": [
+				"I",
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened",
+				"poisoned",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Harrow Hawk",
+			"source": "BMT",
+			"page": 177,
+			"size": [
+				"T"
+			],
+			"type": "undead",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 25,
+				"formula": "10d4"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": 60
+			},
+			"str": 5,
+			"dex": 16,
+			"con": 10,
+			"int": 2,
+			"wis": 14,
+			"cha": 7,
+			"skill": {
+				"perception": "+6",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"cr": "1",
+			"action": [
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 5} para golpear, alcance 1,5 m., un objetivo. {@h}8 ({@damage 2d4 + 3}) de daño cortante más 3 ({@damage 1d6}) de daño necrótico."
+					]
+				},
+				{
+					"name": "Plane Shift (2/Day)",
+					"entries": [
+						"El halcón lanza {@spell Plane Shift} sobre sí mismo, sin necesidad de componentes de hechizo y utilizando Sabiduría como habilidad de lanzamiento."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Shadow Dash",
+					"entries": [
+						"Cuando el halcón está en penumbra u oscuridad, se teletransporta hasta 9 metros a un espacio desocupado que pueda ver y que también esté en penumbra u oscuridad. El halcón tiene entonces ventaja en el primer ataque cuerpo a cuerpo que realice antes del final del turno."
+					]
+				}
+			],
+			"senseTags": [
+				"SD"
+			],
+			"damageTags": [
+				"N",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Harrow Hound",
+			"source": "BMT",
+			"page": 164,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 45,
+				"formula": "6d8 + 18"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 16,
+			"dex": 19,
+			"con": 16,
+			"int": 8,
+			"wis": 15,
+			"cha": 13,
+			"skill": {
+				"perception": "+6",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 16,
+			"resist": [
+				"necrotic",
+				"psychic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"Blink Dog",
+				"understands Sylvan but can't speak it"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"El sabueso tiene ventaja en las tiradas de ataque contra una criatura si al menos uno de los aliados del sabueso se encuentra a menos de 1,5 metros del objetivo y el aliado no tiene la condición {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Supernatural Tracker",
+					"entries": [
+						"El sabueso conoce la distancia y la dirección de cualquier criatura que se haya acercado a menos de 9 metros de él, incluso si esa criatura se encuentra en un plano de existencia diferente. Si la criatura rastreada por el sabueso muere, el sabueso lo sabe."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} para golpear, alcance 1,5 m., un objetivo. {@h}10 ({@damage 2d6 + 3}) de daño perforante más 3 ({@damage 1d6}) de daño necrótico. Si el objetivo es una criatura, debe tener éxito en una tirada de salvación de Fuerza {@dc 13} o tener la condición {@condition prone}."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Shadow Step {@recharge 4}",
+					"entries": [
+						"El sabueso se teletransporta mágicamente, junto con cualquier equipo que lleve puesto, hasta 12 metros a un espacio desocupado que pueda ver."
+					]
+				}
+			],
+			"traitTags": [
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"CS",
+				"OTH",
+				"S"
+			],
+			"damageTags": [
+				"N",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Helmed Horror Detention Drone",
+			"source": "BMT",
+			"page": 135,
+			"_copy": {
+				"name": "Helmed Horror",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "helmed horror",
+						"with": "drone"
+					},
+					"action": [
+						{
+							"mode": "appendArr",
+							"items": {
+								"name": "Detention Orb",
+								"entries": [
+									"El zángano lanza un pequeño orbe de fuerza mágica a una criatura que vea en un radio de 9 metros. La criatura debe tener éxito en una tirada de salvación de Constitución {@dc 15} o quedar encerrada en el orbe, que se expande hasta un tamaño lo bastante grande como para contenerla. Mientras está encerrada, la criatura no necesita respirar, comer ni beber, y no envejece. Nada puede atravesar el orbe, ni ninguna criatura puede teletransportarse o utilizar el viaje planar para entrar o salir del orbe. Como acción adicional, el zángano puede mover el orbe y su contenido hasta 9 metros en cualquier dirección. Un lanzamiento exitoso del hechizo {@spell Dispel Magic} sobre el orbe ({@dc 15}) lo destruye. Por lo demás, el orbe permanece intacto hasta que el dron gasta una acción para poner fin al efecto o es destruido. Un zángano sólo puede tener un orbe de detención activo a la vez; si el zángano crea un orbe de detención cuando ya tiene uno activo, el primer orbe desaparece, liberando a la criatura de su interior."
+								]
+							}
+						}
+					]
+				}
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"hasFluff": true
+		},
+		{
+			"name": "Hierophant Medusa",
+			"source": "BMT",
+			"page": 179,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 237,
+				"formula": "25d10 + 100"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40,
+				"swim": 40
+			},
+			"str": 22,
+			"dex": 20,
+			"con": 18,
+			"int": 15,
+			"wis": 23,
+			"cha": 22,
+			"save": {
+				"con": "+10",
+				"wis": "+12"
+			},
+			"skill": {
+				"insight": "+12",
+				"perception": "+12",
+				"persuasion": "+12",
+				"religion": "+8",
+				"stealth": "+11"
+			},
+			"passive": 22,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"Common plus any three languages (Abyssal, Celestial, Druidic, or Infernal recommended)"
+			],
+			"cr": "17",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"La medusa lanza uno de los siguientes hechizos, que no requieren componentes materiales y utilizan la Sabiduría como habilidad de conjuro (salvación de hechizo {@dc 20}):"
+					],
+					"will": [
+						"{@spell Light}",
+						"{@spell Spare the Dying}",
+						"{@spell Thaumaturgy}"
+					],
+					"daily": {
+						"2": [
+							"{@spell Mass Cure Wounds} (cast at 8th level)"
+						],
+						"1e": [
+							"{@spell Blade Barrier}",
+							"{@spell Divination}",
+							"{@spell Greater Restoration}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Devotion's Call (1/Day)",
+					"entries": [
+						"La medusa puede lanzar el hechizo {@spell Resurrection}, que no requiere componentes materiales y utiliza la Sabiduría como habilidad de lanzamiento."
+					]
+				},
+				{
+					"name": "Legendary Resistance (4/Day)",
+					"entries": [
+						"Si la medusa falla una tirada de salvación, puede elegir tener éxito en su lugar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"La medusa realiza un ataque de Restricción, un ataque de Hoja Final y un ataque de Pelo de Serpiente. También puede realizar dos ataques de Golpe iracundo."
+					]
+				},
+				{
+					"name": "Constrict",
+					"entries": [
+						"{@atk mw} {@hit 12} para golpear, alcance 3 m., un objetivo. {@h}16 ({@damage 3d6 + 6}) de daño contundente, y si el objetivo es una criatura Mediana o menor, tiene la condición {@condition grappled} (escapar {@dc 20}). Hasta que termine este agarre, el objetivo tiene la condición {@condition restrained}, y la medusa no puede constreñir a otra criatura."
+					]
+				},
+				{
+					"name": "Final Blade",
+					"entries": [
+						"{@atk mw} {@hit 12} para golpear, alcance 1,5 m., un objetivo. {@h}13 ({@damage 2d6 + 6}) de daño cortante más 21 ({@damage 6d6}) de daño de fuerza. Si el objetivo tiene al menos una cabeza y la medusa saca un 20 en la tirada de ataque, el objetivo es decapitado y muere si falla una tirada de salvación de Constitución de {@dc 20} y no puede sobrevivir sin esa cabeza. Un objetivo es inmune a este efecto si no recibe ningún daño, tiene acciones legendarias o es Enorme o más grande. Una criatura así recibe un 28 ({@damage 8d6}) de daño de fuerza adicional por el impacto."
+					]
+				},
+				{
+					"name": "Snake Hair",
+					"entries": [
+						"{@atk mw} {@hit 12} para golpear, alcance 1,5 m., un objetivo. {@h}11 ({@damage 1d10 + 6}) de daño perforante más 5 ({@damage 1d10}) de daño de veneno."
+					]
+				},
+				{
+					"name": "Wrathful Strike",
+					"entries": [
+						"{@atk rs} {@hit 12} para golpear, alcance 36 m., una criatura. {@h}22 ({@damage 3d10 + 6}) de daño radiante, y el objetivo tiene la condición {@condition blinded} hasta el final de su siguiente turno."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Petrifying Gaze {@recharge 4}",
+					"entries": [
+						"La medusa desata magia petrificadora de sus ojos en un cono de 9 metros. Cada criatura en esa área debe hacer una tirada de salvación de Constitución {@dc 18} si no tiene la condición {@condition blinded}. Si la tirada de salvación falla por 5 o más, la criatura tiene la condición {@condition petrified}. De lo contrario, si falla la tirada de salvación, la criatura recibe 10 ({@damage 3d6}) puntos de daño de fuerza, comienza a convertirse en piedra y sufre la condición {@condition restrained}. La criatura {@condition restrained} debe repetir la tirada de salvación al final de su siguiente turno. Si falla la tirada de salvación, sufre la condición {@condition petrified}, y si tiene éxito, el efecto termina sobre ella. La petrificación dura hasta que la criatura es liberada por el hechizo {@spell Greater Restoration} u otra magia.",
+						"Una criatura puede utilizar su reacción, si dispone de ella, para cerrar los ojos y evitar la tirada de salvación. Si la criatura lo hace, tiene la condición {@condition blinded} hasta el final de su siguiente turno."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Move",
+					"entries": [
+						"La medusa se mueve a su velocidad sin provocar ataques de oportunidad."
+					]
+				},
+				{
+					"name": "Wrathful Blast (Costs 2 Actions)",
+					"entries": [
+						"La medusa hace un ataque de Golpe iracundo."
+					]
+				},
+				{
+					"name": "Final Slash (Costs 3 Actions)",
+					"entries": [
+						"La medusa hace un ataque de Hoja Final con ventaja."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Hierophant Medusa",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"CE",
+				"DU",
+				"I",
+				"X"
+			],
+			"damageTags": [
+				"B",
+				"I",
+				"O",
+				"P",
+				"R",
+				"S"
+			],
+			"damageTagsSpell": [
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"petrified",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hierophant of the Comet",
+			"source": "BMT",
+			"page": 92,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"warlock"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item breastplate|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 153,
+				"formula": "18d8 + 72"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 13,
+			"con": 18,
+			"int": 15,
+			"wis": 17,
+			"cha": 20,
+			"save": {
+				"wis": "+7",
+				"cha": "+9"
+			},
+			"skill": {
+				"arcana": "+10",
+				"deception": "+9",
+				"persuasion": "+9",
+				"religion": "+6"
+			},
+			"senses": [
+				"truesight 30 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"psychic"
+			],
+			"languages": [
+				"Common plus any two languages",
+				"telepathy 60 ft."
+			],
+			"cr": "11",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"El hierofante lanza uno de los siguientes hechizos, utilizando Carisma como habilidad de conjuro (salvación de hechizo {@dc 17}):"
+					],
+					"will": [
+						"{@spell Detect Thoughts}",
+						"{@spell Mage Hand}",
+						"{@spell Thaumaturgy}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Dimension Door}",
+							"{@spell Mass Suggestion}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Comet's Voice (1/Day)",
+					"entries": [
+						"El hierofante puede lanzar {@spell Contact Other Plane}, usando Carisma como habilidad de conjuro."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"El hierofante tiene ventaja en las tiradas de salvación contra hechizos y otros efectos mágicos."
+					]
+				},
+				{
+					"name": "Thought Shield",
+					"entries": [
+						"Los pensamientos del hierofante no pueden leerse por ningún medio a menos que el hierofante lo permita."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El hierofante realiza dos ataques de Hacha del Heraldo o tres ataques de Ráfaga de Cometas."
+					]
+				},
+				{
+					"name": "Herald's Axe",
+					"entries": [
+						"{@atk mw} {@hit 9} para golpear, alcance 1,5 m., un objetivo. {@h}11 ({@damage 1d12 + 5}) de daño cortante más 10 ({@damage 3d6}) de daño necrótico."
+					]
+				},
+				{
+					"name": "Comet Blast",
+					"entries": [
+						"{@atk rs} {@hit 9} para golpear, alcance 36 m., un objetivo. {@h}16 ({@damage 2d10 + 5}) daño de fuerza."
+					]
+				},
+				{
+					"name": "All-Consuming Star {@recharge}",
+					"entries": [
+						"El hierofante conjura una manifestación de la Estrella que Todo lo Consume: luz brillante y gritos inquietantes que llenan una esfera de 6 metros de radio centrada en un punto que el hierofante puede ver en un radio de 18 metros de sí mismo. Cada criatura dentro de la esfera tiene las condiciones {@condition blinded} y {@condition deafened}. Cada criatura que entre en la esfera por primera vez en un turno o comience su turno allí debe hacer una tirada de salvación de Sabiduría de {@dc 17}. Con una salvación fallida, la criatura recibe 27 ({@damage 6d8}) de daño psíquico y tiene la condición {@condition incapacitated} hasta el comienzo de su siguiente turno. Si la salvación tiene éxito, la criatura sólo recibe la mitad de daño. La manifestación persiste hasta que el hierofante muere, tiene la condición {@condition incapacitated}, utiliza una acción de bonificación para terminar el efecto, o utiliza esta acción de nuevo."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Star's Hunger",
+					"entries": [
+						"El objetivo del hierofante es una criatura en un radio de 9 metros del centro de su Estrella que Todo lo Consume. El objetivo debe tener éxito en una tirada de salvación de Fuerza {@dc 17} o ser arrastrado hasta 9 metros hacia el centro de la Estrella que Todo lo Consume."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"TP",
+				"X"
+			],
+			"damageTags": [
+				"N",
+				"O",
+				"S",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"strength",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hulgaz",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 169,
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"devil"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 190,
+				"formula": "20d10 + 80"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 17,
+			"dex": 10,
+			"con": 18,
+			"int": 14,
+			"wis": 15,
+			"cha": 20,
+			"save": {
+				"wis": "+7",
+				"cha": "+10"
+			},
+			"skill": {
+				"deception": "+10",
+				"insight": "+7",
+				"perception": "+7",
+				"persuasion": "+10"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 17,
+			"resist": [
+				"acid",
+				"cold",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
+				}
+			],
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"telepathy 120 ft."
+			],
+			"cr": "14",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Hulgaz lanza uno de los siguientes hechizos, que no requieren componentes materiales y utilizan Carisma como habilidad de conjuro (salvación de hechizo {@dc 18}):"
+					],
+					"will": [
+						"{@spell Charm Person}"
+					],
+					"daily": {
+						"1": [
+							"{@spell Teleport}"
+						],
+						"2e": [
+							"{@spell Dispel Magic}",
+							"{@spell Fog Cloud}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si Hulgaz falla una tirada de salvación, puede elegir tener éxito en su lugar."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Hulgaz tiene ventaja en las tiradas de salvación contra hechizos y otros efectos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Hulgaz hace dos ataques de Garra y uno de Picadura Intoxicante."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 8} para golpear, alcance 1,5 m., un objetivo. {@h}12 ({@damage 2d8 + 3}) de daño cortante."
+					]
+				},
+				{
+					"name": "Intoxicating Sting",
+					"entries": [
+						"{@atk mw} {@hit 8} para golpear, alcance 3 m., una criatura. {@h}8 ({@damage 1d10 + 3}) de daño perforante más 10 ({@damage 3d6}) de daño de veneno, y el objetivo debe tener éxito en una tirada de salvación de Sabiduría {@dc 17} o sufrir la condición {@condition charmed} hasta el inicio del siguiente turno de Hulgaz."
+					]
+				},
+				{
+					"name": "Brimstone Vapor {@recharge 5}",
+					"entries": [
+						"Hulgaz exhala un cono de 9 metros de vapor nocivo y abrasador. Cada criatura en esa área debe tener éxito en una tirada de salvación de Constitución del {@dc 17} o sufrir la condición de {@condition poisoned} durante 1 minuto. Mientras {@condition poisoned} esté así, la criatura recibe 31 ({@damage 7d8}) puntos de daño por fuego al comienzo de cada uno de sus turnos y tiene desventaja en las tiradas de salvación de Sabiduría. Un objetivo puede repetir la tirada de salvación de Constitución al final de cada uno de sus turnos, terminando el efecto sobre sí mismo si tiene éxito."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attack",
+					"entries": [
+						"Hulgaz hace un ataque de Garra."
+					]
+				},
+				{
+					"name": "Charm",
+					"entries": [
+						"Hulgaz usa Hechicería para lanzar {@spell Charm Person}."
+					]
+				},
+				{
+					"name": "Curdle Heart (Costs 2 Actions)",
+					"entries": [
+						"Hulgaz agria los buenos sentimientos de sus {@condition charmed} víctimas. Elige cualquier número de criaturas que pueda ver y que estén {@condition charmed} a su lado. Cada objetivo recibe 17 ({@damage 5d6}) de daño psíquico al terminar sobre él la condición {@condition charmed} aplicada por Hulgaz."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"TP"
+			],
+			"damageTags": [
+				"F",
+				"I",
+				"P",
+				"S",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"conditionInflictSpell": [
+				"charmed"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Initiate of the Comet",
+			"source": "BMT",
+			"page": 93,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"warlock"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 75,
+				"formula": "10d8 + 30"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 14,
+			"con": 16,
+			"int": 11,
+			"wis": 13,
+			"cha": 17,
+			"save": {
+				"wis": "+3",
+				"cha": "+5"
+			},
+			"skill": {
+				"arcana": "+2"
+			},
+			"passive": 11,
+			"languages": [
+				"Common plus any one language"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"El iniciado lanza uno de los siguientes hechizos, utilizando Carisma como habilidad de lanzamiento (salvación de hechizo {@dc 13}):"
+					],
+					"will": [
+						"{@spell Mage Hand}",
+						"{@spell Thaumaturgy}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Dimension Door}",
+							"{@spell Divination}",
+							"{@spell Enthrall}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"El iniciado tiene ventaja en las tiradas de salvación contra hechizos y otros efectos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El iniciado realiza dos ataques de Golpe de Cometa."
+					]
+				},
+				{
+					"name": "Comet Strike",
+					"entries": [
+						"{@atk ms,rs} {@hit 5} para golpear, alcance 1,5 m. o alcance 36 m., un objetivo. {@h}14 ({@damage 2d10 + 3}) daño de fuerza."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Moment of Foresight (1/Day)",
+					"entries": [
+						"Cuando es golpeado por una tirada de ataque, el iniciado puede obligar al atacante a repetirla y utilizar la nueva tirada, posiblemente haciendo que el ataque falle."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"O"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Living Portent",
+			"source": "BMT",
+			"page": 180,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "celestial",
+			"alignment": [
+				"L",
+				"N"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 65,
+				"formula": "10d8 + 20"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 14,
+			"dex": 16,
+			"con": 14,
+			"int": 14,
+			"wis": 16,
+			"cha": 15,
+			"save": {
+				"dex": "+5",
+				"wis": "+5"
+			},
+			"skill": {
+				"arcana": "+6",
+				"history": "+6",
+				"insight": "+5",
+				"perception": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 15,
+			"immune": [
+				"radiant"
+			],
+			"conditionImmune": [
+				"exhaustion"
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"El portento viviente lanza uno de los siguientes hechizos, que no requieren componentes materiales y utilizan la Sabiduría como habilidad de lanzamiento:"
+					],
+					"daily": {
+						"2": [
+							"{@spell Cure Wounds}"
+						],
+						"1e": [
+							"{@spell Divination}",
+							"{@spell Greater Restoration}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Brilliance (True Form Only)",
+					"entries": [
+						"El portento viviente arroja luz brillante durante 9 metros y luz tenue durante otros 9 metros."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El portento viviente hace dos ataques de Golpe Radiante."
+					]
+				},
+				{
+					"name": "Radiant Strike",
+					"entries": [
+						"{@atk ms,rs} {@hit 5} para golpear, alcance 1,5 m. o alcance 36 m., un objetivo. {@h}9 ({@damage 1d12 + 3}) de daño radiante."
+					]
+				},
+				{
+					"name": "Prophetic Blessing",
+					"entries": [
+						"El portento viviente infunde mágicamente el poder de su profecía a otra criatura dispuesta que el portento viviente pueda ver en un radio de 9 metros de sí mismo. Los puntos de golpe máximos y actuales del objetivo aumentan en 7 ({@dice 1d8 + 3}), y obtiene un dado de profecía, un {@dice d8}. Una vez durante cada turno de la criatura, cuando falle un chequeo de habilidad o una tirada de salvación o falle una tirada de ataque, puede lanzar el dado de profecía y sumar el número obtenido al total, cambiando potencialmente el resultado. La bendición termina después de 1 hora o cuando el portento viviente termina la bendición (no requiere acción) o utiliza esta acción de nuevo."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"El portento viviente se transforma mágicamente en un Humanoide mientras conserva sus estadísticas de juego (excepto su tamaño y el rasgo Brillantez). La transformación termina si el portento viviente queda reducido a 0 puntos de vida o utiliza una acción de bonificación para terminarla."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Price of Defiance",
+					"entries": [
+						"Cuando el portento viviente es dañado por una criatura que puede ver a menos de 36 metros de él, el poder radiante abrasa a la criatura. La criatura debe realizar una tirada de salvación de Constitución {@dc 13}, y recibe 10 ({@damage 3d6}) puntos de daño radiante si falla la tirada de salvación, o la mitad si tiene éxito."
+					]
+				}
+			],
+			"variant": [
+				{
+					"name": "Servants of Living Stars",
+					"type": "variant",
+					"entries": [
+						"Algunas estrellas del cielo son Males Mayores, seres alienígenas de poder divino procedentes del Reino Lejano, que desafía la realidad.",
+						"Un portento viviente puede ser un fragmento de la voluntad de estos seres. Estos portentos vivientes son Aberraciones en lugar de Celestiales y suelen ser caóticamente malignos. Sustituyen cualquier daño radiante en su bloque de estadísticas por daño necrótico o psíquico (a elección del DM). Sus hechizos también pueden ser diferentes. Algunos Elder Evils conocidos son los siguientes:",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "Acamar",
+									"entry": "Estrella muerta que consume otras estrellas o cuerpos siderales que encuentra."
+								},
+								{
+									"type": "item",
+									"name": "Caiphon, the Dream Whisperer",
+									"entry": "Una estrella púrpura cuya guía y secuaces parecen ayudar durante un tiempo, pero cuya influencia conduce inevitablemente al desastre."
+								},
+								{
+									"type": "item",
+									"name": "Hadar, the Dark Hunger",
+									"entry": "Una estrella moribunda de color rojo ceniza que absorbe la vida de sus subordinados para evitar su propia desaparición."
+								},
+								{
+									"type": "item",
+									"name": "Khirad, the Star of Secrets",
+									"entry": "Una estrella blanquiazul cuyos dones otorgan perspicacia, pero también revelan terribles verdades."
+								},
+								{
+									"type": "item",
+									"name": "Zhudun, the Corpse Star",
+									"entry": "Una estrella muerta que susurra el poder de desafiar a la muerte."
+								}
+							]
+						}
+					]
+				}
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"R"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Living Star (Necrotic)",
+					"source": "BMT",
+					"_mod": {
+						"*": {
+							"mode": "replaceTxt",
+							"replace": "\\bradiant\\b",
+							"with": "necrotic"
+						}
+					},
+					"type": "aberration",
+					"alignment": [
+						"C",
+						"E"
+					],
+					"variant": null
+				},
+				{
+					"name": "Living Star (Psychic)",
+					"source": "BMT",
+					"_mod": {
+						"*": {
+							"mode": "replaceTxt",
+							"replace": "\\bradiant\\b",
+							"with": "psychic"
+						}
+					},
+					"type": "aberration",
+					"alignment": [
+						"C",
+						"E"
+					],
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Malaxxix",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 173,
+			"size": [
+				"H"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"yugoloth"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 312,
+				"formula": "25d12 + 150"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 60
+			},
+			"str": 23,
+			"dex": 16,
+			"con": 22,
+			"int": 22,
+			"wis": 20,
+			"cha": 18,
+			"save": {
+				"str": "+12",
+				"con": "+12"
+			},
+			"skill": {
+				"arcana": "+12",
+				"athletics": "+12",
+				"perception": "+11"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 21,
+			"resist": [
+				"cold",
+				"fire",
+				"lightning",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"acid",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"Infernal",
+				"telepathy 120 ft."
+			],
+			"cr": "18",
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si Malaxxix falla una tirada de salvación, puede elegir tener éxito en su lugar."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Malaxxix tiene ventaja en las tiradas de salvación contra hechizos y otros efectos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Malaxxix realiza dos ataques de Martillo de Forja o Látigo en cualquier combinación."
+					]
+				},
+				{
+					"name": "Forge Hammer",
+					"entries": [
+						"{@atk mw,rw} {@hit 12} para golpear, alcance 3 m. o alcance 60/54 m., un objetivo. {@h}28 ({@damage 4d10 + 6}) de daño contundente, y el objetivo no puede reaccionar hasta el final del siguiente turno de Malaxxix. Acierto o error: el martillo vuelve mágicamente a la mano de Malaxxix."
+					]
+				},
+				{
+					"name": "Whip",
+					"entries": [
+						"{@atk mw} {@hit 12} para golpear, alcance 9 m., una criatura. {@h}15 ({@damage 2d8 + 6}) de daño cortante, y el objetivo tiene la condición {@condition restrained} durante 1 minuto. El {@condition restrained} objetivo puede hacer una {@dc 20} tirada de salvación de Fuerza al final de cada uno de sus turnos, terminando el efecto sobre sí mismo si tiene éxito. Sólo una criatura puede ser {@condition restrained} azotada a la vez."
+					]
+				},
+				{
+					"name": "Mezzoloth Vortex {@recharge 5}",
+					"entries": [
+						"Malaxxix convoca un vórtice de mezzoloths giratorios en un punto que puede ver a 27 metros de sí mismo. El vórtice es un cilindro de 9 m de radio y 3 m de altura centrado en ese punto. Cada criatura que no sea Malaxxix en esa zona debe realizar una tirada de salvación de Destreza {@dc 20}. Si la salvación falla, la criatura sufre 35 ({@damage 10d6}) de daño de fuerza y padece la condición {@condition restrained} mientras esté dentro del cilindro. Si la salvación tiene éxito, la criatura recibe la mitad de daño y es empujada al espacio desocupado más cercano fuera del cilindro. El vórtice dura hasta el inicio del siguiente turno de Malaxxix."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Fiendish Stride",
+					"entries": [
+						"Malaxxix se mueve hasta su velocidad. Este movimiento no provoca ataques de oportunidad. Cuando Malaxxix se mueve a menos de 1,5 metros de una criatura durante este movimiento, esa criatura recibe 5 ({@damage 1d10}) de daño de rayo. Una criatura sólo puede recibir este daño una vez por turno."
+					]
+				},
+				{
+					"name": "Attack (Costs 2 Actions)",
+					"entries": [
+						"Malaxxix hace un ataque de Martillo de Forja o Látigo."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Malaxxix",
+				"source": "BMT"
+			},
+			"attachedItems": [
+				"whip|phb"
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"I",
+				"TP"
+			],
+			"damageTags": [
+				"B",
+				"L",
+				"O",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Minotaur Archaeologist",
+			"source": "BMT",
+			"page": 126,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 18,
+				"formula": "4d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 10,
+			"con": 11,
+			"int": 13,
+			"wis": 12,
+			"cha": 10,
+			"skill": {
+				"arcana": "+3",
+				"history": "+5",
+				"perception": "+5",
+				"religion": "+3"
+			},
+			"passive": 15,
+			"languages": [
+				"Common"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Labyrinthine Recall",
+					"entries": [
+						"El minotauro puede recordar perfectamente cualquier camino que haya recorrido."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Gore",
+					"entries": [
+						"{@atk mw} {@hit 3} para golpear, alcance 1,5 m., un objetivo. {@h}4 ({@damage 1d6 + 1}) de daño perforante. Si el minotauro se movió al menos 3 metros en línea recta hacia el objetivo inmediatamente antes de impactar, el objetivo recibe 3 ({@damage 1d6}) de daño perforante adicional, y si el objetivo es una criatura Grande o menor, debe tener éxito en una tirada de salvación de Fuerza {@dc 11} o ser empujado hasta 3 metros del minotauro y sufrir la condición {@condition prone}."
+					]
+				}
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Minotaur Infiltrator",
+			"source": "BMT",
+			"page": 127,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "8d8 + 16"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 18,
+			"dex": 11,
+			"con": 14,
+			"int": 8,
+			"wis": 16,
+			"cha": 10,
+			"skill": {
+				"deception": "+2",
+				"perception": "+7",
+				"religion": "+1"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 17,
+			"languages": [
+				"Abyssal",
+				"Common"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Labyrinthine Recall",
+					"entries": [
+						"El minotauro puede recordar perfectamente cualquier camino que haya recorrido."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Gore",
+					"entries": [
+						"{@atk mw} {@hit 6} para golpear, alcance 1,5 m., un objetivo. {@h}8 ({@damage 1d8 + 4}) puntos de daño perforante, o 13 ({@damage 2d8 + 4}) puntos de daño perforante mientras está agrandado. Si el minotauro se movió al menos 3 metros en línea recta hacia el objetivo inmediatamente antes de impactar, el objetivo recibe 4 ({@damage 1d8}) puntos de daño perforante adicionales, o 9 ({@damage 2d8}) puntos de daño perforante si el minotauro está agrandado. Si el objetivo es una criatura, debe tener éxito en una tirada de salvación de Fuerza {@dc 14} o ser empujado hasta 3 metros del minotauro y sufrir la condición {@condition prone}."
+					]
+				},
+				{
+					"name": "Mattock",
+					"entries": [
+						"{@atk mw} {@hit 6} para golpear, alcance 3 m., un objetivo. {@h}10 ({@damage 1d12 + 4}) de daño contundente, o 17 ({@damage 2d12 + 4}) de daño contundente mientras está agrandado. Si el objetivo es una criatura y el minotauro está agrandado, el objetivo debe tener éxito en una tirada de salvación de Fuerza {@dc 14} o sufrir la condición {@condition prone}."
+					]
+				},
+				{
+					"name": "Enlarge (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Durante 1 minuto, el minotauro aumenta mágicamente de tamaño, junto con cualquier cosa que lleve o vista. Mientras está agrandado, el minotauro es Grande, dobla sus dados de daño en ataques con armas basados en la Fuerza (incluida en los ataques) y realiza chequeos de Fuerza y tiradas de salvación de Fuerza con ventaja. Si el minotauro carece de espacio para convertirse en Large, el minotauro no cambia de tamaño."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Unerring Tracker",
+					"entries": [
+						"El minotauro crea mágicamente un vínculo psíquico con una criatura que pueda ver. Durante la siguiente hora, el minotauro conoce la distancia y la dirección actuales del objetivo si se encuentra en el mismo plano de existencia. El vínculo finaliza si el minotauro tiene la condición {@condition incapacitated} o utiliza esta habilidad con un objetivo diferente."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AB",
+				"C"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			]
+		},
+		{
+			"name": "Oddlewin",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 111,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "fey",
+				"tags": [
+					"goblinoid"
+				]
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 21,
+				"formula": "6d6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 14,
+			"con": 10,
+			"int": 10,
+			"wis": 16,
+			"cha": 15,
+			"skill": {
+				"performance": "+4",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"conditionImmune": [
+				"charmed"
+			],
+			"languages": [
+				"Common",
+				"Goblin",
+				"Sylvan"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Oddlewin lanza uno de los siguientes hechizos, utilizando Carisma como habilidad de conjuro (salvación de hechizo {@dc 12}):"
+					],
+					"will": [
+						"{@spell Mage Hand}",
+						"{@spell Tasha's Hideous Laughter}"
+					],
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Fortune Teller",
+					"entries": [
+						"Oddlewin puede lanzar el hechizo {@spell Augury} como un ritual, utilizando cartas como componente material."
+					]
+				},
+				{
+					"name": "Nilbogism",
+					"entries": [
+						"Cualquier criatura que intente dañar a Oddlewin debe tener éxito primero en una tirada de salvación de Carisma {@dc 12} o sufrir la condición {@condition charmed} hasta el final del siguiente turno de la criatura. La criatura debe usar su acción para alabar a Oddlewin.",
+						"Oddlewin no puede recuperar puntos de golpe, ni siquiera mediante curación mágica, excepto a través de su reacción Reversión de la Fortuna."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Fool's Scepter",
+					"entries": [
+						"{@atk mw} {@hit 4} para golpear, alcance 1,5 m., un objetivo. {@h}5 ({@damage 1d6 + 2}) de daño contundente."
+					]
+				},
+				{
+					"name": "Cloud of Cards",
+					"entries": [
+						"Oddlewin conjura cartas mágicas que acuchillan el aire en un cubo de 1,5 metros en un radio de 18 metros de Oddlewin hasta el inicio del siguiente turno de Oddlewin. Una criatura que comience su turno en el cubo o que entre en esa zona por primera vez en un turno recibe 10 ({@damage 4d4}) de daño cortante."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Nimble Escape",
+					"entries": [
+						"Oddlewin realiza la acción de Desengancharse u Ocultarse."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Reversal of Fortune",
+					"entries": [
+						"En respuesta a otra criatura que inflige daño a Oddlewin, Oddlewin reduce el daño a 0 y recupera 9 ({@dice 2d8}) puntos de golpe."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"GO",
+				"S"
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"incapacitated",
+				"prone"
+			],
+			"savingThrowForced": [
+				"charisma"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Otherworldly Corrupter",
+			"source": "BMT",
+			"page": 47,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 217,
+				"formula": "29d8 + 87"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40
+			},
+			"str": 12,
+			"dex": 22,
+			"con": 16,
+			"int": 22,
+			"wis": 18,
+			"cha": 20,
+			"save": {
+				"dex": "+12",
+				"int": "+12"
+			},
+			"skill": {
+				"perception": "+10",
+				"stealth": "+18"
+			},
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 20,
+			"resist": [
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"telepathy 120 ft.",
+				"Thieves' cant"
+			],
+			"cr": "17",
+			"trait": [
+				{
+					"name": "Alien Mind",
+					"entries": [
+						"La magia y otros rasgos no pueden determinar el tipo de criatura del corruptor. Si una criatura intenta leer los pensamientos del corruptor, debe tener éxito en una tirada de salvación de Inteligencia del {@dc 20} o sufrir la condición del {@condition stunned} durante 1 minuto. La criatura {@condition stunned} puede repetir la tirada de salvación al final de cada uno de sus turnos, terminando el efecto sobre sí misma si tiene éxito."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si el corruptor falla una tirada de salvación, puede elegir tener éxito en su lugar."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"El corruptor puede trepar por superficies difíciles, incluso por techos boca abajo, sin necesidad de hacer un chequeo de habilidad."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El corruptor realiza tres ataques de Hoja Susurrante y puede usar Toque Debilitador."
+					]
+				},
+				{
+					"name": "Whispering Blade",
+					"entries": [
+						"{@atk mw,rw} {@hit 12} para golpear, alcance 1,5 m. o alcance 18 m., un objetivo. {@h}10 ({@damage 1d8 + 6}) de daño perforante más 14 ({@damage 4d6}) de daño psíquico. Si el objetivo es una criatura, debe tener éxito en una tirada de salvación de {@dc 20} Sabiduría o ser incapaz de hablar hasta el comienzo del siguiente turno del corruptor."
+					]
+				},
+				{
+					"name": "Debilitating Touch",
+					"entries": [
+						"El tentáculo retorcido del corruptor arremete contra una criatura que el corruptor pueda ver en un radio de 9 metros. El objetivo debe tener éxito en una tirada de salvación de Constitución {@dc 20} o sufrir la condición {@condition paralyzed} hasta el final de su siguiente turno, tras lo cual el objetivo es inmune a este Toque Debilitante durante 24 horas."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"El corruptor se transforma mágicamente en cualquier criatura que sea Pequeña o Mediana, conservando sus estadísticas de juego (excepto su tamaño). Esta transformación finaliza si el corruptor queda reducido a 0 puntos de golpe o utiliza una acción de bonificación para finalizarla."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"Cuando un atacante que el corruptor puede ver golpea al corruptor con un ataque, el corruptor reduce a la mitad el daño del ataque contra él."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Cunning",
+					"entries": [
+						"El corruptor escapa de las restricciones no mágicas y acaba con las condiciones {@condition grappled} y {@condition restrained} sobre sí mismo, luego se mueve a su velocidad sin provocar ataques de oportunidad."
+					]
+				},
+				{
+					"name": "Stab (Costs 2 Actions)",
+					"entries": [
+						"El corruptor hace un ataque de Cuchilla Susurrante."
+					]
+				},
+				{
+					"name": "Amorphous Escape (Costs 3 Actions)",
+					"entries": [
+						"El corruptor se disuelve en una masa cambiante de carne, tentáculos, ojos, garras y bocas. Hasta dos criaturas que el corruptor pueda ver en un radio de 6 metros deben realizar una tirada de salvación de Inteligencia {@dc 20}, recibiendo 18 ({@damage 4d8}) de daño psíquico si falla la tirada de salvación, o la mitad de daño si tiene éxito. Esta transformación dura hasta el final del siguiente turno del corruptor. Mientras está transformado, el corruptor tiene ventaja en las tiradas de ataque, las tiradas de ataque contra él tienen desventaja y puede moverse por espacios de al menos 2,5 cm de ancho sin apretarse."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Villain",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances",
+				"Spider Climb"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"TC",
+				"TP"
+			],
+			"damageTags": [
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"paralyzed",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"intelligence",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Pazrodine",
+			"isNamedCreature": true,
+			"source": "BMT",
+			"page": 113,
+			"size": [
+				"G"
+			],
+			"type": {
+				"type": "dragon",
+				"tags": [
+					"moonstone"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 330,
+				"formula": "20d20 + 120"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 80
+			},
+			"str": 22,
+			"dex": 18,
+			"con": 23,
+			"int": 20,
+			"wis": 22,
+			"cha": 26,
+			"save": {
+				"int": "+12",
+				"wis": "+13",
+				"cha": "+15"
+			},
+			"skill": {
+				"perception": "+13",
+				"persuasion": "+15",
+				"stealth": "+11"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 23,
+			"conditionImmune": [
+				"charmed"
+			],
+			"languages": [
+				"all",
+				"telepathy 120 ft."
+			],
+			"cr": "21",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Pazrodine lanza uno de los siguientes hechizos, que no requieren componentes materiales y utilizan Carisma como habilidad de conjuro (salvación de hechizo {@dc 23}):"
+					],
+					"will": [
+						"{@spell Faerie Fire}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell Calm Emotions}",
+							"{@spell Dispel Magic}",
+							"{@spell Invisibility}"
+						],
+						"1e": [
+							"{@spell Mass Cure Wounds}",
+							"{@spell Revivify}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Guardian of the Market",
+					"entries": [
+						"Pazrodine puede sentir cuando un objeto es robado del Mercado Seelie. Conoce la distancia y la dirección de los objetos robados, como si se tratara del hechizo {@spell Locate Object}."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si Pazrodine falla una tirada de salvación, puede elegir tener éxito en su lugar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Pazrodine hace un ataque Mordisco y dos ataques Garra."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 13} para golpear, alcance 4,5 m., un objetivo. {@h}17 ({@damage 2d10 + 6}) de daño perforante más 11 ({@damage 2d10}) de daño radiante."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 13} para golpear, alcance 3 m., un objetivo. {@h}13 ({@damage 2d6 + 6}) de daño cortante."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 13} para golpear, alcance 6 m., un objetivo. {@h}10 ({@damage 1d8 + 6}) de daño contundente. Si el objetivo es una criatura, debe tener éxito en una tirada de salvación de Fuerza {@dc 21} o tener la condición {@condition prone}."
+					]
+				},
+				{
+					"name": "Breath Weapon {@recharge 5}",
+					"entries": [
+						"Pazrodine utiliza una de las siguientes armas de aliento:",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "Dream Breath",
+									"entries": [
+										"Pazrodine exhala niebla en un cono de 27 metros. Cada criatura en esa área debe tener éxito en una tirada de salvación de Constitución {@dc 21} o sufrir la condición {@condition unconscious} durante 10 minutos. Este efecto termina para una criatura si recibe daño o si alguien utiliza una acción para despertarla."
+									]
+								},
+								{
+									"type": "item",
+									"name": "Moonlight Breath",
+									"entries": [
+										"Pazrodine exhala un rayo de luz lunar en una línea de 36 metros y 3 metros de ancho. Cada criatura en esa área debe hacer una tirada de salvación de Destreza {@dc 21}, recibiendo 60 ({@damage 11d10}) de daño radiante si falla la tirada de salvación, o la mitad de daño si tiene éxito."
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Tail",
+					"entries": [
+						"Pazrodine hace un ataque de Cola."
+					]
+				},
+				{
+					"name": "Cast a Spell (Costs 2 Actions)",
+					"entries": [
+						"Pazrodine usa Hechicería."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Pazrodine",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"TP",
+				"XX"
+			],
+			"damageTags": [
+				"B",
+				"P",
+				"R",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflictSpell": [
+				"invisible"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity",
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Quadrone Detention Drone",
+			"group": null,
+			"source": "BMT",
+			"page": 135,
+			"_copy": {
+				"name": "Quadrone",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "quadrone",
+						"with": "drone"
+					},
+					"action": [
+						{
+							"mode": "appendArr",
+							"items": {
+								"name": "Detention Orb",
+								"entries": [
+									"El zángano lanza un pequeño orbe de fuerza mágica a una criatura que vea en un radio de 9 metros. La criatura debe tener éxito en una tirada de salvación de Constitución {@dc 15} o quedar encerrada en el orbe, que se expande hasta un tamaño lo bastante grande como para contenerla. Mientras está encerrada, la criatura no necesita respirar, comer ni beber, y no envejece. Nada puede atravesar el orbe, ni ninguna criatura puede teletransportarse o utilizar el viaje planar para entrar o salir del orbe. Como acción adicional, el zángano puede mover el orbe y su contenido hasta 9 metros en cualquier dirección. Un lanzamiento exitoso del hechizo {@spell Dispel Magic} sobre el orbe ({@dc 15}) lo destruye. Por lo demás, el orbe permanece intacto hasta que el dron gasta una acción para poner fin al efecto o es destruido. Un zángano sólo puede tener un orbe de detención activo a la vez; si el zángano crea un orbe de detención cuando ya tiene uno activo, el primer orbe desaparece, liberando a la criatura de su interior."
+								]
+							}
+						}
+					]
+				}
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Reaper Spirit",
+			"source": "BMT",
+			"page": 50,
+			"summonedBySpell": "Spirit of Death|BMT",
+			"summonedBySpellLevel": 4,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"special": "11 + the level of the spell (natural armor)"
+				}
+			],
+			"hp": {
+				"special": "40 + 10 for each spell level above 4th"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 16,
+			"int": 16,
+			"wis": 16,
+			"cha": 16,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages you speak"
+			],
+			"pbNote": "equals your bonus",
+			"trait": [
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"El espíritu puede moverse a través de otras criaturas y objetos como si fueran terreno difícil. Si termina su turno dentro de un objeto, es desviado al espacio desocupado más cercano y recibe {@damage 1d10} de daño de fuerza por cada 1,5 metros desviado."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El espíritu realiza un número de ataques de Guadaña Segadora igual a la mitad del nivel del hechizo (redondeado hacia abajo)."
+					]
+				},
+				{
+					"name": "Reaping Scythe",
+					"entries": [
+						"{@atk mw} tu modificador de ataque de hechizo para golpear (con ventaja), alcance 1,5 m., la criatura encantada por Haunt Creature. {@h}{@damage 1d8 + 3 + summonSpellLevel} de daño necrótico."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Haunt Creature",
+					"entries": [
+						"El espíritu se dirige a una criatura que pueda ver en un radio de 3 metros y comienza a embrujarla. Mientras el objetivo está embrujado, el espíritu y tú percibís la dirección y la distancia hasta el objetivo si éste se encuentra en el mismo plano de existencia que vosotros. Además, si el objetivo comienza su turno a menos de 3 metros del espíritu, el objetivo debe tener éxito en una tirada de salvación de Sabiduría contra tu DC de salvación de hechizo o tendrá la condición {@condition frightened} hasta el comienzo del siguiente turno del objetivo. El objetivo permanece embrujado hasta que muere, el espíritu desaparece, o el espíritu utiliza esta acción de nuevo."
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"N",
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened"
+			]
+		},
+		{
+			"name": "Riffler",
+			"source": "BMT",
+			"page": 181,
+			"size": [
+				"S"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 90,
+				"formula": "20d6 + 20"
+			},
+			"speed": {
+				"walk": 30,
+				"burrow": 20
+			},
+			"str": 8,
+			"dex": 16,
+			"con": 12,
+			"int": 11,
+			"wis": 15,
+			"cha": 17,
+			"save": {
+				"dex": "+6",
+				"cha": "+6"
+			},
+			"skill": {
+				"arcana": "+6",
+				"insight": "+5",
+				"sleight of hand": "+9",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"necrotic",
+				"radiant"
+			],
+			"languages": [
+				"Common",
+				"Sylvan"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Card Sense",
+					"entries": [
+						"El riffler puede oler la presencia de cartas mágicas, incluidas las Barajas de Muchas Cosas y otras barajas mágicas, en un radio de 1,5 kilómetros de sí mismo. Conoce la dirección a la que se encuentran dichas cartas en ese radio. Los efectos que protegen a un objetivo de la magia adivinatoria bloquean este sentido."
+					]
+				},
+				{
+					"name": "Riffling Step",
+					"entries": [
+						"El riffler puede excavar a través de cualquier material no mágico que no sea hierro, barajando la sustancia a través de la cual el riffler se mueve a un lado como si fueran cartas para formar un túnel que se cierra detrás del riffler."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El riffler hace dos ataques de Carta Espectral."
+					]
+				},
+				{
+					"name": "Spectral Card",
+					"entries": [
+						"{@atk ms,rs} {@hit 6} para golpear, alcance 1,5 m. o alcance 18 m., un objetivo. {@h}8 ({@damage 1d10 + 3}) de daño de fuerza más 5 ({@damage 1d10}) de daño que es radiante si la tirada de {@dice d10} es par y necrótico si es impar."
+					]
+				},
+				{
+					"name": "Card Spray {@recharge 5}",
+					"entries": [
+						"El riffler desata mágicamente un aerosol de cartas espectrales en un cono de 9 metros. Cada criatura en esa área debe realizar una tirada de salvación de Destreza {@dc 14}. Si falla la tirada de salvación, la criatura recibe 27 ({@damage 5d10}) puntos de daño de fuerza y sufre la condición {@condition restrained} durante 1 minuto mientras las cartas la atan. Con una salvación exitosa, la criatura sólo recibe la mitad de daño. Una criatura {@condition restrained} puede repetir la tirada de salvación al final de cada uno de sus turnos, terminando el efecto sobre sí misma en caso de éxito."
+					]
+				},
+				{
+					"name": "Plane Shift",
+					"entries": [
+						"El riffler lanza el hechizo {@spell Plane Shift} apuntándose sólo a sí mismo, sin necesidad de componentes materiales y utilizando Carisma como habilidad de lanzamiento."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Shuffle Destiny",
+					"entries": [
+						"Cuando una criatura que el riffler puede ver en un radio de 9 metros hace un chequeo de habilidad, una tirada de ataque o una tirada de salvación, el riffler puede forzar mágicamente a esa criatura a tirar un {@dice d6} y sumar el número obtenido al total o restarlo del total (a elección del riffler), cambiando potencialmente el resultado."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ruin Spider",
+			"source": "BMT",
+			"page": 182,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 105,
+				"formula": "14d10 + 28"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40
+			},
+			"str": 16,
+			"dex": 18,
+			"con": 14,
+			"int": 2,
+			"wis": 13,
+			"cha": 4,
+			"skill": {
+				"stealth": "+10"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"immune": [
+				"acid"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Ruinous Acid",
+					"entries": [
+						"Cualquier arma no mágica que golpee a la araña se corroe. Tras infligir daño, el arma sufre una penalización permanente y acumulativa de -1 a las tiradas de daño. Si su penalización baja a -5, el arma se destruye. La munición no mágica hecha de metal que golpea a la araña se destruye tras infligir daño."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"La araña puede trepar por superficies difíciles, incluso por techos boca abajo, sin necesidad de hacer un chequeo de habilidad."
+					]
+				},
+				{
+					"name": "Web Sense",
+					"entries": [
+						"Mientras está en contacto con una tela, la araña conoce la ubicación exacta de cualquier otra criatura que esté en contacto con la misma tela."
+					]
+				},
+				{
+					"name": "Web Walker",
+					"entries": [
+						"La araña ignora las restricciones de movimiento causadas por las telarañas."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"La araña realiza dos ataques de Mordisco Ruinoso. Puede sustituir un ataque por un uso de Telaraña."
+					]
+				},
+				{
+					"name": "Ruinous Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} para golpear, alcance 1,5 m., un objetivo. {@h}8 ({@damage 1d8 + 4}) de daño perforante y 9 ({@damage 2d8}) de daño ácido. Además, si el objetivo es una criatura que lleva una armadura no mágica, la armadura sufre una penalización permanente y acumulativa de -1 a la CA que ofrece. La armadura reducida a una Clase de Armadura de 10 queda destruida."
+					]
+				},
+				{
+					"name": "Web {@recharge 5}",
+					"entries": [
+						"{@atk rw} {@hit 7} para golpear, alcance 30/18 m., una criatura. {@h}El objetivo tiene la condición {@condition restrained}. Como acción, un {@condition restrained} objetivo puede hacer un chequeo de {@dc 13} Fuerza, reventando la telaraña con un chequeo exitoso. La telaraña también puede destruirse (CA 10; 5 puntos de golpe; vulnerabilidad al daño de fuego; inmunidad al daño de ácido, contusión, veneno y psíquico)."
+					]
+				}
+			],
+			"traitTags": [
+				"Spider Climb",
+				"Web Sense",
+				"Web Walker"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"A",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sir Jared",
+			"source": "BMT",
+			"page": 80,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"{@item plate armor|PHB}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 90,
+				"formula": "12d8 + 36"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 12,
+			"con": 17,
+			"int": 13,
+			"wis": 14,
+			"cha": 17,
+			"save": {
+				"str": "+7",
+				"con": "+6"
+			},
+			"skill": {
+				"arcana": "+4",
+				"athletics": "+7",
+				"persuasion": "+6",
+				"survival": "+5"
+			},
+			"passive": 12,
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"Halfling"
+			],
+			"cr": "5",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Jared hace tres ataques con Espada Larga."
+					]
+				},
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 7} para golpear, alcance 1,5 m., un objetivo. {@h}8 ({@damage 1d8 + 4}) de daño cortante más 4 ({@damage 1d8}) de daño radiante. Con una tirada de 19 o 20, Jared consigue un golpe crítico."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Protect Ally",
+					"entries": [
+						"Cuando una criatura que Jared puede ver ataca a un objetivo que no sea Jared y que se encuentre a menos de 1,5 metros de él, Jared impone desventaja en la tirada de ataque."
+					]
+				}
+			],
+			"attachedItems": [
+				"longsword|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"H"
+			],
+			"damageTags": [
+				"R",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Solar Bastion Knight",
+			"source": "BMT",
+			"page": 75,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"paladin"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"{@item plate armor|PHB}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 150,
+				"formula": "20d8 + 60"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 10,
+			"con": 17,
+			"int": 15,
+			"wis": 16,
+			"cha": 17,
+			"save": {
+				"wis": "+7",
+				"cha": "+7"
+			},
+			"skill": {
+				"arcana": "+6",
+				"history": "+6"
+			},
+			"passive": 13,
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common plus any one language"
+			],
+			"cr": "9",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"El caballero lanza uno de los siguientes hechizos, usando Carisma como habilidad de conjuro (salvación de hechizo {@dc 15}):"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Greater Restoration}",
+							"{@spell Sending}",
+							"{@spell Word of Recall} (the prepared sanctuary is the Solar Bastion)"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Aura of Protection",
+					"entries": [
+						"El caballero y cada aliado en un radio de 3 metros tienen ventaja en las tiradas de salvación. Este rasgo se suprime mientras el caballero tenga la condición {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El caballero hace tres ataques con la Lanza del Sol."
+					]
+				},
+				{
+					"name": "Sunspear",
+					"entries": [
+						"{@atk ms,rs} {@hit 8} para golpear, alcance 1,5 m. o alcance 36 m., un objetivo. {@h}14 ({@damage 3d6 + 4}) de daño radiante, o 21 ({@damage 5d6 + 4}) de daño radiante si el objetivo es un Demonio o un No Muerto."
+					]
+				},
+				{
+					"name": "Solar Flare {@recharge 5}",
+					"entries": [
+						"El caballero desata una llamarada de energía brillante que llena una esfera de 9 metros de radio centrada en él. Cada criatura a elección del caballero en esa área debe realizar una tirada de salvación de Destreza {@dc 15}. En una salvación fallida, la criatura recibe 22 ({@damage 4d10}) de daño radiante y tiene la condición {@condition blinded} hasta el final de su siguiente turno. Si la salvación tiene éxito, la criatura sólo recibe la mitad de daño. Durante el siguiente minuto, el área afectada se llena de una luz brillante que es luz solar."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"R"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Talon Beast",
+			"source": "BMT",
+			"page": 183,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 114,
+				"formula": "12d10 + 48"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 22,
+			"dex": 14,
+			"con": 19,
+			"int": 5,
+			"wis": 12,
+			"cha": 5,
+			"skill": {
+				"perception": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"conditionImmune": [
+				"frightened"
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"La bestia garra tiene ventaja en las tiradas de salvación contra hechizos y otros efectos mágicos."
+					]
+				},
+				{
+					"name": "Sense Magic",
+					"entries": [
+						"La bestia garra puede detectar y localizar la magia en un radio de 36 metros."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"La bestia de garras realiza dos ataques de garras o un ataque de garras y un ataque de pico."
+					]
+				},
+				{
+					"name": "Beak",
+					"entries": [
+						"{@atk mw} {@hit 9} para golpear, alcance 1,5 m., un objetivo. {@h}17 ({@damage 2d10 + 6}) de daño perforante, y si el objetivo tiene algún efecto de conjuro sobre sí mismo o algún objeto mágico en su posesión, el objetivo debe hacer una tirada de salvación de {@dc 15} Carisma. Si falla la tirada de salvación, termina un efecto de conjuro aleatorio sobre el objetivo. Si el objetivo no tiene efectos de conjuro sobre él, un objeto mágico aleatorio en su posesión tiene sus propiedades mágicas suprimidas durante 1 minuto. Si el objeto es una poción o un pergamino, pasa a ser no mágico."
+					]
+				},
+				{
+					"name": "Talon",
+					"entries": [
+						"{@atk mw} {@hit 9} para golpear, alcance 3 m., un objetivo. {@h}15 ({@damage 2d8 + 6}) de daño cortante, y el objetivo tiene la condición {@condition grappled} (escapar {@dc 17}). Hasta que el gancho termine, el objetivo tiene la condición {@condition restrained}, y la bestia garra no puede usar Garra sobre otro objetivo."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"charisma"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Veiled Presence",
+			"source": "BMT",
+			"page": 48,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "celestial",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 300,
+				"formula": "40d8 + 120"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": {
+					"number": 80,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 14,
+			"dex": 24,
+			"con": 16,
+			"int": 24,
+			"wis": 20,
+			"cha": 22,
+			"save": {
+				"dex": "+14",
+				"int": "+14"
+			},
+			"skill": {
+				"perception": "+12",
+				"stealth": "+21"
+			},
+			"senses": [
+				"truesight 30 ft."
+			],
+			"passive": 22,
+			"resist": [
+				"necrotic",
+				"radiant"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "21",
+			"trait": [
+				{
+					"name": "Inviolate Presence",
+					"entries": [
+						"La presencia velada no puede ser objetivo de magia adivinatoria ni de rasgos que pudieran leer su mente o determinar su tipo de criatura."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Si la presencia velada falla una tirada de salvación, puede elegir tener éxito en su lugar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"La presencia velada realiza dos ataques de Hoja del Juicio y puede usar Apocalipsis."
+					]
+				},
+				{
+					"name": "Blade of Judgment",
+					"entries": [
+						"{@atk mw,rw} {@hit 14} para golpear, alcance 1,5 m. o alcance 18 m., un objetivo. {@h}10 ({@damage 1d6 + 7}) de daño perforante más 27 ({@damage 6d8}) de daño radiante. Si el objetivo es una criatura, debe tener éxito en una tirada de salvación de {@dc 22} Carisma, o en su siguiente turno, puede moverse o realizar una acción, pero no ambas."
+					]
+				},
+				{
+					"name": "Revelation",
+					"entries": [
+						"La presencia velada revela un atisbo de su naturaleza de otro mundo a una criatura que pueda ver en un radio de 9 metros. El objetivo debe tener éxito en una tirada de salvación de Sabiduría {@dc 22} o sufrir la condición {@condition paralyzed} hasta el final de su siguiente turno, tras lo cual el objetivo es inmune a esta Revelación durante 24 horas."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"Cuando un atacante que la presencia velada puede ver golpea a la presencia velada con un ataque, la presencia velada reduce a la mitad el daño del ataque contra ella."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Flash Step",
+					"entries": [
+						"La presencia velada se teletransporta mágicamente, junto con cualquier equipo que lleve puesto, hasta 12 metros a un espacio desocupado que pueda ver."
+					]
+				},
+				{
+					"name": "Stab (Costs 2 Actions)",
+					"entries": [
+						"La presencia velada hace que una Cuchilla del Juicio ataque."
+					]
+				},
+				{
+					"name": "Searing Radiance (Costs 3 Actions)",
+					"entries": [
+						"La presencia velada emana mágicamente una luz deslumbrante en una esfera de 3 m de radio centrada en sí misma hasta el final de su siguiente turno, durante el cual las tiradas de ataque contra ella tienen desventaja y ella tiene ventaja en las tiradas de ataque. La esfera se mueve con la presencia velada. Cuando otra criatura comienza su turno en la luz o entra en la luz por primera vez en su turno, esa criatura debe hacer una tirada de salvación de Constitución de {@dc 22}, recibiendo 18 ({@damage 4d8}) puntos de daño radiante en una salvación fallida, o la mitad de daño en una exitosa."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Villain",
+				"source": "BMT"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"P",
+				"R"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"paralyzed"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Werevulture",
+			"source": "BMT",
+			"page": 184,
+			"size": [
+				"M"
+			],
+			"type": "fiend",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 75,
+				"formula": "10d8 + 30"
+			},
+			"speed": {
+				"walk": 30,
+				"alternate": {
+					"walk": [
+						{
+							"number": 10,
+							"condition": "in vulture form"
+						},
+						{
+							"number": 30,
+							"condition": "in hybrid form"
+						}
+					],
+					"fly": [
+						{
+							"number": 60,
+							"condition": "in vulture or hybrid form"
+						}
+					]
+				}
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 17,
+			"int": 11,
+			"wis": 13,
+			"cha": 8,
+			"skill": {
+				"perception": "+5"
+			},
+			"passive": 15,
+			"languages": [
+				"Common (can't speak in vulture form)"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Regeneration",
+					"entries": [
+						"El werevulture recupera 10 puntos de golpe al inicio de su turno. Si el werevulture recibe daño radiante, este rasgo no funciona al inicio del siguiente turno del werevulture. El werevulture muere sólo si comienza su turno con 0 puntos de vida y no se regenera."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"El werevulture hace dos ataques de garra, o hace un ataque de pico y un ataque de garra."
+					]
+				},
+				{
+					"name": "Beak (Vulture or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 5} para golpear, alcance 1,5 m., un objetivo. {@h}10 ({@damage 2d6 + 3}) de daño perforante. Si el objetivo es un Humanoide, debe tener éxito en una tirada de salvación de Constitución {@dc 13} o quedar maldito hasta que sea objetivo del conjuro {@spell Remove Curse} o un efecto similar. Si el objetivo maldito cae a 0 puntos de golpe, se convierte en un werevulture bajo el control del DM y recupera 10 puntos de golpe."
+					]
+				},
+				{
+					"name": "Talon",
+					"entries": [
+						"{@atk mw} {@hit 5} para golpear, alcance 1,5 m., un objetivo. {@h}13 ({@damage 4d4 + 3}) de daño cortante."
+					]
+				},
+				{
+					"name": "Longbow (Humanoid or Hybrid Form Only)",
+					"entries": [
+						"{@atk rw} {@hit 4} para golpear, alcance 150/18 m., un objetivo. {@h}11 ({@damage 2d8 + 2}) de daño perforante."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"El werevulture se polimorfa en un híbrido de buitre y humanoide, en un buitre o vuelve a su forma humanoide. Sus estadísticas de juego, salvo la velocidad, son las mismas en ambas formas. El equipo que lleve no se transforma. Vuelve a su forma humanoide si muere."
+					]
+				}
+			],
+			"attachedItems": [
+				"longbow|phb"
+			],
+			"traitTags": [
+				"Regeneration"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

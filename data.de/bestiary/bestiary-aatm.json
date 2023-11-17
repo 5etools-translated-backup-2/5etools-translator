@@ -1,0 +1,502 @@
+{
+	"_meta": {
+		"otherSources": {
+			"monster": {
+				"MPP": "AATM",
+				"MM": "AATM",
+				"MPMM": "AATM",
+				"VRGR": "AATM"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Animated Coffin",
+			"source": "AATM",
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 60,
+				"formula": "8d10 + 16"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 15,
+			"int": 3,
+			"wis": 11,
+			"cha": 3,
+			"senses": [
+				"blindsight 60 ft. (can't see beyond this radius)"
+			],
+			"passive": 10,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Wenn der belebte Sarg zu Beginn des Kampfes unbeweglich ist, hat er einen Vorteil bei seinem Initiativwurf. Außerdem muss eine Kreatur, die den Sarg nicht beobachtet hat, eine {@dc 18} Intelligenzüberprüfung (Erkundung) bestehen, um zu erkennen, dass der Sarg belebt ist."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"Der animierte Sarg kann auf schwierige Oberflächen klettern, auch kopfüber an der Decke, ohne eine Fähigkeitsprüfung ablegen zu müssen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Der animierte Sarg führt zwei Slam-Attacken aus."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 5} bis zum Treffer, Reichweite 1,5 m, ein Ziel. {@h}12 ({@damage 2d8 + 3}) Schaden durch Wucht."
+					]
+				},
+				{
+					"name": "Entrap",
+					"entries": [
+						"{@atk mw} {@hit 5} zu treffen, Reichweite 1,5 m, eine große oder kleinere Kreatur. {@h}Das Ziel hat den Zustand {@condition grappled} (Flucht {@dc 13}). Wenn das Ziel kein Untoter ist, hat das Ziel bis zum Ende des Greifens den Zustand {@condition restrained} und erleidet zu Beginn jeder seiner Runden 14 ({@damage 4d6}) Stich-Schaden. Der belebte Sarg kann immer nur eine Kreatur auf einmal packen."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance",
+				"Spider Climb"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Factol Skall",
+			"source": "AATM",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "undead",
+				"tags": [
+					"wizard"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 210,
+				"formula": "28d8 + 84"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 11,
+			"dex": 16,
+			"con": 16,
+			"int": 20,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"con": "+9",
+				"int": "+11",
+				"wis": "+8"
+			},
+			"skill": {
+				"arcana": "+17",
+				"history": "+11",
+				"medicine": "+8",
+				"perception": "+8"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 18,
+			"resist": [
+				"cold",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned",
+				"stunned"
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "17",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Skall wirkt einen der folgenden Zauber, die keine materiellen Komponenten benötigen und Intelligenz als Zauberfähigkeit verwenden (Zauberschutz {@dc 19}):"
+					],
+					"will": [
+						"{@spell detect magic}",
+						"{@spell mage hand}",
+						"{@spell prestidigitation}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell animate dead} (as an action)",
+							"{@spell dispel magic}",
+							"{@spell speak with dead}"
+						],
+						"1e": [
+							"{@spell finger of death}",
+							"{@spell plane shift} (self only)",
+							"{@spell project image}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Aura of Death",
+					"entries": [
+						"Kreaturen in einem Umkreis von 9 Metern um Skall haben einen Nachteil bei Rettungswürfen zum Tod."
+					]
+				},
+				{
+					"name": "Cosmic Annihilation",
+					"entries": [
+						"Eine von Skall getötete Kreatur kann nur durch eine echte Wiederbelebung oder einen {@spell wish}-Zauber wieder zum Leben erweckt werden."
+					]
+				},
+				{
+					"name": "Legendary Resistance (4/Day)",
+					"entries": [
+						"Wenn Skall ein Rettungswurf misslingt, kann er stattdessen einen erfolgreichen Rettungswurf wählen."
+					]
+				},
+				{
+					"name": "Rejuvenation",
+					"entries": [
+						"Wenn Skall stirbt, wird er zu Staub. Wenn sein Seelenoratorium nicht zerstört wurde, formt sich Skall innerhalb von {@dice 1d10} Tagen in der Leichenhalle neu. Er erscheint in einem Umkreis von 1,5 Metern um das Orrarium."
+					]
+				},
+				{
+					"name": "Turn Resistance",
+					"entries": [
+						"Skall hat einen Vorteil bei Rettungswürfen gegen jeden Effekt, der Untote verwandelt."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Skall führt einen Angriff mit Verwelkender Berührung aus oder benutzt Zauberei. Außerdem setzt er zweimal Todespeitsche ein."
+					]
+				},
+				{
+					"name": "Withering Touch",
+					"entries": [
+						"{@atk ms} {@hit 11} auf Treffer, Reichweite 1,5 m, ein Ziel. {@h}32 ({@damage 6d8 + 5}) Kälteschaden plus 31 ({@damage 7d8}) nekrotischer Schaden, und wenn das Ziel eine Kreatur ist, kann es bis zum Beginn von Skalls nächstem Zug keine Trefferpunkte wiedererlangen."
+					]
+				},
+				{
+					"name": "Death Knell",
+					"entries": [
+						"Skall zeigt mit dem Finger auf eine Kreatur, die er im Umkreis von 36 Metern von sich selbst sehen kann, und erfüllt den Geist des Ziels mit Todesvisionen und dem klangvollen Klang einer Eisenglocke. Das Ziel muss einen {@dc 19} Rettungswurf in Weisheit bestehen oder 14 ({@damage 4d6}) psychischen Schaden erleiden und bis zum Beginn von Skalls nächstem Zug unter dem Zustand {@condition frightened} leiden."
+					]
+				},
+				{
+					"name": "Fog of Death (1/Day)",
+					"entries": [
+						"Skall verströmt einen tödlichen Nebel in einer Kugel mit einem Radius von 9 Metern um sich selbst herum. Die Sphäre breitet sich um Ecken herum aus, und ihr Bereich ist stark verdunkelt. Der Nebel hält bis zum Beginn von Skalls nächstem Zug an und kann nicht durch Wind zerstreut werden. Er bewegt sich nicht mit ihm.",
+						"Jede Kreatur, die den Nebel zum ersten Mal in einem Zug betritt oder ihren Zug dort beginnt, muss einen {@dc 19} Rettungswurf auf die Konstitution machen und erleidet bei einem misslungenen Rettungswurf 28 ({@damage 8d6}) nekrotischen Schaden und 28 ({@damage 8d6}) Giftschaden, bei einem erfolgreichen Rettungswurf halb so viel Schaden. Ein durch diesen Schaden getöteter Humanoid mittlerer oder kleiner Größe wird zu einem Zombie unter Skalls Kontrolle. Der Zombie agiert auf Skalls Initiative, jedoch unmittelbar nach seinem Zug. Wenn er keinen anderen Befehl erhält, versucht der Zombie, jede nicht untote Kreatur zu töten, der er begegnet."
+					]
+				}
+			],
+			"reactionHeader": [
+				"Skall can take up to three reactions per round but only one per turn."
+			],
+			"reaction": [
+				{
+					"name": "Baleful Counterspell",
+					"entries": [
+						"Skall klappert mit den Zähnen, um eine Kreatur zu unterbrechen, die er im Umkreis von 18 Metern um sich herum sieht und die einen Zauber wirkt. Wenn der Zauber auf Stufe 4 oder niedriger ist, schlägt er fehl und hat keine Wirkung. Ist der Zauber auf Stufe 5 oder höher, macht Skall eine Intelligenzprüfung ({@dc 10} + Stufe des Zaubers). Bei einer erfolgreichen Prüfung scheitert der Zauber und hat keine Wirkung. Unabhängig von der Stufe des Zaubers erleidet der Zaubernde 10 ({@damage 3d6}) nekrotischen Schaden, wenn der Zauber fehlschlägt."
+					]
+				},
+				{
+					"name": "Near-Death Experience",
+					"entries": [
+						"Wenn er von einem Angriff getroffen wird, teleportiert sich Skall zusammen mit seiner Ausrüstung, die er trägt, bis zu 9 Meter weit in einen unbesetzten Raum, den er sehen kann."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Rejuvenation",
+				"Turn Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"C",
+				"I",
+				"N",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Heralds of Dust Exorcist",
+			"source": "AATM",
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				13,
+				{
+					"ac": 16,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 112,
+				"formula": "15d8 + 45"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 16,
+			"con": 16,
+			"int": 17,
+			"wis": 14,
+			"cha": 11,
+			"save": {
+				"int": "+6",
+				"wis": "+5",
+				"cha": "+3"
+			},
+			"skill": {
+				"arcana": "+6",
+				"perception": "+5",
+				"religion": "+6"
+			},
+			"senses": [
+				"truesight 60 ft."
+			],
+			"passive": 15,
+			"resist": [
+				"necrotic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common plus three more languages"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Der Exorzist wirkt einen der folgenden Zauber, für die keine materiellen Komponenten benötigt werden und bei denen Intelligenz als Zaubernde Fähigkeit verwendet wird (Zauberschutz {@dc 14}, {@hit 6} um mit Zauberangriffen zu treffen):",
+						"Willenskraft: Böses und Gutes erkennen, Magier-Rüstung (nur für sich selbst), Magier-Hand"
+					],
+					"daily": {
+						"2e": [
+							"{@spell protection from evil and good}",
+							"{@spell remove curse}",
+							"{@spell speak with dead}"
+						],
+						"1e": [
+							"{@spell banishment}",
+							"{@spell dispel evil and good}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Incorruptible Vessel",
+					"entries": [
+						"Der Exorzist kann nicht von Himmlischen, Ungeheuern oder Untoten besessen sein."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Der Exorzist führt zwei Grave Burst-Angriffe aus."
+					]
+				},
+				{
+					"name": "Grave Burst",
+					"entries": [
+						"{@atk ms,rs} {@hit 6} Treffer, Reichweite 1,5 m. oder 36 m., ein Ziel. {@h}19 ({@damage 3d10 + 3}) nekrotischer oder Strahlenschaden (nach Wahl des Exorzisten)."
+					]
+				},
+				{
+					"name": "Admit Entity {@recharge 5}",
+					"entries": [
+						"Der Exorzist lichtet den Schleier des Todes für eine Kreatur, die er in einem Umkreis von 18 Metern von sich aus sehen kann, und setzt das Ziel bösartigen Wesenheiten aus. Das Ziel muss einen {@dc 14} Charisma-Rettungswurf machen. Bei einem misslungenen Rettungswurf erleidet das Ziel 36 ({@damage 8d8}) psychischen Schaden und befindet sich 1 Minute lang im Zustand {@condition incapacitated}, in dem es würgt und zusammenhanglos mit einer Stimme spricht, die nicht seine eigene ist. Bei einem erfolgreichen Schutz erleidet das Ziel nur halb so viel Schaden. Ein {@condition incapacitated} Ziel kann den Rettungswurf am Ende jeder seiner Runden wiederholen, wobei der Effekt bei einem Erfolg für es selbst endet."
+					]
+				}
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"R",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"conditionInflictSpell": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"charisma"
+			],
+			"savingThrowForcedSpell": [
+				"charisma"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

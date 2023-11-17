@@ -1,0 +1,1671 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM",
+				"CoS"
+			]
+		}
+	},
+	"monster": [
+		{
+			"name": "Avacyn",
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Solar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Solar",
+						"with": "Avacyn",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Moonsilver Spear",
+							"entries": [
+								"Een engel van de Vlucht van het Moonsilver hanteert een speer gemaakt van een scherf van de Helvault. Hitpoints die verloren gaan door de schade van dit wapen kunnen alleen worden teruggewonnen door een korte of lange rustperiode, en niet door regeneratie, magie of een andere manier. Eenmaal per beurt, wanneer de engel een wezen raakt met een aanval met dit wapen, kan hij het doelwit verwonden. Aan het begin van elke beurt van het gewonde wezen krijgt het {@damage 1d4} necrotische schade voor elke keer dat de engel het heeft verwond, en het kan dan een {@dc 15} Constitution saving throw doen, waardoor het effect van al deze wonden op zichzelf eindigt als het slaagt. Als alternatief kan het gewonde wezen, of een wezen binnen 1,5 meter ervan, een actie gebruiken om een {@dc 15} Wisdom ({@skill Medicine}) check te doen, waardoor het effect van zulke wonden op hem wordt beëindigd als hij slaagt."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Bruna",
+			"alias": [
+				"Light of Alabaster"
+			],
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Planetar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "planetar",
+						"with": "Bruna",
+						"flags": "i"
+					},
+					"_": {
+						"mode": "addSpells",
+						"will": [
+							"{@spell protection from evil and good}"
+						],
+						"daily": {
+							"1e": [
+								"{@spell dispel evil and good}"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Creepy Doll",
+			"source": "PSI",
+			"page": 25,
+			"size": [
+				"T"
+			],
+			"type": "construct",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 21,
+				"formula": "6d4 + 6"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 6,
+			"dex": 14,
+			"con": 13,
+			"int": 12,
+			"wis": 11,
+			"cha": 10,
+			"skill": {
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed"
+			],
+			"languages": [
+				"speaks and understands the languages known by its creator"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Hoewel de griezelige pop onbeweeglijk blijft, is zij niet te onderscheiden van een gewone, levenloze pop."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De griezelige pop doet één aanval met haar schaar en gebruikt Psychic Assault."
+					]
+				},
+				{
+					"name": "Scissors",
+					"entries": [
+						"{@atk mw} {@hit 4} te raken, reikwijdte 1,5 m., één doelwit. {@h}7 ({@damage 2d4 + 2}) schade door snijden."
+					]
+				},
+				{
+					"name": "Psychic Assault",
+					"entries": [
+						"De griezelige pop richt zich op één wezen binnen een straal van 3 meter dat hersenen heeft. Het doelwit moet slagen in een {@dc 12} intelligentie reddingsworp of 11 ({@damage 2d10}) psychische schade oplopen. Ook bij falen, rol {@dice 3d6}. Als het totaal gelijk is aan of hoger is dan de intelligentiescore van het doelwit, wordt die score verlaagd tot 0. Het doelwit is {@condition stunned} totdat het minstens één punt intelligentie heeft teruggewonnen, bijvoorbeeld door de {@spell greater restoration} spreuk of soortgelijke magie."
+					]
+				},
+				{
+					"name": "Body Exchange",
+					"entries": [
+						"De griezelige pop begint een intelligentiewedstrijd met een {@condition incapacitated} mensachtige binnen een straal van 1,5 meter. Als het de wedstrijd wint, neemt de geest van de griezelige pop bezit van het lichaam van het doelwit terwijl de geest van het doelwit in het lichaam van de griezelige pop wordt geplaatst. De enge pop controleert het lichaam van het doelwit volledig. Ze behoudt haar houding, intelligentie, wijsheid, charisma en immuniteit voor {@condition charmed} en {@condition frightened}. Ze gebruikt verder de statistieken van het bezeten doelwit, maar heeft geen toegang tot de kennis, klasse-eigenschappen of vaardigheden van het doelwit. Het doelwit behoudt zijn oriëntatie, intelligentie, wijsheid en charisma terwijl hij het lichaam van de griezelpop bewoont.",
+						"De lichaamsverwisseling duurt totdat de geest van de pop door magie wordt verdreven. (De {@spell dispel evil and good} spreuk zal dit bewerkstelligen, hoewel de pop niet een van de wezentypen is wiens bezit die spreuk normaal gesproken beëindigt). Het lichaam en de pop moeten zich binnen 1,5 meter van elkaar bevinden om dit effect te laten werken. Het doelwit is immuun voor de lichaamsuitwisseling van deze pop gedurende 24 uur nadat hij de intelligentiewedstrijd heeft gewonnen of nadat de uitwisseling is afgelopen."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"S",
+				"Y"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"savingThrowForced": [
+				"intelligence"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Demonlord of Ashmouth",
+			"source": "PSI",
+			"page": 37,
+			"_copy": {
+				"name": "Horned Devil",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "devil",
+						"with": "demon"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"De Demon voert drie mêlee-aanvallen uit: twee met zijn strijdbijl en één met zijn staart. Hij kan Hurl Flame gebruiken in plaats van een melee aanval."
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Fork",
+							"items": {
+								"name": "Battleaxe",
+								"entries": [
+									"{@atk mw} {@hit 10} te raken, reikwijdte 3 m., één doelwit. {@h}15 ({@damage 2d8 + 6}) schade door snijden, of 17 ({@damage 2d10 + 6}) schade door snijden indien gebruikt met twee handen."
+								]
+							}
+						}
+					]
+				}
+			},
+			"damageTags": [
+				"F",
+				"P",
+				"S"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Flight Alabaster Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"_": {
+						"mode": "addSpells",
+						"will": [
+							"{@spell protection from evil and good}"
+						],
+						"daily": {
+							"1e": [
+								"{@spell dispel evil and good}"
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flight Goldnight Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Goldnight Menace",
+							"entries": [
+								"Als actie kan een engel van Flight Goldnight angst zaaien in de harten van zijn vijanden. Elk wezen naar keuze van de engel dat zich binnen een straal van 36 meter van hem bevindt en zich ervan bewust is, moet slagen in een reddingsslag van Wijsheid of {@condition frightened} worden gedurende 1 minuut. De DC voor deze reddingsworp is dezelfde als voor de eigenschap Innate Spellcasting van de engel. Een wezen kan de reddingsworp herhalen aan het einde van elk van zijn beurten en het effect op zichzelf beëindigen als het slaagt. Als de reddingsworp van een wezen succesvol is of het effect voor het wezen eindigt, is het wezen de komende 24 uur immuun voor de Goldnight Menace van die engel."
+							]
+						}
+					}
+				}
+			},
+			"cr": "11",
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flight of Moonsilver Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Moonsilver Spear",
+							"entries": [
+								"Een engel van de Vlucht van het Moonsilver hanteert een speer gemaakt van een scherf van de Helvault. Hitpoints die verloren gaan door de schade van dit wapen kunnen alleen worden teruggewonnen door een korte of lange rustperiode, en niet door regeneratie, magie of een andere manier. Eenmaal per beurt, wanneer de engel een wezen raakt met een aanval met dit wapen, kan hij het doelwit verwonden. Aan het begin van elke beurt van het gewonde wezen krijgt het {@damage 1d4} necrotische schade voor elke keer dat de engel het heeft verwond, en het kan dan een {@dc 15} Constitution saving throw doen, waardoor het effect van al deze wonden op zichzelf eindigt als het slaagt. Als alternatief kan het gewonde wezen, of een wezen binnen 1,5 meter ervan, een actie gebruiken om een {@dc 15} Wisdom ({@skill Medicine}) check te doen, waardoor het effect van zulke wonden op hem wordt beëindigd als hij slaagt."
+							]
+						}
+					}
+				}
+			},
+			"damageTags": [
+				"B",
+				"N",
+				"R"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Geist",
+			"source": "PSI",
+			"page": 19,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 45,
+				"formula": "10d8"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": 40
+			},
+			"str": 7,
+			"dex": 13,
+			"con": 10,
+			"int": 10,
+			"wis": 12,
+			"cha": 17,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"acid",
+				"fire",
+				"lightning",
+				"thunder",
+				"bludgeoning"
+			],
+			"immune": [
+				"cold",
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"grappled"
+			],
+			"languages": [
+				"any languages it knew in life"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Ethereal Sight",
+					"entries": [
+						"De geist kan 18 meter in het Ethereal Plane kijken als hij op het Material Plane is, en omgekeerd."
+					]
+				},
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"De geist kan door andere wezens en voorwerpen bewegen alsof ze {@quickref difficult terrain||3} zijn. Hij ontvangt 5 ({@dice 1d10}) krachtschade als hij zijn beurt eindigt in een voorwerp."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Withering Touch",
+					"entries": [
+						"{@atk mw} {@hit 5} om te raken, reikwijdte 1,5 m., één doelwit {@h}17 ({@damage 4d6 + 3}) necrotische schade."
+					]
+				},
+				{
+					"name": "Etherealness",
+					"entries": [
+						"De geist betreedt het Ethereal Plane vanuit het Material Plane, of vice versa. Hij is zichtbaar op het Materiële Vlak terwijl hij in het Etherische Grensvlak is, en omgekeerd, toch kan hij niets op het andere vlak beïnvloeden of erdoor worden beïnvloed."
+					]
+				},
+				{
+					"name": "Possession {@recharge}",
+					"entries": [
+						"Een wezen dat de geist kan zien binnen 1,5 meter van hem moet slagen op een {@dc 13} Charisma saving throw of bezeten worden door de geist; de geist verdwijnt dan en het doelwit is {@condition incapacitated} en verliest de controle over zijn lichaam. De geist controleert nu het lichaam maar ontneemt het doelwit niet het bewustzijn. De geist kan niet aangevallen worden door een aanval, spreuk of ander effect, behalve degene die ondoden maken, en hij behoudt zijn oriëntatie, intelligentie, wijsheid, charisma en immuniteit voor {@condition charmed} en {@condition frightened}. Het gebruikt verder de statistieken van het bezeten doelwit, maar krijgt geen toegang tot de kennis, klasse-eigenschappen of vaardigheden van het doelwit. De bezetenheid duurt totdat het lichaam tot 0 hitpoints daalt, de geist het beëindigt als bonusactie of de geist wordt gekeerd of gedwongen door een effect zoals de {@spell dispel evil and good} spreuk. Als de bezetenheid eindigt, verschijnt de geist opnieuw in een onbezette ruimte binnen 1,5 meter van het lichaam. Het doelwit is immuun voor de bezetenheid van deze geist gedurende 24 uur nadat hij geslaagd is voor de reddingsworp of nadat de bezetenheid eindigt. De geist kan zich in plaats daarvan richten op het lijk van een wezen, waarbij hij zijn eigen levenskracht gebruikt om het lijk te animeren als een zombie. Het bezielde lijk gebruikt zombiestatistieken en keert terug naar de dood als de geist de bezetenheid beëindigt."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Geist Powers",
+					"entries": [
+						"Geisten zijn net zo gevarieerd als de mensen die ze tijdens hun leven waren. Naast de eigenschappen en acties die alle geisten bezitten, kan een individuele geist de volgende speciale eigenschappen hebben.",
+						{
+							"name": "Intangible Virtue",
+							"type": "entries",
+							"entries": [
+								"Een levend wezen dat bezeten is door een geist met een witte geaardheid, wordt immuun voor de {@condition charmed} en {@condition frightened} condities en is bestand tegen schade door stoten, doorboren en snijden door niet-magische aanvallen. Terwijl het wezen bezeten is, kan de geist toestaan dat het de controle over zijn lichaam overneemt, maar de geist kan de controle op elk moment weer overnemen (geen actie vereist)."
+							]
+						},
+						{
+							"name": "Horrifying Visage",
+							"type": "entries",
+							"entries": [
+								"Zwart-geaarde geisten kunnen zichzelf vreselijk maken om te zien, zelfs als ze de levenden bezitten. Elk niet-ondode wezen binnen 18 meter van de geist dat hem kan zien, moet slagen voor een {@dc 13} Wisdom saving throw of {@condition frightened} voor 1 minuut. Als de redding faalt met 5 of meer, wordt het doelwit ook {@dice 1d4 × 10} jaar ouder. Een {@condition frightened} doelwit kan de reddingsworp herhalen aan het einde van elk van zijn beurten, waarbij de {@condition frightened} voorwaarde voor zichzelf wordt beëindigd als hij slaagt. Als de reddingsworp van een doelwit succesvol is of het effect voor het doelwit eindigt, is het doelwit immuun voor de gruwelijke blik van deze geist voor de volgende 24 uur. Het verouderingseffect kan ongedaan worden gemaakt met een {@spell greater restoration} spreuk, maar alleen binnen 24 uur nadat het is opgetreden."
+							]
+						}
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"N"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Geist: Horrifying Visage",
+					"source": "PSI",
+					"_mod": {
+						"action": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Horrifying Visage",
+								"entries": [
+									"Zwart-geaarde geisten kunnen zichzelf vreselijk maken om te zien, zelfs als ze de levenden bezitten. Elk niet-ondode wezen binnen 18 meter van de geist dat hem kan zien, moet slagen voor een {@dc 13} Wisdom saving throw of {@condition frightened} voor 1 minuut. Als de redding faalt met 5 of meer, wordt het doelwit ook {@dice 1d4 × 10} jaar ouder. Een {@condition frightened} doelwit kan de reddingsworp herhalen aan het einde van elk van zijn beurten, waarbij de {@condition frightened} voorwaarde voor zichzelf wordt beëindigd als hij slaagt. Als de reddingsworp van een doelwit succesvol is of het effect voor het doelwit eindigt, is het doelwit immuun voor de gruwelijke blik van deze geist voor de volgende 24 uur. Het verouderingseffect kan ongedaan worden gemaakt met een {@spell greater restoration} spreuk, maar alleen binnen 24 uur nadat het is opgetreden."
+								]
+							}
+						}
+					},
+					"variant": null,
+					"conditionInflict": [
+						"frightened",
+						"incapacitated"
+					]
+				},
+				{
+					"name": "Geist: Intangible Virtue",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Intangible Virtue",
+								"entries": [
+									"Een levend wezen dat bezeten is door een geist met een witte geaardheid, wordt immuun voor de {@condition charmed} en {@condition frightened} condities en is bestand tegen schade door stoten, doorboren en snijden door niet-magische aanvallen. Terwijl het wezen bezeten is, kan de geist toestaan dat het de controle over zijn lichaam overneemt, maar de geist kan de controle op elk moment weer overnemen (geen actie vereist)."
+								]
+							}
+						}
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Gisela",
+			"alias": [
+				"Blade of Goldnight",
+				"Blade of the Church"
+			],
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Planetar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Planetar",
+						"with": "Gisela",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Goldnight Menace",
+							"entries": [
+								"Als actie kan een engel van Flight Goldnight angst zaaien in de harten van zijn vijanden. Elk wezen naar keuze van de engel dat zich binnen een straal van 36 meter van hem bevindt en zich ervan bewust is, moet slagen in een reddingsslag van Wijsheid of {@condition frightened} worden gedurende 1 minuut. De DC voor deze reddingsworp is dezelfde als voor de eigenschap Innate Spellcasting van de engel. Een wezen kan de reddingsworp herhalen aan het einde van elk van zijn beurten en het effect op zichzelf beëindigen als het slaagt. Als de reddingsworp van een wezen succesvol is of het effect voor het wezen eindigt, is het wezen de komende 24 uur immuun voor de Goldnight Menace van die engel."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Host of Herons Angel",
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Heron Protection",
+							"entries": [
+								"Telkens wanneer een engel van de Host of Herons of een vriendelijk wezen binnen een straal van 3 meter een reddingsworp doet, krijgt het wezen een bonus op de reddingsworp gelijk aan de Charisma modifier van de engel. De engel moet bij bewustzijn zijn om deze bonus te ontvangen of toe te kennen."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Keeper of the Feather",
+			"group": null,
+			"source": "PSI",
+			"page": 40,
+			"_copy": {
+				"name": "Wereraven",
+				"source": "VRGR",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "wereraven",
+						"with": "keeper"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Beak (Raven or Hybrid Form Only)",
+							"items": {
+								"name": "Beak (Raven or Hybrid Form Only)",
+								"entries": [
+									"{@atk mw} {@hit 4} te raken, reikwijdte 1,5 m., één doelwit. {@h}1 doordringende schade in ravenvorm, of 4 ({@damage 1d4 + 2}) doordringende schade in hybride vorm."
+								]
+							}
+						}
+					]
+				}
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"De wachter is een tovenaar van het vierde niveau. Zijn spellcasting ability is Wisdom (spell save {@dc 12}, {@hit 4} to hit with spell attacks). Hij heeft de volgende druïde spreuken voorbereid:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft}",
+								"{@spell produce flame}",
+								"{@spell shillelagh}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell entangle}",
+								"{@spell longstrider}",
+								"{@spell speak with animals}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell animal messenger}",
+								"{@spell barkskin}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"damageTagsSpell": [
+				"F",
+				"T"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Necro-Alchemist",
+			"alias": [
+				"Geistmage"
+			],
+			"source": "PSI",
+			"page": 20,
+			"_copy": {
+				"name": "Mage",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "mage",
+						"with": "Necro-Alchemist",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sigarda",
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 26,
+			"_copy": {
+				"name": "Planetar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Planetar",
+						"with": "Sigarda",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Heron Protection",
+							"entries": [
+								"Telkens wanneer een engel van de Host of Herons of een vriendelijk wezen binnen een straal van 3 meter een reddingsworp doet, krijgt het wezen een bonus op de reddingsworp gelijk aan de Charisma modifier van de engel. De engel moet bij bewustzijn zijn om deze bonus te ontvangen of toe te kennen."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Skaab",
+			"source": "PSI",
+			"page": 20,
+			"_copy": {
+				"name": "Flesh Golem",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "golem",
+						"with": "skaab",
+						"flags": "i"
+					}
+				}
+			},
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Skaabs",
+					"entries": [
+						"De meest eenvoudige skaberen zijn gewoon {@creature flesh golem|MM|flesh golems}, zoals beschreven in het Monsterhandboek. Maar de ambitie van elke skaberen is om een echt uniek meesterwerk te maken, een doel waarbij een borduurster golems kan maken met een van de volgende speciale eigenschappen.",
+						{
+							"type": "entries",
+							"name": "Armor Plating",
+							"page": 20,
+							"entries": [
+								"Verhoog de Armor Class van de skaab tot 14 en verhoog zijn uitdagingswaarde tot 6 (2.300 XP)."
+							]
+						},
+						{
+							"name": "Six Arms",
+							"type": "entries",
+							"entries": [
+								"Met de multi-aanvalactie van de skaab kan hij drie slamaanvallen uitvoeren. Verhoog zijn uitdagingswaarde tot 6 (2.300 XP)."
+							]
+						},
+						{
+							"name": "Three Heads",
+							"type": "entries",
+							"entries": [
+								"De skaab heeft voordeel op wijsheid ({@skill Perception}) checks en op saving throws tegen {@condition blinded}, {@condition deafened}, {@condition stunned}, en geslagen worden {@condition unconscious}. (Zijn uitdagingswaarde verandert niet)."
+							]
+						},
+						{
+							"name": "Skaab Goliath",
+							"type": "entries",
+							"entries": [
+								"Deze skaab heeft drie hoofden, zes armen en een pantser. Verhoog zijn uitdagingswaarde tot 7 (2.900 XP)."
+							]
+						},
+						{
+							"name": "Winged Skaab",
+							"type": "entries",
+							"entries": [
+								"De skaab heeft een vliegsnelheid van 9 meter."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"_versions": [
+				{
+					"name": "Skaab: Armor Plating",
+					"source": "PSI",
+					"ac": [
+						{
+							"ac": 14,
+							"from": [
+								"armor plating"
+							]
+						}
+					],
+					"cr": "6",
+					"variant": null
+				},
+				{
+					"name": "Skaab: Goliath",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Three Heads",
+								"entries": [
+									"De skaab heeft voordeel op Wisdom ({@skill Perception}) controles en op save throws tegen {@condition blinded}, {@condition deafened}, {@condition stunned}, en geslagen {@condition unconscious} worden."
+								]
+							}
+						},
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"De skaab doet drie slam aanvallen."
+								]
+							}
+						}
+					},
+					"ac": [
+						{
+							"ac": 14,
+							"from": [
+								"armor plating"
+							]
+						}
+					],
+					"cr": "7",
+					"variant": null
+				},
+				{
+					"name": "Skaab: Six Arms",
+					"source": "PSI",
+					"_mod": {
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"De skaab doet drie slam aanvallen."
+								]
+							}
+						}
+					},
+					"cr": "6",
+					"variant": null
+				},
+				{
+					"name": "Skaab: Three Heads",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Three Heads",
+								"entries": [
+									"De skaab heeft voordeel op Wisdom ({@skill Perception}) controles en op save throws tegen {@condition blinded}, {@condition deafened}, {@condition stunned}, en geslagen {@condition unconscious} worden."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Skaab: Winged",
+					"source": "PSI",
+					"speed": {
+						"walk": 30,
+						"fly": 30
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Strefan Maurer",
+			"isNamedCreature": true,
+			"source": "PSI",
+			"page": 33,
+			"_copy": {
+				"name": "Strahd von Zarovich",
+				"source": "CoS",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "Strahd",
+						"with": "Strefan",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "replaceArr",
+						"replace": "Vampire Weaknesses",
+						"items": {
+							"type": "entries",
+							"name": "Vampire Vulnerabilities",
+							"source": "PSI",
+							"page": 16,
+							"entries": [
+								"Wapens gesneden uit levend hout zijn bijzonder effectief tegen vampiers, hoewel elk wapen ze kan verwonden of doden. Een vampier kan geen stromend water oversteken dat de reflectie van de maan laat zien, en water gezegend door Avacyn ({@item Holy Water (flask)|PHB|holy water}) verbrandt vampiervlees als zuur. De weerspiegeling van een vampier in zilver (inclusief een glazen spiegel met zilveren achterkant) verschijnt zoals de vampier eruit zou hebben gezien zonder de vampierziekte - noch zijn ware uiterlijk, noch zijn glamour, maar een normaal mens, met gebreken en al. Om die reden doen vampiers hun uiterste best om spiegels te vermijden en de aanwezigheid van zilver in welke vorm dan ook is verontrustend voor hen."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Vampire Neonate",
+			"source": "PSI",
+			"page": 17,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 82,
+				"formula": "11d8 + 33"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 16,
+			"int": 11,
+			"wis": 10,
+			"cha": 12,
+			"save": {
+				"dex": "+6",
+				"wis": "+3"
+			},
+			"skill": {
+				"perception": "+3",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks not made with living wood weapons",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Common"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Regeneration",
+					"entries": [
+						"De vampier krijgt 10 hit points terug aan het begin van zijn beurt als hij minstens 1 hit point heeft. Als de vampier stralingsschade of schade door wijwater oploopt, werkt deze eigenschap niet aan het begin van de volgende beurt van de vampier."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"De vampier doet twee aanvallen, waarvan er maar één een beetaanval kan zijn."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 6} om te raken, reikwijdte 1,5 m., één wezen. {@h}8 ({@damage 2d4 + 3}) snijdende schade. In plaats van schade toe te brengen, kan de vampier het doelwit grijpen (ontsnappen {@dc 13})."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 6} om te raken, bereik 1,5 m., een gewillig wezen, of een wezen dat {@condition grappled} door de vampier, {@condition incapacitated}, of {@condition restrained}. {@h}6 ({@damage 1d6 + 3}) doordringende schade plus 7 ({@damage 2d6}) necrotische schade. Het maximale aantal hitpoints van het doelwit wordt verminderd met een hoeveelheid die gelijk is aan de opgelopen necrotische schade en de vampier krijgt weer hitpoints gelijk aan die hoeveelheid. De reductie duurt totdat het doelwit klaar is met een lange rustpauze. Het doelwit sterft als dit effect zijn maximale aantal hitpoints tot 0 verlaagt."
+					]
+				},
+				{
+					"name": "Vampiric Glamer",
+					"entries": [
+						"De vampier verduistert zijn vorm met geestbeïnvloedende magie, waardoor anderen hem zien als een mooi mens van dezelfde grootte en vorm. De illusie eindigt als de vampier een bonusactie onderneemt om hem te beëindigen of als de vampier sterft. Een wezen dat de vampier kan zien, kan een actie ondernemen om de vampier visueel te inspecteren, waarbij hij het mentale effect op zichzelf beëindigt en de ware gedaante van de vampier ziet met een succesvolle {@dc 20} Wisdom (Perception) check."
+					]
+				},
+				{
+					"name": "Aura of Silence",
+					"entries": [
+						"De vampier hult zich in een mantel van stilte tot een straal van 0,6 meter. Binnen die straal is het effect hetzelfde als de {@spell silence} spreuk."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Elder Vampires",
+					"entries": [
+						"De basisstatistieken van vampieren staan voor een \"pasgeborene\" - een pas geboren vampier. Oudere vampieren kunnen krachtige magie van verschillende soorten leren, en kunnen een van de volgende eigenschappen en vaardigheden hebben.",
+						{
+							"type": "entries",
+							"name": "Shapechanger",
+							"entries": [
+								"De vampier heeft de Shapechanger eigenschap van de {@creature vampire} in het Monster Manual, evenals de shapechanger tag. Sommige vampieren kunnen de vorm van een vleermuis aannemen, andere de vorm van een nevel, en een paar kunnen beide vormen kiezen."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Charm",
+							"entries": [
+								"De vampier heeft de Charm actie van de {@creature vampire} in het Monster Manual."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Flight",
+							"entries": [
+								"De vampier heeft een vliegsnelheid van 9 meter."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Gorger",
+							"entries": [
+								"De vampier heeft voordeel op mêlee-aanvalsrollen, maar aanvalsrollen tegen hem hebben voordeel."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Spellcasting",
+							"entries": [
+								"De vampier heeft de toverspreukvaardigheden van een tovenaar of geestelijke."
+							]
+						}
+					]
+				}
+			],
+			"traitTags": [
+				"Regeneration"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"HPR",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Elder Vampire: All Abilities",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Shapechanger",
+									"entries": [
+										"If the vampire isn't in sunlight or running water, it can use its action to polymorph into a Tiny bat or a Medium cloud of mist, or back into its true form.",
+										"While in bat form, the vampire can't speak, its walking speed is 5 feet, and it has a flying speed of 30 feet. Its statistics, other than its size and speed, are unchanged. Anything it is wearing transforms with it, but nothing it is carrying does. It reverts to its true form if it dies.",
+										"While in mist form, the vampire can't take any actions, speak, or manipulate objects. It is weightless, has a flying speed of 20 feet, can hover, and can enter a hostile creature's space and stop there. In addition, if air can pass through a space, the mist can do so without squeezing, and it can't pass through water. It has advantage on Strength, Dexterity, and Constitution saving throws, and it is immune to all nonmagical damage, except the damage it takes from sunlight."
+									]
+								},
+								{
+									"name": "Gorger",
+									"entries": [
+										"The vampire has advantage on melee attack rolls, but attack rolls against it have advantage."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Charm",
+								"entries": [
+									"De vampier richt zich op één mensachtige die hij kan zien binnen een straal van 9 meter. Als het doelwit de vampier kan zien, moet het doelwit slagen in een {@dc 17} Wisdom saving throw tegen deze magie of {@condition charmed} door de vampier worden geraakt. Het {@condition charmed} doelwit beschouwt de vampier als een vertrouwde vriend die in acht genomen en beschermd moet worden. Hoewel het doelwit niet onder controle van de vampier staat, neemt het de verzoeken of acties van de vampier zo gunstig mogelijk op en is het een gewillig doelwit voor de bijtaanval van de vampier.",
+									"Elke keer dat de vampier of zijn metgezellen iets schadelijks doen voor het doelwit, kan hij de reddingsworp herhalen en het effect op zichzelf beëindigen als hij slaagt. Anders duurt het effect 24 uur of totdat de vampier vernietigd is, zich op een ander bestaansniveau bevindt dan het doelwit of een bonusactie onderneemt om het effect te beëindigen."
+								]
+							}
+						}
+					},
+					"type": {
+						"type": "undead",
+						"tags": [
+							"shapechanger"
+						]
+					},
+					"speed": {
+						"walk": 30,
+						"fly": 30
+					},
+					"spellcasting": [
+						{
+							"name": "Cleric Spellcasting",
+							"headerEntries": [
+								"{@note De {@creature Priest|MM} is gebruikt als voorbeeld Cleric.}",
+								"De vampier is een tovenaar van het 5e niveau. Zijn spreukvaardigheid is Wisdom (spreuk save {@dc 13}, {@hit 5} om te raken met spreukaanvallen). De vampier heeft de volgende cleric spreuken voorbereid:"
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell light}",
+										"{@spell sacred flame}",
+										"{@spell thaumaturgy}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell cure wounds}",
+										"{@spell guiding bolt}",
+										"{@spell sanctuary}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell lesser restoration}",
+										"{@spell spiritual weapon}"
+									]
+								},
+								"3": {
+									"slots": 2,
+									"spells": [
+										"{@spell dispel magic}",
+										"{@spell spirit guardians}"
+									]
+								}
+							},
+							"ability": "wis"
+						},
+						{
+							"name": "Wizard Spellcasting",
+							"headerEntries": [
+								"{@note De {@creature Mage|MM} is gebruikt als voorbeeld Wizard.}",
+								"De vampier is een 9e niveau tovenaar. Zijn spreukvaardigheid is Intelligentie (spreuk save {@dc 14}, {@hit 6} om te raken met spreukaanvallen). De vampier heeft de volgende tovenaarsspreuken voorbereid:"
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell fire bolt}",
+										"{@spell light}",
+										"{@spell mage hand}",
+										"{@spell prestidigitation}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell detect magic}",
+										"{@spell mage armor}",
+										"{@spell magic missile}",
+										"{@spell shield}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell misty step}",
+										"{@spell suggestion}"
+									]
+								},
+								"3": {
+									"slots": 3,
+									"spells": [
+										"{@spell counterspell}",
+										"{@spell fireball}",
+										"{@spell fly}"
+									]
+								},
+								"4": {
+									"slots": 3,
+									"spells": [
+										"{@spell greater invisibility}",
+										"{@spell ice storm}"
+									]
+								},
+								"5": {
+									"slots": 1,
+									"spells": [
+										"{@spell cone of cold}"
+									]
+								}
+							},
+							"ability": "int"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Charm",
+					"source": "PSI",
+					"_mod": {
+						"action": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Charm",
+								"entries": [
+									"De vampier richt zich op één mensachtige die hij kan zien binnen een straal van 9 meter. Als het doelwit de vampier kan zien, moet het doelwit slagen in een {@dc 17} Wisdom saving throw tegen deze magie of {@condition charmed} door de vampier worden geraakt. Het {@condition charmed} doelwit beschouwt de vampier als een vertrouwde vriend die in acht genomen en beschermd moet worden. Hoewel het doelwit niet onder controle van de vampier staat, neemt het de verzoeken of acties van de vampier zo gunstig mogelijk op en is het een gewillig doelwit voor de bijtaanval van de vampier.",
+									"Elke keer dat de vampier of zijn metgezellen iets schadelijks doen voor het doelwit, kan hij de reddingsworp herhalen en het effect op zichzelf beëindigen als hij slaagt. Anders duurt het effect 24 uur of totdat de vampier vernietigd is, zich op een ander bestaansniveau bevindt dan het doelwit of een bonusactie onderneemt om het effect te beëindigen."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Flight",
+					"source": "PSI",
+					"speed": {
+						"walk": 30,
+						"fly": 30
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Gorger",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Gorger",
+								"entries": [
+									"De vampier heeft voordeel op mêlee-aanvalsrollen, maar aanvalsrollen tegen hem hebben voordeel."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Shapechanger",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Shapechanger",
+								"entries": [
+									"Als de vampier niet in zonlicht of stromend water is, kan hij zijn actie gebruiken om te polymorferen in een Tiny vleermuis of een Medium mistwolk, of terug in zijn ware vorm.",
+									"In vleermuisvorm kan de vampier niet spreken, zijn loopsnelheid is 1,5 meter en hij heeft een vliegsnelheid van 9 meter. Zijn statistieken, behalve zijn grootte en snelheid, zijn onveranderd. Alles wat hij draagt transformeert mee, maar niets wat hij bij zich draagt wel. Hij keert terug naar zijn ware vorm als hij sterft.",
+									"In de nevelvorm kan de vampier geen acties ondernemen, spreken of voorwerpen manipuleren. Hij is gewichtloos, heeft een vliegsnelheid van 6 meter, kan zweven en kan de ruimte van een vijandig wezen binnengaan en daar stoppen. Bovendien, als lucht door een ruimte kan, kan de mist dat zonder te knijpen, en het kan niet door water. Hij heeft een voordeel op de reddingsworpen Kracht, Behendigheid en Grondwet en is immuun voor alle niet-magische schade, behalve de schade die hij oploopt door zonlicht."
+								]
+							}
+						}
+					},
+					"type": {
+						"type": "undead",
+						"tags": [
+							"shapechanger"
+						]
+					},
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Spellcasting—Cleric",
+					"source": "PSI",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"{@note De {@creature Priest|MM} is gebruikt als voorbeeld Cleric.}",
+								"De vampier is een tovenaar van het 5e niveau. Zijn spreukvaardigheid is Wisdom (spreuk save {@dc 13}, {@hit 5} om te raken met spreukaanvallen). De vampier heeft de volgende cleric spreuken voorbereid:"
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell light}",
+										"{@spell sacred flame}",
+										"{@spell thaumaturgy}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell cure wounds}",
+										"{@spell guiding bolt}",
+										"{@spell sanctuary}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell lesser restoration}",
+										"{@spell spiritual weapon}"
+									]
+								},
+								"3": {
+									"slots": 2,
+									"spells": [
+										"{@spell dispel magic}",
+										"{@spell spirit guardians}"
+									]
+								}
+							},
+							"ability": "wis"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Elder Vampire: Spellcasting—Wizard",
+					"source": "PSI",
+					"spellcasting": [
+						{
+							"name": "Spellcasting",
+							"headerEntries": [
+								"{@note De {@creature Mage|MM} is gebruikt als voorbeeld Wizard.}",
+								"De vampier is een 9e niveau tovenaar. Zijn spreukvaardigheid is Intelligentie (spreuk save {@dc 14}, {@hit 6} om te raken met spreukaanvallen). De vampier heeft de volgende tovenaarsspreuken voorbereid:"
+							],
+							"spells": {
+								"0": {
+									"spells": [
+										"{@spell fire bolt}",
+										"{@spell light}",
+										"{@spell mage hand}",
+										"{@spell prestidigitation}"
+									]
+								},
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell detect magic}",
+										"{@spell mage armor}",
+										"{@spell magic missile}",
+										"{@spell shield}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell misty step}",
+										"{@spell suggestion}"
+									]
+								},
+								"3": {
+									"slots": 3,
+									"spells": [
+										"{@spell counterspell}",
+										"{@spell fireball}",
+										"{@spell fly}"
+									]
+								},
+								"4": {
+									"slots": 3,
+									"spells": [
+										"{@spell greater invisibility}",
+										"{@spell ice storm}"
+									]
+								},
+								"5": {
+									"slots": 1,
+									"spells": [
+										"{@spell cone of cold}"
+									]
+								}
+							},
+							"ability": "int"
+						}
+					],
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Werewolf (Krallenhorde)",
+			"source": "PSI",
+			"page": 15,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human",
+					"shapechanger"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"condition": "in humanoid form"
+				},
+				{
+					"ac": 12,
+					"from": [
+						"natural armor"
+					],
+					"condition": "in canid form"
+				}
+			],
+			"hp": {
+				"average": 58,
+				"formula": "9d8 + 18"
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "(40 ft. in canid form)"
+				}
+			},
+			"str": 15,
+			"dex": 13,
+			"con": 14,
+			"int": 10,
+			"wis": 11,
+			"cha": 10,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+3"
+			},
+			"passive": 14,
+			"immune": [
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks not made with silvered weapons",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Common (can't speak in canid form)"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Shapechanger",
+					"entries": [
+						"De weerwolf polymorfiseert in een wolf-humanoïde kanide vorm, of terug in zijn ware menselijke vorm. Deze verandering wordt gedicteerd door de maan, maar kan ook worden veroorzaakt door trauma of sterke emotie. Zijn statistieken, behalve zijn AC, zijn hetzelfde in elke vorm. Alle uitrusting die hij draagt of bij zich draagt, wordt niet getransformeerd. Hij keert terug naar zijn ware gedaante als hij sterft."
+					]
+				},
+				{
+					"name": "Keen Hearing and Smell",
+					"entries": [
+						"De weerwolf heeft voordeel op Wijsheid ({@skill Perception}) controles die op gehoor of reuk vertrouwen."
+					]
+				},
+				{
+					"name": "Howlpack: Vildin",
+					"entries": [
+						"Vildin Rampage (alleen in Canid vorm). Wanneer de weerwolf in zijn beurt een wezen tot 0 hit points reduceert met een melee aanval, kan hij een bonus actie doen om tot de helft van zijn snelheid te bewegen en een bijt aanval te doen."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack (Canid Form Only)",
+					"entries": [
+						"De weerwolf doet twee aanvallen: één met zijn beet en één met zijn klauwen of speer."
+					]
+				},
+				{
+					"name": "Bite (Canid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 4} te raken, reikwijdte 1,5 m., één doelwit. {@h}6 ({@damage 1d8 + 2}) doordringende schade."
+					]
+				},
+				{
+					"name": "Claws (Canid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 4} te raken, reikwijdte 1,5 m., één doelwit. {@h}7 ({@damage 2d4 + 2}) schade door snijden."
+					]
+				},
+				{
+					"name": "Spear (Human Form Only)",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} om te raken, reikwijdte 1,5 m. of bereik 20/18 m., één doelwit. {@h}5 ({@damage 1d6 + 2}) doordringende schade, of 6 ({@damage 1d8 + 2}) doordringende schade indien gebruikt met twee handen om een melee aanval uit te voeren."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Howlpack Traits",
+					"entries": [
+						"De basis weerwolvenstatistieken staan voor een lid van de Krallenhorde, Innistrads grootste weerwolvenroedel. Weerwolven van andere roedels kunnen extra vaardigheden hebben, zoals de volgende.",
+						{
+							"name": "Vildin Rampage (Canid Form Only)",
+							"type": "entries",
+							"entries": [
+								"Wanneer de weerwolf tijdens zijn beurt een wezen tot 0 hit points reduceert met een melee aanval, kan hij een bonusactie uitvoeren om zich tot de helft van zijn snelheid te verplaatsen en een bijtaanval uit te voeren."
+							]
+						},
+						{
+							"name": "Mondronen Wounded Fury",
+							"type": "entries",
+							"entries": [
+								"Als hij 10 of minder hitpoints heeft, heeft de weerwolf voordeel bij aanvalsrollen. Daarnaast brengt hij 7 ({@damage 2d6}) extra schade toe aan elk doelwit dat hij raakt met een melee aanval."
+							]
+						},
+						{
+							"name": "Leeraug Blood Frenzy",
+							"type": "entries",
+							"entries": [
+								"De weerwolf heeft voordeel bij melee aanvalsrollen tegen elk wezen dat niet al zijn hitpoints heeft."
+							]
+						}
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Shapechanger"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Werewolf (Leeraug)",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Leeraug Blood Frenzy",
+								"entries": [
+									"De weerwolf heeft voordeel bij melee aanvalsrollen tegen elk wezen dat niet al zijn hitpoints heeft."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Werewolf (Mondronen)",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Mondronen Wounded Fury",
+								"entries": [
+									"Als hij 10 of minder hitpoints heeft, heeft de weerwolf voordeel bij aanvalsrollen. Daarnaast brengt hij 7 ({@damage 2d6}) extra schade toe aan elk doelwit dat hij raakt met een melee aanval."
+								]
+							}
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Werewolf (Vildin)",
+					"source": "PSI",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Vildin Rampage (Canid Form Only)",
+								"entries": [
+									"Wanneer de weerwolf tijdens zijn beurt een wezen tot 0 hit points reduceert met een melee aanval, kan hij een bonusactie uitvoeren om zich tot de helft van zijn snelheid te verplaatsen en een bijtaanval uit te voeren."
+								]
+							}
+						}
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Zombie Cat",
+			"source": "PSI",
+			"page": 17,
+			"_copy": {
+				"name": "Cat",
+				"source": "MM"
+			},
+			"type": "undead",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Als de schade de kat tot 0 hit points reduceert, moet de kat een Constitution saving throw doen met een DC van 5 + de opgelopen schade, tenzij de schade radiant is of van een critical hit. Als hij slaagt, valt de kat terug naar 1 hit point."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Zombie Rat",
+			"source": "PSI",
+			"page": 17,
+			"_copy": {
+				"name": "Rat",
+				"source": "MM"
+			},
+			"type": "undead",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Als de schade de rat tot 0 hit points reduceert, moet hij een Constitution saving throw doen met een DC van 5 + de opgelopen schade, tenzij de schade radiant is of van een critical hit. Als hij slaagt, valt de rat terug naar 1 hit point."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Zombie Snake",
+			"source": "PSI",
+			"page": 17,
+			"_copy": {
+				"name": "Poisonous Snake",
+				"source": "MM"
+			},
+			"type": "undead",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Als de schade de slang tot 0 hit points reduceert, moet ze een Constitution saving throw doen met een DC van 5 + de opgelopen schade, tenzij de schade radiant is of van een critical hit. Als je slaagt, valt de slang terug naar 1 hit point."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

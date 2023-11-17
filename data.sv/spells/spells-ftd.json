@@ -1,0 +1,443 @@
+{
+	"spell": [
+		{
+			"name": "Ashardalon's Stride",
+			"source": "FTD",
+			"page": 19,
+			"level": 3,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"En drakes böljande lågor sprutar från dina fötter och ger dig explosiv hastighet. Under varaktigheten ökar din hastighet med 6 meter och rörelse framkallar inte möjlighetsattacker.",
+				"När du rör dig inom 1,5 meter från en varelse eller ett föremål som inte bärs eller bärs, tar den {@damage 1d6} eldskada från ditt spår av värme. En varelse eller ett föremål kan bara ta denna skada en gång under en tur."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 4:e nivån eller högre, ökar din hastighet med 1,5 meter för varje besvärjelseplatsnivå över 3:e nivån. Besvärjelsen ger ytterligare {@scaledamage 1d6|3-9|1d6} eldskada för varje besvärjelseplatsnivå över 3:e."
+					]
+				}
+			],
+			"damageInflict": [
+				"fire"
+			],
+			"miscTags": [
+				"OBJ"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Draconic Transformation",
+			"source": "FTD",
+			"page": 19,
+			"level": 7,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "en statyett av en drake, värd minst 500 gp",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Med ett vrål drar du nytta av drakarnas magi för att förvandla dig själv och ta på dig drakoniska drag. Du får följande fördelar tills förtrollningen upphör:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Blindsight",
+							"entries": [
+								"Du har {@sense blindsight} med en räckvidd på 9 meter. Inom den räckvidden kan du se allt som inte är bakom totalt skydd, även om du är {@condition blinded} eller i mörker. Dessutom kan du se en {@condition invisible} varelse, såvida inte varelsen lyckas gömma sig för dig."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Breath Weapon",
+							"entries": [
+								"När du kastar denna besvärjelse, och som en bonushandling på efterföljande varv under hela besvärjelsen, kan du andas ut skimrande energi i en 18-meters kon. Varje varelse i det området måste göra ett räddningsslag i Dexterity, och tar {@damage 6d8} kraftskada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Wings",
+							"entries": [
+								"Okroppsliga vingar skjuter ut från din rygg och ger dig en flyghastighet på 18 meter."
+							]
+						}
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"SGT",
+				"UBA"
+			]
+		},
+		{
+			"name": "Fizban's Platinum Shield",
+			"source": "FTD",
+			"page": 20,
+			"level": 6,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "en platinapläterad drakfjäll, värd minst 500 gp",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du skapar ett fält av silvrigt ljus som omger en valfri varelse inom räckhåll (du kan välja dig själv). Fältet sprider svagt ljus ut till 1,5 meter. Medan varelsen är omgiven av fältet får den följande fördelar:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Cover",
+							"entries": [
+								"Varelsen har halvt skydd."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Damage Resistance",
+							"entries": [
+								"Varelsen är motståndskraftig mot syra, kyla, eld, blixtnedslag och gift."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Evasion",
+							"entries": [
+								"Om varelsen utsätts för en effekt som gör det möjligt för den att göra ett räddningskast i Dexterity för att bara ta halva skadan, tar varelsen istället ingen skada om den lyckas med räddningskastet, och bara halva skadan om den misslyckas."
+							]
+						}
+					]
+				},
+				"Som en bonusåtgärd under efterföljande varv kan du flytta fältet till en annan varelse inom 18 meter från fältet."
+			],
+			"miscTags": [
+				"UBA"
+			]
+		},
+		{
+			"name": "Nathair's Mischief",
+			"source": "FTD",
+			"page": 20,
+			"level": 2,
+			"school": "I",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "en bit av skorpan från en äppelpaj"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du fyller en 6 meter stor kub som du kan se inom räckhåll med feisk och drakonisk magi. Slå ett slag på tabellen för busig våg för att avgöra vilken magisk effekt som uppstår, och slå ett nytt slag i början av varje tur tills besvärjelsen upphör. Du kan flytta kuben upp till 3 meter innan du kastar.",
+				{
+					"type": "table",
+					"caption": "Mischievous Surge",
+					"colLabels": [
+						"d4",
+						"Effect"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1",
+							"Lukten av äppelpaj fyller luften, och varje varelse i kuben måste lyckas med ett visdomsräddningsslag eller bli {@condition charmed} av dig tills början av din nästa tur."
+						],
+						[
+							"2",
+							"Blombuketter dyker upp runt omkring, och varje varelse i kuben måste lyckas med ett räddningsslag i Dexterity eller bli {@condition blinded} till början av din nästa tur medan blommorna sprutar vatten i deras ansikten."
+						],
+						[
+							"3",
+							"Varje varelse i kuben måste lyckas med ett visdomsräddningsslag eller börja fnissa tills början av din nästa tur. En fnittrande varelse är {@condition incapacitated} och använder all sin rörelsekraft för att röra sig i en slumpmässig riktning."
+						],
+						[
+							"4",
+							"Droppar av melass svävar i kuben och gör den {@quickref difficult terrain||3} fram till början av din nästa tur."
+						]
+					]
+				}
+			],
+			"savingThrow": [
+				"dexterity",
+				"wisdom"
+			],
+			"miscTags": [
+				"RO",
+				"SGT"
+			]
+		},
+		{
+			"name": "Raulothim's Psychic Lance",
+			"source": "FTD",
+			"page": 21,
+			"level": 4,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du släpper en skimrande lans av psykisk kraft från pannan mot en varelse som du kan se inom räckhåll. Alternativt kan du uttala en varelses namn. Om det namngivna målet finns inom räckhåll blir det trollformelns mål även om du inte kan se det. Om det namngivna målet inte är inom räckvidd försvinner lansen utan effekt.",
+				"Målet måste göra ett räddningsslag för intelligens. Vid ett misslyckat räddningsslag tar målet {@damage 7d6} psykisk skada och är {@condition incapacitated} tills början av din nästa tur. Vid ett lyckat räddningsslag tar varelsen hälften så mycket skada och är inte {@condition incapacitated}."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 5:e nivån eller högre, ökar skadan med {@scaledamage 7d6|4-9|1d6} för varje platsnivå över 4:e."
+					]
+				}
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrow": [
+				"intelligence"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Rime's Binding Ice",
+			"source": "FTD",
+			"page": 21,
+			"level": 2,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "en injektionsflaska med smältvatten"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"En explosion av kall energi strålar ut från dig i en kon på 9 meter. Varje varelse i området måste göra ett räddningsslag i konstitution. Vid ett misslyckat räddningsslag tar varelsen {@damage 3d8} kall skada och hindras av isformationer i 1 minut, eller tills den eller en annan varelse inom räckhåll för den använder en handling för att bryta loss isen. En varelse som hindras av is får sin hastighet reducerad till 0. Vid ett lyckat räddningsslag tar varelsen hälften så mycket skada och hindras inte av is."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med en besvärjelseplats på 3:e nivån eller högre, ökar den kalla skadan med {@scaledamage 3d8|2-9|1d8} för varje besvärjelseplatsnivå över 2:a."
+					]
+				}
+			],
+			"damageInflict": [
+				"cold"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"areaTags": [
+				"N"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Summon Draconic Spirit",
+			"source": "FTD",
+			"page": 21,
+			"level": 5,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ett föremål med bilden av en drake ingraverad, värt minst 500 gp",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du kallar fram en {@creature draconic spirit|FTD}. Den manifesterar sig i ett ledigt utrymme som du kan se inom räckhåll. Denna kroppsliga form använder statblocket Drakonisk ande. När du kastar denna besvärjelse väljer du en drakfamilj: kromatisk, ädelsten eller metallisk. Varelsen liknar en drake av den valda familjen, vilket bestämmer vissa egenskaper i dess statsblock. Varelsen försvinner när den sjunker till 0 träffpunkter eller när besvärjelsen avslutas.",
+				"Varelsen är en allierad till dig och dina följeslagare. I strid delar varelsen ditt initiativ, men den tar sin tur omedelbart efter din. Den lyder dina verbala kommandon (ingen handling krävs av dig). Om du inte ger några kommandon, utför den {@action Dodge} och använder sin rörelse för att undvika fara."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"När du kastar den här besvärjelsen med en spell slot på 6:e nivån eller högre, använd den högre nivån närhelst besvärjelsens nivå visas i statblocket."
+					]
+				}
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		}
+	]
+}

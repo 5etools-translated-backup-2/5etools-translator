@@ -1,0 +1,921 @@
+{
+	"monster": [
+		{
+			"name": "Coral",
+			"isNamedCreature": true,
+			"source": "MisMV1",
+			"page": 4,
+			"size": [
+				"L"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 135,
+				"formula": "18d10 + 36"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": 60,
+				"swim": 60
+			},
+			"str": 20,
+			"dex": 13,
+			"con": 15,
+			"int": 14,
+			"wis": 18,
+			"cha": 19,
+			"save": {
+				"dex": "+5",
+				"con": "+6",
+				"wis": "+8",
+				"cha": "+8"
+			},
+			"skill": {
+				"arcana": "+6",
+				"insight": "+8",
+				"perception": "+8"
+			},
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 18,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Primordial",
+				"Sylvan"
+			],
+			"cr": "9",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Koral ma przewagę przy rzutach obronnych przeciwko zaklęciom i innym efektom magicznym."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Coral wykonuje dwa ataki Kopytami i używa Uderzenia Ogonem."
+					]
+				},
+				{
+					"name": "Hoof",
+					"entries": [
+						"{@atk mw} {@hit 9} do trafienia, zasięg 1,5 m., jeden cel. {@h}12 ({@damage 2d6 + 5}) obrażeń obuchowych."
+					]
+				},
+				{
+					"name": "Tail Thump",
+					"entries": [
+						"Coral uderza ogonem w dół, uwalniając wybuch magicznej siły w kierunku jednej istoty, którą widzi w promieniu 18 metrów od niej. Cel musi wykonać {@dc 16} rzut obronny na Zręczność. W przypadku nieudanego rzutu obronnego, cel otrzymuje 22 ({@damage 4d10}) obrażeń od siły i zostaje objęty warunkiem {@condition prone}. W przypadku udanego rzutu obronnego cel otrzymuje tylko połowę obrażeń. Jeśli obrażenia te zredukują cel do 0 punktów wytrzymałości, cel umiera, a jego ciało zamienia się w drobny pył."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Bubbles of Whimsy (2/Day)",
+					"entries": [
+						"Coral wytwarza strumień magicznych bąbelków ze swojego rogu. Bańki te unoszą się w kierunku stworzenia, które Coral widzi w promieniu 18 metrów od siebie. Rzuć {@dice d6}, aby określić efekt bąbelków:",
+						{
+							"type": "list",
+							"items": [
+								{
+									"name": "1-2: Bolstering Treat",
+									"type": "item",
+									"entries": [
+										"Bąbelki przekształcają się w {@dice 1d4} ciasteczek, które pojawiają się w przestrzeni celu. Cel zyskuje 11 ({@dice 2d8 + 2}) tymczasowych punktów wytrzymałości, jeśli natychmiast użyje swojej reakcji, aby zjeść jedno z ciasteczek. Resztki ciasteczek są pyszne, ale nie przynoszą żadnych korzyści."
+									]
+								},
+								{
+									"name": "3-4: Sparkle Burst",
+									"type": "item",
+									"entries": [
+										"Bańki zamieniają się w brokat, który wiruje wokół celu, a następnie wybucha na zewnątrz. Każda istota znajdująca się w promieniu 1,5 metra od celu musi wykonać {@dc 16} rzutu obronnego na Konstytucję lub będzie podlegać warunkowi {@condition blinded} do początku następnej tury Corala."
+									]
+								},
+								{
+									"name": "5-6: Stink Bomb Shield",
+									"type": "item",
+									"entries": [
+										"Bąbelki przekształcają się w cuchnącą chmurę gazu, która otacza i osłania cel. Cel ma połowę osłony, dopóki gaz nie zniknie na początku następnej tury Corala."
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Gift of Speech (1/Day)",
+					"entries": [
+						"Coral celuje w jedną bestię, którą widzi w promieniu 3 metrów od siebie. Cel zyskuje zdolność rozumienia i mówienia w języku Common lub Sylvan (do wyboru przez Coral) przez 10 minut."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"P",
+				"S"
+			],
+			"damageTags": [
+				"B",
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded",
+				"prone"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dandylion",
+			"source": "MisMV1",
+			"page": 6,
+			"size": [
+				"L"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 90,
+				"formula": "12d10 + 24"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 22,
+			"dex": 19,
+			"con": 14,
+			"int": 16,
+			"wis": 17,
+			"cha": 18,
+			"save": {
+				"str": "+9",
+				"cha": "+7"
+			},
+			"skill": {
+				"nature": "+9",
+				"perception": "+6",
+				"survival": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 16,
+			"languages": [
+				"Common",
+				"Sylvan"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Dandylion rzuca jedno z poniższych zaklęć, nie wymagające żadnych składników materialnych i używające Charyzmy jako zdolności rzucania czarów (ratunek przed zaklęciem {@dc 15}):"
+					],
+					"will": [
+						"{@spell druidcraft}",
+						"{@spell guidance}",
+						"{@spell purify food and drink}"
+					],
+					"daily": {
+						"1": [
+							"{@spell speak with plants}"
+						],
+						"2e": [
+							"{@spell entangle}",
+							"{@spell goodberry}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Dandylion ma przewagę przy rzutach obronnych przeciwko zaklęciom i innym efektom magicznym."
+					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"Dandylion ma przewagę w rzucie ataku przeciwko stworzeniu, jeśli przynajmniej jeden z sojuszników dandyliona znajduje się w odległości 1,5 metra od tego stworzenia, a sojusznik nie posiada warunku {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Dandylion wykonuje jeden atak ugryzieniem i jeden atak pazurami."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 9} do trafienia, zasięg 1,5 m., jeden cel. {@h}13 ({@damage 2d6 + 6}) obrażeń przebijających."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 9} do trafienia, zasięg 1,5 m., jeden cel. {@h}20 ({@damage 4d6 + 6}) obrażeń kłutych. Jeśli dandylion przemieścił się co najmniej 6 metrów w kierunku celu bezpośrednio przed trafieniem, cel musi wykonać {@dc 17} rzut obronny na Siłę lub spełnić warunek {@condition prone}. Jeśli cel spełnia warunek {@condition prone}, dandylion może wykonać przeciwko niemu jeden atak Ugryzienia jako akcję dodatkową."
+					]
+				},
+				{
+					"name": "Rejuvenating Seedpods (2/Day)",
+					"entries": [
+						"Dandylion wypuszcza z ogona serię rozsadników, które wypełniają kulę o promieniu 3 metrów skupioną wokół niego. Każda wybrana przez dandyliona istota w kuli może natychmiast zakończyć jeden z następujących warunków (wybór istoty): {@condition blinded}, {@condition deafened}, {@condition paralyzed} lub {@condition poisoned}. Dodatkowo, cała gleba w obszarze kuli zostaje wzbogacona, przywracając do pełni zdrowia uschniętą roślinność na tym obszarze i sprawiając, że wszystkie uprawy na tym obszarze dają dwa razy większe plony niż normalnie przez następny rok."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Roar of Pride",
+					"entries": [
+						"Gdy istota w promieniu 18 metrów od dandyliona trafi go rzutem ataku, dandylion może wydać z siebie wściekły ryk. Istota, która wywołała tę reakcję, musi wykonać {@dc 15} rzut obronny na Mądrość lub do końca następnej tury dandyliona obowiązywać będzie warunek {@condition frightened}."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance",
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"conditionInflictSpell": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"strength",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Rain",
+			"isNamedCreature": true,
+			"source": "MisMV1",
+			"page": 8,
+			"size": [
+				"S"
+			],
+			"type": "celestial",
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 60,
+				"formula": "11d6 + 22"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 120
+			},
+			"str": 10,
+			"dex": 11,
+			"con": 14,
+			"int": 14,
+			"wis": 18,
+			"cha": 15,
+			"save": {
+				"dex": "+3",
+				"con": "+5",
+				"wis": "+7"
+			},
+			"skill": {
+				"acrobatics": "+3",
+				"insight": "+7",
+				"stealth": "+3"
+			},
+			"passive": 14,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"fire",
+				"poison",
+				"radiant"
+			],
+			"conditionImmune": [
+				"charmed",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"Celestial",
+				"Common"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Fiery Wings",
+					"entries": [
+						"Skrzydła Rain są wykonane z płomieni i rzucają jasne światło na odległość do 4,5 metra oraz przyćmione światło na dodatkowe 4,5 metra. Na początku każdej tury Rain każda wybrana przez nią istota w promieniu 1,5 metra od niej otrzymuje 3 ({@damage 1d6}) obrażeń od ognia. Istota, która trafi Rain atakiem wręcz, otrzymuje 3 ({@damage 1d6}) obrażeń od ognia."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Deszcz ma przewagę przy rzutach obronnych przeciwko zaklęciom i innym efektom magicznym."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Rain wykonuje dwa ataki Kopytami."
+					]
+				},
+				{
+					"name": "Hoof",
+					"entries": [
+						"{@atk mw} {@hit 3} do trafienia, zasięg 1,5 m., jeden cel. {@h}5 ({@damage 2d4}) obrażeń obuchowych."
+					]
+				},
+				{
+					"name": "Haloed Horn Burst {@recharge 5}",
+					"entries": [
+						"Rain używa swojego rogu z aureolą, aby wywołać jeden z poniższych efektów magicznych:"
+					]
+				},
+				{
+					"name": "Glitterstorm",
+					"entries": [
+						"Deszcz emituje tęczową wiązkę w linii o długości 9 metrów i szerokości 1,5 metra. Każda istota znajdująca się w tym obszarze musi wykonać rzut obronny na {@dc 15} Zręczność, otrzymując 21 ({@damage 6d6}) obrażeń od promieniowania w przypadku nieudanego rzutu obronnego lub o połowę mniej obrażeń w przypadku udanego rzutu obronnego. Jeśli obrażenia zadane przez ten efekt zredukują liczbę punktów życia istoty do 0, umiera ona, a jej ciało zamienia się w błyszczące kwiaty."
+					]
+				},
+				{
+					"name": "Healing Rainbows",
+					"entries": [
+						"Rain uwalnia falę odmładzającego, wielokolorowego światła w stożku o średnicy 9 metrów. Każda wybrana przez Rain istota w tym obszarze odzyskuje 18 ({@dice 4d8}) punktów życia."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Nimble Escape",
+					"entries": [
+						"Rain wykonuje akcję Odłączenia się lub Ukrycia."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CE"
+			],
+			"damageTags": [
+				"B",
+				"F",
+				"R"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Scrapper",
+			"source": "MisMV1",
+			"page": 10,
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 126,
+				"formula": "12d10 + 60"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 20,
+			"dex": 10,
+			"con": 20,
+			"int": 3,
+			"wis": 10,
+			"cha": 1,
+			"skill": {
+				"perception": "+6"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"resist": [
+				"lightning"
+			],
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Electrified Chassis",
+					"entries": [
+						"Istota, która trafi złomiarza atakiem w zwarciu w promieniu 1,5 metra od niego, otrzymuje 19 ({@damage 3d12}) obrażeń od błyskawic."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Złomiarz wykonuje dwa ataki Spike Punch. Jeden z nich może zastąpić atakiem Wire."
+					]
+				},
+				{
+					"name": "Spike Punch",
+					"entries": [
+						"{@atk mw} {@hit 8} do trafienia, zasięg 1,5 m., jeden cel. {@h}14 ({@damage 2d8 + 5}) obrażeń obuchowych plus 5 ({@damage 1d10}) obrażeń kłutych."
+					]
+				},
+				{
+					"name": "Wires",
+					"entries": [
+						"{@atk mw} {@hit 8} do trafienia, zasięg 6 m., jedna duża lub mniejsza istota. {@h}Cel ma {@condition grappled} warunek (ucieczka {@dc 16}) i musi wykonać {@dc 16} rzut obronny na Siłę lub zostać wciągnięty do niezajętej przestrzeni w promieniu 1,5 metra od złomiarza i otrzymać 19 ({@damage 3d12}) obrażeń od błyskawic. Złomiarz może mieć w ten sposób tylko jedną istotę {@condition grappled} na raz."
+					]
+				},
+				{
+					"name": "Eye Beam {@recharge 5}",
+					"entries": [
+						"Złomiarz wystrzeliwuje magiczną wiązkę ze swojego przedłużonego oka w kierunku jednej istoty, którą widzi w promieniu 36 metrów od siebie. Cel musi wykonać {@dc 16} rzut obronny na Zręczność, otrzymując 44 ({@damage 8d10}) obrażeń od siły w przypadku nieudanego rzutu obronnego lub o połowę mniej obrażeń w przypadku udanego rzutu obronnego."
+					]
+				}
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"L",
+				"O",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Seth the Shapeshifting Dragon",
+			"isNamedCreature": true,
+			"source": "MisMV1",
+			"page": 12,
+			"size": [
+				"M"
+			],
+			"type": "dragon",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				17
+			],
+			"hp": {
+				"average": 153,
+				"formula": "18d8 + 72"
+			},
+			"speed": {
+				"walk": 50,
+				"swim": 50
+			},
+			"str": 16,
+			"dex": 25,
+			"con": 19,
+			"int": 13,
+			"wis": 15,
+			"cha": 14,
+			"save": {
+				"str": "+7",
+				"dex": "+11",
+				"con": "+8"
+			},
+			"skill": {
+				"perception": "+6",
+				"stealth": "+11"
+			},
+			"senses": [
+				"blindsight 30 ft.",
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"resist": [
+				"cold",
+				"fire"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"grappled",
+				"poisoned",
+				"restrained"
+			],
+			"languages": [
+				"Aquan",
+				"Common",
+				"Draconic"
+			],
+			"cr": "10",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"Seth może oddychać powietrzem i wodą."
+					]
+				},
+				{
+					"name": "Invisible in Water",
+					"entries": [
+						"Seth ma stan {@condition invisible}, gdy jest całkowicie zanurzony w wodzie."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Seth wykonuje jeden atak ugryzienia i dwa ataki pazurami."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 11} do trafienia, zasięg 3 m., jeden cel. {@h}10 ({@damage 1d6 + 7}) obrażeń przebijających plus 9 ({@damage 2d8}) obrażeń od zimna."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 11} do trafienia, zasięg 1,5 m., jeden cel. {@h}14 ({@damage 2d6 + 7}) obrażeń kłutych."
+					]
+				},
+				{
+					"name": "Riptide Breath {@recharge 5}",
+					"entries": [
+						"Seth wydycha strumień lodowatej wody w stożku o średnicy 9 metrów. Każda istota w tym obszarze musi wykonać {@dc 16} rzut obronny na Konstytucję. W przypadku nieudanego rzutu, istota otrzymuje 36 ({@damage 8d8}) obrażeń od zimna i ma {@condition incapacitated} do końca swojej następnej tury. W przypadku udanego rzutu obronnego, istota otrzymuje tylko połowę obrażeń."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Seth magicznie przekształca się w małego humanoida lub bestię, zachowując swoje statystyki z gry (poza rozmiarem). Ta transformacja kończy się, jeśli Seth otrzyma 0 punktów wytrzymałości lub użyje innej akcji bonusowej, aby ją zakończyć."
+					]
+				},
+				{
+					"name": "Superspeed (2/Day)",
+					"entries": [
+						"Szybkość Seta zostaje podwojona tak długo, jak długo utrzymuje on {@status concentration} (tak jakby {@status concentration||concentrating} na zaklęciu). Podczas gdy jego prędkość jest zwiększona w ten sposób, wszystkie rzuty ataku przeciwko niemu są wykonywane z niekorzyścią, a on sam staje się częściowo bezcielesny, co pozwala mu poruszać się przez stworzenia i obiekty tak, jakby były trudnym terenem. Seth otrzymuje 5 ({@damage 1d10}) obrażeń od siły, jeśli zakończy swoją turę wewnątrz obiektu."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"AQ",
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"C",
+				"O",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sheldon the Blueberry Dragon",
+			"isNamedCreature": true,
+			"source": "MisMV1",
+			"page": 14,
+			"size": [
+				"L"
+			],
+			"type": "dragon",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 142,
+				"formula": "15d10 + 60"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 60
+			},
+			"str": 19,
+			"dex": 13,
+			"con": 18,
+			"int": 17,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"dex": "+4",
+				"con": "+7",
+				"int": "+6"
+			},
+			"skill": {
+				"acrobatics": "+7",
+				"athletics": "+7",
+				"performance": "+6"
+			},
+			"senses": [
+				"blindsight 30 ft.",
+				"darkvision 120 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"force",
+				"psychic"
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"telepathy 120 ft."
+			],
+			"cr": "7",
+			"spellcasting": [
+				{
+					"name": "Spellcasting (Psionics)",
+					"headerEntries": [
+						"Sheldon rzuca jedno z poniższych zaklęć, nie wymagając składników zaklęcia i używając Inteligencji jako zdolności rzucania zaklęć (ratunek przed zaklęciem {@dc 14}):"
+					],
+					"will": [
+						"{@spell light}",
+						"{@spell mage hand} (the hand is invisible)"
+					],
+					"daily": {
+						"1e": [
+							"{@spell dimension door}",
+							"{@spell telekinesis}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Space Dweller",
+					"entries": [
+						"Sheldon może normalnie oddychać w próżni."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Sheldon wykonuje albo dwa ataki Ugryzienia, albo dwa ataki Jagodowego Fruwania, albo po jednym z nich."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} do trafienia, zasięg 1,5 m., jeden cel. {@h}7 ({@damage 1d6 + 4}) obrażeń przebijających plus 4 ({@damage 1d8}) obrażenia psychiczne."
+					]
+				},
+				{
+					"name": "Blueberry Fling",
+					"entries": [
+						"{@atk rw} {@hit 7} do trafienia, zasięg 9 m., jedna istota. {@h}11 ({@damage 2d6 + 4}) obrażeń od jagód."
+					]
+				},
+				{
+					"name": "Jetstream Breath {@recharge 5}",
+					"entries": [
+						"Sheldon wydycha linię magicznego wiatru o długości 18 metrów i szerokości 1,5 metra. Każda istota w tym obszarze musi wykonać {@dc 15} rzut obronny na Siłę. Jeśli rzut się nie powiedzie, istota otrzyma 21 ({@damage 6d6}) obrażeń od siły, zostanie odepchnięta na odległość 4,5 metra od Sheldona i otrzyma {@condition prone}. W przypadku udanego rzutu obronnego, istota otrzymuje tylko połowę obrażeń."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Wind Dash (2/Day)",
+					"entries": [
+						"Sheldon przywołuje potężny podmuch wiatru i wzlatuje z maksymalną prędkością. Ruch ten nie prowokuje ataków przy okazji. Pod koniec tego ruchu każda istota w promieniu 1,5 metra od Sheldona musi wykonać {@dc 15} rzut obronny na Siłę lub spełnić warunek {@condition prone}, gdy wiatr rozwieje się wokół Sheldona."
+					]
+				}
+			],
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"TP"
+			],
+			"damageTags": [
+				"O",
+				"P",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"conditionInflictSpell": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

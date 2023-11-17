@@ -1,0 +1,921 @@
+{
+	"monster": [
+		{
+			"name": "Coral",
+			"isNamedCreature": true,
+			"source": "MisMV1",
+			"page": 4,
+			"size": [
+				"L"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 135,
+				"formula": "18d10 + 36"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": 60,
+				"swim": 60
+			},
+			"str": 20,
+			"dex": 13,
+			"con": 15,
+			"int": 14,
+			"wis": 18,
+			"cha": 19,
+			"save": {
+				"dex": "+5",
+				"con": "+6",
+				"wis": "+8",
+				"cha": "+8"
+			},
+			"skill": {
+				"arcana": "+6",
+				"insight": "+8",
+				"perception": "+8"
+			},
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 18,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Primordial",
+				"Sylvan"
+			],
+			"cr": "9",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Il corallo ha vantaggio nei tiri salvezza contro incantesimi e altri effetti magici."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Coral effettua due attacchi con gli zoccoli e usa il colpo di coda."
+					]
+				},
+				{
+					"name": "Hoof",
+					"entries": [
+						"{@atk mw} {@hit 9} per colpire, portata 1,5 m., un bersaglio. {@h}12 ({@damage 2d6 + 5}) danni da percosse."
+					]
+				},
+				{
+					"name": "Tail Thump",
+					"entries": [
+						"Coral abbatte la sua coda, scatenando un'esplosione di forza magica verso una creatura che riesce a vedere entro 18 metri da lei. Il bersaglio deve effettuare un tiro salvezza di Destrezza {@dc 16}. Se il tiro salvezza fallisce, il bersaglio subisce 22 ({@damage 4d10}) danni da forza e subisce la condizione {@condition prone}. Se il tiro salvezza riesce, il bersaglio subisce solo la metà dei danni. Se questo danno riduce il bersaglio a 0 punti ferita, il bersaglio muore e il suo corpo si riduce in polvere sottile."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Bubbles of Whimsy (2/Day)",
+					"entries": [
+						"Coral produce un flusso di bolle magiche dal suo corno. Queste bolle fluttuano verso una creatura che Coral può vedere entro 18 metri da sé. Tirare un {@dice d6} per determinare l'effetto delle bolle:",
+						{
+							"type": "list",
+							"items": [
+								{
+									"name": "1-2: Bolstering Treat",
+									"type": "item",
+									"entries": [
+										"Le bolle si trasformano in {@dice 1d4} biscotti che appaiono nello spazio del bersaglio. Il bersaglio guadagna 11 ({@dice 2d8 + 2}) punti ferita temporanei se usa immediatamente la sua reazione per mangiare uno dei biscotti. I biscotti avanzati sono deliziosi, ma non conferiscono alcun beneficio."
+									]
+								},
+								{
+									"name": "3-4: Sparkle Burst",
+									"type": "item",
+									"entries": [
+										"Le bolle si trasformano in scintillio che vortica intorno al bersaglio prima di esplodere. Ogni creatura entro 1,5 metri dal bersaglio deve superare un tiro salvezza di Costituzione {@dc 16} o subire la condizione {@condition blinded} fino all'inizio del prossimo turno del Corallo."
+									]
+								},
+								{
+									"name": "5-6: Stink Bomb Shield",
+									"type": "item",
+									"entries": [
+										"Le bolle si trasformano in una nube di gas maleodorante che circonda e protegge il bersaglio. Il bersaglio ha mezza copertura finché il gas non scompare all'inizio del turno successivo di Coral."
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Gift of Speech (1/Day)",
+					"entries": [
+						"Coral prende di mira una Bestia che riesce a vedere nel raggio di 3 metri da sé. Il bersaglio acquisisce la capacità di comprendere e parlare il linguaggio comune o silvestre (a scelta di Coral) per 10 minuti."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"P",
+				"S"
+			],
+			"damageTags": [
+				"B",
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded",
+				"prone"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dandylion",
+			"source": "MisMV1",
+			"page": 6,
+			"size": [
+				"L"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 90,
+				"formula": "12d10 + 24"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 22,
+			"dex": 19,
+			"con": 14,
+			"int": 16,
+			"wis": 17,
+			"cha": 18,
+			"save": {
+				"str": "+9",
+				"cha": "+7"
+			},
+			"skill": {
+				"nature": "+9",
+				"perception": "+6",
+				"survival": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 16,
+			"languages": [
+				"Common",
+				"Sylvan"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Il dandylion lancia uno dei seguenti incantesimi, che non richiedono componenti materiali e utilizzano il Carisma come capacità di incantesimo (tiro salvezza {@dc 15}):"
+					],
+					"will": [
+						"{@spell druidcraft}",
+						"{@spell guidance}",
+						"{@spell purify food and drink}"
+					],
+					"daily": {
+						"1": [
+							"{@spell speak with plants}"
+						],
+						"2e": [
+							"{@spell entangle}",
+							"{@spell goodberry}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Il dandylion ha vantaggio nei tiri salvezza contro incantesimi e altri effetti magici."
+					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"Il dandylion ha vantaggio su un tiro di attacco contro una creatura se almeno uno degli alleati del dandylion si trova entro 1,5 metri dalla creatura e l'alleato non ha la condizione {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Il dandylion effettua un attacco di Morso e uno di Artigli."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 9} per colpire, portata 1,5 m., un bersaglio. {@h}13 ({@damage 2d6 + 6}) danni perforanti."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 9} per colpire, portata 1,5 m., un bersaglio. {@h}20 ({@damage 4d6 + 6}) danni da taglio. Se il dandylion si è mosso per almeno 6 metri in direzione del bersaglio immediatamente prima del colpo, il bersaglio deve riuscire in un tiro salvezza di Forza {@dc 17} o subire la condizione {@condition prone}. Se il bersaglio è affetto dalla condizione {@condition prone}, il dandylion può effettuare un attacco con morso contro di lui come azione bonus."
+					]
+				},
+				{
+					"name": "Rejuvenating Seedpods (2/Day)",
+					"entries": [
+						"Il dandylion rilascia una raffica di semi dalla coda, riempiendo una sfera di 3 metri di raggio centrata su di sé. Ogni creatura a scelta del dandylion nella sfera può immediatamente terminare una delle seguenti condizioni su se stessa (a scelta della creatura): {@condition blinded}, {@condition deafened}, {@condition paralyzed} o {@condition poisoned}. Inoltre, tutto il terreno nell'area della sfera si arricchisce, riportando in piena salute la vegetazione appassita dell'area e facendo sì che tutte le coltivazioni dell'area producano il doppio del normale raccolto per l'anno successivo."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Roar of Pride",
+					"entries": [
+						"Quando una creatura entro 18 metri dal dandylion lo colpisce con un tiro di attacco, il dandylion può scatenare un ruggito furioso. La creatura che ha scatenato questa reazione deve riuscire in un tiro salvezza di Saggezza {@dc 15} o subire la condizione {@condition frightened} fino alla fine del prossimo turno del dandylion."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance",
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"conditionInflictSpell": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"strength",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Rain",
+			"isNamedCreature": true,
+			"source": "MisMV1",
+			"page": 8,
+			"size": [
+				"S"
+			],
+			"type": "celestial",
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 60,
+				"formula": "11d6 + 22"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 120
+			},
+			"str": 10,
+			"dex": 11,
+			"con": 14,
+			"int": 14,
+			"wis": 18,
+			"cha": 15,
+			"save": {
+				"dex": "+3",
+				"con": "+5",
+				"wis": "+7"
+			},
+			"skill": {
+				"acrobatics": "+3",
+				"insight": "+7",
+				"stealth": "+3"
+			},
+			"passive": 14,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"fire",
+				"poison",
+				"radiant"
+			],
+			"conditionImmune": [
+				"charmed",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"Celestial",
+				"Common"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Fiery Wings",
+					"entries": [
+						"Le ali di Rain sono fatte di fiamme e diffondono luce brillante fino a 4,5 metri e luce fioca per altri 4,5 metri. All'inizio di ogni turno di Rain, ogni creatura a scelta di Rain entro 1,5 metri da lei subisce 3 ({@damage 1d6}) danni da fuoco. Una creatura che colpisce Rain con un attacco in mischia subisce 3 ({@damage 1d6}) danni da fuoco."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"La pioggia ha vantaggio nei tiri salvezza contro incantesimi e altri effetti magici."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Rain effettua due attacchi di zoccoli."
+					]
+				},
+				{
+					"name": "Hoof",
+					"entries": [
+						"{@atk mw} {@hit 3} per colpire, portata 1,5 m., un bersaglio. {@h}5 ({@damage 2d4}) danni da percosse."
+					]
+				},
+				{
+					"name": "Haloed Horn Burst {@recharge 5}",
+					"entries": [
+						"Rain usa il suo corno aureolato per produrre uno dei seguenti effetti magici:"
+					]
+				},
+				{
+					"name": "Glitterstorm",
+					"entries": [
+						"La pioggia emette un raggio arcobaleno in una linea di 9 metri e larga 1,5 metri. Ogni creatura in quell'area deve effettuare un tiro salvezza di Destrezza {@dc 15}, subendo 21 ({@damage 6d6}) danni radianti in caso di tiro salvezza fallito, o la metà dei danni in caso di successo; le creature di allineamento malvagio hanno svantaggio su questo tiro salvezza. Se i danni di questo effetto riducono a 0 punti ferita una creatura, questa muore e il suo corpo si trasforma in fiori scintillanti."
+					]
+				},
+				{
+					"name": "Healing Rainbows",
+					"entries": [
+						"La pioggia rilascia un'onda di luce multicolore ringiovanente in un cono di 9 metri. Ogni creatura a scelta di Rain in quell'area recupera 18 ({@dice 4d8}) punti ferita."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Nimble Escape",
+					"entries": [
+						"Rain può compiere l'azione Disimpegnarsi o Nascondersi."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CE"
+			],
+			"damageTags": [
+				"B",
+				"F",
+				"R"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Scrapper",
+			"source": "MisMV1",
+			"page": 10,
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 126,
+				"formula": "12d10 + 60"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 20,
+			"dex": 10,
+			"con": 20,
+			"int": 3,
+			"wis": 10,
+			"cha": 1,
+			"skill": {
+				"perception": "+6"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"resist": [
+				"lightning"
+			],
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Electrified Chassis",
+					"entries": [
+						"Una creatura che colpisce il rottamatore con un attacco in mischia entro 1,5 metri da esso subisce 19 ({@damage 3d12}) danni da fulmine."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Il demolitore esegue due attacchi di Pugno a spillo. Può sostituirne uno con un attacco di Fili."
+					]
+				},
+				{
+					"name": "Spike Punch",
+					"entries": [
+						"{@atk mw} {@hit 8} per colpire, portata 1,5 m., un bersaglio. {@h}14 ({@damage 2d8 + 5}) danni da percosse più 5 ({@damage 1d10}) danni da perforazione."
+					]
+				},
+				{
+					"name": "Wires",
+					"entries": [
+						"{@atk mw} {@hit 8} per colpire, raggiungere 6 m., una creatura Grande o più piccola. {@h}Il bersaglio ha la condizione {@condition grappled} (fuga {@dc 16}) e deve riuscire in un tiro salvezza di Forza {@dc 16} o essere trascinato in uno spazio non occupato entro 1,5 metri dal raschiatore e subire 19 ({@damage 3d12}) danni da fulmine. Il raschiatore può avere una sola creatura {@condition grappled} in questo modo alla volta."
+					]
+				},
+				{
+					"name": "Eye Beam {@recharge 5}",
+					"entries": [
+						"Il rottamatore spara un raggio magico dal suo occhio esteso verso una creatura che riesce a vedere entro 36 metri da sé. Il bersaglio deve effettuare un tiro salvezza di Destrezza {@dc 16}, subendo 44 ({@damage 8d10}) danni alla forza se il tiro salvezza fallisce, o la metà dei danni se riesce."
+					]
+				}
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"L",
+				"O",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Seth the Shapeshifting Dragon",
+			"isNamedCreature": true,
+			"source": "MisMV1",
+			"page": 12,
+			"size": [
+				"M"
+			],
+			"type": "dragon",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				17
+			],
+			"hp": {
+				"average": 153,
+				"formula": "18d8 + 72"
+			},
+			"speed": {
+				"walk": 50,
+				"swim": 50
+			},
+			"str": 16,
+			"dex": 25,
+			"con": 19,
+			"int": 13,
+			"wis": 15,
+			"cha": 14,
+			"save": {
+				"str": "+7",
+				"dex": "+11",
+				"con": "+8"
+			},
+			"skill": {
+				"perception": "+6",
+				"stealth": "+11"
+			},
+			"senses": [
+				"blindsight 30 ft.",
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"resist": [
+				"cold",
+				"fire"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"grappled",
+				"poisoned",
+				"restrained"
+			],
+			"languages": [
+				"Aquan",
+				"Common",
+				"Draconic"
+			],
+			"cr": "10",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"Seth può respirare aria e acqua."
+					]
+				},
+				{
+					"name": "Invisible in Water",
+					"entries": [
+						"Seth presenta la condizione {@condition invisible} quando è completamente immerso nell'acqua."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Seth compie un attacco con il morso e due con l'artiglio."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 11} per colpire, portata 3 m., un bersaglio. {@h}10 ({@damage 1d6 + 7}) danni da perforazione più 9 ({@damage 2d8}) danni da freddo."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 11} per colpire, portata 1,5 m., un bersaglio. {@h}14 ({@damage 2d6 + 7}) danni da taglio."
+					]
+				},
+				{
+					"name": "Riptide Breath {@recharge 5}",
+					"entries": [
+						"Seth esala un torrente di acqua gelida in un cono di 9 metri. Ogni creatura in quell'area deve effettuare un tiro salvezza di Costituzione {@dc 16}. Se il tiro salvezza fallisce, la creatura subisce 36 ({@damage 8d8}) danni da freddo e subisce la condizione {@condition incapacitated} fino alla fine del suo prossimo turno. Se il tiro salvezza riesce, la creatura subisce solo la metà dei danni."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Seth si trasforma magicamente in un Umanoide Piccolo o in una Bestia Minuscola o Piccola, mantenendo le sue statistiche di gioco (a parte la taglia). Questa trasformazione termina se Seth viene ridotto a 0 punti ferita o se utilizza un'altra azione bonus per terminarla."
+					]
+				},
+				{
+					"name": "Superspeed (2/Day)",
+					"entries": [
+						"La velocità di Seth è raddoppiata per tutto il tempo in cui mantiene {@status concentration} (come se {@status concentration||concentrating} su un incantesimo). Mentre la sua velocità è aumentata in questo modo, tutti i tiri di attacco contro di lui sono effettuati con svantaggio e diventa parzialmente incorporeo, permettendogli di muoversi attraverso creature e oggetti come se fossero un terreno difficile. Seth subisce 5 ({@damage 1d10}) danni da forza se termina il suo turno all'interno di un oggetto."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"AQ",
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"C",
+				"O",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sheldon the Blueberry Dragon",
+			"isNamedCreature": true,
+			"source": "MisMV1",
+			"page": 14,
+			"size": [
+				"L"
+			],
+			"type": "dragon",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 142,
+				"formula": "15d10 + 60"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 60
+			},
+			"str": 19,
+			"dex": 13,
+			"con": 18,
+			"int": 17,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"dex": "+4",
+				"con": "+7",
+				"int": "+6"
+			},
+			"skill": {
+				"acrobatics": "+7",
+				"athletics": "+7",
+				"performance": "+6"
+			},
+			"senses": [
+				"blindsight 30 ft.",
+				"darkvision 120 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"force",
+				"psychic"
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"telepathy 120 ft."
+			],
+			"cr": "7",
+			"spellcasting": [
+				{
+					"name": "Spellcasting (Psionics)",
+					"headerEntries": [
+						"Sheldon lancia uno dei seguenti incantesimi, che non richiedono componenti e utilizzano l'Intelligenza come capacità di incantesimo (tiro salvezza {@dc 14}):"
+					],
+					"will": [
+						"{@spell light}",
+						"{@spell mage hand} (the hand is invisible)"
+					],
+					"daily": {
+						"1e": [
+							"{@spell dimension door}",
+							"{@spell telekinesis}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Space Dweller",
+					"entries": [
+						"Sheldon può respirare normalmente nel vuoto."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Sheldon effettua due attacchi di Morso, due attacchi di Lancio del Mirtillo o uno di questi."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} per colpire, portata 1,5 m., un bersaglio. {@h}7 ({@damage 1d6 + 4}) danni perforanti più 4 ({@damage 1d8}) danni psichici."
+					]
+				},
+				{
+					"name": "Blueberry Fling",
+					"entries": [
+						"{@atk rw} {@hit 7} per colpire, gittata 9 m., una creatura. {@h}11 ({@damage 2d6 + 4}) danni da mirtillo."
+					]
+				},
+				{
+					"name": "Jetstream Breath {@recharge 5}",
+					"entries": [
+						"Sheldon esala una linea di vento magico lunga 18 metri e larga 1,5 metri. Ogni creatura in quell'area deve effettuare un tiro salvezza di Forza {@dc 15}. Se il tiro salvezza fallisce, la creatura subisce 21 ({@damage 6d6}) danni alla forza, viene spinta a 4,5 metri di distanza da Sheldon e subisce la condizione {@condition prone}. Se il tiro salvezza riesce, la creatura subisce solo la metà dei danni."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Wind Dash (2/Day)",
+					"entries": [
+						"Sheldon evoca una potente folata di vento e vola alla sua velocità. Questo movimento non provoca attacchi di opportunità. Al termine di questo movimento, ogni creatura entro 1,5 metri da Sheldon deve riuscire in un tiro salvezza di Forza {@dc 15} o subire la condizione {@condition prone}, poiché il vento soffia intorno a Sheldon."
+					]
+				}
+			],
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"TP"
+			],
+			"damageTags": [
+				"O",
+				"P",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"conditionInflictSpell": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

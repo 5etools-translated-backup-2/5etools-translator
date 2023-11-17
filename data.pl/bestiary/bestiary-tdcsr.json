@@ -1,0 +1,7465 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		}
+	},
+	"monster": [
+		{
+			"name": "Adranach",
+			"group": [
+				"Adranachs"
+			],
+			"source": "TDCSR",
+			"page": 224,
+			"size": [
+				"H"
+			],
+			"type": "construct",
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 170,
+				"formula": "20d12 + 40"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 60
+			},
+			"str": 23,
+			"dex": 16,
+			"con": 14,
+			"int": 8,
+			"wis": 14,
+			"cha": 11,
+			"save": {
+				"str": "+11",
+				"dex": "+8"
+			},
+			"skill": {
+				"athletics": "+11",
+				"perception": "+7"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 17,
+			"resist": [
+				{
+					"special": "damage from spells"
+				}
+			],
+			"immune": [
+				"poison",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from non-magical attacks"
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages spoken by its creator but can't speak"
+			],
+			"cr": "12",
+			"pbNote": "+5",
+			"trait": [
+				{
+					"name": "Arcane Leak",
+					"entries": [
+						"Kiedy adranach zostaje zredukowany do połowy swoich maksymalnych punktów wytrzymałości (85 punktów wytrzymałości), jego mithralowa maska pęka, a jego tajemna forma zaczyna się chwiać, tworząc wokół niego pole niestabilnej magii. Każda istota, która rozpocznie swoją turę w promieniu 3 metrów od adranacha lub wejdzie na ten obszar po raz pierwszy w swojej turze, otrzymuje 10 ({@damage 3d6}) obrażeń od promieniowania. Dodatkowo, jeśli istota rzuci zaklęcie na tym obszarze, musi wykonać {@dc 14} test umiejętności, używając swojej zdolności rzucania czarów. W przypadku niepowodzenia zaklęcie powraca, pochłaniając slot na zaklęcie i zadając rzucającemu 3 ({@damage 1d6}) obrażenia od siły za każdy poziom pochłoniętego slotu na zaklęcie."
+					]
+				},
+				{
+					"name": "Immutable Form",
+					"entries": [
+						"Adranach jest odporny na wszelkie zaklęcia lub efekty, które mogłyby zmienić jego formę."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Adranach ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} na {@quickref saving throws|PHB|2|1} przeciwko zaklęciom i innym efektom magicznym."
+					]
+				},
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"Ataki bronią adranacha są magiczne."
+					]
+				},
+				{
+					"name": "Powerful Build",
+					"entries": [
+						"Adranach liczy się jako większy o jeden rozmiar przy określaniu jego udźwigu i ciężaru, który może pchać, ciągnąć lub podnosić."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Adranach wykonuje dwa ataki pazurami."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 11} do trafienia, jeden cel, zasięg 1,5 m. {@h}32 ({@damage 4d12 + 6}) obrażeń kłutych."
+					]
+				},
+				{
+					"name": "Force Bolts {@recharge 5}",
+					"entries": [
+						"Adranach celuje w maksymalnie cztery istoty znajdujące się w promieniu 18 metrów od niego. Każdy cel musi odnieść sukces w teście {@dc 18} Zręczności {@quickref saving throws|PHB|2|1|rzut obronny} lub otrzymać 28 ({@damage 8d6}) obrażeń od siły."
+					]
+				}
+			],
+			"variant": [
+				{
+					"name": "Adranach Customization",
+					"type": "variant",
+					"source": "TDCSR",
+					"page": 224,
+					"_version": {
+						"name": "Adranach (Customised)",
+						"addHeadersAs": "action"
+					},
+					"entries": [
+						"Adranachy są konstruktami spersonalizowanymi dla ich twórców. Jedną z cech, które sprawiają, że kandydat na zaklinacza jest atrakcyjny dla {@book League of Miracles|TDCSR|2|League of Miracles}, jest zainteresowanie wynalazkami, a zaklinacze są zachęcani do dostosowywania każdego stworzonego przez siebie adranacha. Poniżej znajduje się kilka opcjonalnych funkcji, w które zaklinacze wyposażyli swoje dzieła. Większość adranachów posiada jedną dodatkową cechę, a większość mistrzowskich adranachów posiada trzy.",
+						{
+							"type": "entries",
+							"name": "Advanced Tracking ({@i Recharges after a {@quickref resting|PHB|2|0|Long Rest}})",
+							"page": 224,
+							"entries": [
+								"Kiedy istota poniesie porażkę {@quickref saving throws|PHB|2|1|rzut obronny} przeciwko Piorunom Mocy adranacha, adranach może oznaczyć tę istotę na następne 24 godziny. Adranach zna kierunek, w którym znajduje się dana istota, o ile znajdują się oni na tej samej płaszczyźnie. Jeśli istota się porusza, adranach zna kierunek tego ruchu."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Arcane Bond",
+							"page": 224,
+							"entries": [
+								"Twórca adranacha może komunikować się z nim telepatycznie, gdy obaj znajdują się w odległości 1,5 kilometra od siebie. W ramach akcji twórca może widzieć oczami adranacha i słyszeć to, co on słyszy, aż do rozpoczęcia następnej tury twórcy, zyskując korzyści z wszelkich specjalnych zmysłów posiadanych przez adranacha. W tym czasie stwórca posiada {@condition deafened} i {@condition blinded} własnych zmysłów."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Slipstream",
+							"page": 224,
+							"entries": [
+								"Adranach może rzucać {@spell invisibility} na siebie do woli. Kiedy jest w stanie {@condition invisible}, jego prędkość jest podwojona."
+							]
+						}
+					]
+				}
+			],
+			"traitTags": [
+				"Immutable Form",
+				"Magic Resistance",
+				"Magic Weapons"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"O",
+				"R",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ashari Firetamer",
+			"group": [
+				"Ashari"
+			],
+			"source": "TDCSR",
+			"page": 226,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any"
+				]
+			},
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item red dragon scale mail}"
+					]
+				}
+			],
+			"hp": {
+				"average": 92,
+				"formula": "16d8 + 20"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 15,
+			"con": 14,
+			"int": 12,
+			"wis": 18,
+			"cha": 11,
+			"skill": {
+				"arcana": "+4",
+				"nature": "+7"
+			},
+			"passive": 14,
+			"resist": [
+				"fire"
+			],
+			"languages": [
+				"Common",
+				"Druidic",
+				"Ignan"
+			],
+			"cr": "7",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Firetamer jest zaklinaczem na 9 poziomie. Jego zdolność rzucania czarów to Mądrość (ratunek przed zaklęciami {@dc 15}, {@hit 7} do trafienia przy atakach zaklęciami). Ma przygotowane następujące zaklęcia druidów:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft}",
+								"{@spell mending}",
+								"{@spell produce flame} ({@dice 2d8})"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell cure wounds}",
+								"{@spell faerie fire}",
+								"{@spell jump}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell flame blade}",
+								"{@spell heat metal}",
+								"{@spell lesser restoration}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell daylight}",
+								"{@spell dispel magic}",
+								"{@spell protection from energy}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell freedom of movement}",
+								"{@spell wall of fire}"
+							]
+						},
+						"5": {
+							"slots": 1,
+							"spells": [
+								"{@spell conjure elemental}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"action": [
+				{
+					"name": "Scimitar",
+					"entries": [
+						"{@atk mw} {@hit 5} do trafienia, zasięg 1,5 m., jeden cel. {@h}5 ({@damage 1d6 + 2}) obrażeń kłutych plus 14 ({@damage 4d6}) obrażeń od ognia."
+					]
+				},
+				{
+					"name": "Flamecharm (Recharges after a {@quickref resting|PHB|2|0|Short or Long Rest})",
+					"entries": [
+						"Poskramiacz ognia może rzucić zaklęcie {@spell dominate monster} (zachowaj {@dc 15}) na {@creature fire elemental} lub inną istotę żywiołu ognia. Jeśli stworzenie ma 150 lub więcej punktów wytrzymałości, ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} na {@quickref saving throws|PHB|2|1|rzut obronny}."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Flameform (Recharges after a {@quickref resting|PHB|2|0|Short or Long Rest})",
+					"entries": [
+						"Poskramiacz ognia może przekształcić się w {@creature fire elemental}. Jego statystyki w grze zostają zastąpione statystykami żywiołaka, ale pogromca ognia zachowuje swoje dostosowanie, osobowość oraz wyniki Inteligencji, Mądrości i Charyzmy, a także wszystkie swoje umiejętności i {@quickref saving throws|PHB|2|1|rzut obronny} biegłości. Będąc w tej formie, pogromca ognia nie może rzucać zaklęć. Gdy liczba punktów życia Firetamera spadnie do 0, spadnie o {@condition unconscious} lub zginie on w tej formie, powraca on do swojej humanoidalnej formy. Może pozostać w ognistej formie przez maksymalnie 5 godzin lub do momentu powrotu do humanoidalnej formy jako dodatkowa akcja."
+					]
+				},
+				{
+					"name": "Druidic Recovery",
+					"entries": [
+						"Jeśli poskramiacz ognia jest w {@creature fire elemental} formie, używając Płomiennej Formy, może wydać slot na zaklęcie, aby odzyskać {@dice 1d8} punktów wytrzymałości na poziom wydanego slotu na zaklęcie."
+					]
+				}
+			],
+			"attachedItems": [
+				"scimitar|phb"
+			],
+			"languageTags": [
+				"C",
+				"DU",
+				"IG"
+			],
+			"damageTags": [
+				"F",
+				"S"
+			],
+			"damageTagsSpell": [
+				"F"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ashari Skydancer",
+			"group": [
+				"Ashari"
+			],
+			"source": "TDCSR",
+			"page": 227,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any"
+				]
+			},
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 63,
+				"formula": "14d8"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 60,
+					"condition": "(with {@item skysail|TDCSR})"
+				}
+			},
+			"str": 10,
+			"dex": 18,
+			"con": 10,
+			"int": 12,
+			"wis": 16,
+			"cha": 11,
+			"save": {
+				"dex": "+7"
+			},
+			"skill": {
+				"acrobatics": "+7",
+				"perception": "+6"
+			},
+			"passive": 16,
+			"languages": [
+				"Auran",
+				"Common",
+				"Druidic"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Tancerz przestworzy jest zaklinaczem 3. poziomu. Jego zdolność rzucania czarów to Mądrość ({@dc 14} ochrony przed zaklęciami, {@hit 6} do trafienia przy atakach zaklęciami). Ma przygotowane następujące zaklęcia druidyczne:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell guidance}",
+								"{@spell shillelagh}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell entangle}",
+								"{@spell fog cloud}",
+								"{@spell jump}"
+							]
+						},
+						"2": {
+							"slots": 2,
+							"spells": [
+								"{@spell gust of wind}",
+								"{@spell pass without trace}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Evasion",
+					"entries": [
+						"Jeśli podniebny tancerz zostanie poddany efektowi, który pozwala mu wykonać Zręczność {@quickref saving throws|PHB|2|1|rzut obronny}, aby otrzymać tylko połowę obrażeń, nie otrzyma on żadnych obrażeń, jeśli uda mu się wykonać {@quickref saving throws|PHB|2|1|rzut obronny}, i tylko połowę obrażeń, jeśli mu się to nie uda."
+					]
+				},
+				{
+					"name": "Flyby",
+					"entries": [
+						"Skydancer nie prowokuje {@action opportunity attack|PHB}, gdy wylatuje poza zasięg wroga."
+					]
+				},
+				{
+					"name": "Skysail",
+					"entries": [
+						"Podniebny tancerz lata ze specjalnym magicznym przedmiotem Ashari zwanym {@item skysail|TDCSR}. Gdy {@item skysail|TDCSR|skysail's} skrzydła są rozłożone, tancerz może szybować w powietrzu z prędkością 18 metrów, ale pod koniec swojej tury musi obniżyć się o co najmniej 3 metry i nie może zwiększyć wysokości."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Tancerz wykonuje dwa {@item skysail|TDCSR} ataki laską."
+					]
+				},
+				{
+					"name": "Skysail Staff",
+					"entries": [
+						"{@atk mw} {@hit 7} do trafienia, zasięg 1,5 m., jeden cel. {@h}7 ({@damage 1d6 + 4}) obrażeń obuchowych. Jeśli tancerz wykona ten atak w locie, cel musi wykonać rzut na {@dc 14} Zręczność {@quickref saving throws|PHB|2|1|rzut obronny}, otrzymując 21 ({@damage 6d6}) obrażeń od błyskawic w przypadku nieudanego rzutu obronnego lub połowę tych obrażeń w przypadku udanego rzutu obronnego."
+					]
+				},
+				{
+					"name": "Fly (1/Day)",
+					"entries": [
+						"Skydancer wykorzystuje {@item skysail|TDCSR} do rzucenia {@spell fly} na siebie przez maksymalnie 1 minutę (nie wymaga {@condition concentration})."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Slow Fall",
+					"entries": [
+						"Kiedy skydancer otrzymuje {@quickref falling|XGE|2|0|spadające uszkodzenia}, może zmniejszyć obrażenia o połowę."
+					]
+				}
+			],
+			"traitTags": [
+				"Flyby"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AU",
+				"C",
+				"DU"
+			],
+			"damageTags": [
+				"B",
+				"L"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"restrained"
+			],
+			"savingThrowForcedSpell": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ashari Stoneguard",
+			"group": [
+				"Ashari"
+			],
+			"source": "TDCSR",
+			"page": 229,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any"
+				]
+			},
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"granite half plate"
+					]
+				}
+			],
+			"hp": {
+				"average": 152,
+				"formula": "16d8 + 80"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 10,
+			"con": 20,
+			"int": 10,
+			"wis": 14,
+			"cha": 9,
+			"save": {
+				"str": "+7",
+				"con": "+8",
+				"wis": "+5"
+			},
+			"skill": {
+				"athletics": "+7",
+				"intimidation": "+2"
+			},
+			"senses": [
+				"tremorsense 30 ft."
+			],
+			"passive": 12,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"cond": true,
+					"note": "from non-magical attacks, when using skin-to-stone"
+				}
+			],
+			"conditionImmune": [
+				"petrified"
+			],
+			"languages": [
+				"Common",
+				"Druidic",
+				"Terran"
+			],
+			"cr": "7",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Stoneguard jest zaklinaczem 3 poziomu. Jego zdolność rzucania czarów to Mądrość (ratunek przed zaklęciami {@dc 13}, {@hit 5} do trafienia przy atakach zaklęciami). Ma przygotowane następujące zaklęcia druidów:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft}",
+								"{@spell resistance}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell goodberry}",
+								"{@spell speak with animals}",
+								"{@spell thunderwave}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell hold person}",
+								"{@spell spike growth}"
+							],
+							"slots": 2
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Kamieniarz wykonuje trzy ataki granitowym maulem."
+					]
+				},
+				{
+					"name": "Granite Maul",
+					"entries": [
+						"{@atk mw} {@hit 7} do trafienia, zasięg 1,5 m., jeden cel. {@h}11 ({@damage 2d6 + 4}) obrażeń obuchowych. Jeśli atak trafi, Kamieniarz może natychmiast rzucić {@spell thunderwave} jako akcję dodatkową. Rzucenie to wykorzystuje slot na zaklęcie, ale nie wymaga żadnych składników."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Sentinel",
+					"entries": [
+						"Gdy istota znajdująca się w odległości 1,5 metra od Kamieniarza atakuje cel inny niż Kamieniarz, Kamieniarz może wykonać jeden atak przeciwko tej istocie."
+					]
+				}
+			],
+			"senseTags": [
+				"T"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DU",
+				"T"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"P",
+				"T"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"paralyzed"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ashari Waverider",
+			"group": [
+				"Ashari"
+			],
+			"source": "TDCSR",
+			"page": 230,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any"
+				]
+			},
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item hide armor of cold resistance}"
+					]
+				}
+			],
+			"hp": {
+				"average": 77,
+				"formula": "14d8 + 14"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 14,
+			"con": 12,
+			"int": 10,
+			"wis": 16,
+			"cha": 13,
+			"save": {
+				"con": "+4",
+				"wis": "+6"
+			},
+			"skill": {
+				"athletics": "+8",
+				"nature": "+3"
+			},
+			"passive": 13,
+			"resist": [
+				"cold"
+			],
+			"languages": [
+				"Aquan",
+				"Common",
+				"Druidic"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Waverider jest zaklinaczem na 7 poziomie. Jego zdolność rzucania czarów to Mądrość (ratunek przed zaklęciami {@dc 14}, {@hit 6} do trafienia przy atakach zaklęciami). Ma przygotowane następujące zaklęcia druida:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft}",
+								"{@spell poison spray} ({@dice 2d12})",
+								"{@spell resistance}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell create or destroy water}",
+								"{@spell cure wounds}",
+								"{@spell healing word}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell animal messenger}",
+								"{@spell lesser restoration}",
+								"{@spell moonbeam}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell conjure animals} (aquatic beasts only)",
+								"{@spell water breathing}",
+								"{@spell water walk}"
+							]
+						},
+						"4": {
+							"slots": 1,
+							"spells": [
+								"{@spell control water}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Healing Tides",
+					"entries": [
+						"Za każdym razem, gdy waverider rzuca zaklęcie 1. poziomu lub wyższego, które wpływa na istotę niebędącą wrogiem, istota ta odzyskuje 3 punkty wytrzymałości (oprócz leczenia, które może zapewnić zaklęcie)."
+					]
+				},
+				{
+					"name": "Marine Empathy",
+					"entries": [
+						"Waverider potrafi rozmawiać i rozumieć rośliny i zwierzęta wodne."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Harpoon",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} do trafienia, zasięg 1,5 m., zasięg 20/18 m., jeden cel. {@h}7 ({@damage 1d10 + 2}) obrażeń przeszywających. Jeśli cel jest dużym lub mniejszym stworzeniem, musi odnieść sukces w konkursie Siły przeciwko falowcowi lub zostać przyciągnięty do 6 metrów w kierunku falowca. Ataki tą bronią wykonane podczas {@quickref Underwater Combat|PHB|3|0|pod wodą} nie mają {@quickref Advantage and Disadvantage|PHB|2|0|wada}."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Fishform (Recharges after a {@quickref resting|PHB|2|0|Short or Long Rest})",
+					"entries": [
+						"Falowiec może przekształcić się w {@creature hunter shark} lub {@creature giant octopus}. Jego statystyki w grze zostają zastąpione statystykami wybranej istoty, ale waverider zachowuje swoje dostosowanie, osobowość oraz wyniki Inteligencji, Mądrości i Charyzmy. Zachowuje również swoje umiejętności, a także zyskuje umiejętności istoty, w którą się przekształca. Kiedy waverider zostanie zredukowany do 0 punktów wytrzymałości, upadnie {@condition unconscious} lub zginie w tej formie, powraca do swojej humanoidalnej postaci. Może pozostać w rybiej formie przez maksymalnie 3 godziny lub do momentu powrotu do humanoidalnej formy jako dodatkowa akcja."
+					]
+				}
+			],
+			"languageTags": [
+				"AQ",
+				"C",
+				"DU"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"B",
+				"I",
+				"R"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Black King",
+			"isNpc": true,
+			"source": "TDCSR",
+			"page": 92,
+			"_copy": {
+				"name": "Stone Golem",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "The golem",
+						"with": "The Black King",
+						"flags": "i"
+					}
+				}
+			},
+			"speed": {
+				"walk": 60
+			},
+			"int": 18,
+			"cha": 18,
+			"languages": [
+				"Common"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Blighted Sapling",
+			"source": "TDCSR",
+			"page": 172,
+			"summonedByClass": "Druid|PHB",
+			"size": [
+				"M"
+			],
+			"type": "plant",
+			"ac": [
+				{
+					"special": "10 + PB (natural armor)"
+				}
+			],
+			"hp": {
+				"special": "twice your druid level"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 13,
+			"con": 12,
+			"int": 4,
+			"wis": 8,
+			"cha": 3,
+			"senses": [
+				"blindsight 60 ft. (blind beyond this radius)"
+			],
+			"passive": 9,
+			"resist": [
+				"necrotic",
+				"poison"
+			],
+			"vulnerable": [
+				"fire"
+			],
+			"conditionImmune": [
+				"blinded",
+				"deafened",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages you speak"
+			],
+			"pbNote": "equals your bonus",
+			"trait": [
+				{
+					"name": "Blighted Resilience (10th level or higher)",
+					"entries": [
+						"Istota jest odporna na obrażenia nekrotyczne i truciznę oraz na {@condition poisoned}."
+					]
+				},
+				{
+					"name": "Toxic Demise (10th level or higher)",
+					"entries": [
+						"Gdy liczba punktów życia istoty spadnie do 0, eksploduje ona w wybuchu toksycznej ściółki lub cuchnących wnętrzności. Każda istota znajdująca się w promieniu 1,5 metra od eksplodującej istoty musi odnieść sukces w rzucie na Konstytucję {@quickref saving throws|PHB|2|1|rzut obronny} przeciwko współczynnikowi DC ochrony przed zaklęciem lub otrzymać obrażenia nekrotyczne oparte na współczynniku wyzwania istoty (patrz tabela poniżej). W ramach akcji możesz również spowodować eksplozję przywołanej istoty, natychmiast ją zabijając.",
+						{
+							"type": "table",
+							"caption": "Toxic Demise Damage",
+							"colLabels": [
+								"Creature CR",
+								"Damage"
+							],
+							"colStyles": [
+								"col-4 text-center",
+								"col-8"
+							],
+							"rows": [
+								[
+									"1/4 lub mniej",
+									"{@damage 1d4} obrażenia nekrotyczne"
+								],
+								[
+									"1/2",
+									"{@damage 1d6} obrażenia nekrotyczne"
+								],
+								[
+									"1 lub wyższy",
+									"{@damage (#$prompt_number:min=1,title=Enter the creature's CR!,default=1$#)d8|Liczba obrażeń nekrotycznych d8 równa współczynnikowi wyzwania danej istoty.}"
+								],
+								[
+									"Brak oceny wyzwania",
+									"{@damage (PB)d6|Liczba obrażeń nekrotycznych d6 równa premii do biegłości.}"
+								]
+							]
+						}
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Po osiągnięciu 14. poziomu w tej klasie, Zaraza wykonuje dwa ataki pazurami."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hitYourSpellAttack} do trafienia, zasięg 1,5 m., jeden cel. {@h} {@damage 2d4 + PB} obrażeń przebijających."
+					]
+				}
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Centaur Skeleton",
+			"shortName": "centaur",
+			"group": [
+				"Skeletons"
+			],
+			"source": "TDCSR",
+			"page": 256,
+			"size": [
+				"L"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 45,
+				"formula": "6d10 + 12"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 17,
+			"dex": 14,
+			"con": 14,
+			"int": 6,
+			"wis": 9,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"immune": [
+				"poison"
+			],
+			"vulnerable": [
+				"bludgeoning"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"understands Common but can't speak"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Charge",
+					"entries": [
+						"Jeśli centaur przesunie się o co najmniej 9 metrów prosto w kierunku celu, a następnie trafi go atakiem piką w tej samej turze, cel otrzyma dodatkowe 10 ({@damage 3d6}) obrażeń przebijających."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Szkielet centaura wykonuje dwa ataki: jeden szczupakiem i jeden kopytami lub dwa długim łukiem."
+					]
+				},
+				{
+					"name": "Pike",
+					"entries": [
+						"{@atk mw} {@hit 5} do trafienia, zasięg 3 m., jeden cel. {@h}8 ({@damage 1d10 + 3}) obrażeń przebijających."
+					]
+				},
+				{
+					"name": "Hooves",
+					"entries": [
+						"{@atk mw} {@hit 5} do trafienia, zasięg 1,5 m., jeden cel. {@h}10 ({@damage 2d6 + 3}) obrażeń obuchowych."
+					]
+				},
+				{
+					"name": "Longbow",
+					"entries": [
+						"{@atk rw} {@hit 4} do trafienia, zasięg 150/18 m., jeden cel. {@h}6 ({@damage 1d8 + 2}) obrażeń przebijających."
+					]
+				}
+			],
+			"variant": [
+				{
+					"name": "Centaur Skeleton Customization",
+					"type": "variant",
+					"source": "TDCSR",
+					"page": 256,
+					"_version": {
+						"name": "Centaur Skeleton (Spirit Away)",
+						"addHeadersAs": "action"
+					},
+					"entries": [
+						"Niektóre szkielety centaurów posiadają następującą dodatkową cechę według uznania GM.",
+						{
+							"type": "entries",
+							"name": "Spirit Away",
+							"page": 256,
+							"entries": [
+								"Szkielet centaura i maksymalnie trzy istoty w promieniu 1,5 metra od niego magicznie przechodzą do Płaszczyzny Eterycznej z Płaszczyzny Materialnej lub odwrotnie. Niechętna istota, której powiedzie się test {@dc 13} Charyzmy {@quickref saving throws|PHB|2|1|rzut obronny}, może oprzeć się temu efektowi."
+							]
+						}
+					]
+				}
+			],
+			"environment": [
+				"forest"
+			],
+			"attachedItems": [
+				"longbow|phb",
+				"pike|phb"
+			],
+			"traitTags": [
+				"Charge"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Champion of Ravens",
+			"shortName": "The Champion",
+			"alias": [
+				"Vax'ildan"
+			],
+			"group": [
+				"Vox Machina"
+			],
+			"source": "TDCSR",
+			"page": 275,
+			"size": [
+				"M"
+			],
+			"type": "celestial",
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"{@item deathwalker's ward (Exalted)|TDCSR|deathwalker's ward}"
+					]
+				}
+			],
+			"hp": {
+				"average": 150,
+				"formula": "20d10 + 40"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 60
+			},
+			"str": 14,
+			"dex": 20,
+			"con": 14,
+			"int": 16,
+			"wis": 14,
+			"cha": 17,
+			"save": {
+				"str": "+5",
+				"dex": "+15",
+				"con": "+5",
+				"int": "+13",
+				"wis": "+5",
+				"cha": "+6"
+			},
+			"skill": {
+				"acrobatics": "+19",
+				"intimidation": "+10",
+				"investigation": "+10",
+				"perception": "+16",
+				"persuasion": "+10",
+				"sleight of hand": "+12",
+				"stealth": "+19"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 26,
+			"resist": [
+				"radiant",
+				"necrotic",
+				"poison",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"unconscious"
+			],
+			"languages": [
+				"Abyssal",
+				"Celestial",
+				"Common",
+				"Druidic",
+				"Elvish",
+				"Thieves' cant"
+			],
+			"cr": "21",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"Wrodzoną zdolnością czarnoksięską Czempiona jest Charyzma ({@hit 10} do trafienia przy atakach zaklęciami, save {@dc 18}). Potrafi wrodzenie rzucać następujące zaklęcia, niewymagające składników materialnych:"
+					],
+					"will": [
+						"{@spell bane}",
+						"{@spell bless}",
+						"{@spell druidcraft}"
+					],
+					"daily": {
+						"1": [
+							"{@spell greater invisibility}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Assassinate",
+					"entries": [
+						"Podczas swojej pierwszej tury bohater ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} do rzutów ataku przeciwko każdej istocie, która nie wykonała jeszcze tury. Każde trafienie bohatera w zaskoczoną istotę jest trafieniem krytycznym."
+					]
+				},
+				{
+					"name": "Aura of Protection",
+					"entries": [
+						"Gdy bohater jest przytomny, on i przyjazne istoty w promieniu 3 metrów od niego otrzymują premię +3 do {@quickref saving throws|PHB|2|1} (uwzględnione powyżej)."
+					]
+				},
+				{
+					"name": "Eternal Champion",
+					"entries": [
+						"Gdy liczba punktów życia bohatera spadnie do 0 lub zginie, jego ciało zostanie zniszczone, ale jego duch powróci na {@deity The Matron of Ravens|Exandria|TDCSR|Raven Queen's} stronę i zyska nowe ciało po {@dice 1d4} dniach."
+					]
+				},
+				{
+					"name": "Evasion",
+					"entries": [
+						"Jeśli Czempion zostanie poddany efektowi, który pozwala mu wykonać Zręczność {@quickref saving throws|PHB|2|1|rzut obronny}, aby otrzymać tylko połowę obrażeń, zamiast tego nie otrzyma żadnych obrażeń, jeśli uda mu się wykonać {@quickref saving throws|PHB|2|1|rzut obronny}, i tylko połowę obrażeń, jeśli mu się to nie uda."
+					]
+				},
+				{
+					"name": "Fate-Touched (4/Day)",
+					"entries": [
+						"Kiedy bohater wykona rzut ataku, test umiejętności lub {@quickref saving throws|PHB|2|1|rzut obronny}, może przerzucić {@dice d20} i użyć obu rzutów. Alternatywnie, gdy istota, którą bohater widzi, wykona rzut ataku przeciwko niemu lub {@quickref saving throws|PHB|2|1|rzut obronny} przeciwko jednemu z jego zaklęć lub cech, może zmusić tę istotę do ponownego przerzucenia ataku lub zachowania i użycia nowego rzutu."
+					]
+				},
+				{
+					"name": "Shadow Smite (1/Turn)",
+					"entries": [
+						"Bohater zadaje dodatkowe 49 ({@damage 14d6}) obrażeń od promieniowania lub obrażeń nekrotycznych (do wyboru), gdy trafia cel atakiem z broni i nie ma {@quickref Advantage and Disadvantage|PHB|2|0|wada} na rzucie ataku."
+					]
+				},
+				{
+					"name": "Unerring Sight",
+					"entries": [
+						"Ataki dystansowe bohatera ignorują {@quickref cover|PHB|3|0|pół osłony} i {@quickref cover|PHB|3|0|pokrywa trzy czwarte} i nie mają kary za zasięg."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Czempion nosi {@item boots of haste|TDCSR} i {@item deathwalker's ward (Exalted)|TDCSR|Deathwalker's Ward} oraz włada {@item Whisper (Exalted)|TDCSR|Whisper}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Bohater wykonuje trzy ataki z {@item Whisper (Exalted)|TDCSR|Whisper}."
+					]
+				},
+				{
+					"name": "Whisper",
+					"entries": [
+						"{@atk mw,rw} {@hit 15} do trafienia, zasięg 1,5 m. lub zasięg 18 m., jeden cel. {@h}10 ({@damage 1d4 + 8}) obrażeń przebijających plus 4 ({@damage 1d8}) obrażenia psychiczne. Przy trafieniu krytycznym, cel musi odnieść sukces w {@dc 18} Mądrości {@quickref saving throws|PHB|2|1|rzut obronny} lub być {@condition frightened} od Czempiona przez 1 minutę. Przy ataku dystansowym, bohater może teleportować się z {@item Whisper (Exalted)|TDCSR|Whisper}, pojawiając się w promieniu 1,5 metra od celu przy trafieniu lub w losowym miejscu w promieniu 9 metrów od celu przy chybieniu."
+					]
+				},
+				{
+					"name": "Touch of Life and Death (Recharges after a {@quickref resting|PHB|2|0|Short or Long Rest})",
+					"entries": [
+						"Czempion dotyka istoty znajdującej się w odległości 1,5 metra od niego i decyduje się ją uleczyć lub zranić, przywracając jej 55 ({@dice 10d10}) punktów życia lub zadając 55 ({@damage 10d10}) obrażeń nekrotycznych. Jeśli istota jest niechętnym celem, może uniknąć obu efektów dzięki udanemu {@dc 20} rzutowi na Zręczność {@quickref saving throws|PHB|2|1|rzut obronny}."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"Bohater wykonuje akcję {@action Dash}, {@action Disengage} lub {@action Hide}."
+					]
+				},
+				{
+					"name": "Boots of Haste (1/Day)",
+					"entries": [
+						"Czempion stuka obcasami, rzucając na siebie {@spell haste}. Po zakończeniu zaklęcia nie cierpi z powodu letargu."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"Bohater zmniejsza o połowę obrażenia otrzymywane od ataku, który go trafi. Musi być w stanie zobaczyć atakującego."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"CE",
+				"DU",
+				"E",
+				"TC"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"R",
+				"Y"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"conditionInflictSpell": [
+				"invisible"
+			],
+			"savingThrowForcedSpell": [
+				"charisma"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Cinderslag Elemental",
+			"source": "TDCSR",
+			"page": 231,
+			"size": [
+				"L"
+			],
+			"type": "elemental",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 102,
+				"formula": "12d10 + 36"
+			},
+			"speed": {
+				"walk": 20,
+				"burrow": 40
+			},
+			"str": 15,
+			"dex": 12,
+			"con": 17,
+			"int": 1,
+			"wis": 10,
+			"cha": 3,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from non-magical attacks"
+				}
+			],
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained",
+				"unconscious"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Searing Presence",
+					"entries": [
+						"Każda istota, która rozpocznie swoją turę w promieniu 1,5 metra od żywiołaka, otrzymuje 5 ({@damage 1d10}) obrażeń od ognia."
+					]
+				},
+				{
+					"name": "Molten Form",
+					"entries": [
+						"Żywiołak może poruszać się w przestrzeni o szerokości 1 cala bez przeciskania się. Ponadto żywiołak może wejść w przestrzeń wrogiej istoty i zatrzymać się tam. Za pierwszym razem, gdy żywiołak wejdzie w przestrzeń jakiejś istoty w swojej turze, ta istota otrzyma 5 ({@damage 1d10}) obrażeń od ognia i musi odnieść sukces w teście {@dc 14} Siły {@quickref saving throws|PHB|2|1|rzut obronny} lub zostać {@condition restrained}. Istota, która rozpocznie swoją turę {@condition restrained} w ten sposób, otrzymuje 5 ({@damage 1d10}) obrażeń od ognia. Może powtórzyć {@quickref saving throws|PHB|2|1|rzut obronny} na koniec każdej swojej tury, uwalniając się w przypadku sukcesu."
+					]
+				},
+				{
+					"name": "Water Susceptibility",
+					"entries": [
+						"Za każde 1,5 metra ruchu żywiołaka w wodzie lub za każdy galon rozpryskanej na niego wody otrzymuje on 1 obrażenie od zimna."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Żywiołak wykonuje dwa ataki uderzeniowe."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 5} do trafienia, zasięg 1,5 m., jeden cel. {@h}12 ({@damage 3d6 + 2}) obrażeń obuchowych plus 5 ({@damage 1d10}) obrażeń od ognia. Jeśli celem jest istota lub łatwopalny przedmiot, zapala się. Dopóki istota nie wykona akcji ugaszenia ognia, cel otrzymuje 5 ({@damage 1d10}) obrażeń od ognia na początku każdej swojej tury."
+					]
+				},
+				{
+					"name": "Molten Gaze",
+					"entries": [
+						"{@atk rs} {@hit 8} do trafienia, zasięg 9 m., jeden cel. {@h}21 ({@damage 6d6}) obrażeń od ognia, a celowi musi udać się {@dc 14} rzut na Konstytucję {@quickref saving throws|PHB|2|1|rzut obronny} lub jeden niemagiczny przedmiot wybrany przez żywiołaka, który cel ma przy sobie, zostanie natychmiast stopiony lub spalony na popiół."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"C",
+				"F"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Clasp Cutthroat",
+			"group": [
+				"Clasp"
+			],
+			"source": "TDCSR",
+			"page": 232,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any"
+				]
+			},
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item leather armor|PHB|leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 44,
+				"formula": "8d8 + 8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 18,
+			"con": 12,
+			"int": 8,
+			"wis": 14,
+			"cha": 9,
+			"save": {
+				"dex": "+6"
+			},
+			"skill": {
+				"deception": "+3",
+				"stealth": "+8"
+			},
+			"passive": 12,
+			"languages": [
+				"Common",
+				"Thieves' cant"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Sneak Attack (1/Turn)",
+					"entries": [
+						"Cutthroat zadaje dodatkowe 14 ({@damage 4d6}) obrażeń, gdy trafi cel atakiem z broni i ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} w rzucie ataku lub gdy cel znajduje się w promieniu 1,5 metra od sojusznika cutthroata, który nie jest {@condition incapacitated}, a cutthroat nie ma {@quickref Advantage and Disadvantage|PHB|2|0|wada} w rzucie ataku."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Cutthroat wykonuje dwa ataki krótkim mieczem lub sztyletem."
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 6} do trafienia, zasięg 1,5 m., jeden cel. {@h}7 ({@damage 1d6 + 4}) obrażeń przebijających."
+					]
+				},
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 6} do trafienia, zasięg 1,5 m., zasięg 20/18 m., jeden cel. {@h}6 ({@damage 1d4 + 4}) obrażeń przebijających."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"Gardło może wykonać akcję {@action Dash}, {@action Disengage} lub {@action Hide}."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"Cutthroat zmniejsza o połowę obrażenia otrzymywane od ataku, który go trafi. Cutthroat musi być w stanie zobaczyć atakującego."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb",
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Sneak Attack"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"TC"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Clasp Enforcer",
+			"group": [
+				"Clasp"
+			],
+			"source": "TDCSR",
+			"page": 233,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any"
+				]
+			},
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item half plate armor|PHB|half plate}"
+					]
+				}
+			],
+			"hp": {
+				"average": 102,
+				"formula": "12d8 + 48"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 18,
+			"int": 8,
+			"wis": 11,
+			"cha": 14,
+			"skill": {
+				"athletics": "+6",
+				"intimidation": "+8"
+			},
+			"passive": 10,
+			"languages": [
+				"Common",
+				"Thieves' cant"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Intimidating Presence",
+					"entries": [
+						"Za każdym razem, gdy egzekutor trafi istotę atakiem wręcz, cel musi wykonać {@dc 15} testu Mądrości {@quickref saving throws|PHB|2|1|rzut obronny} lub być {@condition frightened} od egzekutora do końca następnej tury celu. Egzekutor i jego sojusznicy mają {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} na rzuty ataku przeciwko każdej istocie {@condition frightened} w ten sposób. Jeśli atak {@quickref saving throws|PHB|2|1|rzut obronny} zakończy się sukcesem lub efekt zakończy się dla danej istoty, jest ona odporna na Zastraszającą Obecność Egzekutora przez następne 24 godziny."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Egzekutor wykonuje trzy ataki młotem wojennym."
+					]
+				},
+				{
+					"name": "Warhammer",
+					"entries": [
+						"{@atk mw} {@hit 6} do trafienia, zasięg 1,5 m., jeden cel. {@h}8 ({@damage 1d10 + 3}) obrażeń obuchowych."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Second Wind (Recharges after a {@quickref resting|PHB|2|0|Short or Long Rest})",
+					"entries": [
+						"Egzekutor odzyskuje 12 punktów wytrzymałości"
+					]
+				}
+			],
+			"attachedItems": [
+				"warhammer|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"TC"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Cobalt Golem",
+			"group": [
+				"Golem"
+			],
+			"source": "TDCSR",
+			"page": 240,
+			"size": [
+				"H"
+			],
+			"type": "construct",
+			"ac": [
+				{
+					"ac": 21,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 300,
+				"formula": "24d12 + 144"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 28,
+			"dex": 9,
+			"con": 22,
+			"int": 3,
+			"wis": 11,
+			"cha": 1,
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"fire",
+				"lightning",
+				"poison",
+				"psychic",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical weapons that aren't adamantine",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "18",
+			"trait": [
+				{
+					"name": "Conductive Body",
+					"entries": [
+						"Za każdym razem, gdy golem otrzyma obrażenia od błyskawic, nie otrzymuje żadnych obrażeń. Zamiast tego jego ataki bronią zadają dodatkowe 11 ({@dice 2d10}) obrażeń od błyskawic do końca jego następnej tury. Ponadto do końca następnej tury golema każda istota, która go dotknie lub trafi atakiem wręcz w promieniu 1,5 metra od niego, otrzymuje 11 ({@damage 2d10}) obrażeń od błyskawic."
+					]
+				},
+				{
+					"name": "Immutable Form",
+					"entries": [
+						"Golem jest odporny na wszelkie zaklęcia lub efekty, które mogłyby zmienić jego formę."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Golem ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} na {@quickref saving throws|PHB|2|1} przeciwko zaklęciom i innym efektom magicznym."
+					]
+				},
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"Ataki broni golema są magiczne."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Golem wykonuje dwa ataki: jeden uderzeniem, a drugi mieczem, lub używa Impulsu Magnetycznego, a następnie Wirującego Ciosu."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 15} do trafienia, zasięg 1,5 m., jeden cel. {@h}25 ({@damage 3d10 + 9}) obrażeń obuchowych."
+					]
+				},
+				{
+					"name": "Sword",
+					"entries": [
+						"{@atk mw} {@hit 15} do trafienia, zasięg 3 m., jeden cel. {@h}28 ({@damage 3d12 + 9}) obrażeń kłutych."
+					]
+				},
+				{
+					"name": "Spinning Cleave",
+					"entries": [
+						"Golem wykonuje atak mieczem przeciwko każdej istocie w promieniu 3 metrów od niego."
+					]
+				},
+				{
+					"name": "Magnetic Pulse {@recharge}",
+					"entries": [
+						"Golem podnosi ramiona i uwalnia impuls magnetyczny. Wszystkie nienadzorowane metalowe przedmioty w promieniu 9 metrów od golema zostają przyciągnięte do wolnej przestrzeni w promieniu 1,5 metra od niego. Każda istota nosząca metalową zbroję lub wykonana z metalu w promieniu 9 metrów od golema musi odnieść sukces w teście {@dc 20} Siły {@quickref saving throws|PHB|2|1|rzut obronny} lub zostać przyciągnięta do niezajętej przestrzeni w promieniu 1,5 metra od golema, a następnie upaść {@condition prone}."
+					]
+				}
+			],
+			"traitTags": [
+				"Immutable Form",
+				"Magic Resistance",
+				"Magic Weapons"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"L",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Cold Snap Spirit",
+			"source": "TDCSR",
+			"page": 234,
+			"size": [
+				"M"
+			],
+			"type": "elemental",
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 78,
+				"formula": "12d8 + 24"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 30
+			},
+			"str": 10,
+			"dex": 20,
+			"con": 14,
+			"int": 2,
+			"wis": 7,
+			"cha": 3,
+			"save": {
+				"dex": "+8",
+				"wis": "+1"
+			},
+			"skill": {
+				"perception": "+1",
+				"stealth": "+8"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 11,
+			"resist": [
+				{
+					"resist": [
+						"slashing",
+						"piercing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"cold",
+				"poison"
+			],
+			"vulnerable": [
+				"fire"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"poisoned",
+				"paralyzed",
+				"stunned"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Sense Heat",
+					"entries": [
+						"Zimny duch może wyczuć ciepło w promieniu 18 metrów od niego."
+					]
+				},
+				{
+					"name": "Frozen Aura",
+					"entries": [
+						"Każda istota, która rozpocznie swoją turę w promieniu 1,5 metra od ducha zimnego trzasku, otrzymuje 5 ({@damage 1d10}) obrażeń od zimna."
+					]
+				},
+				{
+					"name": "Jealous Spirit",
+					"entries": [
+						"Jeśli duch zaatakuje istotę znajdującą się w promieniu 1,5 metra od innego ducha, atak zada dodatkowe 10 ({@damage 3d6}) obrażeń od zimna przy trafieniu."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Consume Warmth",
+					"entries": [
+						"{@atk ms} {@hit 8} do trafienia, zasięg 1,5 m., jeden cel. {@h}21 ({@damage 6d6}) obrażeń od zimna, a szybkość celu zostaje zmniejszona o połowę do końca następnej tury ducha."
+					]
+				},
+				{
+					"name": "Subzero Wave (1/Day)",
+					"entries": [
+						"Każda istota w promieniu 9 metrów od ducha zimnego trzasku musi wykonać rzut {@dc 15} na Konstytucję {@quickref saving throws|PHB|2|1|rzut obronny}, otrzymując 18 ({@damage 4d8}) obrażeń od zimna w przypadku nieudanego rzutu obronnego lub o połowę mniej obrażeń w przypadku udanego rzutu obronnego."
+					]
+				}
+			],
+			"environment": [
+				"arctic",
+				"forest",
+				"mountain"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"damageTags": [
+				"C"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Cyclops Stormcaller",
+			"group": [
+				"Cyclops"
+			],
+			"source": "TDCSR",
+			"page": 235,
+			"size": [
+				"L"
+			],
+			"type": "giant",
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item chain mail|PHB}",
+						"{@item cloak of protection}",
+						"{@item ring of protection}"
+					]
+				}
+			],
+			"hp": {
+				"average": 114,
+				"formula": "12d10 + 48"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 60,
+					"condition": "(stormy conditions only)"
+				}
+			},
+			"str": 16,
+			"dex": 10,
+			"con": 18,
+			"int": 15,
+			"wis": 8,
+			"cha": 20,
+			"save": {
+				"str": "+5",
+				"dex": "+2",
+				"con": "+6",
+				"int": "+4",
+				"wis": "+5",
+				"cha": "+11"
+			},
+			"skill": {
+				"arcana": "+6"
+			},
+			"passive": 9,
+			"languages": [
+				"Common",
+				"Elvish",
+				"Giant"
+			],
+			"cr": "10",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"Wrodzoną zdolnością cyklopa do rzucania zaklęć jest Charyzma ({@dc 17} odporności na zaklęcia, {@hit 9} do trafienia przy atakach zaklęciami). Cyklop może wrodzenie rzucać następujące zaklęcia, niewymagające składników materialnych:"
+					],
+					"will": [
+						"{@spell ray of frost} ({@dice 3d8})",
+						"{@spell water walk}"
+					],
+					"daily": {
+						"3e": [
+							"{@spell ice storm}",
+							"{@spell sleet storm}",
+							"{@spell wind wall}"
+						],
+						"1e": [
+							"{@spell control weather}",
+							"{@spell storm of vengeance}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "One-Eyed",
+					"entries": [
+						"Cyklop ma {@quickref Advantage and Disadvantage|PHB|2|0|wada} na każdy rzut ataku przeciwko celowi oddalonemu o więcej niż 9 metrów."
+					]
+				},
+				{
+					"name": "Storm Wings",
+					"entries": [
+						"Podczas przebywania na zewnątrz w burzowych warunkach cyklop osiąga prędkość lotu wynoszącą 18 metrów."
+					]
+				},
+				{
+					"name": "Supernatural Focus",
+					"entries": [
+						"Cyklop ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} do Konstytucji {@quickref saving throws|PHB|2|1}, aby utrzymać {@condition concentration} na zaklęciach i nie może stracić {@condition concentration} z powodu niespokojnej pogody."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Cyklop wykonuje dwa ataki lodowymi pazurami."
+					]
+				},
+				{
+					"name": "Ice Claw",
+					"entries": [
+						"{@atk mw} {@hit 7} do trafienia, zasięg 1,5 m., jeden cel. {@h}13 ({@damage 3d6 + 3}) obrażeń kłutych plus 3 ({@damage 1d6}) obrażenia od zimna."
+					]
+				}
+			],
+			"environment": [
+				"mountain"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"E",
+				"GI"
+			],
+			"damageTags": [
+				"C",
+				"S"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"L",
+				"T"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"deafened",
+				"prone"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Demonfeed Spider",
+			"source": "TDCSR",
+			"page": 237,
+			"size": [
+				"L"
+			],
+			"type": "fiend",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 75,
+				"formula": "10d10 + 20"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40
+			},
+			"str": 16,
+			"dex": 18,
+			"con": 15,
+			"int": 6,
+			"wis": 10,
+			"cha": 6,
+			"save": {
+				"dex": "+7"
+			},
+			"skill": {
+				"perception": "+3",
+				"stealth": "+7"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"cold",
+				"fire",
+				"lightning"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"Pająk może wspinać się po trudnych powierzchniach, w tym do góry nogami po suficie, bez konieczności wykonywania testu umiejętności."
+					]
+				},
+				{
+					"name": "Web Walker",
+					"entries": [
+						"Pająk ignoruje ograniczenia ruchu spowodowane przez pajęczyny."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Pająk wykonuje dwa ataki w walce wręcz: jeden ugryzieniem, a drugi żądłem; może też wykonać jeden atak pajęczyną, po którym następuje atak w walce wręcz."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} do trafienia, zasięg 1,5 m., jeden cel. {@h}8 ({@damage 1d10 + 3}) obrażeń przebijających, a cel musi wykonać {@dc 14} rzut obronny {@quickref saving throws|PHB|2|1|rzut obronny}. W przypadku nieudanego rzutu obronnego cel otrzymuje 27 ({@damage 6d8}) obrażeń od trucizny i jest {@condition poisoned} przez 1 minutę. Przy udanym rzucie obronnym cel otrzymuje o połowę mniej obrażeń i nie jest {@condition poisoned}. Jeśli obrażenia od trucizny zredukują cel do 0 punktów wytrzymałości, cel będzie stabilny, ale {@condition poisoned} przez 1 godzinę, nawet po odzyskaniu punktów wytrzymałości, i będzie {@condition paralyzed}, gdy {@condition poisoned} w ten sposób."
+					]
+				},
+				{
+					"name": "Stinger",
+					"entries": [
+						"{@atk mw} {@hit 7} do trafienia, zasięg 1,5 m., jeden cel. {@h}9 ({@damage 1d12 + 3}) obrażeń przeszywających, a celowi musi udać się {@dc 14} rzut na Konstytucję {@quickref saving throws|PHB|2|1|rzut obronny} lub zostać {@condition paralyzed} na 1 minutę. Cel może powtórzyć {@quickref saving throws|PHB|2|1|rzut obronny} na koniec każdej swojej tury, kończąc efekt na sobie w przypadku sukcesu."
+					]
+				},
+				{
+					"name": "Web Spinner",
+					"entries": [
+						"{@atk rw} {@hit 7} do trafienia, zasięg 12 m, jeden cel. {@h} Cel zostaje przyciągnięty na odległość 12 metrów w kierunku pająka i {@condition grappled} (ucieczka {@dc 14}). Pająk może {@action grapple} w ten sposób zaatakować tylko jedną istotę naraz. W ramach akcji pająk może opleść pajęczyną istotę, którą ma {@condition grappled}, powodując jej {@condition restrained} i kończąc {@condition grappled} stan."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Arterial Spray",
+					"entries": [
+						"Gdy pająk otrzyma obrażenia poniżej połowy maksymalnej liczby punktów wytrzymałości, może rozpylić trującą krew w stożku o średnicy 4,5 metra. Każda istota w tym obszarze musi wykonać rzut obronny {@dc 14} na Konstytucję {@quickref saving throws|PHB|2|1|rzut obronny}. W przypadku nieudanego uniku, istota otrzymuje 13 ({@damage 3d8}) obrażeń od trucizny i jest {@condition poisoned} przez 1 minutę. Przy udanym rzucie obronnym, istota otrzymuje o połowę mniej obrażeń i nie jest {@condition poisoned}. Jeśli obrażenia od trucizny zredukują obrażenia istoty do 0 punktów wytrzymałości, istota jest stabilna, ale {@condition poisoned} przez 1 godzinę, nawet po odzyskaniu punktów wytrzymałości, i jest {@condition paralyzed}, gdy {@condition poisoned} w ten sposób."
+					]
+				}
+			],
+			"environment": [
+				"forest",
+				"underdark"
+			],
+			"traitTags": [
+				"Spider Climb",
+				"Web Walker"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"conditionInflict": [
+				"grappled",
+				"paralyzed",
+				"poisoned"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Demonfeed Spiderling",
+			"source": "TDCSR",
+			"page": 237,
+			"size": [
+				"M"
+			],
+			"type": "fiend",
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 16,
+				"formula": "3d8 + 3"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 10,
+			"dex": 12,
+			"con": 12,
+			"int": 2,
+			"wis": 7,
+			"cha": 3,
+			"save": {
+				"dex": "+3"
+			},
+			"skill": {
+				"stealth": "+5",
+				"perception": "+0"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"cold",
+				"fire",
+				"lightning"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"Spiderling może wspinać się po trudnych powierzchniach, w tym do góry nogami po suficie, bez konieczności wykonywania testu umiejętności."
+					]
+				},
+				{
+					"name": "Web Walker",
+					"entries": [
+						"Pająk ignoruje ograniczenia ruchu spowodowane przez pajęczyny."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 3} do trafienia, zasięg 1,5 m., jeden cel. {@h}5 ({@damage 1d8 + 1}) obrażeń przeszywających, a cel musi wykonać {@dc 13} rzut na Konstytucję {@quickref saving throws|PHB|2|1|rzut obronny}, otrzymując 10 ({@damage 3d6}) obrażeń od trucizny w przypadku nieudanego rzutu obronnego lub o połowę mniej w przypadku udanego rzutu obronnego."
+					]
+				}
+			],
+			"environment": [
+				"forest",
+				"underdark"
+			],
+			"traitTags": [
+				"Spider Climb",
+				"Web Walker"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Diseased Grick",
+			"source": "TDCSR",
+			"page": 122,
+			"_copy": {
+				"name": "Grick",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "grick",
+						"with": "diseased grick"
+					}
+				}
+			},
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"Grick posiada zdolność rzucania czarów Mądrość ({@dc 12} {@hit 4} do trafienia przy atakach zaklęciami). Potrafi wrodzenie rzucać następujące zaklęcia, niewymagające składników materialnych:"
+					],
+					"daily": {
+						"1": [
+							"{@spell contagion}"
+						]
+					},
+					"ability": "wis"
+				}
+			],
+			"savingThrowForcedSpell": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Doty X",
+			"shortName": "Doty",
+			"group": [
+				"Vox Machina"
+			],
+			"isNamedCreature": true,
+			"source": "TDCSR",
+			"page": 272,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 78,
+				"formula": "9d8 + 18 + 20"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 14,
+			"dex": 12,
+			"con": 14,
+			"int": 4,
+			"wis": 10,
+			"cha": 6,
+			"save": {
+				"dex": "+4",
+				"con": "+5"
+			},
+			"skill": {
+				"athletics": "+7",
+				"perception": "+8"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 18,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages that {@creature Taryon Darrington|TDCSR|Tary} speaks"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Arcane Surge (4/Day)",
+					"entries": [
+						"Kiedy Doty trafi cel, {@creature Taryon Darrington|TDCSR|Tary} może skierować energię magiczną, aby zadać mu dodatkowe 14 ({@damage 4d6}) obrażeń od siły, o ile {@creature Taryon Darrington|TDCSR|Tary} nie wynosi {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Dedicated Servant",
+					"entries": [
+						"Doty ma dodatkowe 20 punktów wytrzymałości i modyfikator +2 do {@quickref saving throws|PHB|2|1}, {@quickref ability checks|PHB|2|0} umiejętności i rzutów ataku."
+					]
+				},
+				{
+					"name": "Limited Vocabulary",
+					"entries": [
+						"Doty potrafi powiedzieć następujące słowa w języku potocznym: \"Tary\", \"Yes\", \"Correct\", \"Absolutely\", \"Soon\" i \"Handsome\"."
+					]
+				},
+				{
+					"name": "Vigilant",
+					"entries": [
+						"Doty nie może być zaskoczony."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Empowered Fist",
+					"entries": [
+						"{@atk mw} {@hit 7} do trafienia, zasięg 1,5 m., jeden cel. {@h}8 ({@damage 1d8 + 4}) obrażeń od siły."
+					]
+				},
+				{
+					"name": "Repair (3/Day)",
+					"entries": [
+						"Doty odzyskuje 15 ({@dice 2d8 + 6}) punktów życia."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Deflect",
+					"entries": [
+						"Jeśli istota w promieniu 1,5 metra od Doty'ego, którą on widzi, wykona atak przeciwko istocie innej niż Doty, może nałożyć {@quickref Advantage and Disadvantage|PHB|2|0|wada} na rzut ataku. Atakujący otrzymuje wtedy 6 ({@damage 1d4 + 4}) obrażeń od siły."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Drynna Hydra",
+			"isNpc": true,
+			"source": "TDCSR",
+			"page": 66,
+			"_copy": {
+				"name": "Hydra",
+				"source": "MM"
+			},
+			"int": 12,
+			"languages": [
+				"Common"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ember Roc",
+			"source": "TDCSR",
+			"page": 238,
+			"size": [
+				"G"
+			],
+			"type": "monstrosity",
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 232,
+				"formula": "16d20 + 64"
+			},
+			"speed": {
+				"walk": 20,
+				"fly": 120
+			},
+			"str": 26,
+			"dex": 10,
+			"con": 18,
+			"int": 4,
+			"wis": 11,
+			"cha": 9,
+			"save": {
+				"dex": "+5",
+				"con": "+9",
+				"wis": "+5",
+				"cha": "+4"
+			},
+			"skill": {
+				"perception": "+5"
+			},
+			"passive": 15,
+			"immune": [
+				"fire"
+			],
+			"languages": [
+				"understands Ignan but can't speak"
+			],
+			"cr": "14",
+			"trait": [
+				{
+					"name": "Keen Sight",
+					"entries": [
+						"Ryk ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} do testów Mądrości ({@skill Perception}), które opierają się na wzroku."
+					]
+				},
+				{
+					"name": "Searing Presence",
+					"entries": [
+						"Każda istota, która rozpocznie swoją turę w promieniu 1,5 metra od sarny, otrzymuje 7 ({@damage 2d6}) obrażeń od ognia."
+					]
+				},
+				{
+					"name": "Illumination",
+					"entries": [
+						"Latarka rzuca jasne światło w promieniu 12 metrów i słabe światło na dodatkowe 12 metrów."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Sarna wykonuje dwa ataki: jeden dziobem, a drugi szponami."
+					]
+				},
+				{
+					"name": "Beak",
+					"entries": [
+						"{@atk mw} {@hit 13} do trafienia, zasięg 3 m., jeden cel. {@h}26 ({@damage 4d8 + 8}) obrażeń przebijających i 7 ({@damage 2d6}) obrażeń od ognia."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 13} do trafienia, zasięg 1,5 m., jeden cel. {@h}22 ({@damage 4d6 + 8}) obrażeń kłutych i 7 ({@damage 2d6}) obrażeń od ognia."
+					]
+				},
+				{
+					"name": "Inferno {@recharge 5}",
+					"entries": [
+						"Sarna uderza skrzydłami, tworząc wirującą pożogę. Każda istota w promieniu 9 metrów od sarny musi wykonać {@dc 18} testu Zręczności {@quickref saving throws|PHB|2|1|rzut obronny} lub otrzymać 21 ({@damage 6d6}) obrażeń od ognia."
+					]
+				}
+			],
+			"environment": [
+				"mountain"
+			],
+			"traitTags": [
+				"Illumination",
+				"Keen Senses"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS",
+				"IG"
+			],
+			"damageTags": [
+				"F",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flaming Skeleton",
+			"shortName": "skeleton",
+			"group": [
+				"Skeletons"
+			],
+			"source": "TDCSR",
+			"page": 256,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 19,
+				"formula": "3d8 + 6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 15,
+			"int": 6,
+			"wis": 8,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"vulnerable": [
+				"bludgeoning"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"understands all languages it knew in life but can't speak"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Heated Weapons",
+					"entries": [
+						"Kiedy szkielet trafia metalową bronią do walki wręcz, zadaje ona dodatkowe 3 ({@damage 1d6}) obrażenia od ognia (wliczone w atak)."
+					]
+				},
+				{
+					"name": "Illumination",
+					"entries": [
+						"Szkielet rzuca jasne światło w promieniu 3 metrów i słabe światło na dodatkowe 3 metry."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 4} do trafienia, zasięg 1,5 m., jeden cel. {@h}5 ({@damage 1d6 + 2}) obrażeń przebijających i 3 ({@damage 1d6}) obrażenia od ognia."
+					]
+				},
+				{
+					"name": "Ignite",
+					"entries": [
+						"Szkielet rzuca się na dużą lub mniejszą istotę w promieniu 1,5 metra od niego. Celowi musi udać się rzut na {@dc 12} Zręczność {@quickref saving throws|PHB|2|1|rzut obronny} lub zostać {@condition grappled} (ucieczka {@dc 12}). W przypadku nieudanego rzutu obronnego cel otrzymuje również 3 ({@damage 1d6}) obrażenia od ognia na początku każdej swojej tury, nawet po zakończeniu {@action grapple}. Jeśli cel lub istota znajdująca się w promieniu 1,5 metra od niego użyje akcji, aby ugasić płomienie, lub jeśli jakiś inny efekt ugasi płomienie (np. cel zostanie zanurzony w wodzie), efekt wygasa."
+					]
+				}
+			],
+			"environment": [
+				"mountain"
+			],
+			"attachedItems": [
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Illumination"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"CS",
+				"LF"
+			],
+			"damageTags": [
+				"F",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Forge Guardian",
+			"group": [
+				"Golem"
+			],
+			"source": "TDCSR",
+			"page": 241,
+			"size": [
+				"G"
+			],
+			"type": "construct",
+			"ac": [
+				{
+					"ac": 24,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 420,
+				"formula": "24d20 + 168"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 30,
+			"dex": 10,
+			"con": 24,
+			"int": 3,
+			"wis": 11,
+			"cha": 1,
+			"save": {
+				"str": "+18",
+				"con": "+15"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"fire",
+				"poison",
+				"psychic",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical weapons that aren't adamantine",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"cr": "27",
+			"trait": [
+				{
+					"name": "Fire Absorption",
+					"entries": [
+						"Za każdym razem, gdy strażnik otrzyma obrażenia od ognia, nie otrzymuje żadnych obrażeń, a zamiast tego odzyskuje liczbę punktów wytrzymałości równą zadanym obrażeniom od ognia."
+					]
+				},
+				{
+					"name": "Immutable Form",
+					"entries": [
+						"Strażnik jest odporny na wszelkie zaklęcia lub efekty, które mogłyby zmienić jego formę."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Strażnik ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} na {@quickref saving throws|PHB|2|1} przeciwko zaklęciom i innym efektom magicznym."
+					]
+				},
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"Ataki bronią strażnika są magiczne."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Strażnik wykonuje dwa ataki w zwarciu."
+					]
+				},
+				{
+					"name": "Runeblade",
+					"entries": [
+						"{@atk mw} {@hit 18} do trafienia, zasięg 4,5 m., jeden cel. {@h}36 ({@damage 4d12 + 10}) obrażeń kłutych, a celowi musi udać się {@dc 23} rzut na Konstytucję {@quickref saving throws|PHB|2|1|rzut obronny} lub być {@condition blinded}, dopóki nie zada obrażeń strażnikowi."
+					]
+				},
+				{
+					"name": "Kick",
+					"entries": [
+						"{@atk mw} {@hit 18} do trafienia, zasięg 3 m., jeden cel. {@h}23 ({@damage 2d12 + 10}) obrażeń obuchowych, a cel zostaje odepchnięty na odległość do 4,5 metra od strażnika i powalony {@condition prone}."
+					]
+				},
+				{
+					"name": "Bladestorm {@recharge 5}",
+					"entries": [
+						"Strażnik wykonuje atak Runeblade przeciwko każdej istocie w promieniu 4,5 metra od niego. Przy trafieniu cel zostaje również odepchnięty na odległość do 4,5 metra od strażnika i odrzucony {@condition prone}."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Runeblade",
+					"entries": [
+						"Strażnik wykonuje jeden atak Runebladem."
+					]
+				},
+				{
+					"name": "Kick",
+					"entries": [
+						"Strażnik wykonuje jeden atak kopnięciem."
+					]
+				},
+				{
+					"name": "Trample (Costs 2 Actions)",
+					"entries": [
+						"Strażnik porusza się na odległość do 15 metrów bez aktywacji {@action opportunity attack|PHB|opportunity attacks} i może przechodzić przez pola innych istot. Każda istota, przez której przestrzeń przechodzi strażnik, musi wykonać rzut {@dc 23} na Zręczność {@quickref saving throws|PHB|2|1|rzut obronny}. W przypadku niepowodzenia, istota otrzymuje 23 ({@damage 2d12 + 10}) obrażeń obuchowych i zostaje powalona {@condition prone}. W przypadku powodzenia, istota otrzymuje o połowę mniej obrażeń i nie zostaje powalona {@condition prone}. Każda istota, która dzieli przestrzeń strażnika, gdy ten przerywa ruch, zostaje wypchnięta ze swojej przestrzeni na najbliższą niezajętą przestrzeń."
+					]
+				}
+			],
+			"traitTags": [
+				"Damage Absorption",
+				"Immutable Form",
+				"Magic Resistance",
+				"Magic Weapons"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"blinded",
+				"prone"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Goat-Knight Steed",
+			"source": "TDCSR",
+			"page": 246,
+			"_copy": {
+				"name": "Giant Goat",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "goat[^-]",
+						"with": "goat-knight steed ",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "prependArr",
+						"items": [
+							{
+								"name": "Shared Spells",
+								"entries": [
+									"Any spell the {@creature Kraghammer Goat-Knight|TDCSR|goat-knight} casts with a range of self also targets the goat ."
+								]
+							},
+							{
+								"name": "Summoned Nature",
+								"entries": [
+									"When a goat-knight steed drops to 0 hit points, it disappears, leaving behind no physical form. The {@creature Kraghammer Goat-Knight|TDCSR|goat-knight} can also dismiss the steed at any time as an action, causing it to disappear. In either case, the same steed is summoned when the {@creature Kraghammer Goat-Knight|TDCSR|goat-knight} casts {@spell find steed}."
+								]
+							}
+						]
+					}
+				},
+				"_preserve": {
+					"environment": true
+				}
+			},
+			"type": "celestial",
+			"int": 6,
+			"languages": [
+				"understands Dwarvish but can't speak it"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Grog Strongjaw",
+			"shortName": "Grog",
+			"group": [
+				"Vox Machina"
+			],
+			"isNamedCreature": true,
+			"source": "TDCSR",
+			"page": 261,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"half-giant"
+				]
+			},
+			"ac": [
+				19
+			],
+			"hp": {
+				"average": 290,
+				"formula": "20d12 + 120 + 40"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 26,
+			"dex": 15,
+			"con": 22,
+			"int": 8,
+			"wis": 10,
+			"cha": 13,
+			"save": {
+				"str": "+14",
+				"con": "+12"
+			},
+			"skill": {
+				"animal handling": "+6",
+				"athletics": "+14",
+				"intimidation": "+7",
+				"survival": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"cold",
+						"fire",
+						"lightning",
+						"thunder"
+					],
+					"note": "while enlarged"
+				},
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "while raging"
+				}
+			],
+			"conditionImmune": [
+				{
+					"conditionImmune": [
+						"charmed",
+						"frightened"
+					],
+					"note": "while raging"
+				}
+			],
+			"languages": [
+				"Common",
+				"Dwarvish",
+				"Giant",
+				"with limited reading and writing"
+			],
+			"cr": "18",
+			"trait": [
+				{
+					"name": "Brutal Critical",
+					"entries": [
+						"Gdy Grog uzyska trafienie krytyczne, rzuca jak zwykle podwójną liczbą kości obrażeń od broni, a następnie rzuca 3 dodatkowymi kośćmi obrażeń od broni."
+					]
+				},
+				{
+					"name": "Feral Instinct",
+					"entries": [
+						"Grog ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} na rzuty inicjatywy."
+					]
+				},
+				{
+					"name": "Melee Master",
+					"entries": [
+						"Grog może przyjąć karę -5 do dowolnego rzutu ataku wręcz, aby zyskać premię +10 do rzutu na obrażenia."
+					]
+				},
+				{
+					"name": "Reckless",
+					"entries": [
+						"Na początku swojej tury Grog może zyskać {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} do wszystkich rzutów ataku bronią białą podczas tej tury, ale rzuty ataku przeciwko niemu mają {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} do początku jego następnej tury."
+					]
+				},
+				{
+					"name": "Relentless Rage",
+					"entries": [
+						"Jeśli Grog zostanie zredukowany do 0 punktów wytrzymałości podczas szału, zamiast tego spadnie do 1 punktu wytrzymałości, jeśli powiedzie mu się rzut na {@dc 10} Konstytucję {@quickref saving throws|PHB|2|1|rzut obronny}."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Grog nosi {@item belt of dwarvenkind}. Włada {@item Bloodaxe|EGW} (magiczna broń +2), {@item dwarven thrower} i {@item Titanstone Knuckles (Exalted)|TDCSR|Titanstone Knuckles}."
+					]
+				},
+				{
+					"name": "Spellbreaker",
+					"entries": [
+						"Kiedy Grog zada obrażenia istocie koncentrującej się na zaklęciu, ta istota ma {@quickref Advantage and Disadvantage|PHB|2|0|wada} na {@quickref saving throws|PHB|2|1|rzut obronny}, aby utrzymać {@condition concentration}. Dodatkowo, Grog ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} na {@quickref saving throws|PHB|2|1} przeciwko zaklęciom rzucanym przez istoty w promieniu 1,5 metra od niego."
+					]
+				},
+				{
+					"name": "Toughness",
+					"entries": [
+						"Grog ma dodatkowe 40 punktów wytrzymałości."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Grog wykonuje dwa ataki (trzy, gdy jest wściekły) przy użyciu {@item Bloodaxe|EGW}, {@item dwarven thrower} lub {@item Titanstone Knuckles (Exalted)|TDCSR|Titanstone Knuckles}."
+					]
+				},
+				{
+					"name": "{@item Bloodaxe|EGW}",
+					"entries": [
+						"{@atk mw} {@hit 16} do trafienia, zasięg 1,5 m., jeden cel. {@h}20 ({@damage 1d12 + 14}) obrażeń kłutych i 3 ({@damage 1d6}) obrażeń nekrotycznych. Jeśli liczba punktów życia celu spadnie do 0, Grog zyskuje 10 tymczasowych punktów życia."
+					]
+				},
+				{
+					"name": "{@item Dwarven Thrower}",
+					"entries": [
+						"{@atk mw,rw} {@hit 17} do trafienia, zasięg 1,5 m. lub zasięg 20/60, jeden cel. {@h}24 ({@damage 2d8 + 15}) obrażeń obuchowych."
+					]
+				},
+				{
+					"name": "Titanstone Knuckles",
+					"entries": [
+						"{@atk mw} {@hit 14} do trafienia, zasięg 1,5 m., jeden cel. {@h}14 ({@damage 1d4 + 12}) obrażeń obuchowych."
+					]
+				},
+				{
+					"name": "Enlarge (Recharges after a {@quickref resting|PHB|2|0|Long Rest})",
+					"entries": [
+						"Grog rzuca na siebie {@spell enlarge/reduce}, aby powiększyć się na 10 minut. Gdy jest powiększony w ten sposób, jest odporny na obrażenia od zimna, ognia, błyskawic i piorunów."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Rage (Recharges after a {@quickref resting|PHB|2|0|Short or Long Rest})",
+					"entries": [
+						"Grog wpada w szał, który trwa do momentu, aż padnie {@condition unconscious} lub zdecyduje się go zakończyć (nie jest wymagana żadna akcja). Podczas szału Grog zyskuje następujące korzyści:",
+						{
+							"type": "list",
+							"items": [
+								"Ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} na testy Siły i Wytrzymałości {@quickref saving throws|PHB|2|1}.",
+								"Zadaje dodatkowe 4 obrażenia, gdy trafi cel atakiem z broni białej (wliczone w ataki).",
+								"Posiada odporność na obrażenia kłute, przeszywające i cięte",
+								"Nie może być {@condition charmed} lub {@condition frightened}",
+								"Może wykonać dodatkowy atak bronią białą (w ramach akcji Multiatak)"
+							]
+						},
+						"Po zakończeniu szału Grog zyskuje jeden poziom {@condition exhaustion}."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Opportunist",
+					"entries": [
+						"Gdy istota w promieniu 1,5 metra od Groga rzuca zaklęcie lub zadaje mu obrażenia, Grog może wykonać atak bronią białą przeciwko tej istocie."
+					]
+				}
+			],
+			"traitTags": [
+				"Reckless"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"GI"
+			],
+			"damageTags": [
+				"B",
+				"N",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Jourrael, the Caedogeist",
+			"shortName": "Jourrael",
+			"alias": [
+				"The Inevitable End",
+				"Caedogeist"
+			],
+			"isNamedCreature": true,
+			"source": "TDCSR",
+			"page": 245,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"drow"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"{@item studded leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 152,
+				"formula": "16d8 + 80"
+			},
+			"speed": {
+				"walk": 80,
+				"fly": 40
+			},
+			"str": 13,
+			"dex": 24,
+			"con": 20,
+			"int": 14,
+			"wis": 17,
+			"cha": 15,
+			"save": {
+				"dex": "+12",
+				"con": "+10",
+				"wis": "+8"
+			},
+			"skill": {
+				"acrobatics": "+12",
+				"perception": "+13",
+				"stealth": "+17"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 23,
+			"resist": [
+				"acid",
+				"fire",
+				"lightning",
+				"cold",
+				"thunder",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Infernal",
+				"Undercommon"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"Zdolność rzucania czarów Jourrael to Charyzma (odporność na zaklęcia {@dc 15}). Potrafi wrodzenie rzucać następujące zaklęcia, które nie wymagają żadnych składników materialnych:"
+					],
+					"will": [
+						"{@spell dancing lights}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell darkness}",
+							"{@spell faerie fire}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"Jourrael może przemieszczać się przez inne stworzenia i obiekty tak, jakby były {@quickref difficult terrain||3}. Otrzymuje 5 ({@damage 1d10}) obrażeń od siły, jeśli zakończy swoją turę wewnątrz obiektu."
+					]
+				},
+				{
+					"name": "Sneak Attack (1/Turn)",
+					"entries": [
+						"Jourrael zadaje dodatkowe 35 ({@damage 10d6}) obrażeń, gdy trafi cel atakiem z broni i ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} w rzucie ataku lub gdy cel znajduje się w promieniu 1,5 metra od sojusznika Jourraela, który nie ma {@condition incapacitated}, a Jourrael nie ma {@quickref Advantage and Disadvantage|PHB|2|0|wada} w rzucie ataku."
+					]
+				},
+				{
+					"name": "Inevitable",
+					"entries": [
+						"Jeśli liczba punktów życia Jourraela spadnie do 0, nie upada on {@condition unconscious}, lecz staje się bezcielesnym duchem na 24 godziny. W tym czasie Jourrael nie może powrócić do swojej pierwotnej postaci, dopóki nie odzyska pełnych punktów życia. W tej formie jest {@condition invisible}, nie może atakować ani wchodzić w interakcje z cielesnymi stworzeniami lub przedmiotami i nie może być celem zaklęć. Po upływie 24 godzin Jourrael odzyskuje 1 punkt wytrzymałości i powraca do swojej pierwotnej postaci z czterema poziomami {@condition exhaustion}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Jourrael wykonuje dwa ataki wręcz lub dwa ataki dystansowe."
+					]
+				},
+				{
+					"name": "Spectral Blade",
+					"entries": [
+						"{@atk mw} {@hit 12} do trafienia, zasięg 1,5 m., jeden cel. {@h}10 ({@damage 1d6 + 7}) obrażeń kłutych, a celowi musi udać się {@dc 14} test Konstytucji {@quickref saving throws|PHB|2|1|rzut obronny} lub zostać {@condition poisoned} na 1 godzinę. Jeśli {@quickref saving throws|PHB|2|1|rzut obronny} nie powiedzie się o 5 lub więcej, cel zostanie również {@condition unconscious} podczas {@condition poisoned} w ten sposób. Cel budzi się, jeśli otrzyma obrażenia lub jeśli inna istota wykona akcję, aby go obudzić."
+					]
+				},
+				{
+					"name": "Void Dagger",
+					"entries": [
+						"{@atk rw} {@hit 12} do trafienia, zasięg 60/36 m., jeden cel. {@h}9 ({@damage 1d4 + 7}) obrażeń przebijających."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"Jourrael może wykonać akcję {@action Dash}, {@action Disengage} lub {@action Hide}."
+					]
+				},
+				{
+					"name": "Mirrored Form (Recharges after a {@quickref resting|PHB|2|0|Short Rest})",
+					"entries": [
+						"Jourrael manifestuje trzy iluzoryczne duplikaty, które unoszą się w jej przestrzeni. Za każdym razem, gdy jakaś istota atakuje Jourrael, należy rzucić {@dice d20}, aby sprawdzić, czy trafiła w jeden z duplikatów. Jeśli są trzy duplikaty, duplikat jest celem ataku przy rzucie 6 lub wyższym. W przypadku dwóch duplikatów, duplikat jest namierzany przy rzucie 8 lub wyższym. Pojedynczy duplikat jest namierzany przy rzucie 11 lub wyższym. AC duplikatu wynosi 17 i zostaje on zniszczony w przypadku trafienia. Jourrael może ukryć duplikaty jako dodatkową akcję."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"Jourrael dodaje 5 do swojego AC przeciwko jednemu atakowi w walce wręcz, który mógłby ją trafić. Aby to zrobić, musi widzieć atakującego"
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement",
+				"Sneak Attack"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"I",
+				"U"
+			],
+			"damageTags": [
+				"O",
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"poisoned",
+				"unconscious"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Keyleth, Voice of the Tempest",
+			"shortName": "Keyleth",
+			"group": [
+				"Vox Machina"
+			],
+			"isNamedCreature": true,
+			"source": "TDCSR",
+			"page": 263,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"half-elf"
+				]
+			},
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item +2 leather armor}",
+						"{@item +2 ring of protection|TDCSR}"
+					]
+				}
+			],
+			"hp": {
+				"average": 150,
+				"formula": "20d8 + 60"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 15,
+			"con": 16,
+			"int": 15,
+			"wis": 22,
+			"cha": 15,
+			"save": {
+				"str": "+4",
+				"dex": "+4",
+				"con": "+5",
+				"int": "+10",
+				"wis": "+14",
+				"cha": "+4"
+			},
+			"skill": {
+				"athletics": "+8",
+				"insight": "+12",
+				"intimidation": "+8",
+				"nature": "+12",
+				"perception": "+12",
+				"persuasion": "+8",
+				"stealth": "+8",
+				"survival": "+12"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 22,
+			"languages": [
+				"Auran",
+				"Common",
+				"Druidic",
+				"Elvish"
+			],
+			"cr": "18",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Keyleth jest 20-poziomową czarodziejką. Jej umiejętnością rzucania czarów jest Mądrość ({@dc 22} ochrony przed zaklęciami, {@hit 14} do trafienia przy atakach zaklęciami). Ma przygotowane następujące zaklęcia druidyczne:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft}",
+								"{@spell guidance}",
+								"{@spell mending}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell cure wounds}",
+								"{@spell faerie fire}",
+								"{@spell fog cloud}",
+								"{@spell healing word}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell alter self} (at will)",
+								"{@spell flaming sphere}",
+								"{@spell gust of wind}",
+								"{@spell pass without trace}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell call lightning}",
+								"{@spell wind wall}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell blight}",
+								"{@spell control water}",
+								"{@spell grasping vine}",
+								"{@spell polymorph}",
+								"{@spell stone shape}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell conjure elemental}",
+								"{@spell greater restoration}",
+								"{@spell scrying}",
+								"{@spell wall of stone}"
+							]
+						},
+						"6": {
+							"slots": 2,
+							"spells": [
+								"{@spell heroes' feast}",
+								"{@spell move earth}",
+								"{@spell transport via plants}"
+							]
+						},
+						"7": {
+							"slots": 2,
+							"spells": [
+								"{@spell fire storm}",
+								"{@spell plane shift}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell control weather}"
+							]
+						},
+						"9": {
+							"slots": 1,
+							"spells": [
+								"{@spell foresight}",
+								"{@spell shapechange}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Fey Ancestry",
+					"entries": [
+						"Keyleth ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} na {@quickref saving throws|PHB|2|1} przeciwko {@condition charmed}, a magia nie może jej uśpić."
+					]
+				},
+				{
+					"name": "Focused",
+					"entries": [
+						"Keyleth ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} na Konstytucję {@quickref saving throws|PHB|2|1}, aby utrzymać {@condition concentration} na zaklęcia."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Keyleth nosi {@item circlet of wisdom|TDCSR} (który zwiększa jej wynik Mądrości o 2), {@item +2 leather armor} i {@item +2 Ring of Protection|TDCSR|ring of protection with a +2 bonus}. Posługuje się {@item Spire of Conflux (Exalted)|TDCSR|Spire of Conflux}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Shapechange",
+					"entries": [
+						"Keyleth rzuca {@spell shapechange}, aby zmienić się w {@creature planetar}, {@creature adult bronze dragon} lub {@filter inną istotę o CR 20 lub niższym, która nie jest konstruktem ani nieumarłym|bestiary|Challenge Rating=[0;&20]|type=!construct;!undead|source=null}."
+					]
+				},
+				{
+					"name": "Meteor ({@creature Earth Elemental} Form Only)",
+					"entries": [
+						"Gdy Keyleth spadnie z wysokości co najmniej 6 metrów, ląduje z ogromną siłą. Każda istota w promieniu 6 metrów od niej musi wykonać {@dc 19} testu Zręczności {@quickref saving throws|PHB|2|1|rzut obronny} lub otrzymać {@damage 1d6} obrażeń od tłuczenia za każde 3 metry, z których spadła Keyleth. Keyleth nadal otrzymuje {@quickref falling|XGE|2|0|spadające uszkodzenia} obrażeń, będąc w {@creature earth elemental} formie."
+					]
+				},
+				{
+					"name": "Chain Lightning",
+					"entries": [
+						"Keyleth rzuca {@spell chain lightning} (zaklęcie ratunkowe {@dc 22}) z {@item Spire of Conflux (Exalted)|TDCSR|Spire of Conflux} na istotę, którą widzi w promieniu 45 metrów od siebie."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Wild Shape",
+					"entries": [
+						"Keyleth magicznie {@spell polymorph|phb|polymorphs} zmienia się w bestię lub żywiołaka o CR 6 lub niższym. Jej statystyki z gry zostają zastąpione statystykami nowej postaci, ale zachowuje ona swoje dostosowanie, osobowość oraz wyniki Inteligencji, Mądrości i Charyzmy. Zachowuje również wszystkie swoje umiejętności i {@quickref saving throws|PHB|2|1|rzut obronny} biegłości, a także zyskuje umiejętności nowej postaci. Przyjmuje punkty trafienia i kości trafienia nowej postaci i powraca do liczby punktów trafienia, które posiadała, gdy powracała do swojej normalnej postaci. Wszelkie noszone przez nią wyposażenie jest absorbowane lub przenoszone przez jej nową formę (jej wybór). Powraca do swojej humanoidalnej postaci jako dodatkowa akcja lub gdy upadnie {@condition unconscious}. Jej ataki w formie Dzikiego Kształtu są magiczne i może rzucać zaklęcia podczas przemiany."
+					]
+				},
+				{
+					"name": "Healing Word (4th Level)",
+					"entries": [
+						"Keyleth rzuca {@spell healing word}, przywracając 16 ({@dice 4d4 + 6}) punktów życia sobie lub innej istocie, którą widzi w promieniu 18 metrów."
+					]
+				}
+			],
+			"traitTags": [
+				"Fey Ancestry"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AU",
+				"C",
+				"DU",
+				"E"
+			],
+			"damageTagsSpell": [
+				"B",
+				"F",
+				"L",
+				"N",
+				"P",
+				"S",
+				"T"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"strength",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Kraghammer Goat-Knight",
+			"shortName": "Goat-knight",
+			"source": "TDCSR",
+			"page": 246,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"dwarf"
+				]
+			},
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"{@item plate armor|PHB|plate}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "8d8 + 16"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 17,
+			"dex": 8,
+			"con": 14,
+			"int": 10,
+			"wis": 11,
+			"cha": 16,
+			"save": {
+				"str": "+5",
+				"dex": "+1",
+				"con": "+4",
+				"int": "+2",
+				"wis": "+2",
+				"cha": "+5"
+			},
+			"skill": {
+				"nature": "+2",
+				"religion": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"poison"
+			],
+			"languages": [
+				"Common",
+				"Dwarvish"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Kozi rycerz jest zaklinaczem 6 poziomu. Jego zdolność rzucania czarów to Charyzma ({@dc 13} ochrony przed zaklęciami, {@hit 5} do trafienia przy atakach zaklęciami). Ma przygotowane następujące zaklęcia paladyna:"
+					],
+					"spells": {
+						"1": {
+							"spells": [
+								"{@spell bless}",
+								"{@spell cure wounds}",
+								"{@spell protection from evil and good}",
+								"{@spell sanctuary}",
+								"{@spell shield of faith}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell branding smite}",
+								"{@spell find steed} ({@creature Goat-Knight Steed|TDCSR} only)",
+								"{@spell lesser restoration}",
+								"{@spell zone of truth}"
+							],
+							"slots": 2
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Aura of Protection",
+					"entries": [
+						"Za każdym razem, gdy kozi rycerz lub przyjazna mu istota w promieniu 3 metrów od niego wykona {@quickref saving throws|PHB|2|1|rzut obronny}, istota ta zyskuje premię +2 (wliczoną w {@quickref saving throws|PHB|2|1} koziego rycerza powyżej). Kozi rycerz musi być przytomny, aby przyznać i zyskać tę premię."
+					]
+				},
+				{
+					"name": "Divine Health",
+					"entries": [
+						"Kozi rycerz jest odporny na choroby."
+					]
+				},
+				{
+					"name": "Dwarven Resilience",
+					"entries": [
+						"Kozi rycerz posiada odporność na obrażenia od trucizny i {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} na {@quickref saving throws|PHB|2|1} przeciwko truciźnie."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Kozi rycerz wykonuje dwa ataki młotem wojennym."
+					]
+				},
+				{
+					"name": "Warhammer",
+					"entries": [
+						"{@atk mw} {@hit 5} do trafienia, zasięg 1,5 m., jeden cel. {@h}7 ({@damage 1d8 + 3}) obrażeń obuchowych lub 8 ({@damage 1d10 + 3}) obrażeń obuchowych, jeśli użyty oburącz."
+					]
+				}
+			],
+			"attachedItems": [
+				"warhammer|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"D"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"R"
+			],
+			"spellcastingTags": [
+				"CP"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Mage Hunter Golem",
+			"group": [
+				"Golem"
+			],
+			"source": "TDCSR",
+			"page": 242,
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 243,
+				"formula": "18d10 + 144"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 20
+			},
+			"str": 24,
+			"dex": 9,
+			"con": 26,
+			"int": 3,
+			"wis": 11,
+			"cha": 1,
+			"save": {
+				"wis": "+5",
+				"cha": "+0"
+			},
+			"skill": {
+				"perception": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft.",
+				"truesight 30 ft."
+			],
+			"passive": 15,
+			"immune": [
+				"poison",
+				"psychic",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical weapons that aren't adamantine",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "15",
+			"trait": [
+				{
+					"name": "Antimagic Cone",
+					"entries": [
+						"Golem tworzy obszar antymagii, jak w zaklęciu {@spell antimagic field}, w 18-metrowym stożku wychodzącym z niego. Na początku każdej swojej tury golem decyduje, w którą stronę zwrócony jest stożek i czy jest on aktywny."
+					]
+				},
+				{
+					"name": "Immutable Form",
+					"entries": [
+						"Golem jest odporny na wszelkie zaklęcia lub efekty, które mogłyby zmienić jego formę."
+					]
+				},
+				{
+					"name": "Magic Absorption",
+					"entries": [
+						"Za każdym razem, gdy na golema zostanie rzucone zaklęcie zadające obrażenia 4. poziomu lub niższe, nie otrzymuje on żadnych obrażeń, a zamiast tego odzyskuje liczbę punktów wytrzymałości równą zadanym obrażeniom."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Golem ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} na {@quickref saving throws|PHB|2|1} przeciwko zaklęciom i innym efektom magicznym."
+					]
+				},
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"Ataki broni golema są magiczne."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Golem używa Antymagicznego Uderzenia i wykonuje dwa ataki w walce wręcz lub trzy ataki w walce wręcz."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 12} do trafienia, zasięg 1,5 m., jeden cel. {@h}20 ({@damage 3d8 + 7}) obrażeń obuchowych."
+					]
+				},
+				{
+					"name": "Claw {@recharge 5}",
+					"entries": [
+						"{@atk mw} {@hit 12} do trafienia, zasięg 1,5 m., jeden cel. {@h}11 ({@damage 1d8 + 7}) obrażeń obuchowych, a cel musi odnieść sukces w teście {@dc 16} Zręczności {@quickref saving throws|PHB|2|1|rzut obronny} lub otrzymać magiczną obrożę na szyję. Podczas noszenia obroży cel nie może mówić i rzucać zaklęć. Udany {@dc 25} test Zręczności {@item thieves' tools|PHB} zdejmuje obrożę."
+					]
+				},
+				{
+					"name": "Antimagic Jolt",
+					"entries": [
+						"Każda istota znajdująca się w obrębie Antymagicznego Kręgu golema, która jest w stanie rzucić zaklęcie 1. poziomu lub wyższego, musi wykonać test {@dc 18} Mądrości {@quickref saving throws|PHB|2|1|rzut obronny}, otrzymując 21 ({@damage 6d6}) obrażeń psychicznych w przypadku nieudanego rzutu obronnego lub połowę tych obrażeń w przypadku udanego rzutu obronnego."
+					]
+				}
+			],
+			"traitTags": [
+				"Damage Absorption",
+				"Immutable Form",
+				"Magic Resistance",
+				"Magic Weapons"
+			],
+			"senseTags": [
+				"SD",
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"Y"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Magma Landshark",
+			"source": "TDCSR",
+			"page": 247,
+			"size": [
+				"H"
+			],
+			"type": "elemental",
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 150,
+				"formula": "12d12 + 72"
+			},
+			"speed": {
+				"walk": 50,
+				"burrow": 50,
+				"swim": {
+					"number": 50,
+					"condition": "(lava only)"
+				}
+			},
+			"str": 22,
+			"dex": 11,
+			"con": 22,
+			"int": 2,
+			"wis": 14,
+			"cha": 5,
+			"skill": {
+				"perception": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft.",
+				"tremorsense 120 ft."
+			],
+			"passive": 17,
+			"immune": [
+				"fire"
+			],
+			"cr": "14",
+			"trait": [
+				{
+					"name": "Searing Presence",
+					"entries": [
+						"Każda istota, która rozpocznie swoją turę w promieniu 3 metrów od landsharka, otrzymuje 11 ({@damage 2d10}) obrażeń od ognia."
+					]
+				},
+				{
+					"name": "Standing Leap",
+					"entries": [
+						"{@quickref jumping|PHB|4|0|skok w dal} wynosi do 12 metrów, a {@quickref jumping|PHB|4|0|skok wzwyż} do 6 metrów, z lub bez startu."
+					]
+				},
+				{
+					"name": "Illumination",
+					"entries": [
+						"Skowronek rzuca jasne światło w promieniu 4,5 metra i słabe światło na dodatkowe 4,5 metra."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 11} do trafienia, zasięg 1,5 m., jeden cel. {@h}45 ({@damage 6d12 + 6}) obrażeń przebijających i 14 ({@damage 4d6}) obrażeń od ognia. Jeśli celem jest duże lub mniejsze stworzenie, musi mu się udać rzut na {@dc 18} Zręczność {@quickref saving throws|PHB|2|1|rzut obronny} lub zostanie połknięte przez rekina lądowego. Połknięta istota ma {@condition blinded} i {@condition restrained}, {@quickref cover|PHB|3|0|całkowite pokrycie} odporności na ataki i inne efekty spoza skowronka oraz otrzymuje 42 ({@damage 12d6}) obrażeń od ognia na początku każdej tury skowronka.",
+						"Jeśli skowronek otrzyma 30 lub więcej obrażeń w jednej turze od stworzenia znajdującego się w jego wnętrzu, skowronkowi musi udać się rzut {@dc 23} na Konstytucję {@quickref saving throws|PHB|2|1|rzut obronny} na koniec tej tury lub zwymiotować wszystkie połknięte stworzenia, które spadną {@condition prone} na przestrzeń w promieniu 3 metrów od skowronka. Jeśli landshark umrze, połknięta istota nie jest już {@condition restrained} przez niego połykana i może uciec ze zwłok, wykorzystując 4,5 metra ruchu i wychodząc {@condition prone}."
+					]
+				},
+				{
+					"name": "Deadly Leap",
+					"entries": [
+						"Jeśli rekin lądowy {@quickref jumping|PHB|4|0|skoki} pokona co najmniej 4,5 metra w ramach swojego ruchu, może użyć tej akcji, aby wylądować na nogach w przestrzeni, w której znajduje się jedno lub więcej innych stworzeń. Każdej z tych istot musi udać się rzut na {@dc 18} Siłę lub Zręczność {@quickref saving throws|PHB|2|1|rzut obronny} (wybór należy do celu) lub zostanie powalona {@condition prone} i otrzyma 27 ({@damage 6d6 + 6}) obrażeń od tłuczenia oraz 21 ({@damage 6d6}) obrażeń od ognia. Po udanym rzucie obronnym istota otrzymuje tylko połowę obrażeń, nie zostaje powalona {@condition prone} i zostaje wypchnięta na 1,5 metra poza obszar działania rekina lądowego, do wybranego przez istotę niezajętego obszaru. Jeśli w zasięgu nie znajduje się żadne wolne miejsce, istota upada {@condition prone} w miejscu, w którym znajduje się landshark."
+					]
+				},
+				{
+					"name": "Lava Pool {@recharge}",
+					"entries": [
+						"Jeśli rekin lądowy znajduje się na twardym podłożu, topi obszar wokół siebie, tworząc kałużę lawy w promieniu 3 metrów. Każda istota, która rozpocznie swoją turę na tym obszarze lub wejdzie na niego po raz pierwszy w swojej turze, otrzymuje 44 ({@damage 8d10}) obrażeń od ognia."
+					]
+				}
+			],
+			"environment": [
+				"mountain",
+				"underdark"
+			],
+			"traitTags": [
+				"Illumination"
+			],
+			"senseTags": [
+				"D",
+				"T"
+			],
+			"actionTags": [
+				"Swallow"
+			],
+			"damageTags": [
+				"B",
+				"F",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded",
+				"prone",
+				"restrained"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Master Adranach",
+			"group": [
+				"Adranachs"
+			],
+			"source": "TDCSR",
+			"page": 245,
+			"size": [
+				"G"
+			],
+			"type": "construct",
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 290,
+				"formula": "20d20 + 80"
+			},
+			"speed": {
+				"walk": 60,
+				"fly": 120
+			},
+			"str": 25,
+			"dex": 16,
+			"con": 19,
+			"int": 10,
+			"wis": 14,
+			"cha": 11,
+			"save": {
+				"str": "+14",
+				"dex": "+10",
+				"wis": "+9"
+			},
+			"skill": {
+				"athletics": "+14",
+				"perception": "+16"
+			},
+			"senses": [
+				"darkvision 360 ft."
+			],
+			"passive": 26,
+			"resist": [
+				{
+					"special": "damage from spells"
+				}
+			],
+			"immune": [
+				"poison",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from non-magical attacks"
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"the languages spoken by its creator"
+			],
+			"cr": "21",
+			"trait": [
+				{
+					"name": "Arcane Leak",
+					"entries": [
+						"Kiedy adranach zostaje zredukowany do połowy swoich maksymalnych punktów wytrzymałości (145 punktów wytrzymałości), jego mithralowa maska pęka, a jego tajemna forma zaczyna się chwiać, tworząc wokół niego pole niestabilnej magii. Każda istota, która rozpocznie swoją turę w promieniu 6 metrów od adranacha lub wejdzie na ten obszar po raz pierwszy w swojej turze, otrzymuje 21 ({@damage 6d6}) obrażeń od promieniowania. Dodatkowo, jeśli istota rzuci zaklęcie na tym obszarze, musi wykonać {@dc 18} test umiejętności, używając swojej zdolności rzucania czarów. W przypadku niepowodzenia zaklęcie powraca, pochłaniając slot na zaklęcie i zadając rzucającemu 7 ({@damage 2d6}) obrażeń od siły za każdy poziom pochłoniętego slotu na zaklęcie."
+					]
+				},
+				{
+					"name": "Immutable Form",
+					"entries": [
+						"Adranach jest odporny na wszelkie zaklęcia lub efekty, które mogłyby zmienić jego formę."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Adranach ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} na {@quickref saving throws|PHB|2|1} przeciwko zaklęciom i innym efektom magicznym."
+					]
+				},
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"Ataki bronią adranacha są magiczne."
+					]
+				},
+				{
+					"name": "Colossal Build",
+					"entries": [
+						"Udźwig adranacha jest podwojony, podobnie jak ciężar, który może pchać, ciągnąć lub podnosić."
+					]
+				},
+				{
+					"name": "Slipstream",
+					"entries": [
+						"Adranach może rzucać {@spell invisibility} na siebie do woli. Kiedy jest w stanie {@condition invisible}, jego prędkość jest podwojona."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Jeśli adranachowi nie powiedzie się {@quickref saving throws|PHB|2|1|rzut obronny}, może zamiast tego zdecydować się na sukces."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Adranach wykonuje trzy ataki: dwa pazurami i jeden ogonem."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 14} do trafienia, jeden cel, zasięg 1,5 m. {@h}33 ({@damage 4d12 + 7}) obrażeń kłutych."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 14} do trafienia, jeden cel, zasięg 4,5 m. {@h}20 ({@damage 2d12 + 7}) obrażeń obuchowych."
+					]
+				},
+				{
+					"name": "Force Bolts {@recharge 5}",
+					"entries": [
+						"Adranach celuje w maksymalnie sześć stworzeń, które widzi w promieniu 36 metrów od siebie. Każdy cel musi odnieść sukces w teście {@dc 22} Zręczności {@quickref saving throws|PHB|2|1|rzut obronny} lub otrzymać 35 ({@damage 10d6}) obrażeń od siły."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Claw Attack",
+					"entries": [
+						"Adranach wykonuje jeden atak pazurami."
+					]
+				},
+				{
+					"name": "Vanish (Costs 2 Actions)",
+					"entries": [
+						"Adranach rzuca {@spell invisibility} i porusza się z prędkością odpowiadającą prędkości chodu lub lotu. (Ruch ten nie korzysta z cechy Poślizg)."
+					]
+				},
+				{
+					"name": "Starry Burst (Costs 3 Actions)",
+					"entries": [
+						"Z ciała adranacha bucha energia astralna. Każda istota w promieniu 18 metrów od adranacha musi wykonać rzut obronny {@dc 22} na Konstytucję {@quickref saving throws|PHB|2|1|rzut obronny}. W przypadku nieudanego rzutu, istota otrzymuje 27 ({@damage 5d10}) obrażeń od siły i jest {@condition blinded} do końca swojej następnej tury. Przy udanym rzucie obronnym, istota otrzymuje o połowę mniej obrażeń i nie jest {@condition blinded}. Następnie adranach obraca się o {@condition invisible} do początku swojej następnej tury lub do momentu wykonania ataku."
+					]
+				}
+			],
+			"variant": [
+				{
+					"name": "Adranach Customization",
+					"type": "variant",
+					"source": "TDCSR",
+					"page": 224,
+					"_version": {
+						"name": "Master Adranach (Customised)",
+						"addHeadersAs": "action"
+					},
+					"entries": [
+						"Adranachy są konstruktami spersonalizowanymi dla ich twórców. Jedną z cech, które sprawiają, że kandydat na zaklinacza jest atrakcyjny dla {@book League of Miracles|TDCSR|2|League of Miracles}, jest zainteresowanie wynalazkami, a zaklinacze są zachęcani do dostosowywania każdego stworzonego przez siebie adranacha. Poniżej znajduje się kilka opcjonalnych funkcji, w które zaklinacze wyposażyli swoje dzieła. Większość adranachów posiada jedną dodatkową cechę, a większość mistrzowskich adranachów posiada trzy.",
+						{
+							"type": "entries",
+							"name": "Advanced Tracking ({@i Recharges after a {@quickref resting|PHB|2|0|Long Rest}})",
+							"page": 224,
+							"entries": [
+								"Kiedy istota poniesie porażkę {@quickref saving throws|PHB|2|1|rzut obronny} przeciwko Piorunom Mocy adranacha, adranach może oznaczyć tę istotę na następne 24 godziny. Adranach zna kierunek, w którym znajduje się dana istota, o ile znajdują się oni na tej samej płaszczyźnie. Jeśli istota się porusza, adranach zna kierunek tego ruchu."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Arcane Bond",
+							"page": 224,
+							"entries": [
+								"Twórca adranacha może komunikować się z nim telepatycznie, gdy obaj znajdują się w odległości 1,5 kilometra od siebie. W ramach akcji twórca może widzieć oczami adranacha i słyszeć to, co on słyszy, aż do rozpoczęcia następnej tury twórcy, zyskując korzyści z wszelkich specjalnych zmysłów posiadanych przez adranacha. W tym czasie stwórca posiada {@condition deafened} i {@condition blinded} własnych zmysłów."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Astral Form ({@i Master Adranach Only; Recharges after a {@quickref resting|PHB|2|0|Long Rest}})",
+							"page": 224,
+							"entries": [
+								"Mistrz adranach może rzucić {@spell astral projection} na samego siebie."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Slipstream",
+							"page": 224,
+							"entries": [
+								"Adranach może rzucać {@spell invisibility} na siebie do woli. Kiedy jest w stanie {@condition invisible}, jego prędkość jest podwojona."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Truesight ({@i Master Adranach Only})",
+							"page": 224,
+							"entries": [
+								"Adranach ma {@sense truesight} zasięgu do 9 metrów. W ramach akcji może zwiększyć zasięg swojego {@sense truesight} do 36 metrów do końca swojej następnej tury."
+							]
+						}
+					]
+				}
+			],
+			"traitTags": [
+				"Immutable Form",
+				"Legendary Resistances",
+				"Magic Resistance",
+				"Magic Weapons"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"O",
+				"R",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Percival de Rolo",
+			"shortName": "Percy",
+			"alias": [
+				"Lord Percival Fredrickstein von Musel Klossowski de Rolo III"
+			],
+			"group": [
+				"Vox Machina"
+			],
+			"source": "TDCSR",
+			"page": 266,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item studded leather armor|PHB|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 190,
+				"formula": "20d10 + 40 + 40"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 22,
+			"con": 14,
+			"int": 20,
+			"wis": 16,
+			"cha": 14,
+			"save": {
+				"str": "+7",
+				"con": "+8"
+			},
+			"skill": {
+				"acrobatics": "+12",
+				"history": "+11",
+				"perception": "+9",
+				"persuasion": "+8"
+			},
+			"passive": 19,
+			"resist": [
+				"lightning"
+			],
+			"languages": [
+				"Celestial",
+				"Common",
+				"Elvish"
+			],
+			"cr": "18",
+			"trait": [
+				{
+					"name": "Action Surge (2/{@quickref resting|PHB|2|0|Short Rest})",
+					"entries": [
+						"Podczas swojej tury Percy może wykonać jedną dodatkową akcję."
+					]
+				},
+				{
+					"name": "Cabal's Ruin",
+					"entries": [
+						"{@item Cabal's Ruin (Exalted)|TDCSR|Cabal's Ruin} zapewnia Percy'emu {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} na {@quickref saving throws|PHB|2|1} przeciwko zaklęciom lub efektom magicznym. Dodatkowo {@item Cabal's Ruin (Exalted)|TDCSR|Cabal's Ruin} ma 10 ładunków. Kiedy Percy trafia atakiem z broni, może wydać do 10 ładunków, aby atak zadał {@dice 1d6} dodatkowych obrażeń od błyskawic za każdy wydany ładunek."
+					]
+				},
+				{
+					"name": "Indomitable (3/{@quickref resting|PHB|2|0|Long Rest})",
+					"entries": [
+						"Percy może przerzucić nieudany rzut {@quickref saving throws|PHB|2|1|rzut obronny}."
+					]
+				},
+				{
+					"name": "Misfire",
+					"entries": [
+						"Kiedy Percy wyrzuci 2 lub mniej na {@dice d20} podczas ataku Animusem lub Złą Nowiną, atak nie powiedzie się i nie będzie mógł ponownie użyć broni, dopóki nie wyda akcji na jej naprawę. W przypadku nietrafienia z Animusa, Percy otrzymuje 7 ({@damage 2d6}) obrażeń psychicznych."
+					]
+				},
+				{
+					"name": "No Mercy",
+					"entries": [
+						"Ataki bronią Percy'ego uzyskują trafienie krytyczne przy rzucie 19-20."
+					]
+				},
+				{
+					"name": "Ranged Master",
+					"entries": [
+						"Ataki Percy'ego bronią dystansową mają premię +2 do trafienia (wliczoną w ataki), ignorują {@quickref cover|PHB|3|0|pół osłony} i {@quickref cover|PHB|3|0|pokrywa trzy czwarte} i nie mają kary za zasięg. Dodatkowo, Percy może przyjąć karę -5 do dowolnego rzutu ataku dystansowego, aby zyskać premię +10 do rzutu na obrażenia."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Percy nosi {@item ring of lightning resistance} i {@item Cabal's Ruin (Exalted)|TDCSR|Cabal's Ruin}. Dzierży Animusa i Bad News, które są broniami +1."
+					]
+				},
+				{
+					"name": "Quick Draw",
+					"entries": [
+						"Percy dodaje swoją premię do biegłości do rzutów inicjatywy, co daje mu +12 do rzutów inicjatywy."
+					]
+				},
+				{
+					"name": "Toughness",
+					"entries": [
+						"Percy ma dodatkowe 40 punktów wytrzymałości."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Percy wykonuje cztery ataki dystansowe Animusem lub dwa ataki dystansowe Złą Nowiną. Gdy Percy trafi atakiem z którejkolwiek z tych broni, może wybrać jeden z poniższych efektów dodatkowych:",
+						{
+							"type": "list",
+							"items": [
+								{
+									"type": "item",
+									"name": "Deadeye",
+									"entries": [
+										"Percy zyskuje {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} przy następnym rzucie ataku w tej turze wykonanym przeciwko temu samemu celowi."
+									]
+								},
+								{
+									"type": "item",
+									"name": "Disarm",
+									"entries": [
+										"Cel musi wykonać {@dc 20} Siły {@quickref saving throws|PHB|2|1|rzut obronny}. W przypadku niepowodzenia, cel upuszcza jeden wybrany przez Percy'ego przedmiot, który trzyma."
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Animus",
+					"entries": [
+						"{@atk rw} {@hit 15} do trafienia, zasięg 96 m., jeden cel. {@h}11 ({@damage 1d10 + 6}) obrażeń przebijających i 3 ({@damage 1d6}) obrażenia psychiczne."
+					]
+				},
+				{
+					"name": "Bad News",
+					"entries": [
+						"{@atk rw} {@hit 15} do trafienia, zasięg 24 m., jeden cel. {@h}19 ({@damage 2d12 + 6}) obrażeń przebijających."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Absorb Magic (Recharges after a {@quickref resting|PHB|2|0|Short or Long Rest})",
+					"entries": [
+						"Kiedy Percy jest celem zaklęcia przeciwnika, może wchłonąć część energii zaklęcia do {@item Cabal's Ruin (Exalted)|TDCSR|Cabal's Ruin}. Zaklęcie działa na niego normalnie, ale płaszcz zyskuje liczbę ładunków równą poziomowi zaklęcia. Gdy to zrobi, zyskuje również odporność na jeden rodzaj obrażeń zadawanych przez zaklęcie do końca swojej następnej tury."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CE",
+				"E"
+			],
+			"damageTags": [
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Pike Trickfoot",
+			"shortName": "Pike",
+			"alias": [
+				"Champion of Sarenrae"
+			],
+			"group": [
+				"Vox Machina"
+			],
+			"isNamedCreature": true,
+			"source": "TDCSR",
+			"page": 269,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"gnome"
+				]
+			},
+			"ac": [
+				{
+					"ac": 23,
+					"from": [
+						"{@item plate of the dawnmartyr (exalted)|TDCSR|plate of the dawnmartyr}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 170,
+				"formula": "20d8 + 80"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 19,
+			"dex": 12,
+			"con": 18,
+			"int": 14,
+			"wis": 20,
+			"cha": 14,
+			"save": {
+				"wis": "+11",
+				"cha": "+8"
+			},
+			"skill": {
+				"athletics": "+10",
+				"perception": "+11",
+				"persuasion": "+8",
+				"religion": "+8",
+				"stealth": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 21,
+			"resist": [
+				"fire",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"Dwarvish",
+				"Gnomish",
+				"Undercommon"
+			],
+			"cr": "17",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Pike jest 20-poziomową czarodziejką. Jej umiejętnością rzucania czarów jest Mądrość ({@dc 19} ochrony przed zaklęciami, {@hit 11} do trafienia przy atakach zaklęciami). Ma przygotowane następujące zaklęcia kleryckie:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell light}",
+								"{@spell sacred flame} ({@dice 4d8})",
+								"{@spell spare the dying}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell command}",
+								"{@spell cure wounds}",
+								"{@spell guiding bolt}",
+								"{@spell healing word}",
+								"{@spell sanctuary}",
+								"{@spell shield of faith}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell aid}",
+								"{@spell lesser restoration}",
+								"{@spell spiritual weapon}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell glyph of warding}",
+								"{@spell mass healing word}",
+								"{@spell protection from energy}",
+								"{@spell revivify}",
+								"{@spell speak with dead}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell death ward}",
+								"{@spell freedom of movement}",
+								"{@spell guardian of faith}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell flame strike}",
+								"{@spell greater restoration}",
+								"{@spell hallow}",
+								"{@spell mass cure wounds}",
+								"{@spell scrying}"
+							]
+						},
+						"6": {
+							"slots": 2,
+							"spells": [
+								"{@spell heal}",
+								"{@spell heroes' feast}",
+								"{@spell planar ally}"
+							]
+						},
+						"7": {
+							"slots": 2,
+							"spells": [
+								"{@spell resurrection}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell holy aura}"
+							]
+						},
+						"9": {
+							"slots": 1,
+							"spells": [
+								"{@spell mass heal}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Gnome Cunning",
+					"entries": [
+						"Szczupak ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} do Inteligencji, Mądrości i Charyzmy {@quickref saving throws|PHB|2|1} przeciwko magii."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Pike włada {@item mace of disruption} i nosi {@item gauntlets of ogre power}, {@item boots of speed} oraz {@item plate of the dawnmartyr (exalted)|TDCSR|Plate of the Dawnmartyr}."
+					]
+				},
+				{
+					"name": "Dawnmartyr's Grace (1/{@quickref resting|PHB|2|0|Long Rest})",
+					"entries": [
+						"Kiedy Pike otrzyma 0 punktów życia podczas noszenia {@item plate of the dawnmartyr (exalted)|TDCSR|Plate of the Dawnmartyr}, może wybrać, czy otoczy ją podmuch leczącego płomienia. Odzyskuje 1 punkt wytrzymałości i zostaje podniesiona na nogi. Każdy wróg w promieniu 3 metrów od niej otrzymuje 7 ({@damage 2d6}) obrażeń od ognia lub promieniowania (do wyboru)."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Mace of Disruption",
+					"entries": [
+						"{@atk mw} {@hit 10} do trafienia, zasięg 1,5 m., jeden cel. {@h}17 ({@damage 3d8 + 4}) obrażeń obuchowych oraz dodatkowe 7 ({@damage 2d6}) obrażeń od promieniowania, jeśli cel jest czartem lub nieumarłym. Jeśli po otrzymaniu tych obrażeń cel ma 25 lub mniej punktów wytrzymałości, musi wykonać test {@dc 15} Mądrości {@quickref saving throws|PHB|2|1|rzut obronny} lub zostanie zniszczony. W przypadku udanego rzutu obronnego, istota otrzymuje {@condition frightened} Pike do końca swojej następnej tury."
+					]
+				},
+				{
+					"name": "Guiding Bolt (5th Level)",
+					"entries": [
+						"{@atk rs} {@hit 11} do trafienia, zasięg 36 m., jeden cel. {@h}28 ({@damage 8d6}) obrażeń od promieniowania, a następny rzut ataku wykonany przeciwko celowi przed końcem następnej tury Pike'a ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga}."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Battle Priest (5/{@quickref resting|PHB|2|0|Long Rest})",
+					"entries": [
+						"Jeśli Pike użyje akcji {@action Attack}, może wykonać jeden atak bronią jako akcję dodatkową."
+					]
+				},
+				{
+					"name": "{@spell Healing Word} (4th Level)",
+					"entries": [
+						"Pike rzuca {@spell healing word}, przywracając 16 ({@dice 4d4 + 6}) punktów życia sobie lub innej istocie, którą widzi w promieniu 18 metrów."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Dawnmartyr's Rebuke",
+					"entries": [
+						"Kiedy istota w promieniu 1,5 metra od Pike trafi ją atakiem w zwarciu, może zadać jej 7 ({@damage 2d6}) obrażeń od ognia lub promieniowania (do wyboru)."
+					]
+				},
+				{
+					"name": "Everlight's Guidance (3/{@quickref resting|PHB|2|0|Short Rest})",
+					"entries": [
+						"Kiedy Pike lub istota, którą widzi w promieniu 9 metrów od niej, wykona rzut ataku, może przyznać premię +10 do tego rzutu. Może przyznać tę premię po wykonaniu rzutu, ale przed trafieniem lub chybieniem."
+					]
+				}
+			],
+			"attachedItems": [
+				"mace of disruption|dmg"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"G",
+				"U"
+			],
+			"damageTags": [
+				"B",
+				"F",
+				"R"
+			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"F",
+				"L",
+				"O",
+				"R",
+				"T"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"prone"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Plainscow",
+			"source": "TDCSR",
+			"page": 248,
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 42,
+				"formula": "5d10 + 15"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 18,
+			"dex": 8,
+			"con": 16,
+			"int": 2,
+			"wis": 10,
+			"cha": 6,
+			"skill": {
+				"insight": "+2"
+			},
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Trampling Charge",
+					"entries": [
+						"Jeśli Plainscow przemieści się co najmniej 6 metrów prosto w kierunku istoty, a następnie uderzy ją kopytami w tej samej turze, cel musi odnieść sukces w teście {@dc 14} Siły {@quickref saving throws|PHB|2|1|rzut obronny} lub zostać powalony {@condition prone}. Jeśli cel ma {@condition prone}, Plainscow może wykonać kolejny atak kopytami jako akcję dodatkową."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Hooves",
+					"entries": [
+						"{@atk mw} {@hit 6} do trafienia, zasięg 1,5 m., jeden cel. {@h}11 ({@damage 2d6 + 4}) obrażeń obuchowych."
+					]
+				}
+			],
+			"environment": [
+				"grassland",
+				"hill",
+				"urban"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Platinum Golem",
+			"group": [
+				"Golem"
+			],
+			"source": "TDCSR",
+			"page": 243,
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"ac": [
+				{
+					"ac": 21,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 189,
+				"formula": "18d10 + 90"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 22,
+			"dex": 10,
+			"con": 21,
+			"int": 3,
+			"wis": 12,
+			"cha": 1,
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 11,
+			"immune": [
+				"acid",
+				"cold",
+				"fire",
+				"poison",
+				"psychic",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "16",
+			"trait": [
+				{
+					"name": "Divine Custodian",
+					"entries": [
+						"Kiedy golem trafi istotę z {@action opportunity attack}, prędkość tej istoty staje się równa 0 do końca tury."
+					]
+				},
+				{
+					"name": "Immutable Form",
+					"entries": [
+						"Golem jest odporny na wszelkie zaklęcia lub efekty, które mogłyby zmienić jego formę."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Golem ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} na {@quickref saving throws|PHB|2|1} przeciwko zaklęciom i innym efektom magicznym."
+					]
+				},
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"Ataki broni golema są magiczne."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Golem wykonuje dwa ataki w walce wręcz."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 11} do trafienia, zasięg 1,5 m., jeden cel. {@h}19 ({@damage 3d8 + 6}) obrażeń przebijających."
+					]
+				},
+				{
+					"name": "Mace",
+					"entries": [
+						"{@atk mw} {@hit 11} do trafienia, zasięg 3 m., jeden cel. {@h}22 ({@damage 3d10 + 6}) obrażeń obuchowych."
+					]
+				},
+				{
+					"name": "Radiant Blast {@recharge}",
+					"entries": [
+						"Golem emituje wiązkę promienistego światła w promieniu 6 metrów. Każda istota w tym obszarze musi wykonać {@dc 18} obrony {@quickref saving throws|PHB|2|1|rzut obronny}. W przypadku nieudanego rzutu, istota otrzymuje 18 ({@damage 4d8}) obrażeń od promieniowania i zostaje unieruchomiona {@condition blinded} do końca swojej następnej tury. W przypadku sukcesu, istota otrzymuje o połowę mniej obrażeń i nie jest {@condition blinded}."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Divine Judgment",
+					"entries": [
+						"Gdy istota znajdująca się w promieniu 3 metrów od golema wykona atak przeciwko celowi innemu niż golem, golem może wykonać atak maczugą przeciwko tej istocie."
+					]
+				}
+			],
+			"attachedItems": [
+				"mace|phb"
+			],
+			"traitTags": [
+				"Immutable Form",
+				"Magic Resistance",
+				"Magic Weapons"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"P",
+				"R"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ravager Slaughter Lord",
+			"group": [
+				"Ravagers"
+			],
+			"source": "TDCSR",
+			"page": 250,
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"unarmored defense"
+					]
+				}
+			],
+			"hp": {
+				"average": 157,
+				"formula": "15d10 + 75"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 22,
+			"dex": 14,
+			"con": 20,
+			"int": 12,
+			"wis": 16,
+			"cha": 16,
+			"save": {
+				"str": "+10",
+				"con": "+9",
+				"wis": "+7"
+			},
+			"skill": {
+				"intimidation": "+11",
+				"religion": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"languages": [
+				"Abyssal",
+				"Common",
+				"one other language"
+			],
+			"cr": "9",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"Wrodzoną umiejętnością Władcy Rzeźni jest Mądrość ({@dc 15} odporności na zaklęcia, {@hit 7} do trafienia przy atakach zaklęciami). Może wrodzenie rzucać następujące zaklęcia, niewymagające składników materialnych:"
+					],
+					"will": [
+						"{@spell thaumaturgy}"
+					],
+					"daily": {
+						"3e": [
+							"{@spell flame strike}",
+							"{@spell spirit guardians}"
+						],
+						"1e": [
+							"{@spell control weather}",
+							"{@spell divine word}",
+							"{@spell fire storm}"
+						]
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"Jeśli Władcy Rzeźni nie uda się wykonać {@quickref saving throws|PHB|2|1|rzut obronny}, może zamiast tego zdecydować się na sukces."
+					]
+				},
+				{
+					"name": "Unarmored Defense",
+					"entries": [
+						"Gdy Władca Rzeźni nie ma na sobie zbroi i nie dzierży broni {@item shield|PHB}, jego AC uwzględnia modyfikator do Konstytucji."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Władca rzezi wykonuje cztery ataki dwoma mieczami świetlnymi lub trzy ataki włócznią."
+					]
+				},
+				{
+					"name": "Dual Greatswords",
+					"entries": [
+						"{@atk mw} {@hit 10} do trafienia, zasięg 1,5 m., jeden cel. {@h}13 ({@damage 2d6 + 6}) obrażeń przebijających plus 3 ({@damage 1d6}) obrażenia od ognia."
+					]
+				},
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 10} do trafienia, zasięg 20/18 m., jeden cel. {@h}13 ({@damage 2d6 + 6}) obrażeń przebijających plus 3 ({@damage 1d6}) obrażenia od ognia lub 15 ({@damage 2d8 + 6}) obrażeń przebijających plus 3 ({@damage 1d6}) obrażenia od ognia, jeśli użyty oburącz do ataku wręcz."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Aggressive",
+					"entries": [
+						"Władca rzezi może poruszać się z maksymalną prędkością w kierunku wrogiej istoty, którą widzi."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attack",
+					"entries": [
+						"Władca Rzeźni wykonuje atak włócznią lub dwoma mieczami."
+					]
+				},
+				{
+					"name": "Move",
+					"entries": [
+						"Władca rzezi porusza się z połową swojej prędkości."
+					]
+				},
+				{
+					"name": "Cast a Spell (Costs 3 Actions)",
+					"entries": [
+						"Władca rzezi {@action cast a spell|PHB|casts an innate spell}."
+					]
+				}
+			],
+			"environment": [
+				"grassland"
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"F",
+				"P"
+			],
+			"damageTagsSpell": [
+				"F",
+				"N",
+				"R"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened",
+				"stunned"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ravager Stabby-Stabber",
+			"group": [
+				"Ravagers"
+			],
+			"source": "TDCSR",
+			"page": 250,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|PHB|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 36,
+				"formula": "8d6 + 8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 16,
+			"con": 12,
+			"int": 10,
+			"wis": 8,
+			"cha": 7,
+			"save": {
+				"wis": "+1"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"conditionImmune": [
+				"charmed"
+			],
+			"languages": [
+				"Common",
+				"one other language"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Stabby Frenzy",
+					"entries": [
+						"Gdy dźgacz trafi atakiem w walce wręcz, może zaatakować ponownie i kontynuować wykonywanie dodatkowych ataków, dopóki nie chybi. Pchnięty nożem nie może poruszać się między atakami wykonanymi z tą cechą."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 5} do trafienia, zasięg 1,5 m., jeden cel. {@h}6 ({@damage 1d6 + 3}) obrażeń przebijających."
+					]
+				},
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} do trafienia, zasięg 1,5 m., zasięg 20/18 m., jeden cel. {@h}5 ({@damage 1d4 + 3}) obrażeń przebijających."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Nimble Escape",
+					"entries": [
+						"Pchnięcie nożem może użyć akcji {@action Disengage} lub {@action Hide}."
+					]
+				}
+			],
+			"environment": [
+				"grassland"
+			],
+			"attachedItems": [
+				"dagger|phb",
+				"shortsword|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Remnant Chosen",
+			"shortName": "chosen",
+			"group": [
+				"Remnants"
+			],
+			"source": "TDCSR",
+			"page": 251,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any"
+				]
+			},
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 117,
+				"formula": "18d8 + 36"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 14,
+			"int": 15,
+			"wis": 16,
+			"cha": 20,
+			"save": {
+				"cha": "+9",
+				"wis": "+7"
+			},
+			"skill": {
+				"arcana": "+10",
+				"deception": "+9"
+			},
+			"senses": [
+				"truesight 60 ft."
+			],
+			"passive": 13,
+			"resist": [
+				{
+					"special": "damage from spells"
+				}
+			],
+			"immune": [
+				"necrotic"
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Infernal"
+			],
+			"cr": "12",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Wybrany jest 18-poziomowym czarodziejem. Jego zdolność rzucania czarów to Charyzma (ratunek przed zaklęciami {@dc 17}, {@hit 9} do trafienia przy atakach zaklęciami). Ma przygotowane następujące zaklęcia czarnoksięskie:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch} ({@dice 4d8})",
+								"{@spell dancing lights}",
+								"{@spell mage hand}",
+								"{@spell message}",
+								"{@spell shocking grasp} ({@dice 4d8})"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell charm person}",
+								"{@spell mage armor}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell blindness/deafness}",
+								"{@spell detect thoughts}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell fly}",
+								"{@spell hypnotic pattern}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell greater invisibility}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell dominate person}",
+								"{@spell seeming}"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell eyebite}"
+							]
+						},
+						"7": {
+							"slots": 1,
+							"spells": [
+								"{@spell finger of death}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell power word stun}"
+							]
+						},
+						"9": {
+							"slots": 1,
+							"spells": [
+								"{@spell power word kill}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Wybrany ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} na {@quickref saving throws|PHB|2|1} przeciwko zaklęciom i innym efektom magicznym."
+					]
+				},
+				{
+					"name": "Withering Spells",
+					"entries": [
+						"Kiedy wybrany rzuca zaklęcie 1. poziomu lub wyższego, następny atak uschniętą ręką, który wykona przed końcem swojej następnej tury, zadaje dodatkowe obrażenia równe {@dice 1d6} za każdy poziom rzuconego zaklęcia."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Withering Touch",
+					"entries": [
+						"{@atk ms} {@hit 9} do trafienia, zasięg 1,5 m., jeden cel. {@h}17 ({@damage 5d6}) obrażeń od siły plus dodatkowe obrażenia wynikające z cechy Więdnący Dotyk. Jeśli obrażenia te zredukują liczbę punktów życia istoty do 0, istota ta i wszystko, co ma na sobie i przy sobie, z wyjątkiem magicznych przedmiotów, zostaje zamienione w kupkę drobnego szarego pyłu. Stworzenie może zostać przywrócone do życia tylko za pomocą zaklęcia {@spell true resurrection} lub {@spell wish}."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Inescapable Sight",
+					"entries": [
+						"Wybraniec wybiera istotę lub przedmiot pod wpływem {@filter zaklęcie iluzji 4. poziomu lub niższego|spells|school=I|level=0;1;2;3;4}. Jedna wybrana przez Wybrańca iluzja wpływająca na cel zostaje rozproszona."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"I"
+			],
+			"damageTags": [
+				"O"
+			],
+			"damageTagsSpell": [
+				"L",
+				"N"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"frightened",
+				"incapacitated",
+				"invisible",
+				"stunned",
+				"unconscious"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Remnant Cultist",
+			"shortName": "cultist",
+			"group": [
+				"Remnants"
+			],
+			"source": "TDCSR",
+			"page": 252,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any"
+				]
+			},
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 60,
+				"formula": "11d8 + 11"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 16,
+			"con": 12,
+			"int": 18,
+			"wis": 8,
+			"cha": 8,
+			"save": {
+				"wis": "+2"
+			},
+			"skill": {
+				"deception": "+5",
+				"stealth": "+6"
+			},
+			"passive": 9,
+			"resist": [
+				"necrotic",
+				"psychic"
+			],
+			"languages": [
+				"Common",
+				"Infernal"
+			],
+			"cr": "7",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Pozostały kultysta jest 11. poziomowym czarodziejem. Jego zdolność rzucania zaklęć to Inteligencja ({@dc 15} obrony przed zaklęciami, {@hit 7} do trafienia przy atakach zaklęciami). Kultysta ma przygotowane następujące zaklęcia czarodziejskie:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch} ({@dice 3d8})",
+								"{@spell message}",
+								"{@spell minor illusion}",
+								"{@spell prestidigitation}",
+								"{@spell ray of frost} ({@dice 3d8})"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell detect magic}",
+								"{@spell Tasha's hideous laughter}",
+								"{@spell mage armor}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell detect thoughts}",
+								"{@spell suggestion}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell fear}",
+								"{@spell vampiric touch}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell greater invisibility}",
+								"{@spell phantasmal killer}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell dream}",
+								"{@spell mislead}"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell circle of death}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Unknowable Secrets",
+					"entries": [
+						"Każda próba nawiązania mentalnej więzi z kultystą, rzucenia {@spell scrying} na kultystę lub rzucenia {@spell speak with dead} na kultystę automatycznie kończy się niepowodzeniem, a istota, która zainicjowała próbę, otrzymuje 21 ({@damage 6d6}) obrażeń psychicznych."
+					]
+				},
+				{
+					"name": "One-Eyed",
+					"entries": [
+						"Kultysta ma {@quickref Advantage and Disadvantage|PHB|2|0|wada} na każdy rzut ataku wykonany przeciwko celowi oddalonemu o więcej niż 9 metrów."
+					]
+				},
+				{
+					"name": "Spellsteal",
+					"entries": [
+						"Jeśli kultysta z powodzeniem użyje {@spell counterspell} do zanegowania zaklęcia innej istoty, może rzucić kontrowane zaklęcie raz przed końcem swojej następnej tury, używając jednego ze swoich slotów na zaklęcia tego samego poziomu lub wyższego i nie wymagając żadnych materialnych komponentów."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Dagger of Wounding",
+					"entries": [
+						"{@atk mw,rw} {@hit 6} do trafienia, zasięg 1,5 m., zasięg 20/18 m., jeden cel. {@h}5 ({@damage 1d4 + 3}) obrażeń przebijających. Punkty życia utracone w wyniku {@item sword of wounding|DMG|this weapon's} obrażeń można odzyskać tylko poprzez {@quickref resting|PHB|2|0|Krótki lub długi odpoczynek}, a nie regenerację, magię lub w jakikolwiek inny sposób.",
+						"Raz na turę, gdy kultysta trafi istotę atakiem z użyciem tej broni, może zranić cel. Na początku każdej tury zranionej istoty otrzymuje ona 2 ({@damage 1d4}) obrażenia nekrotyczne za każdym razem, gdy została zraniona tą bronią. Następnie może wykonać rzut {@dc 15} na Konstytucję {@quickref saving throws|PHB|2|1|rzut obronny}, kończąc efekt wszystkich takich ran na sobie w przypadku sukcesu. Alternatywnie, zraniona istota lub istota znajdująca się w promieniu 1,5 metra od niej, może użyć akcji, aby wykonać {@dc 15} test Mądrości ({@skill Medicine}), kończący efekt takich ran na niej w przypadku sukcesu."
+					]
+				}
+			],
+			"languageTags": [
+				"C",
+				"I"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"C",
+				"N",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened",
+				"frightened",
+				"incapacitated",
+				"invisible",
+				"prone"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Rivermaw Brawler",
+			"shortName": "brawler",
+			"group": [
+				"Rivermaw Herd"
+			],
+			"source": "TDCSR",
+			"page": 254,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any"
+				]
+			},
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"unarmored defense"
+					]
+				}
+			],
+			"hp": {
+				"average": 65,
+				"formula": "10d8 + 20"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 17,
+			"dex": 14,
+			"con": 15,
+			"int": 14,
+			"wis": 16,
+			"cha": 8,
+			"save": {
+				"str": "+5",
+				"wis": "+5"
+			},
+			"skill": {
+				"acrobatics": "+4",
+				"athletics": "+5",
+				"perception": "+5"
+			},
+			"passive": 15,
+			"languages": [
+				"Common",
+				"Giant"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Unarmored Defense",
+					"entries": [
+						"Gdy awanturnik nie ma na sobie zbroi i nie używa broni {@item shield|PHB}, jego AC uwzględnia modyfikator Mądrości."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Awanturnik wykonuje trzy uderzenia bez broni."
+					]
+				},
+				{
+					"name": "Unarmed Strike",
+					"entries": [
+						"{@atk mw} {@hit 5} do trafienia, zasięg 1,5 m., jeden cel. {@h}7 ({@damage 1d8 + 3}) obrażeń obuchowych. Jeśli celem jest duże lub mniejsze stworzenie, awanturnik może wybrać jeden z następujących dodatkowych efektów:",
+						{
+							"type": "list",
+							"items": [
+								{
+									"name": "Bruise",
+									"type": "item",
+									"entries": [
+										"Cel musi odnieść sukces w teście {@dc 13} Konstytucji {@quickref saving throws|PHB|2|1|rzut obronny}. W przypadku niepowodzenia jego prędkość zostaje zmniejszona o 1,5 metra, dopóki nie otrzyma co najmniej 1 punktu magicznego uzdrowienia. Istota może użyć swojej akcji do wykonania {@dc 15} testu Mądrości ({@skill Medicine}), aby uleczyć dotkniętą istotę w promieniu 1,5 metra od niej (w tym siebie), przywracając utraconą prędkość w przypadku sukcesu."
+									]
+								},
+								{
+									"name": "Disarm",
+									"type": "item",
+									"entries": [
+										"Cel musi odnieść sukces przy {@dc 13} Sile {@quickref saving throws|PHB|2|1|rzut obronny} lub upuścić jeden z trzymanych przedmiotów. Brawler może wybrać, który przedmiot zostanie upuszczony i może go podnieść."
+									]
+								},
+								{
+									"name": "Suplex",
+									"type": "item",
+									"entries": [
+										"Cel musi odnieść sukces w walce z {@dc 13} Siłą {@quickref saving throws|PHB|2|1|rzut obronny} lub zostać powalony {@condition prone}."
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Clever Fighter",
+					"entries": [
+						"Kiedy awanturnik trafia atakiem lub jest celem ataku, może dodać swój modyfikator Inteligencji (+2) do swoich rzutów na obrażenia lub AC do końca swojej tury."
+					]
+				},
+				{
+					"name": "Endurance (Recharges after a {@quickref resting|PHB|2|0|Short or Long Rest})",
+					"entries": [
+						"Kiedy brawler otrzymuje obrażenia, może je zmniejszyć o 8 ({@dice 1d12 + 2})."
+					]
+				}
+			],
+			"environment": [
+				"grassland"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GI"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Rivermaw Stormborn",
+			"shortName": "stormborn",
+			"group": [
+				"Rivermaw Herd"
+			],
+			"source": "TDCSR",
+			"page": 254,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any"
+				]
+			},
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item hide armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 102,
+				"formula": "12d8 + 48"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 12,
+			"con": 18,
+			"int": 11,
+			"wis": 10,
+			"cha": 12,
+			"save": {
+				"con": "+7",
+				"cha": "+4"
+			},
+			"skill": {
+				"athletics": "+7",
+				"intimidation": "+4"
+			},
+			"passive": 10,
+			"resist": [
+				"lightning"
+			],
+			"languages": [
+				"Common",
+				"Giant"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"Wrodzoną zdolnością stormborna do rzucania zaklęć jest Charyzma (odporność na zaklęcia {@dc 12}). Stormborn może wrodzenie rzucać następujące zaklęcia, nie wymagające żadnych materialnych komponentów:"
+					],
+					"daily": {
+						"1": [
+							"{@spell call lightning}"
+						],
+						"3": [
+							"{@spell lightning bolt}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Reckless",
+					"entries": [
+						"Na początku swojej tury stormborn może zyskać {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} do wszystkich rzutów ataku bronią białą podczas tej tury, ale rzuty ataku przeciwko niemu mają {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} do początku jego następnej tury."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Stormborn wykonuje dwa ataki wielkim toporem. Jeśli koncentruje się na {@spell call lightning}, może również przywołać błyskawicę."
+					]
+				},
+				{
+					"name": "Greataxe",
+					"entries": [
+						"{@atk mw} {@hit 7} do trafienia, zasięg 1,5 m., jeden cel. {@h}10 ({@damage 1d12 + 4}) obrażeń kłutych plus 3 ({@damage 1d6}) obrażenia od błyskawic."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Endurance (Recharges after a {@quickref resting|PHB|2|0|Short or Long rest})",
+					"entries": [
+						"Kiedy stormborn otrzymuje obrażenia, może je zmniejszyć o 10 ({@dice 1d12 + 4})."
+					]
+				}
+			],
+			"environment": [
+				"grassland"
+			],
+			"attachedItems": [
+				"greataxe|phb"
+			],
+			"traitTags": [
+				"Reckless"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GI"
+			],
+			"damageTags": [
+				"L",
+				"S"
+			],
+			"damageTagsSpell": [
+				"L"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sagacitous Erusaire",
+			"isNpc": true,
+			"source": "TDCSR",
+			"page": 122,
+			"_copy": {
+				"name": "Guardian Naga",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the naga",
+						"with": "Sagacitous Erusaire",
+						"flags": "i"
+					},
+					"spellcasting": {
+						"mode": "prependArr",
+						"items": {
+							"name": "Innate Spellcasting",
+							"headerEntries": [
+								"Zdolność rzucania czarów Sagacitous Erusaire to Mądrość ({@dc 16} {@hit 8} do trafienia przy atakach zaklęciami). Potrafi wrodzenie rzucać następujące zaklęcia, które nie wymagają żadnych materialnych komponentów:"
+							],
+							"will": [
+								"{@spell contagion}"
+							],
+							"ability": "wis"
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Scanlan Shorthalt",
+			"shortName": "Scanlan",
+			"group": [
+				"Vox Machina"
+			],
+			"isNamedCreature": true,
+			"source": "TDCSR",
+			"page": 271,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"gnome"
+				]
+			},
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item +2 Studded Leather Armor of Acid Resistance|TDCSR}",
+						"{@item +2 ring of protection|TDCSR}"
+					]
+				}
+			],
+			"hp": {
+				"average": 190,
+				"formula": "20d8 + 60 + 40"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 13,
+			"dex": 11,
+			"con": 16,
+			"int": 16,
+			"wis": 7,
+			"cha": 22,
+			"save": {
+				"str": "+3",
+				"dex": "+7",
+				"con": "+5",
+				"int": "+5",
+				"wis": "+0",
+				"cha": "+13"
+			},
+			"skill": {
+				"acrobatics": "+5",
+				"arcana": "+8",
+				"athletics": "+6",
+				"deception": "+16",
+				"intimidation": "+11",
+				"investigation": "+13",
+				"performance": "+16",
+				"persuasion": "+16"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 8,
+			"resist": [
+				"acid"
+			],
+			"languages": [
+				"Common",
+				"Gnomish",
+				"Marquesian"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Scanlan jest 20-poziomowym zaklinaczem. Jego zdolność rzucania zaklęć to Charyzma ({@dc 19}, {@hit 11} do trafienia przy atakach zaklęciami). Ma przygotowane następujące zaklęcia barda:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell mage hand}",
+								"{@spell message}",
+								"{@spell minor illusion}",
+								"{@spell vicious mockery}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell healing word}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell blindness/deafness}",
+								"{@spell hold person}",
+								"{@spell invisibility}",
+								"{@spell suggestion}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell lightning bolt}",
+								"{@spell stinking cloud}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell dimension door}",
+								"{@spell polymorph}",
+								"{@spell Otiluke's Resilient Sphere||resilient sphere}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell bigby's hand||arcane hand}",
+								"{@spell dominate person}",
+								"{@spell modify memory}",
+								"{@spell seeming}"
+							]
+						},
+						"6": {
+							"slots": 2,
+							"spells": [
+								"{@spell eyebite}"
+							]
+						},
+						"7": {
+							"slots": 2,
+							"spells": [
+								"{@spell Mordenkainen's Magnificent Mansion||magnificent mansion}",
+								"{@spell reverse gravity}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell dominate monster}"
+							]
+						},
+						"9": {
+							"slots": 1,
+							"spells": [
+								"{@spell true polymorph}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Gnome Cunning",
+					"entries": [
+						"Scanlan ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} do Inteligencji, Mądrości i Charyzmy {@quickref saving throws|PHB|2|1} przeciwko magii."
+					]
+				},
+				{
+					"name": "Focused",
+					"entries": [
+						"Scanlan ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} na Konstytucję {@quickref saving throws|PHB|2|1}, aby utrzymać {@condition concentration} na zaklęcia."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Scanlan włada {@item Mythcarver (Exalted)|TDCSR|Mythcarver}, nosi {@item +2 Studded Leather Armor of Acid Resistance|TDCSR} i {@item +2 ring of protection|TDCSR|ring of protection with a +2 bonus} oraz {@item hat of disguise} i {@item wand of magic missiles}."
+					]
+				},
+				{
+					"name": "Toughness",
+					"entries": [
+						"Scanlan ma dodatkowe 40 punktów wytrzymałości."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Mythcarver",
+					"entries": [
+						"{@atk mw} {@hit 9} do trafienia, zasięg 1,5 m., jeden cel. {@h}7 ({@damage 1d8 + 3}) obrażeń przebijających i 3 ({@damage 1d6}) obrażenia od siły."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Arcane Fist (8th Level)",
+					"entries": [
+						"{@atk ms} {@hit 11} do trafienia, zasięg 1,5 m., jeden cel. {@h}45 ({@damage 10d8}) obrażeń od siły. Scanlan może użyć tej dodatkowej akcji tylko podczas koncentrowania się na zaklęciu {@spell Bigby's Hand||arcane hand}."
+					]
+				},
+				{
+					"name": "Bardic Inspiration (6/{@quickref resting|PHB|2|0|Short Rest})",
+					"entries": [
+						"Scanlan przyznaje kość Bardic Inspiration jednej istocie w promieniu 18 metrów od niego, która może go usłyszeć. Raz w ciągu następnych 10 minut, istota ta może rzucić {@dice d12} i dodać wyrzuconą liczbę do jednego testu umiejętności, rzutu ataku lub {@quickref saving throws|PHB|2|1|rzut obronny}, który wykona.  Kiedy Scanlan używa tej zdolności, zyskuje {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} do rzutów ataku z {@item Mythcarver (Exalted)|TDCSR|Mythcarver} do końca swojej tury."
+					]
+				},
+				{
+					"name": "{@spell Healing Word} (5th Level)",
+					"entries": [
+						"Scanlan rzuca {@spell healing word}, przywracając 18 ({@dice 5d4 + 6}) punktów życia sobie lub innej istocie w promieniu 18 metrów."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Cutting Words",
+					"entries": [
+						"Kiedy istota, którą Scanlan widzi w promieniu 18 metrów od siebie, wykonuje rzut ataku, test umiejętności lub rzut obrażeń, może on użyć Bardowskiej Inspiracji, aby rzucić {@dice d12} i odjąć wyrzuconą liczbę od rzutu tej istoty. Stworzenie ma również {@quickref Advantage and Disadvantage|PHB|2|0|wada} na następny rzut {@quickref saving throws|PHB|2|1|rzut obronny}."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"G"
+			],
+			"damageTags": [
+				"O",
+				"P"
+			],
+			"damageTagsSpell": [
+				"B",
+				"L",
+				"O",
+				"T",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CB"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"frightened",
+				"incapacitated",
+				"invisible",
+				"paralyzed",
+				"unconscious"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Taryon Darrington",
+			"shortName": "Tary",
+			"group": [
+				"Vox Machina"
+			],
+			"source": "TDCSR",
+			"page": 273,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item +1 breastplate}"
+					]
+				}
+			],
+			"hp": {
+				"average": 127,
+				"formula": "15d8 + 30 + 30"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": {
+					"number": 50,
+					"condition": "(with {@item broom of flying})"
+				}
+			},
+			"str": 12,
+			"dex": 11,
+			"con": 14,
+			"int": 18,
+			"wis": 8,
+			"cha": 15,
+			"save": {
+				"con": "+7",
+				"int": "+9"
+			},
+			"skill": {
+				"arcana": "+9",
+				"history": "+9",
+				"perception": "+4",
+				"survival": "+4"
+			},
+			"passive": 9,
+			"resist": [
+				"acid",
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"Gnomish",
+				"Sylvan",
+				"Undercommon"
+			],
+			"cr": "9",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Tary jest 15-poziomowym zaklinaczem. Jego zdolność rzucania czarów to Inteligencja ({@dc 16} ochrony przed zaklęciami, {@hit 8} do trafienia przy atakach zaklęciami). Ma przygotowane następujące zaklęcia:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell mending}",
+								"{@spell prestidigitation}",
+								"{@spell ray of frost} ({@dice 3d8})"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell detect magic}",
+								"{@spell heroism}",
+								"{@spell identify}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell alter self}",
+								"{@spell branding smite}",
+								"{@spell see invisibility}",
+								"{@spell warding bond}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell dispel magic}",
+								"{@spell fly}",
+								"{@spell haste}",
+								"{@spell magic circle}",
+								"{@spell revivify}"
+							]
+						},
+						"4": {
+							"slots": 2,
+							"spells": [
+								"{@spell banishment}",
+								"{@spell fabricate}",
+								"{@spell fire shield}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Alchemical Defense",
+					"entries": [
+						"Eksperymentalne mikstury Tary'ego zapewniły mu odporność na obrażenia od kwasu i trucizny oraz odporność na {@condition poisoned}."
+					]
+				},
+				{
+					"name": "Doty",
+					"entries": [
+						"{@creature Doty X|TDCSR|Doty} porusza się i działa w turze Tary'ego, a Tary może użyć dodatkowej akcji, aby nakazać mu użycie akcji {@action Dash}, {@action Dodge}, {@action Disengage} lub {@action Attack}. Tary może również nakazać mu {@action Attack} w ramach akcji Multitask (patrz poniżej). Doty może wykonać tylko jedną akcję w każdej turze Tary."
+					]
+				},
+				{
+					"name": "Focused",
+					"entries": [
+						"Tary ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} na Konstytucję {@quickref saving throws|PHB|2|1}, aby utrzymać {@condition concentration} na zaklęcia."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Tary nosi {@item helm of brilliance}, {@item robe of useful items} i {@item ring of the ram}. Ma przy sobie {@item rod of mercurial form|TDCSR}, a także {@item bag of holding}, {@dice 1d4 + 4} {@item bead of force||beads of force}, {@item broom of flying} i {@item chime of opening}."
+					]
+				},
+				{
+					"name": "Toughness",
+					"entries": [
+						"Tary ma dodatkowe 30 punktów wytrzymałości."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multitask",
+					"entries": [
+						"Tary wykonuje dwa ataki bronią lub rzuca zaklęcie z czasem rzucania wynoszącym 1 akcję, a także może nakazać {@creature Doty X|TDCSR|Doty} użycie swojej wzmocnionej pięści lub akcji naprawy."
+					]
+				},
+				{
+					"name": "Mercurial Longsword",
+					"entries": [
+						"{@atk mw} {@hit 5} do trafienia, zasięg 1,5 m., jeden cel. {@h}6 ({@damage 1d10 + 1}) obrażeń kłutych."
+					]
+				},
+				{
+					"name": "{@item Bead of Force}",
+					"entries": [
+						"Tary rzuca {@item bead of force} na odległość do 18 metrów. Każda istota w promieniu 3 metrów od miejsca, w którym wylądował koralik, musi odnieść sukces w teście {@dc 15} Zręczności {@quickref saving throws|PHB|2|1|rzut obronny} lub otrzymać 12 ({@damage 5d4}) obrażeń od siły. Kula przezroczystej siły otacza obszar na 1 minutę. Istota, która nie zdoła wykonać rzutu obronnego i znajdzie się w całości na tym obszarze, zostaje uwięziona wewnątrz kuli."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Brilliant Intellect",
+					"entries": [
+						"Kiedy Tary lub inna istota, którą widzi w promieniu 9 metrów od niego, wykonuje test umiejętności lub {@quickref saving throws|PHB|2|1|rzut obronny}, może użyć swojej reakcji, aby dodać +4 do rzutu."
+					]
+				}
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"G",
+				"S",
+				"U"
+			],
+			"damageTags": [
+				"O",
+				"S"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"F",
+				"P",
+				"R",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"incapacitated"
+			],
+			"savingThrowForcedSpell": [
+				"charisma"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Trinket",
+			"group": [
+				"Vox Machina"
+			],
+			"isNamedCreature": true,
+			"source": "TDCSR",
+			"page": 266,
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "beast",
+				"tags": [
+					"brown bear"
+				]
+			},
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item plate barding|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 61,
+				"formula": "6d10 + 18 + 10"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 30
+			},
+			"str": 19,
+			"dex": 10,
+			"con": 16,
+			"int": 5,
+			"wis": 13,
+			"cha": 7,
+			"skill": {
+				"perception": "+10"
+			},
+			"passive": 20,
+			"languages": [
+				"understands Common but can't speak it"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Chosen Companion",
+					"entries": [
+						"Trinket ma dodatkowe 10 punktów wytrzymałości i premię +6 do rzutów ataku i obrażeń oraz do testów Mądrości ({@skill Perception})."
+					]
+				},
+				{
+					"name": "Empowered Attacks",
+					"entries": [
+						"Ataki Trinketa są traktowane jako magiczne w celu przezwyciężenia odporności i odporności na obrażenia od ataków niemagicznych."
+					]
+				},
+				{
+					"name": "Keen Smell",
+					"entries": [
+						"Trinket ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} na testy Mądrości ({@skill Perception}), które opierają się na węchu."
+					]
+				},
+				{
+					"name": "Raven's Slumber",
+					"entries": [
+						"Jeśli Trinket zostanie zredukowany do 0 punktów wytrzymałości i znajdzie się w promieniu 3 metrów od Vex, zostanie natychmiast wciągnięty do półprzestrzeni w promieniu {@creature Vex'ahlia|TDCSR|Vex's} {@item raven's slumber|TDCSR} i ustabilizowany."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Trinket wykonuje dwa ataki: jeden ugryzieniem i jeden pazurami."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 13} do trafienia, zasięg 1,5 m., jeden cel. {@h}14 ({@damage 1d8 + 10}) obrażeń przebijających."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 13} do trafienia, zasięg 1,5 m., jeden cel. {@h}17 ({@damage 2d6 + 10}) obrażeń kłutych."
+					]
+				}
+			],
+			"traitTags": [
+				"Keen Senses"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Vex'ahlia",
+			"shortName": "Vex",
+			"alias": [
+				"Baroness of the First House of Whitestone",
+				"Grand Mistress of the Grey Hunt",
+				"Champion of Pelor",
+				"Coinmistress of the Tal'Dorei Council",
+				"Stubby",
+				"Vex'ahlia Vessar",
+				"Vex'ahlia de Rolo"
+			],
+			"group": [
+				"Vox Machina"
+			],
+			"source": "TDCSR",
+			"page": 267,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"half-elf"
+				]
+			},
+			"ac": [
+				{
+					"ac": 21,
+					"from": [
+						"{@item +2 Studded White Dragon Leather Armor of Cold Resistance|TDCSR}",
+						"{@item +2 ring of protection|TDCSR}"
+					]
+				}
+			],
+			"hp": {
+				"average": 130,
+				"formula": "20d10 + 20"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 50,
+					"condition": "(with {@item broom of flying})"
+				}
+			},
+			"str": 7,
+			"dex": 20,
+			"con": 12,
+			"int": 14,
+			"wis": 16,
+			"cha": 17,
+			"save": {
+				"str": "+6",
+				"dex": "+13",
+				"con": "+3",
+				"int": "+4",
+				"wis": "+5",
+				"cha": "+5"
+			},
+			"skill": {
+				"acrobatics": "+17",
+				"athletics": "+4",
+				"deception": "+9",
+				"insight": "+9",
+				"investigation": "+8",
+				"perception": "+15",
+				"persuasion": "+9",
+				"stealth": "+17",
+				"survival": "+9"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 25,
+			"resist": [
+				"cold"
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Draconic",
+				"Elvish",
+				"Thieves' Cant",
+				"Undercommon"
+			],
+			"cr": "18",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Vex jest 13. poziomową czarodziejką. Jej umiejętnością rzucania zaklęć jest Mądrość ({@dc 17} ochrony przed zaklęciami, {@hit 9} do trafienia przy atakach zaklęciami). Ma przygotowane następujące zaklęcia strażnika:"
+					],
+					"spells": {
+						"1": {
+							"spells": [
+								"{@spell cure wounds}",
+								"{@spell hunter's mark}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell pass without trace}",
+								"{@spell protection from poison}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell lightning arrow}",
+								"{@spell nondetection}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell freedom of movement}",
+								"{@spell grasping vine}"
+							],
+							"slots": 1
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Assassinate",
+					"entries": [
+						"Podczas swojej pierwszej tury Vex ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} na rzuty ataku przeciwko każdej istocie, która nie wykonała tury. Każde trafienie Vex w zaskoczoną istotę jest trafieniem krytycznym."
+					]
+				},
+				{
+					"name": "Evasion",
+					"entries": [
+						"Jeśli Vex zostanie poddana efektowi, który pozwala jej wykonać Zręczność {@quickref saving throws|PHB|2|1|rzut obronny}, aby otrzymać tylko połowę obrażeń, zamiast tego nie otrzyma żadnych obrażeń, jeśli uda jej się wykonać {@quickref saving throws|PHB|2|1|rzut obronny}, i tylko połowę obrażeń, jeśli jej się to nie uda."
+					]
+				},
+				{
+					"name": "Fey Ancestry",
+					"entries": [
+						"Vex ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} na {@quickref saving throws|PHB|2|1} przeciwko {@condition charmed}, a magia nie może jej uśpić."
+					]
+				},
+				{
+					"name": "Ranged Master",
+					"entries": [
+						"Ataki Vexa bronią dystansową mają premię +2 do trafienia (wliczoną w ataki), ignorują {@quickref cover|PHB|3|0|pół osłony} i {@quickref cover|PHB|3|0|pokrywa trzy czwarte} oraz nie mają kary za zasięg. Dodatkowo, Vex może przyjąć karę -5 do dowolnego rzutu ataku dystansowego, aby zyskać premię +10 do rzutu obrażeń."
+					]
+				},
+				{
+					"name": "Sneak Attack (1/Turn)",
+					"entries": [
+						"Vex zadaje dodatkowe 14 ({@damage 4d6}) obrażeń, gdy trafi cel atakiem z broni i ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} na rzut ataku lub gdy cel znajduje się w odległości 1,5 metra od sojusznika Vex, który nie jest {@condition incapacitated}, a ona nie ma {@quickref Advantage and Disadvantage|PHB|2|0|wada} na rzut ataku."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Vex nosi {@item +2 Studded White Dragon Leather Armor of Cold Resistance|TDCSR} i {@item +2 ring of protection|TDCSR|ring of protection with a +2 bonus}. Nosi {@item broom of flying} i {@item raven's slumber|TDCSR}, a także włada {@item Fenthras (Exalted)|TDCSR|Fenthras}."
+					]
+				},
+				{
+					"name": "Trinket",
+					"entries": [
+						"{@creature Trinket|TDCSR} porusza się i działa w turze Vex, a Vex może użyć dodatkowej akcji, aby nakazać mu wykonanie akcji {@action Dash}, {@action Dodge}, {@action Disengage} lub {@action Attack}. Może również nakazać mu {@action Attack} w ramach akcji Multiatak (patrz poniżej). {@creature Trinket|TDCSR} może wykonać tylko jedną akcję w każdej turze Vex."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Vex wykonuje dwa ataki dystansowe i może wydać komendę {@creature Trinket|TDCSR}, aby poruszyć się do swojej prędkości i użyć akcji Multiatak."
+					]
+				},
+				{
+					"name": "Fenthras",
+					"entries": [
+						"{@atk rw} {@hit 16} do trafienia, zasięg 18 m., jeden cel. {@h}22 ({@damage 1d8 + 18}) obrażeń przebijających i 3 ({@damage 1d6}) obrażeń od błyskawic, a Vex może użyć następującej umiejętności:"
+					]
+				},
+				{
+					"name": "Bramble Shot (2/{@quickref resting|PHB|2|0|Short Rest})",
+					"entries": [
+						"Atak zadaje dodatkowe 18 ({@damage 4d8}) obrażeń przebijających, a cel musi odnieść sukces w {@dc 17} teście Siły {@quickref saving throws|PHB|2|1|rzut obronny} lub zostać trafiony {@condition restrained}. Cel może powtórzyć {@quickref saving throws|PHB|2|1|rzut obronny} na koniec każdej swojej tury, kończąc efekt na sobie w przypadku sukcesu."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"Vex wykonuje akcję {@action Dash}, {@action Disengage} lub {@action Hide}."
+					]
+				},
+				{
+					"name": "Hunter's Mark",
+					"entries": [
+						"Vex rzuca {@spell hunter's mark}, aby oznaczyć istotę, którą widzi w promieniu 27 metrów od siebie. Przez 1 godzinę ataki bronią Vex zadają dodatkowe {@damage 1d6} obrażeń oznaczonemu stworzeniu, a ona sama ma {@quickref Advantage and Disadvantage|PHB|2|0|przewaga} na testy Mądrości ({@skill Perception}) i Mądrości ({@skill Survival}) wykonywane w celu jego odnalezienia."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"Gdy atakujący, którego Vex widzi, trafi ją atakiem, otrzymuje połowę obrażeń od ataku."
+					]
+				}
+			],
+			"traitTags": [
+				"Fey Ancestry",
+				"Sneak Attack"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"DR",
+				"E",
+				"U"
+			],
+			"damageTags": [
+				"L",
+				"P"
+			],
+			"damageTagsSpell": [
+				"L"
+			],
+			"spellcastingTags": [
+				"CR"
+			],
+			"miscTags": [
+				"RW"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Vos'skyriss Serpentfolk",
+			"shortName": "serpentfolk",
+			"group": [
+				"Serpentfolk"
+			],
+			"source": "TDCSR",
+			"page": 258,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 60,
+				"formula": "8d10 + 16"
+			},
+			"speed": {
+				"walk": 40,
+				"swim": 40
+			},
+			"str": 16,
+			"dex": 15,
+			"con": 15,
+			"int": 12,
+			"wis": 10,
+			"cha": 14,
+			"skill": {
+				"perception": "+2",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"Wrodzoną zdolnością serpentfolka do rzucania czarów jest Charyzma (odporność na zaklęcia {@dc 12}). Serpentfolk może wrodzenie rzucać następujące zaklęcia, które nie wymagają żadnych składników materialnych:"
+					],
+					"will": [
+						"{@spell animal friendship}",
+						"{@spell speak with animals} (snakes only)"
+					],
+					"daily": {
+						"1": [
+							"{@spell pass without trace}"
+						],
+						"2e": [
+							"{@spell sleep}",
+							"{@spell suggestion}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Hold Breath",
+					"entries": [
+						"Serpentfolk może wstrzymać oddech na 30 minut."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Serpentfolk wykonuje dwa ataki sztyletem."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} do trafienia, zasięg 1,5 m., jedna istota. {@h}6 ({@damage 1d6 + 3}) obrażeń przebijających plus 7 ({@damage 2d6}) obrażeń od trucizny."
+					]
+				},
+				{
+					"name": "Scimitar",
+					"entries": [
+						"{@atk mw} {@hit 5} do trafienia, zasięg 1,5 m., jeden cel. {@h}6 ({@damage 1d6 + 3}) obrażeń kłutych."
+					]
+				},
+				{
+					"name": "Constrict",
+					"entries": [
+						"{@atk mw} {@hit 5} do trafienia, zasięg 1,5 m., jedna istota. {@h}7 ({@damage 1d8 + 3}) obrażeń obuchowych, a cel otrzymuje {@condition grappled} (ucieczka {@dc 13}). Dopóki {@action grapple} nie zakończy się, istota jest {@condition restrained}, a serpentfolk nie może ograniczyć innego celu."
+					]
+				}
+			],
+			"environment": [
+				"coastal",
+				"desert",
+				"forest",
+				"swamp"
+			],
+			"attachedItems": [
+				"scimitar|phb"
+			],
+			"traitTags": [
+				"Hold Breath"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"B",
+				"I",
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"unconscious"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Vos'skyriss Serpentfolk Ghost",
+			"shortName": "ghost",
+			"group": [
+				"Serpentfolk"
+			],
+			"source": "TDCSR",
+			"page": 258,
+			"size": [
+				"L"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 55,
+				"formula": "10d10"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 40,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 7,
+			"dex": 16,
+			"con": 10,
+			"int": 12,
+			"wis": 10,
+			"cha": 16,
+			"skill": {
+				"perception": "+2",
+				"stealth": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"acid",
+				"fire",
+				"lightning",
+				"thunder",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"cold",
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Ethereal Sight",
+					"entries": [
+						"Duch może widzieć na 18 metrów w głąb Płaszczyzny Eterycznej, gdy znajduje się na Płaszczyźnie Materialnej i odwrotnie."
+					]
+				},
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"Duch może przemieszczać się przez inne stworzenia i obiekty, tak jakby były {@quickref difficult terrain||3}. Otrzymuje 5 ({@damage 1d10}) obrażeń od siły, jeśli zakończy swoją turę wewnątrz obiektu."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Duch wykonuje dwa ataki włócznią."
+					]
+				},
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} do trafienia, zasięg 1,5 m. lub zasięg 20/18 m., jeden cel. {@h}6 ({@damage 1d6 + 3}) obrażeń przebijających plus 7 ({@damage 2d6}) obrażeń nekrotycznych. Jeśli duch wykona atak dystansowy, jego włócznia ponownie zmaterializuje się w jego rękach po rozstrzygnięciu ataku."
+					]
+				},
+				{
+					"name": "Etherealness",
+					"entries": [
+						"Duch wchodzi do Płaszczyzny Eterycznej z Płaszczyzny Materialnej lub odwrotnie. Jest widoczny na Płaszczyźnie Materialnej, gdy znajduje się na Granicy Eterycznej i odwrotnie, ale nie może wpływać ani być pod wpływem czegokolwiek na drugiej płaszczyźnie."
+					]
+				},
+				{
+					"name": "Terrifying Hiss",
+					"entries": [
+						"Duch emituje niesamowity, zgrzytliwy syk. Każda nieumarła istota w promieniu 9 metrów od ducha, która może go usłyszeć, musi odnieść sukces w teście {@dc 13} Mądrości {@quickref saving throws|PHB|2|1|rzut obronny} lub zostać {@condition frightened} na 1 minutę. Cel {@condition frightened} może powtórzyć {@quickref saving throws|PHB|2|1|rzut obronny} na koniec każdej swojej tury, kończąc warunek na sobie w przypadku sukcesu. Jeśli {@quickref saving throws|PHB|2|1|rzut obronny} celu się powiedzie lub efekt się zakończy, cel jest odporny na Przerażający Syk tego ducha przez następne 24 godziny."
+					]
+				}
+			],
+			"environment": [
+				"coastal",
+				"desert",
+				"forest",
+				"swamp"
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"traitTags": [
+				"Incorporeal Movement"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"N",
+				"O",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Wraithroot Tree",
+			"source": "TDCSR",
+			"page": 259,
+			"size": [
+				"H"
+			],
+			"type": "plant",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 270,
+				"formula": "20d12 + 140"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 23,
+			"dex": 8,
+			"con": 24,
+			"int": 12,
+			"wis": 16,
+			"cha": 12,
+			"skill": {
+				"perception": "+8"
+			},
+			"passive": 18,
+			"resist": [
+				"bludgeoning",
+				"piercing"
+			],
+			"vulnerable": [
+				"fire"
+			],
+			"conditionImmune": [
+				"stunned",
+				"frightened",
+				"charmed",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Druidic",
+				"Elvish",
+				"Sylvan"
+			],
+			"cr": "14",
+			"trait": [
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Podczas gdy drzewo wraithroot pozostaje nieruchome, jest nie do odróżnienia od normalnego drzewa."
+					]
+				},
+				{
+					"name": "Wraith Shift",
+					"entries": [
+						"W swojej turze drzewo wraithroot może poruszać się przez inne stworzenia i obiekty tak, jakby były {@quickref difficult terrain||3}. Drzewo nie prowokuje {@action opportunity attack|PHB|opportunity attacks} podczas poruszania się i musi zakończyć ruch w przestrzeni niezajętej przez duże lub większe obiekty lub stworzenia. Każda średnia lub mniejsza istota znajdująca się na obszarze, na którym znajduje się drzewo w momencie, gdy kończy ono ruch, zostaje zepchnięta na najbliższy niezajęty obszar wybrany przez tę istotę. Średnie lub mniejsze obiekty znajdujące się na obszarze drzewa zostają zepchnięte na najbliższe niezajęte pola wybrane przez drzewo."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Wraithroot wykonuje dwa ataki typu slam."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 11} do trafienia, zasięg 3 m., jeden cel. {@h}16 ({@damage 3d6 + 6}) obrażeń obuchowych."
+					]
+				},
+				{
+					"name": "Rock",
+					"entries": [
+						"{@atk rw} {@hit 11} do trafienia, zasięg 60/54 m., jeden cel. {@h}28 ({@damage 4d10 + 6}) obrażeń obuchowych."
+					]
+				},
+				{
+					"name": "Wraithstorm {@recharge 5}",
+					"entries": [
+						"Wraithroot wysysa energię życiową z otaczającego go obszaru, przez co istoty stają się tymczasowo słabe. Każda istota, która nie jest konstruktem lub nieumarłym, znajdująca się w promieniu 9 metrów od drzewa, musi odnieść sukces w teście {@dc 16} Konstytucji {@quickref saving throws|PHB|2|1|rzut obronny} lub jej prędkość spadnie o połowę i zyska podatność na obrażenia kłute do końca następnej tury drzewa."
+					]
+				}
+			],
+			"environment": [
+				"forest",
+				"mountain"
+			],
+			"traitTags": [
+				"False Appearance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DU",
+				"E",
+				"S"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Young Magma Landshark",
+			"source": "TDCSR",
+			"page": 248,
+			"size": [
+				"L"
+			],
+			"type": "elemental",
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 105,
+				"formula": "10d10 + 50"
+			},
+			"speed": {
+				"walk": 40,
+				"burrow": 40,
+				"swim": {
+					"number": 40,
+					"condition": "(lava only)"
+				}
+			},
+			"str": 20,
+			"dex": 11,
+			"con": 21,
+			"int": 2,
+			"wis": 10,
+			"cha": 5,
+			"skill": {
+				"perception": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft.",
+				"tremorsense 120 ft."
+			],
+			"passive": 14,
+			"immune": [
+				"fire"
+			],
+			"cr": "9",
+			"trait": [
+				{
+					"name": "Searing Presence",
+					"entries": [
+						"Każda istota, która rozpocznie swoją turę w promieniu 3 metrów od landsharka, otrzymuje 11 ({@damage 2d10}) obrażeń od ognia."
+					]
+				},
+				{
+					"name": "Standing Leap",
+					"entries": [
+						"{@quickref jumping|PHB|4|0|skok w dal} wynosi do 12 metrów, a {@quickref jumping|PHB|4|0|skok wzwyż} do 6 metrów, z lub bez startu."
+					]
+				},
+				{
+					"name": "Illumination",
+					"entries": [
+						"Skowronek rzuca jasne światło w promieniu 4,5 metra i słabe światło na dodatkowe 4,5 metra."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 9} do trafienia, zasięg 1,5 m., jeden cel. {@h}31 ({@damage 4d12 + 5}) obrażeń przebijających i 14 ({@damage 4d6}) obrażeń od ognia."
+					]
+				},
+				{
+					"name": "Deadly Leap",
+					"entries": [
+						"Jeśli rekin lądowy {@quickref jumping|PHB|4|0|skoki} pokona co najmniej 4,5 metra w ramach swojego ruchu, może użyć tej akcji, aby wylądować na nogach w przestrzeni, w której znajduje się jedno lub więcej innych stworzeń. Każdej z tych istot musi udać się rzut na {@dc 16} Siłę lub Zręczność {@quickref saving throws|PHB|2|1|rzut obronny} (wybór należy do celu), w przeciwnym razie zostanie powalona {@condition prone} i otrzyma 19 ({@damage 4d6 + 5}) obrażeń kłutych oraz 14 ({@damage 4d6}) obrażeń od ognia. Po udanym rzucie obronnym istota otrzymuje tylko połowę obrażeń, nie zostaje powalona {@condition prone} i zostaje wypchnięta na 1,5 metra poza obszar działania rekina lądowego, do wybranego przez istotę niezajętego obszaru. Jeśli w zasięgu nie znajduje się żadne wolne miejsce, istota upada {@condition prone} w miejscu zajmowanym przez rekina lądowego."
+					]
+				}
+			],
+			"environment": [
+				"mountain",
+				"underdark"
+			],
+			"traitTags": [
+				"Illumination"
+			],
+			"senseTags": [
+				"D",
+				"T"
+			],
+			"damageTags": [
+				"B",
+				"F",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

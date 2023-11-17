@@ -1,0 +1,229 @@
+{
+	"spell": [
+		{
+			"name": "Borrowed Knowledge",
+			"source": "SCC",
+			"page": 37,
+			"level": 2,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un libro del valore di almeno 25 gp",
+					"cost": 2500
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Attingi alla conoscenza degli spiriti del passato. Scegli un'abilità in cui non sei esperto. Per la durata dell'incantesimo, avrai competenza nell'abilità scelta. L'incantesimo termina in anticipo se lo lanci di nuovo."
+			]
+		},
+		{
+			"name": "Kinetic Jaunt",
+			"source": "SCC",
+			"page": 37,
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Potenziate magicamente il vostro movimento con passi di danza, dandovi i seguenti benefici per tutta la durata.",
+				{
+					"type": "list",
+					"items": [
+						"La velocità di camminata aumenta di 3 metri.",
+						"Non si provocano attacchi di opportunità.",
+						"Si può passare attraverso lo spazio di un'altra creatura e non conta come {@quickref difficult terrain||3}. Se si termina il turno nello spazio di un'altra creatura, si viene spostati nell'ultimo spazio non occupato e si subisce {@damage 1d8} danno da forza."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			]
+		},
+		{
+			"name": "Silvery Barbs",
+			"source": "SCC",
+			"page": 38,
+			"level": 1,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "which you take when a creature you can see within 60 feet of yourself succeeds on an attack roll, an ability check, or a saving throw"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Distraete magicamente la creatura innescata e trasformate la sua momentanea incertezza in un incoraggiamento per un'altra creatura. La creatura scatenante deve ripetere il tiro {@dice d20} e utilizzare il tiro più basso.",
+				"Puoi poi scegliere un'altra creatura che puoi vedere nel raggio d'azione (puoi scegliere te stesso). La creatura scelta ha un vantaggio sul prossimo attacco, prova di abilità o tiro salvezza che effettua entro 1 minuto. Una creatura può essere potenziata da un solo uso di questo incantesimo alla volta."
+			],
+			"miscTags": [
+				"ADV",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Vortex Warp",
+			"source": "SCC",
+			"page": 38,
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Rigiri magicamente lo spazio intorno a un'altra creatura che puoi vedere nel raggio d'azione. Il bersaglio deve riuscire in un tiro salvezza di Costituzione (il bersaglio può scegliere di fallire), oppure il bersaglio viene teletrasportato in uno spazio non occupato di tua scelta che puoi vedere a portata di mano. Lo spazio scelto deve essere su una superficie o in un liquido che possa sostenere il bersaglio senza che quest'ultimo debba spremersi."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando si lancia questo incantesimo utilizzando uno slot incantesimo di 3° livello o superiore, la portata dell'incantesimo aumenta di 9 metri per ogni livello di slot superiore al 2°."
+					]
+				}
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT",
+				"TP"
+			]
+		},
+		{
+			"name": "Wither and Bloom",
+			"source": "SCC",
+			"page": 38,
+			"level": 2,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "una vite appassita attorcigliata in un cappio"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Invocate sia la morte che la vita su una sfera di 3 metri di raggio centrata su un punto nel raggio d'azione. Ogni creatura a tua scelta in quell'area deve effettuare un tiro salvezza di Costituzione, subendo {@damage 2d6} danni necrotici se il tiro fallisce o la metà dei danni se riesce. La vegetazione non magica in quell'area appassisce.",
+				"Inoltre, una creatura a tua scelta in quell'area può spendere e tirare uno dei suoi dadi ferita non spesi e recuperare un numero di punti ferita pari al tiro più il tuo modificatore di capacità di incantatore."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando si lancia questo incantesimo utilizzando uno slot di 3° livello o superiore, i danni aumentano del {@scaledamage 2d6|2-9|1d6} per ogni slot superiore al 2° e il numero di Dadi Ferita che possono essere spesi e aggiunti al tiro salvezza aumenta di uno per ogni slot superiore al 2°."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"HL"
+			]
+		}
+	]
+}
