@@ -9,15 +9,12 @@
 
 # Purpose
 
-**For the main repository: 5etoolstranslated/5etoolstranslated.github.io**
 The purpose of this repository is to provide mirrors of [5etools](https://5e.tools) with the **content** in other languages.
 It aims at translating the most as possible without breaking any features.
 
 This project is a fork from the awesome [5etools-translated](https://github.com/5etools-translated/5etools-translated.github.io) that does not seem actively maintained.
 This projects no longer offer to switch language on the website because it has grown to big to be deployed on github pages with all the data. Instead there will be several forks and deployments to deploy in each language (which is anyway necessary to use with Plutonium)
-This main repository is used to generate translations. Seveal repositories on another github account are used for deployments
-
-It has many improvements compared to the original repository.
+This main repository is used to generate translations. Several repositories on another github account are used for deployments
 
 # Features and todo
 
