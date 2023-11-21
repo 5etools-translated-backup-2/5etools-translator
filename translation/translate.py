@@ -290,6 +290,9 @@ def translate_data(translator: Translator, data):
             # We only translate specific keys from dicts
             if k in ["entry", "effect", "text", "m", "capCrewNote"] and type(v) is str:
                 data[k] = translator.translate(v)
+            # We do not translate names that have a source as those a entities, often used in tags.
+            elif k == "name" and type(v) is str and not data.get("source"):
+                data[k] = translator.translate(v)
             elif k == "other" and type(v) is dict:
                 # Special hack for life.json
                 for section, items in v.items():
@@ -306,6 +309,7 @@ def translate_data(translator: Translator, data):
                     "other",
                     "lifeTrinket",
                     "row",
+                    "headers",
                 ]
                 and type(v) is list
             ):
