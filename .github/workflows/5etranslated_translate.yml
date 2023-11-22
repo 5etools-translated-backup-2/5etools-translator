@@ -100,13 +100,13 @@ jobs:
          #   run: |
          #      # Command to replace words from glossary in identified patterns
          #      ./translation/replace_glossary_words.py --language ${{matrix.language}} ${{inputs.source !='' && inputs.source || env.DEFAULT_SOURCE_FILES}}
-         - name: Npm run gen
-           run: |
-              mv data data.src
-              ln -s data.${{ matrix.language }} data
-              npm run gen
-              rm -f data
-              mv data.src data
+         # - name: Npm run gen
+         #   run: |
+         #      mv data data.src
+         #      ln -s data.${{ matrix.language }} data
+         #      npm run gen
+         #      rm -f data
+         #      mv data.src data
          - name: Save results
            continue-on-error: true
            run: |
