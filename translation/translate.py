@@ -246,10 +246,16 @@ class Translator:
 
         self.charCount += len(text)
 
-        if self.deepl_translator is None:
-            self.deepl_translator = DeeplTranslator(
-                "en", self._language, self._use_copy_paste
-            )
+        deepl_translator_init_try = 0
+        while self.deepl_translator is None and deepl_translator_init_try < 3:
+            try:
+                if self.deepl_translator is None:
+                    self.deepl_translator = DeeplTranslator(
+                        "en", self._language, self._use_copy_paste
+                    )
+            except:
+                print("DeepL Translator Init failed")
+                deepl_translator_init_try += 1
 
         glossary_to_use = self._glossary_to_use_for_string(text_with_placeholders)
         translated_text = self.deepl_translator.translate(
@@ -371,6 +377,7 @@ def translate_file(
                     {}
                 )  # Will cause wipe on sync
         except Exception as e:
+            print(f"Failed to translate {cache_file}")
             print(repr(e))
             traceback.print_exc()
 
