@@ -71,25 +71,25 @@
 				{
 					"name": "Blaze Rod",
 					"entries": [
-						"Cuando la llamarada cae a 0 puntos de golpe, desaparece en una nube de humo y tiene un 50% de probabilidades de dejar tras de sí una vara incandescente valorada en 100 gp. La vara emite una luz tenue en un radio de 1,5 metros. Como acción, una criatura puede intentar romper la vara con un chequeo de Fuerza exitoso {@dc 14}. La vara quebrada libera su energía ardiente en una esfera de 1,5 metros de radio centrada en sí misma. Cada criatura en esa área debe hacer una tirada de salvación de {@dc 14} Destreza, recibiendo 6 ({@damage 1d12}) puntos de daño por fuego si falla la tirada de salvación, o la mitad de daño si tiene éxito."
+						"When the blaze drops to 0 hit points, it disappears in a cloud of smoke and has a 50 percent chance of leaving behind a glowing rod worth 100 gp. The rod sheds dim light in a 5-foot radius. As an action, a creature can try to snap the rod, doing so with a successful {@dc 14} Strength check. The snapped rod releases its fiery energy in a 5-foot-radius sphere centered on itself. Each creature in that area must make a {@dc 14} Dexterity saving throw, taking 6 ({@damage 1d12}) fire damage on a failed save, or half as much damage on a successful one."
 					]
 				},
 				{
 					"name": "Heat Aura",
 					"entries": [
-						"Cualquier criatura que comience su turno a menos de 1,5 metros de la llamarada recibe 3 ({@damage 1d6}) puntos de daño por fuego."
+						"Any creature that starts its turn within 5 feet of the blaze takes 3 ({@damage 1d6}) fire damage."
 					]
 				},
 				{
 					"name": "Illumination",
 					"entries": [
-						"La llama emite luz brillante en un radio de 6 metros y luz tenue en otros 6 metros."
+						"The blaze sheds bright light in a 20-foot radius and dim light for an additional 20 feet."
 					]
 				},
 				{
 					"name": "Water Susceptibility",
 					"entries": [
-						"La llamarada sufre 1 daño de frío por cada metro y medio que se mueva en el agua, por cada litro de agua que le salpique o cada vez que comience su turno bajo la lluvia."
+						"The blaze takes 1 cold damage for every 5 feet it moves in water, for every gallon of water splashed on it, or whenever it starts its turn in the rain."
 					]
 				}
 			],
@@ -97,13 +97,13 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"La llamarada hace tres ataques de Perdición Ardiente."
+						"The blaze makes three Fiery Doom attacks."
 					]
 				},
 				{
 					"name": "Fiery Doom",
 					"entries": [
-						"{@atk ms,rs} {@hit 6} para golpear; alcance 1,5 m. o a distancia 18 m., un objetivo. {@h}8 ({@damage 1d10 + 3}) de daño de fuego, y el objetivo se incendia si es una criatura o un objeto inflamable. Hasta que una criatura realice una acción para extinguir el fuego, el objetivo en llamas recibe 3 ({@damage 1d6}) puntos de daño por fuego al final de cada uno de sus turnos."
+						"{@atk ms,rs} {@hit 6} to hit; reach 5 ft. or ranged 60 ft., one target. {@h}8 ({@damage 1d10 + 3}) fire damage, and the target catches fire if it's a creature or a flammable object. Until a creature takes an action to extinguish the fire, the burning target takes 3 ({@damage 1d6}) fire damage at the end of each of its turns."
 					]
 				}
 			],
@@ -188,25 +188,25 @@
 				{
 					"name": "Bizarre Physiology",
 					"entries": [
-						"La enredadera no puede realizar acciones excepto {@action Dash}, {@action Disengage}, {@action Hide} y {@action Search}. No puede realizar acciones de bonificación ni reacciones."
+						"The creeper can't take actions except for {@action Dash}, {@action Disengage}, {@action Hide}, and {@action Search}. It can't take bonus actions or reactions."
 					]
 				},
 				{
 					"name": "Creeper Head",
 					"entries": [
-						"Cuando una enredadera baja a 0 puntos de vida por la explosión de una enredadera cargada (véase el rasgo Destrucción), muere y se le cae la cabeza. La cabeza caída de una enredadera es hueca y puede usarse como máscara con aberturas para ojos y boca."
+						"When a creeper drops to 0 hit points from a charged creeper's explosion (see the Destruction trait), it dies and its head falls off. A creeper's fallen head is hollow and can be worn as a mask with eye and mouth openings."
 					]
 				},
 				{
 					"name": "Destruction",
 					"entries": [
-						"Cuando termina su turno a menos de 3 metros de un Humanoide que pueda ver, la enredadera deja de moverse y emite un siseo lo suficientemente fuerte como para que lo oigan las criaturas a menos de 9 metros de ella.",
-						"Si la enredadera cae a 0 puntos de vida antes del inicio de su siguiente turno, el silbido se detiene y la enredadera muere. De lo contrario, al comienzo del siguiente turno de la enredadera, ocurre una de las siguientes cosas:",
+						"When it ends its turn within 10 feet of a Humanoid that it can see, the creeper stops moving and emits a hiss loud enough to be heard by creatures within 30 feet of itself.",
+						"If the creeper drops to 0 hit points before the start of its next turn, the hissing stops, and the creeper dies. Otherwise, at the start of the creeper's next turn, one of following things happens:",
 						{
 							"type": "list",
 							"items": [
-								"Si no hay humanoides a menos de 3 metros de la enredadera siseante, deja de sisear. Entonces utiliza cualquier movimiento disponible para acercarse al Humanoide más cercano que pueda ver.",
-								"Si hay uno o más Humanoides a menos de 3 metros de la enredadera siseante, ésta explota en una bola de energía que llena una esfera de 6 metros de radio centrada en sí misma. Esta energía se propaga por las esquinas. La enredadera es destruida, y cualquier otra criatura en el área de la explosión debe realizar una tirada de salvación de Destreza {@dc 12}, recibiendo 14 ({@damage 4d6}) puntos de daño de rayo si falla la tirada de salvación, o la mitad de daño si tiene éxito. Este daño aumenta en 7 ({@dice 2d6}) si la enredadera está cargada (véase \"Carga eléctrica\" más adelante). Los objetos del área que no se lleven encima reciben 14 ({@damage 4d6}) puntos de daño por rayo, o 21 ({@damage 6d6}) puntos de daño por rayo si la enredadera está cargada."
+								"If there are no Humanoids within 10 feet of the hissing creeper, it stops hissing. It then uses any available movement to approach the nearest Humanoid it can see.",
+								"If there are one or more Humanoids within 10 feet of the hissing creeper, the creeper explodes in a ball of energy that fills a 20-foot-radius sphere centered on itself. This energy spreads around corners. The creeper is destroyed, and every other creature in the explosion's area must make a {@dc 12} Dexterity saving throw, taking 14 ({@damage 4d6}) lightning damage on a failed save, or half as much damage on a successful one. Increase this damage by 7 ({@dice 2d6}) if the creeper is charged (see \"Electrical Charge\" below). Objects in the area that aren't being worn or carried take 14 ({@damage 4d6}) lightning damage, or 21 ({@damage 6d6}) lightning damage if the creeper is charged."
 							]
 						}
 					]
@@ -214,13 +214,13 @@
 				{
 					"name": "Electrical Charge",
 					"entries": [
-						"Cada vez que la enredadera sufre daño por rayo, no recibe daño y se carga durante 1 minuto. Mientras está cargada, la enredadera emite una tenue luz azul en un radio de 1,5 m."
+						"Whenever the creeper is subjected to lightning damage, it takes no damage and instead becomes charged for 1 minute. While charged, the creeper emits dim blue light in a 5-foot radius."
 					]
 				},
 				{
 					"name": "Fear of Felines",
 					"entries": [
-						"La enredadera tiene la condición {@condition frightened} siempre que comience su turno a menos de 18 metros de una criatura felina que pueda ver. La condición dura hasta el inicio del siguiente turno de la enredadera."
+						"The creeper has the {@condition frightened} condition whenever it starts its turn within 60 feet of a feline creature it can see. The condition lasts until the start of the creeper's next turn."
 					]
 				}
 			],
@@ -310,13 +310,13 @@
 				{
 					"name": "Dragon Egg",
 					"entries": [
-						"Cuando el Dragón Ender cae a 0 puntos de golpe, irradia rayos de luz púrpura y luego desaparece, dejando tras de sí un huevo de dragón inerte de color negro azabache valorado en 5.000 gp."
+						"When the Ender Dragon drops to 0 hit points, it radiates beams of purple light and then disappears, leaving behind an inert, jet-black dragon egg worth 5,000 gp."
 					]
 				},
 				{
 					"name": "Legendary Resistance (4/Day)",
 					"entries": [
-						"Si el dragón falla una tirada de salvación, puede elegir tener éxito en su lugar."
+						"If the dragon fails a saving throw, it can choose to succeed instead."
 					]
 				}
 			],
@@ -324,25 +324,25 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"El dragón hace un ataque de Mordisco y usa Alas Golpeadoras."
+						"The dragon makes one Bite attack and uses Beating Wings."
 					]
 				},
 				{
 					"name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 14} para golpear; alcance 4,5 m., un objetivo. {@h}18 ({@damage 3d6 + 8}) de daño perforante más 7 ({@damage 2d6}) de daño necrótico."
+						"{@atk mw} {@hit 14} to hit; reach 15 ft., one target. {@h}18 ({@damage 3d6 + 8}) piercing damage plus 7 ({@damage 2d6}) necrotic damage."
 					]
 				},
 				{
 					"name": "Beating Wings",
 					"entries": [
-						"El dragón bate sus grandes alas. Cada criatura en un radio de 4,5 metros del dragón debe tener éxito en una tirada de salvación de Destreza {@dc 21} o recibir 10 ({@damage 1d4 + 8}) puntos de daño contundente, ser empujada a 3 metros del dragón y sufrir la condición {@condition prone}."
+						"The dragon beats its great wings. Each creature within 15 feet of the dragon must succeed on a {@dc 21} Dexterity saving throw or take 10 ({@damage 1d4 + 8}) bludgeoning damage, be pushed 10 feet away from the dragon, and have the {@condition prone} condition."
 					]
 				},
 				{
 					"name": "Harmful Breath {@recharge 5}",
 					"entries": [
-						"El dragón exhala gas pútrido en un cono de 18 metros. Cada criatura en esa área debe hacer una tirada de salvación de Constitución de {@dc 21}, recibiendo 52 ({@damage 15d6}) puntos de daño necrótico si falla la tirada de salvación, o la mitad de daño si tiene éxito. A continuación, el dragón elige un punto que pueda ver en el que el cono entre en contacto con el suelo. Ese punto se convierte en el centro de un cilindro de gas persistente de 3 metros de altura y 3 metros de radio que desaparece al inicio del siguiente turno del dragón. Cualquier criatura que comience su turno en el cilindro recibe 10 ({@damage 3d6}) puntos de daño necrótico."
+						"The dragon exhales putrid gas in a 60-foot cone. Each creature in that area must make a {@dc 21} Constitution saving throw, taking 52 ({@damage 15d6}) necrotic damage on a failed save, or half as much damage on a successful one. The dragon then chooses a point it can see where the cone makes contact with the ground. That point becomes the center of a 10-foot-high, 10-foot-radius cylinder of lingering gas that disappears at the start of the dragon's next turn. Any creature that starts its turn in the cylinder takes 10 ({@damage 3d6}) necrotic damage."
 					]
 				}
 			],
@@ -438,25 +438,25 @@
 				{
 					"name": "Evasive Teleportation",
 					"entries": [
-						"Siempre que reciba daño o sea objetivo de un ataque a distancia, el Enderman puede teletransportarse, junto con cualquier equipo que lleve puesto, a un espacio desocupado que pueda ver en un radio de 6 metros de sí mismo (no requiere ninguna acción). Si este efecto se desencadena por un ataque a distancia, el Enderman se teletransporta justo antes de que el ataque impacte, haciendo que éste falle. Este rasgo se suprime mientras el Enderman tenga la condición {@condition incapacitated}."
+						"Whenever it takes damage or is the target of a ranged attack, the Enderman can teleport, along with any equipment it is wearing or carrying, to an unoccupied space it can see within 20 feet of itself (no action required). If this effect is triggered by a ranged attack, the Enderman teleports just before the attack hits, causing the attack to miss it. This trait is suppressed while the Enderman has the {@condition incapacitated} condition."
 					]
 				},
 				{
 					"name": "Implosion",
 					"entries": [
-						"Cuando el Enderman cae a 0 puntos de golpe, muere al implosionar su cuerpo. Tira un {@dice d10}. Con una tirada de 9 o menos, el Enderman no deja restos. Con una tirada de 10, el Enderman deja un orbe púrpura brillante llamado perla de Ender, valorado en 500 gp. Una criatura puede lanzar la perla hasta 18 metros; si la perla cae en un espacio desocupado lo suficientemente grande como para contener a la criatura, ésta se teletransporta a ese espacio, junto con cualquier equipo que lleve puesto, y la perla desaparece."
+						"When the Enderman drops to 0 hit points, it dies as its body implodes. Roll a {@dice d10}. On a roll of 9 or less, the Enderman leaves no remains. On a roll of 10, the Enderman leaves behind a glowing, purple orb called an Ender pearl, worth 500 gp. A creature can throw the pearl up to 60 feet; if the pearl lands in an unoccupied space big enough to contain the creature, the creature teleports to that space, along with any equipment it is wearing or carrying, and the pearl disappears."
 					]
 				},
 				{
 					"name": "Sunlight Sensitivity",
 					"entries": [
-						"A la luz del sol, el Enderman tiene desventaja en las tiradas de ataque."
+						"While in sunlight, the Enderman has disadvantage on attack rolls."
 					]
 				},
 				{
 					"name": "Water Susceptibility",
 					"entries": [
-						"El Enderman sufre 1 daño de frío por cada metro y medio que se mueva en el agua, por cada litro de agua que le salpique o cada vez que comience su turno bajo la lluvia."
+						"The Enderman takes 1 cold damage for every 5 feet it moves in water, for every gallon of water splashed on it, or whenever it starts its turn in the rain."
 					]
 				}
 			],
@@ -464,13 +464,13 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"El Enderman hace dos ataques de Slam."
+						"The Enderman makes two Slam attacks."
 					]
 				},
 				{
 					"name": "Slam",
 					"entries": [
-						"{@atk mw} {@hit 7} para golpear; alcance 3 m., un objetivo. {@h}8 ({@damage 1d8 + 4}) de daño contundente más 9 ({@damage 2d8}) de daño necrótico."
+						"{@atk mw} {@hit 7} to hit; reach 10 ft., one target. {@h}8 ({@damage 1d8 + 4}) bludgeoning damage plus 9 ({@damage 2d8}) necrotic damage."
 					]
 				}
 			],
@@ -543,7 +543,7 @@
 				{
 					"name": "Pack Tactics",
 					"entries": [
-						"El lobo tiene ventaja en las tiradas de ataque contra una criatura si al menos uno de los aliados del lobo está a menos de 1,5 metros de la criatura y el aliado no tiene la condición {@condition incapacitated}."
+						"The wolf has advantage on attack rolls against a creature if at least one of the wolf's allies is within 5 feet of the creature and the ally doesn't have the {@condition incapacitated} condition."
 					]
 				}
 			],
@@ -551,7 +551,7 @@
 				{
 					"name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 4} para golpear; alcance 1,5 m., un objetivo. {@h}7 ({@damage 2d4 + 2}) de daño perforante. Si el objetivo es una criatura, debe tener éxito en una tirada de salvación de {@dc 11} Fuerza o tener la condición {@condition prone}."
+						"{@atk mw} {@hit 4} to hit; reach 5 ft., one target. {@h}7 ({@damage 2d4 + 2}) piercing damage. If the target is a creature, it must succeed on a {@dc 11} Strength saving throw or have the {@condition prone} condition."
 					]
 				}
 			],
