@@ -242,40 +242,41 @@ class Translator:
 
         # Serve from cache if present
         cacheFile = self.sharedCache if use_shared_cache else self.fileCache
-        # if (
-        #     cacheFile.get(text_with_placeholders)
-        #     and len(cacheFile.get(text_with_placeholders)) > 0
-        # ):
-        #     if self._needs_recheck(
-        #         text=text_with_placeholders, use_shared_cache=use_shared_cache
-        #     ):
-        #         print("Needs recheck")
-        #         print(text)
-        #         print(cacheFile.get(text_with_placeholders))
-        #         cacheFile.delete(text_with_placeholders)
-        #     else:
-        #         translated_text = cacheFile.get(text_with_placeholders)
-        #         if translated_text is not None:
-        #             self.cachedCharCount += len(text)
-        #             return self._tag_manager.placeholders_to_tags(translated_text, tags)
+        if (
+            cacheFile.get(text_with_placeholders)
+            and len(cacheFile.get(text_with_placeholders)) > 0
+        ):
+            if self._needs_recheck(
+                text=text_with_placeholders, use_shared_cache=use_shared_cache
+            ):
+                print("Needs recheck")
+                print(text)
+                print(cacheFile.get(text_with_placeholders))
+                cacheFile.delete(text_with_placeholders)
+            else:
+                translated_text = cacheFile.get(text_with_placeholders)
+                if translated_text is not None:
+                    self.cachedCharCount += len(text)
+                    return self._tag_manager.placeholders_to_tags(translated_text, tags)
 
-        # # Serve from glossary if exact match
-        # if text_with_placeholders in self._glossary or text.lower() in self._glossary:
-        #     translated_text = self._glossary.get(
-        #         text_with_placeholders
-        #     ) or self._glossary.get(text_with_placeholders.lower())
-        #     self._save_translations_to_caches(
-        #         text_with_placeholders, translated_text, use_shared_cache
-        #     )
-        #     return translated_text
-        if use_shared_cache and self.fileCache.get(text_with_placeholders):
-            print("move")
-            self.sharedCache.set(
-                text_with_placeholders, self.fileCache.get(text_with_placeholders)
+        # Serve from glossary if exact match
+        if text_with_placeholders in self._glossary or text.lower() in self._glossary:
+            translated_text = self._glossary.get(
+                text_with_placeholders
+            ) or self._glossary.get(text_with_placeholders.lower())
+            self._save_translations_to_caches(
+                text_with_placeholders, translated_text, use_shared_cache
             )
-            self.fileCache.delete(text_with_placeholders)
+            return translated_text
 
-        return text_with_placeholders
+        # TEMP TO REMOVE, USE TO MOVE STUFF TO SHARED CACHE
+        # if use_shared_cache and self.fileCache.get(text_with_placeholders):
+        #     print("move")
+        #     self.sharedCache.set(
+        #         text_with_placeholders, self.fileCache.get(text_with_placeholders)
+        #     )
+        #     self.fileCache.delete(text_with_placeholders)
+        # return text_with_placeholders
 
         global maxRuntime, startTime
         if maxRuntime != 0 and time.time() - startTime > maxRuntime:

@@ -44,14 +44,14 @@ jobs:
    translate:
       needs: merge-upstream
       strategy:
-         max-parallel: 5
+         max-parallel: 10
          fail-fast: false
          matrix:
-            language: ["de"]
+            language: ["fr"]
             convert_to_metric: [true]
             include:
-               # - language: de
-               #   convert_to_metric: true
+               - language: de
+                 convert_to_metric: true
                - language: es
                  convert_to_metric: true
                - language: it
