@@ -58,11 +58,12 @@ class Translator:
         )
 
         # Shared Entities Cache
+        translation_path = os.path.dirname(os.path.abspath(__file__))
         self.sharedCache = CacheManager(
-            cacheFilePath=f"./cache/{self._language}/shared_cache.json"
+            cacheFilePath=f"{translation_path}/cache/{self._language}/shared_cache.json"
         )
         self.sharedGlossaryCache = CacheManager(
-            cacheFilePath=f"./cache/{self._language}/shared_cache_glossary_used.json"
+            cacheFilePath=f"{translation_path}/cache/{self._language}/glossary_used/shared_cache_glossary_used.json"
         )
         self._recheckWordsForEntities = {}
 
@@ -327,11 +328,7 @@ def translate_data(translator: Translator, data):
     elif type(data) is dict:
         for k, v in data.items():
             # We only translate specific keys from dicts
-            if (
-                # TODO? By safety maybe replace and name should use a shared global cache and not one per file.
-                k in ["entry", "effect", "text", "m", "capCrewNote"]
-                and type(v) is str
-            ):
+            if k in ["entry", "effect", "text", "m", "capCrewNote"] and type(v) is str:
                 data[k] = translator.translate(v)
             # We do not translate names that have a source as those a entities, often used in tags.
             elif (
@@ -370,12 +367,12 @@ def translate_data(translator: Translator, data):
                     use_shared_cache = True
 
                 for idx, entry in enumerate(v):
-                    if type(entry) is list:
-                        for elidx, el in enumerate(entry):
-                            if type(el) is str and len(el) > 2:
-                                data[k][idx][elidx] = translator.translate(
-                                    el, use_shared_cache
-                                )
+                    # if type(entry) is list:
+                    #     for elidx, el in enumerate(entry):
+                    #         if type(el) is str and len(el) > 2:
+                    #             data[k][idx][elidx] = translator.translate(
+                    #                 el, use_shared_cache
+                    #             )
 
                     if type(entry) is str:
                         data[k][idx] = translator.translate(entry, use_shared_cache)
