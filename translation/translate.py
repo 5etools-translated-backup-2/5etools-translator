@@ -273,6 +273,8 @@ class Translator:
             self.sharedCache.set(
                 text_with_placeholders, self.fileCache.get(text_with_placeholders)
             )
+            self.fileCache.delete(text_with_placeholders)
+
         return text_with_placeholders
 
         global maxRuntime, startTime
