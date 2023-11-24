@@ -57,6 +57,15 @@ class Translator:
             glossaryCachePath.replace(".json", "_per_string.json")
         )
 
+        # Shared Entities Cache
+        self.sharedCache = CacheManager(
+            cacheFilePath=f"./cache/{self._language}/shared_cache.json"
+        )
+        self.sharedGlossaryCache = CacheManager(
+            cacheFilePath=f"./cache/{self._language}/shared_cache_glossary_used.json"
+        )
+        self._recheckWordsForEntities = {}
+
         self._glossary = {}
         self._recheckWordsFromParams = recheckWords
         self._recheckWords = recheckWords
@@ -79,6 +88,11 @@ class Translator:
         if not self._recheckGlossaryForEachString:
             self._add_glossary_changes_to_recheck_words()
 
+        # We calculate the glossary change for entities
+        self._recheckWordsForEntities = self._recheck_words_from_glossary_change(
+            for_shared_entity_cache=True
+        )
+
     def __enter__(self):
         signal(SIGINT, self._sigint_handler)
         return self
@@ -91,6 +105,8 @@ class Translator:
         self.fileCache.sync()
         self.glossaryPerStringCache.sync()
         self.fileGlossaryCache.sync()
+        self.sharedCache.sync()
+        self.sharedGlossaryCache.sync()
 
         if self.deepl_translator:
             self.deepl_translator.quit()
@@ -117,8 +133,11 @@ class Translator:
                 set(self._recheckWordsFromParams + recheck_words_from_glossary)
             )
 
-    def _needs_recheck(self, text: str) -> bool:
-        for word in self._recheckWords:
+    def _needs_recheck(self, text: str, use_shared_cache: bool = False) -> bool:
+        recheckWords = (
+            self._recheckWordsForEntities if use_shared_cache else self._recheckWords
+        )
+        for word in recheckWords:
             # ignore vars and case
             checkText = re.sub(self._tag_regex, "", text)
             if re.match(r"(?i).*\b" + re.escape(word) + r"\b.*", checkText):
@@ -156,14 +175,20 @@ class Translator:
         self._glossary = sorted_glossary
 
     # Returns new words in glossary, words for which the translation as changed and words that have been removed from the glossary
-    def _recheck_words_from_glossary_change(self, for_string: str = None):
+    def _recheck_words_from_glossary_change(
+        self, for_string: str = None, for_shared_entity_cache: bool = False
+    ):
         cached_glossary = {}
-        if for_string:
-            # We use the glossary used by this string
-            cached_glossary = self.glossaryPerStringCache.get(for_string)
-        if not cached_glossary:
-            # If not found or if it's not a resume we use the one from previous run
-            cached_glossary = self.fileGlossaryCache.cacheData
+        if for_shared_entity_cache:
+            cached_glossary = self.sharedGlossaryCache.cacheData
+        else:
+            if for_string:
+                # We use the glossary used by this string
+                cached_glossary = self.glossaryPerStringCache.get(for_string)
+
+            if not cached_glossary:
+                # If not found or if it's not a resume we use the one from previous run
+                cached_glossary = self.fileGlossaryCache.cacheData
         recheck_from_glossary = []
 
         for key in self._glossary:
@@ -190,7 +215,7 @@ class Translator:
                 parsed_tag["content"][idx] = self.translate(part)
         return parsed_tag
 
-    def translate(self, text: str) -> str:
+    def translate(self, text: str, use_shared_cache: bool = False) -> str:
         # Replace tags with placeholders
         text_with_placeholders, tags = self._tag_manager.tags_to_placeholders(text)
 
@@ -215,17 +240,20 @@ class Translator:
             )
 
         # Serve from cache if present
+        cacheFile = self.sharedCache if use_shared_cache else self.fileCache
         if (
-            self.fileCache.get(text_with_placeholders)
-            and len(self.fileCache.get(text_with_placeholders)) > 0
+            cacheFile.get(text_with_placeholders)
+            and len(cacheFile.get(text_with_placeholders)) > 0
         ):
-            if self._needs_recheck(text_with_placeholders):
+            if self._needs_recheck(
+                text=text_with_placeholders, use_shared_cache=use_shared_cache
+            ):
                 print("Needs recheck")
                 print(text)
-                print(self.fileCache.get(text_with_placeholders))
-                self.fileCache.delete(text_with_placeholders)
+                print(cacheFile.get(text_with_placeholders))
+                cacheFile.delete(text_with_placeholders)
             else:
-                translated_text = self.fileCache.get(text_with_placeholders)
+                translated_text = cacheFile.get(text_with_placeholders)
                 if translated_text is not None:
                     self.cachedCharCount += len(text)
                     return self._tag_manager.placeholders_to_tags(translated_text, tags)
@@ -235,7 +263,9 @@ class Translator:
             translated_text = self._glossary.get(
                 text_with_placeholders
             ) or self._glossary.get(text_with_placeholders.lower())
-            self._save_translations_to_caches(text_with_placeholders, translated_text)
+            self._save_translations_to_caches(
+                text_with_placeholders, translated_text, use_shared_cache
+            )
             return translated_text
 
         global maxRuntime, startTime
@@ -263,7 +293,9 @@ class Translator:
         )
 
         if len(translated_text) > 1:  # If deepL fails and returns ""
-            self._save_translations_to_caches(text_with_placeholders, translated_text)
+            self._save_translations_to_caches(
+                text_with_placeholders, translated_text, use_shared_cache
+            )
 
             # Replace back any placeholders for tags
             translated_text = self._tag_manager.placeholders_to_tags(
@@ -276,14 +308,15 @@ class Translator:
             return text
 
     def _save_translations_to_caches(
-        self,
-        text: str,
-        translated_text: str,
+        self, text: str, translated_text: str, use_shared_cache: bool = False
     ):
         print(text)
         print(translated_text)
-        self.fileCache.set(text, translated_text)
-        self.glossaryPerStringCache.set(text, self._glossary)
+        if use_shared_cache:
+            self.sharedCache.set(text, translated_text)
+        else:
+            self.fileCache.set(text, translated_text)
+            self.glossaryPerStringCache.set(text, self._glossary)
         print()
 
 
@@ -294,11 +327,19 @@ def translate_data(translator: Translator, data):
     elif type(data) is dict:
         for k, v in data.items():
             # We only translate specific keys from dicts
-            if k in ["entry", "effect", "text", "m", "capCrewNote"] and type(v) is str:
+            if (
+                # TODO? By safety maybe replace and name should use a shared global cache and not one per file.
+                k in ["entry", "effect", "text", "m", "capCrewNote"]
+                and type(v) is str
+            ):
                 data[k] = translator.translate(v)
             # We do not translate names that have a source as those a entities, often used in tags.
-            elif k == "name" and type(v) is str and not data.get("source"):
-                data[k] = translator.translate(v)
+            elif (
+                k in ["name", "names", "replace"]
+                and type(v) is str
+                and not data.get("source")
+            ):
+                data[k] = translator.translate(v, use_shared_cache=True)
             elif k == "other" and type(v) is dict:
                 # Special hack for life.json
                 for section, items in v.items():
@@ -316,6 +357,7 @@ def translate_data(translator: Translator, data):
                     "lifeTrinket",
                     "row",
                     "headers",
+                    "names",
                 ]
                 and type(v) is list
             ):
@@ -323,14 +365,20 @@ def translate_data(translator: Translator, data):
                 if k == "items" and ("type" not in data or data["type"] != "list"):
                     continue
 
+                use_shared_cache = False
+                if k in ["headers", "names"]:
+                    use_shared_cache = True
+
                 for idx, entry in enumerate(v):
                     if type(entry) is list:
                         for elidx, el in enumerate(entry):
                             if type(el) is str and len(el) > 2:
-                                data[k][idx][elidx] = translator.translate(el)
+                                data[k][idx][elidx] = translator.translate(
+                                    el, use_shared_cache
+                                )
 
                     if type(entry) is str:
-                        data[k][idx] = translator.translate(entry)
+                        data[k][idx] = translator.translate(entry, use_shared_cache)
                     else:
                         translate_data(translator, entry)
             else:
@@ -371,6 +419,7 @@ def translate_file(
             # All strings were translated.
             # Save the glossary used on a file level
             translator.fileGlossaryCache.replaceCacheData(translator._glossary)
+            translator.sharedGlossaryCache.replaceCacheData(translator._glossary)
             if not translator._someTranslationFailed:
                 print("All strings where sucessfully translated")
                 translator.glossaryPerStringCache.replaceCacheData(
