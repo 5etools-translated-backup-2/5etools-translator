@@ -2,169 +2,169 @@
 	"data": [
 		{
 			"type": "section",
-			"name": "Renderer Demo",
+			"name": "Demo av renderer",
 			"entries": [
-				"(This is a section heading. This is mainly used in Adventures, for the header of entire chapters. The root entry does {@b not} need have the 'section' type, 'entries' is generally used instead. The 'section' produces a {@bold level -1} header; the 'basement' level, if you will.)",
+				"(Detta är en sektionsrubrik. Detta används främst i äventyr, för rubriken på hela kapitel. Rotposten behöver {@b inte} inte ha typen 'sektion', 'poster' används vanligtvis istället. 'Section' producerar en {@bold nivå -1} rubrik; 'källarnivån', om du så vill.)",
 				{
 					"type": "quote",
 					"entries": [
-						"Look, don't quote me on this, but"
+						"Citera mig inte för det här, men"
 					],
 					"by": "Anon",
 					"from": "Archive of Lost Chats"
 				},
-				"This is a demo of the JSON format, and how it (usually) gets rendered. You can edit this text, and it will reset on refresh.",
-				"{@b If a JSON property is described as 'optional,' the property may be excluded, unless otherwise noted.}",
-				"The goal of this system is to emulate the look and feel of the books, while maintaining a convenient and consistent data structure that can be re-used.",
-				"The general format is to nest multiple levels of 'entries'-typed objects, with other specific types (described in detail below) used as needed.",
-				"String entries can contain tags, and these work when nested in most other structures. These will eventually all work with the hover-to-view feature. They are case-insensitive, unless otherwise noted. These are:",
+				"Detta är en demonstration av JSON-formatet och hur det (vanligtvis) återges. Du kan redigera den här texten och den återställs vid uppdatering.",
+				"{@b Om en JSON-egenskap beskrivs som \"valfri\" kan egenskapen uteslutas, om inget annat anges.}",
+				"Målet med detta system är att efterlikna böckernas utseende och känsla, samtidigt som man behåller en praktisk och konsekvent datastruktur som kan återanvändas.",
+				"Det allmänna formatet är att man bäddar in flera nivåer av objekt av typen \"entries\", med andra specifika typer (som beskrivs i detalj nedan) som används vid behov.",
+				"Strängposter kan innehålla taggar, och dessa fungerar när de är inbäddade i de flesta andra strukturer. Så småningom kommer alla dessa att fungera med hover-to-view-funktionen. De är okänsliga för stor- och små bokstäver, om inget annat anges. Dessa är:",
 				{
 					"type": "list",
 					"items": [
-						"Style tags; {@bold some text to be bolded} (alternative {@b shorthand}), {@italic some text to be italicised} (alternative {@i shorthand}), {@underline some text to be underlined} (alternative {@u shorthand}), {@strike some text to strike-through}, (alternative {@s shorthand}), {@color color|e40707}/{@color color variable|--rgb-name} tags, {@highlight highlight} tags, {@sup superscript} tags, {@sub subscript} tags, {@kbd keyboard} tags, {@code print(&quot;hello world&quot;)} tags, misc {@style Style|small-caps;small;capitalize;dnd-font} tags, {@font alternate font|Comic Sans MS} tags",
-						"Additionally, {@note note tags}, used for adding errata or Twitter \"designer footnotes,\" and {@tip tooltip tags|a note}.",
-						"Dice roller tags; {@dice 1d2-2+2d3+5} for regular dice rolls ({@dice 1d6;2d6} for multiple options; {@dice 1d6 + #$prompt_number:min=1,title=Enter a Number!,default=123$#} for input prompts), with extended {@dice 1d20+2|display text} and {@dice 1d20+2|display text|rolled by name}, and a special 'hit' version which assumes a d20 is to be rolled {@hit +7} (and rolls advantage on {@kbd SHIFT}+click, disadvantage on {@kbd ALT}+click). There's also {@damage 1d12+3} which will roll critical hits on {@kbd SHIFT}+click and half damage (rounding down) on {@kbd ALT}+click, and {@d20 -4} which will also roll advantage/disadvantage, although @hit tags are preferred where appropriate. Spells can have scaling-dice tags, (damage of 2d6 or 3d6 at level 1, add an extra {@scaledamage 2d6;3d6|2-9|1d6} for each level beyond 2nd; or, roll 2d6 when using 1 psi point, add an {@scaledice 2d6|1,3,5,7,9|1d6|psi|extra amount} for each additional psi point spent), for when a spell effect scales at higher levels. {@ability str 20}, {@savingThrow str 5}, and {@skillCheck animal_handling 5} are used as internal shorthand, but may be useful elsewhere.",
-						"Auto dice tags; as above, but a result is automatically rolled upon rendering: {@autodice 2d10+2}.",
-						"Chance tags; similar to dice roller tags, but output success/failure. Similar syntax as dice tags: {@chance 50}; {@chance 50|display text}; {@chance 50|display text|rolled by name}; {@chance 50|display text|rolled by name|on success text}; {@chance 50|display text|rolled by name|on success text|on failure text}.",
-						"Summon/companion-specific tags: {@hitYourSpellAttack} ({@hitYourSpellAttack with optional display text}), {@dcYourSpellSave} ({@dcYourSpellSave with optional display text}).",
-						"Recharge tags; output success/failure for ability recharge. {@recharge} in an ability title for '(Recharge 6)', {@recharge 4} for '(Recharge 4–6)'.",
-						"Coinflip tags; {@coinflip} or {@coinflip display text|rolee name|success text|failure text}",
-						"Skill and sense tags; {@skill Athletics}/{@skill Perception} (case sensitive) and {@sense Truesight}/{@sense darkvision} (case insensitive) which provide tooltips on hover.",
-						"Footnote tags; allows a footnote to be embedded {@footnote directly in text|This is primarily for homebrew purposes, as the official texts (so far) avoid using footnotes}, with {@footnote optional reference information|This is the footnote. References are free text.|Footnote 1, page 20}.",
-						"The homebrew tag; can show {@homebrew changes|modifications}, {@homebrew additions} or {@homebrew |removals}.",
-						"Content tags:",
+						"Stiltaggar; {@bold viss text ska vara fetmarkerad} (alternativ {@b kortform}), {@italic viss text ska kursiveras} (alternativ {@i kortform}), {@underline viss text ska understrykas} (alternativ {@u kortform}), {@strike viss text till genomslag}, (alternativ {@s kortform}), {@color färg|e40707}/{@color färgvariabel|--rgb-name} taggar, {@highlight markera} taggar, {@sup superscript} taggar, {@sub Subskript} taggar, {@kbd tangentbord} taggar, {@code skriv ut(&quot;hello world&quot;)} taggar, misc {@style Stil|small-caps;small;capitalize;dnd-font} taggar, {@font alternativt teckensnitt|Comic Sans MS} taggar",
+						"Dessutom {@note notis-taggar}, som används för att lägga till errata eller Twitter \"designer fotnoter\", och {@tip tooltip tags|a note}.",
+						"Tärningsrullen tags; {@dice 1d2-2+2d3+5} för vanliga tärningskast ({@dice 1d6;2d6} för flera alternativ; {@dice 1d6 + #$prompt_number:min=1,title=Enter a Number!,default=123$#} för inmatningsfrågor), med utökade {@dice 1d20+2|visa text} och {@dice 1d20+2|visa text|rolled by name}, och en speciell \"hit\" version som antar att en d20 ska kastas {@hit +7} (och kastar fördel på {@kbd SKIFT}+klick, nackdel på {@kbd ALT}+klick). Det finns också {@damage 1d12+3} som kastar kritiska träffar på {@kbd SKIFT}+klick och halv skada (nedrundat) på {@kbd ALT}+klick, och {@d20 -4} som också kastar fördel/fördel, även om @hit-taggar är att föredra där det är lämpligt. Besvärjelser kan ha skalningstärningstaggar, (skada på 2d6 eller 3d6 på nivå 1, lägg till en extra {@scaledamage 2d6;3d6|2-9|1d6} för varje nivå efter den andra; eller rulla 2d6 när du använder 1 psi-punkt, lägg till en {@scaledice 2d6|1,3,5,7,9|1d6|psi|extra amount} för varje ytterligare psi-punkt som spenderas), för när en besvärjelseeffekt skalas på högre nivåer. {@ability str 20}, {@savingThrow str 5} och {@skillCheck animal_handling 5} används som interna förkortningar, men kan vara användbara på andra ställen.",
+						"Auto dice-taggar; som ovan, men ett resultat kastas automatiskt vid rendering: {@autodice 2d10+2}.",
+						"Chanstaggar; liknar tärningsrulletaggar, men matar ut framgång/misslyckande. Liknande syntax som tärningstaggar: {@chance 50}; {@chance 50|visa text}; {@chance 50|visa text|rolled by name}; {@chance 50|visa text|rolled by name|on success text}; {@chance 50|visa text|rolled by name|on success text|on failure text}.",
+						"Specifika taggar för besvärjelse/kompanjon: {@hitYourSpellAttack} ({@hitYourSpellAttack med valfri displaytext}), {@dcYourSpellSave} ({@dcYourSpellSave med valfri displaytext}).",
+						"Taggar för uppladdning; mata ut framgång/misslyckande för uppladdning av förmåga. {@recharge} i en förmågetitel för '(Recharge 6)', {@recharge 4} för '(Recharge 4-6)'.",
+						"Kringkastade taggar; {@coinflip} eller {@coinflip visa text|rolee name|framgångstext|text om fel}",
+						"Skill- och sense-taggar; {@skill Athletics}/{@skill Perception} (skiftlägeskänslig) och {@sense Truesight}/{@sense darkvision} (skiftlägeskänslig) som ger verktygstips vid hovring.",
+						"Fotnotstaggar; gör det möjligt att bädda in en fotnot {@footnote direkt i text|Detta är främst för homebrew ändamål, eftersom de officiella texterna (hittills) undviker att använda fotnoter}, med {@footnote valfri referensinformation|Detta är fotnoten. Referenser är fritext.|Fotnot 1, sidan 20}.",
+						"Homebrew-taggen; kan visa {@homebrew changes|modifications}, {@homebrew additions} eller {@homebrew |removals}.",
+						"Innehållstaggar:",
 						{
 							"type": "list",
 							"items": [
-								"Spells: {@spell acid splash} assumes PHB by default, {@spell tiny servant|xge} can have sources added with a pipe, {@spell tiny servant|xge|and optional link text added with another pipe}.",
-								"Items: {@item alchemy jug} assumes DMG by default, {@item longsword|phb} can have sources added with a pipe, {@item longsword|phb|and optional link text added with another pipe}.",
-								"Creatures: {@creature goblin} assumes MM by default, {@creature cow|vgm} can have sources added with a pipe, {@creature cow|vgm|and optional link text added with another pipe}.",
-								"Creature legendary groups: {@legroup unicorn} assumes MM by default, {@legroup balhannoth|MPMM} can have sources added with a pipe, {@legroup balhannoth|MPMM|and optional link text added with another pipe}.",
-								"Backgrounds: {@background Charlatan} assumes PHB by default, {@background Anthropologist|toa} can have sources added with a pipe, {@background Anthropologist|ToA|and optional link text added with another pipe}.",
-								"Races: {@race Human} assumes PHB by default, {@race Aarakocra|eepc} can have sources added with a pipe, {@race Aarakocra|eepc|and optional link text added with another pipe}.",
-								"Invocations and Other Optional Features: {@optfeature Agonizing Blast} assumes PHB by default, {@optfeature Aspect of the Moon|xge} can have sources added with a pipe, {@optfeature Aspect of the Moon|xge|and optional link text added with another pipe}.",
-								"Classes: {@class fighter} assumes PHB by default, {@class artificer|uaartificer} can have sources added with a pipe, {@class fighter|phb|optional link text added with another pipe}, {@class fighter|phb|subclasses added|Eldritch Knight} with another pipe, {@class fighter|phb|and class feature added|Eldritch Knight|phb|2-0} with another pipe (first number is level index (0-19), second number is feature index (0-n)).",
-								"Class Features: {@classFeature Rage|Barbarian||1}, {@classFeature Infuse Item|Artificer|TCE|2}, {@classFeature Survival Instincts|Barbarian||2|UAClassFeatureVariants}, {@classFeature Rage|Barbarian||1||optional display text}. Class source is assumed to be PHB. Class feature source is assumed to be the same as class source.",
-								"Subclass Features: {@subclassFeature Path of the Berserker|Barbarian||Berserker||3}, {@subclassFeature Alchemist|Artificer|TCE|Alchemist|TCE|3}, {@subclassFeature Path of the Battlerager|Barbarian||Battlerager|SCAG|3}, {@subclassFeature Blessed Strikes|Cleric||Life||8|UAClassFeatureVariants}, {@subclassFeature Path of the Berserker|Barbarian||Berserker||3||optional display text}. Class source is assumed to be PHB. Subclass source is assumed to be PHB. Subclass feature source is assumed to be the same as subclass source.",
-								"Conditions: {@condition stunned} assumes PHB by default, {@condition stunned|PHB} can have sources added with a pipe (not that it's ever useful), {@condition stunned|PHB|and optional link text added with another pipe}.",
-								"Diseases: {@disease cackle fever} assumes DMG by default, {@disease cackle fever} can have sources added with a pipe, {@disease cackle fever|DMG|and optional link text added with another pipe}.",
-								"Other Rewards: {@reward Blessing of Health} assumes DMG by default, {@reward Blessing of Health} can have sources added with a pipe, {@reward Blessing of Health|DMG|and optional link text added with another pipe}.",
-								"Feats: {@feat Alert} assumes PHB by default, {@feat Elven Accuracy|xge} can have sources added with a pipe, {@feat Elven Accuracy|xge|and optional link text added with another pipe}.",
-								"Psionics: {@psionic Mastery of Force} assumes UATheMysticClass by default, {@psionic Mastery of Force|UATheMysticClass} can have sources added with a pipe, {@psionic Mastery of Force|UATheMysticClass|and optional link text added with another pipe}.",
-								"Objects: {@object Ballista} assumes DMG by default, {@object Ballista} can have sources added with a pipe, {@object Ballista|DMG|and optional link text added with another pipe}.",
-								"Boons: {@boon Demonic Boon of Demogorgon} assumes MTF by default, {@boon Demonic Boon of Demogorgon} can have sources added with a pipe, {@boon Demonic Boon of Demogorgon|MTF|and optional link text added with another pipe}.",
-								"Cults: {@cult Cult of Asmodeus} assumes MTF by default, {@cult Cult of Asmodeus} can have sources added with a pipe, {@cult Cult of Asmodeus|MTF|and optional link text added with another pipe}.",
-								"Traps: {@trap falling net} assumes DMG by default, {@trap falling portcullis|xge} can have sources added with a pipe, {@trap falling portcullis|xge|and optional link text added with another pipe}.",
-								"Hazards: {@hazard brown mold} assumes DMG by default, {@hazard russet mold|vgm} can have sources added with a pipe, {@hazard russet mold|vgm|and optional link text added with another pipe}.",
-								"Deities: {@deity Gond} assumes PHB Forgotten Realms pantheon by default, {@deity Gruumsh|nonhuman} can have pantheons added with a pipe, {@deity Ioun|dawn war|dmg} can have sources added with another pipe, {@deity Ioun|dawn war|dmg|and optional link text added with another pipe}.",
-								"Variant rules: {@variantrule Diagonals} assumes DMG by default, {@variantrule Multiclassing|phb} can have sources added with a pipe, {@variantrule Multiclassing|phb|and optional link text added with another pipe}.",
-								"Vehicles: {@vehicle Galley} assumes GoS by default, {@vehicle Galley|UAOfShipsAndSea} can have sources added with a pipe, {@vehicle Galley|GoS|and optional link text added with another pipe}.",
-								"Vehicle upgrades: {@vehupgrade Guardian Figurehead} assumes GoS by default, {@vehicle Gilded Death Armor|BGDIA} can have sources added with a pipe, {@vehicle Guardian Figurehead|GoS|and optional link text added with another pipe}.",
-								"Tables: {@table 25 gp Art Objects} assumes DMG by default, {@table Adventuring Gear|phb} can have sources added with a pipe, {@table Adventuring Gear|phb|and optional link text added with another pipe}.",
-								"Actions: {@action Attack} assumes PHB by default, {@action Tumble|DMG} can have sources added with a pipe, {@action Tumble|DMG|and optional link text added with another pipe}.",
-								"Languages: {@language common} assumes PHB by default, {@language Dambrathan|SCAG} can have sources added with a pipe, {@language Dambrathan|SCAG|and optional link text added with another pipe}.",
-								"Other Character Creation Options: {@charoption Anvilwrought} assumes MOT by default, {@charoption Hollow One|EGW} can have sources added with a pipe, {@charoption Hollow One|EGW|and optional link text added with another pipe}.",
-								"Recipes: {@recipe Elven Bread} assumes Heroes' Feast by default, {@recipe Barovian Garlic Bread|HFFotM} can have sources added with a pipe, {@recipe Barovian Garlic Bread|HFFotM|and optional link text added with another pipe}.",
-								"Decks: {@deck Deck of Many Things} assumes DMG by default, {@deck Deck of Many Things|DMG} can have sources added with a pipe, {@deck Deck of Many Things|DMG|and optional link text added with another pipe}.",
-								"Cards: {@card Vizier|Deck of Many Things} assumes DMG by default, {@card Vizier|Deck of Many Things|DMG} can have sources added with a pipe, {@card Vizier|Deck of Many Things|DMG|and optional link text added with another pipe}."
+								"Trollformler: {@spell acid splash} antar PHB som standard, {@spell tiny servant|xge} kan få källor tillagda med ett rör, {@spell tiny servant|xge|and optional link text added with another pipe}.",
+								"Föremål: {@item alchemy jug} antar DMG som standard, {@item longsword|phb} kan få källor tillagda med ett rör, {@item longsword|phb|and optional link text added with another pipe}.",
+								"Varelser: {@creature goblin} antar MM som standard, {@creature cow|vgm} kan få källor tillagda med ett rör, {@creature cow|vgm|and optional link text added with another pipe}.",
+								"Varelse legendariska grupper: {@legroup unicorn} antar MM som standard, {@legroup balhannoth|MPMM} kan få källor tillagda med ett rör, {@legroup balhannoth|MPMM|and optional link text added with another pipe}.",
+								"Bakgrund: {@background Charlatan} förutsätter PHB som standard, {@background Anthropologist|toa} kan få källor tillagda med ett rör, {@background Anthropologist|ToA|and optional link text added with another pipe}.",
+								"Raser: {@race Human} antar PHB som standard, {@race Aarakocra|eepc} kan få källor tillagda med ett rör, {@race Aarakocra|eepc|and optional link text added with another pipe}.",
+								"Anrop och andra valfria funktioner: {@optfeature Agonizing Blast} antar PHB som standard, {@optfeature Aspect of the Moon|xge} kan ha källor tillagda med ett rör, {@optfeature Aspect of the Moon|xge|and optional link text added with another pipe}.",
+								"Klasser: {@class fighter} antar PHB som standard, {@class artificer|uaartificer} kan få källor tillagda med ett rör, {@class fighter|phb|optional link text added with another pipe}, {@class fighter|phb|subclasses added|Eldritch Knight} med ett annat rör, {@class fighter|phb|and class feature added|Eldritch Knight|phb|2-0} med ett annat rör (första siffran är nivåindex (0-19), andra siffran är funktionsindex (0-n)).",
+								"Klassens egenskaper: {@classFeature Rage|Barbarian||1}, {@classFeature Infuse Item|Artificer|TCE|2}, {@classFeature Survival Instincts|Barbarian||2|UAClassFeatureVariants}, {@classFeature Rage|Barbarian||1||optional display text}. Klassens källa antas vara PHB. Klassfunktionens källa antas vara densamma som klassens källa.",
+								"Funktioner för underklass: {@subclassFeature Path of the Berserker|Barbarian||Berserker||3}, {@subclassFeature Alchemist|Artificer|TCE|Alchemist|TCE|3}, {@subclassFeature Path of the Battlerager|Barbarian||Battlerager|SCAG|3}, {@subclassFeature Blessed Strikes|Cleric||Life||8|UAClassFeatureVariants}, {@subclassFeature Path of the Berserker|Barbarian||Berserker||3||optional display text}. Klassens källa antas vara PHB. Källan till underklassen antas vara PHB. Källan för underklassens särdrag antas vara densamma som källan för underklassen.",
+								"Villkor: {@condition stunned} antar PHB som standard, {@condition stunned|PHB} kan få källor tillagda med ett rör (inte för att det någonsin är användbart), {@condition stunned|PHB|and optional link text added with another pipe}.",
+								"Sjukdomar: {@disease cackle fever} antar DMG som standard, {@disease cackle fever} kan få källor tillagda med ett rör, {@disease cackle fever|DMG|and optional link text added with another pipe}.",
+								"Andra belöningar: {@reward Blessing of Health} antar DMG som standard, {@reward Blessing of Health} kan få källor tillagda med ett rör, {@reward Blessing of Health|DMG|and optional link text added with another pipe}.",
+								"Förtjänster: {@feat Alert} antar PHB som standard, {@feat Elven Accuracy|xge} kan få källor tillagda med ett rör, {@feat Elven Accuracy|xge|and optional link text added with another pipe}.",
+								"Psionik: {@psionic Mastery of Force} antar UATheMysticClass som standard, {@psionic Mastery of Force|UATheMysticClass} kan få källor tillagda med ett rör, {@psionic Mastery of Force|UATheMysticClass|and optional link text added with another pipe}.",
+								"Objekt: {@object Ballista} antar DMG som standard, {@object Ballista} kan få källor tillagda med ett rör, {@object Ballista|DMG|and optional link text added with another pipe}.",
+								"Boons: {@boon Demonic Boon of Demogorgon} antar MTF som standard, {@boon Demonic Boon of Demogorgon} kan ha källor som läggs till med ett rör, {@boon Demonic Boon of Demogorgon|MTF|and optional link text added with another pipe}.",
+								"Kulter: {@cult Cult of Asmodeus} antar MTF som standard, {@cult Cult of Asmodeus} kan få källor tillagda med ett rör, {@cult Cult of Asmodeus|MTF|and optional link text added with another pipe}.",
+								"Fällor: {@trap falling net} antar DMG som standard, {@trap falling portcullis|xge} kan ha källor som läggs till med ett rör, {@trap falling portcullis|xge|and optional link text added with another pipe}.",
+								"Faror: {@hazard brown mold} antar DMG som standard, {@hazard russet mold|vgm} kan få källor tillagda med ett rör, {@hazard russet mold|vgm|and optional link text added with another pipe}.",
+								"Gudar: {@deity Gond} antar PHB Forgotten Realms pantheon som standard, {@deity Gruumsh|nonhuman} kan ha pantheons tillagda med ett rör, {@deity Ioun|dawn war|dmg} kan ha källor tillagda med ett annat rör, {@deity Ioun|dawn war|dmg|and optional link text added with another pipe}.",
+								"Regler för varianter: {@variantrule Diagonals} antar DMG som standard, {@variantrule Multiclassing|phb} kan få källor tillagda med ett rör, {@variantrule Multiclassing|phb|and optional link text added with another pipe}.",
+								"Fordon: {@vehicle Galley} antar GoS som standard, {@vehicle Galley|UAOfShipsAndSea} kan ha källor som läggs till med ett rör, {@vehicle Galley|GoS|and optional link text added with another pipe}.",
+								"Fordonsuppgraderingar: {@vehupgrade Guardian Figurehead} antar GoS som standard, {@vehicle Gilded Death Armor|BGDIA} kan få källor tillagda med ett rör, {@vehicle Guardian Figurehead|GoS|and optional link text added with another pipe}.",
+								"Tabeller: {@table 25 gp Art Objects} antar DMG som standard, {@table Adventuring Gear|phb} kan få källor tillagda med ett rör, {@table Adventuring Gear|phb|och valfri länktext som läggs till med ett annat rör}.",
+								"Åtgärder: {@action Attack} antar PHB som standard, {@action Tumble|DMG} kan få källor tillagda med ett rör, {@action Tumble|DMG|and optional link text added with another pipe}.",
+								"Språk: {@language common} antar PHB som standard, {@language Dambrathan|SCAG} kan få källor tillagda med ett rör, {@language Dambrathan|SCAG|and optional link text added with another pipe}.",
+								"Andra alternativ för skapande av karaktärer: {@charoption Anvilwrought} antar MOT som standard, {@charoption Hollow One|EGW} kan få källor tillagda med ett rör, {@charoption Hollow One|EGW|and optional link text added with another pipe}.",
+								"Recept: {@recipe Elven Bread} antar Hjältarnas festmåltid som standard, {@recipe Barovian Garlic Bread|HFFotM} kan ha källor tillagda med ett rör, {@recipe Barovian Garlic Bread|HFFotM|and optional link text added with another pipe}.",
+								"Deck: {@deck Deck of Many Things} antar DMG som standard, {@deck Deck of Many Things|DMG} kan få källor tillagda med ett rör, {@deck Deck of Many Things|DMG|and optional link text added with another pipe}.",
+								"Kort: {@card Vizier|Deck of Many Things} antar DMG som standard, {@card Vizier|Deck of Many Things|DMG} kan ha källor som läggs till med ett rör, {@card Vizier|Deck of Many Things|DMG|and optional link text added with another pipe}."
 							]
 						},
 						{
 							"type": "inset",
-							"name": "Filter Tag",
+							"name": "Filtrera tagg",
 							"entries": [
-								"Another tag that appears occasionally in the data is the @filter tag. This tag can be tricky to use, and generally relies on knowledge of the internals of each page. As such, use with caution, and if you're not sure about something, don't be afraid to drop by our {@link Discord|https://discord.gg/5etools} and ask questions. Note that you can {@kbd CTRL}+click the \"Get link to filters\" (magnet) button on a list page to copy the @filter tag for your current filter selection.",
-								"The syntax for the @filter tag is as follows:",
-								"(open curly brace)@filter display text|page_without_file_extension|filter_name_1=filter_1_value_1;filter_1_value_2;...filter_1_value_n|...|filter_name_m=filter_m_value_1;filter_m_value_2;...(close curly brace)",
-								"The purpose of this tag is to open the given page, pre-filtered with the specified filtering options. There's one major caveat that makes this tricky to use for aspiring JSONtranauts—the filter values use the {@i internal} version, as you'd find in the data. So, for example, ..|school=D|.. would filter spells to Divination school spells, as 'D' is the Divination identifier in the data. Trying to do e.g. ..|school=Divination|.. will not work.",
-								"The 'filter_name_X' here matches the literal text name of the filter, as displayed in the dropdown.",
-								"Some examples of the tag in action:",
-								"{@filter Races that have a bonus to Intelligence|races|Ability Scores (Including Subrace)=Intelligence +any}",
-								"{@filter Bard cantrips and first-level spells|spells|level=0;1|class=bard}",
-								"{@filter Beast with challenge rating 1 or lower|bestiary|challenge rating=[&0;&1]|type=beast}",
-								"{@filter Creatures with a Strength score of 18 or more|bestiary|strength=[18;]}",
-								"{@filter Divination and Evocation spells|spells|school=D;V}",
-								"{@filter All uncommon magic items|items|source=|type=|rarity=uncommon|miscellaneous=Magic}",
-								"{@filter Simple melee weapons|items|source=phb|category=basic|type=simple weapon;melee weapon=u~u~sand}",
-								"Meta-options can be set; inline for individual filters, and using 'fbmt' for filtering meta-options {@filter filter meta example|spells|level=1;2=sor~sand~b1|fbmt=sor|fbmh=source}",
-								"Search can be set; {@filter view dinosaurs|bestiary|search=dinosaur}",
-								"An exact starting entity; {@filter filter for beasts and show cat|bestiary|type=beast|hash=cat_mm} where 'hash' is the part after a '#' and before any commas which appears in the URL bar when viewing the entity.",
+								"En annan tagg som ibland dyker upp i data är @filter-taggen. Denna tagg kan vara knepig att använda och kräver i allmänhet kunskap om de interna funktionerna på varje sida. Använd den därför med försiktighet, och om du är osäker på något ska du inte vara rädd för att komma förbi vår {@link Discord|https://discord.gg/5etools} och ställa frågor. Observera att du kan {@kbd CTRL}+klicka på knappen \"Hämta länk till filter\" (magnet) på en listsida för att kopiera @filter-taggen för ditt aktuella filterval.",
+								"Syntaxen för @filter-taggen är följande:",
+								"(öppna hakparentes)@filter display text|page_without_file_extension|filter_name_1=filter_1_value_1;filter_1_value_2;...filter_1_value_n|...|filter_name_m=filter_m_value_1;filter_m_value_2;...(stäng hakparentes)",
+								"Syftet med denna tagg är att öppna den givna sidan, förfiltrerad med de angivna filtreringsalternativen. Det finns ett stort problem som gör det svårt att använda för blivande JSONtranauter - filtervärdena använder {@i intern}-versionen, som du hittar i data. Så, till exempel, ..|school=D|.. skulle filtrera trollformler till Divination-skolformler, eftersom 'D' är Divination-identifieraren i data. Att försöka göra t.ex. ..|school=Divination|... kommer inte att fungera.",
+								"Här motsvarar \"filter_name_X\" det bokstavliga textnamnet på filtret som visas i rullgardinsmenyn.",
+								"Några exempel på hur taggen används:",
+								"{@filter Raser som har en bonus på intelligens|races|Ability Scores (Including Subrace)=Intelligence +any}",
+								"{@filter Bard cantrips och första nivåns besvärjelser|spells|level=0;1|class=bard}",
+								"{@filter Bäst med utmaningsgrad 1 eller lägre|bestiary|challenge rating=[&0;&1]|type=beast}",
+								"{@filter Varelser med en styrkepoäng på 18 eller mer|bestiary|strength=[18;]}",
+								"{@filter Spådoms- och besvärjelseformler|spells|school=D;V}",
+								"{@filter Alla ovanliga magiska föremål|items|source=|type=|rarity=uncommon|miscellaneous=Magic}",
+								"{@filter Enkla närstridsvapen|items|source=phb|category=basic|type=simple weapon;melee weapon=u~u~sand}",
+								"Meta-alternativ kan anges; inline för enskilda filter, och med 'fbmt' för filtrering av meta-alternativ {@filter filter meta exempel|spells|level=1;2=sor~sand~b1|fbmt=sor|fbmh=source}",
+								"Sök kan ställas in; {@filter Visa dinosaurier|bestiary|search=dinosaur}",
+								"En exakt startenhet; {@filter filter för djur och utställningskatter|bestiary|type=beast|hash=cat_mm} där \"hash\" är den del efter ett \"#\" och före eventuella kommatecken som visas i URL-fältet när du visar enheten.",
 								{
 									"type": "entries",
-									"name": "Note",
+									"name": "Anmärkning",
 									"entries": [
-										"Setting a filter to \"no value\", i.e. ..|school=|.. is equivalent to 'clear the filter,' resetting it to all-white.",
-										"The pages that support this functionality are those with the 'magnet' button; the link this button exports will give clues as to what one could do with the filter tag."
+										"Att ställa in ett filter till \"inget värde\", dvs. ..|school=|... är likvärdigt med \"rensa filtret\", vilket innebär att det återställs till helt vitt.",
+										"De sidor som stöder den här funktionen är de som har en magnetknapp. Länken som denna knapp exporterar ger ledtrådar om vad man kan göra med filtertaggen."
 									]
 								}
 							]
 						},
 						{
 							"type": "inset",
-							"name": "Area Tags and IDs",
+							"name": "Områdesbeteckningar och ID",
 							"entries": [
-								"Adventure and book content supports \"area\" tags, which have the form `@area [area name]|[entry id]` or `@area [area name]|[entry id]|[modifiers]` where [modifiers] is a combination of \"x\" for e[x]act text, and \"u\" for [u]ppercase. The \"exact\" modifier removes the leading \"area \" which is prepended to the area name, and the \"uppercase\" modifier causes the prepended text to \"Area \".",
-								"A variety of entries blocks can have \"id\" fields (and may therefore be linked to with \"area\" tags), notable \"entries\"-type, \"section\"-type, and \"inset\"-type. These IDs are conventionally 3-digit hexadecimal numbers (allowing for a total of 4096 IDs per adventure/book), but any string which is unique within the document will suffice."
+								"Äventyrs- och bokinnehåll stöder \"area\"-taggar, som har formen `@area [area name]|[entry id]` eller `@area [area name]|[entry id]|[modifiers]` där [modifiers] är en kombination av \"x\" för e[x]act text och \"u\" för [u]ppercase. Modifieraren \"exact\" tar bort det inledande \"area\" som läggs till i områdesnamnet, och modifieraren \"versal\" gör att den text som läggs till i texten blir \"Area\".",
+								"En mängd olika block kan ha \"id\"-fält (och kan därför kopplas till med \"area\"-taggar), särskilt block av typen \"entry\", \"section\" och \"inset\". Dessa ID:n är konventionellt 3-siffriga hexadecimala tal (vilket ger totalt 4096 ID:n per äventyr/bok), men vilken sträng som helst som är unik inom dokumentet räcker."
 							]
 						},
 						{
 							"type": "inset",
-							"name": "Book/Reference Tags",
+							"name": "Bok/Reference Taggar",
 							"entries": [
-								"The following tags can be used to link specific sections of adventures/books. Note that chapters and headers are indexed from zero.",
+								"Följande taggar kan användas för att länka specifika avsnitt av äventyr/böcker. Observera att kapitel och rubriker indexeras från noll.",
 								{
 									"type": "list",
 									"items": [
-										"Adventure tags: link to an adventure {@adventure display text|CoS}; a chapter in an adventure {@adventure display text|CoS|2}; a heading in a chapter in an adventure {@adventure display text|CoS|2|Treasure}; or the Nth heading of a given name in a chapter in an adventure {@adventure display text|CoS|2|Treasure|1}",
-										"Book tags: link to a book {@book display text|PHB}; a chapter in a book {@book display text|PHB|2}; a heading in a chapter in a book {@book display text|PHB|2|Age}; or the Nth heading of a given name in a chapter in a book {@book display text|PHB|2|Age|0} (although this is generally unnecessary as, unlike adventures, books don't repeat their headings very often.",
-										"Quick Reference tags; {@code &lt;name&gt;|&lt;source&gt;|&lt;chapterIndex&gt;|&lt;headerIndex&gt;|&lt;displayText&gt;}: {@quickref Multiclassing}, {@quickref Multiclassing|PHB}, {@quickref Adventuring Gear|PHB|1}, {@quickref Adventuring Gear|PHB|1|0}, {@quickref Adventuring Gear|PHB|1|0|Display Text}."
+										"Taggar för äventyr: länk till ett äventyr {@adventure display text|CoS}; ett kapitel i ett äventyr {@adventure display text|CoS|2}; en rubrik i ett kapitel i ett äventyr {@adventure display text|CoS|2|Treasure}; eller den N:te rubriken med ett givet namn i ett kapitel i ett äventyr {@adventure display text|CoS|2|Treasure|1}",
+										"Boktaggar: länk till en bok {@book display text|PHB}; ett kapitel i en bok {@book display text|PHB|2}; en rubrik i ett kapitel i en bok {@book display text|PHB|2|Age}; eller den N:te rubriken med ett givet namn i ett kapitel i en bok {@book display text|PHB|2|Age|0} (detta är dock i allmänhet onödigt eftersom böcker, till skillnad från äventyr, inte upprepar sina rubriker särskilt ofta.",
+										"Snabbreferenser; {@code &lt;namn&gt;|&lt;source&gt;|&lt;chapterIndex&gt;|&lt;headerIndex&gt;|&lt;displayText&gt;}: {@quickref Multiclassing}, {@quickref Multiclassing|PHB}, {@quickref Adventuring Gear|PHB|1}, {@quickref Adventuring Gear|PHB|1|0}, {@quickref Adventuring Gear|PHB|1|0|Visa text}."
 									]
 								}
 							]
 						},
 						{
 							"type": "inset",
-							"name": "Other Tags",
+							"name": "Andra taggar",
 							"entries": [
-								"Links:",
+								"Länkar:",
 								{
 									"type": "list",
 									"items": [
-										"Internal links: {@5etools This Is Your Life|lifegen.html}",
-										"External links: {@link https://discord.gg/5etools} or {@link Discord|https://discord.gg/5etools}"
+										"Interna länkar: {@5etools Detta är ditt liv|lifegen.html}",
+										"Externa länkar: {@link https://discord.gg/5etools} eller {@link Discord|https://discord.gg/5etools}"
 									]
 								},
-								"Page specific/other tags:",
+								"Sidspecifika/andra taggar:",
 								{
 									"type": "list",
 									"items": [
-										"Bestiary 'attack' tags: {@atk m}, {@atk r}, {@atk m,r}, {@atk mw}, {@atk rw}, {@atk ms}, {@atk rs}; (homebrew only) {@atk a}, {@atk aw}. Commas separate or'd attack types; the general form is: '@atk &lt;m|r|a&gt;[&lt;w|s&gt;][,&lt;m|r|a&gt;[&lt;w|s&gt;][,...]]'"
+										"Bestiariets 'attack'-taggar: {@atk m}, {@atk r}, {@atk m,r}, {@atk mw}, {@atk rw}, {@atk ms}, {@atk rs}; (endast homebrew) {@atk a}, {@atk aw}. Kommatecken separerar or'd-attacktyper; den allmänna formen är: \"@atk &lt;m|r|a&gt;[&lt;w|s&gt;][,&lt;m|r|a&gt;[&lt;w|s&gt;][,...]]"
 									]
 								},
-								"Homebrew loading tags: {@loader Tome of Beasts|creature/Kobold Press; Tome of Beasts.json}. The URL after the pipe is assumed to be from the root of the homebrew repository, unless it starts with a \"...://\" prefix (i.e., any link should work, but there's a shorthand for homebrew repository links).",
-								"Prerelease loading tags; as above: {@loader UA: When Armies Clash|collection/Unearthed Arcana - When Armies Clash.json|prerelease}."
+								"Homebrew laddar taggar: {@loader Tome of Beasts|creature/Kobold Press; Tome of Beasts.json}. URL:en efter röret antas vara från roten av homebrew-arkivet, såvida den inte börjar med ett \"...://\"-prefix (dvs. vilken länk som helst bör fungera, men det finns en kortform för homebrew-arkivlänkar).",
+								"Taggar för förhandslastning; som ovan: {@loader UA: When Armies Clash|collection/Unearthed Arcana - When Armies Clash.json|prerelease}."
 							]
 						}
 					]
 				},
-				"These tags may be {@b {@i {@spell fireball|phb|nested}}}, although there are often better ways to get the combination of bold and italic that you're probably going to use this for; consider using one of the properly typed objects below (such as level 2 headers).",
+				"Dessa taggar kan vara {@b {@i {@spell fireball|phb|nested}}}, men det finns ofta bättre sätt att få den kombination av fet och kursiv som du förmodligen kommer att använda detta för; överväg att använda ett av de korrekt skrivna objekten nedan (t.ex. nivå 2-rubriker).",
 				{
 					"type": "entries",
-					"name": "A Subclass Name, For Example",
+					"name": "Namn på undergrupp, till exempel",
 					"entries": [
-						"The above is a 'level 0' header.",
-						"The 'name' property is optional",
+						"Ovanstående är en rubrik på nivå 0.",
+						"Egenskapen \"name\" är valfri.",
 						{
 							"type": "entries",
-							"name": "A Subclass Feature Name",
+							"name": "En underklass Egenskapsnamn",
 							"entries": [
-								"The above is a 'level 1' header.",
+								"Ovanstående är en rubrik på nivå 1.",
 								{
 									"type": "entries",
-									"name": "A Subclass Feature Inline Header",
+									"name": "En underklass funktion Inline Header",
 									"entries": [
-										"This bold-italic inline header is a 'level 2' header, please use this as opposed to nesting tags. You can make a chain of empty entry objects with no names to get to this header level, if required.",
-										"Note that the period in the inline name is added automagically."
+										"Den här fetstilade, kursiva inline-rubriken är en rubrik på nivå 2, använd detta i stället för att nästla in taggar. Du kan skapa en kedja av tomma objekt utan namn för att komma till denna rubriknivå, om det behövs.",
+										"Observera att punkt i inline-namnet läggs till automatiskt."
 									]
 								}
 							]
@@ -179,9 +179,9 @@
 							"entries": [
 								{
 									"type": "entries",
-									"name": "This is an example of a level 2 header with no real parents",
+									"name": "Detta är ett exempel på en rubrik på nivå 2 utan verkliga föräldrar",
 									"entries": [
-										"This technique can be useful, sometimes."
+										"Denna teknik kan ibland vara användbar."
 									]
 								}
 							]
@@ -191,31 +191,31 @@
 				{
 					"type": "inline",
 					"entries": [
-						"Entries can be inlined, useful for e.g. links beyond the tags listed above, ",
+						"Inlägg kan vara inlinade, vilket är användbart för t.ex. länkar utöver de taggar som anges ovan,",
 						{
 							"type": "link",
 							"href": {
 								"type": "internal",
 								"path": "index.html"
 							},
-							"text": "such as a link to the homepage"
+							"text": "till exempel en länk till hemsidan"
 						},
-						" but you can see why the tags are preferable."
+						" men du förstår varför taggar är att föredra."
 					]
 				},
 				{
 					"type": "inlineBlock",
 					"entries": [
-						"Similar to the above, but keeps the paragraph/etc tags around the inlined children, ",
+						"Liknande som ovan, men behåller paragraf/etc-taggarna runt de inlinjerade barnen,",
 						{
 							"type": "link",
 							"href": {
 								"type": "internal",
 								"path": "index.html"
 							},
-							"text": "such as a link to the homepage"
+							"text": "till exempel en länk till hemsidan"
 						},
-						" so can easily be mixed with lines of text."
+						" så att de lätt kan blandas med rader av text."
 					]
 				},
 				{
@@ -223,16 +223,16 @@
 					"entries": [
 						{
 							"type": "entries",
-							"name": "Option B",
+							"name": "Alternativ B",
 							"entries": [
-								"Sometimes useful, e.g. for Fighting Styles on a class. (Note that this option is rendered second, when it's listed first in the data.)"
+								"Ibland användbart, t.ex. för Fighting Styles på en klass. (Observera att det här alternativet visas som andra alternativ när det är listat först i data.)"
 							]
 						},
 						{
 							"type": "entries",
-							"name": "Option A",
+							"name": "Alternativ A",
 							"entries": [
-								"The 'options' type is very similar to a list of entries, but it alphabetically sorts the list of options by name, before displaying them."
+								"Typen \"options\" liknar i hög grad en lista med poster, men listan med alternativ sorteras alfabetiskt efter namn innan den visas."
 							]
 						}
 					]
@@ -265,8 +265,8 @@
 							{
 								"type": "list",
 								"items": [
-									"Nested entries (generally) work, too.",
-									"Although why you would put a list in a table is beyond me."
+									"Nästade poster fungerar (i allmänhet) också.",
+									"Varför man skulle lägga en lista i en tabell är dock obegripligt."
 								]
 							},
 							"{@spell bless||Spells, on the other hand, make sense.}",
@@ -276,8 +276,8 @@
 							"type": "row",
 							"style": "row-indent-first",
 							"row": [
-								"Rows may also be defined",
-								"As objects with additional properties",
+								"Rader kan också definieras",
+								"Som objekt med ytterligare egenskaper",
 								""
 							]
 						}
@@ -317,7 +317,7 @@
 						]
 					]
 				},
-				"Rollable tables can be made like so (note the 'pad' to format single digit numbers e.g. '01' for tables with >10 rows):",
+				"Rullbara tabeller kan göras så här (observera \"pad\" för att formatera ensiffriga nummer, t.ex. \"01\" för tabeller med >10 rader):",
 				{
 					"type": "table",
 					"caption": "Rollable Table Caption",
@@ -382,12 +382,12 @@
 				{
 					"type": "list",
 					"items": [
-						"A basic list of items",
-						"As usual, nested entries work",
+						"En grundläggande förteckning över artiklar",
+						"Som vanligt fungerar inbäddade poster",
 						{
 							"type": "list",
 							"items": [
-								"Such as a nested list"
+								"Till exempel en inbäddad lista"
 							]
 						}
 					]
@@ -396,41 +396,41 @@
 					"type": "list",
 					"columns": 3,
 					"items": [
-						"A list of items with wrapping columns",
-						"Which will wrap",
-						"Up to a maximum number of times as specified by the 'columns' field",
-						"And will attempt to balance content between each column"
+						"En lista över objekt med omslagskolumner",
+						"Som kommer att slå in",
+						"Upp till det maximala antal gånger som anges i fältet \"columns\".",
+						"Vi kommer att försöka balansera innehållet mellan de olika kolumnerna."
 					]
 				},
-				"There's also:",
+				"Det finns också:",
 				{
 					"type": "list",
 					"style": "list-no-bullets",
 					"items": [
-						"A list of items without bullets",
-						"Used very rarely"
+						"En lista med objekt utan punkter",
+						"Används mycket sällan"
 					]
 				},
 				{
 					"type": "list",
 					"style": "list-hang",
-					"name": "Hanging List",
+					"name": "Hängande lista",
 					"items": [
-						"A hanging items list",
-						"Which has a 'name'/title, and will hang below that title"
+						"En förteckning över hängande föremål",
+						"Som har ett \"namn\"/en titel och kommer att hänga under den titeln."
 					]
 				},
 				{
 					"type": "list",
 					"style": "list-hang",
-					"name": "Hanging List",
+					"name": "Hängande lista",
 					"items": [
 						{
 							"type": "item",
-							"name": "An extension of the hanging list",
-							"entry": "Which has bold inline titles -- note that this only allows {@i one} entry per item (it's 'entry' and not 'entries')"
+							"name": "En förlängning av den hängande listan",
+							"entry": "Som har fetstilta inline-titlar -- notera att detta endast tillåter {@i en} post per post (det är \"post\" och inte \"poster\")"
 						},
-						"Can be mixed with regular strings"
+						"Kan blandas med vanliga strängar"
 					]
 				},
 				{
@@ -439,23 +439,23 @@
 					"items": [
 						{
 							"type": "item",
-							"name": "A similar story here",
-							"entry": "The 'item' is an entry as above, but there's no 'name' for the entire list, so this has no left inset. Some long text to show what happens when the lines wrap around, it should continue but be indented after the first line. Some example of this in the source books can be found in Metalic Dragon breath weapons in the Monster Manual."
+							"name": "En liknande berättelse här",
+							"entry": "Elementet är en post som ovan, men det finns inget \"namn\" för hela listan, så den har ingen vänsterinsats. En lång text för att visa vad som händer när raderna rullar runt, den ska fortsätta men vara indragen efter den första raden. Några exempel på detta i källböckerna finns i Metalic Dragon breath weapons i Monster Manual."
 						},
 						{
 							"type": "itemSub",
-							"name": "A sub-item used in some places",
-							"entry": "For example, XGE's complex traps"
+							"name": "En underpost som används på vissa platser",
+							"entry": "Till exempel XGE:s komplexa fällor."
 						},
 						{
 							"type": "item",
-							"name": "Multiple entry version",
+							"name": "Version med flera ingångar",
 							"entries": [
-								"This was, again, required specifically for XGE's complex traps, which can have multiple lines of text; due to their large and complex nature, one would have to presume.",
-								"Speaking of lines, this one is very long (much like the one above, which was specifically packed with superfluous information to pad it out to a decent word count) to hopefully demonstrate the effects of having to wrap a paragraph into the column, which should indent the first line of the paragraph only. Of course, if you're viewing this on an obscenely wide monitor, this will have little or no effect, so if you're in the future where 10k monitors are standard, then congratulations. Otherwise, like the rest of us plebs, you should see the desired layout.",
-								"For most uses, the single-entry version is preferred.",
-								"And here's another really long run-on sentence, just to really hammer home the effects of {@s drugs} excessive text, something I'm sure my English teacher would have a few comments about; thankfully, they're not much of a fan of Dungeons & Dragons, or even fantasy in general (needless to say, they were at best ambivalent towards the vast majority of my literary interests as a teenager; at least, as much as an English teacher can be towards a student who enjoys reading and who would choose to do it of their own volition).",
-								"What on earth did I just write"
+								"Detta krävdes återigen särskilt för XGE:s komplexa fällor, som kan ha flera rader text, på grund av deras stora och komplexa karaktär, kan man förmoda.",
+								"På tal om rader är den här mycket lång (precis som den ovan, som var speciellt fylld med överflödig information för att få ett anständigt antal ord) för att förhoppningsvis demonstrera effekterna av att behöva linda in ett stycke i kolumnen, som bara ska indraget den första raden i stycket. Om du tittar på detta på en obscent bred bildskärm kommer detta naturligtvis att ha liten eller ingen effekt, så om du befinner dig i en framtid där 10k-bildskärmar är standard, så gratulerar jag dig. Annars bör du som resten av oss andra se den önskade layouten.",
+								"För de flesta användningsområden föredras versionen med enkelregistrering.",
+								"Och här är en annan riktigt lång slutmening, bara för att verkligen hamra in effekterna av {@s droger} överdriven text, något jag är säker på att min engelsklärare skulle ha några kommentarer om; tack och lov är de inte mycket av ett fan av Dungeons & Dragons, eller ens fantasy i allmänhet (naturligtvis var de i bästa fall ambivalent mot de allra flesta av mina litterära intressen som tonåring; åtminstone så mycket som en engelsklärare kan vara mot en elev som tycker om att läsa och som skulle välja att göra det av egen fri vilja).",
+								"Vad i hela friden skrev jag just?"
 							]
 						}
 					]
@@ -464,8 +464,8 @@
 					"type": "list",
 					"style": "list-decimal",
 					"items": [
-						"A decimal-numbered list. Alternatively, 'list-lower-roman' can be used for lowercase Roman numerals.",
-						"So far only seen in homebrew."
+						"En decimalnumrerad lista. Alternativt kan \"list-lower-roman\" användas för romerska siffror med små bokstäver.",
+						"Hittills har jag bara sett den i homebrew."
 					]
 				},
 				{
@@ -473,22 +473,22 @@
 					"style": "list-upper-roman",
 					"start": 5,
 					"items": [
-						"First list item",
-						"Second list item"
+						"Första listposten",
+						"Andra listposten"
 					]
 				},
-				"The 'bonus' type just sticks a + in front of things",
+				"Den som har en \"bonus\" sätter bara ett + framför saker och ting.",
 				{
 					"type": "bonus",
 					"value": 3
 				},
-				"We don't use that one much. It's useful because it allows us to store the data as a number, and render it with a plus sign as required, but it's mostly just forgotten about.",
-				"Similar story with 'bonusSpeed' type (these 'bonus' flavors are mainly used in the class tables)",
+				"Vi använder den inte så mycket. Den är användbar eftersom den gör det möjligt att lagra data som ett nummer och återge det med ett plustecken vid behov, men den glöms oftast bort.",
+				"Liknande historia med typen \"bonusSpeed\" (dessa \"bonusvarianter\" används huvudsakligen i klasstabellerna).",
 				{
 					"type": "bonusSpeed",
 					"value": 100
 				},
-				"The 'dice' type is rarely used, since the shorthand tag exists, but it looks like this:",
+				"Typen \"dice\" används sällan, eftersom det finns en kortfattad tagg, men den ser ut så här:",
 				{
 					"type": "dice",
 					"toRoll": [
@@ -510,28 +510,28 @@
 					],
 					"rollable": true
 				},
-				"The 'abilityDc' type is more helpful:",
+				"Typen \"abilityDc\" är mer användbar:",
 				{
 					"type": "abilityDc",
-					"name": "Buggy Code",
+					"name": "Buggig kod",
 					"attributes": [
 						"wis",
 						"int"
 					]
 				},
-				"As is the 'abilityAttackMod' type:",
+				"Liksom typen \"abilityAttackMod\":",
 				{
 					"type": "abilityAttackMod",
-					"name": "Killing Things",
+					"name": "Att döda saker",
 					"attributes": [
 						"str"
 					]
 				},
-				"There's also a generic version that allows more text customisation; 'abilityGeneric':",
+				"Det finns också en generisk version som gör det möjligt att anpassa texten mer; \"abilityGeneric\":",
 				{
 					"type": "abilityGeneric",
-					"name": "Initiative",
-					"text": "10 - your power level + somebody else's",
+					"name": "Initiativ",
+					"text": "10 - din effektnivå + någon annans",
 					"attributes": [
 						"dex",
 						"str"
@@ -539,64 +539,64 @@
 				},
 				{
 					"type": "abilityGeneric",
-					"text": "leave out the 'name' and 'attributes' properties as required"
+					"text": "utelämna egenskaperna 'name' och 'attributes' efter behov"
 				},
-				"External links using 'link':",
+				"Externa länkar med hjälp av \"link\":",
 				{
 					"type": "link",
 					"href": {
 						"type": "external",
 						"url": "https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/site/entry.json"
 					},
-					"text": "The full 'entry' schema."
+					"text": "Det fullständiga schemat för \"entry\"."
 				},
-				"Internal links are also possible, but generally covered by @tags. Check out the schema linked above for the full usage; it's massive and horrible so I'm not going to go into detail here.",
-				"Invocations/Other Optional Features:",
+				"Interna länkar är också möjliga, men de täcks i allmänhet av @tags. Kolla in schemat som länkas ovan för att se hur det används i sin helhet; det är omfattande och hemskt, så jag tänker inte gå in på detaljer här.",
+				"Besvärjelser/andra frivilliga inslag:",
 				{
 					"type": "optfeature",
-					"name": "Optional Feature Name",
+					"name": "Valfritt namn på funktion",
 					"prerequisite": "Optional prerequisite, which can include tags {@spell eldritch blast}",
 					"entries": [
-						"Optional feature text."
+						"Valfri funktionstext."
 					]
 				},
-				"Patrons:",
+				"Beskyddare:",
 				{
 					"type": "inset",
-					"name": "Inset Title (Optional)",
+					"name": "Infälld titel (valfritt)",
 					"entries": [
-						"This is a text inset/insert/sidebar/etc."
+						"Detta är en textinsats/insert/sidebar/etc."
 					]
 				},
 				{
 					"type": "insetReadaloud",
-					"name": "Same As Above",
+					"name": "Samma som ovan",
 					"entries": [
-						"But a different color."
+						"Men i en annan färg."
 					]
 				},
 				{
 					"type": "variant",
-					"name": "Better Monster",
+					"name": "Bättre monster",
 					"entries": [
-						"Some variant monster text",
+						"En viss variant av monstertext.",
 						{
 							"type": "entries",
-							"name": "Inline Header",
+							"name": "Inline-rubrik",
 							"entries": [
-								"Text text text",
+								"Text text text text text",
 								{
 									"type": "variantSub",
-									"name": "These can have child items",
+									"name": "Dessa kan ha underordnade objekt",
 									"entries": [
-										"And the header style for them is unique, so this exists to cope with that."
+										"Och rubrikstilen för dem är unik, så den här finns för att hantera detta."
 									]
 								}
 							]
 						}
 					]
 				},
-				"Images (similar to the structure of the 'link' type):",
+				"Bilder (liknande strukturen för typen \"länk\"):",
 				{
 					"type": "image",
 					"href": {
@@ -608,9 +608,9 @@
 				},
 				{
 					"type": "entries",
-					"name": "Data Embeds",
+					"name": "Inbäddade data",
 					"entries": [
-						"Creatures; format based on Bestiary data, with added type (note that a proper Bestiary entry and a link to the entry is the preferred method of adding creatures, this functionality exists primarily for homebrew data):",
+						"Varelser; format baserat på Bestiary data, med tillagd typ (observera att en riktig Bestiary post och en länk till posten är den föredragna metoden för att lägga till varelser, denna funktion finns främst för homebrew data):",
 						{
 							"type": "statblockInline",
 							"style": "inset",
@@ -663,21 +663,21 @@
 								"cr": "5",
 								"trait": [
 									{
-										"name": "Charge",
+										"name": "Avgift",
 										"entries": [
-											"If the unicorn moves at least 20 ft. straight toward a target and then hits it with a horn attack on the same turn, the target takes an extra 9 ({@dice 2d8}) piercing damage. If the target is a creature, it must succeed on a {@dc 15} Strength saving throw or be knocked prone."
+											"Om enhörningen rör sig minst 6 meter rakt mot ett mål och sedan träffar det med en hornattack under samma tur, tar målet ytterligare 9 ({@dice 2d8}) genomträngande skada. Om målet är en varelse måste den lyckas med ett {@dc 15} räddningsslag i styrka eller slås ner på mage."
 										]
 									},
 									{
-										"name": "Magic Resistance",
+										"name": "Magisk resistens",
 										"entries": [
-											"The unicorn has advantage on saving throws against spells and other magical effects."
+											"Enhörningen har fördel på räddningskast mot trollformler och andra magiska effekter."
 										]
 									},
 									{
-										"name": "Magic Weapons",
+										"name": "Magiska vapen",
 										"entries": [
-											"The unicorn's weapon attacks are magical."
+											"Enhörningens vapenattacker är magiska."
 										]
 									}
 								],
@@ -685,31 +685,31 @@
 									{
 										"name": "Multiattack",
 										"entries": [
-											"The unicorn makes two attacks: one with its hooves and one with its horn."
+											"Enhörningen gör två attacker: en med hovarna och en med hornet."
 										]
 									},
 									{
-										"name": "Hooves",
+										"name": "Hovar",
 										"entries": [
-											"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. Hit: 11 ({@damage 2d6 + 4}) bludgeoning damage."
+											"{@atk mw} {@hit 7} att träffa, räckvidd 1,5 m., ett mål. Träff: 11 ({@damage 2d6 + 4}) knytnävsslag."
 										]
 									},
 									{
 										"name": "Horn",
 										"entries": [
-											"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. Hit: 8 ({@damage 1d8 + 4}) piercing damage."
+											"{@atk mw} {@hit 7} att träffa, räckvidd 1,5 m., ett mål. Träff: 8 ({@damage 1d8 + 4}) genomträngande skador."
 										]
 									},
 									{
-										"name": "Healing Touch (3/Day)",
+										"name": "Läkande beröring (3/dag)",
 										"entries": [
-											"The unicorn touches another creature with its horn. The target magically regains 11 ({@dice 2d8 + 2}) hit points. In addition, the touch removes all diseases and neutralizes all poisons afflicting the target."
+											"Enhörningen berör en annan varelse med sitt horn. Målet återfår magiskt 11 ({@dice 2d8 + 2}) träffpunkter. Dessutom tar beröringen bort alla sjukdomar och neutraliserar alla gifter som drabbar målet."
 										]
 									},
 									{
-										"name": "Teleport (1/Day)",
+										"name": "Teleportera (1/dag)",
 										"entries": [
-											"The unicorn magically teleports itself and up to three willing creatures it can see within 5 feet of it, along with any equipment they are wearing or carrying, to a location the unicorn is familiar with, up to 1 mile away."
+											"Enhörningen teleporterar magiskt sig själv och upp till tre villiga varelser som den kan se inom 1,5 meter från sig, tillsammans med all utrustning de bär på sig, till en plats som enhörningen är bekant med, upp till 1,5 kilometer bort."
 										]
 									}
 								],
@@ -719,30 +719,30 @@
 								},
 								"legendary": [
 									{
-										"name": "Hooves",
+										"name": "Hovar",
 										"entries": [
-											"The unicorn makes one attack with its hooves."
+											"Enhörningen gör en attack med sina hovar."
 										]
 									},
 									{
-										"name": "Shimmering Shield (Costs 2 Actions)",
+										"name": "Skimrande sköld (kostar 2 åtgärder)",
 										"entries": [
-											"The unicorn creates a shimmering, magical field around itself or another creature it can see within 60 feet of it. The target gains a +2 bonus to AC until the end of the unicorn's next turn."
+											"Enhörningen skapar ett skimrande, magiskt fält runt sig själv eller en annan varelse den kan se inom 18 meter från den. Målet får en +2 bonus till AC fram till slutet av enhörningens nästa tur."
 										]
 									},
 									{
-										"name": "Heal Self (Costs 3 Actions)",
+										"name": "Läka sig själv (kostar 3 åtgärder)",
 										"entries": [
-											"The unicorn magically regains 11 ({@dice 2d8 + 2}) hit points."
+											"Enhörningen återfår magiskt 11 ({@dice 2d8 + 2}) träffpunkter."
 										]
 									}
 								],
 								"page": 294,
 								"spellcasting": [
 									{
-										"name": "Innate Spellcasting",
+										"name": "Medfödd besvärjelse",
 										"headerEntries": [
-											"The unicorn's innate spellcasting ability is Charisma (spell save {@dc 14}). The unicorn can innately cast the following spells, requiring no components:"
+											"Enhörningens medfödda besvärjelseförmåga är Karisma (besvärjelseräddning {@dc 14}). Enhörningen kan medfödd kasta följande besvärjelser, som inte kräver några komponenter:"
 										],
 										"will": [
 											"{@spell detect evil and good}",
@@ -776,7 +776,7 @@
 								]
 							}
 						},
-						"Spells; as above:",
+						"Besvärjelser; som ovan:",
 						{
 							"type": "statblockInline",
 							"collapsed": true,
@@ -801,7 +801,7 @@
 								"components": {
 									"v": true,
 									"s": true,
-									"m": "a tiny ball of bat guano and sulfur"
+									"m": "en liten boll av fladdermusguano och svavel"
 								},
 								"duration": [
 									{
@@ -810,22 +810,22 @@
 								],
 								"source": "PHB",
 								"entries": [
-									"A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A target takes {@dice 8d6} fire damage on a failed save, or half as much damage on a successful one.",
-									"The fire spreads around corners. It ignites flammable objects in the area that aren't being worn or carried."
+									"En ljus strimma blinkar från ditt pekfinger till en punkt du väljer inom räckhåll och blommar sedan med ett lågt vrål till en explosion av lågor. Varje varelse i en sfär med 6 meters radie centrerad på den punkten måste göra ett räddningsslag i Dexterity. Ett mål tar {@dice 8d6} eldskada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat.",
+									"Elden sprider sig runt hörn. Den antänder brännbara föremål i området som inte bärs eller bärs."
 								],
 								"entriesHigherLevel": [
 									{
 										"type": "entries",
-										"name": "At Higher Levels",
+										"name": "På högre nivåer",
 										"entries": [
-											"When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@scaledice 8d6|3-9|1d6} for each slot level above 3rd."
+											"När du kastar den här besvärjelsen med en besvärjelseplats på 4:e nivån eller högre, ökar skadan med {@scaledice 8d6|3-9|1d6} för varje platsnivå över 3:e."
 										]
 									}
 								],
 								"page": 241
 							}
 						},
-						"Using \"dependencies\" and \"_copy\" to copy an existing piece of content:",
+						"Använda \"dependencies\" och \"_copy\" för att kopiera ett befintligt innehåll:",
 						{
 							"type": "statblockInline",
 							"dataType": "monster",
@@ -847,7 +847,7 @@
 				},
 				{
 					"type": "entries",
-					"name": "Reference Embeds",
+					"name": "Referens Inbäddningar",
 					"entries": [
 						{
 							"type": "statblock",
