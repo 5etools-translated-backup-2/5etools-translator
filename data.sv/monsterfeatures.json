@@ -1,161 +1,161 @@
 {
 	"monsterfeatures": [
 		{
-			"name": "Aggressiv",
+			"name": "Aggressive",
 			"example": "Orc",
-			"effect": "Som en bonusåtgärd kan varelsen röra sig upp till sin hastighet mot en fientlig varelse som den kan se.",
+			"effect": "As a bonus action, the creature can move up to its speed toward a hostile creature it can see.",
 			"dpr": "2"
 		},
 		{
 			"name": "Ambusher",
 			"example": "Doppelganger",
-			"effect": "Varelsen har fördel på attackkast mot alla varelser den har {@quickref Surprise|PHB|3|0|överraskad}.",
+			"effect": "The creature has advantage on attack rolls against any creature it has {@quickref Surprise|PHB|3|0|surprised}.",
 			"attackBonus": "1"
 		},
 		{
-			"name": "Vapen för änglar",
+			"name": "Angelic Weapons",
 			"example": "Deva",
-			"effect": "Varelsens vapenattacker är magiska. När varelsen träffar med något vapen ger vapnet extra strålningsskada. Inför denna extra skada per runda.",
+			"effect": "The creature's weapon attacks are magical. When the creature hits with any weapon, the weapon deals extra radiant damage. Input this extra damage per round.",
 			"dpr": "trait",
 			"hasNumberParam": true
 		},
 		{
-			"name": "Undvikande",
+			"name": "Avoidance",
 			"example": "Demilich",
-			"effect": "Om varelsen utsätts för en effekt som gör att den kan göra ett räddningskast för att bara ta halva skadan, tar den istället ingen skada om den lyckas med räddningskastet, och bara halva skadan om den misslyckas.",
+			"effect": "If the creature is subjected to an effect that allows it to make a saving throw to only take half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails.",
 			"ac": "1"
 		},
 		{
-			"name": "Blodfrossa",
+			"name": "Blood Frenzy",
 			"example": "Sahuagin",
-			"effect": "Varelsen har fördel på närkampsattacker mot alla varelser som inte har alla sina träffpunkter.",
+			"effect": "The creature has advantage on melee attack rolls against any creature that doesn't have all its hit points.",
 			"attackBonus": "4"
 		},
 		{
-			"name": "Konstriktion",
+			"name": "Constrict",
 			"example": "Giant Constrictor Snake",
-			"effect": "Varelsen har förmågan att hålla fast och/eller gripa ett mål som en del av en attack.",
+			"effect": "The creature has the ability to restrain and/or grapple a target as part of an attack.",
 			"ac": "1"
 		},
 		{
-			"name": "Överföring av skador",
+			"name": "Damage Transfer",
 			"example": "Cloaker",
-			"effect": "När du fäster eller griper en varelse tar varelsen bara halva skadan (avrundat nedåt) och den andra varelsen tar den andra halvan.",
+			"effect": "While attached or grappling a creature, the creature takes only half damage dealt to it (rounded down), and the other creature takes the other half.",
 			"hp": "hp",
 			"dpr": "hp * 0.33"
 		},
 		{
-			"name": "Förstora",
+			"name": "Enlarge",
 			"example": "Duergar",
-			"effect": "Varelsen ökar magiskt i storlek, tillsammans med allt den bär eller bär på. Inmatning av den extra skadan som tillfogas per runda medan den är förstorad.",
+			"effect": "The creature magically increases in size, along with anything it is wearing or carrying. Input the extra damage inflicted per round whilst enlarged.",
 			"dpr": "trait",
 			"hasNumberParam": true
 		},
 		{
-			"name": "Skräckinjagande närvaro",
+			"name": "Frightful Presence",
 			"example": "Ancient Gold Dragon",
-			"effect": "Varje varelse av varelsens val inom räckvidd måste göra ett räddningskast för visdom eller bli skrämd i 1 minut.",
+			"effect": "Each creature of the creature's choice within range must make a Wisdom saving throw or be frightened for 1 minute.",
 			"hp": "Math.floor((expectedCr <= 10) ? hp * 0.25 : 0)"
 		},
 		{
-			"name": "Uppvärmd kropp",
+			"name": "Heated Body",
 			"example": "Azer",
-			"effect": "Att röra vid eller träffa varelsen inom 1,5 meter från den orsakar skada.",
+			"effect": "Touching or hitting the creature while within 5 ft. of it causes damage.",
 			"dpr": "trait",
 			"hasNumberParam": true
 		},
 		{
-			"name": "Skräckinjagande syn",
+			"name": "Horrifying Visage",
 			"example": "Banshee",
-			"effect": "Varje icke odöd varelse av varelsens val inom räckvidd måste göra ett räddningskast i Visdom eller bli skrämd i 1 minut.",
+			"effect": "Each non-undead creature of the creature's choice within range must make a Wisdom saving throw or be frightened for 1 minute.",
 			"hp": "Math.floor((expectedCr <= 10) ? hp * 0.25 : 0)"
 		},
 		{
-			"name": "Legendarisk resistens",
+			"name": "Legendary Resistance",
 			"example": "Tarrasque",
-			"effect": "Om varelsen misslyckas med ett räddningskast kan den välja att lyckas istället. Ange antalet användningar per dag.",
+			"effect": "If the creature fails a saving throw, it can choose to succeed instead. Input the number of uses per day.",
 			"hp": "((expectedCr >= 0 && expectedCr <= 4) ? 10*trait : ((expectedCr >= 5 && expectedCr <= 10) ? 20*trait : ((expectedCr >= 11) ? 30*trait : 0)))",
 			"hasNumberParam": true
 		},
 		{
-			"name": "Magisk resistens",
+			"name": "Magic Resistance",
 			"example": "Balor",
-			"effect": "Varelsen har fördel på räddningskast mot trollformler och andra magiska effekter.",
+			"effect": "The creature has advantage on saving throws against spells and other magical effects.",
 			"ac": "2"
 		},
 		{
-			"name": "Kampfördel",
+			"name": "Martial Advantage",
 			"example": "Hobgoblin",
-			"effect": "Varelsen kan ge extra skada till en varelse den träffar om den varelsen är inom 1,5 m. från en allierad till varelsen som inte är oförmögen. Ange den extra skada som tillfogas per runda.",
+			"effect": "The creature can deal extra damage to a creature it hits if that creature is with in 5 ft. of an ally of the creature that isn't incapacitated. Input the extra damage inflicted per round.",
 			"dpr": "trait",
 			"hasNumberParam": true
 		},
 		{
 			"name": "Nimble Escape",
 			"example": "Goblin",
-			"effect": "Varelsen kan utföra åtgärden Disengage eller Hide som en bonusåtgärd vid varje tur.",
+			"effect": "The creature can take the Disengage or Hide action as a bonus action on each of its turns.",
 			"ac": "4",
 			"attackBonus": "4"
 		},
 		{
-			"name": "Taktik för packning",
+			"name": "Pack Tactics",
 			"example": "Kobold",
-			"effect": "Varelsen har fördel vid ett attackkast mot en varelse om minst en av varelsens allierade befinner sig inom 1,5 meter från varelsen och den allierade inte är oskadliggjord.",
+			"effect": "The creature has advantage on an attack roll against a creature if at least one of the creature's allies is within 5 feet of the creature and the ally isn't incapacitated.",
 			"attackBonus": "1"
 		},
 		{
 			"name": "Parry",
 			"example": "Hobgoblin warlord",
-			"effect": "Varelsen lägger till sin kompetensbonus till sin AC mot en närkampsattack som skulle träffa den som en reaktion.",
+			"effect": "The creature adds its proficiency bonus to its AC against one melee attack that would hit it as a reaction.",
 			"ac": "1"
 		},
 		{
-			"name": "Besittning",
+			"name": "Possession",
 			"example": "Ghost",
-			"effect": "Varelsen kan kontrollera en annan varelse och kan då inte bli måltavla för någon effekt.",
+			"effect": "The creature can control another creature, during which time it cannot be targeted by nearly any effect.",
 			"hp": "hp"
 		},
 		{
-			"name": "Förnyelse",
+			"name": "Regeneration",
 			"example": "Troll",
-			"effect": "I början av varelsens tur återfår den träffpoäng och kan inte dödas förrän denna effekt mildras på något sätt, vanligtvis genom syra- eller eldskador. Ange hur många träffpunkter den återfår i början av sin tur.",
+			"effect": "At the beginning of the creature's turn, it regains hit points and cannot be killed until this effect is mitigated in some way, usually through acid or fire damage. Input how many hit points it regains at the beginning of its turn.",
 			"hp": "trait*3",
 			"hasNumberParam": true
 		},
 		{
-			"name": "Obeveklig",
+			"name": "Relentless",
 			"example": "Boar",
-			"effect": "Om varelsen skulle reduceras till 0 träffpoäng finns det en chans att den istället bara kan reduceras till 1.",
+			"effect": "If the creature would be reduced to 0 hit points, there is a chance that it can instead only be reduced to 1.",
 			"hp": "((expectedCr >= 0 && expectedCr <= 4) ? 7 : ((expectedCr >= 5 && expectedCr <= 10) ? 14 : ((expectedCr >= 11 && expectedCr <= 16) ? 21 : ((expectedCr >= 17) ? 28 : 0))))"
 		},
 		{
-			"name": "Skugga Stealth",
+			"name": "Shadow Stealth",
 			"example": "Shadow Demon",
-			"effect": "När varelsen befinner sig i svagt ljus eller mörker kan den utföra åtgärden Hide som en bonusåtgärd.",
+			"effect": "While in dim light or darkness, the creature can take the Hide action as a bonus action.",
 			"ac": "4"
 		},
 		{
-			"name": "Stank",
+			"name": "Stench",
 			"example": "Troglodyte",
-			"effect": "Alla andra varelser än monstret inom 1,5 meter från det måste göra ett räddningsslag eller bli förgiftade.",
+			"effect": "Any creature other than the monster within 5 feet of it must make a saving throw or be poisoned.",
 			"ac": "1"
 		},
 		{
-			"name": "Överlägsen osynlighet",
+			"name": "Superior Invisibility",
 			"example": "Pixie",
-			"effect": "Varelsen kan bli osynlig som en åtgärd eller bonusåtgärd.",
+			"effect": "The creature can turn invisible as an action or bonus action.",
 			"ac": "2"
 		},
 		{
-			"name": "Odead styrka",
+			"name": "Undead Fortitude",
 			"example": "Zombie",
-			"effect": "Om varelsen skulle reduceras till 0 träffpoäng finns det en chans att den istället bara kan reduceras till 1. Denna egenskap är negerad om skadan är från radiant nature.",
+			"effect": "If the creature would be reduced to 0 hit points, there is a chance that it can instead only be reduced to 1. This feature is negated if the damage is from radiant nature.",
 			"hp": "((expectedCr >= 0 && expectedCr <= 4) ? 7 : ((expectedCr >= 5 && expectedCr <= 10) ? 14 : ((expectedCr >= 11 && expectedCr <= 16) ? 21 : ((expectedCr >= 17) ? 28 : 0))))"
 		},
 		{
-			"name": "Webb",
+			"name": "Web",
 			"example": "Giant Spider",
-			"effect": "Distansvapenattack som håller fast målet vid en träff.",
+			"effect": "Ranged Weapon Attack that restrains the target on a hit.",
 			"ac": "1"
 		}
 	]
