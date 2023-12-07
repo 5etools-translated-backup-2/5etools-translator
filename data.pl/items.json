@@ -2196,6 +2196,19 @@
 			]
 		},
 		{
+			"name": "Arcane Oil",
+			"source": "GHLoE",
+			"page": 111,
+			"type": "P",
+			"rarity": "rare",
+			"bonusWeapon": "+2",
+			"entries": [
+				"Substancja ta powstaje w wyniku destylacji galarety otaczającej mózg {@creature xakalonus|GHLoE}. W ramach akcji możesz pokryć tą substancją jedną broń lub 20 sztuk amunicji.",
+				"Jeśli pokryte przedmioty nie są magiczne, przez następną minutę twoje ataki przy użyciu pokrytej broni lub amunicji zyskują premię +2 do rzutów ataku i obrażeń.",
+				"Jeśli pokryte przedmioty są magiczne, olej nie wpływa na rzuty ataku ani obrażenia zadawane za ich pomocą. Jednakże, twoje ataki przeciwko {@creature hraptnon|GHLoE} mogą zadawać pełne obrażenia tej istocie przez jedną minutę."
+			]
+		},
+		{
 			"name": "Arcane Propulsion Arm",
 			"source": "ERLW",
 			"page": 276,
@@ -6196,6 +6209,28 @@
 			"value": 25000
 		},
 		{
+			"name": "Brazen Armor",
+			"source": "GHLoE",
+			"page": 111,
+			"baseItem": "plate armor|PHB",
+			"type": "HA",
+			"resist": [
+				"fire",
+				"radiant"
+			],
+			"rarity": "very rare",
+			"reqAttune": true,
+			"weight": 65,
+			"ac": 18,
+			"strength": "15",
+			"bonusAc": "+1",
+			"stealth": true,
+			"entries": [
+				"Ta zbroja, wykonana z ciała {@creature Empyrean brazen bull|GHLoE}, lśni jasno w bezpośrednim świetle słonecznym. Podczas noszenia tej zbroi zyskujesz premię +1 do AC. Ponadto zyskujesz odporność na obrażenia od ognia i promieniowania.",
+				"Zbroja płytowa składa się z kształtnych, zazębiających się metalowych płyt pokrywających całe ciało. Zbroja płytowa obejmuje rękawice, ciężkie skórzane buty, hełm z przyłbicą i grube warstwy wyściółki pod zbroją. Klamry i paski rozkładają ciężar na ciele."
+			]
+		},
+		{
 			"name": "Brazier of Commanding Fire Elementals",
 			"source": "DMG",
 			"page": 156,
@@ -8427,6 +8462,24 @@
 			"rarity": "none",
 			"weight": 1,
 			"value": 300
+		},
+		{
+			"name": "Coat of Lies",
+			"source": "GHLoE",
+			"page": 111,
+			"rarity": "rare",
+			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
+			"wondrous": true,
+			"bonusAc": "+1",
+			"entries": [
+				"Ten płaszcz wykonany z odciętych języków ofiar {@creature Harvester of Lies|GHLoE|harvester} zapewnia premię +1 do twojego AC i masz przewagę przy testach Charyzmy ({@skill Deception}).",
+				"Dodatkowo, jako akcję dodatkową, trzy razy dziennie możesz aktywować magię płaszcza. Jeśli to zrobisz, następne zaklęcie, które rzucisz przed rozpoczęciem swojej następnej tury, może zostać rzucone bez żadnych komponentów somatycznych lub werbalnych."
+			]
 		},
 		{
 			"name": "Coat of the Crest",
@@ -15389,14 +15442,14 @@
 							"type": "item",
 							"name": "Błogosławieństwo Euryale",
 							"entries": [
-								"Posiadasz odporność na obrażenia od trucizny i jesteś odporny na stan petryfikacji."
+								"Posiadasz odporność na obrażenia od trucizny i jesteś odporny na stan {@condition petrified}."
 							]
 						},
 						{
 							"type": "item",
 							"name": "Przerażająca heraldyka",
 							"entries": [
-								"Jako akcję dodatkową możesz sprawić, że przód tarczy rozbłyśnie petryfikującą magią meduzy, sprawiając, że oczy płaskorzeźby zaczną jasno świecić. Wybierz jedną istotę, którą widzisz w promieniu 9 metrów od siebie. Stworzeniu musi udać się rzut obronny na Konstytucję o ST 20, w przeciwnym razie jego ciało zamieni się w kamień. Skrępowana istota musi wykonać kolejny rzut obronny na Konstytucję o ST 20 na początku swojej następnej tury. W przypadku nieudanego rzutu obronnego, istota zostaje skamieniała na 24 godziny. W przypadku udanego rzutu obronnego, stan skamieniałości wygasa. Po użyciu tej akcji bonusowej nie można jej użyć ponownie aż do następnego świtu."
+								"Jako dodatkową akcję możesz sprawić, że przód tarczy rozbłyśnie petryfikującą magią meduzy, sprawiając, że oczy płaskorzeźby zaczną jasno świecić. Wybierz jedną istotę, którą widzisz w promieniu 9 metrów od siebie. Stworzeniu musi udać się rzut obronny na Konstytucję o ST 20, w przeciwnym razie jego ciało zamieni się w kamień. {@condition restrained} stworzenie musi wykonać kolejny rzut obronny na Konstytucję o ST20 na początku swojej następnej tury. W przypadku nieudanego rzutu, istota cierpi na stan {@condition petrified} przez 24 godziny. W przypadku udanego rzutu kondycja {@condition restrained} wygasa. Po użyciu tej akcji bonusowej nie można jej użyć ponownie aż do następnego świtu."
 							]
 						},
 						{
@@ -17733,6 +17786,24 @@
 			"value": 200,
 			"entries": [
 				"W butelce mieści się 1,5 litra płynu."
+			]
+		},
+		{
+			"name": "Glass-Studded Armor",
+			"source": "GHLoE",
+			"page": 111,
+			"baseItem": "studded leather armor|PHB",
+			"type": "LA",
+			"resist": [
+				"radiant"
+			],
+			"rarity": "rare",
+			"reqAttune": true,
+			"weight": 13,
+			"ac": 12,
+			"entries": [
+				"Podczas noszenia tej zbroi masz odporność na obrażenia od promieniowania. Za każdym razem, gdy istota atakuje cię w walce wręcz, otrzymuje 3 obrażenia przeszywające. Stworzenie może zdecydować się na atak z przewagą, aby uniknąć tych obrażeń.",
+				"Wykonana z wytrzymałej, ale elastycznej skóry, nabijana skóra jest wzmocniona ściśle osadzonymi nitami lub kolcami."
 			]
 		},
 		{
@@ -23879,6 +23950,18 @@
 			]
 		},
 		{
+			"name": "Knifewing Cape",
+			"source": "GHLoE",
+			"page": 111,
+			"rarity": "rare",
+			"reqAttune": true,
+			"wondrous": true,
+			"bonusAc": "+1",
+			"entries": [
+				"Podczas noszenia tego płaszcza wykonanego ze skóry 20 {@creature Knifewing|GHLoE|knifewings} zyskujesz premię +1 do AC. Dodatkowo, gdy upadniesz podczas noszenia tej peleryny, spadasz o 18 metrów na rundę i nie otrzymujesz obrażeń od upadku."
+			]
+		},
+		{
 			"name": "Korolnor Scepter",
 			"source": "SKT",
 			"page": 234,
@@ -24604,6 +24687,16 @@
 			]
 		},
 		{
+			"name": "Lindwyrm Venom",
+			"source": "GHLoE",
+			"page": 111,
+			"type": "P",
+			"rarity": "very rare",
+			"entries": [
+				"Ten straszliwy jad jest ekstrahowany i destylowany ze śmiercionośnych {@creature lindwyrm|GHLoE}. Może zostać dostarczony poprzez połknięcie lub zranienie. Istota wystawiona na działanie jadu musi wykonać rzut obronny na Konstytucję o ST 18 albo otrzyma 36 ({@damage 8d8}) obrażeń od trucizny i zostanie zatruta na 1 minutę. Zatruta istota ma utrudnione wykonywanie testów Siły i Zręczności oraz rzutów obronnych."
+			]
+		},
+		{
 			"name": "Linen (1 sq. yd.)",
 			"source": "PHB",
 			"page": 157,
@@ -25298,6 +25391,16 @@
 				}
 			],
 			"hasFluffImages": true
+		},
+		{
+			"name": "Lycanthropy Antidote",
+			"source": "GHLoE",
+			"page": 111,
+			"type": "P",
+			"rarity": "rare",
+			"entries": [
+				"Ta srebrzysta mikstura, sporządzona z {@creature fzeg|GHLoE} krwi, jest usiana czerwonymi plamkami. Wypicie tego płynu usuwa klątwę likantropii wilkołaków."
+			]
 		},
 		{
 			"name": "Lyre of Building",
@@ -32468,6 +32571,16 @@
 				"Ten czarny kryształowy wisiorek jest magiczną bramą do małego kieszonkowego wymiaru. Możesz użyć wisiorka jako improwizowanej broni do ataku wręcz lub dystansowego przeciwko dużej lub mniejszej istocie. W przypadku trafienia, cel musi odnieść sukces w teście {@dc 10} Mądrości {@quickref saving throws|PHB|2|1|rzut obronny} lub zostać uwięziony w krysztale. Istota, która chce zostać uwięziona, może celowo nie wykonać tego testu {@quickref saving throws|PHB|2|1|rzut obronny}.",
 				"Tylko jedna istota na raz może być trzymana w kruczym śnie. Istota ta jest świadoma upływu czasu i widzi świat poza tym talizmanem jak przez okno. Możesz uwolnić przetrzymywaną istotę do niezajętej przestrzeni w promieniu 1,5 metra od ciebie jako dodatkową akcję.",
 				"Jeśli istota towarzysząca przyznana ci przez cechę klasową lub bestia, którą oswoiłeś jako towarzysza, zostanie zredukowana do 0 punktów wytrzymałości w promieniu 3 metrów od ciebie, zostanie natychmiast wciągnięta do wisiora i ustabilizowana. Jeśli w wisiorku znajduje się już jakieś stworzenie, efekt ten nie powiedzie się."
+			]
+		},
+		{
+			"name": "Ready Gunk",
+			"source": "GHLoE",
+			"page": 111,
+			"rarity": "rare",
+			"wondrous": true,
+			"entries": [
+				"Ta lepka pasta jest wykonana ze sproszkowanej kościanej zbroi {@creature bone trader|GHLoE}. Kiedy leczysz broń, tarczę lub inny przedmiot, który może być trzymany w jednej lub dwóch rękach, możesz użyć dodatkowej akcji, aby go przywołać i wyposażyć, o ile przedmiot znajduje się w promieniu 9 metrów od ciebie. Po trzykrotnym użyciu magii pasty traci ona swoją moc."
 			]
 		},
 		{
@@ -46562,6 +46675,28 @@
 				"Magic Item Table B"
 			],
 			"hasFluffImages": true
+		},
+		{
+			"name": "Wand of Silence",
+			"source": "GHLoE",
+			"page": 111,
+			"type": "WD",
+			"rarity": "uncommon",
+			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
+			"recharge": "dawn",
+			"rechargeAmount": "{@dice 1d6 + 1}",
+			"charges": 7,
+			"entries": [
+				"Ta różdżka ma 7 ładunków. Kiedy ją trzymasz, możesz użyć akcji, aby wydać 1 ładunek na rzucenie {@spell silence} zaklęcia (test wytrzymałości DC 15). Różdżka odzyskuje {@dice 1d6 + 1} zużytych ładunków codziennie o świcie. Jeśli zużyjesz ostatni ładunek różdżki, rzuć {@dice d20}. Jeśli wypadnie 1, różdżka rozpada się w proch i zostaje zniszczona."
+			],
+			"attachedSpells": [
+				"silence"
+			]
 		},
 		{
 			"name": "Wand of Smiles",

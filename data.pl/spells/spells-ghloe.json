@@ -1,0 +1,301 @@
+{
+	"spell": [
+		{
+			"name": "Arboreal Curse",
+			"source": "GHLoE",
+			"level": 7,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "kubek soku"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Próbujesz zamienić w drewno jedną istotę, którą widzisz w swoim zasięgu. Jeśli ciało celu jest wykonane z ciała, istota musi wykonać rzut obronny na Konstytucję. W przypadku nieudanego rzutu obronnego, jego ciało zaczyna twardnieć {@condition restrained}, zamieniając się w korę. W przypadku udanego rzutu obronnego, istota nie zostaje porażona.",
+				"Istota {@condition restrained} poddana działaniu tego zaklęcia musi wykonać kolejny rzut obronny na Konstytucję pod koniec każdej swojej tury. Jeśli trzykrotnie uda jej się obronić przed tym zaklęciem, zaklęcie wygasa. Jeśli trzykrotnie nie uda mu się rzut obronny na Konstytucję, zostaje zamieniony w drzewo i podlega warunkowi {@condition petrified} przez cały czas trwania zaklęcia. Sukcesy i porażki nie muszą następować po sobie; należy śledzić oba, dopóki cel nie zbierze trzech takich samych.",
+				"Jeśli przekształcona istota zostanie spalona, ścięta lub w inny sposób zniszczona w czasie {@condition petrified}, zostaje zabita.",
+				"Stworzenie pozostaje przemienione, chyba że efekt zostanie odwrócony w ciągu jednego roku za pomocą {@spell greater restoration}, {@spell wish} lub podobnych efektów magicznych. Jeśli istota spędzi jeden rok i jeden dzień jako drzewo, transformacja staje się trwała i nic nie może przywrócić jej pierwotnej formy."
+			],
+			"conditionInflict": [
+				"petrified",
+				"restrained"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"PRM",
+				"SGT"
+			]
+		},
+		{
+			"name": "Consume Mind",
+			"source": "GHLoE",
+			"level": 4,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "świeża lub magicznie zakonserwowana porcja mózgu innego stworzenia o wadze 1 uncji"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Pochłaniasz mózg zwłok innej istoty, zyskując jej wspomnienia i wiedzę. Zwłoki muszą posiadać mózg i nie mogą być nieumarłe. Zaklęcie nie powiedzie się, jeśli zwłoki były martwe (i nie zakonserwowane) dłużej niż trzy dni.",
+				"Dopóki zaklęcie nie wygaśnie, możesz próbować przywołać dowolny ważny fakt znany tej istocie - historię rodziny, ostatnie wydarzenia, układy budynków, hasła, szczegóły śmierci istoty i podobne informacje. Aby przypomnieć sobie daną informację, musisz wykonać test umiejętności, używając swojego modyfikatora rzucania czarów. DC jest równy wynikowi Inteligencji zwłok.",
+				"Gdy rzucający zdecyduje, czy pamięta dany fakt, nie może próbować przywołać go ponownie."
+			]
+		},
+		{
+			"name": "Heartseeker",
+			"source": "GHLoE",
+			"level": 6,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 300
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "rubin o wartości co najmniej 100 gp",
+					"cost": 10000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Podczas rzucania tego zaklęcia musisz wydać sześć kości trafienia, w przeciwnym razie zaklęcie automatycznie się nie powiedzie. Kiedy to zrobisz, krew wypłynie z twojego ciała, a następnie skrystalizuje się w kolczastą strzałę, która wystrzeli w wybraną przez ciebie istotę w zasięgu. Wykonaj dystansowy atak zaklęciem przeciwko wybranej istocie. W przypadku trafienia rzuć kośćmi trafienia wydanymi na rzucenie tego zaklęcia, a stworzenie otrzyma obrażenia przebijające równe wynikowi.",
+				"Po wbiciu się w stworzenie, krwawa strzała zaczyna drążyć w kierunku jego serca, czyniąc je podatnym na dalsze ataki. Na początku następnej tury stworzenie musi wykonać rzut obronny na Konstytucję. W przypadku niepowodzenia, ataki przeciwko stworzeniu uzyskują trafienia krytyczne przy rzucie 19 lub 20.",
+				"Na początku każdej następnej tury istota musi powtórzyć rzut obronny na Konstytucję, w przeciwnym razie zasięg trafienia krytycznego ataków przeciwko niej ponownie wzrośnie o 1. Jeśli istocie uda się wykonać trzy z tych rzutów obronnych (nie muszą one następować po sobie), zaklęcie to wygasa. Zwiększony zasięg trafień krytycznych kończy się wraz z zakończeniem działania zaklęcia."
+			],
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"constitution"
+			]
+		},
+		{
+			"name": "Hunter Sense",
+			"source": "GHLoE",
+			"level": 0,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Dotykasz jedną chętną istotę. Gdy zaklęcie jest aktywne, zmysły celu są wyostrzone. Jeśli cel wyrzuci 9 lub mniej na kości podczas wykonywania testu Mądrości ({@skill Perception}), zachowuje się tak, jakby wyrzucił 10."
+			]
+		},
+		{
+			"name": "Magic Mirror",
+			"source": "GHLoE",
+			"level": 5,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "which you take when you are targeted by a spell"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "polerowany srebrny marmur"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Chwilowa bańka opalizującej energii mieni się w powietrzu między tobą a osobą rzucającą zaklęcie wyzwalające. Zaklęcie zostaje przekierowane na wybraną przez ciebie istotę, którą widzisz w promieniu 18 metrów. Jeśli zaklęcie jest 5. lub niższego poziomu, nie jesteś już celem zaklęcia, a zamiast tego wybrana istota. Jeśli zaklęcie jest 6. lub wyższego poziomu, wykonaj test umiejętności używając swojej zdolności rzucania czarów. Współczynnik DC wynosi 10 + poziom zaklęcia. Jeśli test się powiedzie, nie jesteś już celem zaklęcia, a wybrana istota staje się nim. W przypadku nieudanego testu, pozostajesz celem zaklęcia wyzwalającego."
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Suffocate",
+			"source": "GHLoE",
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "skórzana rękawica"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Tworzysz parę chwytających dłoni wykonanych z {@condition invisible} siły. Wykonaj atak zaklęciem przeciwko jednej istocie, którą widzisz w zasięgu. Przy trafieniu, istota zostaje {@condition restrained} zmiażdżona przez dłonie, które miażdżą jej gardło lub jego odpowiednik.",
+				"Jeśli stworzenie potrzebuje powietrza do oddychania, zaczyna się dusić. Dusząca się istota może przetrwać przez liczbę rund równą 1 + jej modyfikator Constitution (minimum 1 runda). Na początku swojej następnej tury po zakończeniu tych rund staje się {@condition unconscious} i nie może odzyskać punktów wytrzymałości, dopóki nie będzie mogła ponownie oddychać.",
+				"Świadoma istota {@condition restrained} przy rękach może użyć swojej akcji, aby wykonać test Siły lub Zręczności (do wyboru) przeciwko DC ochrony przed zaklęciem. W przypadku powodzenia, zaklęcie kończy działanie na cel."
+			],
+			"conditionInflict": [
+				"invisible",
+				"restrained",
+				"unconscious"
+			],
+			"miscTags": [
+				"HL",
+				"SGT"
+			]
+		},
+		{
+			"name": "Wrack",
+			"source": "GHLoE",
+			"level": 2,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "postrzępiony kawałek sznurka"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Wybierz istotę, którą widzisz w swoim zasięgu. Cel musi wykonać udany rzut obronny na Konstytucję lub zostanie dotknięty rozdzierającymi skurczami mięśni przez cały czas trwania efektu. Dotknięta w ten sposób istota ma zmniejszoną o połowę prędkość i wykonuje ataki z wadą. Pod koniec każdej tury cel może wykonać kolejny rzut obronny na Konstytucję. Jeśli rzut się powiedzie, zaklęcie przestaje działać."
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		}
+	]
+}
