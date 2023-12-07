@@ -2196,6 +2196,19 @@
 			]
 		},
 		{
+			"name": "Arcane Oil",
+			"source": "GHLoE",
+			"page": 111,
+			"type": "P",
+			"rarity": "rare",
+			"bonusWeapon": "+2",
+			"entries": [
+				"Diese Substanz wird durch Destillation des Gelees hergestellt, das das Gehirn eines {@creature xakalonus|GHLoE} umgibt. Als Aktion kannst du eine Waffe oder 20 Munitionsteile mit der Substanz überziehen.",
+				"Wenn die beschichteten Gegenstände nicht magisch sind, erhalten deine Angriffe mit der beschichteten Waffe oder Munition für die nächste Minute einen Bonus von +2 auf Angriffs- und Schadenswürfe.",
+				"Wenn die beschichteten Gegenstände magisch sind, beeinflusst das Öl keine Angriffs- oder Schadenswürfe mit ihnen. Allerdings können deine Angriffe gegen den {@creature hraptnon|GHLoE} der Kreatur eine Minute lang vollen Schaden zufügen."
+			]
+		},
+		{
 			"name": "Arcane Propulsion Arm",
 			"source": "ERLW",
 			"page": 276,
@@ -6196,6 +6209,28 @@
 			"value": 25000
 		},
 		{
+			"name": "Brazen Armor",
+			"source": "GHLoE",
+			"page": 111,
+			"baseItem": "plate armor|PHB",
+			"type": "HA",
+			"resist": [
+				"fire",
+				"radiant"
+			],
+			"rarity": "very rare",
+			"reqAttune": true,
+			"weight": 65,
+			"ac": 18,
+			"strength": "15",
+			"bonusAc": "+1",
+			"stealth": true,
+			"entries": [
+				"Diese aus dem Körper eines {@creature Empyrean brazen bull|GHLoE} gefertigte Rüstung schimmert hell im direkten Sonnenlicht. Während du diese Rüstung trägst, erhältst du einen Bonus von +1 auf deine AC. Außerdem bist du resistent gegen Feuer und Strahlungsschaden.",
+				"Die Plattenrüstung besteht aus geformten, ineinander greifenden Metallplatten, die den gesamten Körper bedecken. Zu einem Plattenanzug gehören Stulpen, schwere Lederstiefel, ein Helm mit Visier und dicke Polsterschichten unter der Rüstung. Schnallen und Riemen verteilen das Gewicht auf den Körper."
+			]
+		},
+		{
 			"name": "Brazier of Commanding Fire Elementals",
 			"source": "DMG",
 			"page": 156,
@@ -8427,6 +8462,24 @@
 			"rarity": "none",
 			"weight": 1,
 			"value": 300
+		},
+		{
+			"name": "Coat of Lies",
+			"source": "GHLoE",
+			"page": 111,
+			"rarity": "rare",
+			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
+			"wondrous": true,
+			"bonusAc": "+1",
+			"entries": [
+				"Dieser Mantel aus den abgetrennten Zungen der Opfer eines {@creature Harvester of Lies|GHLoE|harvester} gibt dir einen Bonus von +1 auf deine AC und du hast einen Vorteil bei Charisma ({@skill Deception})-Überprüfungen.",
+				"Zusätzlich kannst du als Bonusaktion dreimal am Tag die Magie des Umhangs aktivieren. Wenn du das tust, kann der nächste Zauber, den du vor dem Beginn deines nächsten Zuges wirkst, ohne somatische oder verbale Komponenten gewirkt werden."
+			]
 		},
 		{
 			"name": "Coat of the Crest",
@@ -15389,14 +15442,14 @@
 							"type": "item",
 							"name": "Segen der Euryale",
 							"entries": [
-								"Du hast Resistenz gegen Giftschaden und bist immun gegen den Zustand der Versteinerung."
+								"Du hast Resistenz gegen Giftschaden und bist immun gegen den Zustand {@condition petrified}."
 							]
 						},
 						{
 							"type": "item",
 							"name": "Versteinernde Heraldik",
 							"entries": [
-								"Als Bonusaktion kannst du die Vorderseite des Schildes mit der versteinernden Magie einer Medusa aufleuchten lassen, wodurch die Augen des Reliefs hell leuchten. Wähle eine Kreatur, die du im Umkreis von 9 Metern um dich herum sehen kannst. Die Kreatur muss einen Rettungswurf der Konstitution (DC 20) bestehen, oder sie ist gefesselt, da sich ihr Körper in Stein verwandelt. Die gefesselte Kreatur muss zu Beginn ihres nächsten Zuges einen weiteren Rettungswurf der Konstitution DC 20 machen. Bei einem misslungenen Schutzwurf ist die Kreatur 24 Stunden lang versteinert. Bei einem erfolgreichen Schutzwurf endet der Zustand der Versteinerung. Wenn diese Bonusaktion einmal benutzt wurde, kann sie bis zur nächsten Morgendämmerung nicht erneut benutzt werden."
+								"Als Bonusaktion kannst du die Vorderseite des Schildes mit der versteinernden Magie einer Medusa aufleuchten lassen, wodurch die Augen des Reliefs hell leuchten. Wähle eine Kreatur, die du im Umkreis von 9 Metern um dich herum sehen kannst. Die Kreatur muss einen Rettungswurf der Konstitution von DC 20 bestehen, oder sie erleidet den Zustand {@condition restrained}, da sich ihr Körper in Stein verwandelt. Die {@condition restrained}-Kreatur muss zu Beginn ihres nächsten Zuges einen weiteren Rettungswurf der Konstitution DC 20 machen. Bei einem misslungenen Schutzwurf leidet die Kreatur 24 Stunden lang unter dem {@condition petrified}-Zustand. Bei einem erfolgreichen Schutz endet der {@condition restrained}-Zustand. Wenn diese Bonusaktion einmal benutzt wurde, kann sie bis zur nächsten Morgendämmerung nicht erneut benutzt werden."
 							]
 						},
 						{
@@ -17733,6 +17786,24 @@
 			"value": 200,
 			"entries": [
 				"Eine Flasche fasst 1½ Pfund Flüssigkeit."
+			]
+		},
+		{
+			"name": "Glass-Studded Armor",
+			"source": "GHLoE",
+			"page": 111,
+			"baseItem": "studded leather armor|PHB",
+			"type": "LA",
+			"resist": [
+				"radiant"
+			],
+			"rarity": "rare",
+			"reqAttune": true,
+			"weight": 13,
+			"ac": 12,
+			"entries": [
+				"Während du diese Rüstung trägst, bist du resistent gegen Strahlenschaden. Jedes Mal, wenn eine Kreatur einen Nahkampfangriff gegen dich führt, erleidet sie 3 Stich-Schaden. Eine Kreatur kann sich dafür entscheiden, einen Angriff mit Nachteil durchzuführen, um diesen Schaden zu vermeiden.",
+				"Nietenleder wird aus strapazierfähigem, aber flexiblem Leder hergestellt und mit eng gesetzten Nieten oder Spikes verstärkt."
 			]
 		},
 		{
@@ -23879,6 +23950,18 @@
 			]
 		},
 		{
+			"name": "Knifewing Cape",
+			"source": "GHLoE",
+			"page": 111,
+			"rarity": "rare",
+			"reqAttune": true,
+			"wondrous": true,
+			"bonusAc": "+1",
+			"entries": [
+				"Während du diesen Umhang aus der Haut von 20 {@creature Knifewing|GHLoE|knifewings} trägst, erhältst du einen Bonus von +1 auf AC. Wenn du fällst, während du diesen Umhang trägst, fällst du außerdem 18 Meter pro Runde und erleidest keinen Schaden durch den Sturz."
+			]
+		},
+		{
 			"name": "Korolnor Scepter",
 			"source": "SKT",
 			"page": 234,
@@ -24604,6 +24687,16 @@
 			]
 		},
 		{
+			"name": "Lindwyrm Venom",
+			"source": "GHLoE",
+			"page": 111,
+			"type": "P",
+			"rarity": "very rare",
+			"entries": [
+				"Dieses schreckliche Gift wird aus den tödlichen {@creature lindwyrm|GHLoE} extrahiert und destilliert. Es kann durch Verschlucken oder eine Wunde verabreicht werden. Eine Kreatur, die dem Gift ausgesetzt ist, muss einen Rettungswurf von DC 18 auf Konstitution bestehen oder 36 ({@damage 8d8}) Giftschaden erleiden und 1 Minute lang vergiftet sein. Solange die Kreatur vergiftet ist, hat sie einen Nachteil bei Stärke- und Geschicklichkeits-Proben und Rettungswürfen."
+			]
+		},
+		{
 			"name": "Linen (1 sq. yd.)",
 			"source": "PHB",
 			"page": 157,
@@ -25298,6 +25391,16 @@
 				}
 			],
 			"hasFluffImages": true
+		},
+		{
+			"name": "Lycanthropy Antidote",
+			"source": "GHLoE",
+			"page": 111,
+			"type": "P",
+			"rarity": "rare",
+			"entries": [
+				"Dieser silbrige Trank, hergestellt aus {@creature fzeg|GHLoE} Blut, ist mit roten Flecken übersät. Durch das Trinken dieser Flüssigkeit wird der Fluch der Werwolf-Lykanthropie aufgehoben."
+			]
 		},
 		{
 			"name": "Lyre of Building",
@@ -32468,6 +32571,16 @@
 				"Dieser schwarze Kristall-Anhänger ist ein magisches Tor zu einer kleinen Taschendimension. Du kannst den Anhänger als improvisierte Waffe benutzen, um einen Nah- oder Fernkampfangriff gegen eine große oder kleinere Kreatur auszuführen. Bei einem Treffer muss das Ziel einen {@dc 10} Weisheitswurf {@quickref saving throws|PHB|2|1|Rettungswurf} bestehen oder im Kristall gefangen werden. Eine Kreatur, die gefangen werden will, kann diesen Test absichtlich nicht bestehen {@quickref saving throws|PHB|2|1|Rettungswurf}.",
 				"Es kann jeweils nur ein Wesen im Rabenschlaf gehalten werden. Diese Kreatur ist sich des Ablaufs der Zeit bewusst und kann die Welt außerhalb dieses Talismans wie durch ein Fenster sehen. Du kannst eine festgehaltene Kreatur als Bonusaktion auf einen unbesetzten Platz im Umkreis von 1,5 Metern von dir freilassen.",
 				"Wenn eine Begleiterkreatur, die du durch eine Klassenfunktion erhalten hast, oder ein Tier, das du als Begleiter gezähmt hast, auf 0 Trefferpunkte reduziert wird, während sie sich in einem Umkreis von 3 Metern um dich befindet, wird sie sofort in den Anhänger gezogen und stabilisiert. Wenn der Anhänger bereits eine Kreatur hält, schlägt dieser Effekt fehl."
+			]
+		},
+		{
+			"name": "Ready Gunk",
+			"source": "GHLoE",
+			"page": 111,
+			"rarity": "rare",
+			"wondrous": true,
+			"entries": [
+				"Diese klebrige Paste wird aus dem pulverisierten Knochenpanzer eines {@creature bone trader|GHLoE} hergestellt. Wenn du eine Waffe, einen Schild oder einen anderen Gegenstand behandelst, der mit einer oder zwei Händen geführt werden kann, kannst du eine Bonusaktion nutzen, um ihn zu beschwören und auszurüsten, solange sich der Gegenstand innerhalb von 9 Metern von dir befindet. Nachdem du die Magie der Paste dreimal angewendet hast, verliert sie ihre Kraft."
 			]
 		},
 		{
@@ -46562,6 +46675,28 @@
 				"Magic Item Table B"
 			],
 			"hasFluffImages": true
+		},
+		{
+			"name": "Wand of Silence",
+			"source": "GHLoE",
+			"page": 111,
+			"type": "WD",
+			"rarity": "uncommon",
+			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
+			"recharge": "dawn",
+			"rechargeAmount": "{@dice 1d6 + 1}",
+			"charges": 7,
+			"entries": [
+				"Dieser Zauberstab hat 7 Ladungen. Während du ihn in der Hand hältst, kannst du mit einer Aktion 1 Ladung verbrauchen, um den {@spell silence}-Zauber zu wirken (Schutzwurf DC 15). Der Zauberstab erhält täglich bei Sonnenaufgang {@dice 1d6 + 1} verbrauchte Ladungen zurück. Wenn du die letzte Ladung des Zauberstabs verbrauchst, wirf einen {@dice d20}. Bei einer 1 zerbröselt der Zauberstab zu Asche und wird zerstört."
+			],
+			"attachedSpells": [
+				"silence"
+			]
 		},
 		{
 			"name": "Wand of Smiles",

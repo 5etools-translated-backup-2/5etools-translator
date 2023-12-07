@@ -1,0 +1,301 @@
+{
+	"spell": [
+		{
+			"name": "Arboreal Curse",
+			"source": "GHLoE",
+			"level": 7,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "eine Tasse Saft"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du versuchst, eine Kreatur, die du in Reichweite sehen kannst, in Holz zu verwandeln. Wenn der Körper des Ziels aus Fleisch besteht, muss die Kreatur einen Rettungswurf auf Konstitution machen. Bei einem misslungenen Schutzwurf wird die Kreatur {@condition restrained}, während ihr Fleisch zu Rinde zu verhärten beginnt. Bei einem erfolgreichen Schutzwurf ist die Kreatur nicht betroffen.",
+				"Eine Kreatur {@condition restrained}, die von diesem Zauber betroffen ist, muss am Ende jeder ihrer Runden einen weiteren Rettungswurf gegen die Konstitution machen. Wenn sie dreimal erfolgreich gegen diesen Zauber rettet, endet der Zauber. Misslingt ihr dreimal der Rettungswurf, wird sie in einen Baum verwandelt und unterliegt für die Dauer des Zaubers dem Zustand {@condition petrified}. Die Erfolge und Misserfolge müssen nicht aufeinander folgen; behalte beide im Auge, bis das Ziel drei von einer Art gesammelt hat.",
+				"Wenn die transformierte Kreatur verbrannt, abgehackt oder anderweitig zerstört wird, während {@condition petrified}, wird die Kreatur erschlagen.",
+				"Eine Kreatur bleibt verwandelt, es sei denn, der Effekt wird innerhalb eines Jahres durch {@spell greater restoration}, {@spell wish} oder ähnliche magische Effekte rückgängig gemacht. Wenn die Kreatur ein Jahr und einen Tag als Baum verbringt, wird die Verwandlung dauerhaft, und nichts kann die Kreatur in ihre ursprüngliche Form zurückbringen."
+			],
+			"conditionInflict": [
+				"petrified",
+				"restrained"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"PRM",
+				"SGT"
+			]
+		},
+		{
+			"name": "Consume Mind",
+			"source": "GHLoE",
+			"level": 4,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "eine 1-Unzen-Portion frisches oder magisch konserviertes Gehirn eines anderen Lebewesens"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Du verzehrst das Gehirn des Leichnams einer anderen Kreatur und erhältst so deren Erinnerungen und Wissen. Der Leichnam muss ein Gehirn haben und darf nicht untot sein. Der Zauber schlägt fehl, wenn der Leichnam länger als drei Tage tot (und nicht konserviert) ist.",
+				"Bis zum Ende des Zaubers kannst du versuchen, dich an jede wichtige Tatsache zu erinnern, die der Kreatur bekannt ist - Familiengeschichte, jüngste Ereignisse, Gebäudepläne, Passwörter, Einzelheiten über den Tod der Kreatur und ähnliche Informationen. Um eine Information abzurufen, musst du eine Fähigkeitsprobe mit deinem Zaubermodifikator machen. Der DC ist gleich dem Intelligenzwert der Leiche.",
+				"Sobald der Zaubernde würfelt, um festzustellen, ob er sich an eine Tatsache erinnert, kann er nicht mehr versuchen, sie erneut abzurufen."
+			]
+		},
+		{
+			"name": "Heartseeker",
+			"source": "GHLoE",
+			"level": 6,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 300
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ein Rubin im Wert von mindestens 100 Gp",
+					"cost": 10000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Beim Wirken dieses Zaubers musst du sechs Trefferwürfel aufwenden, sonst schlägt der Zauber automatisch fehl. Wenn du dies tust, fließt Blut aus deinem Körper und kristallisiert zu einem Pfeil mit Widerhaken, der auf eine Kreatur deiner Wahl in Reichweite geschossen wird. Führe einen Fernzauberangriff gegen die gewählte Kreatur aus. Bei einem Treffer wirfst du die Trefferwürfel, die du für diesen Zauber verbraucht hast, und die Kreatur erleidet Stichschaden in Höhe des Ergebnisses.",
+				"Sobald der blutige Pfeil in der Kreatur steckt, beginnt er, sich in ihr Herz einzugraben und macht sie verwundbar für weitere Angriffe. Zu Beginn des nächsten Zuges der Kreatur muss sie einen Rettungswurf auf Konstitution ablegen. Bei einem Fehlschlag erzielen Angriffe gegen die Kreatur kritische Treffer, wenn der Angriffswurf eine 19 oder 20 ergibt.",
+				"Zu Beginn jeder weiteren Runde der Kreatur muss sie den Rettungswurf für die Konstitution wiederholen oder die Reichweite der kritischen Treffer von Angriffen gegen die Kreatur erhöht sich erneut um 1. Wenn der Kreatur drei dieser Rettungswürfe gelingen (diese Erfolge müssen nicht aufeinander folgen), endet der Zauber. Die erhöhte Reichweite der kritischen Treffer endet, wenn der Zauber endet."
+			],
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"constitution"
+			]
+		},
+		{
+			"name": "Hunter Sense",
+			"source": "GHLoE",
+			"level": 0,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du berührst eine willige Kreatur. Während dieser Zauber aktiv ist, sind die Sinne des Ziels geschärft. Wenn das Ziel bei einer Weisheitsprüfung ({@skill Perception}) eine 9 oder weniger würfelt, handelt es stattdessen so, als hätte es eine 10 gewürfelt."
+			]
+		},
+		{
+			"name": "Magic Mirror",
+			"source": "GHLoE",
+			"level": 5,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "which you take when you are targeted by a spell"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "eine polierte Silbermurmel"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Eine kurzzeitige Blase schillernder Energie schimmert in der Luft zwischen dir und dem Zaubernden, der den Zauber auslöst. Der Zauber wird auf eine Kreatur deiner Wahl umgelenkt, die du innerhalb von 18 Metern sehen kannst. Ist der Zauber auf der 5. Stufe oder niedriger, bist du nicht mehr das Ziel des Zaubers, sondern die gewählte Kreatur. Ist der Zauber auf Stufe 6 oder höher, musst du eine Fähigkeitsprüfung mit deiner Zaubernden Fähigkeit machen. Der DC beträgt 10 + die Stufe des Zaubers. Bei einer erfolgreichen Prüfung bist du nicht länger das Ziel des Zaubers, sondern die gewählte Kreatur. Bei einer misslungenen Prüfung bleibst du das Ziel des auslösenden Zaubers."
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Suffocate",
+			"source": "GHLoE",
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "einen Lederhandschuh"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du erschaffst ein Paar greifende Hände aus {@condition invisible} Kräften. Führe einen Zauberangriff gegen eine Kreatur aus, die du in Reichweite sehen kannst. Bei einem Treffer erleidet die Kreatur einen Schaden von {@condition restrained}, da die Hände ihre Kehle oder ein körperliches Äquivalent zerquetschen.",
+				"Wenn die Kreatur Luft zum Atmen benötigt, beginnt sie zu ersticken. Eine erstickende Kreatur kann für eine Anzahl von Runden überleben, die 1 + ihrem Konstitutionsmodifikator entspricht (mindestens 1 Runde). Zu Beginn ihres nächsten Zuges nach Ablauf dieser Runden wird sie zu {@condition unconscious} und kann ihre Trefferpunkte nicht wiedererlangen, bis sie wieder atmen kann.",
+				"Eine bewusste Kreatur {@condition restrained} in der Nähe der Hände kann ihre Aktion nutzen, um eine Stärke- oder Geschicklichkeitsprobe (ihrer Wahl) gegen den Schutz-DC des Zaubers zu machen. Bei einem Erfolg endet der Zauber auf dem Ziel."
+			],
+			"conditionInflict": [
+				"invisible",
+				"restrained",
+				"unconscious"
+			],
+			"miscTags": [
+				"HL",
+				"SGT"
+			]
+		},
+		{
+			"name": "Wrack",
+			"source": "GHLoE",
+			"level": 2,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "ein ausgefranstes Stück Kordel"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Wähle eine Kreatur, die du in Reichweite sehen kannst. Das Ziel muss einen Rettungswurf in Konstitution bestehen oder wird für die Dauer des Angriffs von quälenden Muskelkrämpfen heimgesucht. Eine auf diese Weise betroffene Kreatur hat eine halbierte Geschwindigkeit und würfelt Angriffe mit Nachteil. Am Ende jeder seiner Runden kann das Ziel einen weiteren Rettungswurf auf Konstitution machen. Bei einem Erfolg endet der Zauber für das Ziel."
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		}
+	]
+}
