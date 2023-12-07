@@ -2196,6 +2196,19 @@
 			]
 		},
 		{
+			"name": "Arcane Oil",
+			"source": "GHLoE",
+			"page": 111,
+			"type": "P",
+			"rarity": "rare",
+			"bonusWeapon": "+2",
+			"entries": [
+				"Questa sostanza viene creata distillando la gelatina che racchiude il cervello di un {@creature xakalonus|GHLoE}. Come azione, si può rivestire un'arma o 20 munizioni con questa sostanza.",
+				"Se gli oggetti rivestiti non sono magici, per il minuto successivo gli attacchi con l'arma o le munizioni rivestite ottengono un bonus di +2 ai tiri di attacco e di danno.",
+				"Se gli oggetti rivestiti sono magici, l'olio non influisce sui tiri di attacco o di danno con essi. Tuttavia, i tuoi attacchi contro l'oggetto {@creature hraptnon|GHLoE} possono danneggiare completamente la creatura per un minuto."
+			]
+		},
+		{
 			"name": "Arcane Propulsion Arm",
 			"source": "ERLW",
 			"page": 276,
@@ -6196,6 +6209,28 @@
 			"value": 25000
 		},
 		{
+			"name": "Brazen Armor",
+			"source": "GHLoE",
+			"page": 111,
+			"baseItem": "plate armor|PHB",
+			"type": "HA",
+			"resist": [
+				"fire",
+				"radiant"
+			],
+			"rarity": "very rare",
+			"reqAttune": true,
+			"weight": 65,
+			"ac": 18,
+			"strength": "15",
+			"bonusAc": "+1",
+			"stealth": true,
+			"entries": [
+				"Questa armatura, ricavata dal corpo di un {@creature Empyrean brazen bull|GHLoE}, risplende alla luce diretta del sole. Quando si indossa questa armatura, si ottiene un bonus di +1 alla CA. Inoltre, si ha resistenza al fuoco e ai danni radianti.",
+				"L'armatura consiste in piastre metalliche sagomate e interconnesse che ricoprono l'intero corpo. Un'armatura comprende guanti, stivali di cuoio pesante, un elmo con visiera e spessi strati di imbottitura sotto l'armatura. Fibbie e cinghie distribuiscono il peso sul corpo."
+			]
+		},
+		{
 			"name": "Brazier of Commanding Fire Elementals",
 			"source": "DMG",
 			"page": 156,
@@ -8427,6 +8462,24 @@
 			"rarity": "none",
 			"weight": 1,
 			"value": 300
+		},
+		{
+			"name": "Coat of Lies",
+			"source": "GHLoE",
+			"page": 111,
+			"rarity": "rare",
+			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
+			"wondrous": true,
+			"bonusAc": "+1",
+			"entries": [
+				"Questo mantello fatto con le lingue mozzate delle vittime di un {@creature Harvester of Lies|GHLoE|harvester} fornisce un bonus di +1 alla tua CA e hai vantaggio nelle prove di Carisma ({@skill Deception}).",
+				"Inoltre, come azione bonus tre volte al giorno, è possibile attivare la magia del mantello. In questo caso, il prossimo incantesimo lanciato prima dell'inizio del turno successivo può essere lanciato senza alcuna componente somatica o verbale."
+			]
 		},
 		{
 			"name": "Coat of the Crest",
@@ -15389,14 +15442,14 @@
 							"type": "item",
 							"name": "Benedizione di Euryale",
 							"entries": [
-								"Si ha resistenza ai danni da veleno e si è immuni alla condizione di pietrificazione."
+								"Si ha resistenza ai danni da veleno e si è immuni alla condizione {@condition petrified}."
 							]
 						},
 						{
 							"type": "item",
 							"name": "Araldica pietrificante",
 							"entries": [
-								"Come azione bonus, è possibile far brillare la parte anteriore dello scudo con la magia pietrificante di una medusa, facendo brillare gli occhi del rilievo. Scegliete una creatura che potete vedere entro 9 metri da voi. La creatura deve riuscire a superare un tiro salvezza di Costituzione a Dc 20, altrimenti subirà la condizione di trattenuta e il suo corpo diventerà di pietra. La creatura immobilizzata deve effettuare un altro tiro salvezza con D.C. 20 Costituzione all'inizio del suo prossimo turno. Se il tiro salvezza fallisce, la creatura è pietrificata per 24 ore. Se il tiro salvezza riesce, la condizione di immobilizzazione termina. Una volta utilizzata, questa azione bonus non può essere riutilizzata fino all'alba successiva."
+								"Come azione bonus, è possibile far brillare la parte anteriore dello scudo con la magia pietrificante di una medusa, facendo brillare gli occhi del rilievo. Scegliete una creatura che potete vedere entro 9 metri da voi. La creatura deve riuscire a superare un tiro salvezza di Costituzione a DC 20, altrimenti subirà la condizione {@condition restrained} e il suo corpo si trasformerà in pietra. La creatura {@condition restrained} deve effettuare un altro tiro salvezza con DC 20 Costituzione all'inizio del suo prossimo turno. Se il tiro salvezza fallisce, la creatura subisce la condizione {@condition petrified} per 24 ore. Se il tiro salvezza ha successo, la condizione {@condition restrained} termina. Una volta utilizzata, questa azione bonus non può essere riutilizzata fino all'alba successiva."
 							]
 						},
 						{
@@ -17733,6 +17786,24 @@
 			"value": 200,
 			"entries": [
 				"Una bottiglia contiene 1 litro e mezzo di liquido."
+			]
+		},
+		{
+			"name": "Glass-Studded Armor",
+			"source": "GHLoE",
+			"page": 111,
+			"baseItem": "studded leather armor|PHB",
+			"type": "LA",
+			"resist": [
+				"radiant"
+			],
+			"rarity": "rare",
+			"reqAttune": true,
+			"weight": 13,
+			"ac": 12,
+			"entries": [
+				"Quando si indossa questa armatura, si ha resistenza ai danni radianti. Ogni volta che una creatura effettua un attacco in mischia contro di voi, subisce 3 danni perforanti. Una creatura può scegliere di effettuare un attacco con svantaggio per evitare questo danno.",
+				"Realizzata in pelle resistente ma flessibile, la pelle borchiata è rinforzata con rivetti o punte ravvicinate."
 			]
 		},
 		{
@@ -23879,6 +23950,18 @@
 			]
 		},
 		{
+			"name": "Knifewing Cape",
+			"source": "GHLoE",
+			"page": 111,
+			"rarity": "rare",
+			"reqAttune": true,
+			"wondrous": true,
+			"bonusAc": "+1",
+			"entries": [
+				"Quando si indossa questo mantello fatto con la pelle di 20 {@creature Knifewing|GHLoE|knifewings}, si ottiene un bonus di +1 alla CA. Inoltre, quando si cade indossando questo mantello, si scende di 18 metri per round e non si subiscono danni da caduta."
+			]
+		},
+		{
 			"name": "Korolnor Scepter",
 			"source": "SKT",
 			"page": 234,
@@ -24604,6 +24687,16 @@
 			]
 		},
 		{
+			"name": "Lindwyrm Venom",
+			"source": "GHLoE",
+			"page": 111,
+			"type": "P",
+			"rarity": "very rare",
+			"entries": [
+				"Questo terribile veleno viene estratto e distillato dal micidiale {@creature lindwyrm|GHLoE}. Può essere somministrato tramite ingestione o ferita. Una creatura esposta al veleno deve riuscire a superare un tiro salvezza di Costituzione a DC 18 o subire 36 ({@damage 8d8}) danni da veleno ed essere avvelenata per 1 minuto. Mentre è avvelenata, la creatura ha svantaggio sulle prove di Forza e Destrezza e sui tiri salvezza."
+			]
+		},
+		{
 			"name": "Linen (1 sq. yd.)",
 			"source": "PHB",
 			"page": 157,
@@ -25298,6 +25391,16 @@
 				}
 			],
 			"hasFluffImages": true
+		},
+		{
+			"name": "Lycanthropy Antidote",
+			"source": "GHLoE",
+			"page": 111,
+			"type": "P",
+			"rarity": "rare",
+			"entries": [
+				"Questa pozione argentea, fatta con {@creature fzeg|GHLoE} sangue, è punteggiata di macchie rosse. Bevendo questo liquido si elimina la maledizione della licantropia."
+			]
 		},
 		{
 			"name": "Lyre of Building",
@@ -32468,6 +32571,16 @@
 				"Questo ciondolo di cristallo nero è una porta magica per una piccola dimensione tascabile. Si può usare il ciondolo come arma improvvisata per effettuare un attacco in mischia o con armi a distanza contro una creatura Grande o più piccola. Se viene colpito, il bersaglio deve riuscire ad effettuare un tiro di Saggezza {@dc 10} {@quickref saving throws|PHB|2|1|tiro salvezza} o rimanere intrappolato nel cristallo. Una creatura che vuole essere intrappolata può intenzionalmente fallire questa prova {@quickref saving throws|PHB|2|1|tiro salvezza}.",
 				"Solo una creatura alla volta può essere tenuta nel sonno del corvo. Tale creatura è consapevole del passare del tempo e può vedere il mondo al di fuori di questo talismano come attraverso una finestra. Si può liberare una creatura trattenuta in uno spazio non occupato entro 1,5 metri da sé come azione bonus.",
 				"Se una creatura compagna concessa da una caratteristica di classe o una bestia addomesticata come compagna viene ridotta a 0 punti ferita mentre si trova entro 3 metri da voi, viene immediatamente attirata nel ciondolo e stabilizzata. Se il ciondolo contiene già una creatura, questo effetto fallisce."
+			]
+		},
+		{
+			"name": "Ready Gunk",
+			"source": "GHLoE",
+			"page": 111,
+			"rarity": "rare",
+			"wondrous": true,
+			"entries": [
+				"Questa pasta appiccicosa è ricavata dalla polvere dell'armatura ossea di un {@creature bone trader|GHLoE}. Quando si tratta un'arma, uno scudo o un altro oggetto che può essere impugnato con una o due mani, si può usare un'azione bonus per evocarlo ed equipaggiarlo, purché l'oggetto si trovi entro 9 metri da noi. Dopo aver usato la magia della pasta per tre volte, perde la sua potenza."
 			]
 		},
 		{
@@ -46562,6 +46675,28 @@
 				"Magic Item Table B"
 			],
 			"hasFluffImages": true
+		},
+		{
+			"name": "Wand of Silence",
+			"source": "GHLoE",
+			"page": 111,
+			"type": "WD",
+			"rarity": "uncommon",
+			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
+			"recharge": "dawn",
+			"rechargeAmount": "{@dice 1d6 + 1}",
+			"charges": 7,
+			"entries": [
+				"Questa bacchetta ha 7 cariche. Mentre la si tiene in mano, si può usare un'azione per spendere 1 carica per lanciare l'incantesimo {@spell silence} (tiro salvezza DC 15). La bacchetta recupera {@dice 1d6 + 1} le cariche spese ogni giorno all'alba. Se si consuma l'ultima carica della bacchetta, tirare un {@dice d20}. Con un 1, la bacchetta si riduce in cenere e viene distrutta."
+			],
+			"attachedSpells": [
+				"silence"
+			]
 		},
 		{
 			"name": "Wand of Smiles",
