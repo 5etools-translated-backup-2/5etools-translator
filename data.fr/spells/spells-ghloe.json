@@ -1,0 +1,301 @@
+{
+	"spell": [
+		{
+			"name": "Arboreal Curse",
+			"source": "GHLoE",
+			"level": 7,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "une tasse de sève"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Vous tentez de transformer en bois une créature que vous pouvez voir à portée. Si le corps de la cible est fait de chair, la créature doit effectuer un jet de sauvegarde de Constitution. En cas d'échec, elle subit une perte de {@condition restrained} tandis que sa chair commence à se durcir en écorce. En cas de sauvegarde réussie, la créature n'est pas affectée.",
+				"Une créature {@condition restrained} par ce sort doit effectuer un nouveau jet de sauvegarde de Constitution à la fin de chacun de ses tours. Si elle réussit son jet de sauvegarde contre ce sort trois fois, le sort prend fin. Si elle échoue trois fois à son jet de sauvegarde de Constitution, elle est transformée en arbre et soumise à la condition {@condition petrified} pour la durée. Les réussites et les échecs n'ont pas besoin d'être consécutifs ; notez les deux jusqu'à ce que la cible obtienne trois réussites ou échecs.",
+				"Si la créature transformée est brûlée, abattue ou détruite d'une autre manière pendant {@condition petrified}, elle est tuée.",
+				"Une créature reste transformée à moins que l'effet ne soit inversé dans l'année avec {@spell greater restoration}, {@spell wish}, ou des effets magiques similaires. Si la créature passe un an et un jour sous la forme d'un arbre, la transformation devient permanente et rien ne peut la ramener à sa forme d'origine."
+			],
+			"conditionInflict": [
+				"petrified",
+				"restrained"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"PRM",
+				"SGT"
+			]
+		},
+		{
+			"name": "Consume Mind",
+			"source": "GHLoE",
+			"level": 4,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "une portion de 1 once de cerveau d'une autre créature, fraîche ou conservée par magie"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Vous consommez le cerveau du cadavre d'une autre créature, ce qui vous permet d'acquérir ses souvenirs et ses connaissances. Le cadavre doit avoir un cerveau et ne doit pas être mort-vivant. Le sort échoue si le cadavre est mort (et non conservé) depuis plus de trois jours.",
+				"Jusqu'à la fin du sort, vous pouvez tenter de vous souvenir de tout fait important connu de la créature - histoire de la famille, événements récents, plans des bâtiments, mots de passe, détails de la mort de la créature, et autres informations similaires. Pour vous souvenir d'une information, vous devez faire un test de caractéristique en utilisant votre modificateur de lanceur de sorts. Le DC est égal au score d'Intelligence du cadavre.",
+				"Une fois que le lanceur de sorts a effectué un jet pour déterminer s'il se souvient d'un fait, il ne peut plus tenter de s'en souvenir à nouveau."
+			]
+		},
+		{
+			"name": "Heartseeker",
+			"source": "GHLoE",
+			"level": 6,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 300
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un rubis d'une valeur d'au moins 100 po",
+					"cost": 10000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Lorsque vous lancez ce sort, vous devez dépenser six dés de réussite ou le sort échoue automatiquement. Lorsque vous le faites, du sang coule de votre corps et se cristallise en une flèche barbelée qui se dirige vers une créature de votre choix à portée. Effectuez une attaque de sort à distance contre la créature choisie. En cas de succès, lancez les dés de réussite dépensés pour lancer ce sort, et la créature subit des dégâts perforants égaux au résultat.",
+				"Une fois logée dans la créature, la flèche ensanglantée commence à creuser vers son cœur, la rendant vulnérable à d'autres attaques. Au début de son prochain tour, la créature doit effectuer un jet de sauvegarde de Constitution. En cas d'échec, les attaques contre la créature obtiennent des coups critiques sur un 19 ou un 20 au jet d'attaque.",
+				"Au début de chacun de ses tours suivants, la créature doit répéter le jet de sauvegarde de Constitution, faute de quoi la portée des coups critiques sur les attaques portées contre elle augmente à nouveau de 1. Si la créature réussit trois de ces jets de sauvegarde (ces réussites n'ont pas besoin d'être consécutives), ce sort prend fin. L'augmentation de la portée des coups critiques prend fin en même temps que le sort."
+			],
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"constitution"
+			]
+		},
+		{
+			"name": "Hunter Sense",
+			"source": "GHLoE",
+			"level": 0,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Vous touchez une créature consentante. Tant que ce sort est actif, les sens de la cible sont accrus. Si la cible obtient un 9 ou moins sur le dé lors d'un test de Sagesse ({@skill Perception}), elle agit comme si elle obtenait un 10."
+			]
+		},
+		{
+			"name": "Magic Mirror",
+			"source": "GHLoE",
+			"level": 5,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "which you take when you are targeted by a spell"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "un marbre d'argent poli"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Une bulle momentanée d'énergie irisée scintille dans l'air entre vous et le lanceur du sort déclencheur. Le sort est redirigé vers une créature de votre choix que vous pouvez voir dans un rayon de 18 mètres. Si le sort est de niveau 5 ou inférieur, vous n'êtes plus la cible du sort et la créature choisie l'est à sa place. Si le sort est de 6e niveau ou plus, faites un jet de caractéristique en utilisant votre capacité de lanceur de sorts. Le DC est égal à 10 + le niveau du sort. Sur un test réussi, vous n'êtes plus la cible du sort et la créature choisie l'est à sa place. Sur un test raté, vous restez la cible du sort déclencheur."
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Suffocate",
+			"source": "GHLoE",
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "un gant de cuir"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Vous créez une paire de mains agrippantes faites de {@condition invisible} de forces. Effectuez une attaque de sort contre une créature que vous pouvez voir à portée. Sur un coup, la créature subit une perte de {@condition restrained} tandis que les mains lui écrasent la gorge ou un équivalent corporel.",
+				"Si la créature a besoin d'air pour respirer, elle commence à suffoquer. Une créature qui suffoque peut survivre pendant un nombre de rounds égal à 1 + son modificateur de Constitution (minimum de 1 round). Au début de son prochain tour après la fin de ces rounds, elle devient {@condition unconscious}, et elle ne peut pas regagner de points de vie tant qu'elle ne peut pas respirer à nouveau.",
+				"Une créature consciente {@condition restrained} par les mains peut utiliser son action pour faire un test de Force ou de Dextérité (au choix) contre le DC de sauvegarde de votre sort. En cas de réussite, le sort prend fin sur la cible."
+			],
+			"conditionInflict": [
+				"invisible",
+				"restrained",
+				"unconscious"
+			],
+			"miscTags": [
+				"HL",
+				"SGT"
+			]
+		},
+		{
+			"name": "Wrack",
+			"source": "GHLoE",
+			"level": 2,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "un morceau de corde effiloché"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Choisissez une créature que vous pouvez voir à portée. La cible doit réussir un jet de sauvegarde de Constitution ou être affligée de spasmes musculaires atroces pour la durée. Une créature ainsi affectée voit sa vitesse réduite de moitié et effectue ses jets d'attaque avec un désavantage. À la fin de chacun de ses tours, la cible peut effectuer un nouveau jet de sauvegarde de Constitution. En cas de réussite, le sort prend fin sur la cible."
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		}
+	]
+}
