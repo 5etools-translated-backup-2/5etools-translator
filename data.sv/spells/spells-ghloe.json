@@ -1,0 +1,301 @@
+{
+	"spell": [
+		{
+			"name": "Arboreal Curse",
+			"source": "GHLoE",
+			"level": 7,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "en kopp saft"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du försöker förvandla en varelse som du kan se inom räckhåll till trä. Om målets kropp är gjord av kött, måste varelsen göra ett Konstitution räddningsslag. Om räddningsslaget misslyckas drabbas den av {@condition restrained} när dess kött börjar hårdna till bark. Vid ett lyckat räddningsslag påverkas inte varelsen.",
+				"En varelse {@condition restrained} som drabbas av denna besvärjelse måste göra ett nytt räddningsslag mot konstitutionen i slutet av var och en av sina varv. Om den lyckas rädda sig mot besvärjelsen tre gånger, upphör besvärjelsen. Om den misslyckas med sitt konstitutionella räddningsslag tre gånger, förvandlas den till ett träd och utsätts för {@condition petrified}-tillståndet så länge det varar. Framgångarna och misslyckandena behöver inte vara i följd; håll reda på båda tills målet samlar tre av samma slag.",
+				"Om den förvandlade varelsen bränns, huggs ner eller på annat sätt förstörs under {@condition petrified}, dödas varelsen.",
+				"En varelse förblir förvandlad om inte effekten upphävs inom ett år med {@spell greater restoration}, {@spell wish} eller liknande magiska effekter. Om varelsen tillbringar ett år och en dag som ett träd blir förvandlingen permanent, och ingenting kan återföra varelsen till dess ursprungliga form."
+			],
+			"conditionInflict": [
+				"petrified",
+				"restrained"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"PRM",
+				"SGT"
+			]
+		},
+		{
+			"name": "Consume Mind",
+			"source": "GHLoE",
+			"level": 4,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "en 1 uns färsk eller magiskt bevarad del av en annan varelses hjärna"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Du konsumerar hjärnan från en annan varelses lik och får dess minnen och kunskap. Liket måste ha en hjärna och får inte vara odött. Besvärjelsen misslyckas om liket har varit dött (och inte konserverats) i mer än tre dagar.",
+				"Tills besvärjelsen är slut kan du försöka minnas alla viktiga fakta som varelsen känner till - familjens historia, nyligen inträffade händelser, byggnadens planlösning, lösenord, detaljer om varelsens död och liknande information. För att återkalla en bit information måste du göra en förmågekontroll med din besvärjelsemodifierare. DC är lika med likets intelligenspoäng.",
+				"När rollpersonerna har gjort ett kast för att avgöra om de minns ett faktum, kan de inte försöka minnas det igen."
+			]
+		},
+		{
+			"name": "Heartseeker",
+			"source": "GHLoE",
+			"level": 6,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 300
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "en rubin värd minst 100 gp",
+					"cost": 10000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"När du kastar denna besvärjelse måste du använda sex träfftärningar, annars misslyckas besvärjelsen automatiskt. När du gör det rinner blod från din kropp och kristalliseras sedan till en taggig pil, som skjuts mot en valfri varelse inom räckhåll. Gör en besvärjelseattack på avstånd mot den valda varelsen. Vid träff, slå de träfftärningar som användes för att kasta denna besvärjelse, och varelsen tar genomborrande skada som är lika med resultatet.",
+				"När den blodiga pilen har fastnat i varelsen börjar den gräva sig mot dess hjärta och gör den sårbar för ytterligare attacker. I början av varelsens nästa tur måste den göra ett räddningsslag för konstitution. Vid ett misslyckande får attacker mot varelsen kritiska träffar på en 19 eller 20 på attackkastet.",
+				"I början av var och en av varelsens varv efter detta måste den upprepa räddningskastet för konstitution, annars ökar räckvidden för kritiska träffar på attacker mot varelsen med 1 igen. Om varelsen lyckas med tre av dessa räddningskast (dessa framgångar behöver inte vara på varandra följande) upphör besvärjelsen. Den ökade räckvidden för kritiska träffar upphör när besvärjelsen upphör."
+			],
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"constitution"
+			]
+		},
+		{
+			"name": "Hunter Sense",
+			"source": "GHLoE",
+			"level": 0,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du rör vid en villig varelse. Medan besvärjelsen är aktiv förhöjs målets sinnen. Om målet slår en 9 eller lägre på tärningen när de gör en visdomskontroll ({@skill Perception}), agerar de istället som om de slog en 10."
+			]
+		},
+		{
+			"name": "Magic Mirror",
+			"source": "GHLoE",
+			"level": 5,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "which you take when you are targeted by a spell"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "en polerad silvermarmor"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"En tillfällig bubbla av skimrande energi skimrar i luften mellan dig och besvärjaren av den utlösande besvärjelsen. Besvärjelsen omdirigeras till en valfri varelse som du kan se inom 18 meter. Om besvärjelsen är på 5:e nivån eller lägre, är du inte längre mål för besvärjelsen och den valda varelsen är det istället. Om besvärjelsen är på 6:e nivån eller högre, gör en förmågekontroll med din besvärjelseförmåga. DC är lika med 10 + besvärjelsens nivå. Vid ett lyckat kontrollprov är du inte längre besvärjelsens mål och den valda varelsen är det istället. Om kontrollen misslyckas förblir du målet för den utlösande besvärjelsen."
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Suffocate",
+			"source": "GHLoE",
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "en läderhandske"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du skapar ett par gripande händer gjorda av {@condition invisible} krafter. Gör en besvärjelseattack mot en varelse som du kan se inom räckhåll. Vid en träff är varelsen {@condition restrained} när händerna krossar deras hals eller kroppslig motsvarighet.",
+				"Om varelsen behöver luft för att andas börjar den kvävas. En kvävande varelse kan överleva i ett antal ronder som är lika med 1 + dess konstitutionsmodifierare (minst 1 rond). I början av sin nästa tur efter att dessa ronder är över blir den {@condition unconscious}, och den kan inte återfå träffpunkter förrän den kan andas igen.",
+				"En medveten varelse {@condition restrained} vid händerna kan använda sin handling för att göra en styrke- eller dexteritetskontroll (dess val) mot din besvärjelses räddning DC. Vid ett lyckat resultat upphör besvärjelsen för målet."
+			],
+			"conditionInflict": [
+				"invisible",
+				"restrained",
+				"unconscious"
+			],
+			"miscTags": [
+				"HL",
+				"SGT"
+			]
+		},
+		{
+			"name": "Wrack",
+			"source": "GHLoE",
+			"level": 2,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "en fransig bit av en sladd"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Välj en varelse som du kan se inom räckhåll. Målet måste lyckas med ett konstitutionellt räddningsslag eller drabbas av plågsamma muskelspasmer under varaktigheten. En varelse som drabbas på detta sätt får sin hastighet halverad och kastar attacker med nackdel. I slutet av var och en av sina varv kan målet göra ett nytt räddningsslag för konstitution. Vid ett lyckat kast upphör besvärjelsen på målet."
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		}
+	]
+}
