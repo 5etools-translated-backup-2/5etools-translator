@@ -2196,6 +2196,19 @@
 			]
 		},
 		{
+			"name": "Arcane Oil",
+			"source": "GHLoE",
+			"page": 111,
+			"type": "P",
+			"rarity": "rare",
+			"bonusWeapon": "+2",
+			"entries": [
+				"这种物质是通过蒸馏包裹（%0%）大脑的果冻而产生的。作为一个动作，你可以给一件武器或 20 件弹药涂上这种物质。",
+				"如果涂有涂层的物品不是魔法物品，在接下来的一分钟内，你使用涂有涂层的武器或弹药进行攻击时，攻击和伤害卷轴会获得 +2 的加成。",
+				"如果涂抹的物品是魔法物品，则油不会影响对它们的攻击或伤害卷轴。但是，您对其发动的攻击（%0%）会对该生物造成持续一分钟的完全伤害。"
+			]
+		},
+		{
 			"name": "Arcane Propulsion Arm",
 			"source": "ERLW",
 			"page": 276,
@@ -6196,6 +6209,28 @@
 			"value": 25000
 		},
 		{
+			"name": "Brazen Armor",
+			"source": "GHLoE",
+			"page": 111,
+			"baseItem": "plate armor|PHB",
+			"type": "HA",
+			"resist": [
+				"fire",
+				"radiant"
+			],
+			"rarity": "very rare",
+			"reqAttune": true,
+			"weight": 65,
+			"ac": 18,
+			"strength": "15",
+			"bonusAc": "+1",
+			"stealth": true,
+			"entries": [
+				"这件铠甲由 {@creature Empyrean brazen bull|GHLoE} 尸体制成，在阳光直射下熠熠生辉。穿戴此盔甲时，您的 AC 值会获得 +1。此外，您还能抵抗火焰和辐射伤害。",
+				"板甲由形状各异、相互交错的金属板组成，覆盖全身。一套板甲包括铠甲、厚重的皮靴、头盔和铠甲下的厚垫层。扣子和带子将重量分散到全身。"
+			]
+		},
+		{
 			"name": "Brazier of Commanding Fire Elementals",
 			"source": "DMG",
 			"page": 156,
@@ -8427,6 +8462,24 @@
 			"rarity": "none",
 			"weight": 1,
 			"value": 300
+		},
+		{
+			"name": "Coat of Lies",
+			"source": "GHLoE",
+			"page": 111,
+			"rarity": "rare",
+			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
+			"wondrous": true,
+			"bonusAc": "+1",
+			"entries": [
+				"这件由 {@creature Harvester of Lies|GHLoE|harvester} 受害者割下的舌头制成的外衣会为你的 AC 值带来 +1的加成，并且你在魅力 ({@skill Deception}) 检定中占有优势。",
+				"此外，作为每天三次的额外行动，您可以激活斗篷的魔力。如果您这样做了，在下一回合开始前，您施放的下一个咒语可以不带任何躯体或语言成分。"
+			]
 		},
 		{
 			"name": "Coat of the Crest",
@@ -15389,14 +15442,14 @@
 							"type": "item",
 							"name": "欧律狄刻的祝福",
 							"entries": [
-								"您对中毒伤害有抵抗力，并对石化状态免疫。"
+								"您对中毒伤害有抵抗力，并免疫 {@condition petrified} 条件。"
 							]
 						},
 						{
 							"type": "item",
 							"name": "石化纹章",
 							"entries": [
-								"作为一个额外动作，你可以让盾牌的前端闪烁着美杜莎的石化魔法，使浮雕的眼睛发出耀眼的光芒。选择一个你能看到的 9 米范围内的生物。该生物必须在 DC 20 的宪法蓄力中成功，否则就会因为身体变成石头而受到束缚。被束缚的生物必须在下一回合开始时再做一次 DC 20 的体质蓄力。如果失败，该生物将在 24 小时内处于石化状态。如果蓄力成功，则束缚状态结束。一旦使用了这个额外行动，直到下一个黎明之前都不能再次使用。"
+								"作为一个额外动作，你可以让盾牌的前端闪烁着美杜莎的石化魔法，使浮雕的眼睛发出耀眼的光芒。选择一个你能看到的 9 米范围内的生物。该生物必须在 DC 20 的体质蓄力中成功，否则就会出现 {@condition restrained} 的情况，身体会变成石头。该生物（%1%）必须在下一回合开始时再做一次 DC 20 的体质蓄力。如果失败，该生物将在 24 小时内处于 {@condition petrified} 状态。如果成功获救，{@condition restrained} 状况就会结束。一旦使用了这个额外行动，直到下一个黎明才可以再次使用。"
 							]
 						},
 						{
@@ -17733,6 +17786,24 @@
 			"value": 200,
 			"entries": [
 				"一个瓶子可以容纳1½品脱的液体。"
+			]
+		},
+		{
+			"name": "Glass-Studded Armor",
+			"source": "GHLoE",
+			"page": 111,
+			"baseItem": "studded leather armor|PHB",
+			"type": "LA",
+			"resist": [
+				"radiant"
+			],
+			"rarity": "rare",
+			"reqAttune": true,
+			"weight": 13,
+			"ac": 12,
+			"entries": [
+				"穿戴此盔甲时，您对辐射伤害具有抗性。每次生物对你发动近战攻击时，都会受到 3 次穿刺伤害。生物可以选择以劣势攻击来避免此伤害。",
+				"铆钉皮革由坚韧而有弹性的皮革制成，用密实的铆钉或钉子加固。"
 			]
 		},
 		{
@@ -23879,6 +23950,18 @@
 			]
 		},
 		{
+			"name": "Knifewing Cape",
+			"source": "GHLoE",
+			"page": 111,
+			"rarity": "rare",
+			"reqAttune": true,
+			"wondrous": true,
+			"bonusAc": "+1",
+			"entries": [
+				"当你穿上这件由 20 {@creature Knifewing|GHLoE|knifewings} 的皮肤制成的斗篷时，你会获得 AC 值+1 的加成。此外，当你穿上这件斗篷坠落时，每回合可下降 18 米，并且不会受到任何伤害。"
+			]
+		},
+		{
 			"name": "Korolnor Scepter",
 			"source": "SKT",
 			"page": 234,
@@ -24604,6 +24687,16 @@
 			]
 		},
 		{
+			"name": "Lindwyrm Venom",
+			"source": "GHLoE",
+			"page": 111,
+			"type": "P",
+			"rarity": "very rare",
+			"entries": [
+				"这种可怕的毒液是从致命的（%0%）中提取和蒸馏出来的。它可以通过摄取或伤口传播。接触到毒液的生物必须在 DC 18 的体质蓄力中成功，否则就会受到 36（{@damage 8d8}）中毒伤害并中毒 1 分钟。中毒期间，该生物在力量和灵巧技能检定及蓄力时处于劣势。"
+			]
+		},
+		{
 			"name": "Linen (1 sq. yd.)",
 			"source": "PHB",
 			"page": 157,
@@ -25298,6 +25391,16 @@
 				}
 			],
 			"hasFluffImages": true
+		},
+		{
+			"name": "Lycanthropy Antidote",
+			"source": "GHLoE",
+			"page": 111,
+			"type": "P",
+			"rarity": "rare",
+			"entries": [
+				"这种银色药水由 {@creature fzeg|GHLoE} 血液制成，上面点缀着红色斑点。喝下这种液体就能解除狼人的狼人诅咒。"
+			]
 		},
 		{
 			"name": "Lyre of Building",
@@ -32468,6 +32571,16 @@
 				"这款黑色水晶吊坠是通往小型袖珍空间的魔法之门。您可以将吊坠作为临时武器，对大型或小型生物进行近战或远程武器攻击。命中后，目标必须在智慧值 {@dc 10} {@quickref saving throws|PHB|2|1|蓄力一击} 上成功，否则就会被困在水晶中。想要被困住的生物可以故意失败（%2%）。",
 				"乌鸦的沉睡每次只能容纳一个生物。该生物能感知时间的流逝，并能像透过窗户一样看到符咒外的世界。你可以将被囚禁的生物释放到距离你 1.5 米内的空地上，作为一个额外动作。",
 				"如果由等级特性赋予你的同伴生物或你驯服为同伴的野兽在距离你 3 米范围内的命中率降至 0，它会立即被卷入吊坠并稳定下来。如果吊坠已经容纳了一个生物，则此效果失效。"
+			]
+		},
+		{
+			"name": "Ready Gunk",
+			"source": "GHLoE",
+			"page": 111,
+			"rarity": "rare",
+			"wondrous": true,
+			"entries": [
+				"这种粘稠的糊状物是由（%0%）的骨甲粉末制成的。当你处理武器、盾牌或其他可以单手或双手挥舞的物品时，只要该物品在你周围 9 米内，你就可以使用一个额外动作召唤并装备它。使用三次浆糊魔法后，它就会失去效力。"
 			]
 		},
 		{
@@ -46562,6 +46675,28 @@
 				"Magic Item Table B"
 			],
 			"hasFluffImages": true
+		},
+		{
+			"name": "Wand of Silence",
+			"source": "GHLoE",
+			"page": 111,
+			"type": "WD",
+			"rarity": "uncommon",
+			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
+			"recharge": "dawn",
+			"rechargeAmount": "{@dice 1d6 + 1}",
+			"charges": 7,
+			"entries": [
+				"这根魔杖有 7 个电荷。握住它时，您可以使用一个动作消耗 1 个电荷来施放 {@spell silence} 魔法（救命 DC 15）。魔杖每天黎明时会恢复 {@dice 1d6 + 1} 已消耗的电量。如果您消耗了魔杖的最后一次充能，掷一次 {@dice d20}。掷出 1 时，魔杖将化为灰烬并销毁。"
+			],
+			"attachedSpells": [
+				"silence"
+			]
 		},
 		{
 			"name": "Wand of Smiles",
