@@ -1,0 +1,6224 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		},
+		"otherSources": {
+			"monster": {
+				"MM": "DoDk",
+				"MOT": "DoDk"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Amalgamation",
+			"source": "DoDk",
+			"page": 206,
+			"size": [
+				"G"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 525,
+				"formula": "30d20 + 210"
+			},
+			"speed": {
+				"walk": 5
+			},
+			"str": 30,
+			"dex": 11,
+			"con": 27,
+			"int": 22,
+			"wis": 18,
+			"cha": 20,
+			"save": {
+				"str": "+17",
+				"dex": "+7",
+				"con": "+15",
+				"int": "+13",
+				"wis": "+11"
+			},
+			"skill": {
+				"arcana": "+13",
+				"deception": "+12",
+				"insight": "+11",
+				"perception": "+11"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 21,
+			"immune": [
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"stunned"
+			],
+			"languages": [
+				"all",
+				"telepathy 1 mile"
+			],
+			"cr": "23",
+			"spellcasting": [
+				{
+					"name": "Incantesimi innati",
+					"headerEntries": [
+						"La capacità innata di incantesimo dell'amalgama è Carisma (tiro salvezza {@dc 20}). Può lanciare innatamente i seguenti incantesimi, senza bisogno di componenti:"
+					],
+					"will": [
+						"{@spell detect thoughts}",
+						"{@spell dispel magic}"
+					],
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Resistenza Leggendaria (3/Giorno)",
+					"entries": [
+						"Se l'amalgama fallisce un tiro salvezza, può invece scegliere di avere successo."
+					]
+				},
+				{
+					"name": "Malignità",
+					"entries": [
+						"L'amalgama non può essere teletrasportata o viaggiare su un altro piano contro la sua volontà."
+					]
+				},
+				{
+					"name": "Forma immutabile",
+					"entries": [
+						"L'amalgama è immune a qualsiasi incantesimo o effetto che ne altererebbe la forma."
+					]
+				},
+				{
+					"name": "Armi magiche",
+					"entries": [
+						"Gli attacchi delle armi dell'amalgama sono magici."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattacco",
+					"entries": [
+						"L'amalgama usa la sua Presenza Contaminante. Poi effettua tre attacchi di tentacoli, ognuno dei quali può essere sostituito da un uso di Scagliare."
+					]
+				},
+				{
+					"name": "Morso",
+					"entries": [
+						"{@atk mw} {@hit 17} per colpire, portata 1,5 m., un bersaglio. {@h}23 ({@damage 3d8 + 10}) danni da perforazione. Se il bersaglio è una creatura Grande o più piccola {@condition grappled} dell'amalgama, questa viene inghiottita e la presa termina.",
+						"Mentre viene inghiottita, la creatura è {@condition blinded} e {@condition restrained}, ha una copertura totale contro gli attacchi e gli altri effetti esterni all'amalgama, subisce 42 ({@damage 12d6}) danni da acido e guadagna un {@adventure level of contamination|DoDk|12} all'inizio di ogni turno dell'amalgama.",
+						"Se l'amalgama subisce 50 o più danni in un singolo turno da una creatura al suo interno, l'amalgama deve riuscire in un tiro salvezza di Costituzione {@dc 25} alla fine di quel turno o rigurgitare tutte le creature inghiottite, che cadono {@condition prone} in uno spazio entro 3 metri dall'amalgama. Se l'amalgama muore, una creatura inghiottita non è più {@condition restrained} da essa e può fuggire dal cadavere usando 4,5 metri di movimento, uscendo {@condition prone}."
+					]
+				},
+				{
+					"name": "Tentacolo",
+					"entries": [
+						"{@atk mw} {@hit 17} per colpire, portata 15 m., un bersaglio. {@h}20 ({@damage 3d6 + 10}) danni da percosse e il bersaglio è {@condition grappled} (fuga {@dc 18}). Finché la presa non termina, il bersaglio subisce {@condition restrained}. L'amalgama ha dodici tentacoli, ognuno dei quali può afferrare un bersaglio."
+					]
+				},
+				{
+					"name": "Fling",
+					"entries": [
+						"Un oggetto grande o più piccolo tenuto in mano o una creatura {@condition grappled} dall'amalgama viene lanciato fino a 18 metri in una direzione a scelta dell'amalgama e colpito {@condition prone}. Se un bersaglio lanciato colpisce una superficie solida, subisce 3 ({@damage 1d6}) danni da percosse per ogni 3 metri di distanza. Se il bersaglio viene lanciato contro un'altra creatura, questa deve superare un tiro salvezza di Destrezza {@dc 18} o subire gli stessi danni ed essere colpita {@condition prone}."
+					]
+				},
+				{
+					"name": "Sussurri che spaccano la mente",
+					"entries": [
+						"L'amalgama pronuncia una terribile verità nella mente di una creatura entro 36 metri da essa. Tale creatura deve riuscire in un tiro salvezza di Intelligenza {@dc 20}. Se fallisce, subisce 35 ({@damage 10d6}) danni psichici e diventa folle finché non termina un lungo riposo. Mentre è folle, non può compiere azioni, non può capire ciò che dicono le altre creature, non può leggere e può parlare solo in modo farfugliato. Un incantesimo {@spell greater restoration} lanciato sulla creatura pone fine a questo effetto."
+					]
+				},
+				{
+					"name": "Presenza contaminante",
+					"entries": [
+						"Le creature umanoidi entro 36 metri dall'amalgama devono superare un tiro salvezza di Costituzione {@dc 20} o subire 10 ({@damage 3d6}) danni necrotici e guadagnare un {@adventure level of contamination|DoDk|12}."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attacco o lancio di tentacoli",
+					"entries": [
+						"L'amalgama compie un attacco con i tentacoli o usa il suo Scagliare."
+					]
+				},
+				{
+					"name": "Sussurri che spezzano la mente (costa 2 azioni)",
+					"entries": [
+						"L'amalgama utilizza Sussurri che spezzano la mente."
+					]
+				},
+				{
+					"name": "Pifferaio alle porte (Costa 3 azioni)",
+					"entries": [
+						"Fino a cinque boccheggianti appaiono in spazi non occupati entro 9 metri dall'amalgama e rimangono fino a quando non vengono distrutti. Queste creature agiscono dopo l'amalgama con lo stesso conteggio di iniziativa e sono sotto il suo controllo. L'amalgama può avere fino a dieci boccheggianti evocati da questa abilità alla volta."
+					]
+				}
+			],
+			"traitTags": [
+				"Immutable Form",
+				"Legendary Resistances",
+				"Magic Weapons"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Swallow",
+				"Tentacles"
+			],
+			"languageTags": [
+				"TP",
+				"XX"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"N",
+				"P",
+				"Y"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"blinded",
+				"grappled",
+				"prone",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity",
+				"intelligence"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Animated Delerium Sludge",
+			"source": "DoDk",
+			"page": 203,
+			"size": [
+				"L"
+			],
+			"type": "elemental",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 114,
+				"formula": "12d10 + 48"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 90
+			},
+			"str": 18,
+			"dex": 14,
+			"con": 18,
+			"int": 5,
+			"wis": 10,
+			"cha": 8,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"acid",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained",
+				"unconscious"
+			],
+			"languages": [
+				"Deep Speech"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Forma dei fanghi",
+					"entries": [
+						"Il fango animato può entrare nello spazio di una creatura ostile e fermarsi lì. Può muoversi in uno spazio stretto fino a 1 pollice di larghezza senza stringere."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Tocco contaminato",
+					"entries": [
+						"{@atk mw} {@hit 7} per colpire, portata 1,5 m., un bersaglio. {@h}10 ({@damage 3d6}) danni necrotici. Inoltre, un bersaglio colpito da questo attacco deve riuscire in un tiro salvezza di Costituzione {@dc 15} o guadagnare un {@adventure level of contamination|DoDk|12}."
+					]
+				},
+				{
+					"name": "Inghiottire",
+					"entries": [
+						"Ogni creatura nello spazio del fango animato deve riuscire a effettuare un tiro salvezza di Forza {@dc 15}. Se il tiro salvezza fallisce, una creatura viene afferrata {@condition grappled} dalla melma se è Grande o più piccola (fuga {@dc 14}). Finché la presa non termina, il bersaglio è {@condition restrained}. Se il tiro salvezza ha successo, il bersaglio viene spinto fuori dallo spazio della melma.",
+						"La melma può afferrare una creatura Grande o fino a due creature Medie o più piccole alla volta. All'inizio di ogni turno della melma, ogni bersaglio {@condition grappled} da essa colpito subisce 28 ({@damage 8d6}) danni necrotici e deve superare un tiro salvezza di Costituzione {@dc 15} o guadagnare un {@adventure level of contamination|DoDk|12}.",
+						"Una creatura entro 1,5 metri dalla melma può tentare di tirarne fuori una creatura o un oggetto. Questo richiede un'azione e una prova di Forza {@dc 14} riuscita."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"DS"
+			],
+			"damageTags": [
+				"N"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"strength"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Arcane Wraith",
+			"source": "DoDk",
+			"page": 197,
+			"_copy": {
+				"name": "Wraith",
+				"source": "MM"
+			},
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Incantesimi",
+					"headerEntries": [
+						"Il wraith è un incantatore di 8° livello. La sua capacità di incantesimo è Carisma (tiro salvezza {@dc 13}, {@hit 5} per colpire con attacchi di incantesimi). Lo spettro conosce i seguenti incantesimi da stregone:"
+					],
+					"will": [
+						"{@spell mage hand}",
+						"{@spell magic missile}",
+						"{@spell minor illusion}"
+					],
+					"daily": {
+						"1": [
+							"{@spell hypnotic pattern}"
+						],
+						"3": [
+							"{@spell lightning bolt}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"damageTagsSpell": [
+				"L",
+				"O"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Big Linda",
+			"isNamedCreature": true,
+			"source": "DoDk",
+			"page": 163,
+			"size": [
+				"H"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 136,
+				"formula": "13d12 + 52"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 25,
+			"dex": 10,
+			"con": 19,
+			"int": 2,
+			"wis": 12,
+			"cha": 9,
+			"skill": {
+				"perception": "+4"
+			},
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 14,
+			"immune": [
+				"acid"
+			],
+			"cr": "9",
+			"action": [
+				{
+					"name": "Multiattacco",
+					"entries": [
+						"Big Linda effettua due attacchi: uno con il morso e uno con la coda. Non può effettuare entrambi gli attacchi contro lo stesso bersaglio."
+					]
+				},
+				{
+					"name": "Morso",
+					"entries": [
+						"{@atk mw} {@hit 10} per colpire, portata 3 m., un bersaglio. {@h}33 ({@damage 4d12 + 7}) danni perforanti. Se il bersaglio è una creatura media o più piccola, subisce {@condition grappled} (fuga {@dc 17}). Finché la presa non termina, il bersaglio è {@condition restrained} e Big Linda non può mordere un altro bersaglio."
+					]
+				},
+				{
+					"name": "Coda",
+					"entries": [
+						"{@atk mw} {@hit 10} per colpire, portata 3 m., un bersaglio. {@h}20 ({@damage 3d8 + 7}) danni da percosse."
+					]
+				},
+				{
+					"name": "Spruzzo di acido {@recharge 5}",
+					"entries": [
+						"Big Linda sputa acido in un cono di 9 metri. Ogni creatura che si trova in quella linea di fuoco deve superare un tiro salvezza di Destrezza {@dc 15}, subendo 49 ({@damage 11d8}) danni da acido se il tiro salvezza fallisce, o la metà dei danni se riesce."
+					]
+				}
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Cavalier",
+			"source": "DoDk",
+			"page": 218,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"{@item splint armor|PHB|splint}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 90,
+				"formula": "12d8 + 36"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 10,
+			"con": 16,
+			"int": 10,
+			"wis": 12,
+			"cha": 15,
+			"save": {
+				"wis": "+4",
+				"cha": "+5"
+			},
+			"skill": {
+				"animal handling": "+4",
+				"athletics": "+7",
+				"perception": "+4",
+				"persuasion": "+5"
+			},
+			"passive": 14,
+			"languages": [
+				"Any two"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Incantesimi",
+					"headerEntries": [
+						"Il cavaliere è un incantatore di 8° livello che usa il Carisma come capacità di incantesimo (tiro salvezza {@dc 13}; {@hit 5} per colpire con attacchi di incantesimi). Ha i seguenti incantesimi da paladino preparati:"
+					],
+					"spells": {
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell bless}",
+								"{@spell command}",
+								"{@spell cure wounds}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell branding smite}",
+								"{@spell find steed}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Coraggio",
+					"entries": [
+						"Il cavaliere ha vantaggio sui tiri salvezza contro l'essere {@condition frightened}."
+					]
+				},
+				{
+					"name": "La furia della luce",
+					"entries": [
+						"Il cavaliere infligge 9 ({@damage 2d8}) danni radianti extra quando colpisce con un attacco con arma."
+					]
+				},
+				{
+					"name": "Cavaliere esperto",
+					"entries": [
+						"Mentre è montato, il cavaliere può forzare un attacco mirato alla sua cavalcatura per colpire lui stesso."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattacco",
+					"entries": [
+						"Il cavaliere effettua due attacchi in mischia."
+					]
+				},
+				{
+					"name": "Lancia",
+					"entries": [
+						"{@atk mw} {@hit 7} per colpire (con svantaggio contro un bersaglio entro 1,5 m.), portata 3 m., un bersaglio. {@h}10 ({@damage 1d12 + 4}) danni perforanti più 9 ({@damage 2d8}) danni radianti."
+					]
+				},
+				{
+					"name": "Giavellotto",
+					"entries": [
+						"{@atk mw,rw} {@hit 7} per colpire, gittata di 1,5 m. o portata di 30/36 m., un bersaglio {@h}7 ({@damage 1d6 + 4}) danni perforanti più 9 ({@damage 2d8}) danni radianti."
+					]
+				}
+			],
+			"attachedItems": [
+				"javelin|phb",
+				"lance|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P",
+				"R"
+			],
+			"damageTagsSpell": [
+				"R"
+			],
+			"spellcastingTags": [
+				"CP"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"prone"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Chaplain",
+			"source": "DoDk",
+			"page": 218,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item chain mail|phb}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 58,
+				"formula": "9d8 + 18"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 10,
+			"con": 14,
+			"int": 11,
+			"wis": 17,
+			"cha": 13,
+			"save": {
+				"wis": "+6",
+				"cha": "+4"
+			},
+			"skill": {
+				"insight": "+6",
+				"persuasion": "+4",
+				"religion": "+3"
+			},
+			"passive": 13,
+			"languages": [
+				"Any two"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Incantesimi",
+					"headerEntries": [
+						"Il cappellano è un incantatore di 9° livello che usa la Saggezza come capacità di incantesimo (tiro salvezza {@dc 12}; {@hit 4} per colpire con attacchi di incantesimi). Ha i seguenti incantesimi da chierico preparati:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell light}",
+								"{@spell mending}",
+								"{@spell sacred flame}",
+								"{@spell spare the dying}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell bless}",
+								"{@spell guiding bolt}",
+								"{@spell healing word}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell lesser restoration}",
+								"{@spell prayer of healing}",
+								"{@spell spiritual weapon}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell dispel magic}",
+								"{@spell purge contamination|DoDk}",
+								"{@spell spirit guardians}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell banishment}",
+								"{@spell divination}"
+							]
+						},
+						"5": {
+							"slots": 1,
+							"spells": [
+								"{@spell flame strike}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Devozione",
+					"entries": [
+						"Il cappellano ha vantaggio sui tiri salvezza contro l'essere {@condition charmed} o {@condition frightened}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Lancia",
+					"entries": [
+						"{@atk mw,rw} {@hit 3} per colpire, portata 1,5 m. o raggio d'azione 20/18 m., un bersaglio. {@h}4 ({@damage 1d6 + 1}) danni perforanti o 5 ({@damage 1d8 + 1}) danni se usato a due mani per un attacco in mischia."
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"F",
+				"N",
+				"O",
+				"R"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"exhaustion",
+				"incapacitated"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"dexterity",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Crater Wurm",
+			"source": "DoDk",
+			"page": 197,
+			"_copy": {
+				"name": "Purple Worm",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "verme",
+						"with": "wurm"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Multiattacco",
+							"items": {
+								"name": "Violazione",
+								"entries": [
+									"Il wurm del cratere utilizza tutto il suo movimento. Nel farlo, può entrare negli spazi di creature grandi o piccole. Ogni volta che il wurm entra nello spazio di una creatura, questa deve superare un tiro salvezza di Forza {@dc 19}. Se il tiro salvezza ha successo, la creatura può scegliere di essere spinta a lato dello spazio del wurm. Una creatura che sceglie di non essere spinta subisce le conseguenze di un tiro salvezza fallito. Se il tiro salvezza fallisce, la creatura subisce 35 ({@damage 10d6}) danni da percosse, viene spinta di 3 metri e subisce un colpo {@condition prone}. Dopo aver terminato il suo movimento, il wurm può effettuare un attacco con morso contro un bersaglio {@condition prone} come azione bonus."
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Pungiglione di coda",
+							"items": {
+								"name": "Gola contaminata",
+								"entries": [
+									"Una creatura inghiottita da un wurm del cratere guadagna un {@adventure level of contamination|DoDk|12} ogni volta che subisce danni da acido mentre è all'interno del wurm."
+								]
+							}
+						}
+					]
+				}
+			},
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Crimson Countess",
+			"source": "DoDk",
+			"page": 208,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 130,
+				"formula": "20d8 + 40"
+			},
+			"speed": {
+				"walk": 20,
+				"fly": 60
+			},
+			"str": 10,
+			"dex": 21,
+			"con": 15,
+			"int": 13,
+			"wis": 14,
+			"cha": 19,
+			"save": {
+				"con": "+5",
+				"wis": "+5"
+			},
+			"skill": {
+				"acrobatics": "+11",
+				"deception": "+7",
+				"perception": "+8"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"immune": [
+				"lightning",
+				"thunder"
+			],
+			"languages": [
+				"Abyssal"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Acrobata aereo",
+					"entries": [
+						"In ogni suo turno, la Contessa Cremisi può usare un'azione bonus per compiere l'azione Fuga, Disimpegno o Schivata."
+					]
+				},
+				{
+					"name": "Vista acuta",
+					"entries": [
+						"La Contessa cremisi ha un vantaggio sulle prove di Saggezza (Percezione) che si basano sulla vista."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattacco",
+					"entries": [
+						"La Contessa Cremisi può usare il suo Urlo spaventoso. Poi effettua due attacchi con gli artigli o uno con il giavellotto."
+					]
+				},
+				{
+					"name": "Talenti",
+					"entries": [
+						"{@atk mw} {@hit 8} per colpire, portata 1,5 m., un bersaglio. {@h}11 ({@damage 1d10 + 5}) danni da taglio."
+					]
+				},
+				{
+					"name": "Stridore spaventoso",
+					"entries": [
+						"Ogni creatura a scelta della Contessa Cremisi che si trovi entro 36 metri da lei e che non sia {@condition deafened} deve superare un tiro salvezza di Saggezza {@dc 15} o diventare {@condition frightened} per 1 minuto. Se il tiro salvezza di una creatura ha successo o l'effetto termina, la creatura è immune agli effetti dello Stridore spaventoso della Contessa Cremisi per le 24 ore successive.",
+						"Mentre {@condition frightened} da questo effetto, una creatura deve compiere l'azione Dash e allontanarsi dalla Contessa Cremisi per la via più sicura disponibile in ogni suo turno, a meno che non ci sia un posto dove muoversi. Se la creatura termina il suo turno in un luogo in cui non ha linea di vista con la Contessa Cremisi, può ripetere il tiro salvezza. Se il tiro salvezza ha successo, l'effetto termina per quella creatura."
+					]
+				},
+				{
+					"name": "Giavellotto",
+					"entries": [
+						"{@atk mw,rw} {@hit 8} per colpire, portata 1,5 m. o distanza 20/18 metri, un bersaglio. {@h}9 ({@damage 1d6 + 5}) danni da perforazione, più 14 ({@damage 4d6}) danni da fulmine."
+					]
+				},
+				{
+					"name": "Esplosione di tuono {@recharge 5}",
+					"entries": [
+						"La Contessa Cremisi scatena un urlo fragoroso in un cubo di 4,5 metri. Ogni creatura nel cubo deve superare un tiro salvezza di Costituzione {@dc 15}, subendo 14 ({@damage 4d6}) danni da tuono se il tiro salvezza fallisce, o la metà dei danni se riesce. Le creature che falliscono questo tiro salvezza vengono spinte di 3 metri e colpite {@condition prone}."
+					]
+				}
+			],
+			"attachedItems": [
+				"javelin|phb"
+			],
+			"traitTags": [
+				"Keen Senses"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB"
+			],
+			"damageTags": [
+				"L",
+				"P",
+				"S",
+				"T"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Delerium Dreg",
+			"source": "DoDk",
+			"page": 199,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 22,
+				"formula": "5d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 13,
+			"con": 11,
+			"int": 7,
+			"wis": 10,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Common"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Mimetizzazione nebbiosa",
+					"entries": [
+						"Un dreg delerium ha vantaggio sulle prove di Destrezza (Furtività) per nascondersi in qualsiasi area oscurata da nebbia o foschia."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Lancia",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} per colpire, gittata 1,5 m. o portata 20/18 m., un bersaglio. {@h}5 ({@damage 1d6 + 2}) danni perforanti, o 6 ({@damage 1d8 + 2}) danni perforanti se usato con due mani per un attacco in mischia."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Acquatico (Deep One o \"Fishfolk\")",
+					"entries": [
+						"Queste creature mutate hanno volti, branchie, pinne e squame di pesce. Sono vestite di stracci bagnati, portano lance e scudi e abitano nelle profondità delle fogne e delle caverne sotterranee sotto la città.",
+						{
+							"type": "entries",
+							"name": "Anfibio",
+							"entries": [
+								"Un dreg acquatico può respirare aria e acqua. Ha una velocità di nuoto di 9 metri."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Vista cieca",
+							"entries": [
+								"Un dreg acquatico guadagna {@sense blindsight} con un raggio di 9 metri."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Gonfio",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Esplosione di morte",
+							"entries": [
+								"Quando un dreg delerium gonfio muore, esplode in un'esplosione di frattaglie corrotte. Ogni creatura entro 1,5 metri deve superare un tiro salvezza di Costituzione a DC 11, subendo 7 ({@dice 2d6}) danni necrotici se il tiro salvezza fallisce, o la metà dei danni se riesce. Le creature che falliscono il tiro salvezza di 5 o più guadagnano un {@adventure level of contamination|DoDk|12}."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Spruzzo di bile (Ricarica 5-6)",
+							"entries": [
+								"Il dreg delerium gonfio esala un cono di acido di 4,5 metri. Ogni creatura in quell'area deve riuscire a superare un tiro salvezza di Destrezza a DC 11, subendo 7 ({@dice 2d6}) danni da acido se il tiro salvezza fallisce, o la metà dei danni se riesce. Le creature che falliscono il tiro salvezza di 5 o più guadagnano un {@adventure level of contamination|DoDk|12}."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Chitinoso",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Guscio corazzato",
+							"entries": [
+								"Un dreg chitinoso ha CA 18."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Ciclopico",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Visione spettrale",
+							"entries": [
+								"Un dreg ciclopico guadagna {@sense truesight} 18 metri. Ha un vantaggio sulle prove di Saggezza ({@skill Perception}) che si basano sulla vista."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Folle certezza",
+							"entries": [
+								"Un dreg ciclopico è immune alla condizione {@condition frightened} e ai danni psichici."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Urlo psichico (Ricarica 6)",
+							"entries": [
+								"Le creature che si trovano entro 6 metri dal dreg ciclopico devono riuscire a superare un tiro salvezza di Saggezza a DC 10 o subire 7 ({@dice 2d6}) danni psichici e subire {@condition frightened} per 1 minuto. Il bersaglio può ripetere il tiro salvezza alla fine di ogni suo turno, terminando l'effetto su se stesso in caso di successo."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Sfollati",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Spostamento",
+							"entries": [
+								"I tiri di attacco contro un dreg spostato hanno svantaggio. Se viene colpito da un attacco, questo tratto viene interrotto fino alla fine del suo turno successivo. Questo tratto è interrotto anche quando il dreg dislocato è {@condition incapacitated} o ha una velocità pari a 0."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Teletrasporto (Ricarica 4-6)",
+							"entries": [
+								"Il dreg spostato si teletrasporta magicamente, insieme a qualsiasi equipaggiamento che indossa o trasporta, fino a 18 metri in uno spazio non occupato che può vedere. Prima o dopo il teletrasporto, il dreg può effettuare un attacco in mischia. Se questo attacco va a segno, infligge 7 ({@dice 2d6}) danni psichici aggiuntivi."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Frenetico",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Imprudente",
+							"entries": [
+								"All'inizio del suo turno, un dreg furioso può ottenere vantaggio su tutti i tiri di attacco con armi da mischia durante quel turno, ma i tiri di attacco contro di lui hanno vantaggio fino all'inizio del suo turno successivo."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Bruto",
+							"entries": [
+								"Un'arma da mischia infligge un dado in più dei suoi danni quando il dreg frenetico colpisce con essa."
+							]
+						}
+					],
+					"_version": {
+						"name": "Delerium Dreg (Frenetico)",
+						"addHeadersAs": "trait"
+					}
+				},
+				{
+					"type": "variant",
+					"name": "Lambent",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Illuminazione",
+							"entries": [
+								"Un lambent delerium dreg diffonde luce brillante in un raggio di 4,5 metri e luce fioca per altri 4,5 metri."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Fascio ottomano",
+							"entries": [
+								"Il dreg lambente prende di mira una creatura che riesce a vedere entro 18 metri da lui. Il bersaglio deve riuscire a superare un tiro salvezza di Costituzione a DC 10, subendo 10 ({@dice 3d6}) danni radianti se il tiro salvezza fallisce, o la metà dei danni se riesce. Le creature che falliscono il tiro salvezza di 5 o più guadagnano un {@adventure level of contamination|DoDk|12}."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Salasso",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Salto mortale",
+							"entries": [
+								"Il salto in lungo del dreg sanguisuga è fino a 9 metri e il salto in alto è fino a 4,5 metri, con o senza partenza in corsa."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Drenaggio del sangue",
+							"entries": [
+								"Attacco con armi da mischia: +4 a colpire, portata 1,5 m., una creatura. Colpire: 4 ({@dice 1d4 + 2}) danni da perforazione e il dreg si attacca al bersaglio. Mentre è attaccato, il dreg non può attaccare. Invece, all'inizio di ogni suo turno, il bersaglio subisce 7 ({@dice 2d6}) danni necrotici.",
+								"Il dreg attaccato si muove con il bersaglio ogni volta che questo si muove, senza richiedere alcun movimento del dreg. Il dreg può staccarsi spendendo 1,5 metri del suo movimento nel suo turno. Una creatura, compreso il bersaglio, può usare la sua azione per staccare il dreg."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "In agguato",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Sembianza normale",
+							"entries": [
+								"Il dreg in agguato ha vantaggio sulle prove di Carisma ({@skill Deception}) per farsi passare per una normale creatura umanoide."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Attacco furtivo (1/Turno)",
+							"entries": [
+								"Il dreg infligge 7 danni extra ({@dice 2d6}) quando colpisce un bersaglio con un attacco d'arma e ha vantaggio sul tiro per colpire, oppure quando il bersaglio si trova entro 1,5 metri da un alleato del dreg che non è {@condition incapacitated} e il dreg non ha svantaggio sul tiro per colpire."
+							]
+						}
+					],
+					"_version": {
+						"name": "Delerium Dreg (in agguato)",
+						"addHeadersAs": "trait"
+					}
+				},
+				{
+					"type": "variant",
+					"name": "Spinoso",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Arrampicata del ragno",
+							"entries": [
+								"Il dreg spinoso ha una velocità di arrampicata pari alla sua velocità di camminata. Può arrampicarsi su superfici difficili, anche a testa in giù sui soffitti, senza dover effettuare una prova di abilità."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Multiattacco",
+							"entries": [
+								"Il dreg effettua tre attacchi di punta."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Spike",
+							"entries": [
+								"Attacco con armi a distanza: +3 a colpire, gittata 20/18 m., un bersaglio. Colpire: 3 ({@dice 1d4 + 1}) danni da perforazione."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Tentacolato",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Amorfo",
+							"entries": [
+								"Il tentacolo è in grado di muoversi in uno spazio largo fino a 15 centimetri senza stringere."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Tentacoli",
+							"entries": [
+								"Attacco con armi da mischia: +4 a colpire, portata 4,5 m., un bersaglio. Colpire: 9 ({@dice 2d6 + 2}) danni da percosse. Se il bersaglio è una creatura, è {@condition grappled} (DC di fuga 12). Finché la presa non termina, il bersaglio è {@condition restrained} e il dreg tentacolato non può usare i suoi tentacoli su un altro bersaglio."
+							]
+						}
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Delerium Dreg (Aquatic)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Amphibious",
+									"entries": [
+										"An aquatic dreg can breathe air and water."
+									]
+								}
+							]
+						}
+					},
+					"alias": [
+						"Deep One",
+						"Fishfolk"
+					],
+					"speed": {
+						"swim": 30
+					},
+					"senses": [
+						"darkvision 60 ft.",
+						"blindsight 30 ft."
+					],
+					"variant": null
+				},
+				{
+					"name": "Delerium Dreg (Bloated)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Death Burst",
+									"entries": [
+										"When a bloated delerium dreg dies, it explodes in a burst of corrupt offal. Each creature within 5 feet of it must succeed on a {@dc 11} Constitution saving throw, taking 7 ({@damage 2d6}) necrotic damage on a failed save, or half as much damage on a successful one. Creatures who fail their saving throw by 5 or more gain one {@adventure level of contamination|DoDk|12}."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Bile Spray {@recharge 5}",
+									"entries": [
+										"The bloated delerium dreg exhales a 15-foot cone of acid. Each creature in that area must succeed on a {@dc 11} Dexterity saving throw, taking 7 ({@damage 2d6}) acid damage on a failed save, or half as much damage on a successful one. Creatures who fail their saving throw by 5 or more gain one {@adventure level of contamination|DoDk|12}."
+									]
+								}
+							]
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Delerium Dreg (Chitinous)",
+					"source": "DoDk",
+					"ac": [
+						18
+					],
+					"variant": null
+				},
+				{
+					"name": "Delerium Dreg (Cyclopean)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Spectral Vision",
+									"entries": [
+										"A cyclopean dreg gains truesight 60 feet. It has advantage on Wisdom (Perception) checks that rely on sight."
+									]
+								},
+								{
+									"name": "Mad Certainty",
+									"entries": [
+										"A cyclopean dreg is immune to the {@condition frightened} condition and psychic damage."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Psychic Shriek {@recharge}",
+									"entries": [
+										"Creatures within 20 feet of the cyclopean dreg must succeed on a {@dc 10} Wisdom saving throw or take 7 ({@damage 2d6}) psychic damage and be {@condition frightened} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+									]
+								}
+							]
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Delerium Dreg (Displaced)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Displacement",
+									"entries": [
+										"Attack rolls against a displaced dreg have disadvantage. If it is hit by an attack, this trait is disrupted until the end of its next turn. This trait is also disrupted while the displaced dreg is {@condition incapacitated} or has a speed of 0."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Teleport {@recharge 4}",
+									"entries": [
+										"The displaced dreg magically teleports, along with any equipment it is wearing or carrying, up to 60 feet to an unoccupied space it can see. Before or after teleporting, the dreg can make one melee attack. If this attack hits, it deals an extra 7 ({@damage 2d6}) psychic damage."
+									]
+								}
+							]
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Delerium Dreg (Lambent)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Illumination",
+									"entries": [
+										"A lambent delerium dreg sheds bright light in a 15-foot radius and dim light for an additional 15 feet."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Octarine Beam",
+									"entries": [
+										"The lambent dreg targets one creature it can see within 60 feet of it. The target must succeed on a {@dc 10} Constitution saving throw, taking 10 ({@damage 3d6}) radiant damage on a failed save, or half as much damage on a successful one. Creatures who fail their saving throw by 5 or more gain one {@adventure level of contamination|DoDk|12}."
+									]
+								}
+							]
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Delerium Dreg (Leeching)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Bounding Leap",
+									"entries": [
+										"The leeching dreg's long jump is up to 30 feet and its high jump is up to 15 feet, with or without a running start."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Blood Drain",
+									"entries": [
+										"{@atk mw} {@hit 4} to hit, reach 5 ft., one creature. {@h}4 ({@damage 1d4 + 2}) piercing damage, and the dreg attaches to the target. While attached, the dreg can't attack. Instead, at the start of each of the dreg's turns, the target takes 7 ({@damage 2d6}) necrotic damage.",
+										"The attached dreg moves with the target whenever the target moves, requiring none of the dreg's movement. The dreg can detach itself by spending 5 feet of its movement on its turn. A creature, including the target, can use its action to detach the dreg."
+									]
+								}
+							]
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Delerium Dreg (Spined)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Spider Climb",
+									"entries": [
+										"The spined dreg has a climb speed equal to its walking speed. It can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Multiattack",
+									"entries": [
+										"The dreg makes three spike attacks."
+									]
+								},
+								{
+									"name": "Spike",
+									"entries": [
+										"{@atk rw} {@hit 3} to hit, range 20/60 ft., one target. {@h}3 ({@damage 1d4 + 1}) piercing damage."
+									]
+								}
+							]
+						}
+					},
+					"speed": {
+						"walk": 30,
+						"climb": 30
+					},
+					"variant": null
+				},
+				{
+					"name": "Delerium Dreg (Tentacled)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Amorphous",
+									"entries": [
+										"The dreg can move through a space as narrow as 6 inches wide without squeezing."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Tentacles",
+									"entries": [
+										"{@atk mw} {@hit 4} to hit, reach 15 ft., one target. {@h}9 ({@damage 2d6 + 2}) bludgeoning damage. If the target is a creature, it is {@condition grappled} (escape {@dc 12}). Until this grapple ends, the target is {@condition restrained}, and the tentacled dreg can't use its tentacles on another target."
+									]
+								}
+							]
+						}
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Eldrick Runeweaver",
+			"isNamedCreature": true,
+			"source": "DoDk",
+			"page": 215,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item robe of the archmagi}",
+						"{@item staff of power}"
+					]
+				}
+			],
+			"hp": {
+				"average": 150,
+				"formula": "20d8 + 60"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 10,
+			"con": 16,
+			"int": 22,
+			"wis": 19,
+			"cha": 15,
+			"save": {
+				"str": "+5",
+				"dex": "+6",
+				"con": "+9",
+				"int": "+12",
+				"wis": "+10",
+				"cha": "+8"
+			},
+			"skill": {
+				"arcana": "+16",
+				"history": "+16",
+				"perception": "+16",
+				"persuasion": "+14"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 26,
+			"resist": [
+				{
+					"special": "damage from spells"
+				}
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "17",
+			"spellcasting": [
+				{
+					"name": "Incantesimi",
+					"headerEntries": [
+						"Eldrick Runeweaver è un incantatore di 20° livello. La sua capacità di incantesimo è Intelligenza (tiro salvezza {@dc 19}, {@hit 11} per colpire con attacchi di incantesimi). Può lanciare scudo e invisibilità a volontà e ha preparato i seguenti incantesimi da mago:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell fire bolt}",
+								"{@spell mage hand}",
+								"{@spell minor illusion}",
+								"{@spell prestidigitation}",
+								"{@spell ray of frost}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell mage armor}",
+								"{@spell magic missile}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell detect thoughts}",
+								"{@spell levitate}",
+								"{@spell shatter}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell dispel magic}",
+								"{@spell lightning bolt}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell banishment}",
+								"{@spell dimension door}",
+								"{@spell ice storm}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell Bigby's hand}",
+								"{@spell scrying}",
+								"{@spell wall of force}"
+							]
+						},
+						"6": {
+							"slots": 2,
+							"spells": [
+								"{@spell chain lightning}",
+								"{@spell globe of invulnerability}"
+							]
+						},
+						"7": {
+							"slots": 2,
+							"spells": [
+								"{@spell forcecage}",
+								"{@spell teleport}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell maze}"
+							]
+						},
+						"9": {
+							"slots": 1,
+							"spells": [
+								"{@spell prismatic wall}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Attrezzature speciali",
+					"entries": [
+						"Eldrick Runeweaver indossa la tunica degli arcimaghi, porta con sé un bastone del potere e indossa un anello di conservazione degli incantesimi. Porta con sé {@dice 2d6} pergamene e pozioni di incantesimi molto rari."
+					]
+				},
+				{
+					"name": "Resistenza Leggendaria (3/Giorno)",
+					"entries": [
+						"Se Eldrick Runeweaver fallisce un tiro salvezza, può invece scegliere di avere successo."
+					]
+				},
+				{
+					"name": "Resistenza alla magia",
+					"entries": [
+						"Eldrick Runeweaver ha vantaggio nei tiri salvezza contro incantesimi e altri effetti magici."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Personale di potere",
+					"entries": [
+						"{@atk mw} {@hit 6} per colpire, portata 1,5 m., una creatura. {@h}10 ({@damage 1d6 + 1}) danni da percosse."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Cantrip",
+					"entries": [
+						"Eldrick Runeweaver lancia un cantrip."
+					]
+				},
+				{
+					"name": "Teletrasporto",
+					"entries": [
+						"Eldrick Runeweaver si teletrasporta di 18 metri in uno spazio non occupato che riesce a vedere."
+					]
+				},
+				{
+					"name": "Lanciare un incantesimo (costa 3 azioni)",
+					"entries": [
+						"Eldrick Runeweaver lancia un incantesimo utilizzando uno slot incantesimo."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"F",
+				"I",
+				"L",
+				"O",
+				"T"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"incapacitated",
+				"petrified",
+				"restrained"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Entropic Flame",
+			"source": "DoDk",
+			"page": 204,
+			"size": [
+				"L"
+			],
+			"type": "elemental",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 78,
+				"formula": "12d10 + 12"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 17,
+			"con": 13,
+			"int": 5,
+			"wis": 10,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained",
+				"unconscious"
+			],
+			"languages": [
+				"Deep Speech"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Forma del fuoco",
+					"entries": [
+						"La fiamma entropica può spostarsi in uno spazio largo fino a 1 pollice senza stringere. Una creatura che tocca la fiamma o la colpisce con un attacco in mischia entro 1,5 metri da essa subisce 5 ({@damage 1d10}) danni da fuoco. Inoltre, la fiamma può entrare nello spazio di una creatura ostile e fermarsi lì. La prima volta che entra nello spazio di una creatura in un turno, questa subisce 5 ({@damage 1d10}) danni da fuoco e prende fuoco; finché qualcuno non compie un'azione per spegnere il fuoco, la creatura subisce 5 ({@damage 1d10}) danni da fuoco all'inizio di ogni suo turno."
+					]
+				},
+				{
+					"name": "Illuminazione",
+					"entries": [
+						"La fiamma entropica emette luce brillante in un raggio di 9 metri e luce fioca per altri 9 metri."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattacco",
+					"entries": [
+						"La fiamma entropica effettua tre attacchi di fiamma scagliata. Prima o dopo ogni attacco, la fiamma entropica può teletrasportarsi fino a 3 metri in uno spazio che può vedere. Può teletrasportarsi in uno spazio occupato da un'altra creatura."
+					]
+				},
+				{
+					"name": "Fiamma di Hurl",
+					"entries": [
+						"{@atk rw} {@hit 6} per colpire, gittata 36 m., un bersaglio. {@h}10 ({@damage 3d6}) danni da fuoco."
+					]
+				},
+				{
+					"name": "Toccare",
+					"entries": [
+						"{@atk mw} {@hit 6} per colpire, portata 1,5 m., un bersaglio. {@h}10 ({@damage 2d6 + 3}) danni da fuoco. Se il bersaglio è una creatura o un oggetto infiammabile, prende fuoco. Finché una creatura non compie un'azione per spegnere il fuoco, il bersaglio subisce 5 ({@damage 1d10}) danni da fuoco all'inizio di ogni suo turno."
+					]
+				}
+			],
+			"traitTags": [
+				"Illumination"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DS"
+			],
+			"damageTags": [
+				"F"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Eoghan Ghostweaver",
+			"isNamedCreature": true,
+			"source": "DoDk",
+			"page": 105,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"elf"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 99,
+				"formula": "18d8 + 18"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 12,
+			"int": 15,
+			"wis": 20,
+			"cha": 16,
+			"save": {
+				"int": "+6",
+				"wis": "+9"
+			},
+			"skill": {
+				"arcana": "+13",
+				"history": "+13",
+				"medicine": "+9",
+				"nature": "+6",
+				"perception": "+9",
+				"survival": "+9"
+			},
+			"passive": 12,
+			"resist": [
+				{
+					"special": "damage from spells"
+				},
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"preNote": "nonmagical",
+					"note": "(from stoneskin)",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Druidic",
+				"Elvish"
+			],
+			"cr": "12",
+			"spellcasting": [
+				{
+					"name": "Incantesimi",
+					"headerEntries": [
+						"Eoghan è un incantatore di 18° livello. La sua capacità di incantesimo è Saggezza (tiro salvezza {@dc 17}, {@hit 9} per colpire con attacchi di incantesimi). Ha preparato i seguenti incantesimi da druido:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft}",
+								"{@spell mending}",
+								"{@spell poison spray}",
+								"{@spell produce flame}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell cure wounds}",
+								"{@spell entangle}",
+								"{@spell faerie fire}",
+								"{@spell speak with animals}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell animal messenger}",
+								"{@spell beast sense}",
+								"{@spell hold person}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell conjure animals}",
+								"{@spell purge contamination|DoDk}*",
+								"{@spell sleet storm}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell ice storm}",
+								"{@spell polymorph}",
+								"{@spell wall of fire}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell commune with nature}",
+								"{@spell cone of cold}",
+								"{@spell greater restoration}"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell conjure fey}",
+								"{@spell heal}"
+							]
+						},
+						"7": {
+							"slots": 1,
+							"spells": [
+								"{@spell resurrection}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell feeblemind}"
+							]
+						},
+						"9": {
+							"slots": 1,
+							"spells": [
+								"{@spell foresight}"
+							]
+						}
+					},
+					"footerEntries": [
+						"*spells found in Appendix D of Dungeons of Drakkenheim."
+					],
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Resistenza alla magia",
+					"entries": [
+						"Eoghan ha vantaggio nei tiri salvezza contro incantesimi e altri effetti magici."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Pugnale",
+					"entries": [
+						"{@atk mw,rw} {@hit 6} per colpire, gittata 1,5 m. o portata 20/18 m., un bersaglio. {@h}4 ({@damage 1d4 + 2}) danni perforanti."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"languageTags": [
+				"DU",
+				"E"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"F",
+				"I",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"exhaustion",
+				"paralyzed",
+				"prone",
+				"restrained"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"intelligence",
+				"strength",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Executioner",
+			"source": "DoDk",
+			"page": 209,
+			"size": [
+				"H"
+			],
+			"type": "construct",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 405,
+				"formula": "30d12 + 210"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 29,
+			"dex": 11,
+			"con": 25,
+			"int": 10,
+			"wis": 11,
+			"cha": 10,
+			"save": {
+				"str": "+15",
+				"con": "+13",
+				"wis": "+6"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"poison",
+				"psychic",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands common but does not speak"
+			],
+			"cr": "20",
+			"trait": [
+				{
+					"name": "Resistenza Leggendaria (3/Giorno)",
+					"entries": [
+						"Se l'Esecutore fallisce un tiro salvezza, può invece scegliere di avere successo."
+					]
+				},
+				{
+					"name": "Forma immutabile",
+					"entries": [
+						"Il Boia è immune a qualsiasi incantesimo o effetto che possa alterare la sua forma."
+					]
+				},
+				{
+					"name": "Resistenza alla magia",
+					"entries": [
+						"Il Boia ha vantaggio nei tiri salvezza contro incantesimi e altri effetti magici."
+					]
+				},
+				{
+					"name": "Armi magiche",
+					"entries": [
+						"Gli attacchi con le armi del Boia sono magici."
+					]
+				},
+				{
+					"name": "Ringiovanimento",
+					"entries": [
+						"Se l'Esecutore viene distrutto, ritorna con tutti i suoi punti ferita in 24 ore, a meno che non venga lanciato un incantesimo {@spell disintegrate} sui suoi resti."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Lama a ghigliottina",
+					"entries": [
+						"{@atk mw,rw} {@hit 15} per colpire, gittata di 3 m. o portata di 30/36 m., un bersaglio. {@h}30 ({@damage 6d6 + 9}) danni da taglio più 14 ({@damage 4d6}) danni necrotici. Il bersaglio deve riuscire in un tiro salvezza di Costituzione {@dc 21} o il suo massimo di punti ferita viene ridotto di un ammontare pari ai danni necrotici subiti. Questa riduzione dura finché la creatura non termina un riposo lungo. Il bersaglio muore se questo effetto riduce il suo massimo di punti ferita a 0. Subito dopo aver effettuato un attacco a distanza, quest'arma torna nelle mani del Carnefice."
+					]
+				},
+				{
+					"name": "Venti necrotici {@recharge 5}",
+					"entries": [
+						"Il Boia emette gas necrotico in un raggio di 9 metri. Ogni creatura in quell'area deve superare un tiro salvezza di Costituzione {@dc 21}, subendo 45 ({@damage 10d8}) danni necrotici se il tiro salvezza fallisce, o la metà dei danni se riesce. Una creatura che fallisce questo tiro salvezza di 5 o più guadagna un {@adventure level of contamination|DoDk|12}."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Legname in avanti",
+					"entries": [
+						"Il Boia si muove a metà della sua velocità."
+					]
+				},
+				{
+					"name": "Attacco (costa 2 azioni)",
+					"entries": [
+						"Il Boia compie un attacco in mischia o a distanza con la sua Lama della Ghigliottina."
+					]
+				},
+				{
+					"name": "Evocare le ombre. (Costa 3 azioni)",
+					"entries": [
+						"Il Boia prende di mira fino a sei cadaveri umanoidi che può vedere entro 18 metri da lui e che sono morti violentemente. Lo spirito di ogni bersaglio sorge come ombra nello spazio del cadavere o nello spazio non occupato più vicino. Le ombre agiscono dopo l'Esecutore allo stesso conteggio di iniziativa, sono sotto il suo controllo e rimangono per 1 minuto o finché non vengono distrutte. Scompaiono se l'Esecutore viene distrutto."
+					]
+				}
+			],
+			"traitTags": [
+				"Immutable Form",
+				"Legendary Resistances",
+				"Magic Resistance",
+				"Magic Weapons",
+				"Rejuvenation"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"damageTags": [
+				"N",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"HPR",
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Garmyr",
+			"source": "DoDk",
+			"page": 197,
+			"_copy": {
+				"name": "Gnoll",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "gnoll",
+						"with": "garmyr"
+					}
+				}
+			},
+			"type": "monstrosity",
+			"hasFluff": true
+		},
+		{
+			"name": "Gravekeeper",
+			"source": "DoDk",
+			"page": 210,
+			"size": [
+				"L"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 210,
+				"formula": "20d10 + 100"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 18,
+			"dex": 7,
+			"con": 21,
+			"int": 19,
+			"wis": 17,
+			"cha": 21,
+			"save": {
+				"con": "+10",
+				"wis": "+8",
+				"cha": "+10"
+			},
+			"skill": {
+				"perception": "+13"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 23,
+			"languages": [
+				"all but does not speak"
+			],
+			"cr": "13",
+			"trait": [
+				{
+					"name": "Illuminazione abbagliante",
+					"entries": [
+						"Il Custode delle Tombe proietta una brillante corona di luce che diffonde una luce intensa fino a un raggio di 18 metri e fa sì che i tiri di attacco contro di lui abbiano svantaggio. Se viene colpito da un attacco, questo tratto viene interrotto fino alla fine del suo turno successivo. Questa caratteristica viene interrotta anche quando il Custode delle Tombe è {@condition incapacitated} o ha una velocità pari a 0."
+					]
+				},
+				{
+					"name": "Resistenza Leggendaria (3/Giorno)",
+					"entries": [
+						"Se il Custode delle Tombe fallisce un tiro salvezza, può invece scegliere di avere successo."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Sbattere",
+					"entries": [
+						"{@atk mw} {@hit 9} per colpire, portata 3 m., un bersaglio. {@h}22 ({@damage 4d8 + 4}) danni da percosse più 10 ({@damage 3d6}) danni necrotici."
+					]
+				},
+				{
+					"name": "Esplosione di lanterne",
+					"entries": [
+						"Dalle numerose lanterne del Custode delle Tombe scaturiscono magici raggi ottantini. Ogni raggio ha un potere diverso. Ogni creatura entro 36 metri dal Custode delle Tombe che non si trovi dietro una copertura totale effettua un tiro salvezza {@dice d6} per determinare quale raggio di colore la colpisce. La DC per tutti i tiri salvezza è 18:",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "1. Esplosione dissipatrice",
+									"entries": [
+										"La creatura bersaglio deve riuscire in un tiro salvezza di Intelligenza o subire 35 ({@damage 10d6}) danni psichici, e qualsiasi incantesimo o effetto magico sul bersaglio termina. Una creatura che fallisce questo tiro salvezza subisce l'interruzione {@status concentration} di qualsiasi incantesimo che stava mantenendo attivamente."
+									]
+								},
+								{
+									"type": "item",
+									"name": "2. Esplosione di forza",
+									"entries": [
+										"La creatura bersagliata deve riuscire in un tiro salvezza di Forza o subire 35 ({@damage 10d6}) danni da forza, essere spinta a 6 metri di distanza e subire un colpo {@condition prone}."
+									]
+								},
+								{
+									"type": "item",
+									"name": "3. Esplosione accecante",
+									"entries": [
+										"La creatura bersaglio deve riuscire in un tiro salvezza di Costituzione o subire 35 ({@damage 10d6}) danni radianti e subire {@condition blinded} per 1 minuto. Una creatura {@condition blinded} può ripetere il tiro salvezza a ogni suo turno, terminando l'effetto su se stessa in caso di successo."
+									]
+								},
+								{
+									"type": "item",
+									"name": "4. Esplosione contaminante",
+									"entries": [
+										"La creatura bersagliata deve riuscire in un tiro salvezza di Costituzione o subire 35 ({@damage 10d6}) danni necrotici e guadagnare un {@adventure level of contamination|DoDk|12}."
+									]
+								},
+								{
+									"type": "item",
+									"name": "5. Esplosione di accensione",
+									"entries": [
+										"La creatura bersaglio deve riuscire in un tiro salvezza di Destrezza o subire 35 ({@damage 10d6}) danni da fuoco e prende fuoco; finché qualcuno non compie un'azione per spegnere il fuoco, il bersaglio subisce 35 ({@damage 10d6}) danni da fuoco all'inizio di ogni suo turno."
+									]
+								},
+								{
+									"type": "item",
+									"name": "6. Esplosione congelante",
+									"entries": [
+										"La creatura bersagliata deve riuscire in un tiro salvezza di Costituzione o subire 35 ({@damage 10d6}) danni da freddo, e non può effettuare una reazione fino alla fine del suo turno successivo. Inoltre, al suo turno successivo, deve scegliere se ottenere un movimento, un'azione o un'azione bonus; ne ottiene solo una delle tre. Se il tiro salvezza riesce, il bersaglio subisce la metà dei danni e non subisce gli altri effetti dell'esplosione."
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Sbattere",
+					"entries": [
+						"Il Custode delle tombe effettua un attacco con fendente."
+					]
+				},
+				{
+					"name": "Scivolare",
+					"entries": [
+						"Il Custode delle Tombe si muove alla sua velocità senza provocare attacchi di opportunità."
+					]
+				},
+				{
+					"name": "Esplosione di lanterne (costa 3 azioni)",
+					"entries": [
+						"Il Guardiano delle tombe usa la sua Esplosione della Lanterna."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Gravekeeper",
+				"source": "DoDk"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"U"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"B",
+				"C",
+				"F",
+				"N",
+				"O",
+				"R",
+				"Y"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"blinded",
+				"prone"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Grotesque Gargant",
+			"source": "DoDk",
+			"page": 197,
+			"_copy": {
+				"name": "Stone Giant",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "gigante",
+						"with": "grotesque gargant"
+					}
+				}
+			},
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Rigenerazione",
+					"entries": [
+						"Un gargantello grottesco recupera 10 punti ferita all'inizio del suo turno finché si trova all'interno della Nebbia Profonda. Il gargante muore solo se inizia il suo turno con 0 punti ferita e non si rigenera."
+					]
+				},
+				{
+					"name": "Fascio contaminante",
+					"entries": [
+						"Il grottesco gargantesco costringe magicamente una creatura che può vedere entro 18 metri da lui a effettuare un tiro salvezza di Costituzione {@dc 15}. La creatura subisce 27 ({@damage 6d8}) danni necrotici se il tiro salvezza fallisce e guadagna un {@adventure level of contamination|DoDk|12}."
+					]
+				},
+				{
+					"name": "Mimetizzazione nebbiosa",
+					"entries": [
+						"Il grottesco gargantesco ha vantaggio sulle prove di Destrezza (Furtività) per nascondersi in qualsiasi area oscurata da nebbia o foschia."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Haze Hulk",
+			"source": "DoDk",
+			"page": 200,
+			"size": [
+				"L"
+			],
+			"type": "aberration",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 95,
+				"formula": "10d10 + 40"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 21,
+			"dex": 10,
+			"con": 18,
+			"int": 7,
+			"wis": 10,
+			"cha": 6,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Common"
+			],
+			"cr": "4",
+			"action": [
+				{
+					"name": "Multiattacco",
+					"entries": [
+						"L'Hulk della foschia effettua due attacchi di tipo slam."
+					]
+				},
+				{
+					"name": "Sbattere",
+					"entries": [
+						"{@atk mw} {@hit 7} per colpire, portata 1,5 m., un bersaglio. {@h}14 ({@damage 2d8 + 5}) danni da percosse."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Gutbuster",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Scagliare Carne Foetida (Ricarica 5-6)",
+							"entries": [
+								"Il gutbuster strappa un pezzo della sua carne mutata e lo scaglia verso uno spazio visibile entro 36 metri da lui. Ogni creatura entro 3 metri da quel punto deve superare un tiro salvezza di Costituzione a DC 14, subendo 28 ({@dice 8d6}) danni necrotici se il tiro salvezza fallisce, o la metà dei danni se riesce."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Cacciatore",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Invisibilità",
+							"entries": [
+								"Il cacciatore si trasforma magicamente {@condition invisible} finché non attacca o finché la sua concentrazione non termina (come se si concentrasse su un incantesimo). L'equipaggiamento che il cacciatore indossa o porta con sé è invisibile con lui."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Tendini sferzanti",
+							"entries": [
+								"Attacco con armi da mischia: +7 a colpire, portata 18 m., un bersaglio. Colpire: 14 ({@dice 2d8 + 5}) danni da perforazione, e il bersaglio è {@condition grappled} (fuga DC 15) se è una creatura Grande o più piccola. Il cacciatore ha due viticci sferzanti e può afferrare fino a due creature alla volta."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Mulinello",
+							"entries": [
+								"Come azione bonus, il cacciatore trascina verso di sé ogni creatura {@condition grappled} fino a 7,5 metri."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Juggernaut",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Forza mutante",
+							"entries": [
+								"Se il danno riduce il juggernaut a 0 punti ferita, deve riuscire a effettuare un tiro salvezza di Costituzione con una DC di 5 + i danni subiti, a meno che non si tratti di danni radianti o di un colpo critico. In caso di successo, il juggernaut scende a 1 punto ferita."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Carica di calpestio",
+							"entries": [
+								"Se il juggernaut si muove per almeno 6 metri in direzione di una creatura e poi la colpisce con un attacco con fendente nello stesso turno, il bersaglio deve riuscire a effettuare un tiro salvezza di Forza con DC 16 o essere colpito {@condition prone}. Se il bersaglio è {@condition prone}, il juggernaut può effettuare un altro attacco con fendente contro di lui come azione bonus."
+							]
+						}
+					],
+					"_version": {
+						"name": "Haze Hulk (Juggernaut)",
+						"addHeadersAs": "trait"
+					}
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Haze Hulk (Gutbuster)",
+					"source": "DoDk",
+					"_mod": {
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Hurl Foetid Flesh {@recharge 5}",
+									"entries": [
+										"The gutbuster rips off a chunk of its mutated flesh and hurls it towards a space it can see within 120 feet of it. Each creature within 10 feet of that point must succeed on a {@dc 14} Constitution saving throw, taking 28 ({@damage 8d6}) necrotic damage on a failed save, or half as much damage on a successful one."
+									]
+								}
+							]
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Haze Hulk (Hunter)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Invisibility",
+									"entries": [
+										"The hunter magically turns {@condition invisible} until it attacks or until its {@status concentration} ends (as if {@status concentration||concentrating} on a spell). Any equipment the hunter wears or carries is {@condition invisible} with it."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Lashing Tendrils",
+									"entries": [
+										"{@atk mw} {@hit 7} to hit, reach 60 ft., one target. {@h}14 ({@damage 2d8 + 5}) piercing damage, and the target is {@condition grappled} (escape {@dc 15}) if it is a Large or smaller creature. The hunter has two lashing tendrils and can grapple up to two creatures at once."
+									]
+								}
+							]
+						}
+					},
+					"bonus": [
+						{
+							"name": "Mulinello",
+							"entries": [
+								"Come azione bonus, il cacciatore trascina verso di sé ogni creatura {@condition grappled} fino a 7,5 metri."
+							]
+						}
+					],
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Haze Husk",
+			"source": "DoDk",
+			"page": 197,
+			"_copy": {
+				"name": "Zombie",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "zombie",
+						"with": "haze husk"
+					}
+				}
+			},
+			"trait": [
+				{
+					"name": "Esplosione di morte",
+					"entries": [
+						"Se i danni riducono la nebbia a 0 punti ferita, i frammenti di delerium nel suo corpo esplodono in un'esplosione di energia contaminata, a meno che i danni non siano radianti o derivanti da un colpo critico. Ogni creatura entro 1,5 metri deve riuscire a effettuare un tiro salvezza di Costituzione {@dc 10} o subire 7 ({@damage 2d6}) danni necrotici. Le creature che falliscono questo tiro salvezza di 5 o più guadagnano un {@adventure level of contamination|DoDk|12}."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Haze Wight",
+			"source": "DoDk",
+			"page": 198,
+			"_copy": {
+				"name": "Wight",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "wight",
+						"with": "haze wight"
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Drenaggio della vita",
+						"items": [
+							{
+								"name": "Contaminated Touch",
+								"entries": [
+									"{@atk mw} {@hit 4} to hit, reach 5 ft., one creature. {@h}10 ({@damage 3d6}) necrotic damage. The target must succeed on a {@dc 13} Constitution saving throw or gain one {@adventure level of contamination|DoDk|12}."
+								]
+							},
+							{
+								"name": "Create Haze Husk",
+								"entries": [
+									"The wight targets a humanoid within 10 feet of it that has been dead for no longer than 1 minute and died violently. It rises as a haze husk in an unoccupied space within 5 feet. The haze husk is under the wight's control. The wight can have no more than 12 haze husks under its control at one time."
+								]
+							}
+						]
+					}
+				}
+			},
+			"hasFluff": true
+		},
+		{
+			"name": "Hedge Mage",
+			"source": "DoDk",
+			"page": 219,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 22,
+				"formula": "4d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 13,
+			"int": 15,
+			"wis": 11,
+			"cha": 11,
+			"skill": {
+				"arcana": "+4"
+			},
+			"passive": 10,
+			"languages": [
+				"Any two"
+			],
+			"cr": "1",
+			"spellcasting": [
+				{
+					"name": "Incantesimi",
+					"headerEntries": [
+						"Il mago delle siepi è un incantatore di 4° livello che usa l'Intelligenza come capacità di incantesimo (tiro salvezza {@dc 12}; {@hit 4} per colpire con attacchi di incantesimi). Il mago delle siepi ha preparato i seguenti incantesimi da mago:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch}",
+								"{@spell mage hand}",
+								"{@spell shocking grasp}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell false life}",
+								"{@spell mage armor}",
+								"{@spell magic missile}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell Melf's acid arrow}",
+								"{@spell web}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"action": [
+				{
+					"name": "Pugnale",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} per colpire, gittata 1,5 m. o portata 20/18 m., un bersaglio. {@h}4 ({@damage 1d4 + 2}) danni perforanti."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"A",
+				"F",
+				"L",
+				"N",
+				"O"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"restrained"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hypnotic Eldritch Blossom",
+			"source": "DoDk",
+			"page": 205,
+			"size": [
+				"M"
+			],
+			"type": "plant",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				5
+			],
+			"hp": {
+				"average": 18,
+				"formula": "4d8"
+			},
+			"speed": {
+				"walk": 5
+			},
+			"str": 3,
+			"dex": 1,
+			"con": 10,
+			"int": 1,
+			"wis": 3,
+			"cha": 5,
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 6,
+			"conditionImmune": [
+				"blinded",
+				"deafened",
+				"frightened"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Falsa apparenza",
+					"entries": [
+						"Quando il Fiore di Eldritch Ipnotico rimane immobile, è indistinguibile da un normale fiore."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Nettare contaminato",
+					"entries": [
+						"Il Fiore di Eldritch Ipnotico prende di mira una creatura che può vedere entro 3 metri da lui. Il bersaglio deve riuscire in un tiro salvezza di Costituzione {@dc 10} o guadagnare un {@adventure level of contamination|DoDk|12}."
+					]
+				},
+				{
+					"name": "Polline ipnotico (si ricarica con un riposo breve o lungo)",
+					"entries": [
+						"Il Fiore Eldritch Ipnotico rilascia una nube di polline scintillante in un raggio di 9 metri. Le creature che si trovano nell'area devono superare un tiro salvezza di Saggezza {@dc 10} o diventare {@condition charmed} per il Fiore Eldritch Ipnotico per 1 minuto. Mentre {@condition charmed}, la creatura è {@condition incapacitated} e deve usare tutto il suo movimento nei suoi turni per avvicinarsi il più possibile al Fiore Eldritch Ipnotico.",
+						"L'effetto termina per una creatura colpita se subisce danni o se qualcun altro usa un'azione per scuotere la creatura dal suo torpore."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Riflesso dell'incantesimo",
+					"entries": [
+						"Se il fiore eldritch ipnotico effettua con successo un tiro salvezza contro un incantesimo che ha come bersaglio solo lui e non ha un'area di effetto, o se un attacco di incantesimi lo manca, il fiore può scegliere un'altra creatura (incluso l'incantatore) che può vedere entro 9 metri da lui. L'incantesimo prende di mira la creatura scelta invece del fiore ipnotico eldritch. Se l'incantesimo obbliga a un tiro salvezza, la creatura scelta effettua il proprio tiro salvezza. Se l'incantesimo era un attacco, il tiro per colpire viene ripetuto contro la creatura prescelta."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"conditionInflict": [
+				"charmed",
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Knight-Captain Theodore Marshal",
+			"source": "DoDk",
+			"page": 215,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"{@item plate armor|PHB|plate}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 255,
+				"formula": "30d8 + 120"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 20,
+			"dex": 10,
+			"con": 18,
+			"int": 13,
+			"wis": 15,
+			"cha": 19,
+			"save": {
+				"wis": "+7",
+				"cha": "+9"
+			},
+			"skill": {
+				"animal handling": "+7",
+				"athletics": "+10",
+				"insight": "+7",
+				"persuasion": "+9"
+			},
+			"passive": 12,
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Celestial",
+				"Common"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Incantesimi",
+					"headerEntries": [
+						"Theodore Marshal è un incantatore di 20° livello. La sua capacità di incantesimo è Carisma (tiro salvezza {@dc 17}, {@hit 9} per colpire con attacchi di incantesimi). Ha preparato i seguenti incantesimi da paladino:"
+					],
+					"spells": {
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell bless}",
+								"{@spell command}",
+								"{@spell cure wounds}",
+								"{@spell guiding bolt}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell aid}",
+								"{@spell branding smite}",
+								"{@spell lesser restoration}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell beacon of hope}",
+								"{@spell dispel magic}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell banishment}",
+								"{@spell death ward}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell flame strike}",
+								"{@spell hallow}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Colpi divini",
+					"entries": [
+						"Gli attacchi con le armi di Theodore Marshal sono magici. Quando colpisce con una qualsiasi arma, questa infligge un danno radiante extra {@damage 4d8} (incluso nell'attacco)."
+					]
+				},
+				{
+					"name": "Resistenza Leggendaria (3/Giorno)",
+					"entries": [
+						"Se il Maresciallo Teodoro fallisce un tiro salvezza, può invece scegliere di avere successo."
+					]
+				},
+				{
+					"name": "Attrezzature speciali",
+					"entries": [
+						"Theodore Marshal brandisce una spada lunga da vendicatore sacro."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattacco",
+					"entries": [
+						"Il Maresciallo Theodore compie due attacchi in mischia."
+					]
+				},
+				{
+					"name": "Santo Vendicatore",
+					"entries": [
+						"{@atk mw} {@hit 13} per colpire, portata 1,5 m., un bersaglio. {@h}12 ({@damage 1d8 + 8}) danni da taglio più 18 ({@damage 4d8}) danni radianti."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attacco",
+					"entries": [
+						"Il Maresciallo Theodore compie un attacco con un'arma."
+					]
+				},
+				{
+					"name": "Folgore sacra (costa 2 azioni)",
+					"entries": [
+						"Il Maresciallo Theodore lancia {@spell guiding bolt} senza spendere uno slot incantesimi."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CE"
+			],
+			"damageTags": [
+				"R",
+				"S"
+			],
+			"damageTagsSpell": [
+				"F",
+				"R"
+			],
+			"spellcastingTags": [
+				"CP"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"incapacitated",
+				"prone"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"dexterity",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lenore von Kessel",
+			"source": "DoDk",
+			"page": 134,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 127,
+				"formula": "17d8 + 51"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 15,
+			"con": 16,
+			"int": 12,
+			"wis": 13,
+			"cha": 15,
+			"skill": {
+				"deception": "+5",
+				"insight": "+4",
+				"perception": "+4",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"Common"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Sguardo radioso",
+					"entries": [
+						"Quando una creatura che può vedere gli occhi di Lenore inizia il suo turno entro 9 metri da lei, Lenore può costringerla a effettuare un tiro salvezza di Costituzione {@dc 14} se non è {@condition incapacitated} in grado di vedere la creatura. La creatura subisce 22 ({@damage 4d10}) danni radianti se il tiro salvezza fallisce, o la metà in caso di successo. Inoltre, le creature che falliscono questo tiro salvezza guadagnano un {@adventure level of contamination|DoDk|12}.",
+						"A meno che non venga sorpresa, una creatura può distogliere lo sguardo per evitare il tiro salvezza all'inizio del suo turno. Se la creatura lo fa, non può vedere Lenore fino all'inizio del suo turno successivo, quando potrà distogliere nuovamente lo sguardo. Se nel frattempo la creatura guarda Lenore, deve effettuare immediatamente il tiro salvezza.",
+						"Se Lenore si vede riflessa su una superficie lucida nel raggio di 9 metri e in un'area di luce intensa, diventa {@condition blinded} e {@condition incapacitated} per {@dice 1d6} ore."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattacco",
+					"entries": [
+						"La medusa esegue tre attacchi in mischia - uno con il suo pelo di serpente e due con la spada corta - o due attacchi a distanza con l'arco lungo."
+					]
+				},
+				{
+					"name": "Capelli tentacolari",
+					"entries": [
+						"{@atk mw} {@hit 5} per colpire, portata 1,5 m., una creatura. {@h}4 ({@damage 1d4 + 2}) danni perforanti più 14 ({@damage 4d6}) danni necrotici. Il bersaglio deve riuscire in un tiro salvezza di Costituzione {@dc 14} o guadagnare un {@adventure level of contamination|DoDk|12}."
+					]
+				},
+				{
+					"name": "Spada corta",
+					"entries": [
+						"{@atk mw} {@hit 5} per colpire, portata 1,5 m., un bersaglio. {@h}5 ({@damage 1d6 + 2}) danni perforanti."
+					]
+				},
+				{
+					"name": "Arco lungo",
+					"entries": [
+						"{@atk rw} {@hit 5} per colpire, gittata 150/18 m., un bersaglio. {@h}6 ({@damage 1d8 + 2}) danni da perforazione più 7 ({@damage 2d6}) danni da veleno."
+					]
+				}
+			],
+			"attachedItems": [
+				"longbow|phb",
+				"shortsword|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"I",
+				"N",
+				"P",
+				"R"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Living Deep Haze",
+			"source": "DoDk",
+			"page": 204,
+			"size": [
+				"L"
+			],
+			"type": "elemental",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				15
+			],
+			"hp": {
+				"average": 90,
+				"formula": "12d10 + 24"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 90,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 14,
+			"dex": 20,
+			"con": 14,
+			"int": 5,
+			"wis": 10,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained",
+				"unconscious"
+			],
+			"languages": [
+				"Deep Speech"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Forma di nebbia",
+					"entries": [
+						"La Nebbia Profonda Vivente può entrare nello spazio di una creatura ostile e fermarsi lì. Può spostarsi in uno spazio largo fino a 1 pollice senza stringere."
+					]
+				},
+				{
+					"name": "Nebbia profonda",
+					"entries": [
+						"Una creatura che entra o inizia il suo turno nello stesso spazio della Nebbia Profonda Vivente deve riuscire a superare un tiro salvezza di Costituzione {@dc 15} o subire 10 ({@damage 3d6}) danni necrotici e guadagnare un {@adventure level of contamination|DoDk|12}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattacco",
+					"entries": [
+						"La Nebbia Profonda Vivente compie due attacchi di tipo slam."
+					]
+				},
+				{
+					"name": "Sbattere",
+					"entries": [
+						"{@atk mw} {@hit 8} per colpire, portata 1,5 m., un bersaglio. {@h}14 ({@damage 2d8 + 5}) danni da percosse."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DS"
+			],
+			"damageTags": [
+				"B",
+				"N"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lord Commander Elias Drexel",
+			"source": "DoDk",
+			"page": 214,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"{@item +3 breastplate}"
+					]
+				}
+			],
+			"hp": {
+				"average": 255,
+				"formula": "30d8 + 120"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 15,
+			"con": 18,
+			"int": 15,
+			"wis": 16,
+			"cha": 11,
+			"save": {
+				"str": "+9",
+				"dex": "+7",
+				"wis": "+8"
+			},
+			"skill": {
+				"athletics": "+9",
+				"perception": "+13",
+				"stealth": "+12",
+				"survival": "+8"
+			},
+			"senses": [
+				"blindsight 10 ft."
+			],
+			"passive": 23,
+			"languages": [
+				"Common"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Incantesimi",
+					"headerEntries": [
+						"Elias Drexel è un incantatore di 20° livello. La sua capacità di incantesimo è Saggezza (tiro salvezza {@dc 16}, {@hit 8} per colpire con attacchi di incantesimi). Conosce i seguenti incantesimi da ranger:"
+					],
+					"spells": {
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell cure wounds}",
+								"{@spell fog cloud}",
+								"{@spell hunter's mark}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell pass without trace}",
+								"{@spell protection from poison}",
+								"{@spell spike growth}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell conjure animals}",
+								"{@spell nondetection}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell freedom of movement}",
+								"{@spell stoneskin}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell tree stride} (works on buildings instead of trees)"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Sopravvissuto",
+					"entries": [
+						"All'inizio di ogni suo turno, Elias Drexel recupera 10 punti ferita se non ha più della metà dei suoi punti ferita. Non ottiene questo beneficio se ha 0 punti ferita."
+					]
+				},
+				{
+					"name": "Bruto",
+					"entries": [
+						"Un'arma da mischia infligge un dado extra dei suoi danni quando Elias Drexel colpisce con essa (incluso nell'attacco)."
+					]
+				},
+				{
+					"name": "Resistenza Leggendaria (3/Giorno)",
+					"entries": [
+						"Se Elias Drexel fallisce un tiro salvezza, può invece scegliere di avere successo."
+					]
+				},
+				{
+					"name": "Attrezzature speciali",
+					"entries": [
+						"Elias Drexel brandisce una spada lunga +3, indossa una corazza +3 e il distintivo di Lord Commander."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattacco",
+					"entries": [
+						"Elias Drexel usa Leadership. Poi effettua quattro attacchi con la spada lunga o con l'arco lungo."
+					]
+				},
+				{
+					"name": "Spada lunga",
+					"entries": [
+						"{@atk mw} {@hit 12} per colpire, portata 1,5 m., un bersaglio. {@h}16 ({@damage 2d8 + 7}) danni da taglio."
+					]
+				},
+				{
+					"name": "Arco lungo",
+					"entries": [
+						"{@atk rw} {@hit 7} per colpire, gittata 150/18 m., un bersaglio. {@h}7 ({@damage 1d8 + 2}) danni perforanti."
+					]
+				},
+				{
+					"name": "Leadership (si ricarica dopo un riposo breve o lungo)",
+					"entries": [
+						"Per 1 minuto, Elias Drexel può pronunciare un comando speciale o un avvertimento ogni volta che una creatura non ostile che può vedere entro 36 metri da lui effettua un tiro di attacco o un tiro salvezza. La creatura può aggiungere un {@dice d4} al suo tiro di dado, a condizione che possa sentire e capire Elias Drexel. Una creatura può beneficiare di un solo dado Leadership alla volta. Questo effetto termina se Elias Drexel è {@condition incapacitated}."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"Elias Drexel aggiunge 5 alla sua CA contro un attacco in mischia che lo colpirebbe. Per farlo, Elias Drexel deve vedere l'attaccante e brandire un'arma da mischia."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attacco",
+					"entries": [
+						"Elias Drexel effettua un attacco con un'arma."
+					]
+				},
+				{
+					"name": "Comando",
+					"entries": [
+						"Elias Drexel sceglie un alleato che può vedere. Se quell'alleato può vederlo e sentirlo, può effettuare un attacco con l'arma come reazione e ottiene un vantaggio nel tiro per colpire. L'attacco infligge 10 {@damage 3d6} danni extra a chi colpisce."
+					]
+				}
+			],
+			"attachedItems": [
+				"longbow|phb",
+				"longsword|phb"
+			],
+			"traitTags": [
+				"Brute",
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"damageTagsSpell": [
+				"P"
+			],
+			"spellcastingTags": [
+				"CR"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lord of the Feast",
+			"source": "DoDk",
+			"page": 211,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 228,
+				"formula": "24d10 + 96"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 18,
+			"dex": 18,
+			"con": 18,
+			"int": 11,
+			"wis": 18,
+			"cha": 13,
+			"save": {
+				"dex": "+9",
+				"con": "+9",
+				"wis": "+9",
+				"cha": "+6"
+			},
+			"skill": {
+				"athletics": "+9",
+				"perception": "+14",
+				"stealth": "+14",
+				"survival": "+9"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 24,
+			"languages": [
+				"Abyssal"
+			],
+			"cr": "15",
+			"trait": [
+				{
+					"name": "Resistenza Leggendaria (3/Giorno)",
+					"entries": [
+						"Se il Signore della Festa fallisce un tiro salvezza, può invece scegliere di riuscire."
+					]
+				},
+				{
+					"name": "Rigenerazione",
+					"entries": [
+						"Il Signore della Festa recupera 20 punti ferita all'inizio del suo turno se ha almeno 1 punto ferita rimanente."
+					]
+				},
+				{
+					"name": "Cacciatore ravvicinato",
+					"entries": [
+						"Trovarsi entro 1,5 metri da una creatura ostile non comporta svantaggio ai tiri di attacco a distanza del Signore della Festa."
+					]
+				},
+				{
+					"name": "Sensi predatori",
+					"entries": [
+						"Il Signore dei Banchetti ha un vantaggio sulle prove di Saggezza (Percezione). Può individuare la posizione di qualsiasi creatura entro 36 metri da lui che sia {@condition invisible}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattacco",
+					"entries": [
+						"Il Signore della Festa compie tre attacchi: uno con ciascuna delle sue diverse frecce, oppure uno con il morso e due con gli artigli."
+					]
+				},
+				{
+					"name": "Morso",
+					"entries": [
+						"{@atk mw} {@hit 9} per colpire, portata 1,5 m., un bersaglio. {@h}15 ({@damage 2d10 + 4}) danni perforanti più 18 ({@damage 4d8}) danni necrotici. Un bersaglio colpito da questo attacco deve riuscire in un tiro salvezza di Costituzione {@dc 17} o guadagnare un {@adventure level of contamination|DoDk|12}."
+					]
+				},
+				{
+					"name": "Artigli",
+					"entries": [
+						"{@atk mw} {@hit 9} per colpire, portata 3 m, un bersaglio. {@h}11 ({@damage 2d6 + 4}) danni da taglio."
+					]
+				},
+				{
+					"name": "Freccia contaminante",
+					"entries": [
+						"{@atk rw} {@hit 9} per colpire, gittata 150/18 m., un bersaglio. {@h}13 ({@damage 2d8 + 4}) danni perforanti più 18 ({@damage 4d8}) danni necrotici. Un bersaglio colpito da questo attacco deve riuscire in un tiro salvezza di Costituzione {@dc 17} o guadagnare un {@adventure level of contamination|DoDk|12}."
+					]
+				},
+				{
+					"name": "Freccia di sicurezza",
+					"entries": [
+						"{@atk rw} {@hit 9} per colpire, gittata 150/18 m., un bersaglio. {@h}13 ({@damage 2d8 + 4}) danni perforanti. Se il bersaglio è Grande o più piccolo, deve riuscire a superare un tiro salvezza di Destrezza {@dc 17} o rimanere {@condition restrained} in un laccio magico per 1 minuto. Un bersaglio {@condition restrained} può usare la sua azione per ripetere il tiro salvezza, terminando l'effetto su se stesso in caso di successo."
+					]
+				},
+				{
+					"name": "Freccia arpione",
+					"entries": [
+						"{@atk rw} {@hit 9} per colpire, gittata 150/18 m., un bersaglio. {@h}13 ({@damage 2d8 + 4}) danni perforanti. Se il bersaglio è una creatura Enorme o più piccola, deve superare un tiro salvezza di Forza {@dc 17} o essere trascinata fino a 6 metri direttamente verso il Signore della Festa."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Trattino",
+					"entries": [
+						"Il Signore della Festa sposta la sua velocità senza provocare attacchi di opportunità."
+					]
+				},
+				{
+					"name": "Freccia (Costa 2 azioni)",
+					"entries": [
+						"Il Signore della Festa effettua un attacco con la freccia a sua scelta."
+					]
+				},
+				{
+					"name": "Richiamo della Caccia (costa 3 azioni)",
+					"entries": [
+						"Il Signore della Festa emette un ululato sanguinario che può essere udito in tutta Drakkenheim. I Garmyr entro 18 metri che possono vedere e sentire il Signore della Festa possono usare la loro reazione per muoversi fino a metà della loro velocità ed effettuare un attacco in mischia o a distanza con vantaggio."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Regeneration"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity",
+				"strength"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lucretia Mathias",
+			"isNamedCreature": true,
+			"source": "DoDk",
+			"page": 216,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"Unarmored Defense"
+					]
+				}
+			],
+			"hp": {
+				"average": 90,
+				"formula": "20d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 10,
+			"con": 10,
+			"int": 19,
+			"wis": 24,
+			"cha": 19,
+			"save": {
+				"wis": "+12",
+				"cha": "+9"
+			},
+			"skill": {
+				"insight": "+17",
+				"perception": "+17",
+				"persuasion": "+14",
+				"religion": "+14"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 26,
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Incantesimi",
+					"headerEntries": [
+						"Lucretia Mathias è un incantatore di 20° livello. La sua capacità di incantesimo è Saggezza (tiro salvezza {@dc 20}, {@hit 12} per colpire con attacchi di incantesimi). Ha preparato i seguenti incantesimi da chierico:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch}",
+								"{@spell guidance}",
+								"{@spell light}",
+								"{@spell sacred flame}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell bless}",
+								"{@spell command}",
+								"{@spell guiding bolt}",
+								"{@spell healing word}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell aid}",
+								"{@spell hold person}",
+								"{@spell lesser restoration}",
+								"{@spell spiritual weapon}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell dispel magic}",
+								"{@spell sending}",
+								"{@spell speak with dead}",
+								"{@spell spirit guardians}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell banishment}",
+								"{@spell death ward}",
+								"{@spell divination}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell commune}",
+								"{@spell flame strike}",
+								"{@spell greater restoration}",
+								"{@spell scrying}"
+							]
+						},
+						"6": {
+							"slots": 2,
+							"spells": [
+								"{@spell heal}",
+								"{@spell word of recall}"
+							]
+						},
+						"7": {
+							"slots": 2,
+							"spells": [
+								"{@spell divine word}",
+								"{@spell resurrection}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell holy aura}"
+							]
+						},
+						"9": {
+							"slots": 1,
+							"spells": [
+								"{@spell gate}",
+								"{@spell sacrament of the falling fire|DoDk}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Preveggente",
+					"entries": [
+						"Lucretia Mathias non può essere sorpresa finché è cosciente."
+					]
+				},
+				{
+					"name": "Difesa non armata",
+					"entries": [
+						"Mentre Lucretia Mathias non indossa armature e non brandisce scudi, la sua CA include il suo modificatore di Saggezza."
+					]
+				},
+				{
+					"name": "Fede innegabile",
+					"entries": [
+						"Lucretia Mathias riesce automaticamente nei tiri salvezza di Costituzione per mantenere {@status concentration} i suoi incantesimi. Ogni incantesimo che lancia viene trattato come se fosse stato lanciato con un incantesimo di 9° livello, indipendentemente dall'incantesimo usato per lanciarlo."
+					]
+				},
+				{
+					"name": "Resistenza Leggendaria (3/Giorno)",
+					"entries": [
+						"Se Lucretia Mathias fallisce un tiro salvezza, può invece scegliere di avere successo."
+					]
+				},
+				{
+					"name": "Grazia divina",
+					"entries": [
+						"Qualsiasi creatura che bersagli Lucretia Mathias con un attacco o un incantesimo dannoso deve prima effettuare un tiro salvezza di Saggezza {@dc 20}. Se il tiro salvezza fallisce, la creatura deve scegliere un nuovo bersaglio o perdere l'attacco o l'incantesimo. Questo effetto non protegge Lucretia Mathias dagli effetti ad area, come l'esplosione di una palla di fuoco.",
+						"Se Lucretia Mathias effettua un attacco, lancia una magia che colpisce un nemico o infligge danno a un'altra creatura, questo effetto termina fino all'inizio del suo prossimo turno."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Tocco pacificante",
+					"entries": [
+						"{@atk ms} {@hit 12} per colpire, portata 1,5 m., una creatura. {@h}10 ({@damage 3d6}) danni psichici. Una creatura ridotta a 0 punti ferita da questo danno rimane stabile a 0 punti ferita. Il bersaglio deve riuscire in un tiro salvezza di Saggezza {@dc 20} o subire {@condition incapacitated} per 1 minuto. L'effetto termina per una creatura colpita se subisce danni."
+					]
+				},
+				{
+					"name": "Intervento divino (1/ settimana)",
+					"entries": [
+						"Lucretia Mathias invoca l'aiuto della Sacra Fiamma. Il GM sceglie la natura dell'intervento; l'effetto di qualsiasi incantesimo da chierico o di dominio da chierico sarebbe appropriato."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Cantrip",
+					"entries": [
+						"Lucretia Mathias lancia un cantrip."
+					]
+				},
+				{
+					"name": "Tocco Pacificatore (costa 2 azioni)",
+					"entries": [
+						"Lucretia Mathias usa il suo Tocco Pacificatore."
+					]
+				},
+				{
+					"name": "Lanciare un incantesimo (costa 3 azioni)",
+					"entries": [
+						"Lucretia Mathias lancia un incantesimo utilizzando uno slot incantesimo."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"U"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"Y"
+			],
+			"damageTagsSpell": [
+				"F",
+				"N",
+				"O",
+				"R"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened",
+				"incapacitated",
+				"paralyzed",
+				"prone",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Minazorond",
+			"isNamedCreature": true,
+			"source": "DoDk",
+			"page": 183,
+			"size": [
+				"G"
+			],
+			"type": "dragon",
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 22,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 444,
+				"formula": "24d20 + 192"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 80,
+				"swim": 40
+			},
+			"str": 29,
+			"dex": 10,
+			"con": 27,
+			"int": 18,
+			"wis": 17,
+			"cha": 21,
+			"save": {
+				"dex": "+7",
+				"con": "+15",
+				"wis": "+10",
+				"cha": "+12"
+			},
+			"skill": {
+				"insight": "+10",
+				"perception": "+17",
+				"stealth": "+7"
+			},
+			"senses": [
+				"blindsight 60 ft.",
+				"darkvision 120 ft.",
+				"truesight 120 ft."
+			],
+			"passive": 27,
+			"resist": [
+				"poison",
+				"psychic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
+				}
+			],
+			"immune": [
+				"lightning"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"cr": "22",
+			"trait": [
+				{
+					"name": "Anfibio",
+					"entries": [
+						"Minazorond può respirare aria e acqua."
+					]
+				},
+				{
+					"name": "Natura costruita",
+					"entries": [
+						"Minazorond non ha bisogno di aria, cibo, bevande o sonno."
+					]
+				},
+				{
+					"name": "Falsa apparenza",
+					"entries": [
+						"Mentre Minazorond rimane immobile, è indistinguibile da una statua di bronzo inanimata."
+					]
+				},
+				{
+					"name": "Inseguitore senza difetti",
+					"entries": [
+						"La creatura o le creature che hanno provocato l'animazione di Minazorond diventano la sua preda. Minazorond conosce la direzione e la distanza della sua preda finché questa rimane a Drakkenheim o finché Minazorond non viene distrutto."
+					]
+				},
+				{
+					"name": "Forma immutabile",
+					"entries": [
+						"Minazorond è immune a qualsiasi incantesimo o effetto che possa alterare la sua forma."
+					]
+				},
+				{
+					"name": "Resistenza Leggendaria (3/Giorno)",
+					"entries": [
+						"Se Minazorond fallisce un tiro salvezza, può invece scegliere di avere successo."
+					]
+				},
+				{
+					"name": "Resistenza alla magia",
+					"entries": [
+						"Minazorond ha vantaggio nei tiri salvezza contro incantesimi e altri effetti magici."
+					]
+				},
+				{
+					"name": "Armi magiche",
+					"entries": [
+						"Gli attacchi delle armi di Minazorond sono magici."
+					]
+				},
+				{
+					"name": "Ringiovanimento",
+					"entries": [
+						"Se Minazorond viene distrutto, recupera tutti i suoi punti ferita in 1 ora, a meno che non venga lanciato un incantesimo {@spell disintegrate} sui suoi resti."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattacco",
+					"entries": [
+						"Minazorond può usare la sua Presenza spaventosa. Poi effettua tre attacchi: uno con il morso e due con gli artigli."
+					]
+				},
+				{
+					"name": "Morso",
+					"entries": [
+						"{@atk mw} {@hit 16} per colpire, portata 4,5 m., un bersaglio. {@h}20 ({@damage 2d10 + 9}) danni perforanti."
+					]
+				},
+				{
+					"name": "Artiglio",
+					"entries": [
+						"{@atk mw} {@hit 16} per colpire, portata 3 m., un bersaglio. {@h}16 ({@damage 2d6 + 9}) danni da taglio."
+					]
+				},
+				{
+					"name": "Coda",
+					"entries": [
+						"{@atk mw} {@hit 16} per colpire, portata 6 m., un bersaglio. {@h}18 ({@damage 2d8 + 9}) danni da percosse."
+					]
+				},
+				{
+					"name": "Presenza spaventosa",
+					"entries": [
+						"Ogni creatura a scelta di Minazorond che si trovi entro 36 metri da Minazorond e sia a conoscenza di lui deve superare un tiro salvezza di Saggezza {@dc 20} o diventare {@condition frightened} per 1 minuto. Una creatura può ripetere il tiro salvezza alla fine di ogni suo turno, terminando l'effetto su se stessa in caso di successo. Se il tiro salvezza di una creatura ha successo o se l'effetto termina per lei, la creatura è immune alla Presenza Spaventosa di Minazorond per le 24 ore successive."
+					]
+				},
+				{
+					"name": "Armi a soffio {@recharge 5}",
+					"entries": [
+						"Minazorond usa una delle seguenti armi a soffio."
+					]
+				},
+				{
+					"name": "Respiro del fulmine",
+					"entries": [
+						"Minazorond emette fulmini in una linea di 36 metri larga 3 metri. Ogni creatura in quella linea deve effettuare un tiro salvezza di Destrezza {@dc 23}, subendo 88 ({@damage 16d10}) danni da fulmine se il tiro salvezza fallisce, o la metà dei danni se riesce."
+					]
+				},
+				{
+					"name": "Respiro di repulsione",
+					"entries": [
+						"Minazorond emette energia di repulsione in un cono di 9 metri. Ogni creatura in quell'area deve superare un tiro salvezza di Forza {@dc 23}. Se il tiro salvezza fallisce, la creatura viene spinta a 18 metri di distanza da Minazorond."
+					]
+				},
+				{
+					"name": "Cambiare forma",
+					"entries": [
+						"Minazorond si polimorizza magicamente in un umanoide o in una bestia con un punteggio di sfida non superiore al suo, oppure torna alla sua vera forma. Se muore, ritorna alla sua vera forma. L'equipaggiamento che indossa o trasporta viene assorbito o sostenuto dalla nuova forma (a scelta di Minazorond).",
+						"In una nuova forma, Minazorond mantiene allineamento, punti ferita, Dadi Ferita, capacità di parlare, competenze, Resistenza Leggendaria, azioni di tana e punteggi di Intelligenza, Saggezza e Carisma, oltre a questa azione. Per il resto, le sue statistiche e capacità sono sostituite da quelle della nuova forma, ad eccezione delle caratteristiche di classe e delle azioni leggendarie di quella forma."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Rilevare",
+					"entries": [
+						"Minazorond effettua una prova di Saggezza (Percezione)."
+					]
+				},
+				{
+					"name": "Attacco di coda",
+					"entries": [
+						"Minazorond effettua un attacco di coda."
+					]
+				},
+				{
+					"name": "Attacco alare (costa 2 azioni)",
+					"entries": [
+						"Minazorond batte le ali. Ogni creatura entro 4,5 metri da Minazorond deve riuscire in un tiro salvezza di Destrezza {@dc 24} o subire 16 ({@damage 2d6 + 9}) danni da percosse e subire un colpo {@condition prone}. Minazorond può volare fino a metà della sua velocità di volo."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious",
+				"False Appearance",
+				"Immutable Form",
+				"Legendary Resistances",
+				"Magic Resistance",
+				"Magic Weapons",
+				"Rejuvenation"
+			],
+			"senseTags": [
+				"B",
+				"SD",
+				"U"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Frightful Presence",
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"B",
+				"L",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"frightened",
+				"prone"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Oscar Yoren",
+			"isNamedCreature": true,
+			"source": "DoDk",
+			"page": 99,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 72,
+				"formula": "9d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 14,
+			"con": 11,
+			"int": 17,
+			"wis": 12,
+			"cha": 11,
+			"save": {
+				"int": "+6",
+				"wis": "+4"
+			},
+			"skill": {
+				"arcana": "+6",
+				"history": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"necrotic",
+				"poison"
+			],
+			"languages": [
+				"Any four languages"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Incantesimi",
+					"headerEntries": [
+						"Oscar Yoren è un incantatore di 9° livello. La sua capacità di incantesimo è Intelligenza (tiro salvezza {@dc 14}, {@hit 6} per colpire con attacchi di incantesimi). Oscar Yoren ha preparato i seguenti incantesimi da mago:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch}",
+								"{@spell mage hand}",
+								"{@spell ray of frost}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell false life}",
+								"{@spell mage armor}",
+								"{@spell magic missile}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell invisibility}",
+								"{@spell misty step}",
+								"{@spell web}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell animate dead}",
+								"{@spell counterspell}",
+								"{@spell lightning bolt}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell blight}",
+								"{@spell polymorph}"
+							]
+						},
+						"5": {
+							"slots": 1,
+							"spells": [
+								"{@spell cloudkill}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"action": [
+				{
+					"name": "Pugnale",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} per colpire, gittata 1,5 m. o portata 20/18 m., un bersaglio. {@h}4 ({@damage 1d4 + 2}) danni perforanti."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"C",
+				"F",
+				"I",
+				"L",
+				"N",
+				"O"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"invisible",
+				"restrained"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Pale Man",
+			"source": "DoDk",
+			"page": 212,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 120,
+				"formula": "16d8 + 48"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 10,
+			"dex": 15,
+			"con": 17,
+			"int": 20,
+			"wis": 15,
+			"cha": 12,
+			"save": {
+				"con": "+8",
+				"int": "+10",
+				"wis": "+7"
+			},
+			"skill": {
+				"arcana": "+10",
+				"history": "+10",
+				"perception": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"restrained"
+			],
+			"languages": [
+				"Common and any 5 other languages"
+			],
+			"cr": "13",
+			"spellcasting": [
+				{
+					"name": "Incantesimi",
+					"headerEntries": [
+						"L'Uomo Pallido è un incantatore di 16° livello. La sua capacità di incantesimo è Intelligenza (tiro salvezza {@dc 18}, {@hit 10} per colpire con attacchi di incantesimi). L'Uomo Pallido ha preparato i seguenti incantesimi da mago:"
+					],
+					"spells": {
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell delerium orb|DoDk}*",
+								"{@spell mage armor}",
+								"{@spell magic missile}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell hold person}",
+								"{@spell invisibility}",
+								"{@spell warp bolt|DoDk}*"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell lightning bolt}",
+								"{@spell purge contamination|DoDk}*"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell delerium blast|DoDk}*",
+								"{@spell forced evolution|DoDk}*"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell conjure the deep haze|DoDk}*",
+								"{@spell siphon contamination|DoDk}*"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell chain lightning}"
+							]
+						},
+						"7": {
+							"slots": 1,
+							"spells": [
+								"{@spell octarine spray|DoDk}*"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell antimagic field}"
+							]
+						}
+					},
+					"footerEntries": [
+						"*These spells are from Appendix D of Dungeons of Drakkenheim."
+					],
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Resistenza Leggendaria (3/Giorno)",
+					"entries": [
+						"Se l'Uomo Pallido fallisce un tiro salvezza, può invece scegliere di avere successo."
+					]
+				},
+				{
+					"name": "Corpo dell'insetto",
+					"entries": [
+						"L'Uomo Pallido può occupare lo spazio di un'altra creatura e viceversa, e può passare attraverso qualsiasi apertura abbastanza grande per un insetto minuscolo."
+					]
+				},
+				{
+					"name": "Carne strisciante",
+					"entries": [
+						"Quando l'Uomo Pallido è ridotto a 0 punti ferita, si divide in uno sciame di insetti nello stesso spazio. Se non viene distrutto, lo sciame dell'Uomo Pallido torna nel suo bozzolo e si riforma {@dice 1d6} giorni dopo."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Tocco contaminante",
+					"entries": [
+						"{@atk ms} {@hit 8} per colpire, portata 3 m., un bersaglio. {@h}10 ({@damage 3d6}) danni necrotici, e il bersaglio deve riuscire in un tiro salvezza di Costituzione {@dc 16} o ricevere un {@adventure level of contamination|DoDk|12}."
+					]
+				},
+				{
+					"name": "Infestare la carne {@recharge}",
+					"entries": [
+						"Ogni creatura entro 9 metri dall'Uomo Pallido deve superare un tiro salvezza di Destrezza {@dc 16} o subire 22 ({@damage 5d8}) danni necrotici ed essere {@condition restrained} colpita da masse di insetti carnosi brulicanti. La creatura colpita subisce 22 ({@damage 5d8}) danni necrotici all'inizio di ogni turno dell'Uomo Pallido. La creatura può ripetere il tiro salvezza alla fine di ogni suo turno, terminando l'effetto su se stessa in caso di successo."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Cantrip (costa 1 azione)",
+					"entries": [
+						"L'Uomo Pallido lancia un cantrip."
+					]
+				},
+				{
+					"name": "Scivolare (Costa 2 azioni)",
+					"entries": [
+						"L'Uomo Pallido sposta la sua velocità senza provocare attacchi di opportunità."
+					]
+				},
+				{
+					"name": "Contaminare (Costi 3 azioni)",
+					"entries": [
+						"Ogni creatura {@condition restrained} colpita da Infestare la carne dell'Uomo Pallido deve riuscire in un tiro salvezza di Costituzione {@dc 16} o guadagnare un {@adventure level of contamination|DoDk|12}."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N"
+			],
+			"damageTagsSpell": [
+				"L",
+				"N",
+				"O",
+				"R",
+				"T",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"AOE",
+				"RCH"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"conditionInflictSpell": [
+				"exhaustion",
+				"incapacitated",
+				"invisible",
+				"paralyzed"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"intelligence",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Protean Abomination",
+			"source": "DoDk",
+			"page": 201,
+			"size": [
+				"H"
+			],
+			"type": "aberration",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 168,
+				"formula": "16d12 + 64"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 10
+			},
+			"str": 21,
+			"dex": 8,
+			"con": 18,
+			"int": 5,
+			"wis": 10,
+			"cha": 5,
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 10,
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"prone"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Assorbimento",
+					"entries": [
+						"Quando l'abominio proteiforme uccide una creatura che non è né un costrutto né un non morto, assorbe il cadavere nel suo corpo e recupera 20 punti ferita."
+					]
+				},
+				{
+					"name": "Amorfo",
+					"entries": [
+						"L'abominio proteiforme è in grado di muoversi in uno spazio stretto come un pollice di larghezza senza stringere."
+					]
+				},
+				{
+					"name": "Arrampicata del ragno",
+					"entries": [
+						"L'abominio proteiforme può arrampicarsi su superfici difficili, anche a testa in giù sui soffitti, senza dover effettuare una prova di abilità."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattacco",
+					"entries": [
+						"L'abominio proteiforme effettua due attacchi con fendente. Se entrambi gli attacchi colpiscono un bersaglio Grande o più piccolo, il bersaglio è {@condition grappled} (fuga {@dc 15}) e l'abominio proteiforme usa Ingolfo su di esso."
+					]
+				},
+				{
+					"name": "Sbattere",
+					"entries": [
+						"{@atk mw} {@hit 8} per colpire, portata 1,5 m., un bersaglio. {@h}19 ({@damage 3d8 + 5}) danni da percosse."
+					]
+				},
+				{
+					"name": "Inghiottire",
+					"entries": [
+						"L'abominio proteiforme inghiotte una creatura Grande o più piccola {@condition grappled} che gli sta accanto. Finché la presa non termina, il bersaglio è {@condition blinded}, {@condition restrained} e incapace di respirare, e deve riuscire in un tiro salvezza di Costituzione {@dc 15} all'inizio di ogni turno dell'abominio o subire 19 ({@damage 3d8 + 5}) danni da percosse. Se l'abominio si muove, il bersaglio inghiottito si muove con lui. L'abominio può avere una sola creatura inghiottita alla volta."
+					]
+				}
+			],
+			"traitTags": [
+				"Amorphous",
+				"Spider Climb"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded",
+				"grappled",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Queen of Thieves",
+			"source": "DoDk",
+			"page": 217,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 23,
+					"from": [
+						"canny defense",
+						"{@spell mage armor}"
+					]
+				}
+			],
+			"hp": {
+				"average": 120,
+				"formula": "20d8 + 20"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 20,
+			"con": 13,
+			"int": 20,
+			"wis": 16,
+			"cha": 19,
+			"save": {
+				"dex": "+10",
+				"int": "+10"
+			},
+			"skill": {
+				"acrobatics": "+10",
+				"arcana": "+10",
+				"deception": "+14",
+				"insight": "+8",
+				"perception": "+8",
+				"persuasion": "+9",
+				"sleight of hand": "+10",
+				"stealth": "+15"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 18,
+			"conditionImmune": [
+				"charmed"
+			],
+			"languages": [
+				"Common",
+				"Dwarvish",
+				"Elvish",
+				"Undercommon"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Incantesimi innati",
+					"headerEntries": [
+						"La capacità innata di incantesimo della Regina dei Ladri è Intelligenza. Può lanciare innatamente i seguenti incantesimi, che non richiedono componenti materiali, somatiche o verbali:"
+					],
+					"will": [
+						"{@spell detect thoughts}",
+						"{@spell disguise self}",
+						"{@spell suggestion}"
+					],
+					"ability": "int"
+				},
+				{
+					"name": "Incantesimi",
+					"headerEntries": [
+						"La Regina dei Ladri è un incantatore di 20° livello. La sua capacità di incantesimo è Intelligenza (tiro salvezza {@dc 18}, {@hit 10} per colpire con attacchi di incantesimi). Ha preparato i seguenti incantesimi da mago:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch}",
+								"{@spell mage hand}",
+								"{@spell message}",
+								"{@spell minor illusion}",
+								"{@spell prestidigitation}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell feather fall}",
+								"{@spell mage armor}",
+								"{@spell shield}",
+								"{@spell sleep}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell mirror image}",
+								"{@spell misty step}",
+								"{@spell see invisibility}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell gaseous form}",
+								"{@spell hypnotic pattern}",
+								"{@spell major image}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell dimension door}",
+								"{@spell greater invisibility}",
+								"{@spell polymorph}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell dominate person}",
+								"{@spell scrying}",
+								"{@spell seeming}"
+							]
+						},
+						"6": {
+							"slots": 2,
+							"spells": [
+								"{@spell eyebite}",
+								"{@spell mass suggestion}"
+							]
+						},
+						"7": {
+							"slots": 2,
+							"spells": [
+								"{@spell forcecage}",
+								"{@spell project image}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell feeblemind}"
+							]
+						},
+						"9": {
+							"slots": 1,
+							"spells": [
+								"{@spell foresight}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Attrezzature speciali",
+					"entries": [
+						"La Regina dei Ladri indossa un amuleto di prova contro l'individuazione e la localizzazione e un sigillo da spia. Impugna un tirapugni +3."
+					]
+				},
+				{
+					"name": "Difesa intelligente",
+					"entries": [
+						"Quando la Regina dei Ladri indossa un'armatura leggera o nulla e non brandisce uno scudo, la sua CA include il suo modificatore di Intelligenza."
+					]
+				},
+				{
+					"name": "Attacco furtivo (1/Turno)",
+					"entries": [
+						"La Regina dei Ladri infligge 18 {@damage 5d6} danni extra quando colpisce un bersaglio con un attacco con armi e ha vantaggio sul tiro per colpire, oppure quando il bersaglio si trova entro 1,5 metri da un alleato della Regina dei Ladri non incapace e non ha svantaggio sul tiro per colpire."
+					]
+				},
+				{
+					"name": "Resistenza Leggendaria (3/Giorno)",
+					"entries": [
+						"Se la Regina dei Ladri fallisce un tiro salvezza, può invece scegliere di riuscire."
+					]
+				},
+				{
+					"name": "Ladro di memoria",
+					"entries": [
+						"Le creature non sono consapevoli quando la Regina dei Ladri legge i loro pensieri o le incanta. Inoltre, quando un incantesimo lanciato dalla Regina dei Ladri che fa diventare le creature {@condition charmed} termina, può far perdere la memoria alle creature colpite. Devono superare un tiro salvezza di Intelligenza {@dc 18} o dimenticare fino a 8 ore del tempo trascorso {@condition charmed} da lei. Questi ricordi possono essere ripristinati con un incantesimo {@spell heal} o una magia simile."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "+3 Rapier",
+					"entries": [
+						"{@atk mw} {@hit 13} per colpire, gittata di 1,5 m., un bersaglio {@h}13 ({@damage 1d8 + 8}) danni perforanti."
+					]
+				},
+				{
+					"name": "Pugnale",
+					"entries": [
+						"{@atk rw} {@hit 10} per colpire, gittata 20/18 m., un bersaglio. {@h}7 ({@damage 1d4 + 7}) danni perforanti."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Depistaggio",
+					"entries": [
+						"Quando subisce un danno, la Regina dei Ladri diventa {@condition invisible} e si teletrasporta di 18 metri in uno spazio non occupato che può vedere. Allo stesso tempo, un suo doppio illusorio appare nel punto in cui si trovava e dura per 1 minuto. L'invisibilità termina se la Regina dei Ladri attacca o lancia un incantesimo, oppure dopo 1 minuto."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attacco",
+					"entries": [
+						"La Regina dei Ladri effettua un attacco in mischia o a distanza."
+					]
+				},
+				{
+					"name": "Muoversi",
+					"entries": [
+						"La Regina dei Ladri si muove alla sua velocità senza provocare attacchi di opportunità."
+					]
+				}
+			],
+			"attachedItems": [
+				"+3 rapier|dmg",
+				"dagger|phb"
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Sneak Attack"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"E",
+				"U"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CW",
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"frightened",
+				"incapacitated",
+				"invisible",
+				"unconscious"
+			],
+			"savingThrowForced": [
+				"intelligence"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"intelligence",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Rat Prince",
+			"source": "DoDk",
+			"page": 213,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 66,
+				"formula": "12d8 + 12"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30,
+				"climb": 30
+			},
+			"str": 12,
+			"dex": 19,
+			"con": 13,
+			"int": 9,
+			"wis": 15,
+			"cha": 9,
+			"skill": {
+				"acrobatics": "+6",
+				"athletics": "+3",
+				"perception": "+6",
+				"stealth": "+8"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"languages": [
+				"Common"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Azione astuta",
+					"entries": [
+						"Il Principe dei Ratti può effettuare l'azione Fuga, Disimpegno o Nascondersi come azione bonus in ogni suo turno."
+					]
+				},
+				{
+					"name": "Odore acuto",
+					"entries": [
+						"Il Principe dei Ratti ha un vantaggio sulle prove di Saggezza (Percezione) che si basano sull'olfatto."
+					]
+				},
+				{
+					"name": "Tattiche di branco",
+					"entries": [
+						"Il Principe dei Ratti ha vantaggio su un tiro di attacco contro una creatura se almeno uno dei suoi alleati si trova entro 1,5 metri dalla creatura e l'alleato non lo è {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Munizioni contaminate",
+					"entries": [
+						"Il Principe dei Ratti porta con sé {@dice 2d6} munizioni con frammenti di delerium. Questi proiettili causano {@damage 1d6} danni aggiuntivi quando vengono colpiti, e il bersaglio deve riuscire in un tiro salvezza di Costituzione {@dc 10} o guadagnare un {@adventure level of contamination|DoDk|12}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattacco",
+					"entries": [
+						"Il Principe dei Ratti compie tre attacchi: due con le sue spade corte e uno con il suo morso contaminato."
+					]
+				},
+				{
+					"name": "Spada corta",
+					"entries": [
+						"{@atk mw} {@hit 6} per colpire, portata 1,5 m., un bersaglio. {@h}7 ({@damage 1d6 + 4}) danni perforanti."
+					]
+				},
+				{
+					"name": "Morso contaminato",
+					"entries": [
+						"{@atk mw} {@hit 6} per colpire, gittata di 1,5 m., un bersaglio. {@h}4 ({@damage 1d4 + 4}) danni perforanti, più 10 ({@damage 3d6}) danni necrotici extra, e la creatura deve riuscire in un tiro salvezza di Costituzione {@dc 11} o guadagnare un {@adventure level of contamination|DoDk|12}."
+					]
+				},
+				{
+					"name": "Balestra a mano",
+					"entries": [
+						"{@atk rw} {@hit 6} per colpire, gittata 30/36 m., un bersaglio. {@h}7 ({@damage 1d6 + 4}) danni perforanti."
+					]
+				}
+			],
+			"attachedItems": [
+				"hand crossbow|phb"
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ratling",
+			"source": "DoDk",
+			"page": 202,
+			"size": [
+				"S"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 5,
+				"formula": "2d6 - 2"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30,
+				"climb": 30
+			},
+			"str": 7,
+			"dex": 15,
+			"con": 8,
+			"int": 8,
+			"wis": 10,
+			"cha": 5,
+			"skill": {
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Common"
+			],
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Skulker",
+					"entries": [
+						"Il ratling può compiere l'azione Nascondersi come azione bonus in ogni suo turno."
+					]
+				},
+				{
+					"name": "Odore acuto",
+					"entries": [
+						"Il ratling ha vantaggio nelle prove di Saggezza (Percezione) che si basano sull'olfatto."
+					]
+				},
+				{
+					"name": "Tattiche di branco",
+					"entries": [
+						"Il ratling ha vantaggio su un tiro di attacco contro una creatura se almeno uno degli alleati del ratling si trova entro 1,5 metri dalla creatura e l'alleato non lo è {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Morso",
+					"entries": [
+						"{@atk mw} {@hit 4} per colpire, portata 1,5 m., un bersaglio. {@h}4 ({@damage 1d4 + 2}) danni perforanti."
+					]
+				},
+				{
+					"name": "Fionda",
+					"entries": [
+						"{@atk rw} {@hit 4} per colpire, gittata 30/36 m., un bersaglio. {@h}4 ({@damage 1d4 + 2}) danni da percosse."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Grondaia",
+					"entries": [
+						"Un ratling guttersnipe utilizza le statistiche di gioco per un {@creature spy}. Il suo tipo di creatura è mostruosità. Ottiene i tratti Olfatto acuto e Tattica di branco, una velocità di nuotare e di arrampicarsi di 9 metri e l'attacco con il morso come da blocco delle statistiche dei ratling."
+					]
+				}
+			],
+			"attachedItems": [
+				"sling|phb"
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Saint Gresha",
+			"isNamedCreature": true,
+			"source": "DoDk",
+			"page": 124,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 67,
+				"formula": "9d8 + 27"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": 60
+			},
+			"str": 6,
+			"dex": 16,
+			"con": 16,
+			"int": 12,
+			"wis": 14,
+			"cha": 15,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"thunder",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"The languages it knew in life"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Incantesimi",
+					"headerEntries": [
+						"Il Santo Gresha è un incantatore di 8° livello. La sua capacità di incantesimo è Carisma (tiro salvezza {@dc 13}, {@hit 5} per colpire con attacchi di incantesimi). Il Santo Gresha conosce i seguenti incantesimi da stregone:"
+					],
+					"will": [
+						"{@spell guidance}",
+						"{@spell light}",
+						"{@spell sacred flame}",
+						"{@spell thaumaturgy}"
+					],
+					"daily": {
+						"3e": [
+							"{@spell bless}",
+							"{@spell flame strike}",
+							"{@spell guiding bolt}",
+							"{@spell healing word}",
+							"{@spell prayer of healing}",
+							"{@spell spirit guardians}"
+						],
+						"1e": [
+							"{@spell divine word}",
+							"{@spell harm}",
+							"{@spell heal}",
+							"{@spell holy aura}",
+							"{@spell sacrament of the falling fire|DoDk}*"
+						]
+					},
+					"footerEntries": [
+						"*new spell described in Appendix D of Dungeons of Drakkenheim."
+					],
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Movimento incorporeo",
+					"entries": [
+						"Il Santo Gresha può muoversi attraverso altre creature e oggetti come se fossero un terreno difficile. Subisce 5 ({@damage 1d10}) danni da forza se termina il suo turno all'interno di un oggetto."
+					]
+				},
+				{
+					"name": "Sensibilità alla luce solare",
+					"entries": [
+						"Quando è alla luce del sole, San Gresha ha svantaggio nei tiri per attaccare e nelle prove di Saggezza (Percezione) che si basano sulla vista."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Drenaggio della vita",
+					"entries": [
+						"{@atk mw} {@hit 6} per colpire, portata 1,5 m., una creatura. {@h}21 ({@damage 4d8 + 3}) danni necrotici. Il bersaglio deve riuscire in un tiro salvezza di Costituzione {@dc 14} o il suo massimo di punti ferita viene ridotto di un ammontare pari ai danni subiti. Questa riduzione dura finché il bersaglio non termina un riposo lungo. Il bersaglio muore se questo effetto riduce a 0 il suo massimo di punti ferita."
+					]
+				},
+				{
+					"name": "Creare lo spettro",
+					"entries": [
+						"Saint Gresha prende di mira un umanoide nel raggio di 3 metri che sia morto da non più di 1 minuto e che sia morto violentemente. Lo spirito del bersaglio si alza come spettro nello spazio del suo cadavere o nel più vicino spazio non occupato. Lo spettro è sotto il controllo di San Gresha. San Gresha non può avere più di sette spettri sotto il suo controllo contemporaneamente."
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"N",
+				"O"
+			],
+			"damageTagsSpell": [
+				"F",
+				"N",
+				"R"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"miscTags": [
+				"HPR",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Scoundrel",
+			"source": "DoDk",
+			"page": 219,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item leather armor|PHB|leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 44,
+				"formula": "8d8 + 8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 17,
+			"con": 12,
+			"int": 14,
+			"wis": 10,
+			"cha": 15,
+			"skill": {
+				"acrobatics": "+5",
+				"deception": "+6",
+				"sleight of hand": "+5",
+				"stealth": "+7"
+			},
+			"passive": 10,
+			"languages": [
+				"Thieves' cant plus any two languages"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Incantesimi",
+					"headerEntries": [
+						"Il furfante è un incantatore di 3° livello che usa l'Intelligenza come capacità di incantesimo (tiro salvezza {@dc 12}; {@hit 4} per colpire con attacchi di incantesimi). Conosce i seguenti incantesimi dalla lista degli incantesimi dei maghi:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell mage hand} (the hand is invisible)",
+								"{@spell minor illusion}",
+								"{@spell prestidigitation}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell charm person}",
+								"{@spell disguise self}",
+								"{@spell sleep}"
+							]
+						},
+						"2": {
+							"slots": 2,
+							"spells": [
+								"{@spell invisibility}",
+								"{@spell suggestion}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Azione astuta",
+					"entries": [
+						"In ciascuno dei suoi turni, il furfante può usare un'azione bonus per compiere l'azione Dash, Disengage o Hide."
+					]
+				},
+				{
+					"name": "Attacco furtivo (1/Turno)",
+					"entries": [
+						"Il furfante infligge 14 {@damage 4d6} danni extra quando colpisce un bersaglio con un attacco d'arma e ha vantaggio sul tiro per colpire, oppure quando il bersaglio si trova entro 1,5 metri da un alleato del furfante non incapace e il furfante non ha svantaggio sul tiro per colpire."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Spada corta",
+					"entries": [
+						"{@atk mw} {@hit 5} per colpire, portata 1,5 m., un bersaglio. {@h}6 ({@damage 1d6 + 3}) danni perforanti."
+					]
+				},
+				{
+					"name": "Balestra a mano",
+					"entries": [
+						"{@atk rw} {@hit 5} per colpire, gittata 30/36 m., un bersaglio. {@h}6 ({@damage 1d6 + 3}) danni perforanti."
+					]
+				}
+			],
+			"attachedItems": [
+				"hand crossbow|phb",
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Sneak Attack"
+			],
+			"languageTags": [
+				"TC",
+				"X"
+			],
+			"damageTags": [
+				"P"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"invisible",
+				"unconscious"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Tower Dragon",
+			"source": "DoDk",
+			"page": 198,
+			"_copy": {
+				"name": "Young Bronze Dragon",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "Constructed Nature",
+								"entries": [
+									"The dragon doesn't require air, food, drink, or sleep."
+								]
+							},
+							{
+								"name": "False Appearance",
+								"entries": [
+									"While the dragon remains motionless, it is indistinguishable from an inanimate bronze statue."
+								]
+							},
+							{
+								"name": "Faultless Tracker",
+								"entries": [
+									"The creature(s) that caused the dragon to animate becomes its quarry. The dragon knows the direction and distance to its quarry as long the quarry remains within Drakkenheim or until the dragon is destroyed."
+								]
+							},
+							{
+								"name": "Immutable Form",
+								"entries": [
+									"The dragon is immune to any spell or effect that would alter its form."
+								]
+							},
+							{
+								"name": "Magic Resistance",
+								"entries": [
+									"The dragon has advantage on saving throws against spells and other magical effects."
+								]
+							},
+							{
+								"name": "Magic Weapons",
+								"entries": [
+									"The dragon's weapon attacks are magical."
+								]
+							},
+							{
+								"name": "Rejuvenation",
+								"entries": [
+									"If the tower dragon is destroyed, it regains all its hit points in 1 hour unless a {@spell disintegrate} spell is cast on its remains."
+								]
+							}
+						]
+					}
+				}
+			},
+			"senses": [
+				"blindsight 30 ft.",
+				"darkvision 120 ft.",
+				"truesight 120 ft."
+			],
+			"resist": [
+				"poison",
+				"psychic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"cr": "10",
+			"traitTags": [
+				"Amphibious",
+				"False Appearance",
+				"Immutable Form",
+				"Magic Resistance",
+				"Magic Weapons",
+				"Rejuvenation"
+			],
+			"senseTags": [
+				"B",
+				"SD",
+				"U"
+			],
+			"damageTags": [
+				"L",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Urban Ranger",
+			"source": "DoDk",
+			"page": 220,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|PHB|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "8d8 + 16"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 12,
+			"dex": 17,
+			"con": 14,
+			"int": 11,
+			"wis": 15,
+			"cha": 11,
+			"skill": {
+				"athletics": "+5",
+				"perception": "+6",
+				"stealth": "+7",
+				"survival": "+6"
+			},
+			"passive": 16,
+			"languages": [
+				"Any two"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Incantesimi",
+					"headerEntries": [
+						"Il ranger urbano è un incantatore di 8° livello che usa la Saggezza come capacità di incantesimo (tiro salvezza {@dc 12}; {@hit 4} per colpire con attacchi di incantesimi). Conosce i seguenti incantesimi dalla lista degli incantesimi dei ranger:"
+					],
+					"spells": {
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell cure wounds}",
+								"{@spell fog cloud}",
+								"{@spell hunter's mark}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell pass without trace}",
+								"{@spell spike growth}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattacco",
+					"entries": [
+						"Il ranger urbano effettua due attacchi in mischia o due attacchi a distanza."
+					]
+				},
+				{
+					"name": "Spada corta",
+					"entries": [
+						"{@atk mw} {@hit 5} per colpire, portata 1,5 m., un bersaglio. {@h}6 ({@damage 1d6 + 3}) danni perforanti."
+					]
+				},
+				{
+					"name": "Arco lungo",
+					"entries": [
+						"{@atk rw} {@hit 5} per colpire, distanza 150/18 m., un bersaglio. {@h}7 ({@damage 1d8 + 3}) danni perforanti."
+					]
+				}
+			],
+			"attachedItems": [
+				"longbow|phb",
+				"shortsword|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"P"
+			],
+			"spellcastingTags": [
+				"CR"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Walking Delerium Geode",
+			"source": "DoDk",
+			"page": 205,
+			"size": [
+				"L"
+			],
+			"type": "elemental",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 126,
+				"formula": "12d10 + 60"
+			},
+			"speed": {
+				"walk": 30,
+				"burrow": 30
+			},
+			"str": 20,
+			"dex": 8,
+			"con": 20,
+			"int": 5,
+			"wis": 10,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft.",
+				"tremorsense 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"vulnerable": [
+				"radiant",
+				"thunder"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"unconscious"
+			],
+			"languages": [
+				"Deep Speech"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Esplosione di morte",
+					"entries": [
+						"Se un danno riduce il geode delerium ambulante a 0 punti ferita, i cristalli di delerium nel suo corpo esplodono in un'esplosione di energia contaminata, a meno che il danno non sia stato di forza, radiante o tuono. Ogni creatura entro 9 metri deve riuscire a effettuare un tiro salvezza di Costituzione {@dc 15} o subire 42 ({@damage 12d6}) danni necrotici e guadagnare un {@adventure level of contamination|DoDk|12}. Inoltre, questa esplosione innesca un'anomalia arcana casuale (vedi Dungeon di Drakkenheim)."
+					]
+				},
+				{
+					"name": "Scivolare sulla terra",
+					"entries": [
+						"Il geode delerium ambulante può scavare nella terra e nella pietra non magica e non lavorata. Nel farlo, il geode non disturba il materiale che attraversa."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Colpo di scheggia",
+					"entries": [
+						"{@atk mw} {@hit 8} per colpire, portata 3 m., un bersaglio. {@h}14 ({@damage 2d8 + 5}) danni da percosse. Un bersaglio colpito da questo attacco deve riuscire in un tiro salvezza di Costituzione {@dc 15} o subire 10 ({@damage 3d6}) danni necrotici e guadagnare un {@adventure level of contamination|DoDk|12}."
+					]
+				}
+			],
+			"traitTags": [
+				"Death Burst"
+			],
+			"senseTags": [
+				"D",
+				"T"
+			],
+			"languageTags": [
+				"DS"
+			],
+			"damageTags": [
+				"B",
+				"N"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Wall Gargoyle",
+			"source": "DoDk",
+			"page": 198,
+			"_copy": {
+				"name": "Gargoyle",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "Faultless Tracker",
+								"entries": [
+									"The creature that caused the gargoyle to animate becomes its quarry. The gargoyle knows the direction and distance to its quarry as long the quarry remains within Drakkenheim or until the gargoyle is destroyed."
+								]
+							},
+							{
+								"name": "Keen Sight",
+								"entries": [
+									"The gargoyle has advantage on Wisdom (Perception) checks that rely on sight."
+								]
+							},
+							{
+								"name": "Magic Weapons",
+								"entries": [
+									"The gargoyle's weapon attacks are magical."
+								]
+							},
+							{
+								"name": "Rejuvenation",
+								"entries": [
+									"If the wall gargoyle is destroyed, it regains all its hit points in 1 hour unless a {@spell disintegrate} spell is cast on its remains."
+								]
+							}
+						]
+					}
+				}
+			},
+			"senses": [
+				"darkvision 60 ft.",
+				"truesight 120 ft."
+			],
+			"traitTags": [
+				"False Appearance",
+				"Keen Senses",
+				"Magic Weapons",
+				"Rejuvenation"
+			],
+			"senseTags": [
+				"D",
+				"U"
+			],
+			"languageTags": [
+				"T"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Warlock of the Rat God",
+			"source": "DoDk",
+			"page": 202,
+			"size": [
+				"S"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 27,
+				"formula": "6d6 + 6"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30,
+				"climb": 30
+			},
+			"str": 7,
+			"dex": 14,
+			"con": 13,
+			"int": 13,
+			"wis": 11,
+			"cha": 15,
+			"skill": {
+				"deception": "+4",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Common"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Incantesimi innati",
+					"headerEntries": [
+						"La capacità innata di incantesimo dello stregone è il Carisma. Può lanciare innatamente i seguenti incantesimi (tiro salvezza {@dc 12}, {@hit 4} per colpire con gli attacchi con incantesimo), senza bisogno di componenti materiali:"
+					],
+					"will": [
+						"{@spell eldritch blast} (2 beams)",
+						"{@spell mage armor} (self only)",
+						"{@spell minor illusion}",
+						"{@spell thaumaturgy}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell augury}",
+							"{@spell burning hands}",
+							"{@spell conjure animals} (giant rats only)",
+							"{@spell faerie fire}",
+							"{@spell invisibility}",
+							"{@spell misty step}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Skulker",
+					"entries": [
+						"Il ratling può compiere l'azione Nascondersi come azione bonus in ogni suo turno."
+					]
+				},
+				{
+					"name": "Odore acuto",
+					"entries": [
+						"Il ratling ha vantaggio nelle prove di Saggezza (Percezione) che si basano sull'olfatto."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Morso",
+					"entries": [
+						"{@atk mw} {@hit 4} per colpire, portata 1,5 m., un bersaglio. {@h}4 ({@damage 1d4 + 2}) danni perforanti."
+					]
+				}
+			],
+			"traitTags": [
+				"Keen Senses"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"F",
+				"O"
+			],
+			"spellcastingTags": [
+				"CL",
+				"I"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"invisible"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Warp Witch",
+			"source": "DoDk",
+			"page": 198,
+			"_copy": {
+				"name": "Ghost",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "fantasma",
+						"with": "warp witch"
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Visione orripilante",
+						"items": [
+							{
+								"name": "Psychic Wail {@recharge 5}",
+								"entries": [
+									"Every creature within 30 feet of the warp witch must succeed on a {@dc 13} Intelligence saving throw or take 10 ({@damage 3d6}) psychic damage and become {@condition incapacitated} until the end of the warp witches next turn."
+								]
+							},
+							{
+								"name": "Mutate Host",
+								"entries": [
+									"The warp witch can use a bonus action while it is possessing a creature to force mutations upon its host. The possessed creature must succeed on a {@dc 13} Charisma saving throw or gain one {@adventure level of contamination|DoDk|12}. Rather than rolling to determine if a mutation occurs, the warp witch automatically causes a random mutation."
+								]
+							}
+						]
+					}
+				}
+			},
+			"hasFluff": true
+		}
+	]
+}

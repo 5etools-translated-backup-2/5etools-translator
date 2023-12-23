@@ -1,0 +1,737 @@
+{
+	"spell": [
+		{
+			"name": "Conjure the Deep Haze",
+			"source": "DoDk",
+			"page": 226,
+			"level": 5,
+			"school": "C",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un frammento di delerium del valore di 100 gp, che l'incantesimo consuma",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Quando si lancia questo incantesimo, si guadagna un {@adventure level of contamination|DoDk|12}.",
+				"Si crea una sfera di 6 metri di raggio della Nebbia Profonda su un punto a scelta nel raggio d'azione. La nebbia si diffonde intorno agli angoli. Dura per tutta la durata dell'incantesimo o finché un forte vento non disperde la nebbia, ponendo fine all'incantesimo. L'area è fortemente oscurata.",
+				"Quando una creatura entra nell'area dell'incantesimo per la prima volta in un turno o vi inizia il proprio turno, deve superare un tiro salvezza di Costituzione. Con un tiro salvezza fallito, subisce ({@dice 8d6}) danni necrotici e guadagna un {@adventure level of contamination|DoDk|12}. Con un tiro salvezza riuscito, la creatura subisce la metà dei danni e non guadagna alcun {@adventure contamination levels|DoDk|12}. Le creature sono colpite anche se trattengono il respiro o non hanno bisogno di respirare."
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"OBS"
+			]
+		},
+		{
+			"name": "Contaminated Power",
+			"source": "DoDk",
+			"page": 226,
+			"level": 8,
+			"school": "T",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un frammento di delerium del valore di 500 gp, che l'incantesimo consuma",
+					"cost": 50000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Quando si lancia questo incantesimo, si guadagna un {@adventure level of contamination|DoDk|12}. Si attinge magia arcana senza limiti dal frammento di delerium che si tiene in mano. Fino al termine dell'incantesimo, si ottengono i seguenti benefici:",
+				{
+					"type": "list",
+					"items": [
+						"Quando si lancia un incantesimo che infligge danni da acido, fuoco, freddo, fulmine o veleno, si può cambiare il tipo di danno in forza, necrotico, psichico o radiante.",
+						"Una volta per turno, quando si infligge danno con un incantesimo, si può infliggere un danno necrotico extra {@damage 1d12} per ogni {@adventure contamination level|DoDk|12} guadagnato a un bersaglio di quell'incantesimo.",
+						"Quando si lancia un incantesimo che costringe una creatura a effettuare un tiro salvezza per resistere ai suoi effetti, si può scegliere di guadagnarne uno {@adventure level of contamination|DoDk|12}. Se lo si fa, un bersaglio dell'incantesimo ha svantaggio al primo tiro salvezza effettuato contro quell'incantesimo."
+					]
+				},
+				"Questo incantesimo non può essere dissipato dal {@spell dispel magic}."
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Contamination Immunity",
+			"source": "DoDk",
+			"page": 226,
+			"level": 7,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Un giglio eldritico mescolato a 250 gp di fluidi purificati appositamente preparati, che l'incantesimo consuma.",
+					"cost": 25000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"entries": [
+				"Fino alla fine dell'incantesimo, una creatura consenziente toccata è immune ai danni necrotici e non può guadagnare {@adventure contamination levels|DoDk|12}. La creatura colpita può riposare normalmente all'interno della Nebbia.",
+				"Questo incantesimo termina immediatamente se la creatura lancia un incantesimo contaminato."
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Delerium Blast",
+			"source": "DoDk",
+			"page": 227,
+			"level": 4,
+			"school": "V",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 150
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un frammento di delerium del valore di 100 gp, che l'incantesimo consuma",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Quando si lancia questo incantesimo, si guadagna un {@adventure level of contamination|DoDk|12}.",
+				"Si accendono le energie arcane immagazzinate in un frammento di delerium tenuto in mano e lo si scaglia verso uno spazio visibile nel raggio d'azione. Esplode in una sfera di 6 metri di raggio di energia psichica irregolare che travolge le menti e i sensi di chi vi si trova. Ogni creatura nella sfera deve superare un tiro salvezza di Intelligenza. Se il tiro salvezza fallisce, la creatura subisce ({@dice 10d6}) danni psichici e diventa {@condition incapacitated} fino alla fine del suo turno successivo. Se il tiro salvezza riesce, il bersaglio subisce la metà dei danni e non subisce nessuno degli altri effetti dell'incantesimo."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "A livelli più alti",
+					"entries": [
+						"Quando si lancia questo incantesimo utilizzando uno slot di 5° livello o superiore, i danni aumentano del {@dice 2d6} per ogni livello di slot superiore al 4°."
+					]
+				}
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrow": [
+				"intelligence"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Delerium Orb",
+			"source": "DoDk",
+			"page": 227,
+			"level": 1,
+			"school": "V",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un frammento di delerium del valore di 100 gp, che l'incantesimo consuma",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Quando si lancia questo incantesimo, si guadagna un {@adventure level of contamination|DoDk|12}. Si attinge potere magico caotico dal frammento di delerium tenuto in mano e si fa esplodere una creatura visibile nel raggio d'azione con un potere paradossale. Scegliere un punteggio di abilità, poi scegliere i danni da freddo, fuoco, fulmine, necrotico, psichico o radiante. Il bersaglio deve riuscire in un tiro salvezza usando il punteggio di abilità scelto; subisce {@damage 6d6} danni del tipo scelto se il tiro salvezza fallisce, o la metà se riesce."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "A livelli più alti",
+					"entries": [
+						"Quando si lancia questo incantesimo utilizzando uno slot di 2° livello o superiore, i danni aumentano del {@dice 2d6} per ogni livello di slot superiore al 1°."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Forced Evolution",
+			"source": "DoDk",
+			"page": 227,
+			"level": 4,
+			"school": "T",
+			"time": [
+				{
+					"number": 8,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Un cocktail alchemico a base di componenti rari e polvere di delerium del valore di 250 oro, che il bersaglio consuma come parte dell'incantesimo.",
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Con questo incantesimo si trasforma una mutazione ottenuta da {@adventure contamination|DoDk|12}. Una delle mutazioni esistenti del bersaglio viene rimossa e sostituita da un'altra. Questa mutazione può essere scelta dal Game Master o determinata casualmente (vedi Appendice C di Dungeons of Drakkenheim)."
+			]
+		},
+		{
+			"name": "Neutralizing Field",
+			"source": "DoDk",
+			"page": 228,
+			"level": 5,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "sphere",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Un cristallo delerium o una reliquia sacra del valore di 1.000 gp",
+					"cost": 100000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Si annullano le energie magiche contaminate in una sfera di 3 metri di raggio. Finché l'incantesimo non termina, la sfera si muove con voi, centrandovi. Le creature che si trovano nella sfera (compreso l'incantatore) non possono guadagnare {@adventure contamination levels|DoDk|12} e hanno immunità ai danni necrotici. Gli incantesimi contaminati non possono essere lanciati dalle creature nell'area."
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Octarine Spray",
+			"source": "DoDk",
+			"page": 228,
+			"level": 7,
+			"school": "V",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un frammento di delerium del valore di 100 gp, che l'incantesimo consuma",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Quando si lancia questo incantesimo, si guadagna un {@adventure level of contamination|DoDk|12}. Dalla mano escono raggi di luce ottantina. Ogni raggio è di colore diverso e ha un potere e uno scopo diversi, vedi la tabella sottostante. Ogni creatura in un cono di 18 metri deve superare un tiro salvezza di Costituzione. Per ogni bersaglio, tirare un {@dice d8} per determinare il colore del raggio che lo colpisce.",
+				{
+					"type": "table",
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"colLabels": [
+						"d8",
+						"Octarine Spray Effect"
+					],
+					"rows": [
+						[
+							"1",
+							"The target takes {@damage 20d6} psychic damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"2",
+							"The target takes {@damage 20d6} necrotic damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"3",
+							"The target takes {@damage 20d6} force damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"4",
+							"The target takes {@damage 20d6} radiant damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"5",
+							"The target takes {@damage 20d6} thunder damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"6",
+							"At the start of each of its turns, the affected target uses all its movement to move directly towards the closest creature it can see. Then, the affected target uses its action to make a melee attack against a randomly determined creature within its reach. If there is no creature within its reach, the affected target does nothing this turn. At the end of each of its turns, the affected target can make a Wisdom saving throw. If it succeeds, this effect ends for that target."
+						],
+						[
+							"7",
+							"At the start of each of its turns, the affected target gains one {@adventure level of contamination|DoDk|12}. At the end of each of its turns, an affected target can make a Constitution saving throw. If it succeeds, this effect ends for that target, but any {@adventure contamination levels|DoDk|12} gained remain."
+						],
+						[
+							"8",
+							"{@b Special.} The target is struck by an additional ray. Roll again twice. There's no limit to how many additional rays can strike a single creature in this manner."
+						]
+					]
+				}
+			],
+			"damageInflict": [
+				"force",
+				"necrotic",
+				"psychic",
+				"radiant",
+				"thunder"
+			],
+			"savingThrow": [
+				"constitution",
+				"wisdom"
+			],
+			"miscTags": [
+				"RO"
+			]
+		},
+		{
+			"name": "Purge Contamination",
+			"source": "DoDk",
+			"page": 228,
+			"level": 3,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "100 gp di fluidi alchemici o acqua santa, che l'incantesimo consuma",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Si applicano fluidi alchemici o acqua santa a una creatura umanoide contaminata mentre si recita un canto magico esigente che espelle i contaminanti eldritch dal corpo del bersaglio. Quando si finisce di lanciare l'incantesimo, tutte le {@adventure contamination levels|DoDk|12} e le mutazioni vengono rimosse dalla creatura. Guadagna un livello di {@condition exhaustion} per ogni {@adventure contamination level|DoDk|12} rimosso con questo incantesimo."
+			],
+			"conditionInflict": [
+				"exhaustion"
+			]
+		},
+		{
+			"name": "Ray of Contamination",
+			"source": "DoDk",
+			"page": 229,
+			"level": 6,
+			"school": "N",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un frammento di delerium del valore di 100 gp, che l'incantesimo consuma",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Quando si lancia questo incantesimo, si guadagna un {@adventure level of contamination|DoDk|12}. Un raggio ottantino scaturisce dal vostro dito puntato verso una creatura che potete vedere nel raggio d'azione. Il bersaglio deve superare un tiro salvezza di Costituzione. Se il tiro salvezza fallisce, la creatura subisce {@damage 16d6} danni necrotici e guadagna {@dice 1d4} {@adventure levels of contamination|DoDk|12}. Con un tiro salvezza riuscito, il bersaglio subisce la metà dei danni e non guadagna {@adventure contamination levels|DoDk|12}."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "A livelli più alti",
+					"entries": [
+						"Quando si lancia questo incantesimo utilizzando uno slot incantesimo di 7° livello o superiore, si può bersagliare una creatura aggiuntiva per ogni livello di slot superiore al 6°. Le creature devono trovarsi entro 9 metri l'una dall'altra quando le si bersaglia."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Ride the Rifts",
+			"source": "DoDk",
+			"page": 228,
+			"level": 3,
+			"school": "C",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "line",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un frammento di delerium del valore di 100 gp, che l'incantesimo consuma",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Quando si lancia questo incantesimo, si guadagna un {@adventure level of contamination|DoDk|12}. Un colpo di fulmine eldritico che forma una linea lunga 18 metri e larga 1,5 metri si sprigiona da voi in una direzione a vostra scelta. Ogni creatura nella linea deve superare un tiro salvezza di Destrezza. Una creatura subisce {@damage 10d6} danni da fulmine se il tiro salvezza fallisce, o la metà dei danni se riesce. Ci si teletrasporta in uno spazio non occupato visibile all'interno dell'area della linea."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "A livelli più alti",
+					"entries": [
+						"Quando si lancia questo incantesimo utilizzando uno slot di 4° livello o superiore, i danni aumentano del {@dice 2d6} per ogni livello di slot superiore al 3°."
+					]
+				}
+			],
+			"damageInflict": [
+				"lightning"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Sacrament of the Falling Fire",
+			"source": "DoDk",
+			"page": 229,
+			"level": 9,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un frammento di delerium del valore di 100 gp per ogni creatura partecipante, che l'incantesimo consuma",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Questo incantesimo può essere lanciato solo in un'area coperta dalla Nebbia Profonda.",
+				"Si esegue una cerimonia sacra che coinvolge fino a 12 creature umanoidi fedeli e consenzienti e che termina quando ogni creatura partecipante si conficca un frammento di delerium nel petto. Queste creature diventano santificate (vedi il dossier Seguaci del Fuoco Cadente nel capitolo 3 di Dungeon of Drakkenheim).",
+				"Quando si finisce di lanciare questo incantesimo, un {@creature shadow} ostile appare e attacca ogni partecipante, come manifestazione dell'oscurità interiore di quel personaggio. Il GM può stabilire che un personaggio che porta nel cuore grande rabbia, paura o odio provochi invece la manifestazione di un {@creature wraith}."
+			]
+		},
+		{
+			"name": "Siphon Contamination",
+			"source": "DoDk",
+			"page": 229,
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "500 gp di fluidi alchemici appositamente preparati e un geode di delerium del valore di 5.000 gp, tutti consumati dall'incantesimo",
+					"cost": 50000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Questo incantesimo impegnativo trasferisce {@adventure contamination|DoDk|12} da una creatura all'altra. Quando si lancia questo incantesimo, si deve prima toccare una creatura umanoide consenziente con uno o più {@adventure levels of contamination|DoDk|12}, oppure una ex creatura umanoide la cui forma attuale è il risultato di una trasformazione mostruosa. Poi si tocca un'altra creatura umanoide consenziente.",
+				"Se entrambe le creature toccate erano creature umanoidi consenzienti, si rimuovono tutte le {@adventure contamination levels|DoDk|12} e le mutazioni dalla prima creatura, poi la seconda creatura toccata guadagna un numero di {@adventure contamination levels|DoDk|12} pari al numero di livelli rimossi dalla prima creatura.",
+				"Se la prima creatura toccata è un ex umanoide che ha subito una trasformazione mostruosa {@adventure contamination|DoDk|12} e la seconda creatura è una creatura umanoide consenziente con un livello del personaggio o un punteggio di sfida pari o superiore al punteggio di sfida della creatura trasformata, si ripristina la creatura completamente contaminata alla sua forma originale, quindi la creatura umanoide subisce immediatamente una trasformazione mostruosa come se avesse guadagnato sei {@adventure contamination levels|DoDk|12}.",
+				"La seconda creatura toccata non può impedire o annullare in alcun modo queste {@adventure contamination levels|DoDk|12} o una conseguente trasformazione, altrimenti l'incantesimo fallisce senza effetto."
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Warp Bolt",
+			"source": "DoDk",
+			"page": 229,
+			"level": 2,
+			"school": "V",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un frammento di delerium del valore di 100 gp, che l'incantesimo consuma",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Quando si lancia questo incantesimo, si guadagna un {@adventure level of contamination|DoDk|12}. Un fulmine octarino arcuato colpisce una creatura nel raggio d'azione. Se il bersaglio ha uno o più {@adventure contamination levels|DoDk|12}, viene colpito automaticamente. Altrimenti, effettuare un attacco con incantesimo a distanza contro quella creatura. Se viene colpito, il bersaglio subisce {@damage 6d6} danni necrotici e guadagna un {@adventure level of contamination|DoDk|12}.",
+				"Si può creare un nuovo fulmine come azione in qualsiasi turno, finché l'incantesimo non termina."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "A livelli più alti",
+					"entries": [
+						"Quando si lancia questo incantesimo utilizzando uno slot incantesimo di 3° livello o superiore, si può bersagliare 1 creatura aggiuntiva per ogni livello di incantesimo superiore al 2°."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"spellAttack": [
+				"R"
+			]
+		}
+	]
+}
