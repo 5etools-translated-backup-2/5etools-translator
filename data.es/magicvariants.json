@@ -927,10 +927,10 @@
 			"type": "GV",
 			"requires": [
 				{
-					"type": "A"
+					"arrow": true
 				},
 				{
-					"type": "AF"
+					"bolt": true
 				}
 			],
 			"excludes": {
@@ -1089,7 +1089,7 @@
 			],
 			"ammo": true,
 			"inherits": {
-				"namePrefix": "Bloodseeker Ammunition ",
+				"namePrefix": "Bloodseeker ",
 				"source": "BMT",
 				"page": 66,
 				"rarity": "very rare",
@@ -1134,9 +1134,6 @@
 			"requires": [
 				{
 					"bow": true
-				},
-				{
-					"crossbow": true
 				}
 			],
 			"inherits": {
@@ -1156,9 +1153,6 @@
 			"requires": [
 				{
 					"bow": true
-				},
-				{
-					"crossbow": true
 				}
 			],
 			"inherits": {
@@ -1227,6 +1221,27 @@
 				"entries": [
 					"La superficie exterior y las juntas internas de esta armadura zumban con engranajes entrelazados, recurriendo a la magia ordenada del plano de Mechanus.",
 					"La armadura tiene 4 cargas. Si haces una tirada de {@dice d20} mientras llevas esta armadura, puedes gastar 1 carga para cambiar el número obtenido a un 10. La armadura recupera {@dice 1d4} de las cargas gastadas al amanecer."
+				]
+			}
+		},
+		{
+			"name": "Aplastador de cometas",
+			"type": "GV",
+			"requires": [
+				{
+					"type": "M",
+					"dmgType": "B"
+				}
+			],
+			"inherits": {
+				"namePrefix": "Comet Smasher ",
+				"source": "DoDk",
+				"page": 230,
+				"rarity": "very rare",
+				"reqAttune": true,
+				"entries": [
+					"La cabeza de esta arma contundente está hecha de un enorme cristal de delerium que crepita con energías arcanas. Cuando golpeas con un ataque con esta arma, el objetivo recibe un ({@dice 3d6}) de daño necrótico adicional.",
+					"Cuando sacas un 20 en una tirada de ataque hecha con esta arma, se desata una anomalía arcana (ver Mazmorras de Drakkenheim). Puedes tirar dos veces en la tabla y elegir cualquiera de los dos resultados."
 				]
 			}
 		},
@@ -1331,6 +1346,29 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "Hoja forjada Delerium",
+			"type": "GV",
+			"requires": [
+				{
+					"sword": true
+				}
+			],
+			"inherits": {
+				"namePrefix": "Delerium-Forged Blade ",
+				"source": "DoDk",
+				"page": 230,
+				"rarity": "rare",
+				"bonusWeapon": "+2",
+				"entries": [
+					"Esta espada tiene una pequeña esquirla de delerium encerrada en cristal y engarzada en la empuñadura como una piedra preciosa. La hoja está hecha de hierro meteórico infundido con polvo de delerium, lo que hace que brille suavemente con luz octarina.",
+					"Obtienes un {=bonusWeapon} de bonificación a las tiradas de ataque y daño realizadas con esta arma.",
+					"Cuando realizas un ataque con esta arma, puedes utilizar tu modificador de habilidad de lanzamiento de conjuros, en lugar de Fuerza o Destreza, para las tiradas de ataque y daño. Además, puedes utilizar esta arma como foco de conjuro.",
+					"Cuando obtienes un 20 en una tirada de ataque realizada con esta arma contra un humanoide, éste debe tener éxito en una tirada de salvación de Constitución DC 15 o recibir un ({@dice 3d6}) de daño necrótico adicional y ganar un {@adventure level of contamination|DoDk|12}."
+				]
+			},
+			"hasFluffImages": true
+		},
+		{
 			"name": "Pértiga Demonbone",
 			"type": "GV",
 			"requires": [
@@ -1399,9 +1437,6 @@
 			"requires": [
 				{
 					"bow": true
-				},
-				{
-					"crossbow": true
 				}
 			],
 			"inherits": {
@@ -1459,6 +1494,9 @@
 					"type": "AF"
 				}
 			],
+			"excludes": {
+				"name": "Célula de energía"
+			},
 			"ammo": true,
 			"inherits": {
 				"namePrefix": "Dried Leech ",
@@ -1660,7 +1698,7 @@
 				}
 			],
 			"inherits": {
-				"namePrefix": "Fool's Blade ",
+				"namePrefix": "Fool's ",
 				"source": "BMT",
 				"page": 36,
 				"rarity": "very rare",
@@ -1804,13 +1842,10 @@
 			"requires": [
 				{
 					"bow": true
-				},
-				{
-					"crossbow": true
 				}
 			],
 			"inherits": {
-				"namePrefix": "Glimmering Moonbow ",
+				"namePrefix": "Glimmering Moon ",
 				"source": "BMT",
 				"page": 36,
 				"resist": [
@@ -1860,6 +1895,28 @@
 					"calm emotions"
 				]
 			}
+		},
+		{
+			"name": "Flechas endurecidas con punta de Delerium",
+			"type": "GV",
+			"requires": [
+				{
+					"arrow": true
+				},
+				{
+					"bolt": true
+				}
+			],
+			"inherits": {
+				"namePrefix": "Hardened Delerium-tipped ",
+				"source": "DoDk",
+				"page": 230,
+				"rarity": "rare",
+				"entries": [
+					"Esta munición tiene una punta de flecha delerium refinada. Una criatura alcanzada por un ataque a distancia con una de estas flechas recibe un ({@dice 3d6}) de daño necrótico adicional y debe tener éxito en una tirada de salvación de Constitución DC 15 o ganar un {@adventure level of contamination|DoDk|12}. Cuando alcanza a un objetivo, la punta de delirio se convierte en polvo y la flecha deja de ser mágica."
+				]
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "Arma de fuego infernal",
@@ -3100,6 +3157,33 @@
 			}
 		},
 		{
+			"name": "Arco Starcrossed",
+			"type": "GV",
+			"requires": [
+				{
+					"bow": true
+				},
+				{
+					"crossbow": true
+				}
+			],
+			"inherits": {
+				"namePrefix": "Starcrossed ",
+				"source": "DoDk",
+				"page": 232,
+				"rarity": "rare",
+				"reqAttune": true,
+				"bonusWeapon": "+2",
+				"recharge": "dawn",
+				"rechargeAmount": 3,
+				"charges": 3,
+				"entries": [
+					"Este arco o ballesta mágica tiene una intrincada disposición de esquirlas de delerium y lentes de enfoque a lo largo de la culata donde normalmente se cargaría una saeta, y en su lugar conjura mágicamente sus propios proyectiles. Obtienes un bonificador {=bonusWeapon} a las tiradas de ataque y daño realizadas con esta arma, que inflige daño radiante en lugar de daño perforante e ignora las propiedades de la munición y la carga.",
+					"El arma tiene 3 cargas, que se recuperan cada día al amanecer. Cuando golpeas con un ataque a distancia con ella, puedes hacer que el rayo explote en un brillante destello de luz. El objetivo alcanzado y cualquier criatura en un radio de 3 metros deben superar una tirada de salvación de Constitución DC 15 o quedan cegados hasta el final de tu siguiente turno."
+				]
+			}
+		},
+		{
 			"name": "Ballesta Starshot",
 			"type": "GV",
 			"requires": [
@@ -3108,7 +3192,7 @@
 				}
 			],
 			"inherits": {
-				"namePrefix": "Starshot Crossbow ",
+				"namePrefix": "Starshot ",
 				"source": "BMT",
 				"page": 38,
 				"rarity": "rare",
@@ -3637,9 +3721,12 @@
 					"type": "AF"
 				}
 			],
+			"excludes": {
+				"name": "Célula de energía"
+			},
 			"ammo": true,
 			"inherits": {
-				"namePrefix": "Winged Ammunition ",
+				"namePrefix": "Winged ",
 				"source": "BMT",
 				"page": 69,
 				"rarity": "uncommon",
