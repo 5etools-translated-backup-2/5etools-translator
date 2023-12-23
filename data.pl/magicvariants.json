@@ -927,10 +927,10 @@
 			"type": "GV",
 			"requires": [
 				{
-					"type": "A"
+					"arrow": true
 				},
 				{
-					"type": "AF"
+					"bolt": true
 				}
 			],
 			"excludes": {
@@ -1089,7 +1089,7 @@
 			],
 			"ammo": true,
 			"inherits": {
-				"namePrefix": "Bloodseeker Ammunition ",
+				"namePrefix": "Bloodseeker ",
 				"source": "BMT",
 				"page": 66,
 				"rarity": "very rare",
@@ -1134,9 +1134,6 @@
 			"requires": [
 				{
 					"bow": true
-				},
-				{
-					"crossbow": true
 				}
 			],
 			"inherits": {
@@ -1156,9 +1153,6 @@
 			"requires": [
 				{
 					"bow": true
-				},
-				{
-					"crossbow": true
 				}
 			],
 			"inherits": {
@@ -1227,6 +1221,27 @@
 				"entries": [
 					"Zewnętrzna powierzchnia i wewnętrzne połączenia tej zbroi wirują z zazębiającymi się kołami zębatymi, czerpiąc z uporządkowanej magii płaszczyzny Mechanusa.",
 					"Zbroja ma 4 ładunki. Jeśli wykonasz {@dice d20} rzutów podczas noszenia tej zbroi, możesz wydać 1 ładunek, aby zmienić wyrzuconą liczbę na 10. Zbroja odzyskuje {@dice 1d4} zużytych ładunków codziennie o świcie."
+				]
+			}
+		},
+		{
+			"name": "Comet Smasher",
+			"type": "GV",
+			"requires": [
+				{
+					"type": "M",
+					"dmgType": "B"
+				}
+			],
+			"inherits": {
+				"namePrefix": "Comet Smasher ",
+				"source": "DoDk",
+				"page": 230,
+				"rarity": "very rare",
+				"reqAttune": true,
+				"entries": [
+					"Głowica tej broni obuchowej jest wykonana z masywnego kryształu delerium, który trzeszczy od tajemnych energii. Przy trafieniu tą bronią cel otrzymuje dodatkowe ({@dice 3d6}) obrażeń nekrotycznych.",
+					"Wyrzucenie 20 w rzucie ataku tą bronią uwalnia tajemną anomalię (patrz Lochy Drakkenheimu). Możesz rzucić dwa razy i wybrać jeden z wyników."
 				]
 			}
 		},
@@ -1331,6 +1346,29 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "Kute ostrze Delerium",
+			"type": "GV",
+			"requires": [
+				{
+					"sword": true
+				}
+			],
+			"inherits": {
+				"namePrefix": "Delerium-Forged Blade ",
+				"source": "DoDk",
+				"page": 230,
+				"rarity": "rare",
+				"bonusWeapon": "+2",
+				"entries": [
+					"Ten miecz ma niewielki odłamek delerium zamknięty w szkle i osadzony w rękojeści niczym kamień szlachetny. Ostrze wykonane jest z meteorycznego żelaza nasyconego pyłem delerium, co sprawia, że delikatnie świeci oktarynowym światłem.",
+					"Otrzymujesz {=bonusWeapon} premii do rzutów ataku i obrażeń zadawanych tą bronią.",
+					"Kiedy wykonujesz atak tą bronią, możesz użyć swojego modyfikatora umiejętności rzucania czarów, zamiast Siły lub Zręczności, do rzutów ataku i obrażeń. Dodatkowo, możesz użyć tej broni jako fokusu do rzucania czarów.",
+					"Kiedy wyrzucisz 20 w rzucie ataku wykonanym tą bronią przeciwko humanoidowi, humanoid musi wykonać rzut obronny Konstytucji o ST 15 albo otrzyma dodatkowe ({@dice 3d6}) obrażenia nekrotyczne i zyska jeden {@adventure level of contamination|DoDk|12}."
+				]
+			},
+			"hasFluffImages": true
+		},
+		{
 			"name": "Demoniczna broń drzewcowa",
 			"type": "GV",
 			"requires": [
@@ -1399,9 +1437,6 @@
 			"requires": [
 				{
 					"bow": true
-				},
-				{
-					"crossbow": true
 				}
 			],
 			"inherits": {
@@ -1459,6 +1494,9 @@
 					"type": "AF"
 				}
 			],
+			"excludes": {
+				"name": "Ogniwo energetyczne"
+			},
 			"ammo": true,
 			"inherits": {
 				"namePrefix": "Dried Leech ",
@@ -1660,7 +1698,7 @@
 				}
 			],
 			"inherits": {
-				"namePrefix": "Fool's Blade ",
+				"namePrefix": "Fool's ",
 				"source": "BMT",
 				"page": 36,
 				"rarity": "very rare",
@@ -1804,13 +1842,10 @@
 			"requires": [
 				{
 					"bow": true
-				},
-				{
-					"crossbow": true
 				}
 			],
 			"inherits": {
-				"namePrefix": "Glimmering Moonbow ",
+				"namePrefix": "Glimmering Moon ",
 				"source": "BMT",
 				"page": 36,
 				"resist": [
@@ -1860,6 +1895,28 @@
 					"calm emotions"
 				]
 			}
+		},
+		{
+			"name": "Strzały z hartowaną końcówką Delerium",
+			"type": "GV",
+			"requires": [
+				{
+					"arrow": true
+				},
+				{
+					"bolt": true
+				}
+			],
+			"inherits": {
+				"namePrefix": "Hardened Delerium-tipped ",
+				"source": "DoDk",
+				"page": 230,
+				"rarity": "rare",
+				"entries": [
+					"Ta amunicja ma wyrafinowany grot delerium. Istota trafiona atakiem dystansowym przy użyciu jednej z tych strzał otrzymuje dodatkowe ({@dice 3d6}) obrażenia nekrotyczne i musi wykonać rzut obronny na Konstytucję o ST 15 lub zyskać jeden {@adventure level of contamination|DoDk|12}. Po trafieniu w cel, końcówka delerium rozpada się w pył, a strzała przestaje być magiczna."
+				]
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "Broń Hellfire",
@@ -3100,6 +3157,33 @@
 			}
 		},
 		{
+			"name": "Starcrossed Bow",
+			"type": "GV",
+			"requires": [
+				{
+					"bow": true
+				},
+				{
+					"crossbow": true
+				}
+			],
+			"inherits": {
+				"namePrefix": "Starcrossed ",
+				"source": "DoDk",
+				"page": 232,
+				"rarity": "rare",
+				"reqAttune": true,
+				"bonusWeapon": "+2",
+				"recharge": "dawn",
+				"rechargeAmount": 3,
+				"charges": 3,
+				"entries": [
+					"Ten magiczny łuk lub kusza ma skomplikowany układ odłamków delerium i soczewek skupiających wzdłuż kolby, gdzie normalnie ładowany byłby bełt, a zamiast tego magicznie wyczarowuje własne pociski. Zyskujesz {=bonusWeapon} premii do rzutów ataku i obrażeń zadawanych tą bronią, która zadaje obrażenia od promieniowania zamiast obrażeń przebijających i ignoruje właściwości amunicji i ładowania.",
+					"Broń ma 3 ładunki, które są odnawiane każdego dnia o świcie. Gdy trafisz atakiem dystansowym przy użyciu tej broni, możesz sprawić, że bełt eksploduje w błyskotliwym rozbłysku światła. Trafiony cel i wszystkie istoty w promieniu 3 metrów od niego muszą wykonać rzut obronny na Konstytucję o ST 15 lub zostaną oślepione do końca następnej tury."
+				]
+			}
+		},
+		{
 			"name": "Kusza Starshot",
 			"type": "GV",
 			"requires": [
@@ -3108,7 +3192,7 @@
 				}
 			],
 			"inherits": {
-				"namePrefix": "Starshot Crossbow ",
+				"namePrefix": "Starshot ",
 				"source": "BMT",
 				"page": 38,
 				"rarity": "rare",
@@ -3637,9 +3721,12 @@
 					"type": "AF"
 				}
 			],
+			"excludes": {
+				"name": "Ogniwo energetyczne"
+			},
 			"ammo": true,
 			"inherits": {
-				"namePrefix": "Winged Ammunition ",
+				"namePrefix": "Winged ",
 				"source": "BMT",
 				"page": 69,
 				"rarity": "uncommon",

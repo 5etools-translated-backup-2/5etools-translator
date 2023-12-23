@@ -1,0 +1,737 @@
+{
+	"spell": [
+		{
+			"name": "Conjure the Deep Haze",
+			"source": "DoDk",
+			"page": 226,
+			"level": 5,
+			"school": "C",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "a delerium fragment worth 100 gp, which the spell consumes",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"When you cast this spell, you gain one {@adventure level of contamination|DoDk|12}.",
+				"Tworzysz kulę Głębokiej Mgły o promieniu 6 metrów w wybranym punkcie w zasięgu. Mgła rozprzestrzenia się za rogami. Utrzymuje się przez cały czas trwania zaklęcia lub do momentu, gdy silny wiatr rozproszy mgłę, kończąc działanie zaklęcia. Jej obszar jest mocno zaciemniony.",
+				"Kiedy istota wchodzi w obszar działania zaklęcia po raz pierwszy w swojej turze lub rozpoczyna w nim swoją turę, musi wykonać rzut obronny na Konstytucję. W przypadku nieudanego rzutu obronnego, istota otrzymuje ({@dice 8d6}) obrażeń nekrotycznych i zyskuje jeden {@adventure level of contamination|DoDk|12}. W przypadku udanego rzutu obronnego, istota otrzymuje o połowę mniej obrażeń i nie zyskuje żadnych {@adventure contamination levels|DoDk|12}. Obrażenia są zadawane nawet jeśli istota wstrzymuje oddech lub nie musi oddychać."
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"OBS"
+			]
+		},
+		{
+			"name": "Contaminated Power",
+			"source": "DoDk",
+			"page": 226,
+			"level": 8,
+			"school": "T",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "odłamek delerium o wartości 500 gp, który jest zużywany przez zaklęcie",
+					"cost": 50000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Kiedy rzucasz to zaklęcie, zyskujesz jeden {@adventure level of contamination|DoDk|12}. Czerpiesz nieograniczoną magię tajemną z odłamka delerium, który trzymasz w dłoni. Do końca działania zaklęcia zyskujesz następujące korzyści:",
+				{
+					"type": "list",
+					"items": [
+						"Kiedy rzucasz zaklęcie zadające obrażenia od kwasu, ognia, zimna, błyskawic lub trucizny, możesz zmienić typ obrażeń na obrażenia od siły, nekrotyczne, psychiczne lub promieniowania.",
+						"Raz na turę, kiedy zadajesz obrażenia zaklęciem, możesz zadać dodatkowe {@damage 1d12} obrażeń nekrotycznych za każdy {@adventure contamination level|DoDk|12} uzyskany cel tego zaklęcia.",
+						"Kiedy rzucasz zaklęcie, które zmusza istotę do wykonania rzutu obronnego, aby oprzeć się jego efektom, możesz zyskać jeden {@adventure level of contamination|DoDk|12}. Jeśli to zrobisz, jeden z celów zaklęcia będzie miał utrudniony pierwszy rzut obronny przeciwko temu zaklęciu."
+					]
+				},
+				"Zaklęcie to nie może zostać rozproszone przez {@spell dispel magic}."
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Contamination Immunity",
+			"source": "DoDk",
+			"page": 226,
+			"level": 7,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Eldrycka lilia zmieszana ze specjalnie przygotowanymi oczyszczonymi płynami o wartości 250 gp, które są zużywane przez zaklęcie.",
+					"cost": 25000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"entries": [
+				"Do końca działania zaklęcia jedna chętna istota, której dotkniesz, jest odporna na obrażenia nekrotyczne i nie może zyskać {@adventure contamination levels|DoDk|12}. Dotknięta istota może normalnie odpoczywać w obrębie Mgły.",
+				"Zaklęcie to kończy się natychmiast, jeśli istota rzuci skażone zaklęcie."
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Delerium Blast",
+			"source": "DoDk",
+			"page": 227,
+			"level": 4,
+			"school": "V",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 150
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "fragment delerium o wartości 100 gp, który jest zużywany przez zaklęcie",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Kiedy rzucasz to zaklęcie, zyskujesz jeden {@adventure level of contamination|DoDk|12}.",
+				"Rozpalasz energię tajemną przechowywaną w trzymanym w dłoni fragmencie delerium i ciskasz nim w kierunku widocznej przestrzeni. Eksploduje on w kuli o promieniu 6 metrów, wypełnionej nieregularną energią psychiczną, która obezwładnia umysły i zmysły znajdujących się w niej osób. Każda istota w kuli musi wykonać rzut obronny na inteligencję. W przypadku nieudanego rzutu obronnego, istota otrzymuje ({@dice 10d6}) obrażeń psychicznych i staje się {@condition incapacitated} do końca swojej następnej tury. W przypadku udanego rzutu obronnego, cel otrzymuje o połowę mniejsze obrażenia i nie odczuwa żadnych innych efektów zaklęcia."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "Na wyższych poziomach",
+					"entries": [
+						"Kiedy rzucasz to zaklęcie przy użyciu slotu zaklęć 5. poziomu lub wyższego, obrażenia wzrastają o {@dice 2d6} za każdy poziom slotu powyżej 4. poziomu."
+					]
+				}
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrow": [
+				"intelligence"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Delerium Orb",
+			"source": "DoDk",
+			"page": 227,
+			"level": 1,
+			"school": "V",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "fragment delerium o wartości 100 gp, który jest zużywany przez zaklęcie",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Kiedy rzucasz to zaklęcie, zyskujesz jeden {@adventure level of contamination|DoDk|12}. Czerpiesz chaotyczną moc magiczną z fragmentu delerium trzymanego w dłoni i rażąc paradoksalną mocą istotę, którą widzisz w zasięgu. Wybierz jeden wynik umiejętności, a następnie zadaj obrażenia od zimna, ognia, błyskawic, nekrotyczne, psychiczne lub od promieniowania. Cel musi wykonać udany rzut obronny z wybranym wynikiem umiejętności; w przypadku nieudanego rzutu obronnego otrzyma {@damage 6d6} obrażeń wybranego typu lub o połowę mniej w przypadku udanego rzutu obronnego."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "Na wyższych poziomach",
+					"entries": [
+						"Kiedy rzucasz to zaklęcie, używając slotu zaklęć 2. poziomu lub wyższego, obrażenia wzrastają o {@dice 2d6} za każdy poziom slotu powyżej 1. poziomu."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Forced Evolution",
+			"source": "DoDk",
+			"page": 227,
+			"level": 4,
+			"school": "T",
+			"time": [
+				{
+					"number": 8,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Koktajl alchemiczny wykonany z rzadkich składników i pyłu delerium o wartości 250 sztuk złota, który cel spożywa w ramach zaklęcia.",
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Za pomocą tego zaklęcia przekształcasz mutację uzyskaną z {@adventure contamination|DoDk|12}. Jedna z istniejących mutacji celu zostaje usunięta i zastąpiona inną. Mutacja ta może zostać wybrana przez Mistrza Gry lub ustalona losowo (patrz Dodatek C do Lochów Drakkenheimu)."
+			]
+		},
+		{
+			"name": "Neutralizing Field",
+			"source": "DoDk",
+			"page": 228,
+			"level": 5,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "sphere",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Kryształ delerium lub święta relikwia o wartości 1000 gp",
+					"cost": 100000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Negujesz skażone energie magiczne w kuli o promieniu 3 metrów. Do końca działania zaklęcia kula porusza się wraz z tobą, skupiając się na tobie. Stworzenia w sferze (w tym ty) nie mogą zyskać {@adventure contamination levels|DoDk|12} i są odporne na obrażenia nekrotyczne. Skażone zaklęcia nie mogą być rzucane przez istoty znajdujące się w tym obszarze."
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Octarine Spray",
+			"source": "DoDk",
+			"page": 228,
+			"level": 7,
+			"school": "V",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "fragment delerium o wartości 100 gp, który jest zużywany przez zaklęcie",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Kiedy rzucasz to zaklęcie, zyskujesz jeden {@adventure level of contamination|DoDk|12}. Z twojej dłoni wystrzeliwują ośmiornicowe promienie światła. Każdy promień ma inny kolor oraz inną moc i przeznaczenie, patrz tabela poniżej. Każda istota w 18-metrowym stożku musi wykonać rzut obronny na Konstytucję. Dla każdego celu rzuć {@dice d8}, aby określić, który kolor promienia na niego działa.",
+				{
+					"type": "table",
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"colLabels": [
+						"d8",
+						"Octarine Spray Effect"
+					],
+					"rows": [
+						[
+							"1",
+							"The target takes {@damage 20d6} psychic damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"2",
+							"The target takes {@damage 20d6} necrotic damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"3",
+							"The target takes {@damage 20d6} force damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"4",
+							"The target takes {@damage 20d6} radiant damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"5",
+							"The target takes {@damage 20d6} thunder damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"6",
+							"At the start of each of its turns, the affected target uses all its movement to move directly towards the closest creature it can see. Then, the affected target uses its action to make a melee attack against a randomly determined creature within its reach. If there is no creature within its reach, the affected target does nothing this turn. At the end of each of its turns, the affected target can make a Wisdom saving throw. If it succeeds, this effect ends for that target."
+						],
+						[
+							"7",
+							"At the start of each of its turns, the affected target gains one {@adventure level of contamination|DoDk|12}. At the end of each of its turns, an affected target can make a Constitution saving throw. If it succeeds, this effect ends for that target, but any {@adventure contamination levels|DoDk|12} gained remain."
+						],
+						[
+							"8",
+							"{@b Special.} The target is struck by an additional ray. Roll again twice. There's no limit to how many additional rays can strike a single creature in this manner."
+						]
+					]
+				}
+			],
+			"damageInflict": [
+				"force",
+				"necrotic",
+				"psychic",
+				"radiant",
+				"thunder"
+			],
+			"savingThrow": [
+				"constitution",
+				"wisdom"
+			],
+			"miscTags": [
+				"RO"
+			]
+		},
+		{
+			"name": "Purge Contamination",
+			"source": "DoDk",
+			"page": 228,
+			"level": 3,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "100 gp płynów alchemicznych lub wody święconej, które zużywa zaklęcie",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Nakładasz płyny alchemiczne lub wodę święconą na skażoną istotę humanoidalną, recytując jednocześnie wymagającą magiczną pieśń, która usuwa eldryckie skażenia z ciała celu. Po zakończeniu rzucania zaklęcia wszystkie {@adventure contamination levels|DoDk|12} i mutacje zostają usunięte z istoty. Następnie zyskuje ona jeden poziom {@condition exhaustion} za każdy {@adventure contamination level|DoDk|12} usunięty za pomocą tego zaklęcia."
+			],
+			"conditionInflict": [
+				"exhaustion"
+			]
+		},
+		{
+			"name": "Ray of Contamination",
+			"source": "DoDk",
+			"page": 229,
+			"level": 6,
+			"school": "N",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "fragment delerium o wartości 100 gp, który jest zużywany przez zaklęcie",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Kiedy rzucasz to zaklęcie, zyskujesz jeden {@adventure level of contamination|DoDk|12}. Ośmiornicowy promień wystrzeliwuje z twojego palca wskazującego w kierunku istoty, którą widzisz w zasięgu. Cel musi wykonać rzut obronny na Konstytucję. W przypadku nieudanego rzutu, istota otrzymuje {@damage 16d6} obrażeń nekrotycznych i zyskuje {@dice 1d4} {@adventure levels of contamination|DoDk|12}. Przy udanym rzucie obronnym cel otrzymuje o połowę mniej obrażeń i nie otrzymuje żadnych {@adventure contamination levels|DoDk|12}."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "Na wyższych poziomach",
+					"entries": [
+						"Kiedy rzucasz to zaklęcie używając slotu zaklęć 7. poziomu lub wyższego, możesz obrać za cel jedną dodatkową istotę za każdy slot na poziomie wyższym niż 6. Stworzenia muszą znajdować się w odległości 9 metrów od siebie w momencie namierzania."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Ride the Rifts",
+			"source": "DoDk",
+			"page": 228,
+			"level": 3,
+			"school": "C",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "line",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "fragment delerium o wartości 100 gp, który jest zużywany przez zaklęcie",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Kiedy rzucasz to zaklęcie, zyskujesz jeden {@adventure level of contamination|DoDk|12}. Uderzenie eldryckiej błyskawicy tworzące linię o długości 18 metrów i szerokości 1,5 metra wystrzeliwuje z ciebie w wybranym przez ciebie kierunku. Każda istota w linii musi wykonać rzut obronny na Zręczność. Istota otrzymuje {@damage 10d6} obrażeń od błyskawic w przypadku nieudanego rzutu obronnego lub o połowę mniej obrażeń w przypadku udanego rzutu obronnego. Następnie teleportujesz się do niezajętego, widocznego miejsca w obszarze działania linii."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "Na wyższych poziomach",
+					"entries": [
+						"Kiedy rzucasz to zaklęcie przy użyciu slotu zaklęć 4. poziomu lub wyższego, obrażenia wzrastają o {@dice 2d6} za każdy slot na poziomie wyższym niż 3."
+					]
+				}
+			],
+			"damageInflict": [
+				"lightning"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Sacrament of the Falling Fire",
+			"source": "DoDk",
+			"page": 229,
+			"level": 9,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "fragment delerium o wartości 100 gp za każdą uczestniczącą istotę, który jest zużywany przez zaklęcie",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Zaklęcie to może zostać rzucone tylko na obszarze objętym Głębokim Zamgleniem.",
+				"Przeprowadzasz świętą ceremonię z udziałem maksymalnie 12 wiernych i chętnych istot humanoidalnych, która kończy się, gdy każda z uczestniczących istot wbije odłamek delerium w swoją klatkę piersiową. Istoty te zostają uświęcone (patrz dokumentacja Wyznawców Spadającego Ognia w rozdziale 3 Lochów Drakkenheimu).",
+				"Po zakończeniu rzucania tego zaklęcia, wrogi {@creature shadow} pojawia się i atakuje każdego uczestnika, jako manifestacja wewnętrznego mroku danej postaci. GM może zdecydować, że postać, która nosi w sercu wielki gniew, strach lub nienawiść, zamiast tego zamanifestuje {@creature wraith}."
+			]
+		},
+		{
+			"name": "Siphon Contamination",
+			"source": "DoDk",
+			"page": 229,
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "specjalnie przygotowane płyny alchemiczne o wartości 500 gp i geoda delerium o wartości 5000 gp, które są zużywane przez zaklęcie.",
+					"cost": 50000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"To wymagające zaklęcie przenosi {@adventure contamination|DoDk|12} z jednej istoty na drugą. Kiedy rzucasz to zaklęcie, musisz najpierw dotknąć chętnej istoty humanoidalnej z co najmniej jednym {@adventure levels of contamination|DoDk|12} lub byłej istoty humanoidalnej, której obecna forma jest wynikiem potwornej transformacji. Następnie dotykasz innej chętnej istoty humanoidalnej.",
+				"Jeśli obie dotknięte istoty były chętnymi istotami humanoidalnymi, usuwasz wszystkie {@adventure contamination levels|DoDk|12} i mutacje z pierwszej istoty, a następnie druga dotknięta istota zyskuje liczbę {@adventure contamination levels|DoDk|12} równą liczbie poziomów usuniętych z pierwszej istoty.",
+				"Jeśli pierwszą istotą, której dotkniesz, jest były humanoid, który doznał potwornej {@adventure contamination|DoDk|12}, a drugą istotą jest chętna istota humanoidalna o poziomie postaci lub poziomie wyzwania równym lub wyższym niż poziom wyzwania przemienionej istoty, przywracasz w pełni skażoną istotę do jej pierwotnej postaci, a następnie istota humanoidalna natychmiast przechodzi potworną transformację, tak jakby zyskała sześć {@adventure contamination levels|DoDk|12}.",
+				"Druga dotknięta istota nie może w żaden sposób zapobiec ani zanegować tych {@adventure contamination levels|DoDk|12} lub wynikających z nich przemian, w przeciwnym razie zaklęcie nie odniesie żadnego skutku."
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Warp Bolt",
+			"source": "DoDk",
+			"page": 229,
+			"level": 2,
+			"school": "V",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "fragment delerium o wartości 100 gp, który jest zużywany przez zaklęcie",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Kiedy rzucasz to zaklęcie, zyskujesz jeden {@adventure level of contamination|DoDk|12}. Łukowata błyskawica oktarynowa uderza w istotę w zasięgu. Jeśli cel posiada jeden lub więcej {@adventure contamination levels|DoDk|12}, zostaje trafiony automatycznie. W przeciwnym razie wykonaj dystansowy atak zaklęciem przeciwko tej istocie. Przy trafieniu cel otrzymuje {@damage 6d6} obrażeń nekrotycznych i zyskuje jeden {@adventure level of contamination|DoDk|12}.",
+				"Możesz stworzyć nowy piorun jako swoją akcję w dowolnej turze, aż do zakończenia działania zaklęcia."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "Na wyższych poziomach",
+					"entries": [
+						"Kiedy rzucasz to zaklęcie przy użyciu slotu zaklęć 3. poziomu lub wyższego, możesz obrać za cel 1 dodatkową istotę za każdy poziom zaklęcia powyżej 2. poziomu."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"spellAttack": [
+				"R"
+			]
+		}
+	]
+}
