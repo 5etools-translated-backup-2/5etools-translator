@@ -927,10 +927,10 @@
 			"type": "GV",
 			"requires": [
 				{
-					"type": "A"
+					"arrow": true
 				},
 				{
-					"type": "AF"
+					"bolt": true
 				}
 			],
 			"excludes": {
@@ -1089,7 +1089,7 @@
 			],
 			"ammo": true,
 			"inherits": {
-				"namePrefix": "Bloodseeker Ammunition ",
+				"namePrefix": "Bloodseeker ",
 				"source": "BMT",
 				"page": 66,
 				"rarity": "very rare",
@@ -1134,9 +1134,6 @@
 			"requires": [
 				{
 					"bow": true
-				},
-				{
-					"crossbow": true
 				}
 			],
 			"inherits": {
@@ -1156,9 +1153,6 @@
 			"requires": [
 				{
 					"bow": true
-				},
-				{
-					"crossbow": true
 				}
 			],
 			"inherits": {
@@ -1227,6 +1221,27 @@
 				"entries": [
 					"Het buitenoppervlak en de interne verbindingen van dit pantser zijn voorzien van in elkaar grijpende tandwielen, die gebruikmaken van de ordelijke magie van het vlak van Mechanus.",
 					"Het harnas heeft 4 ladingen. Als je een {@dice d20} rol maakt terwijl je dit harnas draagt, kun je 1 lading uitgeven om het gegooide getal te veranderen in een 10. Het harnas herwint {@dice 1d4} verbruikte ladingen dagelijks bij dageraad."
+				]
+			}
+		},
+		{
+			"name": "Komeetvernietiger",
+			"type": "GV",
+			"requires": [
+				{
+					"type": "M",
+					"dmgType": "B"
+				}
+			],
+			"inherits": {
+				"namePrefix": "Comet Smasher ",
+				"source": "DoDk",
+				"page": 230,
+				"rarity": "very rare",
+				"reqAttune": true,
+				"entries": [
+					"De kop van dit wapen is gemaakt van een enorm deleriumkristal dat knettert van arcane energieën. Als je raakt met een aanval met dit wapen, krijgt het doelwit extra ({@dice 3d6}) necrotische schade.",
+					"Als je een 20 gooit bij een aanvalsworp met dit wapen, ontketent het een arcane anomalie (zie Dungeons of Drakkenheim). Je kunt twee keer rollen op de tafel en een van beide resultaten kiezen."
 				]
 			}
 		},
@@ -1331,6 +1346,29 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "Delerium-gesmeed zwaard",
+			"type": "GV",
+			"requires": [
+				{
+					"sword": true
+				}
+			],
+			"inherits": {
+				"namePrefix": "Delerium-Forged Blade ",
+				"source": "DoDk",
+				"page": 230,
+				"rarity": "rare",
+				"bonusWeapon": "+2",
+				"entries": [
+					"Dit zwaard heeft een kleine delerium splinter omhuld met glas en in het handvat gezet als een edelsteen. De kling is gemaakt van meteoorijzer doordrenkt met deleriumstof, waardoor het zachtjes gloeit met octarine licht.",
+					"Je krijgt een {=bonusWeapon} bonus voor aanvals- en schaderollen met dit wapen.",
+					"Wanneer je een aanval doet met dit wapen, kun je de modifier van je spreukvaardigheid gebruiken in plaats van Strength of Dexterity voor de aanvals- en schadewals. Daarnaast kun je dit wapen gebruiken als focus voor spreuken.",
+					"Wanneer je een 20 gooit voor een aanvalsworp met dit wapen tegen een humanoïde, moet de humanoïde slagen voor een DC 15 grondwetsreddende worp of een extra ({@dice 3d6}) necrotische schade oplopen en een {@adventure level of contamination|DoDk|12} winnen."
+				]
+			},
+			"hasFluffImages": true
+		},
+		{
 			"name": "Demonenbeen Polearm",
 			"type": "GV",
 			"requires": [
@@ -1399,9 +1437,6 @@
 			"requires": [
 				{
 					"bow": true
-				},
-				{
-					"crossbow": true
 				}
 			],
 			"inherits": {
@@ -1459,6 +1494,9 @@
 					"type": "AF"
 				}
 			],
+			"excludes": {
+				"name": "Energiecel"
+			},
 			"ammo": true,
 			"inherits": {
 				"namePrefix": "Dried Leech ",
@@ -1660,7 +1698,7 @@
 				}
 			],
 			"inherits": {
-				"namePrefix": "Fool's Blade ",
+				"namePrefix": "Fool's ",
 				"source": "BMT",
 				"page": 36,
 				"rarity": "very rare",
@@ -1804,13 +1842,10 @@
 			"requires": [
 				{
 					"bow": true
-				},
-				{
-					"crossbow": true
 				}
 			],
 			"inherits": {
-				"namePrefix": "Glimmering Moonbow ",
+				"namePrefix": "Glimmering Moon ",
 				"source": "BMT",
 				"page": 36,
 				"resist": [
@@ -1860,6 +1895,28 @@
 					"calm emotions"
 				]
 			}
+		},
+		{
+			"name": "Geharde Delerium-pijlen",
+			"type": "GV",
+			"requires": [
+				{
+					"arrow": true
+				},
+				{
+					"bolt": true
+				}
+			],
+			"inherits": {
+				"namePrefix": "Hardened Delerium-tipped ",
+				"source": "DoDk",
+				"page": 230,
+				"rarity": "rare",
+				"entries": [
+					"Dit stuk munitie heeft een verfijnde delerium pijlpunt. Een wezen dat wordt geraakt door een afstandsaanval met een van deze pijlen krijgt een extra ({@dice 3d6}) necrotische schade en moet slagen op een DC 15 Grondwet reddingsworp of een {@adventure level of contamination|DoDk|12} winnen. Zodra de pijl een doelwit raakt, brokkelt de deleriumpunt af tot stof en wordt de pijl niet meer magisch."
+				]
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "Hellevuurwapen",
@@ -3100,6 +3157,33 @@
 			}
 		},
 		{
+			"name": "Boog met sterrenkruis",
+			"type": "GV",
+			"requires": [
+				{
+					"bow": true
+				},
+				{
+					"crossbow": true
+				}
+			],
+			"inherits": {
+				"namePrefix": "Starcrossed ",
+				"source": "DoDk",
+				"page": 232,
+				"rarity": "rare",
+				"reqAttune": true,
+				"bonusWeapon": "+2",
+				"recharge": "dawn",
+				"rechargeAmount": 3,
+				"charges": 3,
+				"entries": [
+					"Deze magische boog of kruisboog heeft een ingewikkelde opstelling van deleriumscherven en focuslenzen langs de kolf waar normaal gesproken een grendel zou worden geladen, en tovert in plaats daarvan zijn eigen projectielen tevoorschijn. Je krijgt een bonus van {=bonusWeapon} bij aanvals- en schadeprollen met dit wapen, dat stralingsschade in plaats van doordringende schade toebrengt en de munitie en laadeigenschappen negeert.",
+					"Het wapen heeft 3 ladingen, die elke dag bij zonsopgang opnieuw worden opgeladen. Als je raakt met een afstandsaanval waarmee je het wapen gebruikt, kun je de bout laten exploderen in een schitterende lichtflits. Het doelwit dat je raakt en alle wezens binnen een straal van 3 meter moeten slagen voor een DC 15 grondwetsreddende worp of worden verblind tot het einde van je volgende beurt."
+				]
+			}
+		},
+		{
 			"name": "Starshot kruisboog",
 			"type": "GV",
 			"requires": [
@@ -3108,7 +3192,7 @@
 				}
 			],
 			"inherits": {
-				"namePrefix": "Starshot Crossbow ",
+				"namePrefix": "Starshot ",
 				"source": "BMT",
 				"page": 38,
 				"rarity": "rare",
@@ -3637,9 +3721,12 @@
 					"type": "AF"
 				}
 			],
+			"excludes": {
+				"name": "Energiecel"
+			},
 			"ammo": true,
 			"inherits": {
-				"namePrefix": "Winged Ammunition ",
+				"namePrefix": "Winged ",
 				"source": "BMT",
 				"page": 69,
 				"rarity": "uncommon",
