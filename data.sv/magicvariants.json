@@ -927,10 +927,10 @@
 			"type": "GV",
 			"requires": [
 				{
-					"type": "A"
+					"arrow": true
 				},
 				{
-					"type": "AF"
+					"bolt": true
 				}
 			],
 			"excludes": {
@@ -1089,7 +1089,7 @@
 			],
 			"ammo": true,
 			"inherits": {
-				"namePrefix": "Bloodseeker Ammunition ",
+				"namePrefix": "Bloodseeker ",
 				"source": "BMT",
 				"page": 66,
 				"rarity": "very rare",
@@ -1134,9 +1134,6 @@
 			"requires": [
 				{
 					"bow": true
-				},
-				{
-					"crossbow": true
 				}
 			],
 			"inherits": {
@@ -1156,9 +1153,6 @@
 			"requires": [
 				{
 					"bow": true
-				},
-				{
-					"crossbow": true
 				}
 			],
 			"inherits": {
@@ -1227,6 +1221,27 @@
 				"entries": [
 					"Den yttre ytan och de inre lederna på denna rustning snurrar med sammankopplade kugghjul och drar nytta av den ordnade magin på Mechanus-planet.",
 					"Rustningen har 4 laddningar. Om du gör ett {@dice d20} kast när du bär denna rustning, kan du spendera 1 laddning för att ändra det kastade talet till 10. Rustningen återfår {@dice 1d4} förbrukade laddningar dagligen i gryningen."
+				]
+			}
+		},
+		{
+			"name": "Kometförstörare",
+			"type": "GV",
+			"requires": [
+				{
+					"type": "M",
+					"dmgType": "B"
+				}
+			],
+			"inherits": {
+				"namePrefix": "Comet Smasher ",
+				"source": "DoDk",
+				"page": 230,
+				"rarity": "very rare",
+				"reqAttune": true,
+				"entries": [
+					"Huvudet på detta slagvapen är gjort av en massiv deleriumkristall som sprakar av arkana energier. När du träffar med en attack med det här vapnet tar målet en extra ({@dice 3d6}) nekrotisk skada.",
+					"När du får 20 på ett attackkast med detta vapen, släpper det lös en arkansk anomali (se Dungeons of Drakkenheim). Du kan slå två gånger på tabellen och välja ett av resultaten."
 				]
 			}
 		},
@@ -1331,6 +1346,29 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "Delerium-förstärkt klinga",
+			"type": "GV",
+			"requires": [
+				{
+					"sword": true
+				}
+			],
+			"inherits": {
+				"namePrefix": "Delerium-Forged Blade ",
+				"source": "DoDk",
+				"page": 230,
+				"rarity": "rare",
+				"bonusWeapon": "+2",
+				"entries": [
+					"Det här svärdet har en liten deleriumskärva inkapslad i glas och infattad i handtaget som en ädelsten. Bladet är tillverkat av meteoriskt järn med deleriumstoft, vilket får det att lysa mjukt med oktarinljus.",
+					"Du får en {=bonusWeapon} bonus på attack- och skaderullningar som görs med detta vapen.",
+					"När du gör en attack med detta vapen kan du använda din besvärjelseförmågas modifierare, istället för styrka eller dexteritet, för attack- och skaderollen. Dessutom kan du använda detta vapen som fokus för besvärjelser.",
+					"När du får 20 på ett attackkast med detta vapen mot en humanoid, måste humanoiden lyckas med ett konstitutionellt räddningsslag på DC 15 eller ta en extra ({@dice 3d6}) nekrotisk skada och få en {@adventure level of contamination|DoDk|12}."
+				]
+			},
+			"hasFluffImages": true
+		},
+		{
 			"name": "Polearm av demonben",
 			"type": "GV",
 			"requires": [
@@ -1399,9 +1437,6 @@
 			"requires": [
 				{
 					"bow": true
-				},
-				{
-					"crossbow": true
 				}
 			],
 			"inherits": {
@@ -1459,6 +1494,9 @@
 					"type": "AF"
 				}
 			],
+			"excludes": {
+				"name": "Energicell"
+			},
 			"ammo": true,
 			"inherits": {
 				"namePrefix": "Dried Leech ",
@@ -1660,7 +1698,7 @@
 				}
 			],
 			"inherits": {
-				"namePrefix": "Fool's Blade ",
+				"namePrefix": "Fool's ",
 				"source": "BMT",
 				"page": 36,
 				"rarity": "very rare",
@@ -1804,13 +1842,10 @@
 			"requires": [
 				{
 					"bow": true
-				},
-				{
-					"crossbow": true
 				}
 			],
 			"inherits": {
-				"namePrefix": "Glimmering Moonbow ",
+				"namePrefix": "Glimmering Moon ",
 				"source": "BMT",
 				"page": 36,
 				"resist": [
@@ -1860,6 +1895,28 @@
 					"calm emotions"
 				]
 			}
+		},
+		{
+			"name": "Härdade pilar med Delerium-spets",
+			"type": "GV",
+			"requires": [
+				{
+					"arrow": true
+				},
+				{
+					"bolt": true
+				}
+			],
+			"inherits": {
+				"namePrefix": "Hardened Delerium-tipped ",
+				"source": "DoDk",
+				"page": 230,
+				"rarity": "rare",
+				"entries": [
+					"Denna ammunition har en förfinad delerium-pilspets. En varelse som träffas av en distansattack med en av dessa pilar tar en extra ({@dice 3d6}) nekrotisk skada och måste lyckas med ett DC 15 Konstitutionsräddningsslag eller få en {@adventure level of contamination|DoDk|12}. När pilen träffar ett mål smulas deleriumspetsen sönder till damm och pilen blir icke-magisk."
+				]
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "Hellfire-vapen",
@@ -3100,6 +3157,33 @@
 			}
 		},
 		{
+			"name": "Stjärnkorsad båge",
+			"type": "GV",
+			"requires": [
+				{
+					"bow": true
+				},
+				{
+					"crossbow": true
+				}
+			],
+			"inherits": {
+				"namePrefix": "Starcrossed ",
+				"source": "DoDk",
+				"page": 232,
+				"rarity": "rare",
+				"reqAttune": true,
+				"bonusWeapon": "+2",
+				"recharge": "dawn",
+				"rechargeAmount": 3,
+				"charges": 3,
+				"entries": [
+					"Denna magiska pilbåge eller armborst har ett intrikat arrangemang av deleriumskärvor och fokuseringslinser längs skaftet där en kula normalt skulle laddas, och trollar istället fram sina egna projektiler. Du får en {=bonusWeapon} bonus på attack- och skaderullningar med detta vapen, som ger strålningsskada istället för genomträngande skada och ignorerar ammunitionens och laddningens egenskaper.",
+					"Vapnet har 3 laddningar, som återfås varje dag i gryningen. När du träffar med en distansattack med det kan du få blixten att explodera i en strålande ljusblixt. Målet du träffar och alla varelser inom 3 meter från det måste lyckas med ett räddningsslag i konstitution DC 15 eller bli blinda fram till slutet av din nästa tur."
+				]
+			}
+		},
+		{
 			"name": "Armborst Starshot",
 			"type": "GV",
 			"requires": [
@@ -3108,7 +3192,7 @@
 				}
 			],
 			"inherits": {
-				"namePrefix": "Starshot Crossbow ",
+				"namePrefix": "Starshot ",
 				"source": "BMT",
 				"page": 38,
 				"rarity": "rare",
@@ -3637,9 +3721,12 @@
 					"type": "AF"
 				}
 			],
+			"excludes": {
+				"name": "Energicell"
+			},
 			"ammo": true,
 			"inherits": {
-				"namePrefix": "Winged Ammunition ",
+				"namePrefix": "Winged ",
 				"source": "BMT",
 				"page": 69,
 				"rarity": "uncommon",

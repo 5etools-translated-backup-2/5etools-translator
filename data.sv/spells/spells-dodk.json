@@ -1,0 +1,737 @@
+{
+	"spell": [
+		{
+			"name": "Conjure the Deep Haze",
+			"source": "DoDk",
+			"page": 226,
+			"level": 5,
+			"school": "C",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ett deleriumfragment värt 100 gp, som besvärjelsen förbrukar",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"När du kastar denna besvärjelse får du en {@adventure level of contamination|DoDk|12}.",
+				"Du skapar en sfär med 6 meters radie av Deep Haze på en punkt du väljer inom räckhåll. Dimman sprider sig runt hörn. Den varar så länge den varar eller tills starka vindar skingrar dimman och avslutar besvärjelsen. Dess område är kraftigt fördunklat.",
+				"När en varelse kommer in i besvärjelsens område för första gången under en tur eller börjar sin tur där, måste varelsen lyckas med ett räddningsslag för konstitution. Vid ett misslyckat räddningsslag drabbas den av ({@dice 8d6}) nekrotisk skada och får en {@adventure level of contamination|DoDk|12}. Vid ett lyckat räddningsslag tar varelsen hälften så mycket skada och får inte någon {@adventure contamination levels|DoDk|12}. Varelser påverkas även om de håller andan eller inte behöver andas."
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"OBS"
+			]
+		},
+		{
+			"name": "Contaminated Power",
+			"source": "DoDk",
+			"page": 226,
+			"level": 8,
+			"school": "T",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "en deleriumskärva värd 500 gp, som besvärjelsen förbrukar",
+					"cost": 50000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"När du kastar denna besvärjelse får du en {@adventure level of contamination|DoDk|12}. Du drar ohämmad arkan magi från deleriumskärvan du håller i din hand. Tills besvärjelsen avslutas får du följande fördelar:",
+				{
+					"type": "list",
+					"items": [
+						"När du kastar en besvärjelse som ger syra-, eld-, köld-, blixt- eller giftskada, kan du ändra skadetypen till kraft-, nekrotisk-, psykisk- eller strålningsskada.",
+						"En gång per tur när du orsakar skada med en besvärjelse, kan du orsaka ytterligare {@damage 1d12} nekrotisk skada för varje {@adventure contamination level|DoDk|12} du har vunnit till ett mål för den besvärjelsen.",
+						"När du kastar en besvärjelse som tvingar en varelse att göra ett räddningsslag för att motstå dess effekter, kan du välja att vinna en {@adventure level of contamination|DoDk|12}. Om du gör det får ett av besvärjelsens mål nackdel på sitt första räddningsslag mot besvärjelsen."
+					]
+				},
+				"Denna besvärjelse kan inte upphävas av {@spell dispel magic}."
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Contamination Immunity",
+			"source": "DoDk",
+			"page": 226,
+			"level": 7,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "En eldritch-lilja blandad i specialberedda renade vätskor till ett värde av 250 gp, som förtrollningen förbrukar",
+					"cost": 25000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"entries": [
+				"Tills besvärjelsen slutar är en villig varelse som du rör vid immun mot nekrotisk skada och kan inte vinna {@adventure contamination levels|DoDk|12}. Den drabbade varelsen kan vila normalt inom dimman.",
+				"Besvärjelsen upphör omedelbart om varelsen kastar en förorenad besvärjelse."
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Delerium Blast",
+			"source": "DoDk",
+			"page": 227,
+			"level": 4,
+			"school": "V",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 150
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ett deleriumfragment värt 100 gp, som besvärjelsen förbrukar",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"När du kastar denna besvärjelse får du en {@adventure level of contamination|DoDk|12}.",
+				"Du antänder arkana energier som finns lagrade i ett deleriumfragment som du håller i handen och kastar det mot en plats som du kan se inom räckhåll. Det exploderar i en sfär med 6 meters radie av oberäknelig psykisk energi som överväldigar sinnena och sinnena hos dem som befinner sig i sfären. Varje varelse i sfären måste lyckas med ett intelligensräddningsslag. Vid ett misslyckat räddningsslag tar varelsen ({@dice 10d6}) psykisk skada och blir {@condition incapacitated} till slutet av sin nästa tur. Vid ett lyckat räddningsslag tar målet hälften så mycket skada och drabbas inte av besvärjelsens andra effekter."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "På högre nivåer",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 5:e nivån eller högre, ökar skadan med {@dice 2d6} för varje platsnivå över 4:e."
+					]
+				}
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrow": [
+				"intelligence"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Delerium Orb",
+			"source": "DoDk",
+			"page": 227,
+			"level": 1,
+			"school": "V",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ett deleriumfragment värt 100 gp, som besvärjelsen förbrukar",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"När du kastar den här besvärjelsen får du en {@adventure level of contamination|DoDk|12}. Du drar kaotisk magisk kraft från deleriumfragmentet i din hand och spränger en varelse som du kan se inom räckhåll med paradoxal kraft. Välj en förmågepoäng och välj sedan kall, eld, blixt, nekrotisk, psykisk eller strålningsskada. Målet måste lyckas med ett räddningsslag med den valda förmågepoängen; det tar {@damage 6d6} skada av den valda typen vid ett misslyckat räddningsslag, eller hälften så mycket vid ett lyckat."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "På högre nivåer",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 2:a nivån eller högre, ökar skadan med {@dice 2d6} för varje besvärjelseplatsnivå över 1:a."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Forced Evolution",
+			"source": "DoDk",
+			"page": 227,
+			"level": 4,
+			"school": "T",
+			"time": [
+				{
+					"number": 8,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "En alkemisk cocktail gjord av sällsynta komponenter och deleriumstoft värd 250 guld, som målet konsumerar som en del av besvärjelsen",
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Med hjälp av denna besvärjelse omvandlar du en mutation som erhållits från {@adventure contamination|DoDk|12}. En av målets befintliga mutationer tas bort och ersätts av en annan. Denna mutation kan väljas av spelledaren eller bestämmas slumpmässigt (se Appendix C i Dungeons of Drakkenheim)."
+			]
+		},
+		{
+			"name": "Neutralizing Field",
+			"source": "DoDk",
+			"page": 228,
+			"level": 5,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "sphere",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "En deleriumkristall eller helig relik värd 1 000 gp",
+					"cost": 100000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du förnekar kontaminerade magiska energier i en sfär med 3 meters radie. Tills besvärjelsen upphör rör sig sfären med dig, centrerad på dig. Varelser i sfären (inklusive du själv) kan inte vinna {@adventure contamination levels|DoDk|12} och har immunitet mot nekrotisk skada. Kontaminerade besvärjelser kan inte kastas av varelser i området."
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Octarine Spray",
+			"source": "DoDk",
+			"page": 228,
+			"level": 7,
+			"school": "V",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ett deleriumfragment värt 100 gp, som besvärjelsen förbrukar",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"När du kastar den här besvärjelsen får du en {@adventure level of contamination|DoDk|12}. Oktarinfärgade ljusstrålar lyser från din hand. Varje stråle har en annan färg och en annan kraft och ett annat syfte, se tabellen nedan. Varje varelse i en 18-meters kon måste lyckas med ett Konstitutionssparande. För varje mål, slå ett {@dice d8} för att avgöra vilken färgstråle som påverkar det.",
+				{
+					"type": "table",
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"colLabels": [
+						"d8",
+						"Octarine Spray Effect"
+					],
+					"rows": [
+						[
+							"1",
+							"The target takes {@damage 20d6} psychic damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"2",
+							"The target takes {@damage 20d6} necrotic damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"3",
+							"The target takes {@damage 20d6} force damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"4",
+							"The target takes {@damage 20d6} radiant damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"5",
+							"The target takes {@damage 20d6} thunder damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"6",
+							"At the start of each of its turns, the affected target uses all its movement to move directly towards the closest creature it can see. Then, the affected target uses its action to make a melee attack against a randomly determined creature within its reach. If there is no creature within its reach, the affected target does nothing this turn. At the end of each of its turns, the affected target can make a Wisdom saving throw. If it succeeds, this effect ends for that target."
+						],
+						[
+							"7",
+							"At the start of each of its turns, the affected target gains one {@adventure level of contamination|DoDk|12}. At the end of each of its turns, an affected target can make a Constitution saving throw. If it succeeds, this effect ends for that target, but any {@adventure contamination levels|DoDk|12} gained remain."
+						],
+						[
+							"8",
+							"{@b Special.} The target is struck by an additional ray. Roll again twice. There's no limit to how many additional rays can strike a single creature in this manner."
+						]
+					]
+				}
+			],
+			"damageInflict": [
+				"force",
+				"necrotic",
+				"psychic",
+				"radiant",
+				"thunder"
+			],
+			"savingThrow": [
+				"constitution",
+				"wisdom"
+			],
+			"miscTags": [
+				"RO"
+			]
+		},
+		{
+			"name": "Purge Contamination",
+			"source": "DoDk",
+			"page": 228,
+			"level": 3,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "100 gp alkemiska vätskor eller vigvatten, som besvärjelsen förbrukar",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du applicerar alkemiska vätskor eller vigvatten på en kontaminerad humanoid varelse samtidigt som du reciterar en krävande magisk sång som driver ut eldritchkontaminationer från målets kropp. När du är klar med besvärjelsen har alla {@adventure contamination levels|DoDk|12} och mutationer avlägsnats från varelsen. Den får sedan en nivå av {@condition exhaustion} för varje {@adventure contamination level|DoDk|12} som avlägsnas med denna besvärjelse."
+			],
+			"conditionInflict": [
+				"exhaustion"
+			]
+		},
+		{
+			"name": "Ray of Contamination",
+			"source": "DoDk",
+			"page": 229,
+			"level": 6,
+			"school": "N",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ett deleriumfragment värt 100 gp, som besvärjelsen förbrukar",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"När du kastar denna besvärjelse får du en {@adventure level of contamination|DoDk|12}. En åttaarmad stråle sprider sig från ditt pekfinger till en varelse som du kan se inom räckhåll. Målet måste lyckas med ett räddningsslag i konstitution. Vid ett misslyckat räddningsslag tar varelsen {@damage 16d6} nekrotisk skada och får {@dice 1d4} {@adventure levels of contamination|DoDk|12}. Vid ett lyckat räddningsslag tar målet hälften så mycket skada och får inga {@adventure contamination levels|DoDk|12}."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "På högre nivåer",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 7:e nivån eller högre, kan du rikta den mot ytterligare en varelse för varje besvärjelseplatsnivå över 6:e. Varelserna måste befinna sig inom 9 meter från varandra när du riktar besvärjelsen mot dem."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Ride the Rifts",
+			"source": "DoDk",
+			"page": 228,
+			"level": 3,
+			"school": "C",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "line",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ett deleriumfragment värt 100 gp, som besvärjelsen förbrukar",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"När du kastar denna besvärjelse får du en {@adventure level of contamination|DoDk|12}. Ett slag av eldritch lightning som bildar en linje 18 meter lång och 1,5 meter bred sprutar ut från dig i en riktning du väljer. Varje varelse i linjen måste lyckas med ett räddningsslag i Dexterity. En varelse tar {@damage 10d6} blixtskada vid ett misslyckat räddningsslag, eller hälften så mycket skada vid ett lyckat. Du teleporterar dig sedan till ett ledigt utrymme som du kan se inom linjens område."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "På högre nivåer",
+					"entries": [
+						"När du kastar den här besvärjelsen med en besvärjelseplats på 4:e nivån eller högre, ökar skadan med {@dice 2d6} för varje platsnivå över 3:e."
+					]
+				}
+			],
+			"damageInflict": [
+				"lightning"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Sacrament of the Falling Fire",
+			"source": "DoDk",
+			"page": 229,
+			"level": 9,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ett deleriumfragment värt 100 gp för varje deltagande varelse, som besvärjelsen förbrukar",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Den här besvärjelsen kan bara kastas i ett område som täcks av den djupa dimman.",
+				"Du utför en helig ceremoni med upp till 12 trogna och villiga humanoida varelser som avslutas när varje deltagande varelse driver in en deleriumskärva i sitt bröst. Dessa varelser blir helgade (se dokumentationen Följare av den fallande elden i kapitel 3 i Dungeons of Drakkenheim).",
+				"När du är klar med besvärjelsen dyker en fientlig {@creature shadow} upp och attackerar varje deltagare, som en manifestation av rollpersonens inre mörker. GM kan bestämma att en rollperson som bär på stor ilska, rädsla eller hat i sitt hjärta får en {@creature wraith} att manifestera sig istället."
+			]
+		},
+		{
+			"name": "Siphon Contamination",
+			"source": "DoDk",
+			"page": 229,
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "specialberedda alkemiska vätskor till ett värde av 500 gp och en deleriumgeod till ett värde av 5 000 gp, som alla förbrukas av besvärjelsen",
+					"cost": 50000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Denna krävande besvärjelse överför {@adventure contamination|DoDk|12} från en varelse till en annan. När du kastar denna besvärjelse måste du först röra vid antingen en villig humanoid varelse med en eller flera {@adventure levels of contamination|DoDk|12}, eller en tidigare humanoid varelse vars nuvarande form är resultatet av en monstruös förvandling. Sedan rör du vid en annan villig humanoid varelse.",
+				"Om båda varelserna som berörs var villiga humanoida varelser, tar du bort alla {@adventure contamination levels|DoDk|12} och mutationer från den första varelsen, sedan får den andra varelsen du berör ett antal {@adventure contamination levels|DoDk|12} lika med det antal nivåer som tagits bort från den första varelsen.",
+				"Om den första varelsen du rör vid är en tidigare humanoid som drabbats av en monstruös {@adventure contamination|DoDk|12}, och den andra varelsen är en villig humanoid varelse med en karaktärsnivå eller utmaningspoäng som är lika med eller högre än utmaningspoängen hos den förvandlade varelsen, återställer du den helt kontaminerade varelsen till dess ursprungliga form, då genomgår humanoidvarelsen omedelbart en monstruös förvandling som om den hade fått sex {@adventure contamination levels|DoDk|12}.",
+				"Den andra varelsen som berörs kan inte förhindra eller förneka dessa {@adventure contamination levels|DoDk|12} eller en efterföljande förvandling på något sätt, annars misslyckas besvärjelsen utan effekt."
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Warp Bolt",
+			"source": "DoDk",
+			"page": 229,
+			"level": 2,
+			"school": "V",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ett deleriumfragment värt 100 gp, som besvärjelsen förbrukar",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"När du kastar denna besvärjelse får du en {@adventure level of contamination|DoDk|12}. En bågformad oktarin blixt träffar en varelse inom räckhåll. Om målet har en eller flera {@adventure contamination levels|DoDk|12} träffas det automatiskt. Annars kan du göra en besvärjelseattack på avstånd mot varelsen. Vid träff tar målet {@damage 6d6} nekrotisk skada och får en {@adventure level of contamination|DoDk|12}.",
+				"Du kan skapa en ny blixt som din handling på valfri tur tills besvärjelsen upphör."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "På högre nivåer",
+					"entries": [
+						"När du kastar denna besvärjelse med en besvärjelseplats på 3:e nivån eller högre, kan du rikta besvärjelsen mot ytterligare 1 varelse för varje besvärjelsenivå över 2:a."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"spellAttack": [
+				"R"
+			]
+		}
+	]
+}
