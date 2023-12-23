@@ -927,10 +927,10 @@
 			"type": "GV",
 			"requires": [
 				{
-					"type": "A"
+					"arrow": true
 				},
 				{
-					"type": "AF"
+					"bolt": true
 				}
 			],
 			"excludes": {
@@ -1089,7 +1089,7 @@
 			],
 			"ammo": true,
 			"inherits": {
-				"namePrefix": "Bloodseeker Ammunition ",
+				"namePrefix": "Bloodseeker ",
 				"source": "BMT",
 				"page": 66,
 				"rarity": "very rare",
@@ -1134,9 +1134,6 @@
 			"requires": [
 				{
 					"bow": true
-				},
-				{
-					"crossbow": true
 				}
 			],
 			"inherits": {
@@ -1156,9 +1153,6 @@
 			"requires": [
 				{
 					"bow": true
-				},
-				{
-					"crossbow": true
 				}
 			],
 			"inherits": {
@@ -1227,6 +1221,27 @@
 				"entries": [
 					"Die äußere Oberfläche und die inneren Verbindungen dieser Rüstung sind mit ineinander greifenden Zahnrädern versehen, die auf die geordnete Magie der Dimension von Mechanus zurückgreifen.",
 					"Die Rüstung hat 4 Aufladungen. Wenn du einen {@dice d20} Wurf machst, während du diese Rüstung trägst, kannst du 1 Ladung ausgeben, um die gewürfelte Zahl in eine 10 zu ändern. Die Rüstung erhält täglich bei Tagesanbruch {@dice 1d4} verbrauchte Ladungen zurück."
+				]
+			}
+		},
+		{
+			"name": "Kometenzerstörer",
+			"type": "GV",
+			"requires": [
+				{
+					"type": "M",
+					"dmgType": "B"
+				}
+			],
+			"inherits": {
+				"namePrefix": "Comet Smasher ",
+				"source": "DoDk",
+				"page": 230,
+				"rarity": "very rare",
+				"reqAttune": true,
+				"entries": [
+					"Der Kopf dieser Wucht-Waffe besteht aus einem massiven Delerium-Kristall, der mit arkanen Energien knistert. Wenn du mit einem Angriff mit dieser Waffe triffst, erleidet das Ziel einen zusätzlichen ({@dice 3d6}) nekrotischen Schaden.",
+					"Wenn du bei einem Angriffswurf mit dieser Waffe eine 20 würfelst, entfesselt sie eine arkane Anomalie (siehe Dungeons of Drakkenheim). Du kannst zweimal würfeln und eines der beiden Ergebnisse wählen."
 				]
 			}
 		},
@@ -1331,6 +1346,29 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "Delerium-geschmiedete Klinge",
+			"type": "GV",
+			"requires": [
+				{
+					"sword": true
+				}
+			],
+			"inherits": {
+				"namePrefix": "Delerium-Forged Blade ",
+				"source": "DoDk",
+				"page": 230,
+				"rarity": "rare",
+				"bonusWeapon": "+2",
+				"entries": [
+					"Dieses Schwert hat einen kleinen Delerium-Splitter, der in Glas eingeschlossen und im Griff wie ein Edelstein gefasst ist. Die Klinge besteht aus Meteoreisen, das mit Deleriumstaub durchsetzt ist, wodurch sie sanft in oktarinfarbenem Licht leuchtet.",
+					"Du erhältst einen {=bonusWeapon} Bonus auf Angriffs- und Schadenswürfe mit dieser Waffe.",
+					"Wenn du mit dieser Waffe einen Angriff ausführst, kannst du deinen Zauberfähigkeitsmodifikator anstelle von Stärke oder Geschicklichkeit für die Angriffs- und Schadenswürfe verwenden. Außerdem kannst du diese Waffe als Zauberfokus verwenden.",
+					"Wenn du bei einem Angriffswurf mit dieser Waffe gegen einen Humanoiden eine 20 würfelst, muss der Humanoide einen Rettungswurf von DC 15 auf die Konstitution bestehen oder einen zusätzlichen ({@dice 3d6}) nekrotischen Schaden erleiden und einen {@adventure level of contamination|DoDk|12} erhalten."
+				]
+			},
+			"hasFluffImages": true
+		},
+		{
 			"name": "Dämonenknochen-Stangenwaffe",
 			"type": "GV",
 			"requires": [
@@ -1399,9 +1437,6 @@
 			"requires": [
 				{
 					"bow": true
-				},
-				{
-					"crossbow": true
 				}
 			],
 			"inherits": {
@@ -1459,6 +1494,9 @@
 					"type": "AF"
 				}
 			],
+			"excludes": {
+				"name": "Energiezelle"
+			},
 			"ammo": true,
 			"inherits": {
 				"namePrefix": "Dried Leech ",
@@ -1660,7 +1698,7 @@
 				}
 			],
 			"inherits": {
-				"namePrefix": "Fool's Blade ",
+				"namePrefix": "Fool's ",
 				"source": "BMT",
 				"page": 36,
 				"rarity": "very rare",
@@ -1804,13 +1842,10 @@
 			"requires": [
 				{
 					"bow": true
-				},
-				{
-					"crossbow": true
 				}
 			],
 			"inherits": {
-				"namePrefix": "Glimmering Moonbow ",
+				"namePrefix": "Glimmering Moon ",
 				"source": "BMT",
 				"page": 36,
 				"resist": [
@@ -1860,6 +1895,28 @@
 					"calm emotions"
 				]
 			}
+		},
+		{
+			"name": "Gehärtete Deleriumspitzen-Pfeile",
+			"type": "GV",
+			"requires": [
+				{
+					"arrow": true
+				},
+				{
+					"bolt": true
+				}
+			],
+			"inherits": {
+				"namePrefix": "Hardened Delerium-tipped ",
+				"source": "DoDk",
+				"page": 230,
+				"rarity": "rare",
+				"entries": [
+					"Dieses Stück Munition hat eine verfeinerte Delerium-Pfeilspitze. Eine Kreatur, die von einem Fernkampfangriff mit einem dieser Pfeile getroffen wird, erleidet einen zusätzlichen ({@dice 3d6}) nekrotischen Schaden und muss einen Rettungswurf von DC 15 auf Konstitution bestehen oder einen {@adventure level of contamination|DoDk|12} erhalten. Sobald der Pfeil ein Ziel trifft, zerfällt die Deleriumspitze zu Staub und der Pfeil wird unmagisch."
+				]
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "Höllenfeuerwaffe",
@@ -3100,6 +3157,33 @@
 			}
 		},
 		{
+			"name": "Starcrossed Bow",
+			"type": "GV",
+			"requires": [
+				{
+					"bow": true
+				},
+				{
+					"crossbow": true
+				}
+			],
+			"inherits": {
+				"namePrefix": "Starcrossed ",
+				"source": "DoDk",
+				"page": 232,
+				"rarity": "rare",
+				"reqAttune": true,
+				"bonusWeapon": "+2",
+				"recharge": "dawn",
+				"rechargeAmount": 3,
+				"charges": 3,
+				"entries": [
+					"Dieser magische Bogen oder diese magische Armbrust hat eine komplizierte Anordnung von Delerium-Splittern und Fokussierungslinsen entlang des Schaftes, wo normalerweise ein Bolzen geladen wird, und beschwört stattdessen auf magische Weise seine eigenen Geschosse. Du erhältst einen {=bonusWeapon} Bonus auf Angriffs- und Schadenswürfe mit dieser Waffe, die anstelle von Stich-Schaden Strahlenschaden verursacht und die Eigenschaften von Munition und Ladung ignoriert.",
+					"Die Waffe hat 3 Ladungen, die jeden Tag bei Sonnenaufgang wieder aufgeladen werden. Wenn du mit einem Fernkampfangriff triffst, kannst du den Blitz in einem hellen Lichtblitz explodieren lassen. Das getroffene Ziel und alle Kreaturen im Umkreis von 3 Metern müssen einen Rettungswurf der Konstitution von DC 15 bestehen oder werden bis zum Ende deines nächsten Zuges geblendet."
+				]
+			}
+		},
+		{
 			"name": "Starshot Armbrust",
 			"type": "GV",
 			"requires": [
@@ -3108,7 +3192,7 @@
 				}
 			],
 			"inherits": {
-				"namePrefix": "Starshot Crossbow ",
+				"namePrefix": "Starshot ",
 				"source": "BMT",
 				"page": 38,
 				"rarity": "rare",
@@ -3637,9 +3721,12 @@
 					"type": "AF"
 				}
 			],
+			"excludes": {
+				"name": "Energiezelle"
+			},
 			"ammo": true,
 			"inherits": {
-				"namePrefix": "Winged Ammunition ",
+				"namePrefix": "Winged ",
 				"source": "BMT",
 				"page": 69,
 				"rarity": "uncommon",

@@ -1,0 +1,737 @@
+{
+	"spell": [
+		{
+			"name": "Conjure the Deep Haze",
+			"source": "DoDk",
+			"page": 226,
+			"level": 5,
+			"school": "C",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ein Delerium-Fragment im Wert von 100 gp, das durch den Zauber verbraucht wird",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Wenn du diesen Zauber sprichst, erhältst du einen {@adventure level of contamination|DoDk|12}.",
+				"Du erschaffst eine Sphäre des Tiefen Nebels mit einem Radius von 6 Metern an einem Punkt deiner Wahl in Reichweite. Der Nebel breitet sich um Ecken herum aus. Er hält für die Dauer des Zaubers an oder bis starker Wind den Nebel auflöst und den Zauber beendet. Das Gebiet ist stark vernebelt.",
+				"Wenn eine Kreatur den Bereich des Zaubers zum ersten Mal in einem Zug betritt oder ihren Zug dort beginnt, muss diese Kreatur einen Rettungswurf auf Konstitution bestehen. Bei einem misslungenen Rettungswurf erleidet sie ({@dice 8d6}) nekrotischen Schaden und erhält einen {@adventure level of contamination|DoDk|12}. Bei einem erfolgreichen Schutzwurf erleidet die Kreatur halb so viel Schaden und erhält keine {@adventure contamination levels|DoDk|12}. Kreaturen sind auch dann betroffen, wenn sie ihren Atem anhalten oder nicht atmen müssen."
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"OBS"
+			]
+		},
+		{
+			"name": "Contaminated Power",
+			"source": "DoDk",
+			"page": 226,
+			"level": 8,
+			"school": "T",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "einen Delerium-Splitter im Wert von 500 Gp, den der Zauberspruch verbraucht",
+					"cost": 50000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Wenn du diesen Zauber sprichst, erhältst du einen {@adventure level of contamination|DoDk|12}. Du ziehst ungebremste arkane Magie aus dem Delerium-Splitter, den du in deiner Hand hältst. Bis der Zauber endet, erhältst du die folgenden Vorteile:",
+				{
+					"type": "list",
+					"items": [
+						"Wenn du einen Zauber wirfst, der Säure-, Feuer-, Kälte-, Blitz- oder Giftschaden verursacht, kannst du die Schadensart in Kraft-, Nekrotisch-, Psycho- oder Strahlungsschaden ändern.",
+						"Einmal pro Runde, wenn du mit einem Zauber Schaden verursachst, kannst du einem Ziel dieses Zaubers für jedes {@adventure contamination level|DoDk|12}, das du gewonnen hast, zusätzlich {@damage 1d12} nekrotischen Schaden zufügen.",
+						"Wenn du einen Zauber wirkst, der eine Kreatur dazu zwingt, einen Rettungswurf zu machen, um seinen Effekten zu widerstehen, kannst du wählen, einen {@adventure level of contamination|DoDk|12} zu gewinnen. Wenn du dies tust, hat ein Ziel des Zaubers einen Nachteil bei seinem ersten Rettungswurf gegen diesen Zauber."
+					]
+				},
+				"Dieser Zauber kann nicht um {@spell dispel magic} gebannt werden."
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Contamination Immunity",
+			"source": "DoDk",
+			"page": 226,
+			"level": 7,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Eine eldritische Lilie, gemischt mit speziell zubereiteten gereinigten Flüssigkeiten im Wert von 250 gp, die der Zauberspruch verbraucht",
+					"cost": 25000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"entries": [
+				"Bis zum Ende des Zaubers ist eine willige Kreatur, die du berührst, immun gegen nekrotischen Schaden und kann nicht {@adventure contamination levels|DoDk|12} gewinnen. Die betroffene Kreatur kann sich innerhalb des Nebels normal ausruhen.",
+				"Dieser Zauber endet sofort, wenn die Kreatur einen verseuchten Zauber wirkt."
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Delerium Blast",
+			"source": "DoDk",
+			"page": 227,
+			"level": 4,
+			"school": "V",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 150
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ein Delerium-Fragment im Wert von 100 gp, das durch den Zauber verbraucht wird",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Wenn du diesen Zauber sprichst, erhältst du einen {@adventure level of contamination|DoDk|12}.",
+				"Du entzündest arkane Energien, die in einem Deleriumfragment in deiner Hand gespeichert sind, und schleuderst es in einen Raum, den du in Reichweite siehst. Es explodiert in einer Sphäre psychischer Energie mit einem Radius von 6 Metern, die den Verstand und die Sinne derer, die sich darin befinden, überwältigt. Jede Kreatur in der Sphäre muss einen Rettungswurf der Intelligenz bestehen. Bei einem misslungenen Schutzwurf erleidet die Kreatur ({@dice 10d6}) psychischen Schaden und wird bis zum Ende ihrer nächsten Runde zu {@condition incapacitated}. Bei einem erfolgreichen Schutzwurf erleidet das Ziel nur halb so viel Schaden und erleidet keinen der anderen Effekte des Zaubers."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "Auf höheren Ebenen",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberschlitz der Stufe 5 oder höher wirkst, erhöht sich der Schaden um {@dice 2d6} für jede Schlitzstufe über der Stufe 4."
+					]
+				}
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrow": [
+				"intelligence"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Delerium Orb",
+			"source": "DoDk",
+			"page": 227,
+			"level": 1,
+			"school": "V",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ein Delerium-Fragment im Wert von 100 gp, das durch den Zauber verbraucht wird",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Wenn du diesen Zauber sprichst, erhältst du einen {@adventure level of contamination|DoDk|12}. Du ziehst chaotische magische Kraft aus dem Delerium-Fragment in deiner Hand und beschießt eine Kreatur, die du in Reichweite siehst, mit paradoxer Kraft. Wähle einen Fähigkeitswert und dann Kälte-, Feuer-, Blitz-, nekrotischen, psychischen oder Strahlungsschaden. Das Ziel muss einen Rettungswurf mit der gewählten Fähigkeitspunktezahl bestehen; bei einem misslungenen Rettungswurf erleidet es {@damage 6d6} Schaden des gewählten Typs, bei einem erfolgreichen Rettungswurf halb so viel."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "Auf höheren Ebenen",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberslot der Stufe 2 oder höher wirkst, erhöht sich der Schaden um {@dice 2d6} für jeden Slot der Stufe 1."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Forced Evolution",
+			"source": "DoDk",
+			"page": 227,
+			"level": 4,
+			"school": "T",
+			"time": [
+				{
+					"number": 8,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Ein alchemistischer Cocktail aus seltenen Komponenten und Deleriumstaub im Wert von 250 Gold, den das Ziel als Teil des Zaubers konsumiert",
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Mit diesem Zauber verwandelst du eine aus {@adventure contamination|DoDk|12} gewonnene Mutation. Eine der vorhandenen Mutationen des Ziels wird entfernt und durch eine andere ersetzt. Diese Mutation kann vom Spielleiter gewählt oder zufällig bestimmt werden (siehe Anhang C von Dungeons of Drakkenheim)."
+			]
+		},
+		{
+			"name": "Neutralizing Field",
+			"source": "DoDk",
+			"page": 228,
+			"level": 5,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "sphere",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Ein Delerium-Kristall oder eine heilige Reliquie im Wert von 1.000 gp",
+					"cost": 100000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Du negierst verseuchte magische Energien in einer Kugel mit einem Radius von 3 Metern. Bis der Zauber endet, bewegt sich die Sphäre mit dir, zentriert auf dich. Kreaturen in der Sphäre (einschließlich dir) können keinen {@adventure contamination levels|DoDk|12} gewinnen und sind immun gegen nekrotischen Schaden. Verseuchte Zauber können von Kreaturen in diesem Bereich nicht gewirkt werden."
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Octarine Spray",
+			"source": "DoDk",
+			"page": 228,
+			"level": 7,
+			"school": "V",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ein Delerium-Fragment im Wert von 100 gp, das durch den Zauber verbraucht wird",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Wenn du diesen Zauber sprichst, erhältst du einen {@adventure level of contamination|DoDk|12}. Oktarine Lichtstrahlen blitzen aus deiner Hand. Jeder Strahl hat eine andere Farbe und eine andere Kraft und einen anderen Zweck, siehe die Tabelle unten. Jede Kreatur in einem 18-Meter-Kegel muss einen Rettungswurf auf Konstitution schaffen. Wirf für jedes Ziel einen {@dice d8}, um zu bestimmen, welcher Farbstrahl es trifft.",
+				{
+					"type": "table",
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"colLabels": [
+						"d8",
+						"Octarine Spray Effect"
+					],
+					"rows": [
+						[
+							"1",
+							"The target takes {@damage 20d6} psychic damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"2",
+							"The target takes {@damage 20d6} necrotic damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"3",
+							"The target takes {@damage 20d6} force damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"4",
+							"The target takes {@damage 20d6} radiant damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"5",
+							"The target takes {@damage 20d6} thunder damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"6",
+							"At the start of each of its turns, the affected target uses all its movement to move directly towards the closest creature it can see. Then, the affected target uses its action to make a melee attack against a randomly determined creature within its reach. If there is no creature within its reach, the affected target does nothing this turn. At the end of each of its turns, the affected target can make a Wisdom saving throw. If it succeeds, this effect ends for that target."
+						],
+						[
+							"7",
+							"At the start of each of its turns, the affected target gains one {@adventure level of contamination|DoDk|12}. At the end of each of its turns, an affected target can make a Constitution saving throw. If it succeeds, this effect ends for that target, but any {@adventure contamination levels|DoDk|12} gained remain."
+						],
+						[
+							"8",
+							"{@b Special.} The target is struck by an additional ray. Roll again twice. There's no limit to how many additional rays can strike a single creature in this manner."
+						]
+					]
+				}
+			],
+			"damageInflict": [
+				"force",
+				"necrotic",
+				"psychic",
+				"radiant",
+				"thunder"
+			],
+			"savingThrow": [
+				"constitution",
+				"wisdom"
+			],
+			"miscTags": [
+				"RO"
+			]
+		},
+		{
+			"name": "Purge Contamination",
+			"source": "DoDk",
+			"page": 228,
+			"level": 3,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "100 gp alchemistische Flüssigkeiten oder Weihwasser, die der Zauberspruch verbraucht",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Du wendest alchemistische Flüssigkeiten oder Weihwasser auf eine kontaminierte humanoide Kreatur an, während du einen anspruchsvollen magischen Spruch rezitierst, der eldritische Verunreinigungen aus dem Körper des Ziels vertreibt. Wenn du den Zauber zu Ende gesprochen hast, sind alle {@adventure contamination levels|DoDk|12} und Mutationen von der Kreatur entfernt. Für jedes {@adventure contamination level|DoDk|12}, das mit diesem Zauber entfernt wird, gewinnt die Kreatur eine Stufe von {@condition exhaustion} hinzu."
+			],
+			"conditionInflict": [
+				"exhaustion"
+			]
+		},
+		{
+			"name": "Ray of Contamination",
+			"source": "DoDk",
+			"page": 229,
+			"level": 6,
+			"school": "N",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ein Delerium-Fragment im Wert von 100 gp, das durch den Zauber verbraucht wird",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Wenn du diesen Zauber sprichst, erhältst du einen {@adventure level of contamination|DoDk|12}. Ein oktarischer Strahl springt von deinem Zeigefinger zu einer Kreatur, die du in Reichweite sehen kannst. Das Ziel muss einen Rettungswurf für die Konstitution bestehen. Bei einem misslungenen Schutzwurf erleidet die Kreatur {@damage 16d6} nekrotischen Schaden und erhält {@dice 1d4} {@adventure levels of contamination|DoDk|12}. Bei einem erfolgreichen Schutzwurf erleidet das Ziel halb so viel Schaden und erhält keine {@adventure contamination levels|DoDk|12}."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "Auf höheren Ebenen",
+					"entries": [
+						"Wenn du diesen Zauberspruch mit einem Zauberslot der Stufe 7 oder höher wirkst, kannst du für jeden Slot über der Stufe 6 eine zusätzliche Kreatur als Ziel wählen. Die Kreaturen müssen sich innerhalb von 9 Metern befinden, wenn du sie anvisierst."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Ride the Rifts",
+			"source": "DoDk",
+			"page": 228,
+			"level": 3,
+			"school": "C",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "line",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ein Delerium-Fragment im Wert von 100 gp, das durch den Zauber verbraucht wird",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Wenn du diesen Zauber sprichst, erhältst du einen {@adventure level of contamination|DoDk|12}. Ein eldritischer Blitz, der eine 18 Meter lange und 1,5 Meter breite Linie bildet, schießt von dir aus in eine von dir gewählte Richtung. Jede Kreatur in dieser Linie muss einen Rettungswurf in Geschicklichkeit bestehen. Bei einem misslungenen Schutzwurf erleidet die Kreatur {@damage 10d6} Blitzschaden, bei einem erfolgreichen Schutzwurf halb so viel Schaden. Du teleportierst dich dann an einen unbesetzten Ort, den du innerhalb des Bereichs der Linie sehen kannst."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "Auf höheren Ebenen",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberslot der Stufe 4 oder höher wirkst, erhöht sich der Schaden um {@dice 2d6} für jeden Slot der Stufe 3 oder höher."
+					]
+				}
+			],
+			"damageInflict": [
+				"lightning"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Sacrament of the Falling Fire",
+			"source": "DoDk",
+			"page": 229,
+			"level": 9,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ein Delerium-Fragment im Wert von 100 Gp für jede teilnehmende Kreatur, das durch den Zauber verbraucht wird",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Dieser Zauber kann nur in einem Gebiet gewirkt werden, das vom Tiefen Dunst bedeckt ist.",
+				"Du führst eine heilige Zeremonie mit bis zu 12 gläubigen und willigen humanoiden Kreaturen durch, die endet, wenn jede teilnehmende Kreatur einen Deleriumssplitter in ihre Brust treibt. Diese Kreaturen werden geheiligt (siehe das Dossier Anhänger des fallenden Feuers in Kapitel 3 von Dungeons of Drakkenheim).",
+				"Wenn du diesen Zauber beendest, erscheint ein feindlicher {@creature shadow} und greift jeden Teilnehmer an, als Manifestation der inneren Dunkelheit des Charakters. Der Spielleiter kann festlegen, dass ein Charakter, der große Wut, Angst oder Hass in seinem Herzen trägt, stattdessen eine {@creature wraith} manifestiert."
+			]
+		},
+		{
+			"name": "Siphon Contamination",
+			"source": "DoDk",
+			"page": 229,
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "speziell zubereitete alchemistische Flüssigkeiten im Wert von 500 gp und eine Delerium-Geode im Wert von 5.000 gp, die alle durch den Zauber verbraucht werden",
+					"cost": 50000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Dieser anspruchsvolle Zauber überträgt {@adventure contamination|DoDk|12} von einer Kreatur auf eine andere. Wenn du diesen Zauber sprichst, musst du zuerst entweder eine willige humanoide Kreatur mit einem oder mehreren {@adventure levels of contamination|DoDk|12} oder eine ehemalige humanoide Kreatur berühren, deren jetzige Form das Ergebnis einer monströsen Transformation ist. Dann berührst du eine andere willige humanoide Kreatur.",
+				"Wenn beide berührten Kreaturen willige humanoide Kreaturen waren, entziehst du der ersten Kreatur alle {@adventure contamination levels|DoDk|12} und Mutationen. Die zweite Kreatur, die du berührst, gewinnt dann eine Anzahl von {@adventure contamination levels|DoDk|12}, die der Anzahl der Stufen entspricht, die der ersten Kreatur entzogen wurden.",
+				"Wenn die erste Kreatur, die du berührst, ein ehemaliger Humanoider ist, der eine monströse {@adventure contamination|DoDk|12} Verwandlung erlitten hat, und die zweite Kreatur eine willige humanoide Kreatur mit einer Charakterstufe oder einem Herausforderungswert gleich oder höher als der Herausforderungswert der verwandelten Kreatur ist, bringst du die vollständig verseuchte Kreatur in ihre ursprüngliche Form zurück, dann macht die humanoide Kreatur sofort eine monströse Verwandlung durch, als hätte sie sechs {@adventure contamination levels|DoDk|12} gewonnen.",
+				"Die zweite berührte Kreatur kann diese {@adventure contamination levels|DoDk|12} oder eine nachfolgende Verwandlung in keiner Weise verhindern oder negieren, andernfalls scheitert der Zauber ohne Wirkung."
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Warp Bolt",
+			"source": "DoDk",
+			"page": 229,
+			"level": 2,
+			"school": "V",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "ein Delerium-Fragment im Wert von 100 gp, das durch den Zauber verbraucht wird",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Wenn du diesen Zauber sprichst, erhältst du einen {@adventure level of contamination|DoDk|12}. Ein bogenförmiger Blitz aus Oktarinen schlägt in eine Kreatur in Reichweite ein. Wenn das Ziel einen oder mehrere {@adventure contamination levels|DoDk|12} hat, wird es automatisch getroffen. Andernfalls führe einen Fernkampf-Zauberangriff gegen diese Kreatur durch. Bei einem Treffer erleidet das Ziel {@damage 6d6} nekrotischen Schaden und erhält einen {@adventure level of contamination|DoDk|12}.",
+				"Du kannst in jeder Runde einen neuen Blitz als Aktion erschaffen, bis der Zauber endet."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "Auf höheren Ebenen",
+					"entries": [
+						"Wenn du diesen Zauber mit einem Zauberspruch der Stufe 3 oder höher wirkst, kannst du 1 zusätzliche Kreatur für jede Zauberstufe über 2 anvisieren."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"spellAttack": [
+				"R"
+			]
+		}
+	]
+}
