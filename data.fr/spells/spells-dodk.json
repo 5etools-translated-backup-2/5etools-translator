@@ -1,0 +1,737 @@
+{
+	"spell": [
+		{
+			"name": "Conjure the Deep Haze",
+			"source": "DoDk",
+			"page": 226,
+			"level": 5,
+			"school": "C",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un fragment de delerium d'une valeur de 100 po, que le sort consomme",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Lorsque vous lancez ce sort, vous gagnez un {@adventure level of contamination|DoDk|12}.",
+				"Vous créez une sphère de brume profonde de 6 mètres de rayon sur un point que vous choisissez à portée. Le brouillard se répand autour des coins. Il dure pour la durée ou jusqu'à ce qu'un vent fort disperse le brouillard, mettant fin au sort. Sa zone est fortement obscurcie.",
+				"Lorsqu'une créature entre dans la zone du sort pour la première fois lors d'un tour ou commence son tour à cet endroit, elle doit réussir un jet de sauvegarde de Constitution. Sur un jet de sauvegarde raté, elle subit ({@dice 8d6}) de dégâts nécrotiques et gagne un {@adventure level of contamination|DoDk|12}. Si elle réussit son jet de sauvegarde, la créature subit deux fois moins de dégâts et ne gagne pas de {@adventure contamination levels|DoDk|12}. Les créatures sont affectées même si elles retiennent leur souffle ou n'ont pas besoin de respirer."
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"OBS"
+			]
+		},
+		{
+			"name": "Contaminated Power",
+			"source": "DoDk",
+			"page": 226,
+			"level": 8,
+			"school": "T",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un éclat de delerium d'une valeur de 500 po, que le sort consomme",
+					"cost": 50000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Lorsque vous lancez ce sort, vous gagnez un {@adventure level of contamination|DoDk|12}. Vous tirez de la magie arcanique non restreinte de l'éclat de delerium que vous tenez dans votre main. Jusqu'à la fin du sort, vous gagnez les avantages suivants :",
+				{
+					"type": "list",
+					"items": [
+						"Lorsque vous lancez un sort qui inflige des dégâts d'acide, de feu, de froid, de foudre ou de poison, vous pouvez changer le type de dégâts en dégâts de force, nécrotiques, psychiques ou radiants.",
+						"Une fois par tour, lorsque vous infligez des dégâts avec un sort, vous pouvez infliger {@damage 1d12} de dégâts nécrotiques supplémentaires pour chaque {@adventure contamination level|DoDk|12} que vous avez gagné à une cible de ce sort.",
+						"Lorsque vous lancez un sort qui oblige une créature à effectuer un jet de sauvegarde pour résister à ses effets, vous pouvez choisir d'en gagner un {@adventure level of contamination|DoDk|12}. Si vous le faites, une cible du sort a un désavantage à son premier jet de sauvegarde effectué contre ce sort."
+					]
+				},
+				"Ce sort ne peut pas être dissipé par {@spell dispel magic}."
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Contamination Immunity",
+			"source": "DoDk",
+			"page": 226,
+			"level": 7,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Un lis d'eldritch mélangé à 250 gp de fluides purifiés spécialement préparés, que le sort consomme.",
+					"cost": 25000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"entries": [
+				"Jusqu'à la fin du sort, une créature consentante que vous touchez est immunisée aux dégâts nécrotiques et ne peut pas gagner {@adventure contamination levels|DoDk|12}. La créature affectée peut se reposer normalement dans la brume.",
+				"Ce sort prend fin immédiatement si la créature lance un sort contaminé."
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Delerium Blast",
+			"source": "DoDk",
+			"page": 227,
+			"level": 4,
+			"school": "V",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 150
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un fragment de delerium d'une valeur de 100 po, que le sort consomme",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Lorsque vous lancez ce sort, vous gagnez un {@adventure level of contamination|DoDk|12}.",
+				"Vous enflammez les énergies arcaniques stockées dans un fragment de delerium que vous tenez dans votre main, et le lancez vers un espace que vous pouvez voir à portée. Il explose dans une sphère d'énergie psychique erratique de 6 mètres de rayon qui submerge les esprits et les sens de ceux qui s'y trouvent. Chaque créature dans la sphère doit réussir un jet de sauvegarde d'Intelligence. En cas d'échec, la créature subit ({@dice 10d6}) de dégâts psychiques et devient {@condition incapacitated} jusqu'à la fin de son prochain tour. En cas de sauvegarde réussie, la cible subit deux fois moins de dégâts et ne souffre d'aucun des autres effets du sort."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "Aux niveaux supérieurs",
+					"entries": [
+						"Lorsque vous lancez ce sort en utilisant un emplacement de sort de 5e niveau ou plus, les dégâts augmentent de {@dice 2d6} pour chaque niveau d'emplacement supérieur au 4e."
+					]
+				}
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrow": [
+				"intelligence"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Delerium Orb",
+			"source": "DoDk",
+			"page": 227,
+			"level": 1,
+			"school": "V",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un fragment de delerium d'une valeur de 100 po, que le sort consomme",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Lorsque vous lancez ce sort, vous gagnez un {@adventure level of contamination|DoDk|12}. Vous puisez de la puissance magique chaotique dans le fragment delerium que vous tenez dans votre main, et faites exploser une créature que vous pouvez voir à portée avec de la puissance paradoxale. Choisissez un score de capacité, puis choisissez des dégâts de froid, de feu, de foudre, nécrotiques, psychiques ou radiants. La cible doit réussir un jet de sauvegarde en utilisant le score de capacité choisi ; elle subit {@damage 6d6} de dégâts du type choisi en cas d'échec du jet de sauvegarde, ou moitié moins en cas de réussite."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "Aux niveaux supérieurs",
+					"entries": [
+						"Lorsque vous lancez ce sort en utilisant un emplacement de sort de 2e niveau ou plus, les dégâts augmentent de {@dice 2d6} pour chaque niveau d'emplacement supérieur au 1er."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Forced Evolution",
+			"source": "DoDk",
+			"page": 227,
+			"level": 4,
+			"school": "T",
+			"time": [
+				{
+					"number": 8,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Un cocktail alchimique à base de composants rares et de poussière delerium d'une valeur de 250 or, que la cible consomme dans le cadre du sort.",
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Au moyen de ce sort, vous transformez une mutation gagnée sur {@adventure contamination|DoDk|12}. L'une des mutations existantes de la cible est supprimée et remplacée par une autre. Cette mutation peut être choisie par le maître de jeu ou déterminée aléatoirement (voir l'annexe C de Dungeons of Drakkenheim)."
+			]
+		},
+		{
+			"name": "Neutralizing Field",
+			"source": "DoDk",
+			"page": 228,
+			"level": 5,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "sphere",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Un cristal de delerium ou une relique sacrée d'une valeur de 1 000 po.",
+					"cost": 100000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Vous annulez les énergies magiques contaminées dans une sphère de 3 mètres de rayon. Jusqu'à la fin du sort, la sphère se déplace avec vous, centrée sur vous. Les créatures dans la sphère (y compris vous) ne peuvent pas gagner {@adventure contamination levels|DoDk|12} et ont une immunité aux dégâts nécrotiques. Les sorts contaminés ne peuvent pas être lancés par les créatures dans la zone."
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Octarine Spray",
+			"source": "DoDk",
+			"page": 228,
+			"level": 7,
+			"school": "V",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un fragment de delerium d'une valeur de 100 po, que le sort consomme",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Lorsque vous lancez ce sort, vous gagnez un {@adventure level of contamination|DoDk|12}. Des rayons de lumière octarine jaillissent de votre main. Chaque rayon est d'une couleur différente et a un pouvoir et un but différents, voir la table ci-dessous. Chaque créature située dans un cône de 18 mètres doit réussir un jet de sauvegarde de Constitution. Pour chaque cible, lancez un {@dice d8} pour déterminer quelle couleur de rayon l'affecte.",
+				{
+					"type": "table",
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"colLabels": [
+						"d8",
+						"Octarine Spray Effect"
+					],
+					"rows": [
+						[
+							"1",
+							"The target takes {@damage 20d6} psychic damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"2",
+							"The target takes {@damage 20d6} necrotic damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"3",
+							"The target takes {@damage 20d6} force damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"4",
+							"The target takes {@damage 20d6} radiant damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"5",
+							"The target takes {@damage 20d6} thunder damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"6",
+							"At the start of each of its turns, the affected target uses all its movement to move directly towards the closest creature it can see. Then, the affected target uses its action to make a melee attack against a randomly determined creature within its reach. If there is no creature within its reach, the affected target does nothing this turn. At the end of each of its turns, the affected target can make a Wisdom saving throw. If it succeeds, this effect ends for that target."
+						],
+						[
+							"7",
+							"At the start of each of its turns, the affected target gains one {@adventure level of contamination|DoDk|12}. At the end of each of its turns, an affected target can make a Constitution saving throw. If it succeeds, this effect ends for that target, but any {@adventure contamination levels|DoDk|12} gained remain."
+						],
+						[
+							"8",
+							"{@b Special.} The target is struck by an additional ray. Roll again twice. There's no limit to how many additional rays can strike a single creature in this manner."
+						]
+					]
+				}
+			],
+			"damageInflict": [
+				"force",
+				"necrotic",
+				"psychic",
+				"radiant",
+				"thunder"
+			],
+			"savingThrow": [
+				"constitution",
+				"wisdom"
+			],
+			"miscTags": [
+				"RO"
+			]
+		},
+		{
+			"name": "Purge Contamination",
+			"source": "DoDk",
+			"page": 228,
+			"level": 3,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "100 gp de fluides alchimiques ou d'eau bénite, que le sort consomme.",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Vous appliquez des fluides alchimiques ou de l'eau bénite à une créature humanoïde contaminée tout en récitant un chant magique exigeant qui expulse les contaminants eldritch du corps de la cible. Lorsque vous finissez de lancer le sort, tous les {@adventure contamination levels|DoDk|12} et les mutations sont retirés de la créature. Elle gagne ensuite un niveau de {@condition exhaustion} pour chaque {@adventure contamination level|DoDk|12} retiré avec ce sort."
+			],
+			"conditionInflict": [
+				"exhaustion"
+			]
+		},
+		{
+			"name": "Ray of Contamination",
+			"source": "DoDk",
+			"page": 229,
+			"level": 6,
+			"school": "N",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un fragment de delerium d'une valeur de 100 po, que le sort consomme",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Lorsque vous lancez ce sort, vous gagnez un {@adventure level of contamination|DoDk|12}. Un rayon octarine jaillit de votre doigt pointé vers une créature que vous pouvez voir à portée. La cible doit réussir un jet de sauvegarde de Constitution. En cas d'échec, la créature subit {@damage 16d6} de dégâts nécrotiques et gagne {@dice 1d4} {@adventure levels of contamination|DoDk|12}. Si elle réussit son jet de sauvegarde, la cible subit la moitié des dégâts et ne gagne pas de {@adventure contamination levels|DoDk|12}."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "Aux niveaux supérieurs",
+					"entries": [
+						"Lorsque vous lancez ce sort en utilisant un emplacement de sort de 7e niveau ou plus, vous pouvez cibler une créature supplémentaire pour chaque niveau d'emplacement supérieur au 6e. Les créatures doivent se trouver à moins de 9 mètres l'une de l'autre lorsque vous les prenez pour cible."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Ride the Rifts",
+			"source": "DoDk",
+			"page": 228,
+			"level": 3,
+			"school": "C",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "line",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un fragment de delerium d'une valeur de 100 po, que le sort consomme",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Lorsque vous lancez ce sort, vous gagnez un {@adventure level of contamination|DoDk|12}. Un trait de foudre eldritch formant une ligne de 18 mètres de long et de 1,5 mètre de large jaillit de vous dans la direction de votre choix. Chaque créature de la ligne doit réussir un jet de sauvegarde de Dextérité. Une créature subit {@damage 10d6} de dégâts de foudre en cas de sauvegarde ratée, ou moitié moins de dégâts en cas de sauvegarde réussie. Vous vous téléportez ensuite dans un espace inoccupé que vous pouvez voir dans la zone de la ligne."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "Aux niveaux supérieurs",
+					"entries": [
+						"Lorsque vous lancez ce sort en utilisant un emplacement de sort de 4e niveau ou plus, les dégâts augmentent de {@dice 2d6} pour chaque niveau d'emplacement supérieur au 3e."
+					]
+				}
+			],
+			"damageInflict": [
+				"lightning"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Sacrament of the Falling Fire",
+			"source": "DoDk",
+			"page": 229,
+			"level": 9,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un fragment de delerium d'une valeur de 100 gp pour chaque créature participante, que le sort consomme",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Ce sort ne peut être lancé que dans une zone couverte par la brume profonde.",
+				"Vous réalisez une cérémonie sacrée impliquant jusqu'à 12 créatures humanoïdes fidèles et consentantes, qui se termine lorsque chaque créature participante s'enfonce un éclat de delerium dans la poitrine. Ces créatures sont alors sanctifiées (voir le dossier Followers of the Falling Fire au chapitre 3 de Dungeons of Drakkenheim).",
+				"Lorsque vous finissez de lancer ce sort, un {@creature shadow} hostile apparaît et attaque chaque participant, comme une manifestation des ténèbres intérieures de ce personnage. Le MJ peut décider qu'un personnage qui porte une grande colère, une grande peur ou une grande haine dans son cœur provoque la manifestation d'un {@creature wraith} à la place."
+			]
+		},
+		{
+			"name": "Siphon Contamination",
+			"source": "DoDk",
+			"page": 229,
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "500 gp de fluides alchimiques spécialement préparés et une géode delerium d'une valeur de 5 000 gp, qui sont tous consommés par le sort.",
+					"cost": 50000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Ce sort exigeant transfère {@adventure contamination|DoDk|12} d'une créature à une autre. Lorsque vous lancez ce sort, vous devez d'abord toucher soit une créature humanoïde consentante dotée d'un ou plusieurs {@adventure levels of contamination|DoDk|12}, soit une ancienne créature humanoïde dont la forme actuelle est le résultat d'une transformation monstrueuse. Vous touchez ensuite une autre créature humanoïde consentante.",
+				"Si les deux créatures touchées étaient des créatures humanoïdes consentantes, vous retirez tous les {@adventure contamination levels|DoDk|12} et mutations de la première créature, puis la seconde créature que vous touchez gagne un nombre de {@adventure contamination levels|DoDk|12} égal au nombre de niveaux retirés à la première créature.",
+				"Si la première créature que vous touchez est un ancien humanoïde qui a subi une transformation monstrueuse {@adventure contamination|DoDk|12}, et que la seconde créature est une créature humanoïde consentante avec un niveau de personnage ou une valeur de défi égale ou supérieure à la valeur de défi de la créature transformée, vous redonnez à la créature entièrement contaminée sa forme originelle, puis la créature humanoïde subit immédiatement une transformation monstrueuse comme si elle avait gagné six {@adventure contamination levels|DoDk|12}.",
+				"La seconde créature touchée ne peut empêcher ou annuler ces {@adventure contamination levels|DoDk|12} ou une transformation qui s'ensuit de quelque manière que ce soit, sous peine de voir le sort échouer sans effet."
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Warp Bolt",
+			"source": "DoDk",
+			"page": 229,
+			"level": 2,
+			"school": "V",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "un fragment de delerium d'une valeur de 100 po, que le sort consomme",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Lorsque vous lancez ce sort, vous gagnez un {@adventure level of contamination|DoDk|12}. Un éclair octarin arqué frappe une créature à portée. Si la cible a un ou plusieurs {@adventure contamination levels|DoDk|12}, elle est automatiquement touchée. Sinon, effectuez une attaque de sort à distance contre cette créature. Sur un succès, la cible subit {@damage 6d6} de dégâts nécrotiques et gagne un {@adventure level of contamination|DoDk|12}.",
+				"Vous pouvez créer un nouvel éclair comme action à n'importe quel tour jusqu'à ce que le sort prenne fin."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "Aux niveaux supérieurs",
+					"entries": [
+						"Lorsque vous lancez ce sort en utilisant un emplacement de sort de 3e niveau ou plus, vous pouvez cibler 1 créature supplémentaire pour chaque niveau de sort supérieur au 2e."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"spellAttack": [
+				"R"
+			]
+		}
+	]
+}

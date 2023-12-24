@@ -1,0 +1,6224 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		},
+		"otherSources": {
+			"monster": {
+				"MM": "DoDk",
+				"MOT": "DoDk"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Amalgamation",
+			"source": "DoDk",
+			"page": 206,
+			"size": [
+				"G"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 525,
+				"formula": "30d20 + 210"
+			},
+			"speed": {
+				"walk": 5
+			},
+			"str": 30,
+			"dex": 11,
+			"con": 27,
+			"int": 22,
+			"wis": 18,
+			"cha": 20,
+			"save": {
+				"str": "+17",
+				"dex": "+7",
+				"con": "+15",
+				"int": "+13",
+				"wis": "+11"
+			},
+			"skill": {
+				"arcana": "+13",
+				"deception": "+12",
+				"insight": "+11",
+				"perception": "+11"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 21,
+			"immune": [
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"stunned"
+			],
+			"languages": [
+				"all",
+				"telepathy 1 mile"
+			],
+			"cr": "23",
+			"spellcasting": [
+				{
+					"name": "Lanceur de sorts inné",
+					"headerEntries": [
+						"La capacité innée de lanceur de sorts de l'amalgame est Charisme (sauvegarde contre les sorts {@dc 20}). Il peut lancer de manière innée les sorts suivants, ne nécessitant aucune composante :"
+					],
+					"will": [
+						"{@spell detect thoughts}",
+						"{@spell dispel magic}"
+					],
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Résistance légendaire (3/Jour)",
+					"entries": [
+						"Si l'amalgame échoue à un jet de sauvegarde, il peut choisir de réussir à la place."
+					]
+				},
+				{
+					"name": "Malignité",
+					"entries": [
+						"L'amalgame ne peut pas être téléporté ou se rendre sur un autre plan contre sa volonté."
+					]
+				},
+				{
+					"name": "Forme immuable",
+					"entries": [
+						"L'amalgame est immunisé contre tout sort ou effet qui altérerait sa forme."
+					]
+				},
+				{
+					"name": "Armes magiques",
+					"entries": [
+						"Les attaques des armes de l'amalgame sont magiques."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multi-attaques",
+					"entries": [
+						"L'amalgame utilise sa Présence Contaminante. Elle effectue ensuite trois attaques de tentacules, chacune pouvant être remplacée par une utilisation de Fling."
+					]
+				},
+				{
+					"name": "Morsure",
+					"entries": [
+						"{@atk mw} {@hit 17} pour toucher, portée de 1,5 m., une cible. {@h}23 ({@damage 3d8 + 10}) dégâts perforants. Si la cible est une créature Grande ou plus petite {@condition grappled} par l'amalgame, cette créature est avalée et le grappin prend fin.",
+						"Pendant qu'elle est avalée, la créature est {@condition blinded} et {@condition restrained}, elle bénéficie d'une couverture totale contre les attaques et autres effets extérieurs à l'amalgame, et elle subit 42 ({@damage 12d6}) dégâts d'acide et gagne un {@adventure level of contamination|DoDk|12} au début de chacun des tours de l'amalgame.",
+						"Si l'amalgame subit 50 points de dégâts ou plus en un seul tour de la part d'une créature qui s'y trouve, il doit réussir un jet de sauvegarde de Constitution de {@dc 25} à la fin de ce tour ou régurgiter toutes les créatures avalées, qui tombent {@condition prone} dans un espace situé à moins de 3 mètres de l'amalgame. Si l'amalgame meurt, une créature avalée n'est plus {@condition restrained} par lui et peut s'échapper du cadavre en utilisant 4,5 mètres de mouvement, sortant {@condition prone}."
+					]
+				},
+				{
+					"name": "Tentacule",
+					"entries": [
+						"{@atk mw} {@hit 17} pour toucher, portée de 15 m., une cible. {@h}20 ({@damage 3d6 + 10}) dégâts de contondant, et la cible est {@condition grappled} (fuite {@dc 18}). Jusqu'à la fin de ce grappin, la cible subit {@condition restrained}. L'amalgame possède douze tentacules, chacun pouvant saisir une cible."
+					]
+				},
+				{
+					"name": "Fling",
+					"entries": [
+						"Un objet grand ou petit tenu ou une créature {@condition grappled} par l'amalgame est projeté jusqu'à 18 mètres dans une direction choisie par l'amalgame et subit un choc {@condition prone}. Si une cible projetée heurte une surface solide, elle subit 3 ({@damage 1d6}) points de dégâts contondants par tranche de 3 mètres parcourue. Si la cible est lancée sur une autre créature, celle-ci doit réussir un jet de sauvegarde de Dextérité {@dc 18} ou subir les mêmes dégâts et être assommée {@condition prone}."
+					]
+				},
+				{
+					"name": "Des chuchotements qui brisent l'esprit",
+					"entries": [
+						"L'amalgame énonce une terrible vérité dans l'esprit d'une créature située à moins de 36 mètres de lui. Cette créature doit réussir un jet de sauvegarde d'Intelligence de {@dc 20}. En cas d'échec, elle subit 35 ({@damage 10d6}) points de dégâts psychiques et devient folle jusqu'à ce qu'elle termine un long repos. Tant qu'elle est folle, elle ne peut entreprendre aucune action, ne comprend pas ce que disent les autres créatures, ne peut pas lire et ne peut parler qu'en charabia. Un sort de {@spell greater restoration} lancé sur la créature met fin à cet effet."
+					]
+				},
+				{
+					"name": "Présence contaminante",
+					"entries": [
+						"Les créatures humanoïdes situées à moins de 36 mètres de l'amalgame doivent réussir un jet de sauvegarde de Constitution de {@dc 20} ou subir 10 ({@damage 3d6}) points de dégâts nécrotiques et gagner un {@adventure level of contamination|DoDk|12}."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attaque de tentacules ou Flottement",
+					"entries": [
+						"L'amalgame effectue une attaque de tentacules ou utilise sa Flèche."
+					]
+				},
+				{
+					"name": "Chuchotements brisant l'esprit (coûte 2 actions)",
+					"entries": [
+						"L'amalgame utilise Chuchotement brisant l'esprit."
+					]
+				},
+				{
+					"name": "Le joueur de cornemuse au Portail (coûte 3 actions)",
+					"entries": [
+						"Jusqu'à cinq gibbeux apparaissent dans des espaces inoccupés à moins de 9 mètres de l'amalgame et y restent jusqu'à ce qu'ils soient détruits. Ces créatures agissent après l'amalgame sur le même compte d'initiative et sont sous son contrôle. L'amalgame peut avoir jusqu'à dix gibbeuses invoquées par cette capacité à la fois."
+					]
+				}
+			],
+			"traitTags": [
+				"Immutable Form",
+				"Legendary Resistances",
+				"Magic Weapons"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Swallow",
+				"Tentacles"
+			],
+			"languageTags": [
+				"TP",
+				"XX"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"N",
+				"P",
+				"Y"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"blinded",
+				"grappled",
+				"prone",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity",
+				"intelligence"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Animated Delerium Sludge",
+			"source": "DoDk",
+			"page": 203,
+			"size": [
+				"L"
+			],
+			"type": "elemental",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 114,
+				"formula": "12d10 + 48"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 90
+			},
+			"str": 18,
+			"dex": 14,
+			"con": 18,
+			"int": 5,
+			"wis": 10,
+			"cha": 8,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"acid",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained",
+				"unconscious"
+			],
+			"languages": [
+				"Deep Speech"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Forme des boues",
+					"entries": [
+						"La boue animée peut entrer dans l'espace d'une créature hostile et s'y arrêter. Elle peut se déplacer dans un espace aussi étroit qu'un pouce de large sans se presser."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Toucher contaminé",
+					"entries": [
+						"{@atk mw} {@hit 7} à toucher, portée de 1,5 m., une cible. {@h}10 ({@damage 3d6}) dégâts nécrotiques. De plus, une cible touchée par cette attaque doit réussir un jet de sauvegarde de {@dc 15} de Constitution ou gagner un {@adventure level of contamination|DoDk|12}."
+					]
+				},
+				{
+					"name": "Engloutir",
+					"entries": [
+						"Chaque créature se trouvant dans l'espace de la boue animée doit réussir un jet de sauvegarde de {@dc 15} de Force. En cas de sauvegarde ratée, la créature devient {@condition grappled} par la boue si elle est Grande ou plus petite (échapper à {@dc 14}). Jusqu'à la fin de ce grappin, la cible est {@condition restrained}. Si le jet de sauvegarde est réussi, la cible est poussée hors de l'espace de la boue.",
+						"La boue peut agripper une créature de grande taille ou jusqu'à deux créatures de taille moyenne ou inférieure à la fois. Au début de chacun des tours de la boue, chaque cible {@condition grappled} par elle subit 28 ({@damage 8d6}) dégâts nécrotiques et doit réussir un jet de sauvegarde de Constitution de {@dc 15} ou gagner un {@adventure level of contamination|DoDk|12}.",
+						"Une créature située à moins de 1,5 mètre de la boue peut tenter d'en extraire une créature ou un objet. Cela prend une action et nécessite un test de Force réussi {@dc 14}."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"DS"
+			],
+			"damageTags": [
+				"N"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"strength"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Arcane Wraith",
+			"source": "DoDk",
+			"page": 197,
+			"_copy": {
+				"name": "Wraith",
+				"source": "MM"
+			},
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Lancer des sorts",
+					"headerEntries": [
+						"Le spectre est un lanceur de sorts de 8ème niveau. Sa capacité de lanceur de sorts est Charisme (sauvegarde contre les sorts {@dc 13}, {@hit 5} pour toucher avec les attaques de sort). Le spectre connaît les sorts de sorcier suivants :"
+					],
+					"will": [
+						"{@spell mage hand}",
+						"{@spell magic missile}",
+						"{@spell minor illusion}"
+					],
+					"daily": {
+						"1": [
+							"{@spell hypnotic pattern}"
+						],
+						"3": [
+							"{@spell lightning bolt}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"damageTagsSpell": [
+				"L",
+				"O"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Big Linda",
+			"isNamedCreature": true,
+			"source": "DoDk",
+			"page": 163,
+			"size": [
+				"H"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 136,
+				"formula": "13d12 + 52"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 25,
+			"dex": 10,
+			"con": 19,
+			"int": 2,
+			"wis": 12,
+			"cha": 9,
+			"skill": {
+				"perception": "+4"
+			},
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 14,
+			"immune": [
+				"acid"
+			],
+			"cr": "9",
+			"action": [
+				{
+					"name": "Multi-attaques",
+					"entries": [
+						"Big Linda effectue deux attaques : une avec sa morsure et une avec sa queue. Elle ne peut pas faire les deux attaques contre la même cible."
+					]
+				},
+				{
+					"name": "Morsure",
+					"entries": [
+						"{@atk mw} {@hit 10} pour toucher, portée de 3 m., une cible. {@h}33 ({@damage 4d12 + 7}) dégâts perforants. Si la cible est une créature moyenne ou plus petite, elle subit {@condition grappled} (évasion {@dc 17}). Jusqu'à la fin de ce grappin, la cible est {@condition restrained}, et Big Linda ne peut pas mordre une autre cible."
+					]
+				},
+				{
+					"name": "Queue",
+					"entries": [
+						"{@atk mw} {@hit 10} pour toucher, portée de 3 m., une cible. {@h}20 ({@damage 3d8 + 7}) dégâts contondants."
+					]
+				},
+				{
+					"name": "Jet d'acide {@recharge 5}",
+					"entries": [
+						"Big Linda crache de l'acide dans un cône de 9 mètres. Chaque créature située dans cette ligne de feu doit réussir un jet de sauvegarde de {@dc 15} de Dextérité, subissant 49 ({@damage 11d8}) dégâts d'acide en cas de sauvegarde ratée, ou moitié moins en cas de sauvegarde réussie."
+					]
+				}
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Cavalier",
+			"source": "DoDk",
+			"page": 218,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"{@item splint armor|PHB|splint}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 90,
+				"formula": "12d8 + 36"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 10,
+			"con": 16,
+			"int": 10,
+			"wis": 12,
+			"cha": 15,
+			"save": {
+				"wis": "+4",
+				"cha": "+5"
+			},
+			"skill": {
+				"animal handling": "+4",
+				"athletics": "+7",
+				"perception": "+4",
+				"persuasion": "+5"
+			},
+			"passive": 14,
+			"languages": [
+				"Any two"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Lancer des sorts",
+					"headerEntries": [
+						"Le cavalier est un lanceur de sorts de 8e niveau qui utilise le charisme comme capacité de lancement de sorts (sauvegarde contre les sorts {@dc 13} ; {@hit 5} pour toucher avec les attaques de sorts). Ils disposent des sorts de paladin suivants préparés :"
+					],
+					"spells": {
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell bless}",
+								"{@spell command}",
+								"{@spell cure wounds}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell branding smite}",
+								"{@spell find steed}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Bravoure",
+					"entries": [
+						"Le cavalier a un avantage aux jets de sauvegarde contre l'être {@condition frightened}."
+					]
+				},
+				{
+					"name": "La fureur de la Lumière",
+					"entries": [
+						"Le cavalier inflige 9 ({@damage 2d8}) points de dégâts radiant supplémentaires lorsqu'il touche avec une attaque d'arme."
+					]
+				},
+				{
+					"name": "Cavalier Doué",
+					"entries": [
+						"Lorsqu'il est monté, le cavalier peut forcer une attaque ciblant sa monture à le prendre pour cible."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multi-attaques",
+					"entries": [
+						"Le cavalier effectue deux attaques de mêlée."
+					]
+				},
+				{
+					"name": "Lance d’arçon",
+					"entries": [
+						"{@atk mw} {@hit 7} pour toucher (avec désavantage contre une cible à moins de 1,5 m.), portée de 3 m., une cible. {@h}10 ({@damage 1d12 + 4}) dégâts perforants plus 9 ({@damage 2d8}) dégâts radiants."
+					]
+				},
+				{
+					"name": "Javeline",
+					"entries": [
+						"{@atk mw,rw} {@hit 7} pour toucher, portée de 1,5 m. ou portée de 30/36 m., une cible {@h}7 ({@damage 1d6 + 4}) dégâts perforants plus 9 ({@damage 2d8}) dégâts radiants."
+					]
+				}
+			],
+			"attachedItems": [
+				"javelin|phb",
+				"lance|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P",
+				"R"
+			],
+			"damageTagsSpell": [
+				"R"
+			],
+			"spellcastingTags": [
+				"CP"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"prone"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Chaplain",
+			"source": "DoDk",
+			"page": 218,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item chain mail|phb}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 58,
+				"formula": "9d8 + 18"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 10,
+			"con": 14,
+			"int": 11,
+			"wis": 17,
+			"cha": 13,
+			"save": {
+				"wis": "+6",
+				"cha": "+4"
+			},
+			"skill": {
+				"insight": "+6",
+				"persuasion": "+4",
+				"religion": "+3"
+			},
+			"passive": 13,
+			"languages": [
+				"Any two"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Lancer des sorts",
+					"headerEntries": [
+						"L'aumônier est un lanceur de sorts de 9e niveau qui utilise la Sagesse comme capacité de lancement de sorts (sauvegarde contre les sorts {@dc 12} ; {@hit 4} pour toucher avec les attaques de sorts). Il prépare les sorts de clerc suivants :"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell light}",
+								"{@spell mending}",
+								"{@spell sacred flame}",
+								"{@spell spare the dying}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell bless}",
+								"{@spell guiding bolt}",
+								"{@spell healing word}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell lesser restoration}",
+								"{@spell prayer of healing}",
+								"{@spell spiritual weapon}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell dispel magic}",
+								"{@spell purge contamination|DoDk}",
+								"{@spell spirit guardians}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell banishment}",
+								"{@spell divination}"
+							]
+						},
+						"5": {
+							"slots": 1,
+							"spells": [
+								"{@spell flame strike}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Dévotion",
+					"entries": [
+						"L'aumônier a un avantage aux jets de sauvegarde contre le fait d'être {@condition charmed} ou {@condition frightened}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Lance",
+					"entries": [
+						"{@atk mw,rw} {@hit 3} pour toucher, portée de 1,5 m. ou portée de 20/18 m., une cible. {@h}4 ({@damage 1d6 + 1}) de dégâts perforants ou 5 ({@damage 1d8 + 1}) de dégâts lorsqu'il est utilisé à deux mains pour porter une attaque de mêlée."
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"F",
+				"N",
+				"O",
+				"R"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"exhaustion",
+				"incapacitated"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"dexterity",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Crater Wurm",
+			"source": "DoDk",
+			"page": 197,
+			"_copy": {
+				"name": "Purple Worm",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "ver",
+						"with": "wurm"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Multi-attaques",
+							"items": {
+								"name": "Rupture",
+								"entries": [
+									"Le wurm des cratères utilise tous ses mouvements. Ce faisant, il peut entrer dans l'espace de créatures plus ou moins grandes. Chaque fois que le wurm entre dans l'espace d'une créature, celle-ci doit réussir un jet de sauvegarde de Force {@dc 19}. Sur une sauvegarde réussie, la créature peut choisir d'être poussée sur le côté de l'espace du wurm. Une créature qui choisit de ne pas être poussée subit les conséquences d'un jet de sauvegarde raté. En cas de sauvegarde ratée, la créature subit 35 ({@damage 10d6}) points de dégâts de contondant et est poussée de 3 mètres et frappée {@condition prone}. Après avoir terminé son déplacement, le wurm peut effectuer une attaque de morsure contre une cible {@condition prone} comme action bonus."
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Dard de queue",
+							"items": {
+								"name": "Goulot contaminé",
+								"entries": [
+									"Une créature avalée par un wurm des cratères gagne un {@adventure level of contamination|DoDk|12} chaque fois qu'elle subit des dégâts d'acide alors qu'elle se trouve à l'intérieur du wurm."
+								]
+							}
+						}
+					]
+				}
+			},
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Crimson Countess",
+			"source": "DoDk",
+			"page": 208,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 130,
+				"formula": "20d8 + 40"
+			},
+			"speed": {
+				"walk": 20,
+				"fly": 60
+			},
+			"str": 10,
+			"dex": 21,
+			"con": 15,
+			"int": 13,
+			"wis": 14,
+			"cha": 19,
+			"save": {
+				"con": "+5",
+				"wis": "+5"
+			},
+			"skill": {
+				"acrobatics": "+11",
+				"deception": "+7",
+				"perception": "+8"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"immune": [
+				"lightning",
+				"thunder"
+			],
+			"languages": [
+				"Abyssal"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Acrobate aérien",
+					"entries": [
+						"À chacun de ses tours, la comtesse cramoisie peut utiliser une action bonus pour effectuer l'action Dash, Disengage ou Dodge."
+					]
+				},
+				{
+					"name": "Vue perçante",
+					"entries": [
+						"La comtesse cramoisie a l'avantage sur les tests de Sagesse (Perception) qui font appel à la vue."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multi-attaques",
+					"entries": [
+						"La comtesse cramoisie peut utiliser son Cri d'effroi. Elle effectue alors deux attaques avec ses serres ou une avec son javelot."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 8} à toucher, portée de 1,5 m., une cible. {@h}11 ({@damage 1d10 + 5}) dégâts tranchants."
+					]
+				},
+				{
+					"name": "Cri d'effroi",
+					"entries": [
+						"Chaque créature au choix de la comtesse pourpre qui se trouve à moins de 36 mètres d'elle et qui n'est pas à {@condition deafened} doit réussir un jet de sauvegarde de {@dc 15} Sagesse ou devenir à {@condition frightened} pendant 1 minute. Si le jet de sauvegarde d'une créature est réussi ou si l'effet prend fin pour elle, la créature est immunisée contre les effets du Cri d'effroi de la comtesse pour les 24 heures suivantes.",
+						"Tant que {@condition frightened} par cet effet, une créature doit entreprendre l'action Dash et s'éloigner de la comtesse pourpre par le chemin le plus sûr à chacun de ses tours, à moins qu'il n'y ait nulle part où se déplacer. Si la créature termine son tour dans un endroit où elle n'a pas de ligne de vue sur la comtesse pourpre, elle peut répéter son jet de sauvegarde. Si elle réussit son jet de sauvegarde, l'effet prend fin pour cette créature."
+					]
+				},
+				{
+					"name": "Javeline",
+					"entries": [
+						"{@atk mw,rw} {@hit 8} pour toucher, portée 1,5 m. ou à distance 20/18 mètres, une cible. {@h}9 ({@damage 1d6 + 5}) dégâts perforants, plus 14 ({@damage 4d6}) dégâts de foudre."
+					]
+				},
+				{
+					"name": "Coup de tonnerre {@recharge 5}",
+					"entries": [
+						"La comtesse cramoisie libère un cri tonitruant dans un cube de 4,5 mètres de côté. Chaque créature présente dans le cube doit réussir un jet de sauvegarde de {@dc 15} de Constitution, subissant 14 ({@damage 4d6}) points de dégâts de tonnerre en cas d'échec, ou moitié moins de dégâts en cas de réussite. Les créatures qui ratent ce jet de sauvegarde sont poussées de 3 mètres et frappées de {@condition prone}."
+					]
+				}
+			],
+			"attachedItems": [
+				"javelin|phb"
+			],
+			"traitTags": [
+				"Keen Senses"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB"
+			],
+			"damageTags": [
+				"L",
+				"P",
+				"S",
+				"T"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Delerium Dreg",
+			"source": "DoDk",
+			"page": 199,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 22,
+				"formula": "5d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 13,
+			"con": 11,
+			"int": 7,
+			"wis": 10,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Common"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Camouflage brumeux",
+					"entries": [
+						"Un dreg delerium a un avantage sur les tests de Dextérité (furtivité) pour se cacher dans une zone obscurcie par la brume ou le brouillard."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Lance",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} pour toucher, portée de 1,5 m. ou portée de 20/18 m., une cible. {@h}5 ({@damage 1d6 + 2}) dégâts perforants, ou 6 ({@damage 1d8 + 2}) dégâts perforants si on l'utilise à deux mains pour faire une attaque de mêlée."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Aquatique (Deep One ou \"Fishfolk\")",
+					"entries": [
+						"Ces créatures mutantes ont un visage de poisson, des branchies, des nageoires et des écailles. Elles sont vêtues de haillons mouillés et portent des lances et des boucliers. Elles vivent dans les profondeurs des égouts et des cavernes souterraines de la ville.",
+						{
+							"type": "entries",
+							"name": "Amphibie",
+							"entries": [
+								"Un dreg aquatique peut respirer de l'air et de l'eau. Sa vitesse de nage est de 9 mètres."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "La vision aveugle",
+							"entries": [
+								"Une dreg aquatique gagne {@sense blindsight} dans un rayon de 9 mètres."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Ballonnement",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Eclatement de la mort",
+							"entries": [
+								"Lorsqu'un dreg delerium boursouflé meurt, il explose dans une explosion d'excréments corrompus. Chaque créature située à moins de 1,5 mètre de lui doit réussir un jet de sauvegarde de Constitution DC 11, subissant 7 ({@dice 2d6}) points de dégâts nécrotiques en cas d'échec, ou moitié moins en cas de réussite. Les créatures qui ratent leur jet de sauvegarde de 5 ou plus gagnent un {@adventure level of contamination|DoDk|12}."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Vaporisateur de bile (recharge 5-6)",
+							"entries": [
+								"Le dreg delerium boursouflé exhale un cône d'acide de 4,5 mètres. Chaque créature située dans cette zone doit réussir un jet de sauvegarde de Dextérité DC 11, subissant 7 ({@dice 2d6}) points de dégâts d'acide en cas d'échec, ou moitié moins en cas de réussite. Les créatures qui ratent leur jet de sauvegarde de 5 ou plus gagnent un {@adventure level of contamination|DoDk|12}."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Chitineux",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Coquille blindée",
+							"entries": [
+								"Un dreg chitineux a une AC de 18."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Cyclopéen",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Vision spectrale",
+							"entries": [
+								"Un dreg cyclopéen gagne {@sense truesight} 18 mètres. Il a l'avantage sur les tests de Sagesse ({@skill Perception}) qui font appel à la vue."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "La certitude folle",
+							"entries": [
+								"Un dreg cyclopéen est immunisé contre la condition {@condition frightened} et les dégâts psychiques."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Cri psychique (recharge 6)",
+							"entries": [
+								"Les créatures situées à moins de 6 mètres de la dreg cyclopéenne doivent réussir un jet de sauvegarde de sagesse DC 10 ou subir 7 ({@dice 2d6}) de dégâts psychiques et être {@condition frightened} pendant 1 minute. La cible peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant fin à l'effet sur elle-même en cas de réussite."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Déplacés",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Déplacement",
+							"entries": [
+								"Les jets d'attaque contre un dreg déplacé ont un désavantage. S'il est touché par une attaque, ce trait est interrompu jusqu'à la fin de son prochain tour. Ce trait est également interrompu tant que le dreg déplacé est à {@condition incapacitated} ou a une vitesse de 0."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Téléportation (recharge 4-6)",
+							"entries": [
+								"Le dreg déplacé se téléporte magiquement, avec tout l'équipement qu'il porte ou qu'il a sur lui, jusqu'à 18 mètres dans un espace inoccupé qu'il peut voir. Avant ou après sa téléportation, le dreg peut effectuer une attaque de mêlée. Si cette attaque touche, elle inflige 7 ({@dice 2d6}) points de dégâts psychiques supplémentaires."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Frénétique",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Sans état d'âme",
+							"entries": [
+								"Au début de son tour, un dreg frénétique peut obtenir l'avantage à tous les jets d'attaque avec une arme de mêlée pendant ce tour, mais les jets d'attaque contre lui ont l'avantage jusqu'au début de son prochain tour."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Brute",
+							"entries": [
+								"Une arme de mêlée inflige un dé de dégâts supplémentaire lorsque le dreg frénétique l'utilise."
+							]
+						}
+					],
+					"_version": {
+						"name": "Delerium Dreg (Frénétique)",
+						"addHeadersAs": "trait"
+					}
+				},
+				{
+					"type": "variant",
+					"name": "Lambent",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Éclairage",
+							"entries": [
+								"Un dreg delerium lambent projette une lumière vive dans un rayon de 4,5 mètres et une lumière faible dans un rayon supplémentaire de 4,5 mètres."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Poutre octarine",
+							"entries": [
+								"La dreg lambente cible une créature qu'elle peut voir dans un rayon de 18 mètres autour d'elle. La cible doit réussir un jet de sauvegarde de Constitution DC 10. Elle subit 10 ({@dice 3d6}) points de dégâts radiant en cas d'échec, ou moitié moins en cas de réussite. Les créatures qui ratent leur jet de sauvegarde de 5 ou plus gagnent un {@adventure level of contamination|DoDk|12}."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Sangsue",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Saut de puce",
+							"entries": [
+								"Le saut en longueur de la sangsue peut atteindre 9 mètres et son saut en hauteur 4,5 mètres, avec ou sans départ en course."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Drainage sanguin",
+							"entries": [
+								"Attaque de l'arme de mêlée : +4 pour toucher, portée de 1,5 m, une créature. Touché : 4 ({@dice 1d4 + 2}) points de dégâts perforants, et le dreg s'attache à la cible. Tant qu'il est attaché, le dreg ne peut pas attaquer. Au lieu de cela, au début de chaque tour du dreg, la cible subit 7 ({@dice 2d6}) dégâts nécrotiques.",
+								"Le dreg attaché se déplace avec la cible à chaque fois que celle-ci se déplace, sans que le dreg n'ait besoin de se déplacer. La dreg peut se détacher en dépensant 1,5 mètre de son mouvement à son tour. Une créature, y compris la cible, peut utiliser son action pour détacher la dreg."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "L'affût",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Semblance normale",
+							"entries": [
+								"Le dreg tapi a l'avantage aux tests de Charisme ({@skill Deception}) pour se faire passer pour une créature humanoïde normale."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Attaque sournoise (1/Tour)",
+							"entries": [
+								"Le dreg inflige 7 ({@dice 2d6}) points de dégâts supplémentaires lorsqu'il touche une cible avec une attaque d'arme et qu'il a l'avantage sur le jet d'attaque, ou lorsque la cible se trouve à moins de 1,5 mètre d'un allié du dreg qui n'est pas {@condition incapacitated} et que le dreg n'a pas de désavantage sur le jet d'attaque."
+							]
+						}
+					],
+					"_version": {
+						"name": "Delerium Dreg (Lurking)",
+						"addHeadersAs": "trait"
+					}
+				},
+				{
+					"type": "variant",
+					"name": "Spinées",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Pattes d'araignée",
+							"entries": [
+								"Le dreg épineux a une vitesse d'escalade égale à sa vitesse de marche. Il peut grimper sur des surfaces difficiles, y compris la tête en bas sur les plafonds, sans avoir besoin de faire un test de caractéristique."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Multi-attaques",
+							"entries": [
+								"Le dreg fait trois attaques de pics."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Pointes",
+							"entries": [
+								"Attaque d'arme à distance : +3 pour toucher, portée 20/18 m, une cible. Touché : 3 ({@dice 1d4 + 1}) points de dégâts perforants."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Tentaculé",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Amorphe",
+							"entries": [
+								"La larve tentaculée peut se déplacer dans un espace aussi étroit que 6 pouces de large sans se presser."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Tentacules",
+							"entries": [
+								"Attaque de l'arme de mêlée : +4 pour toucher, portée de 4,5 m, une cible. Touché : 9 ({@dice 2d6 + 2}) points de dégâts contondants. Si la cible est une créature, elle subit {@condition grappled} (échappatoire DC 12). Jusqu'à la fin de ce grappin, la cible est à {@condition restrained}, et le dreg tentaculé ne peut pas utiliser ses tentacules sur une autre cible."
+							]
+						}
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Delerium Dreg (Aquatic)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Amphibious",
+									"entries": [
+										"An aquatic dreg can breathe air and water."
+									]
+								}
+							]
+						}
+					},
+					"alias": [
+						"Deep One",
+						"Fishfolk"
+					],
+					"speed": {
+						"swim": 30
+					},
+					"senses": [
+						"darkvision 60 ft.",
+						"blindsight 30 ft."
+					],
+					"variant": null
+				},
+				{
+					"name": "Delerium Dreg (Bloated)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Death Burst",
+									"entries": [
+										"When a bloated delerium dreg dies, it explodes in a burst of corrupt offal. Each creature within 5 feet of it must succeed on a {@dc 11} Constitution saving throw, taking 7 ({@damage 2d6}) necrotic damage on a failed save, or half as much damage on a successful one. Creatures who fail their saving throw by 5 or more gain one {@adventure level of contamination|DoDk|12}."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Bile Spray {@recharge 5}",
+									"entries": [
+										"The bloated delerium dreg exhales a 15-foot cone of acid. Each creature in that area must succeed on a {@dc 11} Dexterity saving throw, taking 7 ({@damage 2d6}) acid damage on a failed save, or half as much damage on a successful one. Creatures who fail their saving throw by 5 or more gain one {@adventure level of contamination|DoDk|12}."
+									]
+								}
+							]
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Delerium Dreg (Chitinous)",
+					"source": "DoDk",
+					"ac": [
+						18
+					],
+					"variant": null
+				},
+				{
+					"name": "Delerium Dreg (Cyclopean)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Spectral Vision",
+									"entries": [
+										"A cyclopean dreg gains truesight 60 feet. It has advantage on Wisdom (Perception) checks that rely on sight."
+									]
+								},
+								{
+									"name": "Mad Certainty",
+									"entries": [
+										"A cyclopean dreg is immune to the {@condition frightened} condition and psychic damage."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Psychic Shriek {@recharge}",
+									"entries": [
+										"Creatures within 20 feet of the cyclopean dreg must succeed on a {@dc 10} Wisdom saving throw or take 7 ({@damage 2d6}) psychic damage and be {@condition frightened} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+									]
+								}
+							]
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Delerium Dreg (Displaced)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Displacement",
+									"entries": [
+										"Attack rolls against a displaced dreg have disadvantage. If it is hit by an attack, this trait is disrupted until the end of its next turn. This trait is also disrupted while the displaced dreg is {@condition incapacitated} or has a speed of 0."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Teleport {@recharge 4}",
+									"entries": [
+										"The displaced dreg magically teleports, along with any equipment it is wearing or carrying, up to 60 feet to an unoccupied space it can see. Before or after teleporting, the dreg can make one melee attack. If this attack hits, it deals an extra 7 ({@damage 2d6}) psychic damage."
+									]
+								}
+							]
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Delerium Dreg (Lambent)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Illumination",
+									"entries": [
+										"A lambent delerium dreg sheds bright light in a 15-foot radius and dim light for an additional 15 feet."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Octarine Beam",
+									"entries": [
+										"The lambent dreg targets one creature it can see within 60 feet of it. The target must succeed on a {@dc 10} Constitution saving throw, taking 10 ({@damage 3d6}) radiant damage on a failed save, or half as much damage on a successful one. Creatures who fail their saving throw by 5 or more gain one {@adventure level of contamination|DoDk|12}."
+									]
+								}
+							]
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Delerium Dreg (Leeching)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Bounding Leap",
+									"entries": [
+										"The leeching dreg's long jump is up to 30 feet and its high jump is up to 15 feet, with or without a running start."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Blood Drain",
+									"entries": [
+										"{@atk mw} {@hit 4} to hit, reach 5 ft., one creature. {@h}4 ({@damage 1d4 + 2}) piercing damage, and the dreg attaches to the target. While attached, the dreg can't attack. Instead, at the start of each of the dreg's turns, the target takes 7 ({@damage 2d6}) necrotic damage.",
+										"The attached dreg moves with the target whenever the target moves, requiring none of the dreg's movement. The dreg can detach itself by spending 5 feet of its movement on its turn. A creature, including the target, can use its action to detach the dreg."
+									]
+								}
+							]
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Delerium Dreg (Spined)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Spider Climb",
+									"entries": [
+										"The spined dreg has a climb speed equal to its walking speed. It can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Multiattack",
+									"entries": [
+										"The dreg makes three spike attacks."
+									]
+								},
+								{
+									"name": "Spike",
+									"entries": [
+										"{@atk rw} {@hit 3} to hit, range 20/60 ft., one target. {@h}3 ({@damage 1d4 + 1}) piercing damage."
+									]
+								}
+							]
+						}
+					},
+					"speed": {
+						"walk": 30,
+						"climb": 30
+					},
+					"variant": null
+				},
+				{
+					"name": "Delerium Dreg (Tentacled)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Amorphous",
+									"entries": [
+										"The dreg can move through a space as narrow as 6 inches wide without squeezing."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Tentacles",
+									"entries": [
+										"{@atk mw} {@hit 4} to hit, reach 15 ft., one target. {@h}9 ({@damage 2d6 + 2}) bludgeoning damage. If the target is a creature, it is {@condition grappled} (escape {@dc 12}). Until this grapple ends, the target is {@condition restrained}, and the tentacled dreg can't use its tentacles on another target."
+									]
+								}
+							]
+						}
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Eldrick Runeweaver",
+			"isNamedCreature": true,
+			"source": "DoDk",
+			"page": 215,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item robe of the archmagi}",
+						"{@item staff of power}"
+					]
+				}
+			],
+			"hp": {
+				"average": 150,
+				"formula": "20d8 + 60"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 10,
+			"con": 16,
+			"int": 22,
+			"wis": 19,
+			"cha": 15,
+			"save": {
+				"str": "+5",
+				"dex": "+6",
+				"con": "+9",
+				"int": "+12",
+				"wis": "+10",
+				"cha": "+8"
+			},
+			"skill": {
+				"arcana": "+16",
+				"history": "+16",
+				"perception": "+16",
+				"persuasion": "+14"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 26,
+			"resist": [
+				{
+					"special": "damage from spells"
+				}
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "17",
+			"spellcasting": [
+				{
+					"name": "Lancer des sorts",
+					"headerEntries": [
+						"Eldrick Runeweaver est un lanceur de sorts de 20ème niveau. Sa capacité de lanceur de sorts est Intelligence (sauvegarde contre les sorts {@dc 19}, {@hit 11} pour toucher avec les attaques de sorts). Il peut lancer bouclier et invisibilité à volonté et a préparé les sorts de sorcier suivants :"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell fire bolt}",
+								"{@spell mage hand}",
+								"{@spell minor illusion}",
+								"{@spell prestidigitation}",
+								"{@spell ray of frost}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell mage armor}",
+								"{@spell magic missile}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell detect thoughts}",
+								"{@spell levitate}",
+								"{@spell shatter}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell dispel magic}",
+								"{@spell lightning bolt}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell banishment}",
+								"{@spell dimension door}",
+								"{@spell ice storm}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell Bigby's hand}",
+								"{@spell scrying}",
+								"{@spell wall of force}"
+							]
+						},
+						"6": {
+							"slots": 2,
+							"spells": [
+								"{@spell chain lightning}",
+								"{@spell globe of invulnerability}"
+							]
+						},
+						"7": {
+							"slots": 2,
+							"spells": [
+								"{@spell forcecage}",
+								"{@spell teleport}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell maze}"
+							]
+						},
+						"9": {
+							"slots": 1,
+							"spells": [
+								"{@spell prismatic wall}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Équipements spéciaux",
+					"entries": [
+						"Eldrick Runeweaver porte une robe d'archimage, un bâton de pouvoir et un anneau de stockage des sorts. Il porte {@dice 2d6} des parchemins et potions de sort très rares."
+					]
+				},
+				{
+					"name": "Résistance légendaire (3/Jour)",
+					"entries": [
+						"Si Eldrick Runeweaver échoue à un jet de sauvegarde, il peut choisir de le réussir à la place."
+					]
+				},
+				{
+					"name": "Résistance à la magie",
+					"entries": [
+						"Eldrick Runeweaver a un avantage sur les jets de sauvegarde contre les sorts et autres effets magiques."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bâton de surpuissance",
+					"entries": [
+						"{@atk mw} {@hit 6} à toucher, portée de 1,5 m, une créature. {@h}10 ({@damage 1d6 + 1}) dégâts contondants."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Sort mineur",
+					"entries": [
+						"Eldrick Runeweaver lance un sort mineur."
+					]
+				},
+				{
+					"name": "Téléportation",
+					"entries": [
+						"Eldrick Runeweaver se téléporte à 18 mètres d'un espace inoccupé qu'il peut voir."
+					]
+				},
+				{
+					"name": "Lancer un Sort (coûte 3 actions)",
+					"entries": [
+						"Eldrick Runeweaver lance un sort en utilisant un emplacement de sort."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"F",
+				"I",
+				"L",
+				"O",
+				"T"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"incapacitated",
+				"petrified",
+				"restrained"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Entropic Flame",
+			"source": "DoDk",
+			"page": 204,
+			"size": [
+				"L"
+			],
+			"type": "elemental",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 78,
+				"formula": "12d10 + 12"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 17,
+			"con": 13,
+			"int": 5,
+			"wis": 10,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained",
+				"unconscious"
+			],
+			"languages": [
+				"Deep Speech"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Forme de feu",
+					"entries": [
+						"La flamme entropique peut se déplacer dans un espace aussi étroit qu'un pouce de large sans se presser. Une créature qui touche la flamme ou la frappe avec une attaque de mêlée alors qu'elle se trouve à moins de 1,5 mètre d'elle subit 5 ({@damage 1d10}) dégâts de feu. De plus, la flamme peut entrer dans l'espace d'une créature hostile et s'y arrêter. La première fois qu'elle entre dans l'espace d'une créature lors d'un tour, cette dernière subit 5 ({@damage 1d10}) de dégâts de feu et prend feu ; jusqu'à ce que quelqu'un entreprenne une action pour éteindre le feu, la créature subit 5 ({@damage 1d10}) de dégâts de feu au début de chacun de ses tours."
+					]
+				},
+				{
+					"name": "Éclairage",
+					"entries": [
+						"La flamme entropique émet une lumière vive dans un rayon de 9 mètres et une lumière faible sur 9 mètres supplémentaires."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multi-attaques",
+					"entries": [
+						"La flamme entropique effectue trois attaques de flamme projetée. Avant ou après chaque attaque, la flamme entropique peut se téléporter jusqu'à 3 mètres dans un espace qu'elle peut voir. Elle peut se téléporter dans un espace occupé par une autre créature."
+					]
+				},
+				{
+					"name": "Flamme de Hurl",
+					"entries": [
+						"{@atk rw} {@hit 6} pour toucher, portée 36 m., une cible. {@h}10 ({@damage 3d6}) dégâts de feu."
+					]
+				},
+				{
+					"name": "Toucher",
+					"entries": [
+						"{@atk mw} {@hit 6} à toucher, portée de 1,5 m., une cible. {@h}10 ({@damage 2d6 + 3}) dégâts de feu. Si la cible est une créature ou un objet inflammable, elle s'enflamme. Jusqu'à ce qu'une créature entreprenne une action pour éteindre le feu, la cible subit 5 ({@damage 1d10}) dégâts de feu au début de chacun de ses tours."
+					]
+				}
+			],
+			"traitTags": [
+				"Illumination"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DS"
+			],
+			"damageTags": [
+				"F"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Eoghan Ghostweaver",
+			"isNamedCreature": true,
+			"source": "DoDk",
+			"page": 105,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"elf"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 99,
+				"formula": "18d8 + 18"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 12,
+			"int": 15,
+			"wis": 20,
+			"cha": 16,
+			"save": {
+				"int": "+6",
+				"wis": "+9"
+			},
+			"skill": {
+				"arcana": "+13",
+				"history": "+13",
+				"medicine": "+9",
+				"nature": "+6",
+				"perception": "+9",
+				"survival": "+9"
+			},
+			"passive": 12,
+			"resist": [
+				{
+					"special": "damage from spells"
+				},
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"preNote": "nonmagical",
+					"note": "(from stoneskin)",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Druidic",
+				"Elvish"
+			],
+			"cr": "12",
+			"spellcasting": [
+				{
+					"name": "Lancer des sorts",
+					"headerEntries": [
+						"Eoghan est un lanceur de sorts de 18ème niveau. Sa capacité de lanceur de sorts est Sagesse (sauvegarde contre les sorts {@dc 17}, {@hit 9} pour toucher avec les attaques de sort). Il a préparé les sorts de druide suivants :"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft}",
+								"{@spell mending}",
+								"{@spell poison spray}",
+								"{@spell produce flame}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell cure wounds}",
+								"{@spell entangle}",
+								"{@spell faerie fire}",
+								"{@spell speak with animals}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell animal messenger}",
+								"{@spell beast sense}",
+								"{@spell hold person}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell conjure animals}",
+								"{@spell purge contamination|DoDk}*",
+								"{@spell sleet storm}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell ice storm}",
+								"{@spell polymorph}",
+								"{@spell wall of fire}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell commune with nature}",
+								"{@spell cone of cold}",
+								"{@spell greater restoration}"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell conjure fey}",
+								"{@spell heal}"
+							]
+						},
+						"7": {
+							"slots": 1,
+							"spells": [
+								"{@spell resurrection}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell feeblemind}"
+							]
+						},
+						"9": {
+							"slots": 1,
+							"spells": [
+								"{@spell foresight}"
+							]
+						}
+					},
+					"footerEntries": [
+						"*spells found in Appendix D of Dungeons of Drakkenheim."
+					],
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Résistance à la magie",
+					"entries": [
+						"Eoghan a l'avantage sur les jets de sauvegarde contre les sorts et autres effets magiques."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Dague",
+					"entries": [
+						"{@atk mw,rw} {@hit 6} pour toucher, portée de 1,5 m. ou portée de 20/18 m., une cible. {@h}4 ({@damage 1d4 + 2}) dégâts perforants."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"languageTags": [
+				"DU",
+				"E"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"F",
+				"I",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"exhaustion",
+				"paralyzed",
+				"prone",
+				"restrained"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"intelligence",
+				"strength",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Executioner",
+			"source": "DoDk",
+			"page": 209,
+			"size": [
+				"H"
+			],
+			"type": "construct",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 405,
+				"formula": "30d12 + 210"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 29,
+			"dex": 11,
+			"con": 25,
+			"int": 10,
+			"wis": 11,
+			"cha": 10,
+			"save": {
+				"str": "+15",
+				"con": "+13",
+				"wis": "+6"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"poison",
+				"psychic",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands common but does not speak"
+			],
+			"cr": "20",
+			"trait": [
+				{
+					"name": "Résistance légendaire (3/Jour)",
+					"entries": [
+						"Si l'exécuteur échoue à un jet de sauvegarde, il peut choisir de réussir à la place."
+					]
+				},
+				{
+					"name": "Forme immuable",
+					"entries": [
+						"L'Exécuteur est immunisé contre tout sort ou effet qui modifierait sa forme."
+					]
+				},
+				{
+					"name": "Résistance à la magie",
+					"entries": [
+						"L'Exécuteur a un avantage sur les jets de sauvegarde contre les sorts et autres effets magiques."
+					]
+				},
+				{
+					"name": "Armes magiques",
+					"entries": [
+						"Les attaques de l'arme de l'Exécuteur sont magiques."
+					]
+				},
+				{
+					"name": "Rajeunissement",
+					"entries": [
+						"Si le bourreau est détruit, il revient avec tous ses points de vie en 24 heures, à moins qu'un sort de {@spell disintegrate} ne soit lancé sur ses restes."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Lame guillotine",
+					"entries": [
+						"{@atk mw,rw} {@hit 15} pour toucher, portée de 3 m., ou portée de 30/36 m., une cible. {@h}30 ({@damage 6d6 + 9}) de dégâts tranchants plus 14 ({@damage 4d6}) de dégâts nécrotiques. La cible doit réussir un jet de sauvegarde de Constitution de {@dc 21} ou son maximum de points de vie est réduit d'un montant égal aux dégâts nécrotiques subis. Cette réduction dure jusqu'à ce que la créature termine un long repos. La cible meurt si cet effet réduit son maximum de points de vie à 0. Immédiatement après avoir effectué une attaque à distance, cette arme revient dans les mains du bourreau."
+					]
+				},
+				{
+					"name": "Fentes nécrotiques {@recharge 5}",
+					"entries": [
+						"Le Bourreau dégage du gaz nécrotique dans un rayon de 9 mètres. Chaque créature située dans cette zone doit réussir un jet de sauvegarde de {@dc 21} de Constitution, subissant 45 ({@damage 10d8}) points de dégâts nécrotiques en cas d'échec, ou moitié moins en cas de réussite. Une créature qui rate ce jet de sauvegarde de 5 ou plus gagne un {@adventure level of contamination|DoDk|12}."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Le bois en avant",
+					"entries": [
+						"Le Bourreau se déplace à la moitié de sa vitesse."
+					]
+				},
+				{
+					"name": "Attaque (coûte 2 actions)",
+					"entries": [
+						"L'Exécuteur effectue une attaque de mêlée ou à distance avec sa lame guillotine."
+					]
+				},
+				{
+					"name": "Invoquer les ombres. (coûte 3 actions)",
+					"entries": [
+						"Le Bourreau cible jusqu'à six cadavres humanoïdes qu'il peut voir dans un rayon de 18 mètres et qui sont morts violemment. L'esprit de chaque cible s'élève sous la forme d'une ombre dans l'espace de son cadavre ou dans l'espace inoccupé le plus proche. Les ombres agissent après le Bourreau sur le même compte d'initiative, sont sous son contrôle et restent pendant 1 minute ou jusqu'à ce qu'elles soient détruites. Elles disparaissent si le Bourreau est détruit."
+					]
+				}
+			],
+			"traitTags": [
+				"Immutable Form",
+				"Legendary Resistances",
+				"Magic Resistance",
+				"Magic Weapons",
+				"Rejuvenation"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"damageTags": [
+				"N",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"HPR",
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Garmyr",
+			"source": "DoDk",
+			"page": 197,
+			"_copy": {
+				"name": "Gnoll",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "gnoll",
+						"with": "garmyr"
+					}
+				}
+			},
+			"type": "monstrosity",
+			"hasFluff": true
+		},
+		{
+			"name": "Gravekeeper",
+			"source": "DoDk",
+			"page": 210,
+			"size": [
+				"L"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 210,
+				"formula": "20d10 + 100"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 18,
+			"dex": 7,
+			"con": 21,
+			"int": 19,
+			"wis": 17,
+			"cha": 21,
+			"save": {
+				"con": "+10",
+				"wis": "+8",
+				"cha": "+10"
+			},
+			"skill": {
+				"perception": "+13"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 23,
+			"languages": [
+				"all but does not speak"
+			],
+			"cr": "13",
+			"trait": [
+				{
+					"name": "Une illumination éblouissante",
+					"entries": [
+						"Le gardien des tombes projette une brillante couronne de lumière qui éclaire jusqu'à une portée de 18 mètres, et provoque un désavantage aux jets d'attaque contre lui. S'il est touché par une attaque, ce trait est interrompu jusqu'à la fin de son prochain tour. Ce trait est également interrompu tant que le Gardien de tombe est à {@condition incapacitated} ou a une vitesse de 0."
+					]
+				},
+				{
+					"name": "Résistance légendaire (3/Jour)",
+					"entries": [
+						"Si le gardien des tombes rate un jet de sauvegarde, il peut choisir de le réussir à la place."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Chelem",
+					"entries": [
+						"{@atk mw} {@hit 9} pour toucher, portée de 3 m., une cible. {@h}22 ({@damage 4d8 + 4}) dégâts de contondant plus 10 ({@damage 3d6}) dégâts nécrotiques."
+					]
+				},
+				{
+					"name": "Explosion de la lanterne",
+					"entries": [
+						"Des rayons octogonaux magiques jaillissent des nombreuses lanternes du Gardien de tombe. Chaque rayon a un pouvoir différent. Chaque créature située dans un rayon de 36 mètres autour du Gardien de la tombe et qui n'est pas totalement à couvert effectue un jet de sauvegarde {@dice d6} pour déterminer quelle couleur de rayon l'affecte. Le DC pour tous les jets de sauvegarde est de 18 :",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "1. Explosion de dissipation",
+									"entries": [
+										"La créature ciblée doit réussir un jet de sauvegarde d'Intelligence ou subir 35 ({@damage 10d6}) de dégâts psychiques, et tout sort ou effet magique sur la cible prend fin. Une créature qui échoue à ce jet de sauvegarde voit son {@status concentration} brisé sur tout sort qu'elle maintenait activement."
+									]
+								},
+								{
+									"type": "item",
+									"name": "2. Explosion de force",
+									"entries": [
+										"La créature ciblée doit réussir un jet de sauvegarde de Force ou subir 35 ({@damage 10d6}) dégâts de force, être repoussée à 6 mètres et frappée {@condition prone}."
+									]
+								},
+								{
+									"type": "item",
+									"name": "3. Le souffle aveuglant",
+									"entries": [
+										"La créature ciblée doit réussir un jet de sauvegarde de Constitution ou subir 35 ({@damage 10d6}) points de dégâts radiants et être {@condition blinded} pendant 1 minute. Une créature de {@condition blinded} peut répéter le jet de sauvegarde à chacun de ses tours, mettant fin à l'effet sur elle-même en cas de réussite."
+									]
+								},
+								{
+									"type": "item",
+									"name": "4. Explosion contaminante",
+									"entries": [
+										"La créature ciblée doit réussir un jet de sauvegarde de Constitution ou subir 35 ({@damage 10d6}) dégâts nécrotiques et gagner un {@adventure level of contamination|DoDk|12}."
+									]
+								},
+								{
+									"type": "item",
+									"name": "5. Souffle d'allumage",
+									"entries": [
+										"La créature ciblée doit réussir un jet de sauvegarde de Dextérité ou subir 35 ({@damage 10d6}) points de dégâts de feu, et prend feu ; jusqu'à ce que quelqu'un entreprenne une action pour éteindre le feu, la cible subit 35 ({@damage 10d6}) points de dégâts de feu au début de chacun de ses tours."
+									]
+								},
+								{
+									"type": "item",
+									"name": "6. Le souffle glacial",
+									"entries": [
+										"La créature ciblée doit réussir un jet de sauvegarde de Constitution ou subir 35 ({@damage 10d6}) points de dégâts de froid, et elle ne peut pas réagir avant la fin de son prochain tour. De plus, à son prochain tour, elle doit choisir si elle bénéficie d'un déplacement, d'une action ou d'une action bonus ; elle n'en obtient qu'un seul des trois. En cas de sauvegarde réussie, la cible subit deux fois moins de dégâts et ne subit aucun des autres effets de l'explosion."
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Chelem",
+					"entries": [
+						"Le Gardien de tombes effectue une attaque de type slam."
+					]
+				},
+				{
+					"name": "Glisser",
+					"entries": [
+						"Le gardien des tombes se déplace à sa vitesse sans provoquer d'attaques d'opportunité."
+					]
+				},
+				{
+					"name": "Coup de lanterne (coûte 3 actions)",
+					"entries": [
+						"Le Gardien de tombe utilise son souffle de lanterne."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Gravekeeper",
+				"source": "DoDk"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"U"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"B",
+				"C",
+				"F",
+				"N",
+				"O",
+				"R",
+				"Y"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"blinded",
+				"prone"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Grotesque Gargant",
+			"source": "DoDk",
+			"page": 197,
+			"_copy": {
+				"name": "Stone Giant",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "géant",
+						"with": "grotesque gargant"
+					}
+				}
+			},
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Régénération",
+					"entries": [
+						"Un gargant grotesque regagne 10 points de vie au début de son tour tant qu'il se trouve dans la brume profonde. Le gargant ne meurt que s'il commence son tour avec 0 point de vie et ne se régénère pas."
+					]
+				},
+				{
+					"name": "Faisceau contaminant",
+					"entries": [
+						"Le gargant grotesque force magiquement une créature qu'il peut voir à moins de 18 mètres de lui à effectuer un jet de sauvegarde de {@dc 15} de Constitution. La créature subit 27 ({@damage 6d8}) dégâts nécrotiques en cas de sauvegarde ratée et gagne un {@adventure level of contamination|DoDk|12}."
+					]
+				},
+				{
+					"name": "Camouflage brumeux",
+					"entries": [
+						"Le gargant grotesque a l'avantage aux tests de Dextérité (furtivité) pour se cacher dans une zone obscurcie par la brume ou le brouillard."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Haze Hulk",
+			"source": "DoDk",
+			"page": 200,
+			"size": [
+				"L"
+			],
+			"type": "aberration",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 95,
+				"formula": "10d10 + 40"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 21,
+			"dex": 10,
+			"con": 18,
+			"int": 7,
+			"wis": 10,
+			"cha": 6,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Common"
+			],
+			"cr": "4",
+			"action": [
+				{
+					"name": "Multi-attaques",
+					"entries": [
+						"Le hulk de brume effectue deux attaques de type slam."
+					]
+				},
+				{
+					"name": "Chelem",
+					"entries": [
+						"{@atk mw} {@hit 7} pour toucher, portée de 1,5 m., une cible. {@h}14 ({@damage 2d8 + 5}) dégâts contondants."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Gutbuster",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Hurler de la chair fétide (recharge 5-6)",
+							"entries": [
+								"Le gutbuster arrache un morceau de sa chair mutante et le projette vers un espace qu'il peut voir à moins de 36 mètres de lui. Chaque créature située à moins de 3 mètres de ce point doit réussir un jet de sauvegarde de Constitution DC 14, subissant 28 ({@dice 8d6}) points de dégâts nécrotiques en cas d'échec, ou moitié moins en cas de réussite."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Chasseur",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Invisibilité",
+							"entries": [
+								"Le chasseur se transforme magiquement {@condition invisible} jusqu'à ce qu'il attaque ou jusqu'à la fin de sa concentration (comme s'il se concentrait sur un sort). Tout équipement que le chasseur porte ou transporte est invisible avec lui."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Tendons d'arrimage",
+							"entries": [
+								"Attaque de l'arme de mêlée : +7 pour toucher, portée de 18 m, une cible. Touché : 14 ({@dice 2d8 + 5}) points de dégâts perforants, et la cible subit {@condition grappled} (échappatoire DC 15) s'il s'agit d'une créature de grande taille ou plus petite. Le chasseur possède deux vrilles de fouet et peut agripper jusqu'à deux créatures à la fois."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Enrouleur",
+							"entries": [
+								"Comme action bonus, le chasseur attire chaque créature {@condition grappled} à ses côtés jusqu'à 7,5 mètres en ligne droite vers lui."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Le fléau de la guerre",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Force d'âme des mutants",
+							"entries": [
+								"Si des dégâts réduisent le juggernaut à 0 point de vie, il doit réussir un jet de sauvegarde de Constitution avec un DC de 5 + les dégâts subis, sauf si les dégâts sont radiants ou s'ils proviennent d'un coup critique. En cas de succès, le juggernaut tombe à 1 point de vie."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Frais de piétinement",
+							"entries": [
+								"Si le juggernaut se déplace d'au moins 6 mètres en ligne droite vers une créature puis la frappe avec une attaque de type slam au même tour, cette cible doit réussir un jet de sauvegarde de Force DC 16 ou être assommée {@condition prone}. Si la cible est {@condition prone}, le juggernaut peut effectuer une autre attaque de masse contre elle en tant qu'action bonus."
+							]
+						}
+					],
+					"_version": {
+						"name": "Haze Hulk (Juggernaut)",
+						"addHeadersAs": "trait"
+					}
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Haze Hulk (Gutbuster)",
+					"source": "DoDk",
+					"_mod": {
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Hurl Foetid Flesh {@recharge 5}",
+									"entries": [
+										"The gutbuster rips off a chunk of its mutated flesh and hurls it towards a space it can see within 120 feet of it. Each creature within 10 feet of that point must succeed on a {@dc 14} Constitution saving throw, taking 28 ({@damage 8d6}) necrotic damage on a failed save, or half as much damage on a successful one."
+									]
+								}
+							]
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Haze Hulk (Hunter)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Invisibility",
+									"entries": [
+										"The hunter magically turns {@condition invisible} until it attacks or until its {@status concentration} ends (as if {@status concentration||concentrating} on a spell). Any equipment the hunter wears or carries is {@condition invisible} with it."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Lashing Tendrils",
+									"entries": [
+										"{@atk mw} {@hit 7} to hit, reach 60 ft., one target. {@h}14 ({@damage 2d8 + 5}) piercing damage, and the target is {@condition grappled} (escape {@dc 15}) if it is a Large or smaller creature. The hunter has two lashing tendrils and can grapple up to two creatures at once."
+									]
+								}
+							]
+						}
+					},
+					"bonus": [
+						{
+							"name": "Enrouleur",
+							"entries": [
+								"Comme action bonus, le chasseur attire chaque créature {@condition grappled} à ses côtés jusqu'à 7,5 mètres en ligne droite vers lui."
+							]
+						}
+					],
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Haze Husk",
+			"source": "DoDk",
+			"page": 197,
+			"_copy": {
+				"name": "Zombie",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "zombie",
+						"with": "haze husk"
+					}
+				}
+			},
+			"trait": [
+				{
+					"name": "Eclatement de la mort",
+					"entries": [
+						"Si les dégâts réduisent l'enveloppe de brume à 0 point de vie, les fragments de délium dans son corps explosent dans une rafale d'énergie contaminée, à moins que les dégâts ne soient radiants ou ne résultent d'un coup critique. Chaque créature située à moins de 1,5 mètre d'elle doit réussir un jet de sauvegarde de {@dc 10} de Constitution ou subir 7 ({@damage 2d6}) points de dégâts nécrotiques. Les créatures qui ratent ce jet de sauvegarde par 5 ou plus gagnent un {@adventure level of contamination|DoDk|12}."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Haze Wight",
+			"source": "DoDk",
+			"page": 198,
+			"_copy": {
+				"name": "Wight",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "poids",
+						"with": "haze wight"
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Drain de vie",
+						"items": [
+							{
+								"name": "Contaminated Touch",
+								"entries": [
+									"{@atk mw} {@hit 4} to hit, reach 5 ft., one creature. {@h}10 ({@damage 3d6}) necrotic damage. The target must succeed on a {@dc 13} Constitution saving throw or gain one {@adventure level of contamination|DoDk|12}."
+								]
+							},
+							{
+								"name": "Create Haze Husk",
+								"entries": [
+									"The wight targets a humanoid within 10 feet of it that has been dead for no longer than 1 minute and died violently. It rises as a haze husk in an unoccupied space within 5 feet. The haze husk is under the wight's control. The wight can have no more than 12 haze husks under its control at one time."
+								]
+							}
+						]
+					}
+				}
+			},
+			"hasFluff": true
+		},
+		{
+			"name": "Hedge Mage",
+			"source": "DoDk",
+			"page": 219,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 22,
+				"formula": "4d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 13,
+			"int": 15,
+			"wis": 11,
+			"cha": 11,
+			"skill": {
+				"arcana": "+4"
+			},
+			"passive": 10,
+			"languages": [
+				"Any two"
+			],
+			"cr": "1",
+			"spellcasting": [
+				{
+					"name": "Lancer des sorts",
+					"headerEntries": [
+						"Le mage des haies est un lanceur de sorts de 4e niveau qui utilise l'Intelligence comme capacité de lancement de sorts (sauvegarde contre les sorts {@dc 12} ; {@hit 4} pour toucher avec les attaques de sorts). Le mage des haies a préparé les sorts de sorcier suivants :"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch}",
+								"{@spell mage hand}",
+								"{@spell shocking grasp}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell false life}",
+								"{@spell mage armor}",
+								"{@spell magic missile}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell Melf's acid arrow}",
+								"{@spell web}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"action": [
+				{
+					"name": "Dague",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} pour toucher, portée de 1,5 m. ou portée de 20/18 m., une cible. {@h}4 ({@damage 1d4 + 2}) dégâts perforants."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"A",
+				"F",
+				"L",
+				"N",
+				"O"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"restrained"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hypnotic Eldritch Blossom",
+			"source": "DoDk",
+			"page": 205,
+			"size": [
+				"M"
+			],
+			"type": "plant",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				5
+			],
+			"hp": {
+				"average": 18,
+				"formula": "4d8"
+			},
+			"speed": {
+				"walk": 5
+			},
+			"str": 3,
+			"dex": 1,
+			"con": 10,
+			"int": 1,
+			"wis": 3,
+			"cha": 5,
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 6,
+			"conditionImmune": [
+				"blinded",
+				"deafened",
+				"frightened"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Fausse apparence",
+					"entries": [
+						"Tant que la Fleur d'Eldritch hypnotique reste immobile, il est impossible de la distinguer d'une fleur ordinaire."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Nectar contaminé",
+					"entries": [
+						"L'Hypnotic Eldritch Blossom cible une créature qu'elle peut voir dans un rayon de 3 mètres. La cible doit réussir un jet de sauvegarde de Constitution de {@dc 10} ou gagner un {@adventure level of contamination|DoDk|12}."
+					]
+				},
+				{
+					"name": "Pollen hypnotique (se recharge lors d'un repos court ou long)",
+					"entries": [
+						"L'Hypnotic Eldritch Blossom libère un nuage de pollen scintillant dans un rayon de 9 mètres. Les créatures dans la zone doivent réussir un jet de sauvegarde de Sagesse de {@dc 10} ou devenir {@condition charmed} par la fleur de sureau hypnotique pendant 1 minute. Pendant {@condition charmed}, la créature est {@condition incapacitated} et doit utiliser tous ses mouvements pour se rapprocher le plus possible de la fleur de sureau hypnotique.",
+						"L'effet prend fin pour une créature affectée si elle subit des dégâts ou si quelqu'un d'autre utilise une action pour secouer la créature pour la sortir de sa stupeur."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Réflexion sur le sort",
+					"entries": [
+						"Si la fleur de sureau hypnotique réussit un jet de sauvegarde contre un sort qui ne vise qu'elle et n'a pas de zone d'effet, ou si une attaque de sort la manque, la fleur peut choisir une autre créature (y compris le lanceur de sorts) qu'elle peut voir dans un rayon de 9 mètres. Le sort cible la créature choisie au lieu de la fleur d'eldritch hypnotique. Si le sort impose un jet de sauvegarde, la créature choisie effectue sa propre sauvegarde. Si le sort était une attaque, le jet d'attaque est relancé contre la créature choisie."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"conditionInflict": [
+				"charmed",
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Knight-Captain Theodore Marshal",
+			"source": "DoDk",
+			"page": 215,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"{@item plate armor|PHB|plate}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 255,
+				"formula": "30d8 + 120"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 20,
+			"dex": 10,
+			"con": 18,
+			"int": 13,
+			"wis": 15,
+			"cha": 19,
+			"save": {
+				"wis": "+7",
+				"cha": "+9"
+			},
+			"skill": {
+				"animal handling": "+7",
+				"athletics": "+10",
+				"insight": "+7",
+				"persuasion": "+9"
+			},
+			"passive": 12,
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Celestial",
+				"Common"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Lancer des sorts",
+					"headerEntries": [
+						"Theodore Marshal est un lanceur de sorts de 20ème niveau. Sa capacité de lanceur de sorts est Charisme (sauvegarde contre les sorts {@dc 17}, {@hit 9} pour toucher avec les attaques de sorts). Il a préparé les sorts de paladin suivants :"
+					],
+					"spells": {
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell bless}",
+								"{@spell command}",
+								"{@spell cure wounds}",
+								"{@spell guiding bolt}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell aid}",
+								"{@spell branding smite}",
+								"{@spell lesser restoration}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell beacon of hope}",
+								"{@spell dispel magic}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell banishment}",
+								"{@spell death ward}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell flame strike}",
+								"{@spell hallow}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Frappes divines",
+					"entries": [
+						"Les attaques d'armes de Theodore Marshal sont magiques. Lorsqu'il touche avec une arme, celle-ci inflige un supplément de {@damage 4d8} de dégâts radiants (inclus dans l'attaque)."
+					]
+				},
+				{
+					"name": "Résistance légendaire (3/Jour)",
+					"entries": [
+						"Si le maréchal Théodore échoue à un jet de sauvegarde, il peut choisir de le réussir à la place."
+					]
+				},
+				{
+					"name": "Équipements spéciaux",
+					"entries": [
+						"Theodore Marshal manie une épée longue de vengeur sacré."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multi-attaques",
+					"entries": [
+						"Theodore Marshal effectue deux attaques de mêlée."
+					]
+				},
+				{
+					"name": "Vengeresse sacrée",
+					"entries": [
+						"{@atk mw} {@hit 13} pour toucher, portée de 1,5 m, une cible. {@h}12 ({@damage 1d8 + 8}) de dégâts tranchants plus 18 ({@damage 4d8}) de dégâts radiants."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attaque",
+					"entries": [
+						"Theodore Marshal effectue une attaque d'arme."
+					]
+				},
+				{
+					"name": "Boulon sacré (coûte 2 actions)",
+					"entries": [
+						"Le maréchal Théodore lance {@spell guiding bolt} sans dépenser d'emplacement de sort."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CE"
+			],
+			"damageTags": [
+				"R",
+				"S"
+			],
+			"damageTagsSpell": [
+				"F",
+				"R"
+			],
+			"spellcastingTags": [
+				"CP"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"incapacitated",
+				"prone"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"dexterity",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lenore von Kessel",
+			"source": "DoDk",
+			"page": 134,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 127,
+				"formula": "17d8 + 51"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 15,
+			"con": 16,
+			"int": 12,
+			"wis": 13,
+			"cha": 15,
+			"skill": {
+				"deception": "+5",
+				"insight": "+4",
+				"perception": "+4",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"Common"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Regard radiant",
+					"entries": [
+						"Lorsqu'une créature qui peut voir les yeux de Lenore commence son tour à moins de 9 mètres d'elle, Lenore peut la forcer à faire un jet de sauvegarde de {@dc 14} de Constitution si elle n'est pas {@condition incapacitated} et qu'elle peut voir la créature. La créature subit 22 ({@damage 4d10}) points de dégâts radiant en cas de sauvegarde ratée, ou moitié moins en cas de sauvegarde réussie. De plus, les créatures qui ratent ce jet de sauvegarde gagnent un {@adventure level of contamination|DoDk|12}.",
+						"À moins d'être surprise, une créature peut détourner les yeux pour éviter le jet de sauvegarde au début de son tour. Si la créature le fait, elle ne peut pas voir Lenore jusqu'au début de son prochain tour, où elle peut à nouveau détourner les yeux. Si la créature regarde Lénore entre-temps, elle doit immédiatement effectuer le jet de sauvegarde.",
+						"Si Lenore se voit reflétée sur une surface polie à moins de 9 mètres d'elle et dans une zone de lumière vive, elle devient {@condition blinded} et {@condition incapacitated} pendant {@dice 1d6} heures."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multi-attaques",
+					"entries": [
+						"La méduse effectue soit trois attaques de mêlée - une avec ses poils de serpent et deux avec son épée courte - soit deux attaques à distance avec son arc long."
+					]
+				},
+				{
+					"name": "Cheveux de tentacules",
+					"entries": [
+						"{@atk mw} {@hit 5} pour toucher, portée de 1,5 m, une créature. {@h}4 ({@damage 1d4 + 2}) de dégâts perforants plus 14 ({@damage 4d6}) de dégâts nécrotiques. La cible doit réussir un jet de sauvegarde de {@dc 14} de Constitution ou gagner un {@adventure level of contamination|DoDk|12}."
+					]
+				},
+				{
+					"name": "Épée courte",
+					"entries": [
+						"{@atk mw} {@hit 5} pour toucher, portée de 1,5 m., une cible. {@h}5 ({@damage 1d6 + 2}) dégâts perforants."
+					]
+				},
+				{
+					"name": "Arc long",
+					"entries": [
+						"{@atk rw} {@hit 5} pour toucher, portée 150/18 m., une cible. {@h}6 ({@damage 1d8 + 2}) dégâts perforants plus 7 ({@damage 2d6}) dégâts de poison."
+					]
+				}
+			],
+			"attachedItems": [
+				"longbow|phb",
+				"shortsword|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"I",
+				"N",
+				"P",
+				"R"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Living Deep Haze",
+			"source": "DoDk",
+			"page": 204,
+			"size": [
+				"L"
+			],
+			"type": "elemental",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				15
+			],
+			"hp": {
+				"average": 90,
+				"formula": "12d10 + 24"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 90,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 14,
+			"dex": 20,
+			"con": 14,
+			"int": 5,
+			"wis": 10,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained",
+				"unconscious"
+			],
+			"languages": [
+				"Deep Speech"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Forme de brouillard",
+					"entries": [
+						"La brume vivante des profondeurs peut entrer dans l'espace d'une créature hostile et s'y arrêter. Elle peut se déplacer dans un espace aussi étroit qu'un pouce de large sans se presser."
+					]
+				},
+				{
+					"name": "Brume profonde",
+					"entries": [
+						"Une créature qui entre ou commence son tour dans le même espace que la brume vivante des profondeurs doit réussir un jet de sauvegarde de {@dc 15} de Constitution ou subir 10 ({@damage 3d6}) dégâts nécrotiques et gagner un {@adventure level of contamination|DoDk|12}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multi-attaques",
+					"entries": [
+						"La Brume profonde vivante effectue deux attaques de type slam."
+					]
+				},
+				{
+					"name": "Chelem",
+					"entries": [
+						"{@atk mw} {@hit 8} pour toucher, portée de 1,5 m., une cible. {@h}14 ({@damage 2d8 + 5}) dégâts contondants."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DS"
+			],
+			"damageTags": [
+				"B",
+				"N"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lord Commander Elias Drexel",
+			"source": "DoDk",
+			"page": 214,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"{@item +3 breastplate}"
+					]
+				}
+			],
+			"hp": {
+				"average": 255,
+				"formula": "30d8 + 120"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 15,
+			"con": 18,
+			"int": 15,
+			"wis": 16,
+			"cha": 11,
+			"save": {
+				"str": "+9",
+				"dex": "+7",
+				"wis": "+8"
+			},
+			"skill": {
+				"athletics": "+9",
+				"perception": "+13",
+				"stealth": "+12",
+				"survival": "+8"
+			},
+			"senses": [
+				"blindsight 10 ft."
+			],
+			"passive": 23,
+			"languages": [
+				"Common"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Lancer des sorts",
+					"headerEntries": [
+						"Elias Drexel est un lanceur de sorts de 20ème niveau. Sa capacité de lanceur de sorts est Sagesse (sauvegarde contre les sorts {@dc 16}, {@hit 8} pour toucher avec les attaques de sorts). Il connaît les sorts de ranger suivants :"
+					],
+					"spells": {
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell cure wounds}",
+								"{@spell fog cloud}",
+								"{@spell hunter's mark}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell pass without trace}",
+								"{@spell protection from poison}",
+								"{@spell spike growth}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell conjure animals}",
+								"{@spell nondetection}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell freedom of movement}",
+								"{@spell stoneskin}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell tree stride} (works on buildings instead of trees)"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Survivant",
+					"entries": [
+						"Au début de chacun de ses tours, Elias Drexel regagne 10 points de vie s'il ne lui reste plus que la moitié de ses points de vie. Il ne bénéficie pas de cet avantage s'il a 0 point de vie."
+					]
+				},
+				{
+					"name": "Brute",
+					"entries": [
+						"Une arme de mêlée inflige un dé de dégâts supplémentaire lorsqu'Elias Drexel la touche (inclus dans l'attaque)."
+					]
+				},
+				{
+					"name": "Résistance légendaire (3/Jour)",
+					"entries": [
+						"Si Elias Drexel échoue à un jet de sauvegarde, il peut choisir de le réussir à la place."
+					]
+				},
+				{
+					"name": "Équipements spéciaux",
+					"entries": [
+						"Elias Drexel manie une Épée longue +3, porte une cuirasse +3 et l'insigne de Lord Commander."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multi-attaques",
+					"entries": [
+						"Elias Drexel utilise Leadership. Il porte ensuite quatre attaques avec son Épée longue ou son Arc long."
+					]
+				},
+				{
+					"name": "Épée longue",
+					"entries": [
+						"{@atk mw} {@hit 12} à toucher, portée de 1,5 m., une cible. {@h}16 ({@damage 2d8 + 7}) dégâts tranchants."
+					]
+				},
+				{
+					"name": "Arc long",
+					"entries": [
+						"{@atk rw} {@hit 7} pour toucher, portée 150/18 m., une cible. {@h}7 ({@damage 1d8 + 2}) dégâts perforants."
+					]
+				},
+				{
+					"name": "Leadership (recharge après un repos court ou long)",
+					"entries": [
+						"Pendant 1 minute, Elias Drexel peut prononcer un ordre ou un avertissement spécial chaque fois qu'une créature non hostile qu'il peut voir à moins de 36 mètres de lui effectue un jet d'attaque ou un jet de sauvegarde. La créature peut ajouter un {@dice d4} à son jet à condition qu'elle puisse entendre et comprendre Elias Drexel. Une créature ne peut bénéficier que d'un seul dé de Leadership à la fois. Cet effet prend fin si Elias Drexel est à {@condition incapacitated}."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"Elias Drexel ajoute 5 à sa CA contre une attaque de mêlée qui le toucherait. Pour cela, Elias Drexel doit voir l'attaquant et manier une arme de mêlée."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attaque",
+					"entries": [
+						"Elias Drexel réalise une attaque d'arme."
+					]
+				},
+				{
+					"name": "Injonction",
+					"entries": [
+						"Elias Drexel choisit un allié qu'il peut voir. Si cet allié peut le voir et l'entendre, il peut effectuer une attaque d'arme en réaction et bénéficie d'un avantage sur le jet d'attaque. L'attaque inflige 10 {@damage 3d6} points de dégâts supplémentaires si elle est réussie."
+					]
+				}
+			],
+			"attachedItems": [
+				"longbow|phb",
+				"longsword|phb"
+			],
+			"traitTags": [
+				"Brute",
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"damageTagsSpell": [
+				"P"
+			],
+			"spellcastingTags": [
+				"CR"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lord of the Feast",
+			"source": "DoDk",
+			"page": 211,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 228,
+				"formula": "24d10 + 96"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 18,
+			"dex": 18,
+			"con": 18,
+			"int": 11,
+			"wis": 18,
+			"cha": 13,
+			"save": {
+				"dex": "+9",
+				"con": "+9",
+				"wis": "+9",
+				"cha": "+6"
+			},
+			"skill": {
+				"athletics": "+9",
+				"perception": "+14",
+				"stealth": "+14",
+				"survival": "+9"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 24,
+			"languages": [
+				"Abyssal"
+			],
+			"cr": "15",
+			"trait": [
+				{
+					"name": "Résistance légendaire (3/Jour)",
+					"entries": [
+						"Si le seigneur du festin rate un jet de sauvegarde, il peut choisir de le réussir à la place."
+					]
+				},
+				{
+					"name": "Régénération",
+					"entries": [
+						"Le Seigneur du Festin regagne 20 points de vie au début de son tour s'il lui reste au moins 1 point de vie."
+					]
+				},
+				{
+					"name": "Chasseur au corps à corps",
+					"entries": [
+						"Se trouver à moins de 1,5 mètre d'une créature hostile n'impose pas de désavantage aux jets d'attaque à distance du seigneur du festin."
+					]
+				},
+				{
+					"name": "Les sens prédateurs",
+					"entries": [
+						"Le Seigneur du Festin a un avantage sur les tests de Sagesse (Perception). Il peut déterminer la position de toute créature se trouvant à moins de 36 mètres de lui et qui est à {@condition invisible}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multi-attaques",
+					"entries": [
+						"Le Seigneur du Festin effectue trois attaques : soit une avec chacune de ses différentes flèches, soit une avec sa morsure et deux avec ses griffes."
+					]
+				},
+				{
+					"name": "Morsure",
+					"entries": [
+						"{@atk mw} {@hit 9} pour toucher, portée de 1,5 m, une cible. {@h}15 ({@damage 2d10 + 4}) de dégâts perforants plus 18 ({@damage 4d8}) de dégâts nécrotiques. Une cible touchée par cette attaque doit réussir un jet de sauvegarde de {@dc 17} de Constitution ou gagner un {@adventure level of contamination|DoDk|12}."
+					]
+				},
+				{
+					"name": "Griffes",
+					"entries": [
+						"{@atk mw} {@hit 9} à toucher, portée de 3 m, une cible. {@h}11 ({@damage 2d6 + 4}) dégâts tranchants."
+					]
+				},
+				{
+					"name": "Flèche contaminante",
+					"entries": [
+						"{@atk rw} {@hit 9} pour toucher, portée 150/18 m., une cible. {@h}13 ({@damage 2d8 + 4}) de dégâts perforants plus 18 ({@damage 4d8}) de dégâts nécrotiques. Une cible touchée par cette attaque doit réussir un jet de sauvegarde de {@dc 17} de Constitution ou gagner un {@adventure level of contamination|DoDk|12}."
+					]
+				},
+				{
+					"name": "Flèche d'assaut",
+					"entries": [
+						"{@atk rw} {@hit 9} pour toucher, portée 150/18 m., une cible. {@h}13 ({@damage 2d8 + 4}) dégâts perforants. Si la cible est Grande ou plus petite, elle doit réussir un jet de sauvegarde de {@dc 17} de Dextérité ou devenir {@condition restrained} dans un collet magique pendant 1 minute. Une cible à {@condition restrained} peut utiliser son action pour répéter le jet de sauvegarde, mettant fin à l'effet sur elle-même en cas de réussite."
+					]
+				},
+				{
+					"name": "Flèche Harpon",
+					"entries": [
+						"{@atk rw} {@hit 9} pour toucher, portée 150/18 m., une cible. {@h}13 ({@damage 2d8 + 4}) dégâts perforants. Si la cible est une créature énorme ou plus petite, elle doit réussir un jet de sauvegarde de {@dc 17} Force ou être tirée jusqu'à 6 mètres directement vers le seigneur du festin."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Tiret",
+					"entries": [
+						"Le Seigneur de la Fête se déplace à sa vitesse sans provoquer d'attaques d'opportunité."
+					]
+				},
+				{
+					"name": "Flèche (coûte 2 actions)",
+					"entries": [
+						"Le Seigneur de la fête effectue une attaque de flèche de son choix."
+					]
+				},
+				{
+					"name": "Appel de la chasse (coûte 3 actions)",
+					"entries": [
+						"Le Seigneur du Festin pousse un hurlement à glacer le sang qui peut être entendu dans tout Drakkenheim. Les Garmyr à moins de 18 mètres qui peuvent voir et entendre le Seigneur du Festin peuvent utiliser leur réaction pour se déplacer jusqu'à la moitié de leur vitesse et effectuer une attaque en mêlée ou à distance avec avantage."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Regeneration"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity",
+				"strength"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lucretia Mathias",
+			"isNamedCreature": true,
+			"source": "DoDk",
+			"page": 216,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"Unarmored Defense"
+					]
+				}
+			],
+			"hp": {
+				"average": 90,
+				"formula": "20d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 10,
+			"con": 10,
+			"int": 19,
+			"wis": 24,
+			"cha": 19,
+			"save": {
+				"wis": "+12",
+				"cha": "+9"
+			},
+			"skill": {
+				"insight": "+17",
+				"perception": "+17",
+				"persuasion": "+14",
+				"religion": "+14"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 26,
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Lancer des sorts",
+					"headerEntries": [
+						"Lucretia Mathias est une lanceuse de sorts de 20ème niveau. Sa capacité de lanceur de sorts est Sagesse (sauvegarde contre les sorts {@dc 20}, {@hit 12} pour toucher avec les attaques de sorts). Elle a préparé les sorts de clerc suivants :"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch}",
+								"{@spell guidance}",
+								"{@spell light}",
+								"{@spell sacred flame}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell bless}",
+								"{@spell command}",
+								"{@spell guiding bolt}",
+								"{@spell healing word}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell aid}",
+								"{@spell hold person}",
+								"{@spell lesser restoration}",
+								"{@spell spiritual weapon}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell dispel magic}",
+								"{@spell sending}",
+								"{@spell speak with dead}",
+								"{@spell spirit guardians}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell banishment}",
+								"{@spell death ward}",
+								"{@spell divination}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell commune}",
+								"{@spell flame strike}",
+								"{@spell greater restoration}",
+								"{@spell scrying}"
+							]
+						},
+						"6": {
+							"slots": 2,
+							"spells": [
+								"{@spell heal}",
+								"{@spell word of recall}"
+							]
+						},
+						"7": {
+							"slots": 2,
+							"spells": [
+								"{@spell divine word}",
+								"{@spell resurrection}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell holy aura}"
+							]
+						},
+						"9": {
+							"slots": 1,
+							"spells": [
+								"{@spell gate}",
+								"{@spell sacrament of the falling fire|DoDk}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Prescient",
+					"entries": [
+						"Lucrèce Mathias ne peut être surprise tant qu'elle est consciente."
+					]
+				},
+				{
+					"name": "Défense sans armure",
+					"entries": [
+						"Si Lucretia Mathias ne porte pas d'armure et ne brandit pas de bouclier, sa CA inclut son modificateur de Sagesse."
+					]
+				},
+				{
+					"name": "Une foi indéniable",
+					"entries": [
+						"Lucretia Mathias réussit automatiquement ses jets de sauvegarde de Constitution pour maintenir {@status concentration} sur ses sorts. Tout sort qu'elle lance est traité comme s'il était lancé à l'aide d'un emplacement de sort de 9e niveau, quel que soit l'emplacement de sort utilisé pour lancer le sort."
+					]
+				},
+				{
+					"name": "Résistance légendaire (3/Jour)",
+					"entries": [
+						"Si Lucretia Mathias échoue à un jet de sauvegarde, elle peut choisir de le réussir à la place."
+					]
+				},
+				{
+					"name": "La grâce divine",
+					"entries": [
+						"Toute créature qui cible Lucretia Mathias avec une attaque ou un sort nuisible doit d'abord effectuer un jet de sauvegarde de {@dc 20} Sagesse. Sur une sauvegarde ratée, la créature doit choisir une nouvelle cible ou perdre l'attaque ou le sort. Cet effet ne protège pas Lucretia Mathias des effets de zone, comme l'explosion d'une boule de feu.",
+						"Si Lucretia Mathias porte une attaque, lance un sort affectant un ennemi ou inflige des dégâts à une autre créature, cet effet prend fin jusqu'au début de son prochain tour."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Toucher apaisant",
+					"entries": [
+						"{@atk ms} {@hit 12} à toucher, portée de 1,5 m, une créature. {@h}10 ({@damage 3d6}) dégâts psychiques. Une créature réduite à 0 point de vie par ces dégâts est stable à 0 point de vie. La cible doit réussir un jet de sauvegarde de {@dc 20} Sagesse ou être {@condition incapacitated} pendant 1 minute. Cet effet prend fin pour une créature affectée si elle subit des dégâts."
+					]
+				},
+				{
+					"name": "Intervention divine (1/semaine)",
+					"entries": [
+						"Lucrèce Mathias appelle la Flamme sacrée à l'aide. Le MJ choisit la nature de l'intervention ; l'effet de n'importe quel sort de clerc ou de domaine de clerc serait approprié."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Sort mineur",
+					"entries": [
+						"Lucretia Mathias lance un sort mineur."
+					]
+				},
+				{
+					"name": "Toucher apaisant (coûte 2 actions)",
+					"entries": [
+						"Lucretia Mathias utilise son Toucher pacificateur."
+					]
+				},
+				{
+					"name": "Lancer un Sort (coûte 3 actions)",
+					"entries": [
+						"Lucretia Mathias lance un sort en utilisant un emplacement de sort."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"U"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"Y"
+			],
+			"damageTagsSpell": [
+				"F",
+				"N",
+				"O",
+				"R"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened",
+				"incapacitated",
+				"paralyzed",
+				"prone",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Minazorond",
+			"isNamedCreature": true,
+			"source": "DoDk",
+			"page": 183,
+			"size": [
+				"G"
+			],
+			"type": "dragon",
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 22,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 444,
+				"formula": "24d20 + 192"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 80,
+				"swim": 40
+			},
+			"str": 29,
+			"dex": 10,
+			"con": 27,
+			"int": 18,
+			"wis": 17,
+			"cha": 21,
+			"save": {
+				"dex": "+7",
+				"con": "+15",
+				"wis": "+10",
+				"cha": "+12"
+			},
+			"skill": {
+				"insight": "+10",
+				"perception": "+17",
+				"stealth": "+7"
+			},
+			"senses": [
+				"blindsight 60 ft.",
+				"darkvision 120 ft.",
+				"truesight 120 ft."
+			],
+			"passive": 27,
+			"resist": [
+				"poison",
+				"psychic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
+				}
+			],
+			"immune": [
+				"lightning"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"cr": "22",
+			"trait": [
+				{
+					"name": "Amphibie",
+					"entries": [
+						"Minazorond peut respirer l'air et l'eau."
+					]
+				},
+				{
+					"name": "Nature construite",
+					"entries": [
+						"Minazorond n'a besoin ni d'air, ni de nourriture, ni de boisson, ni de sommeil."
+					]
+				},
+				{
+					"name": "Fausse apparence",
+					"entries": [
+						"Tant que Minazorond reste immobile, on ne peut le distinguer d'une statue de bronze inanimée."
+					]
+				},
+				{
+					"name": "Un traqueur sans faille",
+					"entries": [
+						"La ou les créatures qui ont permis à Minazorond de s'animer deviennent sa proie. Minazorond connaît la direction et la distance qui le sépare de sa proie tant que celle-ci se trouve à Drakkenheim ou jusqu'à ce que Minazorond soit détruit."
+					]
+				},
+				{
+					"name": "Forme immuable",
+					"entries": [
+						"Minazorond est immunisé contre tout sort ou effet qui modifierait sa forme."
+					]
+				},
+				{
+					"name": "Résistance légendaire (3/Jour)",
+					"entries": [
+						"Si Minazorond rate un jet de sauvegarde, il peut choisir de le réussir à la place."
+					]
+				},
+				{
+					"name": "Résistance à la magie",
+					"entries": [
+						"Minazorond a l'avantage sur les jets de sauvegarde contre les sorts et autres effets magiques."
+					]
+				},
+				{
+					"name": "Armes magiques",
+					"entries": [
+						"Les attaques des armes de Minazorond sont magiques."
+					]
+				},
+				{
+					"name": "Rajeunissement",
+					"entries": [
+						"Si Minazorond est détruit, il regagne tous ses points de vie en 1 heure, à moins qu'un sort à {@spell disintegrate} ne soit lancé sur ses restes."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multi-attaques",
+					"entries": [
+						"Minazorond peut utiliser sa Présence Effrayante. Il effectue alors trois attaques : une avec sa morsure et deux avec ses griffes."
+					]
+				},
+				{
+					"name": "Morsure",
+					"entries": [
+						"{@atk mw} {@hit 16} à toucher, portée 4,5 m., une cible. {@h}20 ({@damage 2d10 + 9}) dégâts perforants."
+					]
+				},
+				{
+					"name": "Griffe",
+					"entries": [
+						"{@atk mw} {@hit 16} pour toucher, portée de 3 m., une cible. {@h}16 ({@damage 2d6 + 9}) dégâts tranchants."
+					]
+				},
+				{
+					"name": "Queue",
+					"entries": [
+						"{@atk mw} {@hit 16} pour toucher, portée de 6 m., une cible. {@h}18 ({@damage 2d8 + 9}) dégâts contondants."
+					]
+				},
+				{
+					"name": "Présence effrayante",
+					"entries": [
+						"Chaque créature du choix de Minazorond se trouvant à moins de 36 mètres de lui et consciente de sa présence doit réussir un jet de sauvegarde de {@dc 20} Sagesse ou devenir {@condition frightened} pendant 1 minute. Une créature peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant fin à l'effet sur elle-même en cas de réussite. Si le jet de sauvegarde d'une créature est réussi ou si l'effet prend fin pour elle, la créature est immunisée contre la Présence effrayante de Minazorond pendant les 24 heures suivantes."
+					]
+				},
+				{
+					"name": "Armes à souffle {@recharge 5}",
+					"entries": [
+						"Minazorond utilise l'une des armes respiratoires suivantes."
+					]
+				},
+				{
+					"name": "Le souffle de la foudre",
+					"entries": [
+						"Minazorond exhale des éclairs sur une ligne de 36 mètres de long et de 3 mètres de large. Chaque créature située sur cette ligne doit effectuer un jet de sauvegarde de {@dc 23} de Dextérité, subissant 88 ({@damage 16d10}) points de dégâts de foudre en cas de sauvegarde ratée, ou moitié moins de dégâts en cas de sauvegarde réussie."
+					]
+				},
+				{
+					"name": "Souffle de répulsion",
+					"entries": [
+						"Minazorond exhale de l'énergie de répulsion dans un cône de 9 mètres. Chaque créature se trouvant dans cette zone doit réussir un jet de sauvegarde de {@dc 23} de Force. En cas d'échec, la créature est repoussée à 18 mètres de Minazorond."
+					]
+				},
+				{
+					"name": "Changer de forme",
+					"entries": [
+						"Minazorond se transforme magiquement en un humanoïde ou une bête dont la valeur de défi n'est pas supérieure à la sienne, ou reprend sa véritable forme. Il reprend sa forme réelle s'il meurt. Tout équipement qu'il porte est absorbé ou porté par sa nouvelle forme (au choix de Minazorond).",
+						"Sous une nouvelle forme, Minazorond conserve son alignement, ses points de vie, son Dé de touche, sa capacité à parler, ses compétences, sa Résistance légendaire, ses actions de repaire et ses scores d'Intelligence, de Sagesse et de Charisme, ainsi que cette action. Ses statistiques et capacités sont remplacées par celles de la nouvelle forme, à l'exception des caractéristiques de classe et des actions légendaires de cette forme."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Détecter",
+					"entries": [
+						"Minazorond fait un test de Sagesse (Perception)."
+					]
+				},
+				{
+					"name": "Attaque de la queue",
+					"entries": [
+						"Minazorond effectue une attaque de queue."
+					]
+				},
+				{
+					"name": "Attaque de l'aile (coûte 2 actions)",
+					"entries": [
+						"Minazorond bat des ailes. Toute créature située à moins de 4,5 mètres de Minazorond doit réussir un jet de sauvegarde de {@dc 24} Dextérité ou subir 16 ({@damage 2d6 + 9}) points de dégâts contondants et être assommée {@condition prone}. Minazorond peut alors voler jusqu'à la moitié de sa vitesse de vol."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious",
+				"False Appearance",
+				"Immutable Form",
+				"Legendary Resistances",
+				"Magic Resistance",
+				"Magic Weapons",
+				"Rejuvenation"
+			],
+			"senseTags": [
+				"B",
+				"SD",
+				"U"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Frightful Presence",
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"B",
+				"L",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"frightened",
+				"prone"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Oscar Yoren",
+			"isNamedCreature": true,
+			"source": "DoDk",
+			"page": 99,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 72,
+				"formula": "9d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 14,
+			"con": 11,
+			"int": 17,
+			"wis": 12,
+			"cha": 11,
+			"save": {
+				"int": "+6",
+				"wis": "+4"
+			},
+			"skill": {
+				"arcana": "+6",
+				"history": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"necrotic",
+				"poison"
+			],
+			"languages": [
+				"Any four languages"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Lancer des sorts",
+					"headerEntries": [
+						"Oscar Yoren est un lanceur de sorts de 9ème niveau. Sa capacité de lanceur de sorts est Intelligence (sauvegarde contre les sorts {@dc 14}, {@hit 6} pour toucher avec les attaques de sorts). Oscar Yoren a préparé les sorts de sorcier suivants :"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch}",
+								"{@spell mage hand}",
+								"{@spell ray of frost}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell false life}",
+								"{@spell mage armor}",
+								"{@spell magic missile}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell invisibility}",
+								"{@spell misty step}",
+								"{@spell web}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell animate dead}",
+								"{@spell counterspell}",
+								"{@spell lightning bolt}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell blight}",
+								"{@spell polymorph}"
+							]
+						},
+						"5": {
+							"slots": 1,
+							"spells": [
+								"{@spell cloudkill}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"action": [
+				{
+					"name": "Dague",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} pour toucher, portée de 1,5 m. ou portée de 20/18 m., une cible. {@h}4 ({@damage 1d4 + 2}) dégâts perforants."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"C",
+				"F",
+				"I",
+				"L",
+				"N",
+				"O"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"invisible",
+				"restrained"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Pale Man",
+			"source": "DoDk",
+			"page": 212,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 120,
+				"formula": "16d8 + 48"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 10,
+			"dex": 15,
+			"con": 17,
+			"int": 20,
+			"wis": 15,
+			"cha": 12,
+			"save": {
+				"con": "+8",
+				"int": "+10",
+				"wis": "+7"
+			},
+			"skill": {
+				"arcana": "+10",
+				"history": "+10",
+				"perception": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"restrained"
+			],
+			"languages": [
+				"Common and any 5 other languages"
+			],
+			"cr": "13",
+			"spellcasting": [
+				{
+					"name": "Lancer des sorts",
+					"headerEntries": [
+						"L'homme pâle est un lanceur de sorts de 16ème niveau. Sa capacité de lanceur de sorts est Intelligence (sauvegarde contre les sorts {@dc 18}, {@hit 10} pour toucher avec les attaques de sorts). L'homme pâle a préparé les sorts de sorcier suivants :"
+					],
+					"spells": {
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell delerium orb|DoDk}*",
+								"{@spell mage armor}",
+								"{@spell magic missile}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell hold person}",
+								"{@spell invisibility}",
+								"{@spell warp bolt|DoDk}*"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell lightning bolt}",
+								"{@spell purge contamination|DoDk}*"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell delerium blast|DoDk}*",
+								"{@spell forced evolution|DoDk}*"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell conjure the deep haze|DoDk}*",
+								"{@spell siphon contamination|DoDk}*"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell chain lightning}"
+							]
+						},
+						"7": {
+							"slots": 1,
+							"spells": [
+								"{@spell octarine spray|DoDk}*"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell antimagic field}"
+							]
+						}
+					},
+					"footerEntries": [
+						"*These spells are from Appendix D of Dungeons of Drakkenheim."
+					],
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Résistance légendaire (3/Jour)",
+					"entries": [
+						"Si l'homme pâle rate un jet de sauvegarde, il peut choisir de le réussir à la place."
+					]
+				},
+				{
+					"name": "Corps de l'insecte",
+					"entries": [
+						"L'Homme pâle peut occuper l'espace d'une autre créature et vice versa, et l'Homme pâle peut se déplacer par n'importe quelle ouverture assez grande pour un petit insecte."
+					]
+				},
+				{
+					"name": "Chair de poule",
+					"entries": [
+						"Lorsque l'homme pâle est réduit à 0 point de vie, il se sépare en un essaim d'insectes dans le même espace. Si l'essaim n'est pas détruit, l'homme pâle retourne dans son cocon et se reforme {@dice 1d6} jours plus tard."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Contamination du toucher",
+					"entries": [
+						"{@atk ms} {@hit 8} pour toucher, portée de 3 m, une cible. {@h}10 ({@damage 3d6}) dégâts nécrotiques, et la cible doit réussir un jet de sauvegarde de {@dc 16} Constitution ou recevoir un {@adventure level of contamination|DoDk|12}."
+					]
+				},
+				{
+					"name": "Infester la chair {@recharge}",
+					"entries": [
+						"Chaque créature située à moins de 9 mètres de l'homme pâle doit réussir un jet de sauvegarde de {@dc 16} Dextérité ou subir 22 ({@damage 5d8}) dégâts nécrotiques et être {@condition restrained} par des masses de bestioles charnues grouillantes. La créature affectée subit 22 ({@damage 5d8}) de dégâts nécrotiques au début de chaque tour de l'homme pâle. La créature peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant fin à l'effet sur elle-même en cas de réussite."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Sort mineur (coûte 1 action)",
+					"entries": [
+						"L'homme pâle lance un sort mineur."
+					]
+				},
+				{
+					"name": "Glisser (coûte 2 actions)",
+					"entries": [
+						"L'homme pâle se déplace à sa vitesse sans provoquer d'attaques d'opportunité."
+					]
+				},
+				{
+					"name": "Contamination (coûts 3 actions)",
+					"entries": [
+						"Chaque créature {@condition restrained} par l'homme pâle de Infest the Flesh doit réussir un jet de sauvegarde de {@dc 16} de Constitution ou gagner un {@adventure level of contamination|DoDk|12}."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N"
+			],
+			"damageTagsSpell": [
+				"L",
+				"N",
+				"O",
+				"R",
+				"T",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"AOE",
+				"RCH"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"conditionInflictSpell": [
+				"exhaustion",
+				"incapacitated",
+				"invisible",
+				"paralyzed"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"intelligence",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Protean Abomination",
+			"source": "DoDk",
+			"page": 201,
+			"size": [
+				"H"
+			],
+			"type": "aberration",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 168,
+				"formula": "16d12 + 64"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 10
+			},
+			"str": 21,
+			"dex": 8,
+			"con": 18,
+			"int": 5,
+			"wis": 10,
+			"cha": 5,
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 10,
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"prone"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Absorption",
+					"entries": [
+						"Lorsque l'abomination protéiforme tue une créature qui n'est ni une construction ni un mort-vivant, elle absorbe le cadavre dans son corps et regagne 20 points de vie."
+					]
+				},
+				{
+					"name": "Amorphe",
+					"entries": [
+						"L'abomination protéiforme peut se déplacer dans un espace aussi étroit qu'un pouce de large sans se presser."
+					]
+				},
+				{
+					"name": "Pattes d'araignée",
+					"entries": [
+						"L'abomination protéiforme peut grimper sur des surfaces difficiles, y compris la tête en bas sur les plafonds, sans avoir besoin de faire un test de caractéristique."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multi-attaques",
+					"entries": [
+						"L'abomination protéiforme effectue deux attaques de type slam. Si les deux attaques touchent une cible Large ou plus petite, la cible est {@condition grappled} (échappe {@dc 15}), et l'abomination protéiforme utilise Engulf sur elle."
+					]
+				},
+				{
+					"name": "Chelem",
+					"entries": [
+						"{@atk mw} {@hit 8} pour toucher, portée de 1,5 m, une cible. {@h}19 ({@damage 3d8 + 5}) dégâts contondants."
+					]
+				},
+				{
+					"name": "Engloutir",
+					"entries": [
+						"L'abomination protéiforme engloutit une créature Grande ou plus petite {@condition grappled} à ses côtés. Jusqu'à la fin de l'engluement, la cible est {@condition blinded}, {@condition restrained} et incapable de respirer, et elle doit réussir un jet de sauvegarde de Constitution de {@dc 15} au début de chacun des tours de l'abomination ou subir 19 ({@damage 3d8 + 5}) points de dégâts contondants. Si l'abomination se déplace, la cible engloutie se déplace avec elle. L'abomination ne peut engloutir qu'une seule créature à la fois."
+					]
+				}
+			],
+			"traitTags": [
+				"Amorphous",
+				"Spider Climb"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded",
+				"grappled",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Queen of Thieves",
+			"source": "DoDk",
+			"page": 217,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 23,
+					"from": [
+						"canny defense",
+						"{@spell mage armor}"
+					]
+				}
+			],
+			"hp": {
+				"average": 120,
+				"formula": "20d8 + 20"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 20,
+			"con": 13,
+			"int": 20,
+			"wis": 16,
+			"cha": 19,
+			"save": {
+				"dex": "+10",
+				"int": "+10"
+			},
+			"skill": {
+				"acrobatics": "+10",
+				"arcana": "+10",
+				"deception": "+14",
+				"insight": "+8",
+				"perception": "+8",
+				"persuasion": "+9",
+				"sleight of hand": "+10",
+				"stealth": "+15"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 18,
+			"conditionImmune": [
+				"charmed"
+			],
+			"languages": [
+				"Common",
+				"Dwarvish",
+				"Elvish",
+				"Undercommon"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Lanceur de sorts inné",
+					"headerEntries": [
+						"La capacité innée de lanceur de sorts de la Reine des voleurs est l'Intelligence. Elle peut lancer de manière innée les sorts suivants, ne nécessitant aucune composante matérielle, somatique ou verbale :"
+					],
+					"will": [
+						"{@spell detect thoughts}",
+						"{@spell disguise self}",
+						"{@spell suggestion}"
+					],
+					"ability": "int"
+				},
+				{
+					"name": "Lancer des sorts",
+					"headerEntries": [
+						"La Reine des voleurs est un lanceur de sorts de 20ème niveau. Sa capacité de lanceur de sorts est Intelligence (sauvegarde contre les sorts {@dc 18}, {@hit 10} pour toucher avec les attaques de sorts). Elle a préparé les sorts de sorcier suivants :"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch}",
+								"{@spell mage hand}",
+								"{@spell message}",
+								"{@spell minor illusion}",
+								"{@spell prestidigitation}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell feather fall}",
+								"{@spell mage armor}",
+								"{@spell shield}",
+								"{@spell sleep}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell mirror image}",
+								"{@spell misty step}",
+								"{@spell see invisibility}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell gaseous form}",
+								"{@spell hypnotic pattern}",
+								"{@spell major image}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell dimension door}",
+								"{@spell greater invisibility}",
+								"{@spell polymorph}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell dominate person}",
+								"{@spell scrying}",
+								"{@spell seeming}"
+							]
+						},
+						"6": {
+							"slots": 2,
+							"spells": [
+								"{@spell eyebite}",
+								"{@spell mass suggestion}"
+							]
+						},
+						"7": {
+							"slots": 2,
+							"spells": [
+								"{@spell forcecage}",
+								"{@spell project image}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell feeblemind}"
+							]
+						},
+						"9": {
+							"slots": 1,
+							"spells": [
+								"{@spell foresight}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Équipements spéciaux",
+					"entries": [
+						"La Reine des voleurs porte une amulette de protection contre la détection et la localisation, ainsi qu'un sceau de maître-espion. Elle manie une rapière +3."
+					]
+				},
+				{
+					"name": "Une défense intelligente",
+					"entries": [
+						"Lorsque la Reine des voleurs porte une armure légère ou pas d'armure et ne brandit pas de bouclier, sa CA inclut son modificateur d'Intelligence."
+					]
+				},
+				{
+					"name": "Attaque sournoise (1/Tour)",
+					"entries": [
+						"La reine des voleurs inflige 18 {@damage 5d6} points de dégâts supplémentaires lorsqu'elle touche une cible avec une attaque d'arme et qu'elle a l'avantage sur le jet d'attaque, ou lorsque la cible se trouve à moins de 1,5 mètre d'un allié de la reine des voleurs qui n'est pas frappé d'incapacité et qu'elle n'a pas de désavantage sur le jet d'attaque."
+					]
+				},
+				{
+					"name": "Résistance légendaire (3/Jour)",
+					"entries": [
+						"Si la reine des voleurs rate un jet de sauvegarde, elle peut choisir de le réussir à la place."
+					]
+				},
+				{
+					"name": "Voleur de mémoire",
+					"entries": [
+						"Les créatures ne sont pas conscientes lorsque la Reine des voleurs lit dans leurs pensées ou les charme. De plus, lorsqu'un sort lancé par la reine des voleurs qui fait devenir les créatures {@condition charmed} prend fin, elle peut faire perdre la mémoire aux créatures affectées. Elles doivent réussir un jet de sauvegarde d'Intelligence de {@dc 18} ou oublier jusqu'à 8 heures du temps passé {@condition charmed} par elle. Ces souvenirs peuvent être restaurés par un sort de {@spell heal} ou une magie similaire."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "+3 Rapière",
+					"entries": [
+						"{@atk mw} {@hit 13} pour toucher, portée de 1,5 m., une cible {@h}13 ({@damage 1d8 + 8}) dégâts perforants."
+					]
+				},
+				{
+					"name": "Dague",
+					"entries": [
+						"{@atk rw} {@hit 10} pour toucher, portée 20/18 m., une cible. {@h}7 ({@damage 1d4 + 7}) dégâts perforants."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Mauvaise direction",
+					"entries": [
+						"Lorsqu'elle subit des dégâts, la Reine des voleurs devient {@condition invisible} et se téléporte à 18 mètres dans un espace inoccupé qu'elle peut voir. Au même moment, un double illusoire d'elle apparaît à l'endroit où elle se tenait et dure 1 minute. L'invisibilité prend fin si la reine des voleurs attaque ou lance un sort, ou au bout de 1 minute."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attaque",
+					"entries": [
+						"La Reine des voleurs effectue une attaque de mêlée ou à distance."
+					]
+				},
+				{
+					"name": "Déplacer",
+					"entries": [
+						"La Reine des voleurs se déplace à sa vitesse sans provoquer d'attaques d'opportunité."
+					]
+				}
+			],
+			"attachedItems": [
+				"+3 rapier|dmg",
+				"dagger|phb"
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Sneak Attack"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"E",
+				"U"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CW",
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"frightened",
+				"incapacitated",
+				"invisible",
+				"unconscious"
+			],
+			"savingThrowForced": [
+				"intelligence"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"intelligence",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Rat Prince",
+			"source": "DoDk",
+			"page": 213,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 66,
+				"formula": "12d8 + 12"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30,
+				"climb": 30
+			},
+			"str": 12,
+			"dex": 19,
+			"con": 13,
+			"int": 9,
+			"wis": 15,
+			"cha": 9,
+			"skill": {
+				"acrobatics": "+6",
+				"athletics": "+3",
+				"perception": "+6",
+				"stealth": "+8"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"languages": [
+				"Common"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Action rusée",
+					"entries": [
+						"Le prince Rat peut entreprendre l'action Dash, Disengage ou Hide en tant qu'action bonus à chacun de ses tours."
+					]
+				},
+				{
+					"name": "L'odeur de l'arôme",
+					"entries": [
+						"Le prince Rat a un avantage sur les tests de Sagesse (Perception) qui reposent sur l'odorat."
+					]
+				},
+				{
+					"name": "Tactique de la meute",
+					"entries": [
+						"Le prince Rat a un avantage sur un jet d'attaque contre une créature si au moins un de ses alliés se trouve à moins de 1,5 mètre de la créature et que l'allié ne l'est pas {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Munitions contaminées",
+					"entries": [
+						"Le prince Rat porte {@dice 2d6} de munitions lacées avec des fragments de delerium. Ces projectiles infligent {@damage 1d6} de dégâts supplémentaires sur un coup, et la cible doit réussir un jet de sauvegarde de {@dc 10} Constitution ou gagner un {@adventure level of contamination|DoDk|12}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multi-attaques",
+					"entries": [
+						"Le prince Rat porte trois attaques : deux avec ses épées courtes, et une avec sa morsure contaminée."
+					]
+				},
+				{
+					"name": "Épée courte",
+					"entries": [
+						"{@atk mw} {@hit 6} pour toucher, portée de 1,5 m., une cible. {@h}7 ({@damage 1d6 + 4}) dégâts perforants."
+					]
+				},
+				{
+					"name": "Morsure contaminée",
+					"entries": [
+						"{@atk mw} {@hit 6} pour toucher, portée de 1,5 m, une cible. {@h}4 ({@damage 1d4 + 4}) dégâts perforants, plus 10 ({@damage 3d6}) dégâts nécrotiques supplémentaires, et la créature doit réussir un jet de sauvegarde de {@dc 11} Constitution ou gagner un {@adventure level of contamination|DoDk|12}."
+					]
+				},
+				{
+					"name": "Arbalète à main",
+					"entries": [
+						"{@atk rw} {@hit 6} pour toucher, portée 30/36 m., une cible. {@h}7 ({@damage 1d6 + 4}) dégâts perforants."
+					]
+				}
+			],
+			"attachedItems": [
+				"hand crossbow|phb"
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ratling",
+			"source": "DoDk",
+			"page": 202,
+			"size": [
+				"S"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 5,
+				"formula": "2d6 - 2"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30,
+				"climb": 30
+			},
+			"str": 7,
+			"dex": 15,
+			"con": 8,
+			"int": 8,
+			"wis": 10,
+			"cha": 5,
+			"skill": {
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Common"
+			],
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Discret",
+					"entries": [
+						"Le ratling peut prendre l'action Dissimuler comme action bonus à chacun de ses tours."
+					]
+				},
+				{
+					"name": "L'odeur de l'arôme",
+					"entries": [
+						"Le ratling a l'avantage sur les tests de Sagesse (Perception) qui font appel à l'odorat."
+					]
+				},
+				{
+					"name": "Tactique de la meute",
+					"entries": [
+						"Le ratling a un avantage sur un jet d'attaque contre une créature si au moins un de ses alliés se trouve à moins de 1,5 mètre de la créature et que l'allié ne l'est pas {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Morsure",
+					"entries": [
+						"{@atk mw} {@hit 4} pour toucher, portée de 1,5 m., une cible. {@h}4 ({@damage 1d4 + 2}) dégâts perforants."
+					]
+				},
+				{
+					"name": "Fronde",
+					"entries": [
+						"{@atk rw} {@hit 4} pour toucher, portée 30/36 m., une cible. {@h}4 ({@damage 1d4 + 2}) dégâts contondants."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Guttersnipe",
+					"entries": [
+						"Un ratling guttersnipe utilise les statistiques de jeu pour un {@creature spy}. Son type de créature est la monstruosité. Elle gagne les traits Odorat fin et Tactique de meute, une vitesse de nage et d'escalade de 9 mètres, ainsi que l'attaque Morsure, conformément au bloc de statistiques du ratling."
+					]
+				}
+			],
+			"attachedItems": [
+				"sling|phb"
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Saint Gresha",
+			"isNamedCreature": true,
+			"source": "DoDk",
+			"page": 124,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 67,
+				"formula": "9d8 + 27"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": 60
+			},
+			"str": 6,
+			"dex": 16,
+			"con": 16,
+			"int": 12,
+			"wis": 14,
+			"cha": 15,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"thunder",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"The languages it knew in life"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Lancer des sorts",
+					"headerEntries": [
+						"Saint Gresha est un lanceur de sorts de 8ème niveau. Sa capacité de lanceur de sorts est Charisme (sauvegarde contre les sorts {@dc 13}, {@hit 5} pour toucher avec les attaques de sort). Saint Gresha connaît les sorts de sorcier suivants :"
+					],
+					"will": [
+						"{@spell guidance}",
+						"{@spell light}",
+						"{@spell sacred flame}",
+						"{@spell thaumaturgy}"
+					],
+					"daily": {
+						"3e": [
+							"{@spell bless}",
+							"{@spell flame strike}",
+							"{@spell guiding bolt}",
+							"{@spell healing word}",
+							"{@spell prayer of healing}",
+							"{@spell spirit guardians}"
+						],
+						"1e": [
+							"{@spell divine word}",
+							"{@spell harm}",
+							"{@spell heal}",
+							"{@spell holy aura}",
+							"{@spell sacrament of the falling fire|DoDk}*"
+						]
+					},
+					"footerEntries": [
+						"*new spell described in Appendix D of Dungeons of Drakkenheim."
+					],
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Mouvement incorporel",
+					"entries": [
+						"Saint Gresha peut se déplacer à travers d'autres créatures et objets comme s'il s'agissait d'un terrain difficile. Il subit 5 ({@damage 1d10}) dégâts de force s'il termine son tour à l'intérieur d'un objet."
+					]
+				},
+				{
+					"name": "Sensibilité à la lumière du soleil",
+					"entries": [
+						"Lorsqu'il est exposé à la lumière du soleil, Saint Gresha a un désavantage sur les jets d'attaque, ainsi que sur les tests de Sagesse (Perception) qui font appel à la vue."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Drain de vie",
+					"entries": [
+						"{@atk mw} {@hit 6} à toucher, portée de 1,5 m, une créature. {@h}21 ({@damage 4d8 + 3}) dégâts nécrotiques. La cible doit réussir un jet de sauvegarde de {@dc 14} Constitution ou son maximum de points de vie est réduit d'un montant égal aux dégâts subis. Cette réduction dure jusqu'à ce que la cible termine un long repos. La cible meurt si cet effet réduit son maximum de points de vie à 0."
+					]
+				},
+				{
+					"name": "Créer un Spectre",
+					"entries": [
+						"Saint Gresha cible un humanoïde à moins de 3 mètres de lui, mort depuis 1 minute maximum et mort violemment. L'esprit de la cible s'élève comme un spectre dans l'espace de son cadavre ou dans l'espace inoccupé le plus proche. Le spectre est sous le contrôle de Saint Gresha. Saint Gresha ne peut avoir plus de sept spectres sous son contrôle à la fois."
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"N",
+				"O"
+			],
+			"damageTagsSpell": [
+				"F",
+				"N",
+				"R"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"miscTags": [
+				"HPR",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Scoundrel",
+			"source": "DoDk",
+			"page": 219,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item leather armor|PHB|leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 44,
+				"formula": "8d8 + 8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 17,
+			"con": 12,
+			"int": 14,
+			"wis": 10,
+			"cha": 15,
+			"skill": {
+				"acrobatics": "+5",
+				"deception": "+6",
+				"sleight of hand": "+5",
+				"stealth": "+7"
+			},
+			"passive": 10,
+			"languages": [
+				"Thieves' cant plus any two languages"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Lancer des sorts",
+					"headerEntries": [
+						"Le scélérat est un lanceur de sorts de 3e niveau qui utilise l'Intelligence comme capacité de lancement de sorts (sauvegarde contre les sorts {@dc 12} ; {@hit 4} pour toucher avec les attaques de sorts). Il connaît les sorts suivants de la liste des sorts de sorcier :"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell mage hand} (the hand is invisible)",
+								"{@spell minor illusion}",
+								"{@spell prestidigitation}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell charm person}",
+								"{@spell disguise self}",
+								"{@spell sleep}"
+							]
+						},
+						"2": {
+							"slots": 2,
+							"spells": [
+								"{@spell invisibility}",
+								"{@spell suggestion}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Action rusée",
+					"entries": [
+						"A chacun de ses tours, le scélérat peut utiliser une action bonus pour effectuer l'action Dash, Disengage, ou Hide."
+					]
+				},
+				{
+					"name": "Attaque sournoise (1/Tour)",
+					"entries": [
+						"La canaille inflige 14 {@damage 4d6} points de dégâts supplémentaires lorsqu'elle touche une cible avec une attaque d'arme et qu'elle a l'avantage sur le jet d'attaque, ou lorsque la cible se trouve à moins de 1,5 mètre d'un allié de la canaille qui n'est pas neutralisé et que la canaille n'a pas de désavantage sur le jet d'attaque."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Épée courte",
+					"entries": [
+						"{@atk mw} {@hit 5} pour toucher, portée de 1,5 m., une cible. {@h}6 ({@damage 1d6 + 3}) dégâts perforants."
+					]
+				},
+				{
+					"name": "Arbalète à main",
+					"entries": [
+						"{@atk rw} {@hit 5} pour toucher, portée 30/36 m., une cible. {@h}6 ({@damage 1d6 + 3}) dégâts perforants."
+					]
+				}
+			],
+			"attachedItems": [
+				"hand crossbow|phb",
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Sneak Attack"
+			],
+			"languageTags": [
+				"TC",
+				"X"
+			],
+			"damageTags": [
+				"P"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"invisible",
+				"unconscious"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Tower Dragon",
+			"source": "DoDk",
+			"page": 198,
+			"_copy": {
+				"name": "Young Bronze Dragon",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "Constructed Nature",
+								"entries": [
+									"The dragon doesn't require air, food, drink, or sleep."
+								]
+							},
+							{
+								"name": "False Appearance",
+								"entries": [
+									"While the dragon remains motionless, it is indistinguishable from an inanimate bronze statue."
+								]
+							},
+							{
+								"name": "Faultless Tracker",
+								"entries": [
+									"The creature(s) that caused the dragon to animate becomes its quarry. The dragon knows the direction and distance to its quarry as long the quarry remains within Drakkenheim or until the dragon is destroyed."
+								]
+							},
+							{
+								"name": "Immutable Form",
+								"entries": [
+									"The dragon is immune to any spell or effect that would alter its form."
+								]
+							},
+							{
+								"name": "Magic Resistance",
+								"entries": [
+									"The dragon has advantage on saving throws against spells and other magical effects."
+								]
+							},
+							{
+								"name": "Magic Weapons",
+								"entries": [
+									"The dragon's weapon attacks are magical."
+								]
+							},
+							{
+								"name": "Rejuvenation",
+								"entries": [
+									"If the tower dragon is destroyed, it regains all its hit points in 1 hour unless a {@spell disintegrate} spell is cast on its remains."
+								]
+							}
+						]
+					}
+				}
+			},
+			"senses": [
+				"blindsight 30 ft.",
+				"darkvision 120 ft.",
+				"truesight 120 ft."
+			],
+			"resist": [
+				"poison",
+				"psychic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"cr": "10",
+			"traitTags": [
+				"Amphibious",
+				"False Appearance",
+				"Immutable Form",
+				"Magic Resistance",
+				"Magic Weapons",
+				"Rejuvenation"
+			],
+			"senseTags": [
+				"B",
+				"SD",
+				"U"
+			],
+			"damageTags": [
+				"L",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Urban Ranger",
+			"source": "DoDk",
+			"page": 220,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|PHB|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "8d8 + 16"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 12,
+			"dex": 17,
+			"con": 14,
+			"int": 11,
+			"wis": 15,
+			"cha": 11,
+			"skill": {
+				"athletics": "+5",
+				"perception": "+6",
+				"stealth": "+7",
+				"survival": "+6"
+			},
+			"passive": 16,
+			"languages": [
+				"Any two"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Lancer des sorts",
+					"headerEntries": [
+						"Le ranger urbain est un lanceur de sorts de 8e niveau qui utilise la Sagesse comme capacité de lancement de sorts (sauvegarde contre les sorts {@dc 12} ; {@hit 4} pour toucher avec les attaques de sorts). Il connaît les sorts suivants de la liste de sorts des rôdeurs :"
+					],
+					"spells": {
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell cure wounds}",
+								"{@spell fog cloud}",
+								"{@spell hunter's mark}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell pass without trace}",
+								"{@spell spike growth}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"action": [
+				{
+					"name": "Multi-attaques",
+					"entries": [
+						"Le ranger urbain effectue deux attaques de mêlée ou deux attaques à distance."
+					]
+				},
+				{
+					"name": "Épée courte",
+					"entries": [
+						"{@atk mw} {@hit 5} pour toucher, portée de 1,5 m., une cible. {@h}6 ({@damage 1d6 + 3}) dégâts perforants."
+					]
+				},
+				{
+					"name": "Arc long",
+					"entries": [
+						"{@atk rw} {@hit 5} pour toucher, à distance 150/18 m., une cible. {@h}7 ({@damage 1d8 + 3}) dégâts perforants."
+					]
+				}
+			],
+			"attachedItems": [
+				"longbow|phb",
+				"shortsword|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"P"
+			],
+			"spellcastingTags": [
+				"CR"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Walking Delerium Geode",
+			"source": "DoDk",
+			"page": 205,
+			"size": [
+				"L"
+			],
+			"type": "elemental",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 126,
+				"formula": "12d10 + 60"
+			},
+			"speed": {
+				"walk": 30,
+				"burrow": 30
+			},
+			"str": 20,
+			"dex": 8,
+			"con": 20,
+			"int": 5,
+			"wis": 10,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft.",
+				"tremorsense 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"vulnerable": [
+				"radiant",
+				"thunder"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"unconscious"
+			],
+			"languages": [
+				"Deep Speech"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Eclatement de la mort",
+					"entries": [
+						"Si des dégâts réduisent la géode delerium ambulante à 0 point de vie, les cristaux de delerium de son corps explosent dans une rafale d'énergie contaminée, sauf si les dégâts étaient de force, radiants ou de tonnerre. Chaque créature située à moins de 9 mètres d'elle doit réussir un jet de sauvegarde de Constitution de {@dc 15} ou subir 42 ({@damage 12d6}) points de dégâts nécrotiques et gagner un {@adventure level of contamination|DoDk|12}. De plus, cette explosion déclenche une anomalie arcanique aléatoire (voir Donjons de Drakkenheim)."
+					]
+				},
+				{
+					"name": "Glissement de terrain",
+					"entries": [
+						"La géode delerium ambulante peut s'enfoncer dans la terre et la pierre non magiques et non travaillées. Ce faisant, la géode ne perturbe pas la matière qu'elle traverse."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Coup d'éclat",
+					"entries": [
+						"{@atk mw} {@hit 8} pour toucher, portée de 3 m., une cible. {@h}14 ({@damage 2d8 + 5}) dégâts contondants. Une cible touchée par cette attaque doit réussir un jet de sauvegarde de {@dc 15} Constitution ou subir 10 ({@damage 3d6}) points de dégâts nécrotiques et gagner un {@adventure level of contamination|DoDk|12}."
+					]
+				}
+			],
+			"traitTags": [
+				"Death Burst"
+			],
+			"senseTags": [
+				"D",
+				"T"
+			],
+			"languageTags": [
+				"DS"
+			],
+			"damageTags": [
+				"B",
+				"N"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Wall Gargoyle",
+			"source": "DoDk",
+			"page": 198,
+			"_copy": {
+				"name": "Gargoyle",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "Faultless Tracker",
+								"entries": [
+									"The creature that caused the gargoyle to animate becomes its quarry. The gargoyle knows the direction and distance to its quarry as long the quarry remains within Drakkenheim or until the gargoyle is destroyed."
+								]
+							},
+							{
+								"name": "Keen Sight",
+								"entries": [
+									"The gargoyle has advantage on Wisdom (Perception) checks that rely on sight."
+								]
+							},
+							{
+								"name": "Magic Weapons",
+								"entries": [
+									"The gargoyle's weapon attacks are magical."
+								]
+							},
+							{
+								"name": "Rejuvenation",
+								"entries": [
+									"If the wall gargoyle is destroyed, it regains all its hit points in 1 hour unless a {@spell disintegrate} spell is cast on its remains."
+								]
+							}
+						]
+					}
+				}
+			},
+			"senses": [
+				"darkvision 60 ft.",
+				"truesight 120 ft."
+			],
+			"traitTags": [
+				"False Appearance",
+				"Keen Senses",
+				"Magic Weapons",
+				"Rejuvenation"
+			],
+			"senseTags": [
+				"D",
+				"U"
+			],
+			"languageTags": [
+				"T"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Warlock of the Rat God",
+			"source": "DoDk",
+			"page": 202,
+			"size": [
+				"S"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 27,
+				"formula": "6d6 + 6"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30,
+				"climb": 30
+			},
+			"str": 7,
+			"dex": 14,
+			"con": 13,
+			"int": 13,
+			"wis": 11,
+			"cha": 15,
+			"skill": {
+				"deception": "+4",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Common"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Lanceur de sorts inné",
+					"headerEntries": [
+						"La capacité innée de lanceur de sorts du warlock est le Charisme. Il peut lancer de manière innée les sorts suivants (sauvegarde contre les sorts {@dc 12}, {@hit 4} pour toucher avec les attaques de sort), ne nécessitant aucune composante matérielle :"
+					],
+					"will": [
+						"{@spell eldritch blast} (2 beams)",
+						"{@spell mage armor} (self only)",
+						"{@spell minor illusion}",
+						"{@spell thaumaturgy}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell augury}",
+							"{@spell burning hands}",
+							"{@spell conjure animals} (giant rats only)",
+							"{@spell faerie fire}",
+							"{@spell invisibility}",
+							"{@spell misty step}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Discret",
+					"entries": [
+						"Le ratling peut prendre l'action Dissimuler comme action bonus à chacun de ses tours."
+					]
+				},
+				{
+					"name": "L'odeur de l'arôme",
+					"entries": [
+						"Le ratling a l'avantage sur les tests de Sagesse (Perception) qui font appel à l'odorat."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Morsure",
+					"entries": [
+						"{@atk mw} {@hit 4} pour toucher, portée de 1,5 m., une cible. {@h}4 ({@damage 1d4 + 2}) dégâts perforants."
+					]
+				}
+			],
+			"traitTags": [
+				"Keen Senses"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"F",
+				"O"
+			],
+			"spellcastingTags": [
+				"CL",
+				"I"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"invisible"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Warp Witch",
+			"source": "DoDk",
+			"page": 198,
+			"_copy": {
+				"name": "Ghost",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "fantôme",
+						"with": "warp witch"
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Visage horrifiant",
+						"items": [
+							{
+								"name": "Psychic Wail {@recharge 5}",
+								"entries": [
+									"Every creature within 30 feet of the warp witch must succeed on a {@dc 13} Intelligence saving throw or take 10 ({@damage 3d6}) psychic damage and become {@condition incapacitated} until the end of the warp witches next turn."
+								]
+							},
+							{
+								"name": "Mutate Host",
+								"entries": [
+									"The warp witch can use a bonus action while it is possessing a creature to force mutations upon its host. The possessed creature must succeed on a {@dc 13} Charisma saving throw or gain one {@adventure level of contamination|DoDk|12}. Rather than rolling to determine if a mutation occurs, the warp witch automatically causes a random mutation."
+								]
+							}
+						]
+					}
+				}
+			},
+			"hasFluff": true
+		}
+	]
+}
