@@ -927,10 +927,10 @@
 			"type": "GV",
 			"requires": [
 				{
-					"type": "A"
+					"arrow": true
 				},
 				{
-					"type": "AF"
+					"bolt": true
 				}
 			],
 			"excludes": {
@@ -1089,7 +1089,7 @@
 			],
 			"ammo": true,
 			"inherits": {
-				"namePrefix": "Bloodseeker Ammunition ",
+				"namePrefix": "Bloodseeker ",
 				"source": "BMT",
 				"page": 66,
 				"rarity": "very rare",
@@ -1134,9 +1134,6 @@
 			"requires": [
 				{
 					"bow": true
-				},
-				{
-					"crossbow": true
 				}
 			],
 			"inherits": {
@@ -1156,9 +1153,6 @@
 			"requires": [
 				{
 					"bow": true
-				},
-				{
-					"crossbow": true
 				}
 			],
 			"inherits": {
@@ -1227,6 +1221,27 @@
 				"entries": [
 					"这套盔甲的外表面和内部接缝处都有连锁齿轮，汲取了 Mechanus 位面的有序魔力。",
 					"盔甲有 4 个电荷。如果您在穿戴此盔甲时进行了一次 {@dice d20} 掷骰子，您可以消耗 1 次电荷，将掷出的数字改为 10。盔甲每天黎明时会恢复 {@dice 1d4} 已消耗的电量。"
+				]
+			}
+		},
+		{
+			"name": "彗星粉碎机",
+			"type": "GV",
+			"requires": [
+				{
+					"type": "M",
+					"dmgType": "B"
+				}
+			],
+			"inherits": {
+				"namePrefix": "Comet Smasher ",
+				"source": "DoDk",
+				"page": 230,
+				"rarity": "very rare",
+				"reqAttune": true,
+				"entries": [
+					"这把重击武器的头部是由一块巨大的谵妄水晶制成的，上面闪烁着奥术能量。使用该武器攻击时，目标会受到额外的（{@dice 3d6}）坏死伤害。",
+					"使用该武器进行攻击时，如果掷中 20 点，就会释放奥术异常点（见德拉肯海姆地下城）。您可以在掷骰台上掷两次，并选择其中一个结果。"
 				]
 			}
 		},
@@ -1331,6 +1346,29 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "锻造刀片",
+			"type": "GV",
+			"requires": [
+				{
+					"sword": true
+				}
+			],
+			"inherits": {
+				"namePrefix": "Delerium-Forged Blade ",
+				"source": "DoDk",
+				"page": 230,
+				"rarity": "rare",
+				"bonusWeapon": "+2",
+				"entries": [
+					"这把剑的剑柄上有一小块用玻璃包裹的 delerium 片，就像宝石一样镶嵌在剑柄上。剑身由陨铁制成，并注入了 delerium 灰尘，使其发出柔和的八色光芒。",
+					"使用该武器进行攻击和伤害翻滚时，您会获得 {=bonusWeapon} 的加成。",
+					"当您使用该武器进行攻击时，您可以在攻击和伤害卷轴上使用您的施法能力修正值，而不是力量或灵巧。此外，您还可以将此武器用作施法焦点。",
+					"使用该武器对类人生物进行攻击时，如果掷中 20 点，则类人生物必须在 DC 15 的体质救赎中成功，否则会受到额外的（（%0%））尸毒伤害并获得一次（%1%）。"
+				]
+			},
+			"hasFluffImages": true
+		},
+		{
 			"name": "妖骨长矛",
 			"type": "GV",
 			"requires": [
@@ -1399,9 +1437,6 @@
 			"requires": [
 				{
 					"bow": true
-				},
-				{
-					"crossbow": true
 				}
 			],
 			"inherits": {
@@ -1459,6 +1494,9 @@
 					"type": "AF"
 				}
 			],
+			"excludes": {
+				"name": "能量电池"
+			},
 			"ammo": true,
 			"inherits": {
 				"namePrefix": "Dried Leech ",
@@ -1660,7 +1698,7 @@
 				}
 			],
 			"inherits": {
-				"namePrefix": "Fool's Blade ",
+				"namePrefix": "Fool's ",
 				"source": "BMT",
 				"page": 36,
 				"rarity": "very rare",
@@ -1804,13 +1842,10 @@
 			"requires": [
 				{
 					"bow": true
-				},
-				{
-					"crossbow": true
 				}
 			],
 			"inherits": {
-				"namePrefix": "Glimmering Moonbow ",
+				"namePrefix": "Glimmering Moon ",
 				"source": "BMT",
 				"page": 36,
 				"resist": [
@@ -1860,6 +1895,28 @@
 					"calm emotions"
 				]
 			}
+		},
+		{
+			"name": "淬火钝尖箭",
+			"type": "GV",
+			"requires": [
+				{
+					"arrow": true
+				},
+				{
+					"bolt": true
+				}
+			],
+			"inherits": {
+				"namePrefix": "Hardened Delerium-tipped ",
+				"source": "DoDk",
+				"page": 230,
+				"rarity": "rare",
+				"entries": [
+					"这种弹药的箭尖是精制的谵妄箭。使用这种箭矢进行远程攻击时，被击中的生物会受到额外（{@dice 3d6}）的坏死伤害，必须在 DC 15 的体质蓄力中成功，否则会获得一次（%1%）的伤害。一旦击中目标，谵妄箭尖就会碎成粉末，箭矢也会变成非魔法箭矢。"
+				]
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "地狱火武器",
@@ -3100,6 +3157,33 @@
 			}
 		},
 		{
+			"name": "星宿之弓",
+			"type": "GV",
+			"requires": [
+				{
+					"bow": true
+				},
+				{
+					"crossbow": true
+				}
+			],
+			"inherits": {
+				"namePrefix": "Starcrossed ",
+				"source": "DoDk",
+				"page": 232,
+				"rarity": "rare",
+				"reqAttune": true,
+				"bonusWeapon": "+2",
+				"recharge": "dawn",
+				"rechargeAmount": 3,
+				"charges": 3,
+				"entries": [
+					"这种魔法弓或弩的弓托上有错综复杂的谵妄碎片和聚焦透镜，这些碎片和透镜通常用来装载弩箭，而谵妄碎片和聚焦透镜则会以魔法变出自己的弹丸。使用该武器时，您的攻击和伤害卷轴会获得 {=bonusWeapon} 的加成，该武器会造成辐射伤害而非穿刺伤害，并忽略弹药和装填属性。",
+					"该武器有 3 次充电机会，每天黎明时重新获得。使用该武器进行远程攻击时，您可以使弩箭在绚丽的闪光中爆炸。被击中的目标及其周围 3 米内的任何生物都必须在 DC 15 的宪法蓄力中成功，否则就会失明，直到下一个回合结束。"
+				]
+			}
+		},
+		{
 			"name": "爆星弩",
 			"type": "GV",
 			"requires": [
@@ -3108,7 +3192,7 @@
 				}
 			],
 			"inherits": {
-				"namePrefix": "Starshot Crossbow ",
+				"namePrefix": "Starshot ",
 				"source": "BMT",
 				"page": 38,
 				"rarity": "rare",
@@ -3637,9 +3721,12 @@
 					"type": "AF"
 				}
 			],
+			"excludes": {
+				"name": "能量电池"
+			},
 			"ammo": true,
 			"inherits": {
-				"namePrefix": "Winged Ammunition ",
+				"namePrefix": "Winged ",
 				"source": "BMT",
 				"page": 69,
 				"rarity": "uncommon",
