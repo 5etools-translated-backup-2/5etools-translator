@@ -1,0 +1,6224 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		},
+		"otherSources": {
+			"monster": {
+				"MM": "DoDk",
+				"MOT": "DoDk"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Amalgamation",
+			"source": "DoDk",
+			"page": 206,
+			"size": [
+				"G"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 525,
+				"formula": "30d20 + 210"
+			},
+			"speed": {
+				"walk": 5
+			},
+			"str": 30,
+			"dex": 11,
+			"con": 27,
+			"int": 22,
+			"wis": 18,
+			"cha": 20,
+			"save": {
+				"str": "+17",
+				"dex": "+7",
+				"con": "+15",
+				"int": "+13",
+				"wis": "+11"
+			},
+			"skill": {
+				"arcana": "+13",
+				"deception": "+12",
+				"insight": "+11",
+				"perception": "+11"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 21,
+			"immune": [
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"stunned"
+			],
+			"languages": [
+				"all",
+				"telepathy 1 mile"
+			],
+			"cr": "23",
+			"spellcasting": [
+				{
+					"name": "Врожденное заклинание",
+					"headerEntries": [
+						"Врожденная способность к заклинаниям у амальгамы - Харизма (спасбросок от заклинаний {@dc 20}). Он может произносить следующие заклинания, не требующие компонентов:"
+					],
+					"will": [
+						"{@spell detect thoughts}",
+						"{@spell dispel magic}"
+					],
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Легендарное сопротивление (3/день)",
+					"entries": [
+						"Если амальгама провалила бросок спасения, она может выбрать вместо него успешный."
+					]
+				},
+				{
+					"name": "Злокачественная опухоль",
+					"entries": [
+						"Амальгама не может быть телепортирована или переместиться в другую плоскость против своей воли."
+					]
+				},
+				{
+					"name": "Неизменная форма",
+					"entries": [
+						"Амальгама невосприимчива к любым заклинаниям или эффектам, которые могут изменить ее форму."
+					]
+				},
+				{
+					"name": "Магическое оружие",
+					"entries": [
+						"Оружейные атаки амальгамы являются магическими."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Мультиатака",
+					"entries": [
+						"Амальгамация использует свое Загрязняющее присутствие. Затем она совершает три атаки щупальцами, каждую из которых она может заменить одним использованием \"Броска\"."
+					]
+				},
+				{
+					"name": "Укус",
+					"entries": [
+						"{@atk mw} {@hit 17} попадание, радиус действия 1,5 м., одна цель. {@h}23 ({@damage 3d8 + 10}) колющего урона. Если цель - крупное или более мелкое существо {@condition grappled}, проглоченное слиянием, то оно проглатывается, и захват заканчивается.",
+						"Пока существо проглочено, оно имеет {@condition blinded} и {@condition restrained}, полностью защищено от атак и других эффектов вне амальгамы, получает 42 ({@damage 12d6}) урона кислотой и приобретает один {@adventure level of contamination|DoDk|12} в начале каждого хода амальгамы.",
+						"Если за один ход амальгамация получает 50 или более урона от существ, находящихся внутри нее, то в конце этого хода она должна успешно выполнить бросок спасения {@dc 25} по Конституции или извергнуть всех проглоченных существ, которые упадут {@condition prone} в пространстве в пределах 3 метров от амальгамации. Если амальгамация умирает, проглоченное существо больше не может быть {@condition restrained} ею проглочено и может выбраться из трупа, используя 4,5 метра движения, выйдя {@condition prone}."
+					]
+				},
+				{
+					"name": "Щупальце",
+					"entries": [
+						"{@atk mw} {@hit 17} попадание, радиус действия 15 м., одна цель. {@h}20 ({@damage 3d6 + 10}) колющего урона, и цель становится {@condition grappled} (побег {@dc 18}). До окончания захвата цель получает {@condition restrained}. У амальгамы двенадцать щупалец, каждое из которых может захватить одну цель."
+					]
+				},
+				{
+					"name": "Fling",
+					"entries": [
+						"Один большой или меньший предмет, который держит в руках амальгама или существо {@condition grappled}, отбрасывается на 18 метров в направлении по выбору амальгама и сбивается с ног {@condition prone}. Если брошенная цель ударяется о твердую поверхность, она получает 3 ({@damage 1d6}) урона от удара за каждые 3 метра, на которые она была брошена. Если цель брошена в другое существо, оно должно преуспеть в броске спасброска на ловкость {@dc 18} или получить тот же урон и быть сбитым с ног {@condition prone}."
+					]
+				},
+				{
+					"name": "Шепот, разрушающий разум",
+					"entries": [
+						"Амальгама произносит ужасную истину в сознании одного существа в радиусе 36 метров от нее. Это существо должно преуспеть в броске спасения {@dc 20} интеллекта. В случае неудачи оно получает 35 ({@damage 10d6}) психического урона и становится безумным, пока не закончит длительный отдых. В состоянии безумия он не может предпринимать никаких действий, не понимает, что говорят другие существа, не может читать и может говорить только на тарабарском языке. Заклинание {@spell greater restoration}, произнесенное над существом, прекращает действие этого эффекта."
+					]
+				},
+				{
+					"name": "Загрязняющее присутствие",
+					"entries": [
+						"Человекоподобные существа в радиусе 36 метров от амальгамы должны преуспеть в броске спасброска на {@dc 20} Конституцию или получить 10 ({@damage 3d6}) некротического урона и прибавить один {@adventure level of contamination|DoDk|12}."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Атака щупальца или бросок",
+					"entries": [
+						"Амальгама делает одну атаку щупальцами или использует свой Fling."
+					]
+				},
+				{
+					"name": "Шепот, разрушающий разум (Затрачивает 2 действия)",
+					"entries": [
+						"Это объединение использует \"Шепот, разрушающий разум\"."
+					]
+				},
+				{
+					"name": "Пайпер у ворот (Затраты 3 действия)",
+					"entries": [
+						"В незанятых помещениях в радиусе 9 метров от места слияния появляется до пяти шипящих мычащих существ, которые остаются там до тех пор, пока не будут уничтожены. Эти существа действуют после слияния по тому же счету инициативы и находятся под его контролем. Одновременно в амальгаме может находиться до десяти вызываемых с помощью этой способности упырей."
+					]
+				}
+			],
+			"traitTags": [
+				"Immutable Form",
+				"Legendary Resistances",
+				"Magic Weapons"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Swallow",
+				"Tentacles"
+			],
+			"languageTags": [
+				"TP",
+				"XX"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"N",
+				"P",
+				"Y"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"blinded",
+				"grappled",
+				"prone",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity",
+				"intelligence"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Animated Delerium Sludge",
+			"source": "DoDk",
+			"page": 203,
+			"size": [
+				"L"
+			],
+			"type": "elemental",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 114,
+				"formula": "12d10 + 48"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 90
+			},
+			"str": 18,
+			"dex": 14,
+			"con": 18,
+			"int": 5,
+			"wis": 10,
+			"cha": 8,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"acid",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained",
+				"unconscious"
+			],
+			"languages": [
+				"Deep Speech"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Форма осадка",
+					"entries": [
+						"Оживленный ил может войти в пространство враждебного существа и остановиться там. Он может перемещаться по узкому пространству шириной до 1 дюйма, не протискиваясь."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Загрязненное прикосновение",
+					"entries": [
+						"{@atk mw} {@hit 7} попадание, радиус действия 1,5 м., одна цель. {@h}10 ({@damage 3d6}) некротического урона. Кроме того, цель, пораженная этой атакой, должна успешно выполнить бросок спасброска на {@dc 15} конституцию или получить один {@adventure level of contamination|DoDk|12}."
+					]
+				},
+				{
+					"name": "Engulf",
+					"entries": [
+						"Каждое существо, находящееся в пространстве анимированного ила, должно успешно выполнить бросок на спасбросок силы {@dc 15}. При неудачном спасброске существо становится {@condition grappled} илом, если оно большое или меньше (побег {@dc 14}). Пока захват не закончится, цель находится в состоянии {@condition restrained}. При успешном спасброске цель выталкивается из пространства ила.",
+						"За один раз ил может схватить одно крупное существо или до двух средних или более мелких существ. В начале каждого хода ила каждая цель {@condition grappled}, пораженная им, получает 28 ({@damage 8d6}) некротических повреждений и должна успешно выполнить бросок спасброска на {@dc 15} конституцию или получить один {@adventure level of contamination|DoDk|12}.",
+						"Существо, находящееся в радиусе 1,5 м от осадка, может попытаться вытащить из него существо или предмет. Это занимает действие и требует успешной проверки силы {@dc 14}."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"DS"
+			],
+			"damageTags": [
+				"N"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"strength"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Arcane Wraith",
+			"source": "DoDk",
+			"page": 197,
+			"_copy": {
+				"name": "Wraith",
+				"source": "MM"
+			},
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Заклинания",
+					"headerEntries": [
+						"Рейф - заклинатель 8-го уровня. Его способность к заклинаниям - Харизма (спасбросок от заклинаний {@dc 13}, {@hit 5} к попаданию при атаках заклинаниями). Рейф знает следующие колдовские заклинания:"
+					],
+					"will": [
+						"{@spell mage hand}",
+						"{@spell magic missile}",
+						"{@spell minor illusion}"
+					],
+					"daily": {
+						"1": [
+							"{@spell hypnotic pattern}"
+						],
+						"3": [
+							"{@spell lightning bolt}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"damageTagsSpell": [
+				"L",
+				"O"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Big Linda",
+			"isNamedCreature": true,
+			"source": "DoDk",
+			"page": 163,
+			"size": [
+				"H"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 136,
+				"formula": "13d12 + 52"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 25,
+			"dex": 10,
+			"con": 19,
+			"int": 2,
+			"wis": 12,
+			"cha": 9,
+			"skill": {
+				"perception": "+4"
+			},
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 14,
+			"immune": [
+				"acid"
+			],
+			"cr": "9",
+			"action": [
+				{
+					"name": "Мультиатака",
+					"entries": [
+						"Большая Линда делает две атаки: одну укусом и одну хвостом. Она не может совершить обе атаки против одной и той же цели."
+					]
+				},
+				{
+					"name": "Укус",
+					"entries": [
+						"{@atk mw} {@hit 10} попадание, радиус действия 3 м., одна цель. {@h}33 ({@damage 4d12 + 7}) колющего урона. Если цель - существо среднего или меньшего размера, она получает {@condition grappled} (побег {@dc 17}). Пока захват не закончится, цель получает {@condition restrained}, и Большая Линда не может укусить другую цель."
+					]
+				},
+				{
+					"name": "Хвост",
+					"entries": [
+						"{@atk mw} {@hit 10} попадание, радиус действия 3 м., одна цель. {@h}20 ({@damage 3d8 + 7}) урона от раздробления."
+					]
+				},
+				{
+					"name": "Изрыгание кислоты {@recharge 5}",
+					"entries": [
+						"Большая Линда извергает кислоту в 9-метровом конусе. Каждое существо, оказавшееся на линии огня, должно успешно выполнить бросок на спасение {@dc 15} от ловкости, получив 49 ({@damage 11d8}) урона кислотой при неудачном спасении, или вдвое меньше при успешном."
+					]
+				}
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Cavalier",
+			"source": "DoDk",
+			"page": 218,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"{@item splint armor|PHB|splint}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 90,
+				"formula": "12d8 + 36"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 10,
+			"con": 16,
+			"int": 10,
+			"wis": 12,
+			"cha": 15,
+			"save": {
+				"wis": "+4",
+				"cha": "+5"
+			},
+			"skill": {
+				"animal handling": "+4",
+				"athletics": "+7",
+				"perception": "+4",
+				"persuasion": "+5"
+			},
+			"passive": 14,
+			"languages": [
+				"Any two"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Заклинания",
+					"headerEntries": [
+						"Кавалерист - заклинатель 8-го уровня, использующий Харизму как способность к заклинаниям (спасбросок от заклинаний {@dc 13}; {@hit 5} к попаданию при атаках заклинаниями). У них подготовлены следующие заклинания паладинов:"
+					],
+					"spells": {
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell bless}",
+								"{@spell command}",
+								"{@spell cure wounds}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell branding smite}",
+								"{@spell find steed}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Храбрость",
+					"entries": [
+						"Кавалерист имеет преимущество в бросках спасения против бытия {@condition frightened}."
+					]
+				},
+				{
+					"name": "Ярость света",
+					"entries": [
+						"Кавалерист наносит дополнительные 9 ({@damage 2d8}) лучевого урона при атаке оружием."
+					]
+				},
+				{
+					"name": "Опытный наездник",
+					"entries": [
+						"Находясь в седле, кавалерист может заставить атаку, направленную на его седока, быть направленной на него."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Мультиатака",
+					"entries": [
+						"Кавалерист совершает две атаки в ближнем бою."
+					]
+				},
+				{
+					"name": "Ланс",
+					"entries": [
+						"{@atk mw} {@hit 7} попадание (с недостатком против цели в пределах 1,5 м.), досягаемость 3 м., одна цель. {@h}10 ({@damage 1d12 + 4}) колющего урона плюс 9 ({@damage 2d8}) лучевого урона."
+					]
+				},
+				{
+					"name": "Javelin",
+					"entries": [
+						"{@atk mw,rw} {@hit 7} попадания, радиус действия 1,5 м. или дальность 30/36 м., одной цели {@h}7 ({@damage 1d6 + 4}) колющего урона плюс 9 ({@damage 2d8}) лучевого урона."
+					]
+				}
+			],
+			"attachedItems": [
+				"javelin|phb",
+				"lance|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P",
+				"R"
+			],
+			"damageTagsSpell": [
+				"R"
+			],
+			"spellcastingTags": [
+				"CP"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"prone"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Chaplain",
+			"source": "DoDk",
+			"page": 218,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item chain mail|phb}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 58,
+				"formula": "9d8 + 18"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 10,
+			"con": 14,
+			"int": 11,
+			"wis": 17,
+			"cha": 13,
+			"save": {
+				"wis": "+6",
+				"cha": "+4"
+			},
+			"skill": {
+				"insight": "+6",
+				"persuasion": "+4",
+				"religion": "+3"
+			},
+			"passive": 13,
+			"languages": [
+				"Any two"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Заклинания",
+					"headerEntries": [
+						"Капеллан - заклинатель 9-го уровня, использующий Мудрость в качестве способности к заклинаниям (спасбросок от заклинаний {@dc 12}; {@hit 4} к попаданию при атаках заклинаниями). У них подготовлены следующие заклинания клириков:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell light}",
+								"{@spell mending}",
+								"{@spell sacred flame}",
+								"{@spell spare the dying}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell bless}",
+								"{@spell guiding bolt}",
+								"{@spell healing word}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell lesser restoration}",
+								"{@spell prayer of healing}",
+								"{@spell spiritual weapon}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell dispel magic}",
+								"{@spell purge contamination|DoDk}",
+								"{@spell spirit guardians}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell banishment}",
+								"{@spell divination}"
+							]
+						},
+						"5": {
+							"slots": 1,
+							"spells": [
+								"{@spell flame strike}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Преданность",
+					"entries": [
+						"Капеллан имеет преимущество при бросках спасбросков против бытия {@condition charmed} или {@condition frightened}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Копье",
+					"entries": [
+						"{@atk mw,rw} {@hit 3} попадание, досягаемость 1,5 м. или дальность 20/18 м., одна цель. {@h}4 ({@damage 1d6 + 1}) колющего урона или 5 ({@damage 1d8 + 1}) урона при использовании в двух руках для атаки ближнего боя."
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"F",
+				"N",
+				"O",
+				"R"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"exhaustion",
+				"incapacitated"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"dexterity",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Crater Wurm",
+			"source": "DoDk",
+			"page": 197,
+			"_copy": {
+				"name": "Purple Worm",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "червь",
+						"with": "wurm"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Мультиатака",
+							"items": {
+								"name": "Нарушение",
+								"entries": [
+									"Кратерный вурм использует все свои движения. При этом он может входить в пространство больших или меньших существ. Когда вурм входит в пространство существа, оно должно успешно выполнить бросок на спасбросок силы {@dc 19}. При успешном спасброске существо может выбрать, чтобы его оттолкнули в сторону от пространства вурма. Существо, которое решило не толкать, страдает от последствий неудачного броска спасброска. При неудачном спасброске существо получает 35 ({@damage 10d6}) повреждений от удара, толкается на 3 метра и получает удар {@condition prone}. После завершения движения вурм может совершить одну атаку укусом против цели {@condition prone} в качестве бонусного действия."
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Хвостовое жало",
+							"items": {
+								"name": "Загрязненный пищевод",
+								"entries": [
+									"Существо, проглоченное кратерным вурмом, получает 1 {@adventure level of contamination|DoDk|12} каждый раз, когда получает урон от кислоты, находясь внутри вурма."
+								]
+							}
+						}
+					]
+				}
+			},
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Crimson Countess",
+			"source": "DoDk",
+			"page": 208,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 130,
+				"formula": "20d8 + 40"
+			},
+			"speed": {
+				"walk": 20,
+				"fly": 60
+			},
+			"str": 10,
+			"dex": 21,
+			"con": 15,
+			"int": 13,
+			"wis": 14,
+			"cha": 19,
+			"save": {
+				"con": "+5",
+				"wis": "+5"
+			},
+			"skill": {
+				"acrobatics": "+11",
+				"deception": "+7",
+				"perception": "+8"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"immune": [
+				"lightning",
+				"thunder"
+			],
+			"languages": [
+				"Abyssal"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Воздушный акробат",
+					"entries": [
+						"В каждый свой ход Багровая графиня может использовать бонусное действие, чтобы выполнить действие \"Рывок\", \"Уход\" или \"Уклонение\"."
+					]
+				},
+				{
+					"name": "Зрение",
+					"entries": [
+						"Багровая графиня имеет преимущество при проверках Мудрости (Восприятие), которые зависят от зрения."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Мультиатака",
+					"entries": [
+						"Багровая графиня может использовать свой Устрашающий крик. Затем она делает две атаки когтями или одну - копьем."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 8} попадание, радиус действия 1,5 м., одна цель. {@h}11 ({@damage 1d10 + 5}) колющего урона."
+					]
+				},
+				{
+					"name": "Страшный крик",
+					"entries": [
+						"Каждое существо по выбору Багровой графини, находящееся в пределах 36 метров от нее и не имеющее {@condition deafened}, должно успешно выполнить бросок спасброска мудрости {@dc 15} или стать {@condition frightened} на 1 минуту. Если существо успешно выполняет бросок спасброска или эффект заканчивается для него, оно получает иммунитет к эффектам \"Страшного крика\" Багровой графини на следующие 24 часа.",
+						"Пока {@condition frightened} действует этот эффект, существо должно совершать действие \"Рывок\" и удаляться от Багровой графини по самому безопасному из доступных путей в каждый свой ход, если только ему некуда двигаться. Если существо заканчивает свой ход в месте, где у него нет прямой видимости на Багряную графиню, оно может повторить бросок спасения. При успешном спасброске эффект прекращается для этого существа."
+					]
+				},
+				{
+					"name": "Javelin",
+					"entries": [
+						"{@atk mw,rw} {@hit 8} попадание, досягаемость 1,5 м. или дальность 20/18 м., одна цель. {@h}9 ({@damage 1d6 + 5}) колющего урона, плюс 14 ({@damage 4d6}) урона от молнии."
+					]
+				},
+				{
+					"name": "Взрыв грома {@recharge 5}",
+					"entries": [
+						"Багровая графиня издает громовой клич в кубе диаметром 4,5 метра. Каждое существо в кубе должно преуспеть в броске спасброска на {@dc 15} конституцию, при неудачном броске оно получает 14 ({@damage 4d6}) урона громом или вдвое меньше урона при удачном броске. Существа, провалившие спасбросок, толкаются на 3 метра и сбиваются с ног {@condition prone}."
+					]
+				}
+			],
+			"attachedItems": [
+				"javelin|phb"
+			],
+			"traitTags": [
+				"Keen Senses"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB"
+			],
+			"damageTags": [
+				"L",
+				"P",
+				"S",
+				"T"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Delerium Dreg",
+			"source": "DoDk",
+			"page": 199,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 22,
+				"formula": "5d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 13,
+			"con": 11,
+			"int": 7,
+			"wis": 10,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Common"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Туманный камуфляж",
+					"entries": [
+						"Делериум дрег имеет преимущество при проверке ловкости (скрытности), чтобы спрятаться в любой области, скрытой туманом или дымкой."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Копье",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} попадание, досягаемость 1,5 м. или дальность 20/18 м., одна цель. {@h}5 ({@damage 1d6 + 2}) колющего урона или 6 ({@damage 1d8 + 2}) колющего урона, если используется двумя руками для атаки в ближнем бою."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Водные (Глубоководные или \"Рыболовы\")",
+					"entries": [
+						"У этих мутировавших существ морды, жабры, плавники и рыбья чешуя. Они одеты в мокрые лохмотья, носят копья и щиты и обитают глубоко в канализации и подземных пещерах под городом.",
+						{
+							"type": "entries",
+							"name": "Амфибия",
+							"entries": [
+								"Водный дрег может дышать воздухом и водой. Его скорость плавания составляет 9 метров."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Blindsight",
+							"entries": [
+								"Водный дрег получает {@sense blindsight} в радиусе 9 метров."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Вздутие",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Смертельный взрыв",
+							"entries": [
+								"Когда раздувшийся делериумный дрег умирает, он взрывается, выплескивая трупные испражнения. Каждое существо в радиусе 1,5 метра от него должно успешно выполнить бросок спасброска на конституцию DC 11. При провале броска спасброска оно получает 7 ({@dice 2d6}) некротических повреждений, а при успехе - вдвое меньше. Существа, провалившие спасбросок на 5 или более баллов, получают один {@adventure level of contamination|DoDk|12}."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Желчный спрей (перезарядка 5-6)",
+							"entries": [
+								"Раздувшийся дрег Делериума выдыхает 4,5-метровый конус кислоты. Каждое существо в этой области должно успешно выполнить бросок спасения на ловкость DC 11. При неудачном броске спасения оно получает 7 ({@dice 2d6}) урона кислотой или вдвое меньше при удачном. Существа, провалившие спасбросок на 5 или более баллов, получают одно {@adventure level of contamination|DoDk|12}."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Хитиновый",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Бронированный панцирь",
+							"entries": [
+								"Хитиновый дрег имеет AC 18."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Циклопический",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Спектральное зрение",
+							"entries": [
+								"Циклопический дрег получает {@sense truesight} 18 метров. У него есть преимущество при проверках мудрости ({@skill Perception}), которые зависят от зрения."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Безумная уверенность",
+							"entries": [
+								"Циклопический дрег невосприимчив к состоянию {@condition frightened} и психическим повреждениям."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Крик экстрасенса (перезарядка 6)",
+							"entries": [
+								"Существа в радиусе 6 метров от циклопического дрега должны успешно выполнить бросок спасброска DC 10 мудрости или получить 7 ({@dice 2d6}) психического урона и быть {@condition frightened} в течение 1 минуты. Цель может повторить бросок спасброска в конце каждого своего хода, завершив эффект на себе при успехе."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Перемещенные",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Перемещение",
+							"entries": [
+								"Броски атаки против перемещенного дрега имеют недостаток. Если он попадает под атаку, эта черта нарушается до конца его следующего хода. Эта черта также нарушается, пока перемещенный дренг находится в состоянии {@condition incapacitated} или имеет скорость 0."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Телепорт (перезарядка 4-6)",
+							"entries": [
+								"Перемещенный дрег магически телепортируется вместе со всем снаряжением, которое он носит или несет, на расстояние до 18 метров в незанятое пространство, которое он может видеть. До или после телепортации дрег может совершить одну атаку ближнего боя. Если эта атака попадает, она наносит дополнительно 7 ({@dice 2d6}) психического урона."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Неистовый",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Безрассудство",
+							"entries": [
+								"В начале своего хода взбешенный дрег получает преимущество при всех бросках атаки оружием ближнего боя в течение этого хода, но броски атаки против него имеют преимущество до начала его следующего хода."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Brute",
+							"entries": [
+								"Оружие ближнего боя наносит один дополнительный кубик урона, когда им бьет взбешенный дрег."
+							]
+						}
+					],
+					"_version": {
+						"name": "Делериум Дрег (неистовый)",
+						"addHeadersAs": "trait"
+					}
+				},
+				{
+					"type": "variant",
+					"name": "Lambent",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Освещение",
+							"entries": [
+								"Ламбентный делериум дрег излучает яркий свет в радиусе 4,5 метра и тусклый - еще на 4,5 метра."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Октарин Бим",
+							"entries": [
+								"Янтарный дрег выбирает одно существо, которое видит в радиусе 18 метров от себя. Цель должна преуспеть в броске спасброска на DC 10 Конституции, получив 10 ({@dice 3d6}) лучевого урона при неудачном броске, или вдвое меньше при удачном. Существа, провалившие спасбросок на 5 или более баллов, получают один {@adventure level of contamination|DoDk|12}."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Пиявка",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Прыжок в воду",
+							"entries": [
+								"Прыжки в длину достигают 9 метров, а в высоту - 4,5 метра, как с разбега, так и без него."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Слив крови",
+							"entries": [
+								"Атака оружием ближнего боя: +4 к попаданию, досягаемость 1,5 м., одно существо. Попадание: 4 ({@dice 1d4 + 2}) колющего урона, и дренг прикрепляется к цели. Пока дрег прикреплен, он не может атаковать. Вместо этого в начале каждого хода дрега цель получает 7 ({@dice 2d6}) некротического урона.",
+								"Прикрепленный дрег перемещается вместе с целью всякий раз, когда цель движется, не требуя движения дрега. Дрег может отсоединиться, потратив 1,5 метра своего движения в свой ход. Существо, включая цель, может использовать свое действие, чтобы отсоединить дрег."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Затаившись",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Нормальное подобие",
+							"entries": [
+								"Затаившийся дрег имеет преимущество при проверке харизмы ({@skill Deception}), чтобы выдать себя за обычное гуманоидное существо."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Атака исподтишка (1/оборот)",
+							"entries": [
+								"Дрег наносит дополнительные 7 ({@dice 2d6}) урона, когда поражает цель атакой оружием и имеет преимущество при броске атаки, или когда цель находится в 1,5 метрах от союзника дрега, не имеющего {@condition incapacitated}, и дрег не имеет недостатка при броске атаки."
+							]
+						}
+					],
+					"_version": {
+						"name": "Делериум Дрег (затаился)",
+						"addHeadersAs": "trait"
+					}
+				},
+				{
+					"type": "variant",
+					"name": "Spined",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Паучий лаз",
+							"entries": [
+								"Скорость подъема у шипастого дрега равна скорости ходьбы. Он может взбираться на сложные поверхности, в том числе вверх ногами по потолку, без проверки способностей."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Мультиатака",
+							"entries": [
+								"Дрег делает три атаки шипами."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Spike",
+							"entries": [
+								"Атака дальнобойным оружием: +3 к попаданию, дальность 20/18 м., одна цель. Попадание: 3 ({@dice 1d4 + 1}) колющего урона."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Щупальца",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Аморфный",
+							"entries": [
+								"Щупальцевый дрег может, не протискиваясь, пройти через узкое пространство шириной до 6 дюймов."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Щупальца",
+							"entries": [
+								"Атака оружием ближнего боя: +4 к попаданию, досягаемость 4,5 м., одна цель. Попадание: 9 ({@dice 2d6 + 2}) повреждений от удара. Если цель - существо, то {@condition grappled} (DC 12). Пока захват не закончится, цель находится в состоянии {@condition restrained}, и щуплый дрег не может использовать свои щупальца на другой цели."
+							]
+						}
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Delerium Dreg (Aquatic)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Amphibious",
+									"entries": [
+										"An aquatic dreg can breathe air and water."
+									]
+								}
+							]
+						}
+					},
+					"alias": [
+						"Deep One",
+						"Fishfolk"
+					],
+					"speed": {
+						"swim": 30
+					},
+					"senses": [
+						"darkvision 60 ft.",
+						"blindsight 30 ft."
+					],
+					"variant": null
+				},
+				{
+					"name": "Delerium Dreg (Bloated)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Death Burst",
+									"entries": [
+										"When a bloated delerium dreg dies, it explodes in a burst of corrupt offal. Each creature within 5 feet of it must succeed on a {@dc 11} Constitution saving throw, taking 7 ({@damage 2d6}) necrotic damage on a failed save, or half as much damage on a successful one. Creatures who fail their saving throw by 5 or more gain one {@adventure level of contamination|DoDk|12}."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Bile Spray {@recharge 5}",
+									"entries": [
+										"The bloated delerium dreg exhales a 15-foot cone of acid. Each creature in that area must succeed on a {@dc 11} Dexterity saving throw, taking 7 ({@damage 2d6}) acid damage on a failed save, or half as much damage on a successful one. Creatures who fail their saving throw by 5 or more gain one {@adventure level of contamination|DoDk|12}."
+									]
+								}
+							]
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Delerium Dreg (Chitinous)",
+					"source": "DoDk",
+					"ac": [
+						18
+					],
+					"variant": null
+				},
+				{
+					"name": "Delerium Dreg (Cyclopean)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Spectral Vision",
+									"entries": [
+										"A cyclopean dreg gains truesight 60 feet. It has advantage on Wisdom (Perception) checks that rely on sight."
+									]
+								},
+								{
+									"name": "Mad Certainty",
+									"entries": [
+										"A cyclopean dreg is immune to the {@condition frightened} condition and psychic damage."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Psychic Shriek {@recharge}",
+									"entries": [
+										"Creatures within 20 feet of the cyclopean dreg must succeed on a {@dc 10} Wisdom saving throw or take 7 ({@damage 2d6}) psychic damage and be {@condition frightened} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+									]
+								}
+							]
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Delerium Dreg (Displaced)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Displacement",
+									"entries": [
+										"Attack rolls against a displaced dreg have disadvantage. If it is hit by an attack, this trait is disrupted until the end of its next turn. This trait is also disrupted while the displaced dreg is {@condition incapacitated} or has a speed of 0."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Teleport {@recharge 4}",
+									"entries": [
+										"The displaced dreg magically teleports, along with any equipment it is wearing or carrying, up to 60 feet to an unoccupied space it can see. Before or after teleporting, the dreg can make one melee attack. If this attack hits, it deals an extra 7 ({@damage 2d6}) psychic damage."
+									]
+								}
+							]
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Delerium Dreg (Lambent)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Illumination",
+									"entries": [
+										"A lambent delerium dreg sheds bright light in a 15-foot radius and dim light for an additional 15 feet."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Octarine Beam",
+									"entries": [
+										"The lambent dreg targets one creature it can see within 60 feet of it. The target must succeed on a {@dc 10} Constitution saving throw, taking 10 ({@damage 3d6}) radiant damage on a failed save, or half as much damage on a successful one. Creatures who fail their saving throw by 5 or more gain one {@adventure level of contamination|DoDk|12}."
+									]
+								}
+							]
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Delerium Dreg (Leeching)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Bounding Leap",
+									"entries": [
+										"The leeching dreg's long jump is up to 30 feet and its high jump is up to 15 feet, with or without a running start."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Blood Drain",
+									"entries": [
+										"{@atk mw} {@hit 4} to hit, reach 5 ft., one creature. {@h}4 ({@damage 1d4 + 2}) piercing damage, and the dreg attaches to the target. While attached, the dreg can't attack. Instead, at the start of each of the dreg's turns, the target takes 7 ({@damage 2d6}) necrotic damage.",
+										"The attached dreg moves with the target whenever the target moves, requiring none of the dreg's movement. The dreg can detach itself by spending 5 feet of its movement on its turn. A creature, including the target, can use its action to detach the dreg."
+									]
+								}
+							]
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Delerium Dreg (Spined)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Spider Climb",
+									"entries": [
+										"The spined dreg has a climb speed equal to its walking speed. It can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Multiattack",
+									"entries": [
+										"The dreg makes three spike attacks."
+									]
+								},
+								{
+									"name": "Spike",
+									"entries": [
+										"{@atk rw} {@hit 3} to hit, range 20/60 ft., one target. {@h}3 ({@damage 1d4 + 1}) piercing damage."
+									]
+								}
+							]
+						}
+					},
+					"speed": {
+						"walk": 30,
+						"climb": 30
+					},
+					"variant": null
+				},
+				{
+					"name": "Delerium Dreg (Tentacled)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Amorphous",
+									"entries": [
+										"The dreg can move through a space as narrow as 6 inches wide without squeezing."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Tentacles",
+									"entries": [
+										"{@atk mw} {@hit 4} to hit, reach 15 ft., one target. {@h}9 ({@damage 2d6 + 2}) bludgeoning damage. If the target is a creature, it is {@condition grappled} (escape {@dc 12}). Until this grapple ends, the target is {@condition restrained}, and the tentacled dreg can't use its tentacles on another target."
+									]
+								}
+							]
+						}
+					},
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Eldrick Runeweaver",
+			"isNamedCreature": true,
+			"source": "DoDk",
+			"page": 215,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item robe of the archmagi}",
+						"{@item staff of power}"
+					]
+				}
+			],
+			"hp": {
+				"average": 150,
+				"formula": "20d8 + 60"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 10,
+			"con": 16,
+			"int": 22,
+			"wis": 19,
+			"cha": 15,
+			"save": {
+				"str": "+5",
+				"dex": "+6",
+				"con": "+9",
+				"int": "+12",
+				"wis": "+10",
+				"cha": "+8"
+			},
+			"skill": {
+				"arcana": "+16",
+				"history": "+16",
+				"perception": "+16",
+				"persuasion": "+14"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 26,
+			"resist": [
+				{
+					"special": "damage from spells"
+				}
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "17",
+			"spellcasting": [
+				{
+					"name": "Заклинания",
+					"headerEntries": [
+						"Элдрик Рунный Бобр - заклинатель 20-го уровня. Его способность к заклинаниям - Интеллект (спасбросок от заклинаний {@dc 19}, {@hit 11} к попаданию при атаках заклинаниями). Он может накладывать щит и невидимость по желанию и имеет наготове следующие заклинания волшебника:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell fire bolt}",
+								"{@spell mage hand}",
+								"{@spell minor illusion}",
+								"{@spell prestidigitation}",
+								"{@spell ray of frost}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell mage armor}",
+								"{@spell magic missile}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell detect thoughts}",
+								"{@spell levitate}",
+								"{@spell shatter}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell dispel magic}",
+								"{@spell lightning bolt}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell banishment}",
+								"{@spell dimension door}",
+								"{@spell ice storm}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell Bigby's hand}",
+								"{@spell scrying}",
+								"{@spell wall of force}"
+							]
+						},
+						"6": {
+							"slots": 2,
+							"spells": [
+								"{@spell chain lightning}",
+								"{@spell globe of invulnerability}"
+							]
+						},
+						"7": {
+							"slots": 2,
+							"spells": [
+								"{@spell forcecage}",
+								"{@spell teleport}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell maze}"
+							]
+						},
+						"9": {
+							"slots": 1,
+							"spells": [
+								"{@spell prismatic wall}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Специальное оборудование",
+					"entries": [
+						"Элдрик Рунный Бобр носит мантию архимага, носит посох силы и кольцо хранения заклинаний. Он носит с собой {@dice 2d6} очень редких свитков заклинаний и зелий."
+					]
+				},
+				{
+					"name": "Легендарное сопротивление (3/день)",
+					"entries": [
+						"Если Элдрик Runeweaver провалил бросок спасения, он может выбрать вместо него успешный."
+					]
+				},
+				{
+					"name": "Магическая устойчивость",
+					"entries": [
+						"Элдрик Рунный Бобр имеет преимущество при бросках спасбросков против заклинаний и других магических эффектов."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Посох власти",
+					"entries": [
+						"{@atk mw} {@hit 6} попадание, досягаемость 1,5 м., одно существо. {@h}10 ({@damage 1d6 + 1}) повреждений от удара."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Cantrip",
+					"entries": [
+						"Элдрик Рунный Бобр разыгрывает кантрип."
+					]
+				},
+				{
+					"name": "Телепорт",
+					"entries": [
+						"Элдрик Рунный Бобр телепортируется на 18 метров в незанятое пространство, которое он может видеть."
+					]
+				},
+				{
+					"name": "Произнести заклинание (Затрачивает 3 действия)",
+					"entries": [
+						"Элдрик Рунный Бобр произносит заклинание, используя слот заклинания."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"F",
+				"I",
+				"L",
+				"O",
+				"T"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"incapacitated",
+				"petrified",
+				"restrained"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Entropic Flame",
+			"source": "DoDk",
+			"page": 204,
+			"size": [
+				"L"
+			],
+			"type": "elemental",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 78,
+				"formula": "12d10 + 12"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 17,
+			"con": 13,
+			"int": 5,
+			"wis": 10,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained",
+				"unconscious"
+			],
+			"languages": [
+				"Deep Speech"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Форма огня",
+					"entries": [
+						"Энтропийное пламя может перемещаться в пространстве шириной до 1 дюйма, не сжимаясь. Существо, коснувшееся пламени или поразившее его атакой ближнего боя в радиусе 1,5 м от него, получает 5 ({@damage 1d10}) урона огнем. Кроме того, пламя может войти в пространство враждебного существа и остановиться там. В первый раз, когда оно входит в пространство существа в свой ход, это существо получает 5 ({@damage 1d10}) урона от огня и загорается; пока кто-нибудь не предпримет действие, чтобы погасить огонь, существо получает 5 ({@damage 1d10}) урона от огня в начале каждого своего хода."
+					]
+				},
+				{
+					"name": "Освещение",
+					"entries": [
+						"Энтропийное пламя излучает яркий свет в радиусе 9 метров и тусклый - еще на 9 метров."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Мультиатака",
+					"entries": [
+						"Энтропийное пламя наносит три атаки метательным пламенем. До или после каждой атаки энтропийное пламя может телепортироваться на расстояние до 3 метров в видимое ему пространство. Оно может телепортироваться в пространство, занятое другим существом."
+					]
+				},
+				{
+					"name": "Пламя в горле",
+					"entries": [
+						"{@atk rw} {@hit 6} попадание, дальность 36 м., одна цель. {@h}10 ({@damage 3d6}) урона огнем."
+					]
+				},
+				{
+					"name": "Сенсорный",
+					"entries": [
+						"{@atk mw} {@hit 6} попадание, радиус действия 1,5 м., одна цель. {@h}10 ({@damage 2d6 + 3}) урона огнем. Если цель - существо или легковоспламеняющийся предмет, она воспламеняется. Пока существо не предпримет действие, чтобы погасить огонь, цель получает 5 ({@damage 1d10}) урона от огня в начале каждого своего хода."
+					]
+				}
+			],
+			"traitTags": [
+				"Illumination"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DS"
+			],
+			"damageTags": [
+				"F"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Eoghan Ghostweaver",
+			"isNamedCreature": true,
+			"source": "DoDk",
+			"page": 105,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"elf"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 99,
+				"formula": "18d8 + 18"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 12,
+			"int": 15,
+			"wis": 20,
+			"cha": 16,
+			"save": {
+				"int": "+6",
+				"wis": "+9"
+			},
+			"skill": {
+				"arcana": "+13",
+				"history": "+13",
+				"medicine": "+9",
+				"nature": "+6",
+				"perception": "+9",
+				"survival": "+9"
+			},
+			"passive": 12,
+			"resist": [
+				{
+					"special": "damage from spells"
+				},
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"preNote": "nonmagical",
+					"note": "(from stoneskin)",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Druidic",
+				"Elvish"
+			],
+			"cr": "12",
+			"spellcasting": [
+				{
+					"name": "Заклинания",
+					"headerEntries": [
+						"Эоган - заклинатель 18-го уровня. Его способность к заклинаниям - Мудрость (спасбросок от заклинаний {@dc 17}, {@hit 9} к попаданию при атаках заклинаниями). У него подготовлены следующие заклинания друидов:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft}",
+								"{@spell mending}",
+								"{@spell poison spray}",
+								"{@spell produce flame}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell cure wounds}",
+								"{@spell entangle}",
+								"{@spell faerie fire}",
+								"{@spell speak with animals}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell animal messenger}",
+								"{@spell beast sense}",
+								"{@spell hold person}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell conjure animals}",
+								"{@spell purge contamination|DoDk}*",
+								"{@spell sleet storm}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell ice storm}",
+								"{@spell polymorph}",
+								"{@spell wall of fire}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell commune with nature}",
+								"{@spell cone of cold}",
+								"{@spell greater restoration}"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell conjure fey}",
+								"{@spell heal}"
+							]
+						},
+						"7": {
+							"slots": 1,
+							"spells": [
+								"{@spell resurrection}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell feeblemind}"
+							]
+						},
+						"9": {
+							"slots": 1,
+							"spells": [
+								"{@spell foresight}"
+							]
+						}
+					},
+					"footerEntries": [
+						"*spells found in Appendix D of Dungeons of Drakkenheim."
+					],
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Магическая устойчивость",
+					"entries": [
+						"У Эогана есть преимущество при бросках спасбросков против заклинаний и других магических эффектов."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Кинжал",
+					"entries": [
+						"{@atk mw,rw} {@hit 6} попадание, радиус действия 1,5 м. или дальность 20/18 м., одна цель. {@h}4 ({@damage 1d4 + 2}) колющего урона."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"languageTags": [
+				"DU",
+				"E"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"F",
+				"I",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"exhaustion",
+				"paralyzed",
+				"prone",
+				"restrained"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"intelligence",
+				"strength",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Executioner",
+			"source": "DoDk",
+			"page": 209,
+			"size": [
+				"H"
+			],
+			"type": "construct",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 405,
+				"formula": "30d12 + 210"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 29,
+			"dex": 11,
+			"con": 25,
+			"int": 10,
+			"wis": 11,
+			"cha": 10,
+			"save": {
+				"str": "+15",
+				"con": "+13",
+				"wis": "+6"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"poison",
+				"psychic",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands common but does not speak"
+			],
+			"cr": "20",
+			"trait": [
+				{
+					"name": "Легендарное сопротивление (3/день)",
+					"entries": [
+						"Если палач провалил бросок спасения, он может выбрать вместо него успешный."
+					]
+				},
+				{
+					"name": "Неизменная форма",
+					"entries": [
+						"Палач невосприимчив к любым заклинаниям или эффектам, которые могут изменить его форму."
+					]
+				},
+				{
+					"name": "Магическая устойчивость",
+					"entries": [
+						"Палач имеет преимущество при бросках спасбросков против заклинаний и других магических эффектов."
+					]
+				},
+				{
+					"name": "Магическое оружие",
+					"entries": [
+						"Атаки оружием Палача являются магическими."
+					]
+				},
+				{
+					"name": "Омоложение",
+					"entries": [
+						"Если палач уничтожен, он вернется со всеми своими хит-пойнтами через 24 часа, если на его останки не будет наложено заклинание {@spell disintegrate}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Лезвие гильотины",
+					"entries": [
+						"{@atk mw,rw} {@hit 15} попадание, досягаемость 3 м. или дальность 30/36 м., одна цель. {@h}30 ({@damage 6d6 + 9}) колющего урона плюс 14 ({@damage 4d6}) некротического урона. Цель должна преуспеть в броске спасброска на {@dc 21} Конституцию, иначе ее максимальное количество хит-пойнтов уменьшается на величину, равную полученному некротическому урону. Это снижение длится до тех пор, пока существо не закончит длительный отдых. Цель умирает, если этот эффект снижает ее максимальное количество хит-пойнтов до 0. Сразу же после нанесения дальнобойной атаки это оружие летит обратно в руки палача."
+					]
+				},
+				{
+					"name": "Некротические отверстия {@recharge 5}",
+					"entries": [
+						"Палач выпускает некротический газ в радиусе 9 метров. Каждое существо в этой области должно успешно выполнить бросок спасения на {@dc 21} конституцию, получив 45 ({@damage 10d8}) некротических повреждений при неудачном броске или вдвое меньше при удачном. Существо, провалившее этот бросок спасения на 5 или более баллов, получает одно {@adventure level of contamination|DoDk|12}."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Лесопилка Форвард",
+					"entries": [
+						"Палач двигается с половинной скоростью."
+					]
+				},
+				{
+					"name": "Атака (Затрачивает 2 действия)",
+					"entries": [
+						"Палач совершает атаку ближнего или дальнего боя своим клинком-гильотиной."
+					]
+				},
+				{
+					"name": "Призвать тени. (Затраты 3 действия)",
+					"entries": [
+						"Палач выбирает до шести человекоподобных трупов, которые он может видеть в радиусе 18 метров от себя и которые умерли насильственной смертью. Дух каждого из них поднимается в виде тени в пространстве трупа или в ближайшем незанятом пространстве. Тени действуют после палача по тому же счету инициативы, находятся под его контролем и сохраняются в течение 1 минуты или пока не будут уничтожены. Они исчезают, если палач уничтожен."
+					]
+				}
+			],
+			"traitTags": [
+				"Immutable Form",
+				"Legendary Resistances",
+				"Magic Resistance",
+				"Magic Weapons",
+				"Rejuvenation"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"damageTags": [
+				"N",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"HPR",
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Garmyr",
+			"source": "DoDk",
+			"page": 197,
+			"_copy": {
+				"name": "Gnoll",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "гнолл",
+						"with": "garmyr"
+					}
+				}
+			},
+			"type": "monstrosity",
+			"hasFluff": true
+		},
+		{
+			"name": "Gravekeeper",
+			"source": "DoDk",
+			"page": 210,
+			"size": [
+				"L"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 210,
+				"formula": "20d10 + 100"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 18,
+			"dex": 7,
+			"con": 21,
+			"int": 19,
+			"wis": 17,
+			"cha": 21,
+			"save": {
+				"con": "+10",
+				"wis": "+8",
+				"cha": "+10"
+			},
+			"skill": {
+				"perception": "+13"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 23,
+			"languages": [
+				"all but does not speak"
+			],
+			"cr": "13",
+			"trait": [
+				{
+					"name": "Ослепительная иллюминация",
+					"entries": [
+						"Могильщик проецирует яркий световой коронный луч, который проливает яркий свет на расстояние до 18 метров и делает броски атаки против него невыгодными. Если могильщик попадает под атаку, это свойство нарушается до конца его следующего хода. Это свойство также нарушается, пока могильщик находится в состоянии {@condition incapacitated} или имеет скорость 0."
+					]
+				},
+				{
+					"name": "Легендарное сопротивление (3/день)",
+					"entries": [
+						"Если могильщик провалил бросок спасения, он может выбрать вместо него успешный."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 9} попадание, радиус действия 3 м., одна цель. {@h}22 ({@damage 4d8 + 4}) колющего урона плюс 10 ({@damage 3d6}) некротического урона."
+					]
+				},
+				{
+					"name": "Взрыв фонаря",
+					"entries": [
+						"Из многочисленных фонарей Хранителя могил вырываются магические лучи октаринового цвета. Каждый луч имеет свою силу. Каждое существо в радиусе 36 метров от могильщика, не находящееся в укрытии, делает бросок на спасбросок {@dice d6}, чтобы определить, луч какого цвета на него воздействует. DC для всех бросков спасения равен 18:",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "1. Разгоняющий взрыв",
+									"entries": [
+										"Существо, на которое направлено заклинание, должно успешно выполнить бросок на спасение интеллекта или получить 35 ({@damage 10d6}) психического урона, и действие любого заклинания или магического эффекта, наложенного на цель, прекращается. У существа, провалившего этот бросок спасброска, отменяется {@status concentration} на любое заклинание, которое оно активно поддерживало."
+									]
+								},
+								{
+									"type": "item",
+									"name": "2. Силовой взрыв",
+									"entries": [
+										"Целевое существо должно преуспеть в броске на спасбросок силы или получит 35 ({@damage 10d6}) урона силы, будет отброшено на 6 метров и сбито с ног {@condition prone}."
+									]
+								},
+								{
+									"type": "item",
+									"name": "3. Ослепительный взрыв",
+									"entries": [
+										"Выбранное существо должно успешно выполнить бросок спасброска на Конституцию или получить 35 ({@damage 10d6}) лучевого урона и стать {@condition blinded} на 1 минуту. Существо {@condition blinded} может повторять бросок спасброска в каждый свой ход, прекращая эффект на себе при успехе."
+									]
+								},
+								{
+									"type": "item",
+									"name": "4. Загрязняющий взрыв",
+									"entries": [
+										"Целевое существо должно преуспеть в броске на спасение по Конституции или получить 35 ({@damage 10d6}) некротических повреждений и одно {@adventure level of contamination|DoDk|12}."
+									]
+								},
+								{
+									"type": "item",
+									"name": "5. Воспламеняющий взрыв",
+									"entries": [
+										"Целевое существо должно успешно выполнить бросок спасброска на ловкость или получить 35 ({@damage 10d6}) урона от огня и загорается; пока кто-нибудь не предпримет действие, чтобы погасить огонь, цель получает 35 ({@damage 10d6}) урона от огня в начале каждого своего хода."
+									]
+								},
+								{
+									"type": "item",
+									"name": "6. Замораживающий взрыв",
+									"entries": [
+										"Попавшее в цель существо должно преуспеть в броске спасброска по конституции или получить 35 ({@damage 10d6}) урона холодом, и оно не может предпринять реакцию до конца своего следующего хода. Более того, в свой следующий ход оно должно выбрать, получит ли оно перемещение, действие или бонусное действие; оно получит только одно из трех. При успешном спасброске цель получает вдвое меньше урона и не страдает от других эффектов взрыва."
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Slam",
+					"entries": [
+						"Хранитель могил наносит атаку слэмом."
+					]
+				},
+				{
+					"name": "Glide",
+					"entries": [
+						"Могильщик передвигается со своей скоростью, не провоцируя атаки по возможности."
+					]
+				},
+				{
+					"name": "Взрыв фонаря (Затрачивает 3 действия)",
+					"entries": [
+						"Хранитель могил использует свой \"Фонарный взрыв\"."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Gravekeeper",
+				"source": "DoDk"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"U"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"B",
+				"C",
+				"F",
+				"N",
+				"O",
+				"R",
+				"Y"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"blinded",
+				"prone"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Grotesque Gargant",
+			"source": "DoDk",
+			"page": 197,
+			"_copy": {
+				"name": "Stone Giant",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "гигант",
+						"with": "grotesque gargant"
+					}
+				}
+			},
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Регенерация",
+					"entries": [
+						"Гротескный гаргант восстанавливает 10 хит-пойнтов в начале своего хода, пока находится в Глубокой дымке. Гаргант умирает, только если начинает свой ход с 0 хит-пойнтов и не восстанавливается."
+					]
+				},
+				{
+					"name": "Загрязняющий луч",
+					"entries": [
+						"Гротескный горгант магией заставляет существо, которое он видит в радиусе 18 метров от себя, сделать бросок на спасение {@dc 15} по конституции. При неудачном спасброске существо получает 27 ({@damage 6d8}) некротических повреждений и приобретает одно {@adventure level of contamination|DoDk|12}."
+					]
+				},
+				{
+					"name": "Туманный камуфляж",
+					"entries": [
+						"Гротескный гаргант имеет преимущество при проверке ловкости (скрытности), чтобы спрятаться в любой области, окутанной туманом или дымкой."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Haze Hulk",
+			"source": "DoDk",
+			"page": 200,
+			"size": [
+				"L"
+			],
+			"type": "aberration",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 95,
+				"formula": "10d10 + 40"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 21,
+			"dex": 10,
+			"con": 18,
+			"int": 7,
+			"wis": 10,
+			"cha": 6,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Common"
+			],
+			"cr": "4",
+			"action": [
+				{
+					"name": "Мультиатака",
+					"entries": [
+						"Дымчатый Халк наносит две атаки слэмом."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 7} попадание, радиус действия 1,5 м., одна цель. {@h}14 ({@damage 2d8 + 5}) урона от удара."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Гатбастер",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Метать фетишистскую плоть (перезарядка 5-6)",
+							"entries": [
+								"Кишечник отрывает кусок своей мутировавшей плоти и бросает его в видимое пространство в радиусе 36 метров от себя. Каждое существо в радиусе 3 метров от этой точки должно успешно выполнить бросок спасения по Конституции DC 14, получив 28 ({@dice 8d6}) некротических повреждений при неудачном броске или вдвое меньше при удачном."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Hunter",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Невидимость",
+							"entries": [
+								"Охотник магически превращается {@condition invisible}, пока не атакует или пока не закончится его концентрация (как при концентрации на заклинании). Любое снаряжение, которое охотник носит или носит с собой, становится невидимым вместе с ним."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Вьющиеся нити",
+							"entries": [
+								"Атака оружием ближнего боя: +7 к попаданию, радиус действия 18 м., одна цель. Попадание: 14 ({@dice 2d8 + 5}) колющего урона, и цель получает {@condition grappled} (спасение DC 15), если это большое или меньшее существо. У охотника есть два линяющих усика, и он может схватить до двух существ одновременно."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Катушка",
+							"entries": [
+								"В качестве бонусного действия охотник притягивает к себе каждое существо {@condition grappled}, находящееся рядом с ним, на расстояние до 7,5 метра."
+							]
+						}
+					]
+				},
+				{
+					"type": "variant",
+					"name": "Джаггернаут",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Мутантская стойкость",
+							"entries": [
+								"Если урон уменьшает количество хит-пойнтов джаггернаута до 0, он должен успешно выполнить бросок спасения по Конституции с DC, равным 5 + полученный урон, если только урон не лучевой или не получен в результате критического попадания. В случае успеха джаггернаут снижается до 1 хит-пойнта."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Плата за вытаптывание",
+							"entries": [
+								"Если джаггернаут перемещается не менее чем на 6 метров прямо к существу, а затем в тот же ход наносит ему удар слэмом, цель должна преуспеть в броске спасброска на силу DC 16 или будет сбита с ног {@condition prone}. Если цель устоит на {@condition prone}, джаггернаут может нанести ей еще одну атаку слэмом в качестве бонусного действия."
+							]
+						}
+					],
+					"_version": {
+						"name": "Хейз Халк (Джаггернаут)",
+						"addHeadersAs": "trait"
+					}
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Haze Hulk (Gutbuster)",
+					"source": "DoDk",
+					"_mod": {
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Hurl Foetid Flesh {@recharge 5}",
+									"entries": [
+										"The gutbuster rips off a chunk of its mutated flesh and hurls it towards a space it can see within 120 feet of it. Each creature within 10 feet of that point must succeed on a {@dc 14} Constitution saving throw, taking 28 ({@damage 8d6}) necrotic damage on a failed save, or half as much damage on a successful one."
+									]
+								}
+							]
+						}
+					},
+					"variant": null
+				},
+				{
+					"name": "Haze Hulk (Hunter)",
+					"source": "DoDk",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Invisibility",
+									"entries": [
+										"The hunter magically turns {@condition invisible} until it attacks or until its {@status concentration} ends (as if {@status concentration||concentrating} on a spell). Any equipment the hunter wears or carries is {@condition invisible} with it."
+									]
+								}
+							]
+						},
+						"action": {
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Lashing Tendrils",
+									"entries": [
+										"{@atk mw} {@hit 7} to hit, reach 60 ft., one target. {@h}14 ({@damage 2d8 + 5}) piercing damage, and the target is {@condition grappled} (escape {@dc 15}) if it is a Large or smaller creature. The hunter has two lashing tendrils and can grapple up to two creatures at once."
+									]
+								}
+							]
+						}
+					},
+					"bonus": [
+						{
+							"name": "Катушка",
+							"entries": [
+								"В качестве бонусного действия охотник притягивает к себе каждое существо {@condition grappled}, находящееся рядом с ним, на расстояние до 7,5 метра."
+							]
+						}
+					],
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Haze Husk",
+			"source": "DoDk",
+			"page": 197,
+			"_copy": {
+				"name": "Zombie",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "зомби",
+						"with": "haze husk"
+					}
+				}
+			},
+			"trait": [
+				{
+					"name": "Смертельный взрыв",
+					"entries": [
+						"Если урон снижает количество очков хит-пойнтов, фрагменты делериума в его теле взрываются в порыве зараженной энергии, если только урон не лучевой или не получен в результате критического попадания. Каждое существо в радиусе 1,5 м от него должно успешно выполнить бросок спасброска на {@dc 10} конституцию или получить 7 ({@damage 2d6}) некротических повреждений. Существа, провалившие этот бросок на 5 или более баллов, получают одно {@adventure level of contamination|DoDk|12}."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Haze Wight",
+			"source": "DoDk",
+			"page": 198,
+			"_copy": {
+				"name": "Wight",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "wight",
+						"with": "haze wight"
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Утечка жизни",
+						"items": [
+							{
+								"name": "Contaminated Touch",
+								"entries": [
+									"{@atk mw} {@hit 4} to hit, reach 5 ft., one creature. {@h}10 ({@damage 3d6}) necrotic damage. The target must succeed on a {@dc 13} Constitution saving throw or gain one {@adventure level of contamination|DoDk|12}."
+								]
+							},
+							{
+								"name": "Create Haze Husk",
+								"entries": [
+									"The wight targets a humanoid within 10 feet of it that has been dead for no longer than 1 minute and died violently. It rises as a haze husk in an unoccupied space within 5 feet. The haze husk is under the wight's control. The wight can have no more than 12 haze husks under its control at one time."
+								]
+							}
+						]
+					}
+				}
+			},
+			"hasFluff": true
+		},
+		{
+			"name": "Hedge Mage",
+			"source": "DoDk",
+			"page": 219,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 22,
+				"formula": "4d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 13,
+			"int": 15,
+			"wis": 11,
+			"cha": 11,
+			"skill": {
+				"arcana": "+4"
+			},
+			"passive": 10,
+			"languages": [
+				"Any two"
+			],
+			"cr": "1",
+			"spellcasting": [
+				{
+					"name": "Заклинания",
+					"headerEntries": [
+						"Маг живой изгороди - заклинатель 4-го уровня, использующий Интеллект в качестве способности к заклинаниям (спасбросок от заклинаний {@dc 12}; {@hit 4} к попаданию при атаках заклинаниями). У мага живой изгороди подготовлены следующие заклинания волшебника:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch}",
+								"{@spell mage hand}",
+								"{@spell shocking grasp}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell false life}",
+								"{@spell mage armor}",
+								"{@spell magic missile}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell Melf's acid arrow}",
+								"{@spell web}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"action": [
+				{
+					"name": "Кинжал",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} попадание, радиус действия 1,5 м. или дальность 20/18 м., одна цель. {@h}4 ({@damage 1d4 + 2}) колющего урона."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"A",
+				"F",
+				"L",
+				"N",
+				"O"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"restrained"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hypnotic Eldritch Blossom",
+			"source": "DoDk",
+			"page": 205,
+			"size": [
+				"M"
+			],
+			"type": "plant",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				5
+			],
+			"hp": {
+				"average": 18,
+				"formula": "4d8"
+			},
+			"speed": {
+				"walk": 5
+			},
+			"str": 3,
+			"dex": 1,
+			"con": 10,
+			"int": 1,
+			"wis": 3,
+			"cha": 5,
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 6,
+			"conditionImmune": [
+				"blinded",
+				"deafened",
+				"frightened"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Ложная видимость",
+					"entries": [
+						"Пока гипнотический эльдрический цветок остается неподвижным, он неотличим от обычного цветка."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Загрязненный нектар",
+					"entries": [
+						"Гипнотический эльдрический цветок нацелен на одно существо, которое он видит в радиусе 3 метров от себя. Цель должна успешно выполнить бросок спасброска на {@dc 10} Конституцию или получить один {@adventure level of contamination|DoDk|12}."
+					]
+				},
+				{
+					"name": "Гипнотическая пыльца (перезаряжается во время короткого или длительного отдыха)",
+					"entries": [
+						"Hypnotic Eldritch Blossom выпускает облако сверкающей пыльцы в радиусе 9 метров. Существа в этой области должны преуспеть в броске спасброска {@dc 10} Мудрости или попасть под действие {@condition charmed} Гипнотического цветка на 1 минуту. Пока {@condition charmed}, существо находится в состоянии {@condition incapacitated} и должно использовать все свои движения в свой ход, чтобы подойти как можно ближе к Гипнотическому цветку Эльдрита.",
+						"Эффект заканчивается для затронутого существа, если оно получает какой-либо урон или если кто-то другой использует действие, чтобы вывести существо из ступора."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Отражение заклинаний",
+					"entries": [
+						"Если гипнотический эльдритский цветок делает успешный бросок спасброска против заклинания, которое направлено только на него и не имеет области действия, или атака заклинания промахивается по нему, цветок может выбрать другое существо (включая заклинателя), которое он видит в радиусе 9 метров от себя. Заклинание нацеливается на выбранное существо, а не на гипнотический эльдритч-цветок. Если заклинание требует броска спасброска, выбранное существо делает свой собственный бросок. Если заклинание было атакой, бросок атаки повторяется против выбранного существа."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"conditionInflict": [
+				"charmed",
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Knight-Captain Theodore Marshal",
+			"source": "DoDk",
+			"page": 215,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"{@item plate armor|PHB|plate}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 255,
+				"formula": "30d8 + 120"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 20,
+			"dex": 10,
+			"con": 18,
+			"int": 13,
+			"wis": 15,
+			"cha": 19,
+			"save": {
+				"wis": "+7",
+				"cha": "+9"
+			},
+			"skill": {
+				"animal handling": "+7",
+				"athletics": "+10",
+				"insight": "+7",
+				"persuasion": "+9"
+			},
+			"passive": 12,
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Celestial",
+				"Common"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Заклинания",
+					"headerEntries": [
+						"Теодор Маршал - заклинатель 20-го уровня. Его способность к заклинаниям - Харизма (спасбросок от заклинаний {@dc 17}, {@hit 9} к попаданию при атаках заклинаниями). У него подготовлены следующие заклинания паладина:"
+					],
+					"spells": {
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell bless}",
+								"{@spell command}",
+								"{@spell cure wounds}",
+								"{@spell guiding bolt}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell aid}",
+								"{@spell branding smite}",
+								"{@spell lesser restoration}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell beacon of hope}",
+								"{@spell dispel magic}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell banishment}",
+								"{@spell death ward}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell flame strike}",
+								"{@spell hallow}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Божественные удары",
+					"entries": [
+						"Оружейные атаки Теодора Маршала являются магическими. Когда он бьет любым оружием, оно наносит дополнительный {@damage 4d8} лучевой урон (включенный в атаку)."
+					]
+				},
+				{
+					"name": "Легендарное сопротивление (3/день)",
+					"entries": [
+						"Если Теодор Маршал провалил бросок спасения, он может выбрать вместо него успешный."
+					]
+				},
+				{
+					"name": "Специальное оборудование",
+					"entries": [
+						"Теодор Маршал владеет длинным мечом святого мстителя."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Мультиатака",
+					"entries": [
+						"Теодор Маршал делает две атаки в ближнем бою."
+					]
+				},
+				{
+					"name": "Святой Мститель",
+					"entries": [
+						"{@atk mw} {@hit 13} попадание, радиус действия 1,5 м., одна цель. {@h}12 ({@damage 1d8 + 8}) колющего урона плюс 18 ({@damage 4d8}) лучевого урона."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Атака",
+					"entries": [
+						"Теодор Маршал делает одну атаку оружием."
+					]
+				},
+				{
+					"name": "Святой болт (Затрачивает 2 действия)",
+					"entries": [
+						"Теодор Маршал произносит {@spell guiding bolt}, не расходуя слот заклинаний."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CE"
+			],
+			"damageTags": [
+				"R",
+				"S"
+			],
+			"damageTagsSpell": [
+				"F",
+				"R"
+			],
+			"spellcastingTags": [
+				"CP"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"incapacitated",
+				"prone"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"dexterity",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lenore von Kessel",
+			"source": "DoDk",
+			"page": 134,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 127,
+				"formula": "17d8 + 51"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 15,
+			"con": 16,
+			"int": 12,
+			"wis": 13,
+			"cha": 15,
+			"skill": {
+				"deception": "+5",
+				"insight": "+4",
+				"perception": "+4",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"Common"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Лучистый взгляд",
+					"entries": [
+						"Когда существо, видящее глаза Ленор, начинает свой ход в радиусе 9 метров от нее, Ленор может заставить его сделать бросок на спасение {@dc 14} Конституции, если она не {@condition incapacitated} и может видеть существо. При неудачном броске существо получает 22 ({@damage 4d10}) лучевого урона, при удачном - вдвое меньше. Кроме того, существа, провалившие этот бросок спасения, получают одно {@adventure level of contamination|DoDk|12}.",
+						"Если существо не удивлено, оно может отвести глаза, чтобы избежать броска спасения в начале своего хода. Если существо это сделает, оно не сможет видеть Ленор до начала своего следующего хода, когда оно сможет снова отвести глаза. Если за это время существо посмотрит на Ленор, оно должно немедленно сделать спасбросок.",
+						"Если Ленор видит свое отражение на полированной поверхности в радиусе 9 метров от себя и в зоне яркого света, она становится {@condition blinded} и {@condition incapacitated} на {@dice 1d6} часов."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Мультиатака",
+					"entries": [
+						"Медуза наносит либо три атаки в ближнем бою - одну змеиным волосом и две коротким мечом, либо две атаки в дальнем бою из своего длинноствольного лука."
+					]
+				},
+				{
+					"name": "Волосы щупальца",
+					"entries": [
+						"{@atk mw} {@hit 5} попадание, досягаемость 1,5 м., одно существо. {@h}4 ({@damage 1d4 + 2}) колющего урона плюс 14 ({@damage 4d6}) некротического урона. Цель должна преуспеть в броске спасброска на {@dc 14} конституцию или получить один {@adventure level of contamination|DoDk|12}."
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 5} попадание, радиус действия 1,5 м., одна цель. {@h}5 ({@damage 1d6 + 2}) колющего урона."
+					]
+				},
+				{
+					"name": "Longbow",
+					"entries": [
+						"{@atk rw} {@hit 5} к попаданию, дальность 150/18 м., одна цель. {@h}6 ({@damage 1d8 + 2}) колющего урона плюс 7 ({@damage 2d6}) урона ядом."
+					]
+				}
+			],
+			"attachedItems": [
+				"longbow|phb",
+				"shortsword|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"I",
+				"N",
+				"P",
+				"R"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Living Deep Haze",
+			"source": "DoDk",
+			"page": 204,
+			"size": [
+				"L"
+			],
+			"type": "elemental",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				15
+			],
+			"hp": {
+				"average": 90,
+				"formula": "12d10 + 24"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 90,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 14,
+			"dex": 20,
+			"con": 14,
+			"int": 5,
+			"wis": 10,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained",
+				"unconscious"
+			],
+			"languages": [
+				"Deep Speech"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Форма тумана",
+					"entries": [
+						"Живая дымка может войти в пространство враждебного существа и остановиться там. Он может перемещаться в узком пространстве шириной до 1 дюйма, не протискиваясь."
+					]
+				},
+				{
+					"name": "Глубокая дымка",
+					"entries": [
+						"Существо, которое входит или начинает свой ход в том же пространстве, что и \"Живая дымка\", должно преуспеть в броске спасброска на {@dc 15} Конституцию или получить 10 ({@damage 3d6}) некротических повреждений и прибавить один {@adventure level of contamination|DoDk|12}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Мультиатака",
+					"entries": [
+						"Живущая в глубине дымка делает две слэм-атаки."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 8} попадание, радиус действия 1,5 м., одна цель. {@h}14 ({@damage 2d8 + 5}) урона от удара."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DS"
+			],
+			"damageTags": [
+				"B",
+				"N"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lord Commander Elias Drexel",
+			"source": "DoDk",
+			"page": 214,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"{@item +3 breastplate}"
+					]
+				}
+			],
+			"hp": {
+				"average": 255,
+				"formula": "30d8 + 120"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 15,
+			"con": 18,
+			"int": 15,
+			"wis": 16,
+			"cha": 11,
+			"save": {
+				"str": "+9",
+				"dex": "+7",
+				"wis": "+8"
+			},
+			"skill": {
+				"athletics": "+9",
+				"perception": "+13",
+				"stealth": "+12",
+				"survival": "+8"
+			},
+			"senses": [
+				"blindsight 10 ft."
+			],
+			"passive": 23,
+			"languages": [
+				"Common"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Заклинания",
+					"headerEntries": [
+						"Элиас Дрексель - заклинатель 20-го уровня. Его способность к заклинаниям - Мудрость (спасбросок от заклинаний {@dc 16}, {@hit 8} к попаданию при атаках заклинаниями). Он знает следующие заклинания рейнджеров:"
+					],
+					"spells": {
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell cure wounds}",
+								"{@spell fog cloud}",
+								"{@spell hunter's mark}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell pass without trace}",
+								"{@spell protection from poison}",
+								"{@spell spike growth}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell conjure animals}",
+								"{@spell nondetection}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell freedom of movement}",
+								"{@spell stoneskin}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell tree stride} (works on buildings instead of trees)"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Survivor",
+					"entries": [
+						"В начале каждого своего хода Элиас Дрексель восстанавливает 10 хит-пойнтов, если у него осталось не более половины хит-пойнтов. Он не получает это преимущество, если у него 0 хит-пойнтов."
+					]
+				},
+				{
+					"name": "Brute",
+					"entries": [
+						"Оружие ближнего боя наносит один дополнительный кубик урона, когда Элиас Дрексель бьет им (включается в атаку)."
+					]
+				},
+				{
+					"name": "Легендарное сопротивление (3/день)",
+					"entries": [
+						"Если Элиас Дрексел провалил бросок спасения, он может выбрать вместо него успешный."
+					]
+				},
+				{
+					"name": "Специальное оборудование",
+					"entries": [
+						"Элиас Дрексел владеет длинным мечом +3, носит нагрудник +3 и знак лорда-командующего."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Мультиатака",
+					"entries": [
+						"Элиас Дрексель использует \"Лидерство\". Затем он совершает четыре атаки либо своим длинным мечом, либо своим длинным луком."
+					]
+				},
+				{
+					"name": "Длинный меч",
+					"entries": [
+						"{@atk mw} {@hit 12} попадание, радиус действия 1,5 м., одна цель. {@h}16 ({@damage 2d8 + 7}) колющего урона."
+					]
+				},
+				{
+					"name": "Longbow",
+					"entries": [
+						"{@atk rw} {@hit 7} к попаданию, дальность 150/18 м., одна цель. {@h}7 ({@damage 1d8 + 2}) колющего урона."
+					]
+				},
+				{
+					"name": "Лидерство (перезаряжается после короткого или длительного отдыха)",
+					"entries": [
+						"В течение 1 минуты Элиас Дрексел может произносить особую команду или предупреждение всякий раз, когда невраждебное существо, которое он видит в радиусе 36 метров от него, делает бросок атаки или спасбросок. Существо может добавить {@dice d4} к своему броску, если оно слышит и понимает Элиаса Дрекселя. Существо может одновременно использовать только один кубик лидерства. Этот эффект заканчивается, если Элиасу Дрекселю исполнилось {@condition incapacitated}."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"Элиас Дрексел прибавляет 5 к своему AC против одной атаки ближнего боя, которая может его задеть. Для этого Элиас Дрексел должен видеть атакующего и владеть оружием ближнего боя."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Атака",
+					"entries": [
+						"Элиас Дрексель делает одну атаку оружием."
+					]
+				},
+				{
+					"name": "Команда",
+					"entries": [
+						"Элиас Дрексель выбирает одного союзника, которого он может видеть. Если союзник видит и слышит его, он может сделать одну атаку оружием в качестве реакции и получает преимущество при броске атаки. Атака наносит дополнительные 10 {@damage 3d6} урона при попадании."
+					]
+				}
+			],
+			"attachedItems": [
+				"longbow|phb",
+				"longsword|phb"
+			],
+			"traitTags": [
+				"Brute",
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"damageTagsSpell": [
+				"P"
+			],
+			"spellcastingTags": [
+				"CR"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lord of the Feast",
+			"source": "DoDk",
+			"page": 211,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 228,
+				"formula": "24d10 + 96"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 18,
+			"dex": 18,
+			"con": 18,
+			"int": 11,
+			"wis": 18,
+			"cha": 13,
+			"save": {
+				"dex": "+9",
+				"con": "+9",
+				"wis": "+9",
+				"cha": "+6"
+			},
+			"skill": {
+				"athletics": "+9",
+				"perception": "+14",
+				"stealth": "+14",
+				"survival": "+9"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 24,
+			"languages": [
+				"Abyssal"
+			],
+			"cr": "15",
+			"trait": [
+				{
+					"name": "Легендарное сопротивление (3/день)",
+					"entries": [
+						"Если Владыка Пира проваливает бросок спасения, он может выбрать вместо него успешный."
+					]
+				},
+				{
+					"name": "Регенерация",
+					"entries": [
+						"Владыка пира восстанавливает 20 хит-пойнтов в начале своего хода, если у него осталось хотя бы 1 хит-пойнт."
+					]
+				},
+				{
+					"name": "Охотник в ближнем бою",
+					"entries": [
+						"Нахождение в пределах 1,5 м от враждебного существа не накладывает недостатка на броски дальних атак Владыки Пира."
+					]
+				},
+				{
+					"name": "Хищные чувства",
+					"entries": [
+						"Владыка пира имеет преимущество при проверке Мудрости (Восприятие). Он может точно определить местоположение любого существа в радиусе 36 метров от него, что составляет {@condition invisible}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Мультиатака",
+					"entries": [
+						"Владыка пира наносит три атаки: либо по одной каждой из своих стрел, либо одну - укусом и две - когтями."
+					]
+				},
+				{
+					"name": "Укус",
+					"entries": [
+						"{@atk mw} {@hit 9} попадание, радиус действия 1,5 м., одна цель. {@h}15 ({@damage 2d10 + 4}) колющего урона плюс 18 ({@damage 4d8}) некротического урона. Цель, пораженная этой атакой, должна преуспеть в броске спасброска на {@dc 17} конституцию или получить один {@adventure level of contamination|DoDk|12}."
+					]
+				},
+				{
+					"name": "Когти",
+					"entries": [
+						"{@atk mw} {@hit 9} попадание, радиус действия 3 м, одна цель. {@h}11 ({@damage 2d6 + 4}) колющего урона."
+					]
+				},
+				{
+					"name": "Загрязняющая стрела",
+					"entries": [
+						"{@atk rw} {@hit 9} к попаданию, дальность 150/18 м., одна цель. {@h}13 ({@damage 2d8 + 4}) колющего урона плюс 18 ({@damage 4d8}) некротического урона. Цель, пораженная этой атакой, должна преуспеть в броске спасброска на {@dc 17} конституцию или получить один {@adventure level of contamination|DoDk|12}."
+					]
+				},
+				{
+					"name": "Стрела энсаринга",
+					"entries": [
+						"{@atk rw} {@hit 9} к попаданию, дальность 150/18 м., одна цель. {@h}13 ({@damage 2d8 + 4}) колющего урона. Если цель большая или меньше, она должна успешно выполнить бросок спасброска на ловкость {@dc 17} или оказаться {@condition restrained} в магических ловушках на 1 минуту. Цель {@condition restrained} может использовать свое действие, чтобы повторить бросок спасброска, и в случае успеха эффект прекращается."
+					]
+				},
+				{
+					"name": "Гарпун-стрела",
+					"entries": [
+						"{@atk rw} {@hit 9} к попаданию, дальность 150/18 м., одна цель. {@h}13 ({@damage 2d8 + 4}) колющего урона. Если цель - огромное или меньшее существо, оно должно успешно выполнить {@dc 17} бросок спасброска силы или быть оттащено на 6 м прямо к Владыке Пира."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Dash",
+					"entries": [
+						"Владыка пиршества передвигается с большой скоростью, не провоцируя атаки по возможности."
+					]
+				},
+				{
+					"name": "Стрела (Затрачивает 2 действия)",
+					"entries": [
+						"Владыка пира совершает одну атаку стрелой по своему выбору."
+					]
+				},
+				{
+					"name": "Зов охоты (стоит 3 действия)",
+					"entries": [
+						"Владыка пира издает пронзительный вой, который слышен по всему Драккенхейму. Гармир в радиусе 18 метров, который видит и слышит Владыку Пира, может использовать свою реакцию, чтобы переместиться на половину своей скорости и совершить одну атаку ближнего или дальнего боя с преимуществом."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Regeneration"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity",
+				"strength"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lucretia Mathias",
+			"isNamedCreature": true,
+			"source": "DoDk",
+			"page": 216,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"Unarmored Defense"
+					]
+				}
+			],
+			"hp": {
+				"average": 90,
+				"formula": "20d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 10,
+			"con": 10,
+			"int": 19,
+			"wis": 24,
+			"cha": 19,
+			"save": {
+				"wis": "+12",
+				"cha": "+9"
+			},
+			"skill": {
+				"insight": "+17",
+				"perception": "+17",
+				"persuasion": "+14",
+				"religion": "+14"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 26,
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Заклинания",
+					"headerEntries": [
+						"Лукреция Матиас - заклинатель 20-го уровня. Ее способность к заклинаниям - Мудрость (спасбросок от заклинаний {@dc 20}, {@hit 12} к попаданию при атаках заклинаниями). У нее подготовлены следующие заклинания клирика:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch}",
+								"{@spell guidance}",
+								"{@spell light}",
+								"{@spell sacred flame}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell bless}",
+								"{@spell command}",
+								"{@spell guiding bolt}",
+								"{@spell healing word}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell aid}",
+								"{@spell hold person}",
+								"{@spell lesser restoration}",
+								"{@spell spiritual weapon}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell dispel magic}",
+								"{@spell sending}",
+								"{@spell speak with dead}",
+								"{@spell spirit guardians}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell banishment}",
+								"{@spell death ward}",
+								"{@spell divination}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell commune}",
+								"{@spell flame strike}",
+								"{@spell greater restoration}",
+								"{@spell scrying}"
+							]
+						},
+						"6": {
+							"slots": 2,
+							"spells": [
+								"{@spell heal}",
+								"{@spell word of recall}"
+							]
+						},
+						"7": {
+							"slots": 2,
+							"spells": [
+								"{@spell divine word}",
+								"{@spell resurrection}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell holy aura}"
+							]
+						},
+						"9": {
+							"slots": 1,
+							"spells": [
+								"{@spell gate}",
+								"{@spell sacrament of the falling fire|DoDk}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Прозорливый",
+					"entries": [
+						"Лукрецию Матиас нельзя удивить, пока она в сознании."
+					]
+				},
+				{
+					"name": "Небронированная защита",
+					"entries": [
+						"Если Лукреция Матиас не носит доспехов и не владеет щитом, ее AC включает модификатор Мудрости."
+					]
+				},
+				{
+					"name": "Неоспоримая вера",
+					"entries": [
+						"Лукреция Матиас автоматически добивается успеха в бросках спасбросков по Конституции, чтобы сохранить {@status concentration} своих заклинаний. Любое произнесенное ею заклинание считается произнесенным с использованием слота заклинаний 9-го уровня, независимо от того, какой слот заклинаний был использован для произнесения заклинания."
+					]
+				},
+				{
+					"name": "Легендарное сопротивление (3/день)",
+					"entries": [
+						"Если Лукреция Матиас проваливает бросок спасения, она может выбрать вместо него успешный."
+					]
+				},
+				{
+					"name": "Божественная благодать",
+					"entries": [
+						"Любое существо, нацелившее на Лукрецию Матиас атаку или вредоносное заклинание, должно сначала сделать спасбросок {@dc 20} Мудрости. Если спасбросок провален, существо должно выбрать новую цель или потерять атаку или заклинание. Этот эффект не защищает Лукрецию Матиас от зональных эффектов, таких как взрыв огненного шара.",
+						"Если Лукреция Матиас совершает атаку, разыгрывает заклинание, воздействующее на врага, или наносит урон другому существу, этот эффект заканчивается до начала ее следующего хода."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Умиротворяющее прикосновение",
+					"entries": [
+						"{@atk ms} {@hit 12} попадание, радиус действия 1,5 м., одно существо. {@h}10 ({@damage 3d6}) психического урона. Существо, уменьшенное этим уроном до 0 хит-пойнтов, остается в 0 хит-пойнтах. Цель должна преуспеть в броске спасброска {@dc 20} Мудрости или быть {@condition incapacitated} в течение 1 минуты. Этот эффект заканчивается для затронутого существа, если оно получает какой-либо урон."
+					]
+				},
+				{
+					"name": "Божественное вмешательство (1/неделя)",
+					"entries": [
+						"Лукреция Матиас призывает Священное пламя на помощь. ГМ выбирает характер вмешательства; эффект любого заклинания клирика или заклинания домена клирика будет уместен."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Cantrip",
+					"entries": [
+						"Лукреция Матиас разыгрывает кантрип."
+					]
+				},
+				{
+					"name": "Умиротворяющее прикосновение (Затрачивает 2 действия)",
+					"entries": [
+						"Лукреция Матиас использует свое Умиротворяющее прикосновение."
+					]
+				},
+				{
+					"name": "Произнести заклинание (Затрачивает 3 действия)",
+					"entries": [
+						"Лукреция Матиас произносит заклинание, используя слот заклинания."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"U"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"Y"
+			],
+			"damageTagsSpell": [
+				"F",
+				"N",
+				"O",
+				"R"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened",
+				"incapacitated",
+				"paralyzed",
+				"prone",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Minazorond",
+			"isNamedCreature": true,
+			"source": "DoDk",
+			"page": 183,
+			"size": [
+				"G"
+			],
+			"type": "dragon",
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 22,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 444,
+				"formula": "24d20 + 192"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 80,
+				"swim": 40
+			},
+			"str": 29,
+			"dex": 10,
+			"con": 27,
+			"int": 18,
+			"wis": 17,
+			"cha": 21,
+			"save": {
+				"dex": "+7",
+				"con": "+15",
+				"wis": "+10",
+				"cha": "+12"
+			},
+			"skill": {
+				"insight": "+10",
+				"perception": "+17",
+				"stealth": "+7"
+			},
+			"senses": [
+				"blindsight 60 ft.",
+				"darkvision 120 ft.",
+				"truesight 120 ft."
+			],
+			"passive": 27,
+			"resist": [
+				"poison",
+				"psychic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
+				}
+			],
+			"immune": [
+				"lightning"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"cr": "22",
+			"trait": [
+				{
+					"name": "Амфибия",
+					"entries": [
+						"Миназоронд может дышать воздухом и водой."
+					]
+				},
+				{
+					"name": "Конструированная природа",
+					"entries": [
+						"Миназоронд не нуждается в воздухе, еде, питье или сне."
+					]
+				},
+				{
+					"name": "Ложная видимость",
+					"entries": [
+						"Пока Миназоронд неподвижен, он неотличим от неживой бронзовой статуи."
+					]
+				},
+				{
+					"name": "Безотказный трекер",
+					"entries": [
+						"Существо (существа), вызвавшее оживление Миназоронда, становится его добычей. Миназоронд знает направление и расстояние до своей добычи до тех пор, пока она находится в пределах Драккенхейма или пока Миназоронд не будет уничтожен."
+					]
+				},
+				{
+					"name": "Неизменная форма",
+					"entries": [
+						"Миназоронд невосприимчив к любым заклинаниям или эффектам, которые могут изменить его форму."
+					]
+				},
+				{
+					"name": "Легендарное сопротивление (3/день)",
+					"entries": [
+						"Если Миназоронд проваливает бросок спасения, он может выбрать вместо него успешный."
+					]
+				},
+				{
+					"name": "Магическая устойчивость",
+					"entries": [
+						"Миназоронд имеет преимущество при бросках спасбросков против заклинаний и других магических эффектов."
+					]
+				},
+				{
+					"name": "Магическое оружие",
+					"entries": [
+						"Оружейные атаки Миназоронда являются магическими."
+					]
+				},
+				{
+					"name": "Омоложение",
+					"entries": [
+						"Если Миназоронд уничтожен, он восстанавливает все свои хит-пойнты за 1 час, если на его останки не наложено заклинание {@spell disintegrate}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Мультиатака",
+					"entries": [
+						"Миназоронд может использовать свое устрашающее присутствие. Затем он совершает три атаки: одну - укусом и две - когтями."
+					]
+				},
+				{
+					"name": "Укус",
+					"entries": [
+						"{@atk mw} {@hit 16} попадание, радиус действия 4,5 м., одна цель. {@h}20 ({@damage 2d10 + 9}) колющего урона."
+					]
+				},
+				{
+					"name": "Коготь",
+					"entries": [
+						"{@atk mw} {@hit 16} попадание, радиус действия 3 м., одна цель. {@h}16 ({@damage 2d6 + 9}) колющего урона."
+					]
+				},
+				{
+					"name": "Хвост",
+					"entries": [
+						"{@atk mw} {@hit 16} попадание, радиус действия 6 м., одна цель. {@h}18 ({@damage 2d8 + 9}) повреждений от удара."
+					]
+				},
+				{
+					"name": "Страшное присутствие",
+					"entries": [
+						"Каждое существо по выбору Миназоронда, находящееся в пределах 36 метров от Миназоронда и знающее о нем, должно успешно выполнить бросок спасброска {@dc 20} Мудрости или стать {@condition frightened} на 1 минуту. Существо может повторить бросок спасброска в конце каждого своего хода, прекращая эффект на себя при успехе. Если спасательный бросок существа успешен или эффект заканчивается для него, существо становится невосприимчивым к \"Страшному присутствию Миназоронда\" на следующие 24 часа."
+					]
+				},
+				{
+					"name": "Дыхательное оружие {@recharge 5}",
+					"entries": [
+						"Миназоронд использует одно из следующих видов дыхательного оружия."
+					]
+				},
+				{
+					"name": "Молниеносное дыхание",
+					"entries": [
+						"Миназоронд выдыхает молнию в 36-метровую линию шириной 3 метра. Каждое существо в этой линии должно сделать бросок на спасбросок {@dc 23} ловкости, при неудачном броске оно получает 88 ({@damage 16d10}) урона от молнии, при удачном - вдвое меньше."
+					]
+				},
+				{
+					"name": "Дыхание отталкивания",
+					"entries": [
+						"Миназоронд выдыхает энергию отталкивания в конус диаметром 9 метров. Каждое существо в этой области должно успешно выполнить бросок на спасение {@dc 23} силы. При неудачном спасброске существо отталкивается от Миназоронда на 18 метров."
+					]
+				},
+				{
+					"name": "Изменение формы",
+					"entries": [
+						"Миназоронд волшебным образом превращается в гуманоида или зверя, чей рейтинг сложности не выше его собственного, или обратно в свою истинную форму. Он возвращается в свою истинную форму, если умирает. Любое снаряжение, которое он носит или несет, поглощается или переносится новой формой (по выбору Миназоронда).",
+						"В новой форме Миназоронд сохраняет выравнивание, хит-пойнты, хит-дайсы, способность говорить, умения, легендарную стойкость, действия в логове, показатели интеллекта, мудрости и харизмы, а также это действие. В остальном его статистика и способности заменяются статистикой и способностями новой формы, за исключением классовых особенностей и легендарных действий этой формы."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Обнаружить",
+					"entries": [
+						"Миназоронд делает проверку Мудрости (Восприятие)."
+					]
+				},
+				{
+					"name": "Хвостовая атака",
+					"entries": [
+						"Миназоронд делает атаку хвостом."
+					]
+				},
+				{
+					"name": "Атака крыльями (Затрачивает 2 действия)",
+					"entries": [
+						"Миназоронд бьет крыльями. Каждое существо в радиусе 4,5 м от Миназоронда должно успешно выполнить бросок спасброска на ловкость {@dc 24} или получить 16 ({@damage 2d6 + 9}) урона от удара и быть сбитым с ног {@condition prone}. После этого Миназоронд может летать со скоростью, равной половине его скорости полета."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious",
+				"False Appearance",
+				"Immutable Form",
+				"Legendary Resistances",
+				"Magic Resistance",
+				"Magic Weapons",
+				"Rejuvenation"
+			],
+			"senseTags": [
+				"B",
+				"SD",
+				"U"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Frightful Presence",
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"B",
+				"L",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"frightened",
+				"prone"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Oscar Yoren",
+			"isNamedCreature": true,
+			"source": "DoDk",
+			"page": 99,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 72,
+				"formula": "9d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 14,
+			"con": 11,
+			"int": 17,
+			"wis": 12,
+			"cha": 11,
+			"save": {
+				"int": "+6",
+				"wis": "+4"
+			},
+			"skill": {
+				"arcana": "+6",
+				"history": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"necrotic",
+				"poison"
+			],
+			"languages": [
+				"Any four languages"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Заклинания",
+					"headerEntries": [
+						"Оскар Йорен - заклинатель 9-го уровня. Его способность к заклинаниям - Интеллект (спасбросок от заклинаний {@dc 14}, {@hit 6} к попаданию при атаках заклинаниями). У Оскара Йорена подготовлены следующие заклинания волшебника:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch}",
+								"{@spell mage hand}",
+								"{@spell ray of frost}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell false life}",
+								"{@spell mage armor}",
+								"{@spell magic missile}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell invisibility}",
+								"{@spell misty step}",
+								"{@spell web}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell animate dead}",
+								"{@spell counterspell}",
+								"{@spell lightning bolt}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell blight}",
+								"{@spell polymorph}"
+							]
+						},
+						"5": {
+							"slots": 1,
+							"spells": [
+								"{@spell cloudkill}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"action": [
+				{
+					"name": "Кинжал",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} попадание, радиус действия 1,5 м. или дальность 20/18 м., одна цель. {@h}4 ({@damage 1d4 + 2}) колющего урона."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"C",
+				"F",
+				"I",
+				"L",
+				"N",
+				"O"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"invisible",
+				"restrained"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Pale Man",
+			"source": "DoDk",
+			"page": 212,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 120,
+				"formula": "16d8 + 48"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 10,
+			"dex": 15,
+			"con": 17,
+			"int": 20,
+			"wis": 15,
+			"cha": 12,
+			"save": {
+				"con": "+8",
+				"int": "+10",
+				"wis": "+7"
+			},
+			"skill": {
+				"arcana": "+10",
+				"history": "+10",
+				"perception": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"restrained"
+			],
+			"languages": [
+				"Common and any 5 other languages"
+			],
+			"cr": "13",
+			"spellcasting": [
+				{
+					"name": "Заклинания",
+					"headerEntries": [
+						"Бледный человек - заклинатель 16-го уровня. Его способность к заклинаниям - Интеллект (спасбросок от заклинаний {@dc 18}, {@hit 10} к попаданию при атаках заклинаниями). У Бледного человека подготовлены следующие заклинания волшебника:"
+					],
+					"spells": {
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell delerium orb|DoDk}*",
+								"{@spell mage armor}",
+								"{@spell magic missile}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell hold person}",
+								"{@spell invisibility}",
+								"{@spell warp bolt|DoDk}*"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell lightning bolt}",
+								"{@spell purge contamination|DoDk}*"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell delerium blast|DoDk}*",
+								"{@spell forced evolution|DoDk}*"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell conjure the deep haze|DoDk}*",
+								"{@spell siphon contamination|DoDk}*"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell chain lightning}"
+							]
+						},
+						"7": {
+							"slots": 1,
+							"spells": [
+								"{@spell octarine spray|DoDk}*"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell antimagic field}"
+							]
+						}
+					},
+					"footerEntries": [
+						"*These spells are from Appendix D of Dungeons of Drakkenheim."
+					],
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Легендарное сопротивление (3/день)",
+					"entries": [
+						"Если бледный человек провалил бросок спасения, он может выбрать вместо него успешный."
+					]
+				},
+				{
+					"name": "Тело насекомого",
+					"entries": [
+						"Бледный человек может занимать пространство другого существа и наоборот, а также перемещаться через любое отверстие, достаточно большое для крошечного насекомого."
+					]
+				},
+				{
+					"name": "Ползучая плоть",
+					"entries": [
+						"Когда у Бледного человека становится 0 хит-пойнтов, он распадается на рой насекомых в том же пространстве. Если рой не уничтожен, он возвращается в свой кокон и восстанавливается {@dice 1d6} через несколько дней."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Загрязняющее прикосновение",
+					"entries": [
+						"{@atk ms} {@hit 8} попадание, радиус действия 3 м., одна цель. {@h}10 ({@damage 3d6}) некротического урона, и цель должна преуспеть в броске спасения на {@dc 16} Конституцию или получить один {@adventure level of contamination|DoDk|12}."
+					]
+				},
+				{
+					"name": "Заразить плоть {@recharge}",
+					"entries": [
+						"Каждое существо в радиусе 9 метров от Бледного человека должно успешно выполнить бросок спасброска на ловкость {@dc 16} или получить 22 ({@damage 5d8}) некротических повреждений и быть {@condition restrained} закидано массами кишащих мясистых жуков. Пораженное существо получает 22 ({@damage 5d8}) некротических повреждений в начале каждого хода Бледного человека. Существо может повторить бросок спасброска в конце каждого своего хода, при успехе эффект прекращается."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Кантрип (Затрачивает 1 действие)",
+					"entries": [
+						"Бледный человек разыгрывает одно заклинание."
+					]
+				},
+				{
+					"name": "Скольжение (Затрачивает 2 действия)",
+					"entries": [
+						"Бледный человек передвигается со своей скоростью, не провоцируя атаки возможности."
+					]
+				},
+				{
+					"name": "Загрязнение (Затраты 3 действия)",
+					"entries": [
+						"Каждое существо {@condition restrained}, попавшее под действие Pale Man's Infest the Flesh, должно преуспеть в броске спасброска на {@dc 16} Конституцию или получить одно {@adventure level of contamination|DoDk|12}."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N"
+			],
+			"damageTagsSpell": [
+				"L",
+				"N",
+				"O",
+				"R",
+				"T",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"AOE",
+				"RCH"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"conditionInflictSpell": [
+				"exhaustion",
+				"incapacitated",
+				"invisible",
+				"paralyzed"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"intelligence",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Protean Abomination",
+			"source": "DoDk",
+			"page": 201,
+			"size": [
+				"H"
+			],
+			"type": "aberration",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 168,
+				"formula": "16d12 + 64"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 10
+			},
+			"str": 21,
+			"dex": 8,
+			"con": 18,
+			"int": 5,
+			"wis": 10,
+			"cha": 5,
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 10,
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"prone"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Поглощение",
+					"entries": [
+						"Когда протеанская мерзость убивает существо, не являющееся ни конструктом, ни нежитью, она поглощает его труп в свое тело и восстанавливает 20 хит-пойнтов."
+					]
+				},
+				{
+					"name": "Аморфный",
+					"entries": [
+						"Протеиновая мерзость может перемещаться по узкому пространству шириной до 1 дюйма, не протискиваясь."
+					]
+				},
+				{
+					"name": "Паучий лаз",
+					"entries": [
+						"Протеиновая мерзость может взбираться по сложным поверхностям, в том числе вверх ногами по потолку, без необходимости делать проверку способностей."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Мультиатака",
+					"entries": [
+						"Протеанская мерзость наносит две атаки слэмом. Если обе атаки попадают по крупной или меньшей цели, цель становится {@condition grappled} (побег {@dc 15}), и протеанская мерзость использует на нее заклинание Engulf."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 8} попадание, радиус действия 1,5 м., одна цель. {@h}19 ({@damage 3d8 + 5}) урона от удара."
+					]
+				},
+				{
+					"name": "Engulf",
+					"entries": [
+						"Протеанская мерзость поглощает большое или меньшее существо {@condition grappled}, оказавшееся рядом с ней. Пока захват не закончится, цель находится в состоянии {@condition blinded}, {@condition restrained}, не может дышать и должна преуспеть в броске спасброска на {@dc 15} Конституцию в начале каждого хода мерзости или получить 19 ({@damage 3d8 + 5}) урона от удара. Если мерзость движется, поглощенная цель движется вместе с ней. Одновременно мерзость может поглотить только одно существо."
+					]
+				}
+			],
+			"traitTags": [
+				"Amorphous",
+				"Spider Climb"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded",
+				"grappled",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Queen of Thieves",
+			"source": "DoDk",
+			"page": 217,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 23,
+					"from": [
+						"canny defense",
+						"{@spell mage armor}"
+					]
+				}
+			],
+			"hp": {
+				"average": 120,
+				"formula": "20d8 + 20"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 20,
+			"con": 13,
+			"int": 20,
+			"wis": 16,
+			"cha": 19,
+			"save": {
+				"dex": "+10",
+				"int": "+10"
+			},
+			"skill": {
+				"acrobatics": "+10",
+				"arcana": "+10",
+				"deception": "+14",
+				"insight": "+8",
+				"perception": "+8",
+				"persuasion": "+9",
+				"sleight of hand": "+10",
+				"stealth": "+15"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 18,
+			"conditionImmune": [
+				"charmed"
+			],
+			"languages": [
+				"Common",
+				"Dwarvish",
+				"Elvish",
+				"Undercommon"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Врожденное заклинание",
+					"headerEntries": [
+						"Врожденная способность Королевы воров к заклинаниям - Интеллект. Она может накладывать следующие заклинания, не требующие материальных, соматических или вербальных компонентов:"
+					],
+					"will": [
+						"{@spell detect thoughts}",
+						"{@spell disguise self}",
+						"{@spell suggestion}"
+					],
+					"ability": "int"
+				},
+				{
+					"name": "Заклинания",
+					"headerEntries": [
+						"Королева воров - заклинательница 20-го уровня. Ее способность к заклинаниям - Интеллект (спасбросок от заклинаний {@dc 18}, {@hit 10} к попаданию при атаках заклинаниями). У нее подготовлены следующие заклинания волшебника:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch}",
+								"{@spell mage hand}",
+								"{@spell message}",
+								"{@spell minor illusion}",
+								"{@spell prestidigitation}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell feather fall}",
+								"{@spell mage armor}",
+								"{@spell shield}",
+								"{@spell sleep}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell mirror image}",
+								"{@spell misty step}",
+								"{@spell see invisibility}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell gaseous form}",
+								"{@spell hypnotic pattern}",
+								"{@spell major image}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell dimension door}",
+								"{@spell greater invisibility}",
+								"{@spell polymorph}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell dominate person}",
+								"{@spell scrying}",
+								"{@spell seeming}"
+							]
+						},
+						"6": {
+							"slots": 2,
+							"spells": [
+								"{@spell eyebite}",
+								"{@spell mass suggestion}"
+							]
+						},
+						"7": {
+							"slots": 2,
+							"spells": [
+								"{@spell forcecage}",
+								"{@spell project image}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell feeblemind}"
+							]
+						},
+						"9": {
+							"slots": 1,
+							"spells": [
+								"{@spell foresight}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Специальное оборудование",
+					"entries": [
+						"Королева воров носит амулет, защищающий от обнаружения и определения местонахождения, и печатку шпионов. Она владеет рапирой +3."
+					]
+				},
+				{
+					"name": "Умная защита",
+					"entries": [
+						"Если Королева воров одета в легкую броню или вообще без нее и не владеет щитом, ее AC включает модификатор интеллекта."
+					]
+				},
+				{
+					"name": "Атака исподтишка (1/оборот)",
+					"entries": [
+						"Королева воров наносит дополнительные 18 {@damage 5d6} урона, когда поражает цель атакой оружием и имеет преимущество при броске атаки, или когда цель находится в радиусе 1,5 м от союзника Королевы воров, который не выведен из строя, и у нее нет недостатка при броске атаки."
+					]
+				},
+				{
+					"name": "Легендарное сопротивление (3/день)",
+					"entries": [
+						"Если Королева воров проваливает бросок спасения, она может выбрать вместо него успешный."
+					]
+				},
+				{
+					"name": "Воровка памяти",
+					"entries": [
+						"Существа не знают, когда Королева воров читает их мысли или очаровывает их. Кроме того, когда заклинание, наложенное Королевой воров и заставляющее существ стать {@condition charmed}, заканчивается, она может заставить пострадавших существ потерять свои воспоминания. Они должны преуспеть в броске спасброска на {@dc 18} Интеллект или забыть до 8 часов времени, проведенного {@condition charmed} с ней. Эти воспоминания можно восстановить с помощью заклинания {@spell heal} или аналогичной магии."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "+3 Рапира",
+					"entries": [
+						"{@atk mw} {@hit 13} попадание, радиус действия 1,5 м., одной цели {@h}13 ({@damage 1d8 + 8}) колющего урона."
+					]
+				},
+				{
+					"name": "Кинжал",
+					"entries": [
+						"{@atk rw} {@hit 10} к попаданию, дальность 20/18 м., одна цель. {@h}7 ({@damage 1d4 + 7}) колющего урона."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Заблуждение",
+					"entries": [
+						"Когда она получает урон, Королева воров становится {@condition invisible} и телепортируется на 18 метров в незанятое место, которое она может видеть. В то же время на месте, где она стояла, появляется ее иллюзорный двойник, который действует в течение 1 минуты. Невидимость заканчивается, если Королева воров атакует или произносит заклинание, или через 1 минуту."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Атака",
+					"entries": [
+						"Королева воров совершает одну атаку ближнего или дальнего боя."
+					]
+				},
+				{
+					"name": "Переместить",
+					"entries": [
+						"Королева воров двигается со своей скоростью, не провоцируя атаки по возможности."
+					]
+				}
+			],
+			"attachedItems": [
+				"+3 rapier|dmg",
+				"dagger|phb"
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Sneak Attack"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"E",
+				"U"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CW",
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"frightened",
+				"incapacitated",
+				"invisible",
+				"unconscious"
+			],
+			"savingThrowForced": [
+				"intelligence"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"intelligence",
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Rat Prince",
+			"source": "DoDk",
+			"page": 213,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 66,
+				"formula": "12d8 + 12"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30,
+				"climb": 30
+			},
+			"str": 12,
+			"dex": 19,
+			"con": 13,
+			"int": 9,
+			"wis": 15,
+			"cha": 9,
+			"skill": {
+				"acrobatics": "+6",
+				"athletics": "+3",
+				"perception": "+6",
+				"stealth": "+8"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"languages": [
+				"Common"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Хитроумные действия",
+					"entries": [
+						"Крысиный принц может совершить действие \"Рывок\", \"Уйти\" или \"Спрятаться\" в качестве бонусного действия на каждом своем ходу."
+					]
+				},
+				{
+					"name": "Запах Кина",
+					"entries": [
+						"Крысиный принц имеет преимущество при проверках Мудрости (Восприятие), которые зависят от запаха."
+					]
+				},
+				{
+					"name": "Тактика стаи",
+					"entries": [
+						"Крысиный принц имеет преимущество при броске атаки против существа, если хотя бы один из его союзников находится в пределах 1,5 м от существа, а союзник - нет {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Загрязненные боеприпасы",
+					"entries": [
+						"Крысиный принц носит с собой {@dice 2d6} боеприпасов, начиненных осколками делериума. Эти снаряды наносят {@damage 1d6} дополнительного урона при попадании, и цель должна успешно выполнить бросок на спасение {@dc 10} конституции или получить один {@adventure level of contamination|DoDk|12}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Мультиатака",
+					"entries": [
+						"Крысиный принц делает три атаки: две - короткими мечами и одну - зараженным укусом."
+					]
+				},
+				{
+					"name": "Короткий меч",
+					"entries": [
+						"{@atk mw} {@hit 6} попадание, радиус действия 1,5 м., одна цель. {@h}7 ({@damage 1d6 + 4}) колющего урона."
+					]
+				},
+				{
+					"name": "Зараженный укус",
+					"entries": [
+						"{@atk mw} {@hit 6} попадание, радиус действия 1,5 м., одна цель. {@h}4 ({@damage 1d4 + 4}) колющего урона, плюс дополнительно 10 ({@damage 3d6}) некротического урона, и существо должно преуспеть в броске спасения на {@dc 11} Конституцию или получить один {@adventure level of contamination|DoDk|12}."
+					]
+				},
+				{
+					"name": "Ручной арбалет",
+					"entries": [
+						"{@atk rw} {@hit 6} к попаданию, дальность 30/36 м., одна цель. {@h}7 ({@damage 1d6 + 4}) колющего урона."
+					]
+				}
+			],
+			"attachedItems": [
+				"hand crossbow|phb"
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ratling",
+			"source": "DoDk",
+			"page": 202,
+			"size": [
+				"S"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 5,
+				"formula": "2d6 - 2"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30,
+				"climb": 30
+			},
+			"str": 7,
+			"dex": 15,
+			"con": 8,
+			"int": 8,
+			"wis": 10,
+			"cha": 5,
+			"skill": {
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Common"
+			],
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Skulker",
+					"entries": [
+						"Крысарик может совершить действие \"Скрыть\" в качестве бонусного действия на каждом из своих ходов."
+					]
+				},
+				{
+					"name": "Запах Кина",
+					"entries": [
+						"Крысолов имеет преимущество при проверках Мудрости (Восприятие), которые зависят от запаха."
+					]
+				},
+				{
+					"name": "Тактика стаи",
+					"entries": [
+						"Крысолов имеет преимущество при броске атаки против существа, если хотя бы один из союзников крысолова находится в пределах 1,5 м от существа, а союзник - нет {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Укус",
+					"entries": [
+						"{@atk mw} {@hit 4} попадание, радиус действия 1,5 м., одна цель. {@h}4 ({@damage 1d4 + 2}) колющего урона."
+					]
+				},
+				{
+					"name": "Слинг",
+					"entries": [
+						"{@atk rw} {@hit 4} к попаданию, дальность 30/36 м., одна цель. {@h}4 ({@damage 1d4 + 2}) урона от удара."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Guttersnipe",
+					"entries": [
+						"Крысолов использует игровую статистику на {@creature spy}. Его тип существа - чудовище. Он получает черты \"Чуткий нюх\" и \"Тактика стаи\", скорость плавания и подъема на 9 метров, а также атаку \"Укус\" в соответствии со статистическим блоком крысолова."
+					]
+				}
+			],
+			"attachedItems": [
+				"sling|phb"
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Saint Gresha",
+			"isNamedCreature": true,
+			"source": "DoDk",
+			"page": 124,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 67,
+				"formula": "9d8 + 27"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": 60
+			},
+			"str": 6,
+			"dex": 16,
+			"con": 16,
+			"int": 12,
+			"wis": 14,
+			"cha": 15,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"thunder",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"The languages it knew in life"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Заклинания",
+					"headerEntries": [
+						"Святой Греша - заклинатель 8-го уровня. Его способность к заклинаниям - Харизма (спасбросок от заклинаний {@dc 13}, {@hit 5} к попаданию при атаках заклинаниями). Святая Греша знает следующие колдовские заклинания:"
+					],
+					"will": [
+						"{@spell guidance}",
+						"{@spell light}",
+						"{@spell sacred flame}",
+						"{@spell thaumaturgy}"
+					],
+					"daily": {
+						"3e": [
+							"{@spell bless}",
+							"{@spell flame strike}",
+							"{@spell guiding bolt}",
+							"{@spell healing word}",
+							"{@spell prayer of healing}",
+							"{@spell spirit guardians}"
+						],
+						"1e": [
+							"{@spell divine word}",
+							"{@spell harm}",
+							"{@spell heal}",
+							"{@spell holy aura}",
+							"{@spell sacrament of the falling fire|DoDk}*"
+						]
+					},
+					"footerEntries": [
+						"*new spell described in Appendix D of Dungeons of Drakkenheim."
+					],
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Бесплотное движение",
+					"entries": [
+						"Святой Греша может перемещаться сквозь других существ и предметы, как если бы они были труднопроходимой местностью. Она получает 5 ({@damage 1d10}) урона силы, если заканчивает свой ход внутри объекта."
+					]
+				},
+				{
+					"name": "Чувствительность к солнечному свету",
+					"entries": [
+						"Находясь под солнечным светом, Святой Греш имеет недостаток при бросках атаки, а также при проверках Мудрости (Восприятие), которые зависят от зрения."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Утечка жизни",
+					"entries": [
+						"{@atk mw} {@hit 6} попадание, радиус действия 1,5 м., одно существо. {@h}21 ({@damage 4d8 + 3}) некротический урон. Цель должна успешно выполнить бросок спасброска на {@dc 14} Конституцию, иначе ее максимальное количество хит-пойнтов уменьшается на величину, равную полученному урону. Это снижение длится до тех пор, пока цель не закончит длительный отдых. Цель умирает, если этот эффект снижает ее максимальное количество хит-пойнтов до 0."
+					]
+				},
+				{
+					"name": "Создание спектра",
+					"entries": [
+						"Святой Греша выбирает гуманоида в радиусе 3 метров от себя, который был мертв не более 1 минуты и умер насильственной смертью. Дух цели поднимается в виде призрака в пространстве трупа или в ближайшем незанятом пространстве. Призрак находится под контролем святой Греши. Одновременно под контролем святого Греша может находиться не более семи призраков."
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"N",
+				"O"
+			],
+			"damageTagsSpell": [
+				"F",
+				"N",
+				"R"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"miscTags": [
+				"HPR",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Scoundrel",
+			"source": "DoDk",
+			"page": 219,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item leather armor|PHB|leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 44,
+				"formula": "8d8 + 8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 17,
+			"con": 12,
+			"int": 14,
+			"wis": 10,
+			"cha": 15,
+			"skill": {
+				"acrobatics": "+5",
+				"deception": "+6",
+				"sleight of hand": "+5",
+				"stealth": "+7"
+			},
+			"passive": 10,
+			"languages": [
+				"Thieves' cant plus any two languages"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Заклинания",
+					"headerEntries": [
+						"Негодяй - заклинатель 3-го уровня, использующий Интеллект в качестве способности к заклинаниям (спасбросок от заклинаний {@dc 12}; {@hit 4} для попадания при атаках заклинаниями). Он знает следующие заклинания из списка заклинаний волшебника:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell mage hand} (the hand is invisible)",
+								"{@spell minor illusion}",
+								"{@spell prestidigitation}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell charm person}",
+								"{@spell disguise self}",
+								"{@spell sleep}"
+							]
+						},
+						"2": {
+							"slots": 2,
+							"spells": [
+								"{@spell invisibility}",
+								"{@spell suggestion}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Хитроумные действия",
+					"entries": [
+						"В каждый свой ход подлец может использовать бонусное действие, чтобы выполнить действие \"Рывок\", \"Уход\" или \"Спрятаться\"."
+					]
+				},
+				{
+					"name": "Атака исподтишка (1/оборот)",
+					"entries": [
+						"Негодяй наносит дополнительные 14 {@damage 4d6} урона, когда поражает цель атакой оружием и имеет преимущество при броске атаки, или когда цель находится в пределах 1,5 м от союзника негодяя, который не выведен из строя, и негодяй не имеет недостатка при броске атаки."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 5} попадание, радиус действия 1,5 м., одна цель. {@h}6 ({@damage 1d6 + 3}) колющего урона."
+					]
+				},
+				{
+					"name": "Ручной арбалет",
+					"entries": [
+						"{@atk rw} {@hit 5} к попаданию, дальность 30/36 м., одна цель. {@h}6 ({@damage 1d6 + 3}) колющего урона."
+					]
+				}
+			],
+			"attachedItems": [
+				"hand crossbow|phb",
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Sneak Attack"
+			],
+			"languageTags": [
+				"TC",
+				"X"
+			],
+			"damageTags": [
+				"P"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"invisible",
+				"unconscious"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Tower Dragon",
+			"source": "DoDk",
+			"page": 198,
+			"_copy": {
+				"name": "Young Bronze Dragon",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "Constructed Nature",
+								"entries": [
+									"The dragon doesn't require air, food, drink, or sleep."
+								]
+							},
+							{
+								"name": "False Appearance",
+								"entries": [
+									"While the dragon remains motionless, it is indistinguishable from an inanimate bronze statue."
+								]
+							},
+							{
+								"name": "Faultless Tracker",
+								"entries": [
+									"The creature(s) that caused the dragon to animate becomes its quarry. The dragon knows the direction and distance to its quarry as long the quarry remains within Drakkenheim or until the dragon is destroyed."
+								]
+							},
+							{
+								"name": "Immutable Form",
+								"entries": [
+									"The dragon is immune to any spell or effect that would alter its form."
+								]
+							},
+							{
+								"name": "Magic Resistance",
+								"entries": [
+									"The dragon has advantage on saving throws against spells and other magical effects."
+								]
+							},
+							{
+								"name": "Magic Weapons",
+								"entries": [
+									"The dragon's weapon attacks are magical."
+								]
+							},
+							{
+								"name": "Rejuvenation",
+								"entries": [
+									"If the tower dragon is destroyed, it regains all its hit points in 1 hour unless a {@spell disintegrate} spell is cast on its remains."
+								]
+							}
+						]
+					}
+				}
+			},
+			"senses": [
+				"blindsight 30 ft.",
+				"darkvision 120 ft.",
+				"truesight 120 ft."
+			],
+			"resist": [
+				"poison",
+				"psychic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"cr": "10",
+			"traitTags": [
+				"Amphibious",
+				"False Appearance",
+				"Immutable Form",
+				"Magic Resistance",
+				"Magic Weapons",
+				"Rejuvenation"
+			],
+			"senseTags": [
+				"B",
+				"SD",
+				"U"
+			],
+			"damageTags": [
+				"L",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Urban Ranger",
+			"source": "DoDk",
+			"page": 220,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|PHB|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "8d8 + 16"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 12,
+			"dex": 17,
+			"con": 14,
+			"int": 11,
+			"wis": 15,
+			"cha": 11,
+			"skill": {
+				"athletics": "+5",
+				"perception": "+6",
+				"stealth": "+7",
+				"survival": "+6"
+			},
+			"passive": 16,
+			"languages": [
+				"Any two"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Заклинания",
+					"headerEntries": [
+						"Городской рейнджер - заклинатель 8-го уровня, использующий Мудрость в качестве способности к заклинаниям (спасбросок от заклинаний {@dc 12}; {@hit 4} к попаданию при атаках заклинаниями). Он знает следующие заклинания из списка заклинаний рейнджера:"
+					],
+					"spells": {
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell cure wounds}",
+								"{@spell fog cloud}",
+								"{@spell hunter's mark}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell pass without trace}",
+								"{@spell spike growth}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"action": [
+				{
+					"name": "Мультиатака",
+					"entries": [
+						"Городской рейнджер совершает две атаки ближнего боя или две атаки дальнего боя."
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 5} попадание, радиус действия 1,5 м., одна цель. {@h}6 ({@damage 1d6 + 3}) колющего урона."
+					]
+				},
+				{
+					"name": "Longbow",
+					"entries": [
+						"{@atk rw} {@hit 5} к попаданию, дальность 150/18 м., одна цель. {@h}7 ({@damage 1d8 + 3}) колющего урона."
+					]
+				}
+			],
+			"attachedItems": [
+				"longbow|phb",
+				"shortsword|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"P"
+			],
+			"spellcastingTags": [
+				"CR"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Walking Delerium Geode",
+			"source": "DoDk",
+			"page": 205,
+			"size": [
+				"L"
+			],
+			"type": "elemental",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 126,
+				"formula": "12d10 + 60"
+			},
+			"speed": {
+				"walk": 30,
+				"burrow": 30
+			},
+			"str": 20,
+			"dex": 8,
+			"con": 20,
+			"int": 5,
+			"wis": 10,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft.",
+				"tremorsense 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"vulnerable": [
+				"radiant",
+				"thunder"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"unconscious"
+			],
+			"languages": [
+				"Deep Speech"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Смертельный взрыв",
+					"entries": [
+						"Если урон снижает ходячий делериумный геод до 0 хит-пойнтов, кристаллы делериума в его теле взрываются в порыве зараженной энергии, если только урон не был силовым, лучевым или громовым. Каждое существо в радиусе 9 метров от него должно преуспеть в броске спасброска на {@dc 15} Конституцию или получить 42 ({@damage 12d6}) некротических повреждений и прибавить один {@adventure level of contamination|DoDk|12}. Кроме того, этот взрыв вызывает случайную арканную аномалию (см. \"Подземелья Драккенхейма\")."
+					]
+				},
+				{
+					"name": "Скольжение Земли",
+					"entries": [
+						"Ходячий делериумный геод может проникать сквозь немагическую, необработанную землю и камень. При этом геод не повреждает материал, по которому движется."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Удар осколком",
+					"entries": [
+						"{@atk mw} {@hit 8} попадание, радиус действия 3 м., одна цель. {@h}14 ({@damage 2d8 + 5}) колющего урона. Цель, пораженная этой атакой, должна преуспеть в броске спасброска на {@dc 15} Конституцию или получить 10 ({@damage 3d6}) некротического урона и прибавить один {@adventure level of contamination|DoDk|12}."
+					]
+				}
+			],
+			"traitTags": [
+				"Death Burst"
+			],
+			"senseTags": [
+				"D",
+				"T"
+			],
+			"languageTags": [
+				"DS"
+			],
+			"damageTags": [
+				"B",
+				"N"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Wall Gargoyle",
+			"source": "DoDk",
+			"page": 198,
+			"_copy": {
+				"name": "Gargoyle",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "Faultless Tracker",
+								"entries": [
+									"The creature that caused the gargoyle to animate becomes its quarry. The gargoyle knows the direction and distance to its quarry as long the quarry remains within Drakkenheim or until the gargoyle is destroyed."
+								]
+							},
+							{
+								"name": "Keen Sight",
+								"entries": [
+									"The gargoyle has advantage on Wisdom (Perception) checks that rely on sight."
+								]
+							},
+							{
+								"name": "Magic Weapons",
+								"entries": [
+									"The gargoyle's weapon attacks are magical."
+								]
+							},
+							{
+								"name": "Rejuvenation",
+								"entries": [
+									"If the wall gargoyle is destroyed, it regains all its hit points in 1 hour unless a {@spell disintegrate} spell is cast on its remains."
+								]
+							}
+						]
+					}
+				}
+			},
+			"senses": [
+				"darkvision 60 ft.",
+				"truesight 120 ft."
+			],
+			"traitTags": [
+				"False Appearance",
+				"Keen Senses",
+				"Magic Weapons",
+				"Rejuvenation"
+			],
+			"senseTags": [
+				"D",
+				"U"
+			],
+			"languageTags": [
+				"T"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Warlock of the Rat God",
+			"source": "DoDk",
+			"page": 202,
+			"size": [
+				"S"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 27,
+				"formula": "6d6 + 6"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30,
+				"climb": 30
+			},
+			"str": 7,
+			"dex": 14,
+			"con": 13,
+			"int": 13,
+			"wis": 11,
+			"cha": 15,
+			"skill": {
+				"deception": "+4",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Common"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Врожденное заклинание",
+					"headerEntries": [
+						"Врожденная способность чародея к заклинаниям - Харизма. Он может произносить следующие заклинания (спасбросок {@dc 12}, {@hit 4} на попадание при атаке заклинанием), не требующие материальных компонентов:"
+					],
+					"will": [
+						"{@spell eldritch blast} (2 beams)",
+						"{@spell mage armor} (self only)",
+						"{@spell minor illusion}",
+						"{@spell thaumaturgy}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell augury}",
+							"{@spell burning hands}",
+							"{@spell conjure animals} (giant rats only)",
+							"{@spell faerie fire}",
+							"{@spell invisibility}",
+							"{@spell misty step}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Skulker",
+					"entries": [
+						"Крысарик может совершить действие \"Скрыть\" в качестве бонусного действия на каждом из своих ходов."
+					]
+				},
+				{
+					"name": "Запах Кина",
+					"entries": [
+						"Крысолов имеет преимущество при проверках Мудрости (Восприятие), которые зависят от запаха."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Укус",
+					"entries": [
+						"{@atk mw} {@hit 4} попадание, радиус действия 1,5 м., одна цель. {@h}4 ({@damage 1d4 + 2}) колющего урона."
+					]
+				}
+			],
+			"traitTags": [
+				"Keen Senses"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"F",
+				"O"
+			],
+			"spellcastingTags": [
+				"CL",
+				"I"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"invisible"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Warp Witch",
+			"source": "DoDk",
+			"page": 198,
+			"_copy": {
+				"name": "Ghost",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "призрак",
+						"with": "warp witch"
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Ужасающий вид",
+						"items": [
+							{
+								"name": "Psychic Wail {@recharge 5}",
+								"entries": [
+									"Every creature within 30 feet of the warp witch must succeed on a {@dc 13} Intelligence saving throw or take 10 ({@damage 3d6}) psychic damage and become {@condition incapacitated} until the end of the warp witches next turn."
+								]
+							},
+							{
+								"name": "Mutate Host",
+								"entries": [
+									"The warp witch can use a bonus action while it is possessing a creature to force mutations upon its host. The possessed creature must succeed on a {@dc 13} Charisma saving throw or gain one {@adventure level of contamination|DoDk|12}. Rather than rolling to determine if a mutation occurs, the warp witch automatically causes a random mutation."
+								]
+							}
+						]
+					}
+				}
+			},
+			"hasFluff": true
+		}
+	]
+}

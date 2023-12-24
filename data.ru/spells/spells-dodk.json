@@ -1,0 +1,737 @@
+{
+	"spell": [
+		{
+			"name": "Conjure the Deep Haze",
+			"source": "DoDk",
+			"page": 226,
+			"level": 5,
+			"school": "C",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "фрагмент делериума стоимостью 100 гп, который заклинание расходует",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Когда вы произносите это заклинание, вы получаете одно {@adventure level of contamination|DoDk|12}.",
+				"Вы создаете сферу Глубокой дымки радиусом 6 метров на выбранной вами точке в радиусе действия. Туман распространяется по углам. Он действует в течение всего времени или до тех пор, пока сильный ветер не рассеет туман, прекратив действие заклинания. Область действия сильно затуманена.",
+				"Когда существо впервые за ход попадает в зону действия заклинания или начинает там свой ход, оно должно успешно выполнить бросок спасброска на конституцию. При неудачном спасброске оно получает ({@dice 8d6}) некротического урона и набирает один {@adventure level of contamination|DoDk|12}. При успешном спасброске существо получает вдвое меньше урона и не получает ни одного {@adventure contamination levels|DoDk|12}. Существа получают урон, даже если они задерживают дыхание или им не нужно дышать."
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"OBS"
+			]
+		},
+		{
+			"name": "Contaminated Power",
+			"source": "DoDk",
+			"page": 226,
+			"level": 8,
+			"school": "T",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "осколок делериума стоимостью 500 гп, который заклинание расходует",
+					"cost": 50000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Когда вы произносите это заклинание, вы получаете одно {@adventure level of contamination|DoDk|12}. Вы черпаете безудержную арканную магию из осколка Делериума, который держите в руке. Пока заклинание не закончится, вы получаете следующие преимущества:",
+				{
+					"type": "list",
+					"items": [
+						"Когда вы произносите заклинание, наносящее урон кислотой, огнем, холодом, молнией или ядом, вы можете изменить тип урона на силу, некротический, психический или лучевой урон.",
+						"Раз в ход, когда вы наносите урон заклинанием, вы можете нанести одной цели заклинания дополнительный {@damage 1d12} некротический урон за каждый {@adventure contamination level|DoDk|12}, который вы получили.",
+						"Когда вы произносите заклинание, которое заставляет существо делать бросок спасброска, чтобы противостоять его эффектам, вы можете выбрать, чтобы получить одно {@adventure level of contamination|DoDk|12}. Если вы это сделаете, то одна цель заклинания будет иметь недостаток при первом броске спасения против этого заклинания."
+					]
+				},
+				"Это заклинание не может быть развеяно на {@spell dispel magic}."
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Contamination Immunity",
+			"source": "DoDk",
+			"page": 226,
+			"level": 7,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Эльдритическая лилия, смешанная со специально подготовленными очищенными жидкостями стоимостью 250 gp, которые расходуются заклинанием",
+					"cost": 25000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"entries": [
+				"Пока заклинание не закончится, одно существо, которого вы коснетесь, будет невосприимчиво к некротическому урону и не сможет получить {@adventure contamination levels|DoDk|12}. Затронутое существо может нормально отдыхать в дымке.",
+				"Действие этого заклинания немедленно прекращается, если существо произносит зараженное заклинание."
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Delerium Blast",
+			"source": "DoDk",
+			"page": 227,
+			"level": 4,
+			"school": "V",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 150
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "фрагмент делериума стоимостью 100 гп, который заклинание расходует",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Когда вы произносите это заклинание, вы получаете одно {@adventure level of contamination|DoDk|12}.",
+				"Вы воспламеняете арканную энергию, хранящуюся в осколке делериума, который держите в руке, и бросаете его в пространство, которое видите в пределах досягаемости. Он взорвется в сфере радиусом 6 метров, наполненной неустойчивой психической энергией, которая подавляет разум и чувства тех, кто находится внутри. Каждое существо, попавшее в сферу, должно успешно выполнить бросок на спасение интеллекта. При неудачном спасброске существо получает ({@dice 10d6}) психического урона и становится {@condition incapacitated} до конца своего следующего хода. При успешном спасброске цель получает вдвое меньше урона и не страдает от других эффектов заклинания."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "На более высоких уровнях",
+					"entries": [
+						"Когда вы произносите это заклинание, используя слот заклинания 5-го уровня или выше, урон увеличивается на {@dice 2d6} за каждый уровень слота выше 4-го."
+					]
+				}
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrow": [
+				"intelligence"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Delerium Orb",
+			"source": "DoDk",
+			"page": 227,
+			"level": 1,
+			"school": "V",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "фрагмент делериума стоимостью 100 гп, который заклинание расходует",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Когда вы произносите это заклинание, вы получаете одно {@adventure level of contamination|DoDk|12}. Вы черпаете хаотическую магическую силу из осколка Делериума, который держите в руке, и поражаете парадоксальной силой существо, которое видите в пределах досягаемости. Выберите один показатель способности, затем выберите холодный, огненный, молниеносный, некротический, психический или лучевой урон. Цель должна преуспеть в броске спасброска, используя выбранный показатель способности; при неудачном броске спасброска она получает {@damage 6d6} урона выбранного типа, а при удачном - в два раза меньше."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "На более высоких уровнях",
+					"entries": [
+						"Когда вы произносите это заклинание, используя слот заклинания 2-го уровня или выше, урон увеличивается на {@dice 2d6} за каждый уровень слота выше 1-го."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Forced Evolution",
+			"source": "DoDk",
+			"page": 227,
+			"level": 4,
+			"school": "T",
+			"time": [
+				{
+					"number": 8,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Алхимический коктейль из редких компонентов и пыли делериума стоимостью 250 золотых, который цель употребляет во время заклинания",
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"С помощью этого заклинания вы трансформируете мутацию, полученную от {@adventure contamination|DoDk|12}. Одна из существующих мутаций цели удаляется и заменяется другой. Эта мутация может быть выбрана мастером игры или определена случайным образом (см. приложение C к \"Подземельям Драккенхейма\")."
+			]
+		},
+		{
+			"name": "Neutralizing Field",
+			"source": "DoDk",
+			"page": 228,
+			"level": 5,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "sphere",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Кристалл делериума или святая реликвия стоимостью 1 000 gp",
+					"cost": 100000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Вы сводите на нет зараженную магическую энергию в сфере радиусом 3 м. Пока заклинание не закончится, сфера движется вместе с вами, ориентируясь на вас. Существа в сфере (включая вас) не могут получить {@adventure contamination levels|DoDk|12} и имеют иммунитет к некротическому урону. Зараженные заклинания не могут быть произнесены существами, находящимися в сфере."
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Octarine Spray",
+			"source": "DoDk",
+			"page": 228,
+			"level": 7,
+			"school": "V",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "фрагмент делериума стоимостью 100 гп, который заклинание расходует",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Когда вы произносите это заклинание, вы получаете одно {@adventure level of contamination|DoDk|12}. Из вашей руки вырываются лучи света октаринового цвета. Каждый луч разного цвета и имеет свою силу и назначение, см. таблицу ниже. Каждое существо в 18-метровом конусе должно успешно выполнить бросок на спасение по Конституции. Для каждой цели бросьте {@dice d8}, чтобы определить, лучи какого цвета на нее действуют.",
+				{
+					"type": "table",
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"colLabels": [
+						"d8",
+						"Octarine Spray Effect"
+					],
+					"rows": [
+						[
+							"1",
+							"The target takes {@damage 20d6} psychic damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"2",
+							"The target takes {@damage 20d6} necrotic damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"3",
+							"The target takes {@damage 20d6} force damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"4",
+							"The target takes {@damage 20d6} radiant damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"5",
+							"The target takes {@damage 20d6} thunder damage on a failed save, or half as much damage on a success."
+						],
+						[
+							"6",
+							"At the start of each of its turns, the affected target uses all its movement to move directly towards the closest creature it can see. Then, the affected target uses its action to make a melee attack against a randomly determined creature within its reach. If there is no creature within its reach, the affected target does nothing this turn. At the end of each of its turns, the affected target can make a Wisdom saving throw. If it succeeds, this effect ends for that target."
+						],
+						[
+							"7",
+							"At the start of each of its turns, the affected target gains one {@adventure level of contamination|DoDk|12}. At the end of each of its turns, an affected target can make a Constitution saving throw. If it succeeds, this effect ends for that target, but any {@adventure contamination levels|DoDk|12} gained remain."
+						],
+						[
+							"8",
+							"{@b Special.} The target is struck by an additional ray. Roll again twice. There's no limit to how many additional rays can strike a single creature in this manner."
+						]
+					]
+				}
+			],
+			"damageInflict": [
+				"force",
+				"necrotic",
+				"psychic",
+				"radiant",
+				"thunder"
+			],
+			"savingThrow": [
+				"constitution",
+				"wisdom"
+			],
+			"miscTags": [
+				"RO"
+			]
+		},
+		{
+			"name": "Purge Contamination",
+			"source": "DoDk",
+			"page": 228,
+			"level": 3,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "100 гп алхимических жидкостей или святой воды, которые расходует заклинание",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Вы наносите алхимические жидкости или святую воду на зараженное гуманоидное существо, произнося при этом строгий магический напев, который изгоняет из тела цели эльдрические загрязнения. Когда вы заканчиваете произносить заклинание, с существа снимаются все {@adventure contamination levels|DoDk|12} и мутации. Затем оно получает один уровень {@condition exhaustion} за каждый {@adventure contamination level|DoDk|12}, удаленный этим заклинанием."
+			],
+			"conditionInflict": [
+				"exhaustion"
+			]
+		},
+		{
+			"name": "Ray of Contamination",
+			"source": "DoDk",
+			"page": 229,
+			"level": 6,
+			"school": "N",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "фрагмент делериума стоимостью 100 гп, который заклинание расходует",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Когда вы произносите это заклинание, вы получаете одно {@adventure level of contamination|DoDk|12}. Из вашего указующего перста в существо, которое вы видите в пределах досягаемости, вылетает луч октарина. Цель должна успешно выполнить бросок на спасение по Конституции. При неудачном спасброске существо получает {@damage 16d6} некротического урона и приобретает {@dice 1d4} {@adventure levels of contamination|DoDk|12}. При успешном спасброске цель получает вдвое меньше урона и не получает {@adventure contamination levels|DoDk|12}."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "На более высоких уровнях",
+					"entries": [
+						"Когда вы произносите это заклинание, используя слот заклинания 7-го уровня или выше, вы можете выбрать целью одно дополнительное существо за каждый уровень слота выше 6-го. Существа должны находиться в пределах 9 метров друг от друга, когда вы их выбираете."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Ride the Rifts",
+			"source": "DoDk",
+			"page": 228,
+			"level": 3,
+			"school": "C",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "line",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "фрагмент делериума стоимостью 100 гп, который заклинание расходует",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Когда вы произносите это заклинание, вы получаете одно {@adventure level of contamination|DoDk|12}. От вас в выбранном направлении отлетает удар эльдрической молнии, образующий линию длиной 18 метров и шириной 1,5 метра. Каждое существо в этой линии должно успешно выполнить бросок на ловкость. При неудачном броске существо получает {@damage 10d6} урона от молнии, а при удачном - в два раза меньше. Затем вы телепортируетесь в незанятое пространство, которое вы можете видеть в пределах зоны действия линии."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "На более высоких уровнях",
+					"entries": [
+						"Когда вы произносите это заклинание, используя слот заклинания 4-го уровня или выше, урон увеличивается на {@dice 2d6} за каждый уровень слота выше 3-го."
+					]
+				}
+			],
+			"damageInflict": [
+				"lightning"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Sacrament of the Falling Fire",
+			"source": "DoDk",
+			"page": 229,
+			"level": 9,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "фрагмент делериума стоимостью 100 гп за каждое участвующее существо, который заклинание расходует",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Это заклинание можно произнести только в области, покрытой глубокой дымкой.",
+				"Вы проводите священную церемонию с участием до 12 верных и желающих гуманоидных существ, которая заканчивается, когда каждое участвующее существо вбивает себе в грудь осколок делериума. Эти существа становятся освященными (см. досье \"Последователи падающего огня\" в главе 3 \"Подземелья Драккенхейма\").",
+				"Когда вы заканчиваете произносить это заклинание, появляется враждебный {@creature shadow} и атакует каждого участника, являясь проявлением внутренней тьмы персонажа. ГМ может определить, что персонаж, носящий в своем сердце сильный гнев, страх или ненависть, вызывает вместо этого проявление {@creature wraith}."
+			]
+		},
+		{
+			"name": "Siphon Contamination",
+			"source": "DoDk",
+			"page": 229,
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Специально подготовленные алхимические жидкости стоимостью 500 gp, а также делериумный геод стоимостью 5 000 gp, которые расходуются на заклинание",
+					"cost": 50000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Это требовательное заклинание переносит {@adventure contamination|DoDk|12} с одного существа на другое. Когда вы произносите это заклинание, вы должны сначала коснуться либо желающего гуманоидного существа с одним или несколькими {@adventure levels of contamination|DoDk|12}, либо бывшего гуманоидного существа, чья нынешняя форма является результатом чудовищной трансформации. Затем вы касаетесь другого желающего гуманоидного существа.",
+				"Если оба существа, которых вы коснулись, были желающими гуманоидными существами, вы снимаете с первого существа все {@adventure contamination levels|DoDk|12} и мутации, после чего второе существо, которого вы коснулись, получает количество {@adventure contamination levels|DoDk|12}, равное количеству уровней, снятых с первого существа.",
+				"Если первое существо, которого вы касаетесь, - бывший гуманоид, пострадавший от чудовищного {@adventure contamination|DoDk|12}, а второе существо - желающее гуманоидное существо с уровнем характера или рейтингом вызова, равным или превышающим рейтинг вызова преобразованного существа, вы возвращаете полностью зараженному существу его первоначальную форму, то гуманоидное существо немедленно подвергается чудовищному превращению, как если бы оно получило шесть {@adventure contamination levels|DoDk|12}.",
+				"Второе затронутое существо не может каким-либо образом предотвратить или отменить это {@adventure contamination levels|DoDk|12} или последующее превращение, иначе заклинание не сработает."
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Warp Bolt",
+			"source": "DoDk",
+			"page": 229,
+			"level": 2,
+			"school": "V",
+			"subschools": [
+				"contaminated"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "фрагмент делериума стоимостью 100 гп, который заклинание расходует",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Когда вы произносите это заклинание, вы получаете одно {@adventure level of contamination|DoDk|12}. Дугообразный болт октариновой молнии поражает существо в радиусе действия. Если у цели есть один или более {@adventure contamination levels|DoDk|12}, она автоматически попадает в цель. В противном случае сделайте атаку заклинанием в радиусе действия против этого существа. При попадании цель получает {@damage 6d6} некротического урона и приобретает один {@adventure level of contamination|DoDk|12}.",
+				"Вы можете создать новую молнию в качестве своего действия в любой ход, пока заклинание не закончится."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "На более высоких уровнях",
+					"entries": [
+						"Когда вы произносите это заклинание, используя слот заклинания 3-го уровня или выше, вы можете выбрать целью еще 1 существо за каждый уровень заклинания выше 2-го."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"spellAttack": [
+				"R"
+			]
+		}
+	]
+}
